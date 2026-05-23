@@ -1,0 +1,10 @@
+LIBRARY   SPINCUBE
+
+
+EXPORTS
+    DllMain
+    SpincubeSizeToText
+    SpincubeWndProc
+    GetgiNumSpincubesThisProcess
+    GetgiNumSpincubesAllProcesses
+

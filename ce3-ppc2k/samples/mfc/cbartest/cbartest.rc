@@ -1,0 +1,228 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+	"#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+	"#ifdef _WIN32\r\n"
+	"LANGUAGE 9, 1\r\n"
+	"#pragma code_page(1252)\r\n"
+	"#endif\r\n"
+	"#include ""afxres.rc""  	// Standard components\r\n"
+	"#include ""wceres.rc""  	// WCE-specific components\r\n"
+	"#endif"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  DISCARDABLE     "cbartest.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 140, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "About Cbartest"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Cbartest ",IDC_STATIC,47,9,74,8
+    LTEXT           "Copyright © 2000",IDC_STATIC,47,22,66,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,13,10,20,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Combo box",                  ID_OPTIONS_COMBO
+        MENUITEM "&Toolbar",                    ID_OPTIONS_TOOLBAR
+#if !(defined(_WIN32_WCE_PSPC) && (_WIN32_WCE >= 300))
+        MENUITEM SEPARATOR
+        MENUITEM "&Help button",                ID_OPTIONS_HELP
+        MENUITEM "&OK button",                  ID_OPTIONS_OK			
+#endif // _WIN32_WCE_PSPC
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About CBARTEST...",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "cbartest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "cbartest"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Creates a new file"
+    ID_FILE_OPEN            "Opens a file"
+    ID_FILE_SAVE            "Saves the current file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_EXIT            "Exits the application"
+    ID_OPTIONS_COMBO        "Shows/hides combo box"
+    ID_OPTIONS_TOOLBAR      "Shows/hides toolbar"
+    ID_OPTIONS_HELP         "Shows/hides help button"
+    ID_OPTIONS_OK           "Shows/hides OK button"
+    ID_OPTIONS_X            "Shows/hides 'X' button"
+    ID_HELP_ABOUT           "Displays version information"
+    IDS_ONE                 "one"
+    IDS_TWO                 "two"
+    IDS_THREE               "three"
+    IDS_FOUR                "four"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Copies the current selection to the clipboard"
+    ID_EDIT_CUT             "Cuts the current selection to the clipboard"
+    ID_EDIT_PASTE           "Pastes the clipboard to the document"
+    ID_EDIT_UNDO            "Undoes the last edit command"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELLO               "Hello WCE!"
+    IDS_TOOLBAR             "Toolbar"
+    IDS_OK_ADORNMENT        "OK adornment"
+    IDS_HELP_ADORNMENT      "Help adornment"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"  	// Standard components
+#include "wceres.rc"  	// WCE-specific components
+#endif
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

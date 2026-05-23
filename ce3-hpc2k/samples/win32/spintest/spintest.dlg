@@ -1,0 +1,11 @@
+
+SpintestDlg DIALOG 13, 22, 110, 117
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION TEXT("A DlgEdit dialog...")
+FONT 8, TEXT("MS Sans Serif")
+BEGIN
+    CONTROL         TEXT(":-)"), 101, TEXT("Spincube"), SS_INMOTION, 6, 7, 97, 66
+    LTEXT           TEXT("...using custom controls!"), 102, 15, 81, 92, 8
+    DEFPUSHBUTTON   TEXT("OK"), IDOK, 6, 96, 96, 14
+END

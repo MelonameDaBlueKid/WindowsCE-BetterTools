@@ -1,0 +1,664 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0083)http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm -->
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="ReadMe_files/filelist.xml">
+<title>HomeScreen Sample ReadMe</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ori Amiga</o:Author>
+  <o:LastAuthor>a-nickm</o:LastAuthor>
+  <o:Revision>12</o:Revision>
+  <o:TotalTime>2934</o:TotalTime>
+  <o:Created>2002-10-01T17:14:00Z</o:Created>
+  <o:LastSaved>2003-03-22T01:50:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>927</o:Words>
+  <o:Characters>5288</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>44</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>6203</o:CharactersWithSpaces>
+  <o:Version>10.4219</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:UIApproved dt:dt="string">0</o:UIApproved>
+  <o:Test_x0020_Design_x0020_Spec dt:dt="string">, </o:Test_x0020_Design_x0020_Spec>
+  <o:Group dt:dt="string">1</o:Group>
+  <o:PM dt:dt="string">368</o:PM>
+  <o:Dev dt:dt="string">18</o:Dev>
+  <o:LocApproved dt:dt="string">0</o:LocApproved>
+  <o:Ready_x0020_to_x0020_Publish dt:dt="string">0</o:Ready_x0020_to_x0020_Publish>
+  <o:Area dt:dt="string">39</o:Area>
+  <o:Milestone dt:dt="string">M3</o:Milestone>
+  <o:Priority dt:dt="string">2</o:Priority>
+  <o:PMApproved dt:dt="string">0</o:PMApproved>
+  <o:TestApproved dt:dt="string">0</o:TestApproved>
+  <o:UEApproved dt:dt="string">0</o:UEApproved>
+  <o:VisionPillar dt:dt="string">1</o:VisionPillar>
+  <o:Team dt:dt="string">10</o:Team>
+  <o:Status dt:dt="string">Reviewed</o:Status>
+  <o:UE dt:dt="string">375</o:UE>
+  <o:DevApproved dt:dt="string">0</o:DevApproved>
+  <o:URApproved dt:dt="string">0</o:URApproved>
+  <o:CheckPointApproved dt:dt="string">0</o:CheckPointApproved>
+  <o:Test dt:dt="string">231</o:Test>
+  <o:SubArea dt:dt="string"></o:SubArea>
+  <o:Loc dt:dt="string"></o:Loc>
+  <o:UI dt:dt="string"></o:UI>
+  <o:UR dt:dt="string"></o:UR>
+  <o:DevEst dt:dt="string"></o:DevEst>
+  <o:TestEstimate dt:dt="string"></o:TestEstimate>
+  <o:SummarySpecDue dt:dt="string"></o:SummarySpecDue>
+  <o:SpecDue dt:dt="string"></o:SpecDue>
+  <o:Team0 dt:dt="string"></o:Team0>
+  <o:Spec_x0020_Review dt:dt="string"></o:Spec_x0020_Review>
+  <o:Mgmt_x0020_Review dt:dt="string"></o:Mgmt_x0020_Review>
+  <o:Spec_x0020_Inspection dt:dt="string"></o:Spec_x0020_Inspection>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:24.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:22.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Tahoma;
+	color:gray;
+	mso-font-kerning:12.0pt;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:18.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:Verdana;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:77026678;
+	mso-list-template-ids:73169538;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:508255335;
+	mso-list-template-ids:1808300102;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1249271895;
+	mso-list-template-ids:1448893444;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1373386635;
+	mso-list-template-ids:822632210;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:2007779239;
+	mso-list-template-ids:941361390;}
+@list l5
+	{mso-list-id:2056847562;
+	mso-list-template-ids:6873570;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h2 style='line-height:24.0pt;mso-line-height-rule:exactly'><span class=SpellE>HomeScreen</span></h2>
+
+<p class=MsoNormal>A <span class=SpellE>Smartphone</span> Home-Screen <span
+class=SpellE>plugin</span> which displays available system memory and current
+process (home.exe) virtual memory</p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=square>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Sample_Overview">Sample
+     Overview</a></span> <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Requirements_and_Dependencies">Requirements
+     and Dependencies</a></span> <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Topics">Topics</a></span>
+     <span class=MsoHyperlink><span style='color:windowtext;text-decoration:
+     none;text-underline:none'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Building_the_Sample">Building
+     the Sample</a></span> </li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Running_the_Sample">Running
+     the Sample</a></span> <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Notes">Notes</a></span>
+     <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="_Toc21230997"></a><a name="_Sample_Overview"></a><span
+style='mso-bookmark:_Toc21230997'>Sample Overview</span></h3>
+
+<p class=MsoNormal>This sample implements a home-screen <span class=SpellE>plugin</span>
+and custom home-screen layout for the <span class=SpellE>Smartphone</span>. The
+layout consists of a few standard <span class=SpellE>plugins</span>, and a new <span
+class=SpellE>plugin</span> which displays information about available memory.
+The layout is specified in an XML file which is found in the Common
+directory.<span style='mso-spacerun:yes'>  </span>The included memory status <span
+class=SpellE>plugin</span> (<span class=SpellE>memplug.cpp</span>) is implemented
+as a COM object which supports <span class=SpellE>IHomePlugin</span>, in
+addition to the standard factory and class object interfaces.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Runtime summary:</p>
+
+<p class=MsoNormal>- <span class=SpellE><span class=GramE>plugin</span></span>
+/ layout is installed (See ‘Building the Sample’ below)</p>
+
+<p class=MsoNormal>- Our custom layout (<span class=SpellE>Memplug</span>,
+specified in <span class=SpellE>Test.home.xml</span>) is selected from
+Settings-&gt;Home <span class=GramE>Screen<span style='mso-spacerun:yes'> 
+</span>(</span>See ‘Running the Sample’ below)</p>
+
+<p class=MsoNormal>- The <span class=SpellE>Plugin</span> Manager does one-time
+initialization of the <span class=SpellE>plugin</span> via <span class=GramE>it’s</span>
+<span class=SpellE>IHomePlugin::Initialize</span> method, using the custom
+configuration info specified in the layout XML. <span class=SpellE>Config</span>
+info is saved to an intermediate file (via <span class=SpellE>IPersistStream::Save</span>)
+and the <span class=SpellE>plugin</span> is released (see Notes below)</p>
+
+<p class=MsoNormal>- <span class=GramE>home.exe</span> loads the <span
+class=SpellE>IHomePlugin</span> object and loads the custom <span class=SpellE>config</span>
+info from the intermediate file via the <span class=SpellE>plugin’s</span> <span
+class=SpellE>IPersistStream</span> interface.</p>
+
+<p class=MsoNormal>- The user returns to home screen</p>
+
+<p class=MsoNormal>- The new layout is drawn and <span class=SpellE>plugin</span>
+responds to a number of system and UI messages.</p>
+
+<p class=MsoNormal>- The user can select the <span class=SpellE>plugin</span>
+(a status bar indicating percentage of remaining system memory) and a dialog
+appears with more detailed information</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Sample files:</p>
+
+<p class=MsoNormal>\<span class=SpellE>Homescreen.vcp\vcw</span> – <span
+class=SpellE>eVC</span> project files</p>
+
+<p class=MsoNormal>\<span class=SpellE>Memplug.cpp</span> – implementation for
+homescreen.dll</p>
+
+<p class=MsoNormal>\<span class=SpellE>homescreen.def</span> – standard COM
+exports for homescreen.dll </p>
+
+<p class=MsoNormal>\Common\<span class=SpellE>Test.home.xml</span> – <span
+class=SpellE>plugin</span> layout specification</p>
+
+<p class=MsoNormal>\Setup\<span class=SpellE>makecab.bat</span> – batch file for
+creating a cab file with the xml, <span class=SpellE>dll</span>, and setup
+info. Uses <span class=SpellE>memplug.inf</span></p>
+
+<p class=MsoNormal>\Setup\<span class=SpellE>memplug.inf</span> – .<span
+class=SpellE>inf</span> file for creating appropriate cab file(s)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21230998"></a><a name="_Requirements"></a><a
+name="_Requirements_and_Dependencies"></a><span style='mso-bookmark:_Toc21230998'>Requirements</span>
+and Dependencies</h3>
+
+<p class=MsoNormal><span class=SpellE>Smartphone</span> 2003 SDK</p>
+
+<p class=MsoNormal>Microsoft Embedded Visual Studio 4.0 SP2</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Topics"></a>Topics</h3>
+
+<p class=MsoNormal>Building a Home-Screen plugin</p>
+
+<p class=MsoNormal><span class=SpellE>IHomePlugin</span></p>
+
+<p class=MsoNormal><span class=SpellE>IPersistStream</span></p>
+
+<p class=MsoNormal><span class=SpellE>IHomePluginEnvironment</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Building_the_Sample"></a>Building the Sample</h3>
+
+<p class=MsoNormal>Make sure that</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list .5in'>Your
+     Active WCE Configuration is set to SMARTPHONE 2003 </li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list .5in'>Your
+     Active Configuration is appropriate for the device you are targeting </li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list .5in'>You are
+     targeting the desired device </li>
+</ol>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Build the project normally.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Installation<o:p></o:p></b></p>
+
+<p class=MsoNormal>Though the build process will typically copy and register
+the resulting <span class=SpellE>dll</span> to the device, this won’t be
+enough.<span style='mso-spacerun:yes'>  </span>The layout file (<span
+class=SpellE>Test.home.xml</span>) must be included as well. You can package
+the DLL and XML together with the <span class=SpellE>makecab.bat</span> batch
+file in \Setup. The installation information and cab configuration can be found
+in <span class=SpellE>memplug.inf</span> in the same directory. By default this
+file looks for the <span class=SpellE>EmulatorRel</span> version of the DLL.
+Change this to the version that you are targeting.</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo9;tab-stops:list .5in'>Run
+     the batch file </li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo9;tab-stops:list .5in'>Copy
+     the resulting CAB file to the device </li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo9;tab-stops:list .5in'>“Execute”
+     the CAB file using the appropriate tool (rapistart.exe if <span
+     class=SpellE>ActiveSync’d</span>, or cestart.exe if you prefer to use the
+     Platform Manager) </li>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span class=GramE>usage ?</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21230999"></a><a name="_Running_the_Sample"></a><span
+style='mso-bookmark:_Toc21230999'>Running the Sample</span></h3>
+
+<p class=MsoNormal>Install the sample as per the instructions above.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>From the Settings menu, select “Home Screen”. From the
+drop-down box at the top of the screen, select “<span class=SpellE>Memplug</span>”.
+Select “Done” to return to the Settings screen. <span class=GramE>From there,
+return to the Home screen.</span> You will see a new home screen with the
+memory usage status bar. The text above it is specified in the layout XML and
+may be changed by modifying the XML and restarting the device.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21231000"></a><a name="_Notes"></a><span style='mso-bookmark:
+_Toc21231000'>Notes</span></h3>
+
+<p class=MsoNormal>Developing (and particularly debugging) <span class=SpellE>Homescreen</span>
+<span class=SpellE>plugins</span> can be tricky because of the complex way in
+which they are loaded and configured. To keep CPU-heavy XML parsing to a
+minimum on resource-limited devices, such parsing occurs only when the <span
+class=SpellE>plugin</span> is initially loaded by the <span class=SpellE>plugin</span>
+manager. This keeps home.exe (which loads the <span class=SpellE>plugin</span>
+on boot-up) from having to parse (and potentially leak) XML, which would
+dramatically increase boot time. To debug a <span class=SpellE>plugin</span> at
+runtime, you must attach the debugger to the home.exe process set breakpoints
+in the appropriate locations of your <span class=SpellE>plugin</span>
+implementation. Here are the details:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>How to Interactively Debug a Home Screen <span class=SpellE>Plugin</span>
+at Runtime:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This can be a bit tricky because the <span class=SpellE>plugin</span>
+is already loaded when you want to debug. You must attach to the home.exe
+process:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=1>
+  <li class=MsoNormal style='mso-list:l2 level2 lfo9;tab-stops:list 1.0in'>Make
+      sure you have a debug version of the <span class=SpellE>plugin</span>
+      installed and working on an attached device or emulator (see above)</li>
+  <li class=MsoNormal style='mso-list:l2 level2 lfo9;tab-stops:list 1.0in'>Load
+      the project in <span class=SpellE>eVC</span> 4 and select Build-&gt;Start
+      Debugging-&gt;Attach <span class=GramE>To</span> WCE Process. A Process
+      list will appear.</li>
+  <li class=MsoNormal style='mso-list:l2 level2 lfo9;tab-stops:list 1.0in'>Here’s
+      where things get a bit tricky. You can not proceed until you give a LOCAL
+      version of the process to attach to. To find a local version of home.exe,
+      browse to &lt; <span class=SpellE>SDKInstallPath</span> &gt;\Debug\&lt;platform&gt;
+      and select home.exe. A new project should load and you’ll be prompted to
+      provide a local copy of the home screen <span class=SpellE>plugin</span> <span
+      class=SpellE>dll</span>, in this case homescreen.dll. This should be in
+      your project’s binary directory, probably Armv4Dbg or <span class=SpellE>EmulatorDbg</span>.
+      <span class=SpellE>eVC</span> 4 may then prompt for more DLLs but you can
+      these and cancel</li>
+  <li class=MsoNormal style='mso-list:l2 level2 lfo9;tab-stops:list 1.0in'>At
+      this point you’re almost finished. If you switch to the Debug tab in the
+      Output window you should see debugging messages. All that’s left to do
+      now is open the source file you wish to debug and set a break point
+      somewhere, such as <span class=SpellE>OnEvent</span>. </li>
+  <li class=MsoNormal style='mso-list:l2 level2 lfo9;tab-stops:list 1.0in'>Trigger
+      that event and the breakpoint will be hit and you’ll be able to debug
+      normally.</li>
+ </ol>
+</ol>
+
+</div>
+
+</body>
+
+</html>

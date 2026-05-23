@@ -1,0 +1,6 @@
+<!-- Sample XML to add/change a security policy  -->
+<wap-provisioningdoc>
+	<characteristic type="SecurityPolicy">
+		<parm name="{Decimal Security policy ID}" value="{New value for the policy}" />
+	</characteristic>
+</wap-provisioningdoc>

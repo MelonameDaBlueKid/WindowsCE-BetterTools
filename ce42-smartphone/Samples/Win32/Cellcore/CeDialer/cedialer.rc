@@ -1,0 +1,242 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CEDIALER DIALOG DISCARDABLE  0, 0, 136, 162
+STYLE DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_PHONENUM,18,13,96,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Select Line",IDC_SELECTLINE,17,122,45,12,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "Dial",IDC_DIAL,70,122,36,12
+    PUSHBUTTON      "1",IDC_BUTTON1,18,31,32,23
+    PUSHBUTTON      "   ABC         2",IDC_BUTTON2,50,31,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "  DEF          3",IDC_BUTTON3,82,31,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "  GHI           4",IDC_BUTTON4,18,53,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "   JKL          5",IDC_BUTTON5,50,53,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "   MNO         6",IDC_BUTTON6,82,53,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "  PRS          7",IDC_BUTTON7,18,75,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "  TUV          8",IDC_BUTTON8,50,75,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "  WXY          9",IDC_BUTTON9,82,75,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "*",IDC_BUTTONSTAR,18,97,32,23
+    PUSHBUTTON      " OPER        0",IDC_BUTTON0,50,97,32,23,BS_CENTER | 
+                    BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "#",IDC_BUTTONPOUND,82,97,32,23
+    LTEXT           "Enter Phone Number:",IDC_STATIC,18,3,98,11
+END
+
+IDD_CONNECTUSING DIALOG DISCARDABLE  0, 0, 135, 87
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Line:",IDC_STATIC,6,25,78,8
+    LTEXT           "Address:",IDC_STATIC,6,53,78,8
+    COMBOBOX        IDC_LISTLINES,6,36,122,83,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LISTADDRESSES,6,64,122,88,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Connect Using:",IDC_STATIC,6,10,50,8
+END
+
+IDD_DIALING DIALOG DISCARDABLE  0, 0, 159, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "Tahoma"
+BEGIN
+    PUSHBUTTON      "Hang Up",IDCANCEL,55,78,50,14
+    CTEXT           "",IDC_PHONENUM,6,23,146,8
+    CTEXT           "Phone Number:",IDC_STATIC,6,10,146,8
+    CTEXT           "",IDC_STATUSMESSAGE,6,52,146,8
+    CTEXT           "Current Status:",IDC_STATIC,6,41,146,8
+END
+
+IDD_CEDIALER_SP DIALOG DISCARDABLE  0, 0, 148, 134
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_PHONENUM,17,36,69,17,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Enter phone number",IDC_STATIC,16,20,89,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CEDIALER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_CONNECTUSING, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_DIALING, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 152
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_CEDIALER_SP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CEDIALER            ICON    DISCARDABLE     "CeDialer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDR_SPMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Quit",                        IDM_QUIT
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Select Line",                 IDM_SELECTLINE
+        MENUITEM "Dial",                        IDM_DIAL
+    END
+END
+
+IDR_OKMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "OK",                          IDM_OK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_SPMENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_SPMENU, 2,
+    I_IMAGENONE, IDM_QUIT, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_QUIT, 
+    0, NOMENU,
+    I_IMAGENONE, IDM_OPTIONS, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_OPTIONS, 0, 1,
+END
+
+IDR_OKMENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_OKMENU, 1,
+    I_IMAGENONE, IDM_OK, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_OK, 0, 
+    NOMENU,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_QUIT            "Quit"
+    IDS_CAP_OPTIONS         "Options"
+    IDS_CAP_OK              "OK"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

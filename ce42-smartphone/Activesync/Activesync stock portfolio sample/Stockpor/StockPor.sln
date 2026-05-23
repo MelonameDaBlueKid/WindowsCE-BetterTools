@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeskApp", "DeskApp.vcproj", "{DB916BE1-8B23-44ED-9155-C122D15656B7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeskSync", "DeskSync.vcproj", "{5B41B3D6-B61C-4D47-AA5B-4B9EF8C19989}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DB916BE1-8B23-44ED-9155-C122D15656B7}.Debug.ActiveCfg = Debug|Win32
+		{DB916BE1-8B23-44ED-9155-C122D15656B7}.Debug.Build.0 = Debug|Win32
+		{DB916BE1-8B23-44ED-9155-C122D15656B7}.Release.ActiveCfg = Release|Win32
+		{DB916BE1-8B23-44ED-9155-C122D15656B7}.Release.Build.0 = Release|Win32
+		{5B41B3D6-B61C-4D47-AA5B-4B9EF8C19989}.Debug.ActiveCfg = Debug|Win32
+		{5B41B3D6-B61C-4D47-AA5B-4B9EF8C19989}.Debug.Build.0 = Debug|Win32
+		{5B41B3D6-B61C-4D47-AA5B-4B9EF8C19989}.Release.ActiveCfg = Release|Win32
+		{5B41B3D6-B61C-4D47-AA5B-4B9EF8C19989}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

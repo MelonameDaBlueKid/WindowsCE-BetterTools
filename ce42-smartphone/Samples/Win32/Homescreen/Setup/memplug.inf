@@ -1,0 +1,41 @@
+[Version]
+Signature   = "$Windows NT$"    ; required as-is
+Provider    = "Sample"          ; full app name will be "<Provider> <AppName>"
+CESignature = "$Windows CE$"    ; required as-is
+
+[CEStrings]
+AppName     = "MemPlug"    ; full app name will be "<Provider> <AppName>"
+InstallDir  = %CE19%\Home    ; Application Data\Home
+
+[CEDevice.x86]
+ProcessorType = 686
+
+[CEDevice.ARM]
+ProcessorType=2577
+
+[SourceDisksNames]                  ; CPU-independent files
+1 = , "Common Files",,..\Common
+[SourceDisksNames.x86]              ; CPU-dependent files
+2 = ,"x86 Files",,..\emulatorRel
+[SourceDisksNames.ARM]           ; CPU-dependent files
+2 = ,"ARM Files",,..\ARMv4Rel
+
+[SourceDisksFiles]
+Test.home.xml = 1
+[SourceDisksFiles.x86]
+homescreen.dll = 2
+[SourceDisksFiles.ARM]
+homescreen.dll = 2
+
+[DefaultInstall]
+CopyFiles   = TheFiles
+CESelfRegister=homescreen.dll
+
+[DestinationDirs]
+TheFiles    = 0, %InstallDir%
+
+;File copy list.
+[TheFiles]
+"homescreen.dll", homescreen.dll
+"Test.home.xml", Test.home.xml
+

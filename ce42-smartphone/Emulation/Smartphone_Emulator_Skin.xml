@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<skin>
+	<view
+		titleBar ="Smartphone 2003"
+		
+		displayPosX="72"
+		displayPosY="135"
+		
+		displayWidth="176"
+		displayHeight="220"
+
+		displayDepth="16"
+
+		mappingImage="Smartphone_Emulator_Mask.bmp"
+		normalImage="Smartphone_Emulator_Up.bmp"
+		downImage= "Smartphone_Emulator_Down.bmp"
+
+	>
+
+		<button
+			
+			toolTip="Power"
+			onPressAndHold="0x69"
+			mappingColor="0x0000FF"
+		/>
+		<button
+			
+			toolTip="Record"
+			onPressAndHold="0x44" 
+			mappingColor="0x8040FF"
+		/>
+		<button
+			
+			toolTip="Volume Up"
+			onPressAndHold="0x40"
+			mappingColor="0x8080FF"
+		/>
+		<button
+			
+			toolTip="Volume Down"
+			onPressAndHold="0x41"
+			mappingColor="0x0000C0"
+		/>
+
+		<button
+			
+			toolTip="left softkey"
+			onPressAndHold="0x3B"
+			mappingColor="0xFF00FF"
+		/>	
+		<button
+			
+			toolTip="right softkey"
+			onPressAndHold="0x3C"
+			mappingColor="0xFF0000"
+		/>
+		<button
+			
+			toolTip="send"
+			onPressAndHold="0x3D"
+			mappingColor="0xFF00D7"
+		/>
+		<button
+			
+			toolTip="end"
+			onPressAndHold="0x3E"
+			mappingColor="0xD70000"
+		/>
+
+		<button
+			
+			toolTip="dpad-up"
+			onPressAndHold="0x48"
+			mappingColor="0xFFFF00"
+		/>
+		<button
+			
+			toolTip="dpad-down"
+			onPressAndHold="0x50"
+			mappingColor="0xFFAF00"
+		/>
+		<button
+			
+			toolTip="dpad-left"
+			onPressAndHold="0x4B"
+			mappingColor="0xFFD700"
+		/>
+		<button
+			
+			toolTip="dpad-right"
+			onPressAndHold="0x4D"
+			mappingColor="0xFF8700"
+		/>
+		<button
+			
+			toolTip="dpad-action"
+			onPressAndHold="0x1C"
+			mappingColor="0xFF5F00"
+		/>
+		<button
+			
+			toolTip="back"
+			onPressAndHold="0x01"
+			mappingColor="0xAF0000"
+		/>
+		<button
+			
+			toolTip="home"
+			onPressAndHold="0x5B"
+			mappingColor="0xFF00AF"
+		/>	
+		<button
+			
+			toolTip="num pad 1"
+			onPressAndHold="0x02"
+			mappingColor="0x00FF00"
+		/>
+		<button
+			
+			toolTip="num pad 2"
+			onPressAndHold="0x03"
+			mappingColor="0x00D700"
+		/>
+		<button
+			
+			toolTip="num pad 3"
+			onPressAndHold="0x04"
+			mappingColor="0x00AF00"
+		/>	
+		<button
+			
+			toolTip="num pad 4"
+			onPressAndHold="0x05"
+			mappingColor="0x008700"
+		/>
+		<button
+			
+			toolTip="num pad 5"
+			onPressAndHold="0x06"
+			mappingColor="0x005F00"
+		/>
+		<button
+			
+			toolTip="num pad 6"
+			onPressAndHold="0x07"
+			mappingColor="0x003200"
+		/>
+		<button
+			
+			toolTip="num pad 7"
+			onPressAndHold="0x08"
+			mappingColor="0x00FFFF"
+		/>		
+		
+		<button
+			
+			toolTip="num pad 8"
+			onPressAndHold="0x09"
+			mappingColor="0x00FFD7"
+		/>
+		
+		<button
+			
+			toolTip="num pad 9"
+			onPressAndHold="0x0A"
+			mappingColor="0x00FFAF"
+		/>
+
+		<button
+			
+			toolTip="num pad *"
+			onPressAndHold="0x42"
+			mappingColor="0x00FF87"
+		/>
+
+		<button
+			
+			toolTip="num pad 0"
+			onPressAndHold="0x0B"
+			mappingColor="0x00FF5F"
+		/>
+
+		<button
+			
+			toolTip="num pad #"
+			onPressAndHold="0x43"
+			mappingColor="0x00FF32"
+		/>
+
+	</view>
+</skin>

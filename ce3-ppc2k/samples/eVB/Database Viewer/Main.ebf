@@ -1,0 +1,251 @@
+VERSION 5.00
+Object = "{A32A88B3-817C-11D1-A762-00AA0044064C}#1.0#0"; "mscecomdlg.dll"
+Object = "{E491F001-98EC-11D1-9B3D-00C04FAD5AEC}#1.0#0"; "msceimagelist.dll"
+Object = "{D863DA15-8C5B-11D1-86C0-00AA003EE054}#1.0#0"; "mscetreeview.dll"
+Begin VB.Form frmMain 
+   Appearance      =   0  'Flat
+   BackColor       =   &H80000005&
+   Caption         =   "Database Viewer"
+   ClientHeight    =   3930
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   3555
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   3930
+   ScaleMode       =   0  'User
+   ScaleWidth      =   3555
+   Begin MSCETREEVIEWLibCtl.TreeViewCtl tvCtrl 
+      Height          =   3255
+      Left            =   120
+      TabIndex        =   3
+      Top             =   480
+      Width           =   3255
+      _cx             =   5741
+      _cy             =   5741
+      FontBold        =   0   'False
+      FontItalic      =   0   'False
+      FontName        =   "Tahoma"
+      FontSize        =   8
+      FontStrikethrough=   0   'False
+      FontUnderline   =   0   'False
+      HideSelection   =   -1  'True
+      Indentation     =   0
+      LabelEdit       =   0
+      LineStyle       =   0
+      PathSeparator   =   "\"
+      Style           =   7
+      Enabled         =   -1  'True
+   End
+   Begin CEComDlgCtl.CommonDialog CommonDialog1 
+      Left            =   2520
+      Top             =   360
+      _cx             =   847
+      _cy             =   847
+      CancelError     =   0   'False
+      Color           =   0
+      DefaultExt      =   ""
+      DialogTitle     =   ""
+      FileName        =   ""
+      Filter          =   ""
+      FilterIndex     =   0
+      Flags           =   0
+      HelpCommand     =   0
+      HelpContext     =   ""
+      HelpFile        =   ""
+      InitDir         =   ""
+      MaxFileSize     =   256
+      FontBold        =   0   'False
+      FontItalic      =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontUnderline   =   0   'False
+      Max             =   0
+      Min             =   0
+      FontStrikethru  =   0   'False
+   End
+   Begin CEImageListCtl.ImageList ImageList1 
+      Left            =   3000
+      Top             =   240
+      _cx             =   990
+      _cy             =   990
+      ImageWidth      =   0
+      ImageHeight     =   0
+   End
+   Begin VBCE.TextBox txtDBName 
+      Height          =   330
+      Left            =   45
+      TabIndex        =   2
+      Top             =   120
+      Width           =   2040
+      _cx             =   2175
+      _cy             =   873
+      BackColor       =   -2147483643
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Text            =   "\Northwind.cdb"
+      Alignment       =   0
+      HideSelection   =   -1  'True
+      Locked          =   0   'False
+      MaxLength       =   0
+      MultiLine       =   0   'False
+      PasswordChar    =   ""
+      ScrollBars      =   0
+   End
+   Begin VBCE.CommandButton cmdLoad 
+      Height          =   330
+      Left            =   2565
+      TabIndex        =   1
+      Top             =   120
+      Width           =   960
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Load"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdBrowse 
+      Height          =   330
+      Left            =   2160
+      TabIndex        =   0
+      Top             =   120
+      Width           =   330
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "..."
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+End
+Attribute VB_Name = "frmMain"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Option Explicit
+
+Private Sub cmdBrowse_Click()
+    CommonDialog1.Filter = "Pocket Access (*.cdb) | *.cdb"
+    CommonDialog1.ShowOpen
+    If CommonDialog1.FileName <> "" Then txtDBName.Text = CommonDialog1.FileName
+End Sub
+
+
+Private Sub cmdLoad_Click()
+    strActiveConnection = Trim(txtDBName)
+    
+    If UCase(Right(strActiveConnection, 4)) <> ".CDB" Then
+        MsgBox "Cannot Load Non Pocket Access File"
+        Exit Sub
+    End If
+    
+    'Connect to database
+    DBConnect
+    
+    'Get all tables in that database
+    GetTables
+    
+    'Populate tree view with all table names
+    tvCtrl.Nodes.Clear
+    PopulateTreeView
+        
+    'Close database
+    DBClose
+End Sub
+
+Private Sub Form_Load()
+    ImageList1.Add AppPath & "Database.bmp"
+    ImageList1.Add AppPath & "Table.bmp"
+    tvCtrl.ImageList = ImageList1.hImageList
+    
+    Dim treeNode
+    Set treeNode = tvCtrl.Nodes.Add(, , , "Empty...")
+End Sub
+
+
+Private Sub PopulateTreeView()
+    Dim treeNode, tbName, fieldName, fieldCount, fieldKeyName, fieldKeyCount
+    Dim fieldType, fieldDefinedSize, fieldActualSize, fieldAttributes, fieldNumericScale, fieldPrecision
+    
+    fieldKeyCount = 0
+    
+    'Root node is data base name
+    Set treeNode = tvCtrl.Nodes.Add(, , "Root", txtDBName.Text, 1)
+    
+    While Not objRecTables.EOF
+        
+        tbName = objRecTables("TableName")
+        
+        If Not IsSystemTable(tbName) Then
+            Set treeNode = tvCtrl.Nodes.Add("Root", 4, tbName, tbName, 2)
+            
+            'Populate all fields of the given table
+            'Close table name with single quote in case table name contains space(s)
+            GetFields tbName
+    
+            For fieldCount = 0 To objRecFields.Fields.Count - 1
+                fieldKeyCount = fieldKeyCount + 1
+                fieldName = objRecFields.Fields(fieldCount).Name
+                fieldKeyName = "FIELD: " & fieldKeyCount
+                Set treeNode = tvCtrl.Nodes.Add(tbName, 4, fieldKeyName, fieldName)
+                
+                'Add field's properties as children nodes
+                fieldType = GetFieldType(objRecFields.Fields(fieldCount).Type)
+                fieldNumericScale = objRecFields.Fields(fieldCount).numericScale
+                fieldPrecision = objRecFields.Fields(fieldCount).precision
+                fieldDefinedSize = objRecFields.Fields(fieldCount).DefinedSize
+                fieldActualSize = objRecFields.Fields(fieldCount).ActualSize
+                fieldAttributes = GetFieldAttributes(objRecFields.Fields(fieldCount).Attributes)
+                
+                Set treeNode = tvCtrl.Nodes.Add(fieldKeyName, 4, , "Type: " & fieldType)
+                Set treeNode = tvCtrl.Nodes.Add(fieldKeyName, 4, , "Numeric scale: " & fieldNumericScale)
+                Set treeNode = tvCtrl.Nodes.Add(fieldKeyName, 4, , "Precision: " & fieldPrecision)
+                Set treeNode = tvCtrl.Nodes.Add(fieldKeyName, 4, , "Defined size: " & fieldDefinedSize)
+                Set treeNode = tvCtrl.Nodes.Add(fieldKeyName, 4, , "Actual size: " & fieldActualSize)
+                Set treeNode = tvCtrl.Nodes.Add(fieldKeyName, 4, , "Attribute: " & fieldAttributes)
+            Next
+            
+            objRecFields.Close
+        End If
+        
+        objRecTables.MoveNext
+    Wend
+    
+End Sub

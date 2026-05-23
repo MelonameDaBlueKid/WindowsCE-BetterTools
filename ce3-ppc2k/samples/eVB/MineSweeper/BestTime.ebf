@@ -1,0 +1,278 @@
+VERSION 5.00
+Object = "{25C953A7-5464-11D1-A714-00AA0044064C}#1.0#0"; "MSCEFILE.DLL"
+Begin VB.Form frmBestTime 
+   Appearance      =   0  'Flat
+   BackColor       =   &H00000000&
+   Caption         =   "Best Player"
+   ClientHeight    =   4020
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   3600
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   4020
+   ScaleWidth      =   3600
+   Begin FILECTLCtl.File File1 
+      Left            =   1530
+      Top             =   2760
+      _cx             =   1000
+      _cy             =   1000
+   End
+   Begin VBCE.CommandButton cmdOK 
+      Height          =   420
+      Left            =   2295
+      TabIndex        =   7
+      Top             =   1710
+      Width           =   1185
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "OK"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdReset 
+      Height          =   420
+      Left            =   900
+      TabIndex        =   6
+      Top             =   1710
+      Width           =   1185
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Reset"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.Label lblDate 
+      Height          =   330
+      Left            =   870
+      TabIndex        =   5
+      Top             =   1215
+      Width           =   2580
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   4210752
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "lblDate"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   65280
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblTime 
+      Height          =   330
+      Left            =   870
+      TabIndex        =   4
+      Top             =   900
+      Width           =   2580
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   4210752
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "999 seconds"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   65280
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblName 
+      Height          =   330
+      Left            =   870
+      TabIndex        =   3
+      Top             =   585
+      Width           =   2580
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   4210752
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Anonymous"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   65280
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label3 
+      Height          =   330
+      Left            =   135
+      TabIndex        =   2
+      Top             =   1215
+      Width           =   735
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Date"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   65280
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label2 
+      Height          =   330
+      Left            =   135
+      TabIndex        =   1
+      Top             =   900
+      Width           =   735
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Time"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   65280
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label1 
+      Height          =   330
+      Left            =   135
+      TabIndex        =   0
+      Top             =   585
+      Width           =   735
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Name"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   65280
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+End
+Attribute VB_Name = "frmBestTime"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Option Explicit
+
+
+Private Sub Form_Activate()
+       
+    File1.Open AppPath & BESTRECORD_TXT, fsModeInput
+    
+    lblTime.Caption = File1.LineInputString
+    lblTime.Caption = StrLeft(lblTime.Caption, Len(lblTime.Caption) - 1) & " seconds"
+    lblName.Caption = File1.LineInputString
+    lblDate.Caption = File1.LineInputString
+    File1.Close
+End Sub
+
+
+Private Sub cmdOK_Click()
+    frmBestTime.Hide
+End Sub
+
+
+Private Sub cmdReset_Click()
+    lblName.Caption = "Anonymous"
+    lblTime.Caption = "999 seconds"
+    lblDate.Caption = CStr(Date)
+    
+    File1.Open AppPath & BESTRECORD_TXT, fsModeOutput
+    File1.LinePrint StrLeft(lblTime.Caption, 3) & Chr(10)
+    File1.LinePrint lblName.Caption & Chr(10)
+    File1.LinePrint lblDate.Caption & Chr(10)
+    File1.Close
+End Sub
+
+

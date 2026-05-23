@@ -1,0 +1,38 @@
+[Version]
+Signature   = "$Windows NT$"    ; required as-is
+Provider    = "Sample"          ; full app name will be "<Provider> <AppName>"
+CESignature = "$Windows CE$"    ; required as-is
+
+[CEStrings]
+InstallDir  = %CE2%
+AppName     = "CfgClient"    ; full app name will be "<Provider> <AppName>"
+
+[CEDevice.x86]
+ProcessorType = 686
+
+[CEDevice.ARM]
+ProcessorType=2577
+
+[SourceDisksNames.x86]              ; CPU-dependent files
+2 = ,"x86 Files",,x86
+[SourceDisksNames.ARMV4]           ; CPU-dependent files
+2 = ,"ARM Files",,ARMV4
+
+[SourceDisksFiles.x86]
+cfgclient.exe = 2
+setup.dll = 2
+[SourceDisksFiles.ARMV4]
+cfgclient.exe = 2
+setup.dll = 2
+
+[DefaultInstall]
+CopyFiles   = TheFiles
+CESetupDLL = "setup.dll"
+
+[DestinationDirs]
+TheFiles    = 0, %InstallDir%
+
+;File copy list.
+[TheFiles]
+cfgclient.exe
+

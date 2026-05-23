@@ -1,0 +1,37 @@
+//*******************************************************************************************
+//
+// Filename : cmdbar.rc
+//	
+// Copyright (c) 1997 Microsoft Corporation. All rights reserved
+//
+//*******************************************************************************************
+
+#include <windows.h>
+#include "resource.h"
+
+
+//Stringtable////////////////////////////////////////////////////////////////
+
+STRINGTABLE
+   BEGIN
+	   IDS_APPNAME   "Cmdbar"
+		IDS_TITLE      "Cmdbar Sample"
+   END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN_MENU MENU
+BEGIN
+    POPUP "Button Bitmaps"
+	BEGIN
+		MENUITEM "IDB_STD_SMALL_COLOR",          IDM_SHOW_STD
+		MENUITEM "IDB_VIEW_SMALL_COLOR" ,        IDM_SHOW_VIEW
+		MENUITEM "STD AND VIEW MIXTURE" ,        IDM_SHOW_MIX
+		MENUITEM  SEPARATOR
+		MENUITEM "EXIT" ,                        IDM_EXIT
+	END
+END
+

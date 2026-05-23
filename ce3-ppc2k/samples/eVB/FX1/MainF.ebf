@@ -1,0 +1,619 @@
+VERSION 5.00
+Object = "{532C2BF5-6B55-11D1-9AA5-00C04FAD5AEC}#1.0#0"; "MSCEGRID.DLL"
+Begin VB.Form Form1 
+   Appearance      =   0  'Flat
+   AutoRedraw      =   -1  'True
+   BackColor       =   &H80000005&
+   Caption         =   "FX1"
+   ClientHeight    =   4020
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   3600
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   4020
+   ScaleWidth      =   3600
+   Begin GRIDLibCtl.GridCtrl GridCtrl1 
+      Height          =   3675
+      Left            =   0
+      TabIndex        =   3
+      Top             =   0
+      Width           =   3615
+      _cx             =   6376
+      _cy             =   6482
+      BackColor       =   16776960
+      BackColorBkg    =   16777215
+      BackColorSel    =   12632064
+      Cols            =   14
+      FillStyle       =   1
+      FocusRect       =   1
+      ForeColor       =   0
+      ForeColorSel    =   16777215
+      GridColor       =   12632256
+      GridLines       =   1
+      GridLineWidth   =   1
+      HighLight       =   1
+      Redraw          =   -1  'True
+      RowHeightMin    =   0
+      Rows            =   15
+      ScrollBars      =   0
+      ScrollTrack     =   0   'False
+      SelectionMode   =   0
+      TextStyle       =   0
+      WordWrap        =   0   'False
+      Enabled         =   -1  'True
+   End
+   Begin VBCE.CommandButton btnSpeed 
+      Height          =   255
+      Left            =   1200
+      TabIndex        =   6
+      Top             =   3720
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Speed"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton btnRot 
+      Height          =   255
+      Left            =   2460
+      TabIndex        =   5
+      Top             =   3720
+      Width           =   555
+      _cx             =   979
+      _cy             =   450
+      BackColor       =   12632256
+      Caption         =   "Rot"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton btnClear 
+      Height          =   255
+      Left            =   600
+      TabIndex        =   4
+      Top             =   3720
+      Width           =   615
+      _cx             =   1085
+      _cy             =   450
+      BackColor       =   12632256
+      Caption         =   "Clear"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.Timer Timer1 
+      Left            =   3600
+      Top             =   3840
+      _cx             =   2500
+      _cy             =   500
+      Enabled         =   -1  'True
+      Interval        =   0
+   End
+   Begin VBCE.CommandButton btnRight 
+      Height          =   255
+      Left            =   3000
+      TabIndex        =   2
+      Top             =   3720
+      Width           =   555
+      _cx             =   979
+      _cy             =   450
+      BackColor       =   12632256
+      Caption         =   ">"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton btnLeft 
+      Height          =   255
+      Left            =   1920
+      TabIndex        =   1
+      Top             =   3720
+      Width           =   555
+      _cx             =   979
+      _cy             =   450
+      BackColor       =   12632256
+      Caption         =   "<"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton btnStart 
+      Height          =   255
+      Left            =   0
+      TabIndex        =   0
+      Top             =   3720
+      Width           =   615
+      _cx             =   1085
+      _cy             =   450
+      BackColor       =   49344
+      Caption         =   "Start"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+End
+Attribute VB_Name = "Form1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Option Explicit
+
+Dim Col, Row, Sym, Size, i, j As Integer
+Dim nRow, nCol, score As Integer
+Dim Xdet, lRowSt As Boolean
+Public speed As Integer
+Dim ResSound As Long
+Dim SND_FILENAME As Long
+
+Public Declare Function PlaySound Lib "Coredll" Alias "PlaySoundW" (ByVal lpszName As String, ByVal hModule As Long, ByVal dwFlags As Long) As Long
+
+Private Sub btnSpeed_Click()
+    Timer1.Interval = 0
+    Form2.Show
+End Sub
+
+Private Sub Form_Load()
+
+    GridCtrl1.ColWidth(-1) = 250
+    nRow = GridCtrl1.Rows
+    nCol = GridCtrl1.Cols
+    speed = 250
+    
+    GridCtrl1.Row = nRow - 4
+    GridCtrl1.Col = 0
+    GridCtrl1.ColSel = nCol - 1
+    GridCtrl1.CellBackColor = &HC0C000
+    
+End Sub
+
+Private Sub btnStart_Click()
+    Call btnClear_Click
+    Row = 0
+    Sym = 0
+    score = 0
+
+    Randomize
+    Col = CInt(10 * Rnd + 1)
+    Size = CInt(4 * Rnd + 1)
+
+    For i = Row To Size - 1
+        GridCtrl1.TextMatrix(i, Col) = "X"
+    Next
+
+    Timer1.Interval = speed
+    Timer1.Enabled = True
+End Sub
+
+Private Sub btnClear_Click()
+    Timer1.Enabled = False
+    For Col = 0 To nCol - 1
+        For Row = 0 To nRow - 1
+            GridCtrl1.TextMatrix(Row, Col) = ""
+        Next Row
+    Next
+End Sub
+
+Private Sub btnLeft_Click()
+    
+    Select Case Sym
+    Case 0
+        If Col = 0 Then
+          Exit Sub
+        End If
+        
+        For i = Row To Row + Size - 1
+            If (GridCtrl1.TextMatrix(i, Col - 1)) = "" Then
+                Xdet = False
+            Else
+                Xdet = True
+                i = Row + Size - 1
+            End If
+        Next
+        
+       If Xdet = False Then
+            For i = Row To Row + Size - 1
+                GridCtrl1.TextMatrix(i, Col) = ""
+            Next
+         
+            For i = Row To Row + Size - 1
+                GridCtrl1.TextMatrix(i, Col - 1) = "X"
+            Next
+            
+            ResSound = PlaySound("\windows\default.wav", 0, SND_FILENAME)
+
+            Col = Col - 1
+          
+            If (Col = -1) Then
+                Col = 0
+            End If
+       Else
+            For i = Row To Row + Size - 1
+                GridCtrl1.TextMatrix(i, Col) = "X"
+            Next
+
+       End If
+            
+    Case 1
+        If Col = 0 Then
+            Exit Sub
+        End If
+        
+        If (GridCtrl1.TextMatrix(Row, Col - 1)) = "" Then
+            Xdet = False
+        Else
+            Xdet = True
+        End If
+        
+       If Xdet = False Then
+            For i = Col To Col + Size - 1
+                GridCtrl1.TextMatrix(Row, i) = ""
+            Next
+         
+            For i = Col - 1 To Col + Size - 2
+                GridCtrl1.TextMatrix(Row, i) = "X"
+            Next
+            
+            ResSound = PlaySound("\windows\default.wav", 0, SND_FILENAME)
+
+            Col = Col - 1
+          
+            If (Col = -1) Then
+                Col = 0
+            End If
+       Else
+            For i = Col To Col + Size - 1
+                GridCtrl1.TextMatrix(Row, i) = "X"
+            Next
+
+       End If
+
+    Case Else
+
+    End Select
+End Sub
+
+Private Sub btnRight_Click()
+    
+    Select Case Sym
+    Case 0
+        If Col = nCol - 1 Then
+          Exit Sub
+        End If
+        
+        For i = Row To Row + Size - 1
+            If (GridCtrl1.TextMatrix(i, Col + 1)) = "" Then
+                Xdet = False
+            Else
+                Xdet = True
+                i = Row + Size - 1
+            End If
+        Next
+        
+       If Xdet = False Then
+            For i = Row To Row + Size - 1
+                GridCtrl1.TextMatrix(i, Col) = ""
+            Next
+         
+            For i = Row To Row + Size - 1
+                GridCtrl1.TextMatrix(i, Col + 1) = "X"
+            Next
+            
+            ResSound = PlaySound("\windows\splat.wav", 0, SND_FILENAME)
+
+            Col = Col + 1
+          
+            If (Col = nCol) Then
+                Col = nCol - 1
+            End If
+       Else
+            For i = Row To Row + Size - 1
+                GridCtrl1.TextMatrix(i, Col) = "X"
+            Next
+
+       End If
+            
+    Case 1
+        If Col = nCol - Size Then
+            Exit Sub
+        End If
+        
+        If (GridCtrl1.TextMatrix(Row, Col + Size)) = "" Then
+            Xdet = False
+        Else
+            Xdet = True
+        End If
+        
+       If Xdet = False Then
+            For i = Col To Col + Size - 1
+                GridCtrl1.TextMatrix(Row, i) = ""
+            Next
+         
+            For i = Col + 1 To Col + Size
+                GridCtrl1.TextMatrix(Row, i) = "X"
+            Next
+            
+            ResSound = PlaySound("\windows\splat.wav", 0, SND_FILENAME)
+
+            Col = Col + 1
+          
+            If (Col = nCol - Size + 1) Then
+                Col = nCol - Size
+            End If
+       Else
+            For i = Col To Col + Size - 1
+                GridCtrl1.TextMatrix(Row, i) = "X"
+            Next
+
+       End If
+
+    Case Else
+
+    End Select
+
+End Sub
+
+Private Sub btnRot_Click()
+Select Case Sym
+
+Case 0
+    If (nRow - Row < Size) Or (nCol - Col < Size) Then
+        Exit Sub
+    End If
+
+
+    For i = Col + 1 To Col + Size - 1
+        If (GridCtrl1.TextMatrix(Row + Size - 1, i) = "X") Then
+            Exit Sub
+        End If
+    Next
+    
+    If (Col - 1 >= -1) And ((Col + Size - 1) <= nCol - 1) Then
+        For i = Row To Row + Size - 1
+            GridCtrl1.TextMatrix(i, Col) = ""
+        Next
+
+        For i = Col To Col + Size - 1
+            GridCtrl1.TextMatrix(Row + Size - 1, i) = "X"
+        Next
+        
+        ResSound = PlaySound("\windows\menusel.wav", 0, SND_FILENAME)
+
+        Row = Row + Size - 1
+        Sym = 1
+    Else
+        Exit Sub
+    End If
+Case 1
+    If (nRow - Row < Size) Then
+        Exit Sub
+    End If
+    If (GridCtrl1.TextMatrix(Row + Size - 1, Col) <> "X") Then
+        For i = Col To Col + Size - 1
+            GridCtrl1.TextMatrix(Row, i) = ""
+        Next
+
+        For i = Row To Row + Size - 1
+            GridCtrl1.TextMatrix(i, Col) = "X"
+        Next
+        
+        ResSound = PlaySound("\windows\menusel.wav", 0, SND_FILENAME)
+
+        Sym = 0
+    Else
+        Exit Sub
+    End If
+
+Case Else
+
+End Select
+
+
+End Sub
+
+Private Sub Timer1_Timer()
+
+    Select Case Sym
+    Case 0
+    
+        If ((Row + Size) = nRow) Then
+            Timer1.Interval = 0
+            Call Initiate
+            Exit Sub
+        End If
+
+        If (GridCtrl1.TextMatrix(Row + Size, Col)) = "" Then
+            For i = Row To Row + Size
+                GridCtrl1.TextMatrix(i, Col) = ""
+            Next
+            Row = Row + 1
+            For i = Row To Row + Size - 1
+                GridCtrl1.TextMatrix(i, Col) = "X"
+            Next
+            
+                Call CheckLastRow
+                If lRowSt Then
+                    Call ShiftAllDown
+                    Call Initiate
+                    Exit Sub
+                End If
+        Else
+            Timer1.Interval = 0
+            Call Initiate
+        End If
+   
+    Case 1
+        If (Row = nRow - 1) Then
+            Timer1.Interval = 0
+            Call Initiate
+            Exit Sub
+        End If
+            
+           For i = Col To Col + Size - 1
+            If ((GridCtrl1.TextMatrix(Row + 1, i) = "") And (Row < nRow - 1)) Then
+                Xdet = False
+            Else
+                Xdet = True
+                i = Col + Size - 1
+            End If
+        Next
+      
+        If (Xdet = False) Then
+            For i = Col To Col + Size - 1
+                GridCtrl1.TextMatrix(Row, i) = ""
+            Next
+         
+            For i = Col To Col + Size - 1
+                GridCtrl1.TextMatrix(Row + 1, i) = "X"
+            Next
+            
+                Call CheckLastRow
+                If lRowSt Then
+                    Call ShiftAllDown
+                    Call Initiate
+                    Exit Sub
+                End If
+
+            Row = Row + 1
+            If (Row = nRow - 1) Then
+                Timer1.Interval = 0
+                Call Initiate
+            End If
+        Else
+            Timer1.Interval = 0
+            Call Initiate
+        End If
+
+    Case Else
+        Timer1.Enabled = True
+    End Select
+
+End Sub
+
+Public Sub Initiate()
+    For i = 0 To nCol - 1
+        If (GridCtrl1.TextMatrix(nRow - 4, i) = "X") Then
+            Timer1.Interval = 0
+            Call GotScores
+            Exit Sub
+        End If
+    Next
+
+    Row = 0
+    Col = CInt(10 * Rnd + 1)
+    Size = CInt(3 * Rnd + 1)
+    Sym = 0
+  
+    For i = Row To Size - 1
+        GridCtrl1.TextMatrix(i, Col) = "X"
+    Next i
+  
+    Timer1.Interval = speed
+End Sub
+
+Public Sub GotScores()
+    Dim mb_val As Integer
+    For j = nRow - 3 To nRow - 1
+        For i = 0 To nCol - 1
+            If (GridCtrl1.TextMatrix(j, i) = "X") Then
+                score = score + 1
+            End If
+        Next
+    Next
+    
+    mb_val = MsgBox("Game is over. " & _
+    "Your score is " & score & ". Would You like to start " & _
+    "new game?", vbOKCancel)
+    
+    If mb_val = vbOK Then
+        Call btnClear_Click
+        Call btnStart_Click
+    End If
+    
+End Sub
+
+Public Sub CheckLastRow()
+    For i = 0 To nCol - 1
+        If (GridCtrl1.TextMatrix(nRow - 1, i) = "") Then
+            lRowSt = False
+            Exit Sub
+        Else
+            lRowSt = True
+        End If
+    Next
+End Sub
+
+Public Sub ShiftAllDown()
+
+ResSound = PlaySound("\windows\question.wav", 0, SND_FILENAME)
+
+For i = nRow - 1 To nRow - 8 Step -1
+    For j = 0 To nCol - 1
+       GridCtrl1.TextMatrix(i, j) = GridCtrl1.TextMatrix(i - 1, j)
+    Next
+Next
+
+
+score = score + nCol
+End Sub
+
+

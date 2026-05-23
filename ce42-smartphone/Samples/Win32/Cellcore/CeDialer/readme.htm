@@ -1,0 +1,2535 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Readme_files/filelist.xml">
+<title>CEDialer</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Randy Ocheltree</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Win CE DevDocs</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>362</o:TotalTime>
+  <o:LastPrinted>1999-09-30T01:08:00Z</o:LastPrinted>
+  <o:Created>1999-09-30T02:34:00Z</o:Created>
+  <o:LastSaved>1999-09-30T02:34:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1377</o:Words>
+  <o:Characters>7854</o:Characters>
+  <o:Company>MS</o:Company>
+  <o:Lines>65</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>9645</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:UpdateStylesOnOpen/>
+  <w:DoNotHyphenateCaps/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>3</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:"Microsoft Logo 95";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:Symbol;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:windowtext;}
+h1
+	{mso-style-next:"Text\,t";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:18.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+h2
+	{mso-style-parent:"Heading 1\,h1\,Level 1 Topic Heading";
+	mso-style-next:"Text\,t";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:18.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	font-family:"Times New Roman";
+	color:gray;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+h3
+	{mso-style-parent:"Heading 1\,h1\,Level 1 Topic Heading";
+	mso-style-next:"Text\,t";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:18.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:16.0pt;
+	font-family:"Times New Roman";
+	color:silver;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+h4
+	{mso-style-parent:"Heading 1\,h1\,Level 1 Topic Heading";
+	mso-style-next:"Text\,t";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:16.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+h5
+	{mso-style-parent:"Heading 1\,h1\,Level 1 Topic Heading";
+	mso-style-next:"Text\,t";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:15.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+h6
+	{mso-style-parent:"Heading 1\,h1\,Level 1 Topic Heading";
+	mso-style-next:"Text\,t";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:12.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:9.0pt;
+	text-indent:-9.0pt;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{mso-style-update:auto;
+	mso-style-parent:"Index 1\,idx1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:27.0pt;
+	text-indent:-9.0pt;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{mso-style-update:auto;
+	mso-style-parent:"Index 1\,idx1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:45.0pt;
+	text-indent:-9.0pt;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-parent:"Heading 1\,h1\,Level 1 Topic Heading";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:12.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.25in;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 2\,toc2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 2\,toc2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:red;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-parent:"Footer\,f";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
+	{mso-style-parent:"Heading 1\,h1\,Level 1 Topic Heading";
+	mso-style-next:"Index 1\,idx1";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:15.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;
+	mso-font-kerning:12.0pt;
+	font-weight:bold;}
+span.MsoFootnoteReference
+	{color:red;
+	vertical-align:super;}
+span.MsoPageNumber
+	{mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	mso-ascii-font-family:Verdana;
+	mso-hansi-font-family:Verdana;
+	color:maroon;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";
+	color:windowtext;}
+p.Text, li.Text, div.Text
+	{mso-style-name:"Text\,t";
+	mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.Figure, li.Figure, div.Figure
+	{mso-style-name:"Figure\,fig";
+	mso-style-parent:"Text\,t";
+	mso-style-next:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.Code, li.Code, div.Code
+	{mso-style-name:"Code\,c";
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:15.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.LabelinList2, li.LabelinList2, div.LabelinList2
+	{mso-style-name:"Label in List 2\,l2";
+	mso-style-parent:"Text in List 2\,t2";
+	mso-style-next:"Text in List 2\,t2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	font-weight:bold;}
+p.TextinList2, li.TextinList2, div.TextinList2
+	{mso-style-name:"Text in List 2\,t2";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.Label, li.Label, div.Label
+	{mso-style-name:"Label\,l";
+	mso-style-parent:"Text\,t";
+	mso-style-next:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	font-weight:bold;}
+p.NumberedList2, li.NumberedList2, div.NumberedList2
+	{mso-style-name:"Numbered List 2\,nl2";
+	mso-style-parent:"Text in List 2\,t2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-list:l59 level1 lfo51;
+	tab-stops:list .5in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.Syntax, li.Syntax, div.Syntax
+	{mso-style-name:"Syntax\,s";
+	mso-style-parent:"Code\,c";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:15.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.TableFootnote, li.TableFootnote, div.TableFootnote
+	{mso-style-name:"Table Footnote\,tf";
+	mso-style-parent:"Text\,t";
+	mso-style-next:"Text\,t";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 0in 0in;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+span.CodeEmbedded
+	{mso-style-name:"Code Embedded\,ce";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";}
+span.LabelEmbedded
+	{mso-style-name:"Label Embedded\,le";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:Verdana;
+	mso-hansi-font-family:Verdana;
+	font-weight:bold;
+	text-decoration:none;
+	text-underline:none;}
+span.LinkText
+	{mso-style-name:"Link Text\,lt";
+	color:green;
+	text-decoration:underline;
+	text-underline:double;}
+span.LinkTextPopup
+	{mso-style-name:"Link Text Popup\,ltp";
+	color:green;
+	text-decoration:underline;
+	text-underline:single;}
+span.LinkID
+	{mso-style-name:"Link ID\,lid";
+	color:red;
+	display:none;
+	mso-hide:all;}
+p.TableSpacingAfter, li.TableSpacingAfter, div.TableSpacingAfter
+	{mso-style-name:"Table Spacing After\,tsa";
+	mso-style-parent:"Text\,t";
+	mso-style-next:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:6.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:6.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:yellow;}
+p.CodeinList2, li.CodeinList2, div.CodeinList2
+	{mso-style-name:"Code in List 2\,c2";
+	mso-style-parent:"Code\,c";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:15.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+span.ConditionalMarker
+	{mso-style-name:"Conditional Marker\,cm";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	color:black;
+	display:none;
+	mso-hide:all;
+	background:#FFFFBF;
+	mso-shading:windowtext;
+	mso-pattern:gray-375 yellow;}
+p.FigureinList2, li.FigureinList2, div.FigureinList2
+	{mso-style-name:"Figure in List 2\,fig2";
+	mso-style-parent:"Figure\,fig";
+	mso-style-next:"Text in List 2\,t2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:.5in;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.FigureEmbedded, li.FigureEmbedded, div.FigureEmbedded
+	{mso-style-name:"Figure Embedded\,fige";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.TableFootnoteinList2, li.TableFootnoteinList2, div.TableFootnoteinList2
+	{mso-style-name:"Table Footnote in List 2\,tf2";
+	mso-style-parent:"Text in List 2\,t2";
+	mso-style-next:"Text in List 2\,t2";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 0in 0in;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.LabelinList1, li.LabelinList1, div.LabelinList1
+	{mso-style-name:"Label in List 1\,l1";
+	mso-style-parent:"Text in List 1\,t1";
+	mso-style-next:"Text in List 1\,t1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	font-weight:bold;}
+p.TextinList1, li.TextinList1, div.TextinList1
+	{mso-style-name:"Text in List 1\,t1";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.CodeinList1, li.CodeinList1, div.CodeinList1
+	{mso-style-name:"Code in List 1\,c1";
+	mso-style-parent:"Code\,c";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:15.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.FigureinList1, li.FigureinList1, div.FigureinList1
+	{mso-style-name:"Figure in List 1\,fig1";
+	mso-style-parent:"Figure\,fig";
+	mso-style-next:"Text in List 1\,t1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:.25in;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.TableFootnoteinList1, li.TableFootnoteinList1, div.TableFootnoteinList1
+	{mso-style-name:"Table Footnote in List 1\,tf1";
+	mso-style-parent:"Text in List 1\,t1";
+	mso-style-next:"Text in List 1\,t1";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.25in;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 0in 0in;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+span.HTML
+	{mso-style-name:HTML;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	color:black;
+	display:none;
+	mso-hide:all;
+	background:#DDFFDD;
+	mso-shading:windowtext;
+	mso-pattern:gray-25 lime;}
+p.AlertText, li.AlertText, div.AlertText
+	{mso-style-name:"Alert Text\,at";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.AlertTextinList1, li.AlertTextinList1, div.AlertTextinList1
+	{mso-style-name:"Alert Text in List 1\,at1";
+	mso-style-parent:"Text in List 1\,t1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.AlertTextinList2, li.AlertTextinList2, div.AlertTextinList2
+	{mso-style-name:"Alert Text in List 2\,at2";
+	mso-style-parent:"Text in List 2\,t2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.RevisionHistory, li.RevisionHistory, div.RevisionHistory
+	{mso-style-name:"Revision History\,rh";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:1.0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:purple;
+	display:none;
+	mso-hide:all;
+	font-style:italic;}
+p.BulletedList1, li.BulletedList1, div.BulletedList1
+	{mso-style-name:"Bulleted List 1\,bl1";
+	mso-style-parent:"Text in List 1\,t1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-list:l41 level1 lfo56;
+	tab-stops:.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.TextIndented, li.TextIndented, div.TextIndented
+	{mso-style-name:"Text Indented\,ti";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.BulletedList2, li.BulletedList2, div.BulletedList2
+	{mso-style-name:"Bulleted List 2\,bl2";
+	mso-style-parent:"Text in List 2\,t2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-list:l12 level1 lfo61;
+	tab-stops:.5in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.DefinedTerm, li.DefinedTerm, div.DefinedTerm
+	{mso-style-name:"Defined Term\,dt";
+	mso-style-parent:"Text\,t";
+	mso-style-next:"Definition\,d";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.Definition, li.Definition, div.Definition
+	{mso-style-name:"Definition\,d";
+	mso-style-parent:"Text\,t";
+	mso-style-next:"Defined Term\,dt";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.NumberedList1, li.NumberedList1, div.NumberedList1
+	{mso-style-name:"Numbered List 1\,nl1";
+	mso-style-parent:"Text in List 1\,t1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-list:l66 level1 lfo46;
+	tab-stops:.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.GlueLinkText, li.GlueLinkText, div.GlueLinkText
+	{mso-style-name:"Glue Link Text\,glt";
+	mso-style-parent:"Text\,t";
+	mso-style-next:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.IndexTag, li.IndexTag, div.IndexTag
+	{mso-style-name:"Index Tag\,it";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:1.0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:olive;
+	display:none;
+	mso-hide:all;}
+span.CodeFeaturedElement
+	{mso-style-name:"Code Featured Element\,cfe";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	font-weight:bold;}
+p.Copyright, li.Copyright, div.Copyright
+	{mso-style-name:"Copyright\,copy";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.PrintDivisionTitle, li.PrintDivisionTitle, div.PrintDivisionTitle
+	{mso-style-name:"Print Division Title\,pdt";
+	mso-style-parent:"";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:0in;
+	text-align:right;
+	line-height:20.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:18.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;
+	font-weight:bold;}
+p.PrintMSCorp, li.PrintMSCorp, div.PrintMSCorp
+	{mso-style-name:"Print MS Corp\,pms";
+	mso-style-parent:"";
+	mso-style-next:"Text\,t";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:right;
+	line-height:15.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:13.0pt;
+	font-family:"Microsoft Logo 95";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+p.Slugline, li.Slugline, div.Slugline
+	{mso-style-name:"Slugline\,slug";
+	mso-style-parent:"Footer\,f";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:9.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-height:40.0pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-frame-vspace:9.0pt;
+	mso-element-wrap:auto;
+	mso-element-anchor-vertical:page;
+	mso-element-anchor-horizontal:margin;
+	mso-element-top:730.05pt;
+	mso-height-rule:exactly;
+	font-size:6.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;}
+span.MultilanguageMarkerAuto
+	{mso-style-name:"Multilanguage Marker Auto\,mma";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	mso-ascii-font-family:Verdana;
+	mso-hansi-font-family:Verdana;
+	color:fuchsia;}
+p.MultilanguageMarkerExplicitBegin, li.MultilanguageMarkerExplicitBegin, div.MultilanguageMarkerExplicitBegin
+	{mso-style-name:"Multilanguage Marker Explicit Begin\,mmeb";
+	mso-style-parent:"Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:fuchsia;}
+p.MultilanguageMarkerExplicitEnd, li.MultilanguageMarkerExplicitEnd, div.MultilanguageMarkerExplicitEnd
+	{mso-style-name:"Multilanguage Marker Explicit End\,mmee";
+	mso-style-parent:"Multilanguage Marker Explicit Begin\,mmeb";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:11.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:purple;}
+span.Bold
+	{mso-style-name:"Bold\,b";
+	font-weight:bold;}
+span.BoldItalic
+	{mso-style-name:"Bold Italic\,bi";
+	font-weight:bold;
+	font-style:italic;}
+span.Italic
+	{mso-style-name:"Italic\,i";
+	font-style:italic;}
+p.LabelSpecial, li.LabelSpecial, div.LabelSpecial
+	{mso-style-name:"Label Special\,ls";
+	mso-style-parent:"Label\,l";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	font-weight:bold;}
+p.PrintDivisionNumber, li.PrintDivisionNumber, div.PrintDivisionNumber
+	{mso-style-name:"Print Division Number\,pdn";
+	mso-style-parent:"Print Division Title\,pdt";
+	margin-top:9.0pt;
+	margin-right:-6.0pt;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	line-height:13.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:maroon;
+	text-transform:uppercase;
+	letter-spacing:6.0pt;}
+span.Strikethrough
+	{mso-style-name:"Strikethrough\,strike";
+	text-decoration:line-through;}
+span.Subscript
+	{mso-style-name:"Subscript\,sub";
+	vertical-align:sub;}
+span.Superscript
+	{mso-style-name:"Superscript\,sup";
+	vertical-align:super;}
+p.H4, li.H4, div.H4
+	{mso-style-name:H4;
+	mso-style-next:"Normal\,APPLY ANOTHER STYLE";
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:windowtext;
+	font-weight:bold;}
+span.HTMLCode1
+	{mso-style-name:"HTML Code1";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:-131315620;}
+@list l0:level1
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:2098132646;}
+@list l1:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:-275774452;}
+@list l2:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:-769375614;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:783560866;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:2102063394;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:615661340;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:-1847684610;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:1085192148;}
+@list l8:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-2037338606;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:2;
+	mso-list-template-ids:0;}
+@list l10:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level2
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level5
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level6
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level8
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level9
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l11
+	{mso-list-id:68771112;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l11:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:93677288;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l12:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:97071069;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l13:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l14
+	{mso-list-id:98985430;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l14:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l15
+	{mso-list-id:126094620;
+	mso-list-type:hybrid;
+	mso-list-template-ids:796955222 -2131228538 1981727674 1494387616 -488319426 -1569014582 222100186 306218320 -524395566 128513414;}
+@list l16
+	{mso-list-id:152069974;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l16:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l17
+	{mso-list-id:184681875;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l18
+	{mso-list-id:213931746;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l18:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l19
+	{mso-list-id:276327433;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1131542834 1320466006 -1384375882 -1096625012 -1551063134 -1897790170 34778768 1967714524 -1155351050 70945106;}
+@list l20
+	{mso-list-id:278609769;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l20:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21
+	{mso-list-id:309751557;
+	mso-list-type:simple;
+	mso-list-template-ids:1104607418;}
+@list l21:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l22
+	{mso-list-id:318533751;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l22:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l23
+	{mso-list-id:414674143;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l23:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l24
+	{mso-list-id:475953915;
+	mso-list-type:simple;
+	mso-list-template-ids:1980517918;}
+@list l24:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l25
+	{mso-list-id:521362406;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l25:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l26
+	{mso-list-id:555043825;
+	mso-list-type:simple;
+	mso-list-template-ids:309995936;}
+@list l26:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l27
+	{mso-list-id:573123599;
+	mso-list-type:hybrid;
+	mso-list-template-ids:320104748 1431095512 -1518056718 -1463402818 1281548644 1552438146 993305964 -1122978386 1252413584 248799710;}
+@list l27:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l27:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l27:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l27:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l27:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l27:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l27:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l27:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l27:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l28
+	{mso-list-id:624120574;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l28:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l29
+	{mso-list-id:653800487;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l29:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l30
+	{mso-list-id:681705840;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l30:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l31
+	{mso-list-id:769737302;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l31:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l32
+	{mso-list-id:798185867;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l32:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l33
+	{mso-list-id:1054350067;
+	mso-list-type:simple;
+	mso-list-template-ids:-1624840694;}
+@list l33:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l34
+	{mso-list-id:1074623869;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l34:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l35
+	{mso-list-id:1079012351;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l35:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l36
+	{mso-list-id:1133214811;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l36:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l37
+	{mso-list-id:1157041145;
+	mso-list-type:simple;
+	mso-list-template-ids:-13829058;}
+@list l37:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l38
+	{mso-list-id:1161654485;
+	mso-list-type:simple;
+	mso-list-template-ids:520143332;}
+@list l38:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l39
+	{mso-list-id:1242174498;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l39:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l40
+	{mso-list-id:1247305601;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l40:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l41
+	{mso-list-id:1338267576;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l41:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l42
+	{mso-list-id:1352609911;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l42:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l43
+	{mso-list-id:1354570960;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l43:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l44
+	{mso-list-id:1387410818;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l44:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l45
+	{mso-list-id:1434664814;
+	mso-list-type:simple;
+	mso-list-template-ids:-1000035972;}
+@list l45:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l46
+	{mso-list-id:1435589206;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l46:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l47
+	{mso-list-id:1440906259;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l47:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l48
+	{mso-list-id:1484086278;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l48:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l49
+	{mso-list-id:1499880706;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-521523880 413301670 -66548558 567546308 -500653728 -1843069040 -96312980 -310322332 175695994 1370505958;}
+@list l50
+	{mso-list-id:1602645195;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l50:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l51
+	{mso-list-id:1610774877;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l51:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l52
+	{mso-list-id:1615479013;
+	mso-list-type:simple;
+	mso-list-template-ids:70557352;}
+@list l52:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l53
+	{mso-list-id:1633555308;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l53:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l54
+	{mso-list-id:1656881520;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l54:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l55
+	{mso-list-id:1686596083;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l55:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l56
+	{mso-list-id:1712537720;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l56:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l57
+	{mso-list-id:1725445565;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-960624662 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l57:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l57:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l57:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l57:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l57:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l57:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l57:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l57:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l57:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l58
+	{mso-list-id:1780173060;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l58:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l59
+	{mso-list-id:1809861688;
+	mso-list-type:simple;
+	mso-list-template-ids:1656119020;}
+@list l59:level1
+	{mso-level-style-link:"Numbered List 2";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l60
+	{mso-list-id:1835412302;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l60:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l61
+	{mso-list-id:1839688267;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l61:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l62
+	{mso-list-id:1843008916;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-406050458 -1443198568 510430734 326561342 2122739674 1567160496 -16848756 -461868738 -925082966 -1195597616;}
+@list l62:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l62:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l62:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l62:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l62:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l62:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l62:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l62:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l62:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l63
+	{mso-list-id:1848783716;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1586747434 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l63:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l64
+	{mso-list-id:1862889888;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-861102040 -1689643792 -1924097038 1030931852 448057084 1291341442 696127652 -1052988076 -622832952 1318466324;}
+@list l65
+	{mso-list-id:1892156636;
+	mso-list-type:simple;
+	mso-list-template-ids:2143072124;}
+@list l65:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l66
+	{mso-list-id:1908110580;
+	mso-list-type:simple;
+	mso-list-template-ids:-1994478282;}
+@list l66:level1
+	{mso-level-style-link:"Numbered List 1";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l67
+	{mso-list-id:1925800502;
+	mso-list-type:simple;
+	mso-list-template-ids:-387552862;}
+@list l67:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l68
+	{mso-list-id:2007398918;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l68:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l69
+	{mso-list-id:2128041332;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l69:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in;text-justify-trim:
+punctuation'>
+
+<div class=Section1>
+
+<h1>CEDialer</h1>
+
+<p class=Text>To simplify the process of using a modem, Windows CE provides an
+implementation of the Microsoft Telephony API (TAPI). The CEDialer code sample
+shows how to dial a call with a modem using TAPI functions.</p>
+
+<p class=Text>Windows CE TAPI supports outbound calls, but does not support
+inbound calls. TAPI also supports installable service providers. The Telephony
+Service Provider Interface (TSPI) enables developers to create telephony
+service applications that handle function calls from remote applications to
+carry out and control communications over the telephone network. In Windows CE,
+TAPI links to and calls TSPI functions using standard dynamic-link library
+(DLL) functions. TAPI uses the Unimodem TSPI by default. For more information
+on using TAPI with Windows CE, see the Microsoft® Windows® CE Communications
+guide. </p>
+
+<h2>Requirements</h2>
+
+<p class=Text>This sample requires the Microsoft SDK for Windows CE, Pocket
+PC Edition 2.0. To correctly run the SDK, you should have one of the
+following installed on your desktop computer: </p>
+
+<p class=Text style='margin-left:.5in;text-indent:-.25in;mso-list:l57 level1 lfo67;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Microsoft® Windows® NT 4.0 with Service Pack 5 </p>
+
+<p class=Text style='margin-left:.5in;text-indent:-.25in;mso-list:l57 level1 lfo67;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Microsoft® Windows® 2000 Beta 3 </p>
+
+<p class=Text style='margin-left:.5in;text-indent:-.25in;mso-list:l57 level1 lfo67;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Microsoft® Windows® 98</p>
+
+<p class=Text>The CEDialer sample uses the following APIs, which are new for
+Windows CE for the Pocket PC 2.0:</p>
+
+<p class=BulletedList1 style='mso-list:l17 level1 lfo58;tab-stops:list .25in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>SHSipInfo</p>
+
+<p class=BulletedList1 style='mso-list:l17 level1 lfo58;tab-stops:list .25in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>SHInitDialog</p>
+
+<h2>CEDialer: Using TAPI to make a modem call</h2>
+
+<p class=Text>A Windows CE–based application that uses a modem must be able to
+handle tasks such as initializing the modem, opening the line, dialing a phone
+number, and disconnecting when the session is complete.</p>
+
+<p class=Text>The following are the main steps and associated functions for
+dialing a call in CEDialer:</p>
+
+<p class=Text>1. Initializing TAPI</p>
+
+<p class=BulletedList1 style='margin-left:.5in;mso-list:l20 level1 lfo59;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-bidi-font-weight:bold'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b>InitializeTAPI<o:p></o:p></b></p>
+
+<p class=BulletedList1 style='margin-left:.5in;mso-list:l20 level1 lfo59;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-bidi-font-weight:bold'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b>GetLineInfo<o:p></o:p></b></p>
+
+<p class=Text>2. Opening a line and making the call</p>
+
+<p class=BulletedList1 style='margin-left:.5in;mso-list:l20 level1 lfo59;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-bidi-font-weight:bold'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b>MakePhoneCall<o:p></o:p></b></p>
+
+<p class=BulletedList1 style='margin-left:0in;text-indent:0in;mso-list:none;
+tab-stops:.5in'>3. Cleanup<b><o:p></o:p></b></p>
+
+<p class=BulletedList1 style='margin-left:.5in;mso-list:l34 level1 lfo62;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-bidi-font-weight:bold'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b>CurrentLineClose<o:p></o:p></b></p>
+
+<span style='font-size:10.0pt;font-family:Verdana;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";color:black;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><br clear=all
+style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Initializing TAPI</h3>
+
+<p class=Text>When initializing TAPI, the application must establish a way to
+communicate between a Windows CE–based application and TAPI.</p>
+
+<p class=LabelSpecial><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=LabelSpecial>The CEDialer InitializeTAPI function:</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l36 level1 lfo53;
+tab-stops:list .25in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls <b>lineInitialize</b> to initialize TAPI. </p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l36 level1 lfo53;
+tab-stops:list .25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls the custom <b>GetLineInfo</b> function to open the line.
+</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l36 level1 lfo53;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]><b>GetLineInfo</b> calls <b>lineNegotiateAPIVersion</b> to
+find TAPI API version to use.</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l36 level1 lfo53;
+tab-stops:list .25in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]><b>GetLineInfo</b> calls <b>lineGetDevCaps </b>to obtain
+information on the line.</p>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4>lineInitialize</h4>
+
+<p class=Text>The <b>lineInitialize</b> function initializes the application’s
+use of the Tapi.dll for subsequent use. It registers the application-specific
+notification mechanism and returns the number of line devices available to the
+application.</p>
+
+<h4>lineCallbackFunc</h4>
+
+<p class=Text>To receive status notices, the application must implement a TAPI <b>lineCallbackFunc</b>
+function to establish a way to communicate with TAPI. An application tells TAPI
+the address of the callback function in the call to <b>lineInitialize.</b> The
+callback function is used for notifying applications of changes in the status
+of calls, lines, and phone devices. TAPI uses the callback function to send
+messages to the application.</p>
+
+<h4>lineNegotiateAPIVersion</h4>
+
+<p class=Text>The <b>lineNegotiateAPIVersion</b> function, called by <b>GetLineInfo</b>
+indicates which version of TAPI the application supports, and negotiates which
+API version number TAPI should use. The reason for negotiating the TAPI version
+is to be sure that the correct protocol is used. New versions might define new
+features, new fields to data structures, and so on. Version numbers therefore
+indicate how to interpret various data, structures, and messages. If version
+ranges do not match, the application and API or service provider versions are
+incompatible and an error is returned. When the function succeeds, the line
+data such as permanent identifier, number of addresses, and line name, can be
+obtained from the LINEDEVCAPS structure.</p>
+
+<h4>lineGetDevCaps</h4>
+
+<p class=Text>When an application has initiated and negotiated the API, the
+application needs to verify if the line is usable and ready for dialing out.
+The application can do this by checking the values filled into the LINEDEVCAPS
+structure by calling the <b>lineGetDevCaps</b> function. </p>
+
+<p class=Text>The <b>lineGetDevCaps</b> function fills in the LINEDEVCAPS
+structure, which the telephone service provider defines. The size of the
+structure might be different for different service providers, and therefore the
+application must check to see if the buffer size is adequate. To check if the
+amount of space supplied for the structure is sufficient for the size of the
+structure of the provider, compare the <i>dwNeededSize</i> and <i>dwTotalSize</i>
+fields. If the total size is too small, the application needs to pass a larger
+buffer to the function.</p>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Opening a line and making a call</h3>
+
+<p class=Text>Once TAPI is initialized using the <b>lineInitialize</b>
+function, an application needs to get an available line using the <b>lineOpen</b>
+function.</p>
+
+<p class=LabelSpecial>In the CEDialer sample the MakePhoneCall function:</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l68 level1 lfo64;
+tab-stops:list .25in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls <b>lineOpen</b> to open the line. </p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l68 level1 lfo64;
+tab-stops:list .25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls <b>lineTranslateAdress</b> to translate the phone
+number.</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l68 level1 lfo64;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Sets up call parameters in LINECALLPARAMS structure.</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l63 level1 lfo72;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>The LINECALLPARAMS structure describes parameters
+supplied when making calls using <b>lineMakeCall.</b> The LINECALLPARAMS structure
+is also used as a parameter in other operations. </p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l68 level1 lfo64;
+tab-stops:list .25in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls <b>lineMakeCall</b>. </p>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4>lineopen</h4>
+
+<p class=Text>The <b>lineOpen</b> function opens the specified line device and
+returns a line handle to the opened line device. This line handle is used in
+subsequent operations on the line device. Later, when the application is
+finished using the line device, it can close it with <b>lineClose.</b></p>
+
+<p class=Text>The <b>lineOpen</b> function specifies: </p>
+
+<p class=Text>A handle to the application registration with TAPI. </p>
+
+<p class=Text>A value that identifies the line device to be opened. Windows CE
+does not support the LINEMAPPER value for the <i>dwDeviceID</i> parameter. </p>
+
+<p class=Text>A pointer to a line handle loaded with the handle representing
+the opened line device. </p>
+
+<p class=Text>The API version number under which the application and TAPI
+operate compatibly. This number is obtained by calling the <b>lineNegotiateAPIVersion.</b></p>
+
+<p class=Text>The extension version number under which the application and the
+service provider operate compatibly. Windows CE does not support
+provider-specific extensions. The <i>dwExtVersion</i> parameter should be set
+to zero prior to calling the <b>lineOpen</b> function. </p>
+
+<p class=Text>User-instance data passed back to the application with each
+message associated with this line or with addresses or calls on this line. This
+parameter is not interpreted by the TAPI. </p>
+
+<p class=Text>The privilege the application wants for the calls it is notified
+for. This parameter can be a combination of the LINECALLPRIVILEGE constants. </p>
+
+<h4>linemakecall</h4>
+
+<p class=Text>To place a call, the application must call the <b>lineMakeCall</b>
+function using the LINECALLPARAMS structure. The CEDialer application provides
+a dialog box for a user to enter the phone number of their choice. TAPI sends
+LINE_CALLSTATE messages to indicate the progress of the call. For example,
+LINE_CALLSTATE indicates states of connection, dialing, proceeding, and so on.
+The messages vary depending on the type of call and the service provided. The
+application should not be designed to one type or one special sequence of call
+states.</p>
+
+<p class=Text>During data transfer, TAPI continues to manage the connection,
+but the application handles data transmission and reception. When the
+transmission is complete, TAPI returns a LINE_CALLSTATE message, such as one
+indicating that a remote disconnect has occurred. The CeDialer sample does not
+handle data transmission.</p>
+
+<p class=Text>Each call from a Windows CE device is identified by a call
+handle. A call handle provides a pointer to a value to identify a specific
+call. TAPI assigns call handles as required. One call handle exists for every
+call owned by an application. Certain TAPI functions create new calls. As they
+do so, they return new call handles to the application.</p>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=Text>The <b>lineMakeCall </b>function has the following parameters: </p>
+
+<p class=Text>A handle to the open line device on which a call is originated </p>
+
+<p class=Text>A pointer to the handle to the call. Use this call handle to
+identify the call when invoking other telephony operations on the call. </p>
+
+<p class=Text>A pointer to the destination address. This follows the standard
+area code and telephone number format. </p>
+
+<p class=Text>The country code of the called party </p>
+
+<p class=Text>A pointer to a LINECALLPARAMS structure. This structure enables
+the application to specify how to set up the call. If NULL is specified, a
+default 3.1 kHz channel voice call is established and an arbitrary origination
+address on the line is selected. This structure enables the application to
+select elements such as the call bearer mode, data rate, expected media, and
+dialing parameters. </p>
+
+<p class=Text>The <b>MakePhoneCall</b> function demonstrates how the
+LPCALLPARAMS structure can be filled in to support an outbound call. </p>
+
+<p class=Text>After the <b>lineMakeCall</b> function successfully sets up the
+call, TAPI returns a LINE_REPLY message through the callback function. The
+LINE_REPLY message also informs the application that the call handle returned
+by <b>lineMakeCall</b> is valid. This message indicates only that the call has
+been established at the local end, which is perhaps indicated by a dial tone.
+The application can then use that line to make outbound calls.</p>
+
+<span style='font-size:10.0pt;font-family:Verdana;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";color:black;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><br clear=all
+style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Cleanup</h3>
+
+<p class=Text>When the application receives a message indicating that the call
+has ended, the application disconnects the call at the local end with <b>lineDrop</b>.
+</p>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=LabelSpecial>The CEDialer CurrentLineClose function:</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l13 level1 lfo63;
+tab-stops:list .25in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls <b>linedrop</b> to drop the current call.</p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l13 level1 lfo63;
+tab-stops:list .25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls <b>lineDeallocateCall</b> to release the call handle for
+the finished call. </p>
+
+<p class=Text style='margin-left:.25in;text-indent:-.25in;mso-list:l13 level1 lfo63;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Calls <b>lineClose</b> to close the line connection. </p>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h4>linedrop, lineDeallocateCall, lineclose</h4>
+
+<p class=Text>When a user ends the call, the application should disconnect and
+terminate the call with <b>lineDrop</b> call the <b>lineDeallocateCall</b>
+function to free system-allocated memory related to the call handle. The <b>lineDrop</b>
+function can also be used to drop a call in progress. To finally close the
+line, the application should call <b>lineClose.</b> </p>
+
+<p class=Text><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+TARGETNAME=stockpor
+TARGETTYPE=PROGRAM
+
+WINCEOEM=1
+EXEENTRY=WinMain
+
+TARGETLIBS= \
+    $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+    $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\commctrl.lib
+
+SOURCES= ..\stockpor.cpp \
+         stocks.cpp \
+         stockpor.rc

@@ -1,0 +1,9 @@
+; DeviceConfigCtl.def : Declares the module parameters.
+
+LIBRARY      "DeviceConfigCtl.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

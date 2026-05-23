@@ -1,0 +1,595 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Htm-Help" Content="inbox.htm#Main_Contents">
+<title>Inbox Help</title>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<!-- PegHelp -->
+
+<P><A NAME="Main_Contents"></A><B>Inbox Help</B>
+<!-- CS topic for list view-->
+
+<ul></ul><b>Concepts</b><br>
+<A HREF="inbox.htm#overview">About Inbox</A><BR>
+<A HREF="inbox.htm#aboutsync">About Synchronizing Inbox</A><BR>
+<A HREF="inbox.htm#howfolders">About Folders</A><BR>
+
+<ul></ul><b>How to</b><br>
+<A HREF="inbox.htm#remote">Connect to a Mail Server</A><BR>
+<A HREF="inbox.htm#reading_and_responding_to_messages">Read and Respond to Messages</A><BR>
+<A HREF="inbox.htm#composing_and_editing_messages">Compose and Edit Messages</A><BR>
+<A HREF="inbox.htm#customize">Customize Inbox</A><BR>
+<a href="inbox.htm#shortcuts">Use Hardware Buttons</a><br>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="overview"></A><B>About Inbox</B><br>
+<ul></ul>
+<P>You can send and receive e-mail by synchronizing with your PC, or by connecting to a POP3 or IMAP4 mail server. You need to set up an e-mail service for each method you use except for ActiveSync, which is set up by default. The ActiveSync folder on your device is used to store messages you send and receive through synchronization with a PC. Service names appear as folders in the folder list (located on the left, under the navigation bar) in the Inbox message list.
+<ul></ul>
+<P>With synchronization, messages are synchronized between the device Inbox and the PC Inbox using ActiveSync and Microsoft Exchange or Microsoft Outlook. For more information, see <A HREF="inbox.htm#aboutsync">About Synchronizing Inbox</A>.
+<UL></UL>
+<P>When connecting to a POP3 or IMAP4 server, you use a modem to connect to your Internet service provider (ISP), or a modem or Ethernet card to connect to the local area network that your e-mail server is connected to. For more information, see <A HREF="inbox.htm#remote">Connect to a Mail Server</A>.
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#howfolders">About Folders</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="aboutsync"></A><B>About Synchronizing Inbox</B><br>
+<ul></ul>
+<P>After selecting Inbox for synchronization in ActiveSync, e-mail messages are synchronized as part of the general synchronization process. During synchronization:</P>
+<UL>
+<LI>Messages are copied from the Inbox folder of Exchange or Outlook on your PC to the ActiveSync folder in Inbox on your device.  By default, you’ll receive messages from the last three days only, the first 100 lines of each new message, and no file attachments.
+<LI>Messages in the Outbox folder on your device are transferred to Exchange or Outlook and then sent from those programs.
+<LI>The messages on the two computers are linked. When you delete a message on your device, it’s deleted from your PC the next time you synchronize.
+
+<LI>Only the messages in your Inbox folder are synchronized. Messages in subfolders in your PC Inbox folder are not synchronized.
+</UL>
+<ul></ul>
+<P>For information on initiating Inbox synchronization, see ActiveSync Help on the PC or <A HREF="connect.htm#Main_Contents">Connections Help</A>.
+<UL></UL>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#overview">About Inbox</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="howfolders"></A><B>About Folders</B><br>
+<ul></ul>
+<P>Each e-mail service has its own folder hierarchy with four default folders: Inbox, Outbox, Deleted (local), and Sent. The messages you receive and send through the mail service are stored in these folders. You can also create additional folders within each hierarchy. The Deleted (local) folder contains messages that have been deleted on the device. The behavior of the Deleted (local) and Sent folders depends on the Inbox options you have chosen.
+<ul></ul>
+<P>The behavior of the folders you create depends on whether you are using ActiveSync, POP3, or IMAP4.
+<ul></ul>
+<P>If you are using ActiveSync or POP3 and you move messages to a folder you created, the link is broken between the messages on the device and their copies on the mail server. The next time you connect, the mail server will see that the messages are missing from the device Inbox and delete them from the server. This prevents you from having duplicate copies of a message, but it also means that you will no longer have access to messages you move to folders you create from anywhere except the device.
+<ul></ul>
+<P>If you are using IMAP4, the folders you create and the messages you move are mirrored on the server. For example, if you move two messages from the Inbox folder to a folder called Family, the server will create a copy of the Family folder and copy the messages into that folder. Therefore, messages are available to you anytime you connect to your mail server, whether it is from your device or PC. This synchronization of folders occurs when you create a new folder, move or copy messages into a folder, switch to another program on the device, or tap <B>Services</B> > <B>Synchronize Folders</B>. If you want to view the messages in a folder while disconnected from your mail server, select the folder and then <B>Services</B> > <B>Folder Available Offline</B>. You may also see a Deleted Items folder. This folder is for messages deleted on the server.
+<UL></UL>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#createfolder">Create, rename, or delete a folder</A><BR>
+<A HREF="inbox.htm#designate">Designate a folder as offline</A><BR>
+<A HREF="inbox.htm#syncfolders">Synchronize folders while connected</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="remote"></A><B>Connect to a Mail Server</B><br>
+<ul></ul>
+<A HREF="inbox.htm#set_up_an_e-mail_service">Set up a mail service</A><BR>
+<A HREF="inbox.htm#downloadserver">Download messages from the server</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="set_up_an_e-mail_service"></A><B>Set up a mail service</B><br>
+<!-- CS topic for Options window-Services tab and Service Name window-->
+
+<UL></UL>
+<P>To connect to your POP3 or IMAP4 mail server, you need to set up an Inbox e-mail service and a remote connection to the Internet or network the mail server is connected to. Follow the steps below to set up a connection to your mail server as well as a connection to the Internet or a network. If you have created an Internet or network connection already, you'll be able to choose it as the connection method. For more information on setting up a remote connection, see <A HREF="connect.htm#Main_Contents">Connections Help</A>.
+
+<OL>
+<LI>Get the following information from your ISP or network administrator: POP3 or IMAP4 server name, SMTP host name, user name, password, and domain name (for network connections only).
+<LI>Open Inbox, and tap <B>Services</B> > <B>New Service</B>.
+<LI>From the <B>Service type</B> list, tap POP3 Mail or IMAP4 Mail. (POP3 is the most common mail protocol for ISPs.)
+<LI>Enter a unique name for the service. This name cannot be changed later.
+<LI>Tap <B>Next</B>.
+<li>If you have created a connection you want to use, select it from the <B>Connection</B> list. If you have not, select <B>Create new connection</B> and follow the steps in the wizard. When you return to this screen at the end of the wizard, select the connection you created from the <B>Connection</B> list.
+<LI>Follow the steps in the Setup wizard. For more information on a wizard screen, see the following topics:
+<UL>
+<LI><A HREF="inbox.htm#service1">Service (1/4)</A>
+<LI><A HREF="inbox.htm#service2">Service (2/4)</A>
+<LI><A HREF="inbox.htm#set_general_preferences_for_internet_mail">Service (3/4)</A>
+<LI><A HREF="inbox.htm#set_inbox_preferences_for_internet_mail">Service (4/4)</A>
+</UL>
+</OL>
+<ul></ul>
+<table cellspacing="2" cellpadding="2">
+<tr valign="top">
+    <td><img src="light.2bp"></td>
+    <td>To adjust the settings of an existing service, tap <B>Tools</B> > <B>Options</B> > <b>Services</b> tab and then tap the service. </td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>If you use the same service to connect to different mailboxes, set up and name a different service for each connection.</td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+	<tr valign="top">
+    <td></td>
+    <td>To delete a service, tap and hold the service. Then, tap <B>Delete</B>. </td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>Other mail protocols, such as the protocol used by AOL, are not supported. In addition, services that use special authentication, such as MSN, are not supported. However, you can access the Internet through these services. Third-party programs may be available to enable you to send and receive mail through proprietary protocols. Try searching the Web on the keyword &quot;Windows CE&quot; to find third-party programs for your device.</td></tr>
+</table>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="set_up_internet_mail_service"></A><A NAME="service1"></A><B>Service (1/4)</B><br>
+<UL></UL>
+<P>Complete the following entries as needed:</P>
+
+<UL>
+<LI><B>Connection</B>: Select the name of the connection you created to connect to the mail server. If you are receiving e-mail messages through a network (Ethernet) connection, select <B>Network Connection</B>. If you want Inbox to use your current connection, select <B>(none)</B>. If you have not created a connection, select <B>Create new connection</B> and follow the instructions in the wizard. Then, select this new connection from the list. For more information, see <A HREF="connect.htm#Main_Contents">Connections Help</A>.
+<LI><B>Server</B>: Enter the name of the mail server you use to receive messages. This name will also be used for sending messages if you do not specify an SMTP server.
+<LI><B>User ID</B>: Enter the user name or mailbox ID assigned to you.
+<LI><B>Password</B>: Enter the password you use to access this mail account. If you do not want to be prompted to enter the password each time you connect, tap <B>Save password</B>.
+<LI>Tap <b>Next</b> to continue.
+</ul>
+<ul></ul>
+<B>See Also</B><BR>
+<A HREF="inbox.htm#set_up_an_e-mail_service">Set up a mail service</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="service2"></A><B>Service (2/4)</B><br>
+<UL></UL>
+<P>Complete the following entries as needed:</P>
+
+<ul>
+<LI><B>Domain (Windows NT)</B>: Enter your Windows NT domain name. This name is  required only when connecting to a network, such as a corporate network, that uses Windows NT domain security. This is not required for most ISP accounts. If you have trouble connecting, try clearing this box.
+<LI><B>SMTP host for sending mail</B>: If your mail service uses a separate server for SMTP, enter the name in the box. If you're setting up a POP3 Mail service with an ISP, the ISP must use an SMTP mail gateway.
+<LI><B>Return address</B>: If you do not enter a return address, your return address will be set to <B><I>userID@server</I></B>. If this is not your e-mail address, enter the correct address.
+</UL>
+<ul></ul>
+<B>See Also</B><BR>
+<A HREF="inbox.htm#set_up_an_e-mail_service">Set up a mail service</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="set_general_preferences_for_internet_mail"></A><A NAME="set_general_preferences_for_IMAP4"></A><B>Service (3/4)</B><br>
+<UL></UL>
+<P>Complete the following entries as needed:</P>
+
+<UL>
+<LI><B>Disconnect service after actions are performed</B>: Automatically disconnects you from the server upon completion of all pending actions. This option minimizes connect time and cost.
+<LI><B>Check for new messages every &lt;number&gt; minute(s)</B>: Select the time interval (in minutes) at which you want the device to check for new mail. If this option is turned off, you must check for new mail manually by tapping <img src="send.2bp">.
+<LI><B>When messages arrive, play a sound</B> (IMAP4 only): Informs you that new mail has arrived.
+<LI><B>Send using MIME format</B> (POP3 only): Sends messages with extended characters.
+<LI><B>Only display messages from the last &lt;number&gt; days</B>: Select how many days of messages you want downloaded.
+</UL>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#set_up_an_e-mail_service">Set up a mail service</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="set_inbox_preferences_for_internet_mail"></A><A NAME="set_inbox_preferences_for_IMAP4"></A><B>Service (4/4)</B><br>
+<UL></UL>
+<P>Complete the following entries as needed:</P>
+
+<UL>
+<LI><B>Get message headers only</B>:  Download headers only to save storage space and time. You can download a full copy of the message later by selecting the message and then <B>Services</B> > <B>Get Full Copy.</B> Or, tap <B>Get full copy of messages</B> to receive a full copy of all messages. In addition to the message body, any options you select in <B>When getting full copy</B> will be downloaded. Selecting this option increases the amount of time needed to download messages.
+<LI><B>Include &lt;number&gt; lines</B>: Sets the message length (approximate number of lines) that you want to download.
+<LI><B>Only synchronize Inbox folder</B> (IMAP4 only): Speeds download time by preventing the complete download of the folder list every time you connect.
+<LI><B>Get meeting requests</B> (POP3 only): Downloads and stores copies of meeting requests when getting full copies of messages. This setting applies whether you have chosen to download full copies of messages by default or if you selectively download full copies of messages by opening the message and tapping <B>Services</B> > <B>Get Full Copy</B>. Limitations apply. For more information, see <A HREF="inbox.htm#meeting">Receive meeting requests</A>.
+<LI><B>Get file attachments</B> (POP3 only): Downloads and saves message attachments when getting full copies of messages. This option may use significant RAM and slow download time. This setting applies whether you have chosen to download full copies of messages by default or if you selectively download full copies of messages by opening the message and tapping <b>Services</b> > <B>Get Full Copy</B>.
+<LI><B>When getting full copy, get file attachments/meeting requests</B> (IMAP4 only): Downloads and stores meeting requests and message attachments when getting full copies of messages. This setting applies whether you have chosen to download full copies of messages by default or if you selectively download full copies of messages by opening the message and tapping <B>Services</B> > <B>Get Full Copy</B>. Limitations apply. For more information, see <A HREF="inbox.htm#meeting">Receive meeting requests</A>.
+<LI><B>Only if smaller than &lt;number&gt; KB</B> (IMAP4 only): Restricts the size of the attachments you download. If you want to receive meeting requests only, set to 10 KB.
+</UL>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#set_up_an_e-mail_service">Set up a mail service</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="downloadserver"></A><B>Download messages from the server</B><br>
+<UL></UL>
+<P>When you download messages, you need to create two connections: a remote connection and a mail server connection. The remote connection connects you to your ISP or network. The mail server connection downloads messages from your mail server to Inbox on your device. When you select <B>Services </B> > <B>Connect</B> in Inbox, Inbox starts a remote connection using the connection you specified when setting up the current mail service. If you are already connected through a remote connection other than the one you specified in the mail service, you will be asked if you want to use the current connection. If you choose not to, you will need to disconnect from the current connection before you can check for new messages. For more information, see <A HREF="connect.htm#Main_Contents">Connections Help</A>. 
+<OL>
+<LI>Tap the <B>Services</B> menu and make sure that the service you want to use is selected (has a bullet next to it).
+<LI>Tap <B>Connect</B>.
+The messages on your device and mail server are synchronized: new messages are downloaded to the device Inbox folder, messages in the device Outbox folder are sent, and messages that have been deleted from the server are removed from the device Inbox.  Tap a message in the message list to open it.
+<LI>If you read a message and decide that you need the full copy, tap <B>Edit</B> > <B>Get Full Copy</B> while in the message window or <B>Services</B> > <B>Get Full Copy</B> while in the message list. This will also download message attachments and meeting requests if you selected those options when you set up the mail service. To unmark a message that is marked for download, tap the marked message. You can also choose to download full copies of messages by default.
+<LI>When finished, tap <B>Services</B> > <B>Disconnect</B>.
+<LI>If you start the modem connection from the <b>Connections</b> folder, the connection will continue until you tap the status icon on the <b>Today</b> screen and tap <B>Disconnect</B>.
+</OL>  
+
+<ul></ul>
+<table cellspacing="2" cellpadding="2">
+<tr valign="top">
+    <td><img src="light.2bp"></td>
+    <td>Receiving entire messages consumes storage memory.</td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>The size column in the message list displays the local size and server size of a message. Even when a message has been downloaded fully, these numbers may differ because the size of a message can vary between the server and the device.</td>
+</tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>When using IMAP4 to get Outlook or Schedule+ data, you will see the contents of your Journal folder. File editing transactions and documents (such as Task items, e-mail messages, and Word documents) attached using drag and drop will appear as shortcuts on the device. A copy of the document will not be moved to your device, and the shortcut on the device cannot be used to access the document. To move documents associated with a journal entry to the device, attach the document to the entry rather than dragging and dropping it. Also, be sure to set your IMAP4 service to receive full copies of messages, attachments, and meeting requests. For more information on using Journal, see Help on the desktop version of Outlook.</td>
+</tr>
+</table>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#howfolders">About Folders</A><BR>
+<A HREF="inbox.htm#set_up_an_e-mail_service">Set up a mail service</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="reading_and_responding_to_messages"></A><B>Read and Respond to Messages</B><BR>
+<ul></ul>
+<A HREF="inbox.htm#download">Download messages</A><BR>
+<A HREF="inbox.htm#reply">Reply to or forward a message</A><BR>
+<A HREF="inbox.htm#find">Find a message</A><BR>
+<A HREF="inbox.htm#attachments">Receive attachments</A><BR>
+<A HREF="inbox.htm#meeting">Receive meeting requests</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="download"></A><B>Download messages</B><br>
+<UL></UL>
+<P>The way you download copies of messages depends on how you are receiving messages:
+<UL>
+<LI>If you receive messages through ActiveSync, initiate synchronization.<BR>
+<LI>If you receive messages through a remote mail server, see <A HREF="inbox.htm#downloadserver">Download messages from the server</A>.<BR>
+</UL>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="reply"></A><B>Reply to or forward a message</B><br>
+<ul></ul>
+<OL>
+<LI>Open the message, tap <img src="reply.2bp">&nbsp;, and then tap <B>Reply to Sender</B>, <B>Reply to All</B>, or <B>Forward</B>.
+<LI>Enter your response.
+<LI>Tap <b>Send</b>.
+</OL>
+<ul></ul>
+<table cellspacing="2" cellpadding="2">
+<tr valign="top">
+    <td><img src="light.2bp"></td>
+    <td>Selections in the <B>Tools</B> > <B>Options</B> > <B>Message</B> tab determine whether the original text is included.</td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>To see more header information, tap the down arrow in the header area. Tap it again to collapse the header area.</td>
+</tr>
+</table>
+<ul></ul>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#messageoptions">Change message options</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<p><a name="find"></a><b>Find a message</b><br>
+<ul></ul>
+<ol>
+<li>Tap <img src="flag.2bp">&nbsp; > <b>Find</b>.
+<li>Enter the subject, sender's name, or message body text.  If you have looked for this message before, tap the arrow to the right of the <b>Find</b> box and select the name from the list.
+<LI>In <B>Type</b>, narrow your search by selecting <b>Inbox</b>.
+<LI>Tap <b>Go</b>.
+<LI>In the <b>Results</b> list, tap the item you want to open.
+</ol>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#download">Download messages</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="attachments"></A><B>Receive attachments</B><br>
+<ul></ul>
+<P>An attachment sent with an e-mail message or downloaded from the server appears as an icon at the bottom of the message in its own window pane. Tapping the attachment icon opens the attachment if it has been fully downloaded. You can mark an attachment for downloading (POP3 or IMAP4 service only) the next time you connect:
+<UL>
+<LI>If you receive messages through synchronization, in ActiveSync on your PC, select your mobile device and click <B>Tools</B> > <B>Options</B>. Then, select the message service, click <B>Settings,</B> and select <B>Include File Attachments</B>. 
+<LI>If you receive messages through a remote mail server, in Inbox on the device, select  <B>Get file attachments and meeting requests</B> (IMAP4) or <B>Get meeting requests</B> (POP3) when setting up your mail service. For more information, see <A HREF="inbox.htm#set_up_an_e-mail_service">Set up a mail service</A>.
+</UL>
+<ul></ul>
+<table cellspacing="2" cellpadding="2">
+<tr valign="top">
+    <td><img src="light.2bp"></td>
+    <td>Embedded images and OLE objects cannot be received as attachments.</td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>An embedded message can be viewed as an attachment when using IMAP4 to receive e-mail. However, this features does not work if TNEF is enabled so that you can receive meeting requests.</td>
+</tr>
+</table>
+<ul></ul>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#meeting">Receive meeting requests</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="meeting"></A><B>Receive meeting requests</B><br>
+<ul></ul>
+<P>If you receive your messages through ActiveSync, you will automatically receive meeting requests. If you connect directly to a mail server, the server must be running Microsoft Exchange Server for you to receive meeting requests. To receive meeting requests:
+<UL>
+<LI>Ask your system administrator to activate Rich Text Format and TNEF support for your account. However, if TNEF is enabled, you will not receive messages that are included in other messages as attachments, and you will not be able to tell if a message has an attachment until you get the full copy. In addition, download time may take longer.
+<LI>While <A HREF="inbox.htm#set_up_an_e-mail_service">setting up your mail service</A>, select <B>Get file attachments and meeting requests</B> (IMAP4) or <B>Get meeting requests</B> (POP3).
+</UL>
+<ul></ul>
+<P>Once you are set up to receive meeting requests:
+<OL>
+<LI>If you connect directly to a mail server and only receive message headers and/or a limited number of lines per message, select the message that you think is a meeting request and then tap <B>Services</B> > <B>Get Full Copy</B>.
+<LI>Open the meeting request.
+<LI>Tap <B>Appointment</B> > <B>Accept</B>, <B>Tentative</B>, or <B>Decline</B>. The response will be sent the next time you synchronize or connect to your mail server, and your device Calendar will be updated.
+</OL>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="clndr.htm#send">Send a meeting request</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="composing_and_editing_messages"></A><B>Compose and Edit Messages</B><BR>
+<ul></ul>
+<A HREF="inbox.htm#compose">Compose and send a message</A><BR>
+<A HREF="inbox.htm#attach">Attach a file to a message</A> <BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="compose"></A><B>Compose and send a message</B><br>
+<ul></ul>
+<OL>
+<LI>In the message list, tap <b>New</b>.
+<LI>Enter the address of one or more recipients, separating them with a semicolon. If the recipient is listed in Contacts or a directory service, enter a few letters of the recipient's name and tap <img src="address.2bp">&nbsp;. If there is only one match, the e-mail address is inserted. If there is more than one match, select the correct address from the <B>Select Address</B> dialog box.
+<LI>Tap <B>Send</B>.
+If you are working offline, the message is moved to the Outbox folder and will be sent the next time you connect.
+</OL>
+<ul></ul>
+<table cellspacing="2" cellpadding="2">
+<tr valign="top">
+    <td><img src="light.2bp"></td>
+    <td>To see more header information, tap the down arrow in the header area. Tap the up arrow to collapse the header area.</td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>Depending on the address options you select, you can use a directory service as well as your Contacts list to verify names.</td>
+</tr>
+</table>
+<ul></ul>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#attach">Attach a file to a message</A><BR>
+<A HREF="inbox.htm#addressoptions">Change address options</A>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="attach"></A><B>Attach a file to a message</B><br>
+<ul></ul>
+<oL>
+<LI>With the message open, tap <img src="attach.2bp">.
+<LI>Select the file you want to attach. OLE objects cannot be attached to Inbox messages.
+</oL>
+<ul></ul>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#compose">Compose and send a message</A><BR>
+<A HREF="inbox.htm#delete">Delete a message or attachment</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="customize"></A><B>Customize Inbox</B><BR>
+<ul></ul>
+<A HREF="inbox.htm#folders">Work with folders</A><BR>
+<a href="inbox.htm#sort">Sort the message list</a><br>
+<A HREF="inbox.htm#organize">Organize messages</A><BR>
+<A HREF="inbox.htm#messageoptions">Change message options</A><BR>
+<A HREF="inbox.htm#storageoptions">Change storage options</A><BR>
+<A HREF="inbox.htm#addressoptions">Change address options</A><BR>
+<A HREF="inbox.htm#status">Check Inbox status</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="folders"></A><B>Work with folders</B><br>
+<ul></ul>
+<A HREF="inbox.htm#createfolder">Create, rename, or delete a folder</A><BR>
+<A HREF="inbox.htm#designate">Designate a folder as offline</A><BR>
+<A HREF="inbox.htm#syncfolders">Synchronize folders</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="createfolder"></A><B>Create, rename, or delete a folder</B><br>
+<!-- CS topic for Create/Rename/Delete windows-->
+<ul></ul>
+<uL>
+<LI>To create a folder, in the services list (located on the left, under the navigation bar), select the service or folder you want to add the folder to, and then tap <b>Tools</b> > <b>New Folder</b>.
+<LI>To rename a folder, in the services list, select the folder, and then tap <b>Tools</b> > <b>Rename Folder</b>. Default folders, such as Inbox, and folders you create for IMAP4 mail servers cannot be renamed.
+<LI>To delete a folder, in the services list, select the folder, and then tap <b>Tools</b> > <b>Delete Folder</b>. Default folders, such as Inbox, cannot be deleted.
+</uL>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#howfolders">About Folders</A><BR>
+<A HREF="inbox.htm#designate">Designate a folder as offline</A><BR>
+<A HREF="inbox.htm#syncfolders">Synchronize folders while connected</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="designate"></A><B>Designate a folder as offline</B><br>
+<UL></UL>
+<P>Only IMAP4 folders can be designated as offline. All IMAP4 default folders, such as Inbox, are automatically designated as offline. Messages in offline folders can be viewed when you are disconnected from your mail server. If a folder is not designated as offline, you will  be able to read and respond to messages in that folder only when connected to the server. 
+<ul></ul>
+<p>To designate a folder as offline, select the folder, and then select <B>Services</B> > <B>Folder Available Offline</B>. A small arrow icon will appear on top of the folder icon.
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#howfolders">About Folders</A><BR>
+<A HREF="inbox.htm#createfolder">Create, rename, or delete a folder</A><BR>
+<A HREF="inbox.htm#syncfolders">Synchronize folders</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="syncfolders"></A><B>Synchronize folders</B><BR>
+<UL></UL>
+<P>When you synchronize, the contents of your device folders and mail server folders are compared and updated. New e-mail messages are downloaded, and messages in your device Outbox folder are sent. The synchronization behavior depends on how you connect to your mail server:
+<UL>
+<LI>When you connect to a POP3 server, the Inbox and Outbox folders on your device are synchronized with the corresponding folders on the mail server. To synchronize after the initial connection, tap <b>Services</b> > <b>Synchronize Folders</b>.
+<LI>When you connect to an IMAP4 server, Inbox, Outbox, and all folders marked as offline are synchronized. To synchronize all folders after the initial connection, tap <B>Services</B> > <B>Synchronize Folders</B>.
+<LI>When you connect to your PC, Inbox and Outbox folders on your device are synchronized with the corresponding folders on your PC. To synchronize after the initial connection, tap <img src="flag.2bp">&nbsp; > <B>Programs</B> > <B>Connections</B> > <B>ActiveSync</B>. Or, in ActiveSync on your PC, click <B>Tools</B> >  <B>Synchronize Now</B>.
+</UL>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#howfolders">About Folders</A><BR>
+<A HREF="inbox.htm#createfolder">Create, rename, or delete a folder</A><BR>
+<A HREF="inbox.htm#designate">Designate a folder as offline</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><a name="sort"></a><b>Sort the message list</b><br>
+<ul></ul>
+<P>If you have a long list of messages, sorting the list can help you quickly find the item you want.
+<ol>
+<li>In the message list, tap the sort list (labeled <b>Received Date</b> by default).
+<li>Select the option you want to sort by.
+<LI>Select the option again to reverse the sort order (ascending to descending).
+</ol>
+<ul></ul>
+<P><b>See Also</b><br>
+<A HREF="inbox.htm#clear">Clear messages and folders</A><BR>
+<A HREF="inbox.htm#find">Find a message</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="organize"></A><B>Organize messages</B><BR>
+<ul></ul>
+<A HREF="inbox.htm#move">Move or copy a message</A><BR>
+<A HREF="inbox.htm#delete">Delete a message or attachment</A><BR>
+<A HREF="inbox.htm#clear">Clear messages and folders</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="move"></A><B>Move or copy a message</B><br>
+<ul></ul>
+<ul>
+<Li>In the message list, tap and hold the message. To select multiple messages, tap and drag. Then, tap and hold the selected messages.
+<li>On the pop-up menu, tap <b>Copy to</b> or <b>Move to</b>.
+</UL>
+<P><B>Caution</B>  When you move a message that you have received through POP3 or synchronization to a folder you created on your device, the copy of the message on the server is deleted the next time you connect. This prevents duplicate copies of messages. Although the complete message is moved, message attachments will be deleted if you have not selected the option to download attachments. Once the message is moved, you will  be able to access the message only from your device.</P>
+<ul></ul>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#clear">Clear messages and folders</A><BR>
+<A HREF="inbox.htm#createfolder">Create, rename, or delete a folder</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="delete"></A><B>Delete a message or attachment</B><BR>
+<ul></ul>
+<ul>
+<li>To delete a message, in the message list, tap and hold the message. To select multiple messages, tap and drag. Then, tap and hold the selected messages. On the pop-up menu, tap <b>Delete</b>. Messages are moved to the Deleted (local) folder and deleted according to the option you have selected in <B>Tools</B> > <B>Options</B> > <B>Message</B> tab.
+<LI>To delete an attachment, in the message, tap and hold the attachment icon. On the pop-up menu, tap <b>Delete</b>. 
+</UL>
+<ul></ul>
+<table cellspacing="2" cellpadding="2">
+<tr valign="top">
+    <td><img src="light.2bp"></td>
+    <td>If you are working offline, messages that have been deleted from the server will be deleted from the device the next time you connect or according to the options you have selected.</td>
+</tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>To permanently delete messages in the Deleted (local) folder, tap <B>Tools</B> > <B>Empty Deleted Items</B>.</td></tr>
+</table>
+
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#messageoptions">Change message options</A><BR>
+<A HREF="inbox.htm#storageoptions">Change storage options</A><BR>
+<A HREF="inbox.htm#clear">Clear messages and folders</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="clear"></A><B>Clear messages and folders</B><br>
+<ul></ul>
+<UL>
+<LI>When receiving e-mail messages from a POP3 or IMAP4 server, select the service that contains the folders and messages you want to clear, and then select <B>Services</B> > <B>Clear All</B>. All messages and folders that are linked to the selected service are cleared, and memory space is expanded on the device without deleting messages on the server. The next time you connect, the messages and folders are downloaded again.
+<LI>You cannot clear messages and folders from the ActiveSync folder.
+</UL>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#delete">Delete a message or attachment</A><BR>
+<A HREF="inbox.htm#download">Download messages</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="messageoptions"></A><B>Change message options</B><br>
+<!-- CS topic for Options window-Message tab-->
+
+<ul></ul>
+<P>In the message list, tap <b>Tools</b> > <b> Options</b> > <b>Message</b> tab.
+<ul>
+<li>To place a copy of the original message beneath your response text, select <B>When replying, include body</B>.
+<LI>By default, e-mail messages you send are not saved on your device to help conserve memory space. If you want to keep copies of sent e-mail messages, tap <B>Keep copy of sent mail in Sent folder</B>.
+</uL>
+<ul></ul>
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#delete">Delete a message or attachment</A><BR>
+<A HREF="inbox.htm#reply">Reply to or forward a message</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="storageoptions"></A><B>Change storage options</B><br>
+<!-- CS topic for Options window-Storage tab-->
+<ul></ul>
+<P>In the message list, tap <b>Tools</b> > <b> Options</b> > <b>Storage</b> tab.
+<ul></ul>
+<P>You can store attachments on a storage card rather than internal RAM. All attachments will be moved to the selected card.
+<ul></ul>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#attachments">Receive attachments</A><BR>
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="addressoptions"></A><B>Change address options</B><br>
+<!-- CS topic for Options window-Address tab-->
+
+<ul></ul>
+<P>Many mail servers, including servers running Microsoft Exchange Server, can verify names with an online address book, called a directory service, using LDAP (Lightweight Directory Addressing Protocol). When you create a mail service, your mail server's directory service is added to the <b>Address</b> tab, and you are given the option to enable it. Once enabled, Inbox will check your contacts list and then the directory service to verify names you enter in the <B>To</B>, <B>Cc</B>, and <B>Bcc</B> boxes. If you did not enable it or if you want to use additional services, follow these steps:
+
+<OL>
+<LI>If you are adding a new service, ask your network administrator for the correct server name.
+<LI>In the message list, tap <B>Tools</B> > <B>Options</B> > <B>Address</B> tab.
+<LI>In the <B>In Contacts, get addresses from</B> list, select which e-mail address box to check in Contacts. Contacts will be checked first unless you select <B>None</B>.
+<LI>If your mail server is already listed, select the mail server's directory service check box to enable it. Then, tap <B>OK</B> and you are finished.
+<LI>If your mail service is not already listed, tap <B>Add</B>.
+<LI>In the <B>Directory name</B> and <B>Server</B> boxes, enter the LDAP directory and server names.
+<LI>Ask your network administrator if authentication is necessary for your server. If so, select <B>Authentication is necessary on this server</B>, and enter your user ID and password.
+<LI>To have Inbox check this service, select <B>Check name against this server</B>.
+</OL>
+<ul></ul>
+<table cellspacing="2" cellpadding="2">
+<tr valign="top">
+    <td><img src="light.2bp"></td>
+    <td>To delete a service, tap and hold the service. On the pop-up menu, tap <b>Delete</b>.</td></tr>
+<tr align="center">
+    <td colspan="2"><img src="line.2bp"></td></tr>
+<tr valign="top">
+    <td></td>
+    <td>While sending and receiving messages through synchronization, disable any directory services you have installed to avoid getting error messages when Inbox tries to verify names against the service you are not connected to.</td>
+</tr>
+</table>
+<ul></ul>
+
+<P><B>See Also</B><BR>
+<A HREF="inbox.htm#compose">Compose and send a message</A><BR>
+
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<P><A NAME="status"></A><B>Check Inbox status</B><br>
+<!-- CS topic for Status window-->
+
+<ul></ul>
+<P>In the message list, tap <B>Tools</B> > <B>Status</B>. You can view details such as the number of messages to be sent, deleted, and copied, and the number of attachments to be downloaded.
+
+<P>&nbsp;<!-- PegHelp --><hr><!-- *****Topic Break**** -->
+<p><a name="shortcuts"></a><b>Use Hardware Buttons</b><br>
+<ul></ul>
+<table cellpadding=5 border=1>
+<tr valign=top><td><b>To</b></td><td><b>Press</b></td></tr>
+<tr valign=top><td>Scroll to and select a message</td><td>Up/Down control</td></tr>
+<tr valign=top><td>Open or close a message</td><td>Action</td></tr>
+<tr valign=top><td>Scroll through message body text</td><td>Up/Down control</td></tr>
+</table>
+
+<P>&nbsp;<!-- PegHelp --><hr>
+</BODY></HTML>

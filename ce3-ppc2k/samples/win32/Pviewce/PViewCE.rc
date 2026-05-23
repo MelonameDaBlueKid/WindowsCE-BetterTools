@@ -1,0 +1,250 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "newres.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "globals.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON    DISCARDABLE     "pviewCE.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUTBOX DIALOG DISCARDABLE  22, 17, 72, 48
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About PViewCE"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDI_APPICON,IDC_STATIC,3,2,20,20
+    LTEXT           "PView for Windows CE",IDC_STATIC,22,24,46,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MAIN_MENU RCDATA DISCARDABLE
+BEGIN
+  //Popup menu name
+  IDM_MAIN_MENU, 
+  //Count of items to put on the menu (er... toolbar)
+  4,
+
+  
+  I_IMAGENONE, IDM_MAIN_MENUITEM2, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM2, 0, 0, //Next popup menu
+
+  I_IMAGENONE, IDM_MAIN_MENUITEM3, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM3, 0, 1, //Next popup menu
+
+	0, ID_PROCESS_REFRESH, TBSTATE_ENABLED,
+  TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,
+  0, 0, 2, //Next popup menu
+
+  1, ID_PROCESS_KILL, TBSTATE_ENABLED,
+  TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,
+  0, 0, 3, //Next popup menu
+
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "View"
+    BEGIN
+        POPUP "Process"
+        BEGIN
+            MENUITEM "Refresh",                     ID_PROCESS_REFRESH
+            MENUITEM "Kill",                        ID_PROCESS_KILL
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Threads",                     ID_VIEW_THREADS
+        MENUITEM "Modules",                     ID_VIEW_MODULES
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About...",                ID_HELP_ABOUT
+    END
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0xbL
+#else
+ FILEFLAGS 0xaL
+#endif
+ FILEOS 0x10001L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Microsoft Corporation\0"
+            VALUE "FileDescription", "Process Viewer Application\0"
+            VALUE "FileVersion", "Version 1.0\0"
+            VALUE "InternalName", "PViewCE\0"
+            VALUE "LegalCopyright", "Copyright © Microsoft Corp. 1990-1999\0"
+            VALUE "LegalTrademarks", "Microsoft® is a registered trademark of Microsoft Corporation. Windows(TM) is a trademark of Microsoft Corporation\0"
+            VALUE "OriginalFilename", "\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PViewCE\0"
+            VALUE "ProductVersion", "Version 1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""newres.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""globals.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APPNAME             "PViewCE App"
+    IDS_DESCRIPTION         "PViewCE"
+    IDS_PROCESS             "Process"
+    IDS_PID                 "PID"
+    IDS_PRIORITY            "Base Priority"
+    IDS_THREADCNT           "Num. Threads"
+    IDS_PROCESSTYPE         "Type"
+    IDS_FULLPATH            "Full Path"
+    IDS_THREAD              "TID"
+    IDS_TPID                "Owning PID"
+    IDS_TPRIORITY           "Thread Priority"
+    IDS_FILTERSTRING        "Programs (*.exe, *.com, *.bat, *.pif)|*.exe;*.com;*.bat|Executables (*.exe)|*.exe|Command Files (*.com)|*.com|Batch Files (*.bat)|*.bat|Pif Files (*.pif)|*.pif|"
+    IDS_NOMEMORY            "There is insufficent memory to run the program"
+    IDS_BADFORMAT           "The file is not a valid executable format"
+    IDS_FILENOTFOUND        "Cannot find the specified file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PATHNOTFOUND        "Cannot find the specified path"
+    IDS_TIP_REFRESH         "Refresh process list"
+    IDS_TIP_KILL            "Kill process"
+    IDS_EXEPATH             "Full Path"
+    IDS_HMODULE             "HModule"
+    IDS_GLBLUSAGECOUNT      "Global Usage"
+    IDS_PROCESSUSAGECOUND   "Local Usage"
+    IDS_MODULE              "Module Name"
+    IDS_MODBASEADDR         "Base Address"
+    IDS_MODSIZE             "Base Size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAIN_MENUITEM1      "File"
+    IDS_MAIN_MENUITEM2      "View"
+    IDS_MAIN_MENUITEM3      "Help"
+    IDS_MAIN_MENUITEM4      "Menu4"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,3376 @@
+# Microsoft Developer Studio Project File - Name="Sketch" - Package Owner=<4>
+# Microsoft Developer Studio Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE SH3) Dynamic-Link Library" 0x8102
+# TARGTYPE "Win32 (WCE x86em) Dynamic-Link Library" 0x7f02
+# TARGTYPE "Win32 (WCE PPC) Dynamic-Link Library" 0x8402
+# TARGTYPE "Win32 (WCE MIPSFP) Dynamic-Link Library" 0x8702
+# TARGTYPE "Win32 (WCE x86) Dynamic-Link Library" 0x8302
+# TARGTYPE "Win32 (WCE ARM) Dynamic-Link Library" 0x8502
+# TARGTYPE "Win32 (WCE CEF) Dynamic-Link Library" 0x8a02
+# TARGTYPE "Win32 (WCE SH4) Dynamic-Link Library" 0x8602
+# TARGTYPE "Win32 (WCE MIPS16) Dynamic-Link Library" 0x8902
+# TARGTYPE "Win32 (WCE MIPS) Dynamic-Link Library" 0x8202
+# TARGTYPE "Win32 (WCE THUMB) Dynamic-Link Library" 0x8802
+
+CFG=Sketch - Win32 (WCE x86em) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "sketch.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "sketch.vcn" CFG="Sketch - Win32 (WCE x86em) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "Sketch - Win32 (WCE MIPS) Debug" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE SH4) Debug" (based on "Win32 (WCE SH4) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE x86em) Debug" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE PPC) Debug" (based on "Win32 (WCE PPC) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE PPC) Release MinSize" (based on "Win32 (WCE PPC) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE PPC) Release MinDependency" (based on "Win32 (WCE PPC) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE ARM) Release MinSize" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE ARM) Release MinDependency" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE SH4) Release MinSize" (based on "Win32 (WCE SH4) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE SH4) Release MinDependency" (based on "Win32 (WCE SH4) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE x86em) Release MinSize" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE x86em) Release MinDependency" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE x86) Release MinSize" (based on "Win32 (WCE x86) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE x86) Release MinDependency" (based on "Win32 (WCE x86) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE SH3) Release MinSize" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE SH3) Release MinDependency" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPS) Release MinSize" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPS) Release MinDependency" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPSFP) Debug" (based on "Win32 (WCE MIPSFP) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPSFP) Release MinSize" (based on "Win32 (WCE MIPSFP) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPSFP) Release MinDependency" (based on "Win32 (WCE MIPSFP) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPS16) Debug" (based on "Win32 (WCE MIPS16) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPS16) Release MinSize" (based on "Win32 (WCE MIPS16) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE MIPS16) Release MinDependency" (based on "Win32 (WCE MIPS16) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE THUMB) Debug" (based on "Win32 (WCE THUMB) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE THUMB) Release MinDependency" (based on "Win32 (WCE THUMB) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE THUMB) Release MinSize" (based on "Win32 (WCE THUMB) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE CEF) Debug" (based on "Win32 (WCE CEF) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE CEF) Release MinSize" (based on "Win32 (WCE CEF) Dynamic-Link Library")
+!MESSAGE "Sketch - Win32 (WCE CEF) Release MinDependency" (based on "Win32 (WCE CEF) Dynamic-Link Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP WCE_FormatVersion "6.02"
+
+!IF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPSDbg"
+# PROP BASE Intermediate_Dir "MIPSDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPSDbg"
+# PROP Intermediate_Dir "MIPSDbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "SH4Dbg"
+# PROP BASE Intermediate_Dir "SH4Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "SH4Dbg"
+# PROP Intermediate_Dir "SH4Dbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /Qsh4 /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /Qsh4 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86Dbg"
+# PROP BASE Intermediate_Dir "X86Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86Dbg"
+# PROP Intermediate_Dir "X86Dbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "DEBUG" /D "i_386_" /D "_USRDLL" /Yu"stdafx.h" /Gs8192 /MLd /GF /c
+# ADD CPP /nologo /W3 /Zi /Od /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "DEBUG" /D "i_386_" /D "_USRDLL" /D "_WIN32_WCE_CEPC" /Yu"stdafx.h" /Gs8192 /MLd /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /base:"0x00010000" /dll /debug /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /base:"0x00010000" /dll /debug /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "x86emDbg"
+# PROP BASE Intermediate_Dir "x86emDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "x86emDbg"
+# PROP Intermediate_Dir "x86emDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "_DEBUG" /d "x86" /d "i486" /d "_X86_"
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "_DEBUG" /d "x86" /d "i486" /d "_X86_"
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "_DEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /Yu"stdafx.h" /MLd /c
+# ADD CPP /nologo /W3 /Zi /Od /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "_DEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /Yu"stdafx.h" /Gz /MLd /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /stack:0x10000,0x1000 /subsystem:windows /dll /debug /machine:I386 /windowsce:emulation
+# ADD LINK32 /nologo /stack:0x10000,0x1000 /subsystem:windows /dll /debug /nodefaultlib:$(CENoDefaultLib) /machine:I386 /windowsce:emulation
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "PPCDbg"
+# PROP BASE Intermediate_Dir "PPCDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "PPCDbg"
+# PROP Intermediate_Dir "PPCDbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=clppc.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "SH3Dbg"
+# PROP BASE Intermediate_Dir "SH3Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "SH3Dbg"
+# PROP Intermediate_Dir "SH3Dbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "PPCRelMinSize"
+# PROP BASE Intermediate_Dir "PPCRelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "PPCRelMinSize"
+# PROP Intermediate_Dir "PPCRelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clppc.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "PPCRelMinDependency"
+# PROP BASE Intermediate_Dir "PPCRelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "PPCRelMinDependency"
+# PROP Intermediate_Dir "PPCRelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clppc.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRelMinSize"
+# PROP BASE Intermediate_Dir "ARMRelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRelMinSize"
+# PROP Intermediate_Dir "ARMRelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRelMinDependency"
+# PROP BASE Intermediate_Dir "ARMRelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRelMinDependency"
+# PROP Intermediate_Dir "ARMRelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH4RelMinSize"
+# PROP BASE Intermediate_Dir "SH4RelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH4RelMinSize"
+# PROP Intermediate_Dir "SH4RelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Qsh4 /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Qsh4 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH4RelMinDependency"
+# PROP BASE Intermediate_Dir "SH4RelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH4RelMinDependency"
+# PROP Intermediate_Dir "SH4RelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Qsh4 /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Qsh4 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "x86emRelMinSize"
+# PROP BASE Intermediate_Dir "x86emRelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "x86emRelMinSize"
+# PROP Intermediate_Dir "x86emRelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG"
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG"
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Gz /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /stack:0x10000,0x1000 /subsystem:windows /dll /machine:I386 /windowsce:emulation
+# ADD LINK32 /nologo /stack:0x10000,0x1000 /subsystem:windows /dll /nodefaultlib:$(CENoDefaultLib) /machine:I386 /windowsce:emulation
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "x86emRelMinDependency"
+# PROP BASE Intermediate_Dir "x86emRelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "x86emRelMinDependency"
+# PROP Intermediate_Dir "x86emRelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG"
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG"
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Gz /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /stack:0x10000,0x1000 /subsystem:windows /dll /machine:I386 /windowsce:emulation
+# ADD LINK32 /nologo /stack:0x10000,0x1000 /subsystem:windows /dll /nodefaultlib:$(CENoDefaultLib) /machine:I386 /windowsce:emulation
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86RelMinSize"
+# PROP BASE Intermediate_Dir "X86RelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86RelMinSize"
+# PROP Intermediate_Dir "X86RelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "NDEBUG" /D "i_386_" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Gs8192 /ML /GF /c
+# ADD CPP /nologo /W3 /O1 /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "NDEBUG" /D "i_386_" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /D "_WIN32_WCE_CEPC" /Yu"stdafx.h" /Gs8192 /ML /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /base:"0x00010000" /dll /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /base:"0x00010000" /dll /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86RelMinDependency"
+# PROP BASE Intermediate_Dir "X86RelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86RelMinDependency"
+# PROP Intermediate_Dir "X86RelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "NDEBUG" /D "i_386_" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /Gs8192 /ML /GF /c
+# ADD CPP /nologo /W3 /O1 /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "NDEBUG" /D "i_386_" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /D "_WIN32_WCE_CEPC" /Yu"stdafx.h" /Gs8192 /ML /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /base:"0x00010000" /dll /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /base:"0x00010000" /dll /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH3RelMinSize"
+# PROP BASE Intermediate_Dir "SH3RelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH3RelMinSize"
+# PROP Intermediate_Dir "SH3RelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH3RelMinDependency"
+# PROP BASE Intermediate_Dir "SH3RelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH3RelMinDependency"
+# PROP Intermediate_Dir "SH3RelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSRelMinSize"
+# PROP BASE Intermediate_Dir "MIPSRelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSRelMinSize"
+# PROP Intermediate_Dir "MIPSRelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSRelMinDependency"
+# PROP BASE Intermediate_Dir "MIPSRelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSRelMinDependency"
+# PROP Intermediate_Dir "MIPSRelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPSFPDbg"
+# PROP BASE Intermediate_Dir "MIPSFPDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPSFPDbg"
+# PROP Intermediate_Dir "MIPSFPDbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /QMFWCE /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /QMFWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSFPRelMinSize"
+# PROP BASE Intermediate_Dir "MIPSFPRelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSFPRelMinSize"
+# PROP Intermediate_Dir "MIPSFPRelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /QMFWCE /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /QMFWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSFPRelMinDependency"
+# PROP BASE Intermediate_Dir "MIPSFPRelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSFPRelMinDependency"
+# PROP Intermediate_Dir "MIPSFPRelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /QMFWCE /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /QMFWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPS16Dbg"
+# PROP BASE Intermediate_Dir "MIPS16Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPS16Dbg"
+# PROP Intermediate_Dir "MIPS16Dbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /QMRWCE /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /Yu"stdafx.h" /MLd /QMRWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:MIPS16 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /machine:MIPS16 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPS16RelMinSize"
+# PROP BASE Intermediate_Dir "MIPS16RelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPS16RelMinSize"
+# PROP Intermediate_Dir "MIPS16RelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /QMRWCE /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /QMRWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS16 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS16 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPS16RelMinDependency"
+# PROP BASE Intermediate_Dir "MIPS16RelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPS16RelMinDependency"
+# PROP Intermediate_Dir "MIPS16RelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /QMRWCE /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Yu"stdafx.h" /ML /QMRWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS16 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /machine:MIPS16 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "THUMBDbg"
+# PROP BASE Intermediate_Dir "THUMBDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "THUMBDbg"
+# PROP Intermediate_Dir "THUMBDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=clthumb.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "DEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "DEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 coredll.lib commctrl.lib /nologo /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:THUMB /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 coredll.lib commctrl.lib /nologo /dll /debug /machine:THUMB /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "THUMBRelMinDependency"
+# PROP BASE Intermediate_Dir "THUMBRelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "THUMBRelMinDependency"
+# PROP Intermediate_Dir "THUMBRelMinDependency"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clthumb.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 coredll.lib commctrl.lib /nologo /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:THUMB /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 coredll.lib commctrl.lib /nologo /dll /machine:THUMB /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "THUMBRelMinSize"
+# PROP BASE Intermediate_Dir "THUMBRelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "THUMBRelMinSize"
+# PROP Intermediate_Dir "THUMBRelMinSize"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clthumb.exe
+# ADD BASE CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /c
+# ADD CPP /nologo /W3 /O1 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Yu"stdafx.h" /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 coredll.lib commctrl.lib /nologo /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:THUMB /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 coredll.lib commctrl.lib /nologo /dll /machine:THUMB /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "CEFDbg"
+# PROP BASE Intermediate_Dir "CEFDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "CEFDbg"
+# PROP Intermediate_Dir "CEFDbg"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" /r
+CPP=clcef.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /cef /TP /c
+# ADD CPP /nologo /W3 /Zi /Od /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "_USRDLL" /cef /TP /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+Link32=linkcef.exe
+# ADD BASE Link32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00100000" /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:$(CENoDefaultLib) /machine:CEF /subsystem:$(CESubsystem) /Fixed:no
+# SUBTRACT BASE Link32 /pdb:none /nodefaultlib
+# ADD Link32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00100000" /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:$(CENoDefaultLib) /machine:CEF /subsystem:$(CESubsystem) /Fixed:no
+# SUBTRACT Link32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinSize"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "CEFRelMinSize"
+# PROP BASE Intermediate_Dir "CEFRelMinSize"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "CEFRelMinSize"
+# PROP Intermediate_Dir "CEFRelMinSize"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clcef.exe
+# ADD BASE CPP /nologo /W3 /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /cef /TP /c
+# ADD CPP /nologo /W3 /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "_USRDLL" /D "_ATL_DLL" /D "_ATL_MIN_CRT" /cef /TP /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+Link32=linkcef.exe
+# ADD BASE Link32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00100000" /entry:"_DllMainCRTStartup" /dll /nodefaultlib:$(CENoDefaultLib) /machine:CEF /subsystem:$(CESubsystem) /Fixed:no
+# SUBTRACT BASE Link32 /pdb:none /nodefaultlib
+# ADD Link32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00100000" /entry:"_DllMainCRTStartup" /dll /nodefaultlib:$(CENoDefaultLib) /machine:CEF /subsystem:$(CESubsystem) /Fixed:no
+# SUBTRACT Link32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinDependency"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "CEFRelMinDependency"
+# PROP BASE Intermediate_Dir "CEFRelMinDependency"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "CEFRelMinDependency"
+# PROP Intermediate_Dir "CEFRelMinDependency"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /r
+CPP=clcef.exe
+# ADD BASE CPP /nologo /W3 /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /cef /TP /c
+# ADD CPP /nologo /W3 /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /cef /TP /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+Link32=linkcef.exe
+# ADD BASE Link32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00100000" /entry:"_DllMainCRTStartup" /dll /nodefaultlib:$(CENoDefaultLib) /machine:CEF /subsystem:$(CESubsystem) /Fixed:no
+# SUBTRACT BASE Link32 /pdb:none /nodefaultlib
+# ADD Link32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00100000" /entry:"_DllMainCRTStartup" /dll /nodefaultlib:$(CENoDefaultLib) /machine:CEF /subsystem:$(CESubsystem) /Fixed:no
+# SUBTRACT Link32 /pdb:none /nodefaultlib
+
+!ENDIF 
+
+# Begin Target
+
+# Name "Sketch - Win32 (WCE MIPS) Debug"
+# Name "Sketch - Win32 (WCE SH4) Debug"
+# Name "Sketch - Win32 (WCE ARM) Debug"
+# Name "Sketch - Win32 (WCE x86) Debug"
+# Name "Sketch - Win32 (WCE x86em) Debug"
+# Name "Sketch - Win32 (WCE PPC) Debug"
+# Name "Sketch - Win32 (WCE SH3) Debug"
+# Name "Sketch - Win32 (WCE PPC) Release MinSize"
+# Name "Sketch - Win32 (WCE PPC) Release MinDependency"
+# Name "Sketch - Win32 (WCE ARM) Release MinSize"
+# Name "Sketch - Win32 (WCE ARM) Release MinDependency"
+# Name "Sketch - Win32 (WCE SH4) Release MinSize"
+# Name "Sketch - Win32 (WCE SH4) Release MinDependency"
+# Name "Sketch - Win32 (WCE x86em) Release MinSize"
+# Name "Sketch - Win32 (WCE x86em) Release MinDependency"
+# Name "Sketch - Win32 (WCE x86) Release MinSize"
+# Name "Sketch - Win32 (WCE x86) Release MinDependency"
+# Name "Sketch - Win32 (WCE SH3) Release MinSize"
+# Name "Sketch - Win32 (WCE SH3) Release MinDependency"
+# Name "Sketch - Win32 (WCE MIPS) Release MinSize"
+# Name "Sketch - Win32 (WCE MIPS) Release MinDependency"
+# Name "Sketch - Win32 (WCE MIPSFP) Debug"
+# Name "Sketch - Win32 (WCE MIPSFP) Release MinSize"
+# Name "Sketch - Win32 (WCE MIPSFP) Release MinDependency"
+# Name "Sketch - Win32 (WCE MIPS16) Debug"
+# Name "Sketch - Win32 (WCE MIPS16) Release MinSize"
+# Name "Sketch - Win32 (WCE MIPS16) Release MinDependency"
+# Name "Sketch - Win32 (WCE THUMB) Debug"
+# Name "Sketch - Win32 (WCE THUMB) Release MinDependency"
+# Name "Sketch - Win32 (WCE THUMB) Release MinSize"
+# Name "Sketch - Win32 (WCE CEF) Debug"
+# Name "Sketch - Win32 (WCE CEF) Release MinSize"
+# Name "Sketch - Win32 (WCE CEF) Release MinDependency"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\sketcctl.cpp
+
+!IF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETC=\
+	".\sketch.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Debug"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_SKETC=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sketch.h"\
+	".\sxml.h"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinSize"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_SKETC=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sketch.h"\
+	".\sxml.h"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinDependency"
+
+DEP_CPP_SKETC=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_SKETC=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sketch.h"\
+	".\sxml.h"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\sketch.cpp
+
+!IF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Debug"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nitguid.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	".\sxml.h"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinSize"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nitguid.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	".\sxml.h"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinDependency"
+
+DEP_CPP_SKETCH=\
+	".\sketcctl.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_SKETCH=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nitguid.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sketch.h"\
+	".\sketch_i.c"\
+	".\sxml.h"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\sketch.def
+# End Source File
+# Begin Source File
+
+SOURCE=.\sketch.idl
+
+!IF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Debug"
+
+# PROP BASE Ignore_Default_Tool 1
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinDependency"
+
+# PROP BASE Ignore_Default_Tool 1
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinSize"
+
+# PROP BASE Ignore_Default_Tool 1
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Debug"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinSize"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinDependency"
+
+# PROP Ignore_Default_Tool 1
+# Begin Custom Build
+InputPath=.\sketch.idl
+
+BuildCmds= \
+	midl /D _WIN32_WCE=$(CEVersion) /Oicf /h "sketch.h" /iid "sketch_i.c"   "sketch.idl"
+
+".\sketch.tlb" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+
+".\sketch_i.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+   $(BuildCmds)
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\StdAfx.cpp
+
+!IF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h" /QMFWCE
+# ADD CPP /Yc"stdafx.h" /QMFWCE
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h" /QMFWCE
+# ADD CPP /Yc"stdafx.h" /QMFWCE
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h" /QMFWCE
+# ADD CPP /Yc"stdafx.h" /QMFWCE
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD BASE CPP /Yc"stdafx.h"
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_STDAF=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.cpp"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sxml.h"\
+	".\tatreg.cpp"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.cpp"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlimpl.cpp"\
+	".\tlwin.cpp"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinSize"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_STDAF=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.cpp"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sxml.h"\
+	".\tatreg.cpp"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.cpp"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlimpl.cpp"\
+	".\tlwin.cpp"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinDependency"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"types.h"\
+	
+NODEP_CPP_STDAF=\
+	".\aidl.h"\
+	".\alloc.h"\
+	".\asetsd.h"\
+	".\bgapi.h"\
+	".\bjbase.h"\
+	".\bjidl.h"\
+	".\bjsafe.h"\
+	".\ceatl.cpp"\
+	".\ceatl.h"\
+	".\cedisp.h"\
+	".\char.h"\
+	".\cidl.h"\
+	".\efrtl.h"\
+	".\ervprov.h"\
+	".\funcs.h"\
+	".\guid.h"\
+	".\hellapi.h"\
+	".\inbase.h"\
+	".\indbase.h"\
+	".\indef.h"\
+	".\indows.h"\
+	".\inerror.h"\
+	".\ingdi.h"\
+	".\innls.h"\
+	".\innt.h"\
+	".\inreg.h"\
+	".\inuser.h"\
+	".\ipapi.h"\
+	".\le2.h"\
+	".\leauto.h"\
+	".\lectl.h"\
+	".\leidl.h"\
+	".\mm.h"\
+	".\msystem.h"\
+	".\nknwn.h"\
+	".\oppack.h"\
+	".\pc.h"\
+	".\pcdce.h"\
+	".\pcndr.h"\
+	".\rlmon.h"\
+	".\shpack1.h"\
+	".\shpack2.h"\
+	".\shpack4.h"\
+	".\shpack8.h"\
+	".\sxml.h"\
+	".\tatreg.cpp"\
+	".\tatreg.h"\
+	".\tdarg.h"\
+	".\tdlib.h"\
+	".\tlbase.h"\
+	".\tlcom.h"\
+	".\tlconv.h"\
+	".\tlctl.cpp"\
+	".\tlctl.h"\
+	".\tldef.h"\
+	".\tliface.h"\
+	".\tlimpl.cpp"\
+	".\tlwin.cpp"\
+	".\tlwin.h"\
+	".\tring.h"\
+	".\type.h"\
+	".\xcpt.h"\
+	".\ygshell.h"\
+	".\ypes.h"\
+	"C:\Windows CE Tools\wce300\MS Palm Size PC\atl\include\msstkppg.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\resource.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\sketcctl.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\StdAfx.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe"
+# Begin Source File
+
+SOURCE=.\sketch.rc
+
+!IF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE PPC) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE ARM) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH4) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86em) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE x86) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE SH3) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPSFP) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE MIPS16) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinDependency"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE THUMB) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Debug"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinSize"
+
+!ELSEIF  "$(CFG)" == "Sketch - Win32 (WCE CEF) Release MinDependency"
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Source File
+
+SOURCE=.\sketcctl.rgs
+# End Source File
+# End Target
+# End Project

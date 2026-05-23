@@ -1,0 +1,53 @@
+// NOTE:  ATL-BASED CONTROLS ARE ONLY SUPPORTED ON WINDOWS CE 2.0 OR LATER
+
+#if defined(_WIN32_WCE) && _WIN32_WCE < 200
+#error "This sample can only be compiled for Windows CE 2.0 or later."
+#endif
+
+#include <olectl.h>
+// Sketch.idl : IDL source for Sketch.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Sketch.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	
+
+	[
+		object,
+		uuid(CBF9C2BD-E8CB-11D0-AFAE-00600811D2B6),
+		dual,
+		helpstring("ISketcCtl Interface"),
+		pointer_default(unique)
+	]
+	interface ISketcCtl : IDispatch
+	{
+		[propget, id(1)] HRESULT PenWidth([out,retval] short *pval);
+		[propput, id(1)] HRESULT PenWidth([in] short newVal);
+		[id(2), helpstring("method Erase")] HRESULT Erase();
+	};
+[
+	uuid(CBF9C2B0-E8CB-11D0-AFAE-00600811D2B6),
+	version(1.0),
+	helpstring("Sketch 1.0 Type Library")
+]
+library SKETCHLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(CBF9C2BE-E8CB-11D0-AFAE-00600811D2B6),
+		helpstring("SketcCtl Class")
+	]
+	coclass SketcCtl
+	{
+		[default] interface ISketcCtl;
+	};
+	
+
+
+};

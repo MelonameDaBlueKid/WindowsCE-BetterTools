@@ -1,0 +1,364 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "res\otherids.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+AFX_IDI_STD_FRAME       ICON    DISCARDABLE     "RES\\CTRLTEST.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+AFX_IDI_STD_FRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Simple"
+    BEGIN
+        MENUITEM "Test &C++ Derived class...",  IDM_TEST_DERIVED_EDIT
+        MENUITEM "Test &Dynamic Subclassed...", IDM_TEST_SUB_EDIT
+    END
+    POPUP "&Custom"
+    BEGIN
+        MENUITEM "&Bitmap Button 1...",         IDM_TEST_BITMAP_BUTTON1
+        MENUITEM "Bitmap Button &2...",         IDM_TEST_BITMAP_BUTTON2
+        MENUITEM "Bitmap Button &3...",         IDM_TEST_BITMAP_BUTTON3
+        MENUITEM SEPARATOR
+        MENUITEM "&Spin Control...",            IDM_TEST_SPIN_EDIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 140, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "About Ctrltest"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Ctrltest",IDC_STATIC,45,12,78,8
+    LTEXT           "Copyright © 2000",IDC_STATIC,45,25,66,8
+    ICON            AFX_IDI_STD_FRAME,IDC_STATIC,13,10,21,20
+END
+
+IDD_DERIVED_EDIT DIALOG DISCARDABLE  16, 16, 214, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "C++ Derived Edit Class"
+FONT 8, "Tahoma"
+BEGIN
+END
+
+IDD_SUB_EDIT DIALOG DISCARDABLE  16, 16, 253, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "Dynamic subclassed controls"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Letters:",IDC_STATIC,8,9,44,8
+    EDITTEXT        IDC_EDIT1,61,7,180,12
+    LTEXT           "Numbers:",IDC_STATIC,8,29,44,8
+    EDITTEXT        IDC_EDIT2,61,28,180,12
+    LTEXT           "Either:",IDC_STATIC,8,49,44,8
+    EDITTEXT        IDC_EDIT3,61,47,180,12
+    LTEXT           "Anything:",IDC_STATIC,8,69,44,8
+    EDITTEXT        IDC_EDIT4,61,68,180,12
+END
+
+IDM_TEST_BITMAP_BUTTON1 DIALOG DISCARDABLE  0, 0, 142, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "OwnerBtn Test1"
+FONT 8, "Tahoma"
+BEGIN
+    CTEXT           "Example Dialog with",IDC_STATIC,7,4,135,8
+    CTEXT           "self-drawing bitmap buttons",IDC_STATIC,7,16,135,8
+    CONTROL         "",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,23,38,40,30
+    CONTROL         "",IDCANCEL,"Button",BS_OWNERDRAW | WS_TABSTOP,79,38,40,
+                    30
+END
+
+IDM_TEST_BITMAP_BUTTON2 DIALOG DISCARDABLE  0, 0, 147, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "OwnerBtn Test2"
+FONT 8, "Tahoma"
+BEGIN
+    CTEXT           "Example Dialog with",IDC_STATIC,2,4,130,8
+    CTEXT           "auto-load self-drawing bitmap buttons",IDC_STATIC,2,12,
+                    139,8
+    CTEXT           "(the easy way to do Basic Custom Controls)",IDC_STATIC,
+                    3,20,143,8
+    CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,31,39,40,30
+    CONTROL         "CANCEL",IDCANCEL,"Button",BS_OWNERDRAW | WS_TABSTOP,81,
+                    38,40,30
+END
+
+IDM_TEST_BITMAP_BUTTON3 DIALOG DISCARDABLE  0, 0, 150, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "OwnerBtn Test3"
+FONT 8, "Tahoma"
+BEGIN
+    CTEXT           "?",IDC_NUMBEROUT,32,20,10,8
+    CONTROL         "prev",ID_PREV,"Button",BS_OWNERDRAW | WS_TABSTOP,5,15,
+                    20,20
+    CONTROL         "next",ID_NEXT,"Button",BS_OWNERDRAW | WS_TABSTOP,49,14,
+                    20,30
+    CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,93,14,40,30
+END
+
+IDD_CUSTOM_LIST DIALOG DISCARDABLE  16, 16, 179, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "Sample Dialog with custom listbox"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Please Pick a &Color:",IDC_STATIC,8,9,125,8
+    LISTBOX         IDC_LISTBOX1,10,25,156,52,LBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SPIN_EDIT DIALOGEX 0, 0, 142, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "Spin controls dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&One:",-1,8,9,34,8
+    EDITTEXT        IDC_EDIT1,47,7,40,12,ES_AUTOHSCROLL
+    CONTROL         "Spin4",IDC_BUTTON4,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,87,7,11,12
+    LTEXT           "&Two:",-1,8,29,34,8
+    EDITTEXT        IDC_EDIT2,47,27,40,12,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_BUTTON3,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,87,27,11,12
+    LTEXT           "Th&ree:",-1,8,49,34,8
+    EDITTEXT        IDC_EDIT3,47,47,40,12,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_BUTTON2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,87,47,11,12
+    LTEXT           "&Four:",-1,8,67,34,8
+    EDITTEXT        IDC_EDIT4,47,67,40,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_BUTTON1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,87,67,11,12
+END
+
+IDD_SUB_EDIT_PSPC DIALOG DISCARDABLE  0, 0, 152, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "Dynamic controls"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Letters:",IDC_STATIC,8,9,31,8
+    EDITTEXT        IDC_EDIT1,45,6,99,12
+    LTEXT           "Numbers:",IDC_STATIC,8,29,32,8
+    EDITTEXT        IDC_EDIT2,45,28,99,12
+    LTEXT           "Either:",IDC_STATIC,8,49,34,8
+    EDITTEXT        IDC_EDIT3,45,46,99,12
+    LTEXT           "Anything:",IDC_STATIC,8,69,34,8
+    EDITTEXT        IDC_EDIT4,45,68,99,12
+END
+
+IDD_DERIVED_EDIT_PSPC DIALOG DISCARDABLE  0, 0, 154, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "C++ Derived Edit Class"
+FONT 8, "Tahoma"
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IMAGE1UP                BITMAP  MOVEABLE PURE   "RES\\IMAGE1U.BMP"
+IMAGE1DOWN              BITMAP  MOVEABLE PURE   "RES\\IMAGE1D.BMP"
+IMAGE1FOCUS             BITMAP  MOVEABLE PURE   "RES\\IMAGE1F.BMP"
+IMAGE2UP                BITMAP  MOVEABLE PURE   "RES\\IMAGE2U.BMP"
+IMAGE2DOWN              BITMAP  MOVEABLE PURE   "RES\\IMAGE2D.BMP"
+IMAGE2FOCUS             BITMAP  MOVEABLE PURE   "RES\\IMAGE2F.BMP"
+OKU                     BITMAP  MOVEABLE PURE   "RES\\OKU.BMP"
+OKD                     BITMAP  MOVEABLE PURE   "RES\\OKD.BMP"
+OKF                     BITMAP  MOVEABLE PURE   "RES\\OKF.BMP"
+CANCELU                 BITMAP  MOVEABLE PURE   "RES\\CANCELU.BMP"
+CANCELD                 BITMAP  MOVEABLE PURE   "RES\\CANCELD.BMP"
+CANCELF                 BITMAP  MOVEABLE PURE   "RES\\CANCELF.BMP"
+NEXTU                   BITMAP  MOVEABLE PURE   "RES\\NEXTU.BMP"
+NEXTD                   BITMAP  MOVEABLE PURE   "RES\\NEXTD.BMP"
+NEXTF                   BITMAP  MOVEABLE PURE   "RES\\NEXTF.BMP"
+NEXTX                   BITMAP  MOVEABLE PURE   "RES\\NEXTX.BMP"
+PREVU                   BITMAP  MOVEABLE PURE   "RES\\PREVU.BMP"
+PREVD                   BITMAP  MOVEABLE PURE   "RES\\PREVD.BMP"
+PREVF                   BITMAP  MOVEABLE PURE   "RES\\PREVF.BMP"
+PREVX                   BITMAP  MOVEABLE PURE   "RES\\PREVX.BMP"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""res\\otherids.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\ctrltest.rc2""\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SUB_EDIT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 192
+    END
+
+    IDM_TEST_BITMAP_BUTTON2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 145
+    END
+
+    IDD_CUSTOM_LIST, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 86
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_YOU_CHOSE           "You chose %d"
+    IDS_PLEASE_SELECT_COLOR "Please select a color"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_DESKACCESSORY   "Opens the selected item"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COLOR_NAME_FIRST    "black"
+    IDS_COLOR_NAME_BLUE     "blue"
+    IDS_COLOR_NAME_GREEN    "green"
+    IDS_COLOR_NAME_CYAN     "cyan"
+    IDS_COLOR_NAME_RED      "red"
+    IDS_COLOR_NAME_MAGENTA  "magenta"
+    IDS_COLOR_NAME_YELLOW   "yellow"
+    IDS_COLOR_NAME_WHITE    "white"
+    IDS_YOU_PICKED_COLOR    "You picked %s"
+    IDS_MENU_TEST           "Menu Test"
+    IDS_ILLEGAL_VALUE       "illegal value"
+    IDS_MUSCRL32_DLL_REQUIRED "MUSCRL32.DLL is required to run this test"
+    IDS_WNDCLASS_NOT_REGISTERED 
+                            "Failed to registered WNDCLASS for parsed control"
+    IDS_LETTERS             "Letters"
+    IDS_NUMBERS             "Numbers"
+    IDS_EITHER              "Either"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ANYTHING            "Anything"
+    AFX_IDS_APP_TITLE       "Control Test App"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\ctrltest.rc2"
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

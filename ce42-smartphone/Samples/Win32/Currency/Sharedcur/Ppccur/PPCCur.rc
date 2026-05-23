@@ -1,0 +1,212 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""..\\cur.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_CURRENCY_CONVERTER SHMENUBAR MOVEABLE PURE 
+BEGIN
+    IDM_CURRENCY_CONVERTER, 1,
+    I_IMAGENONE, IDM_POPUP1, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_HELP, 0, 0,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_CURRENCY_CONVERTER MENU DISCARDABLE 
+BEGIN
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Change Rates",                IDM_CHANGE_RATES
+        MENUITEM "Quit",                        IDM_QUIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONVERTER DIALOG DISCARDABLE  0, 0, 135, 150
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Currency Converter"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO_SOURCE,3,5,55,140,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DEST,78,5,55,140,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_SOURCE,3,20,55,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DEST,78,20,55,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "7",IDC_BUTTON_7,3,40,25,20
+    PUSHBUTTON      "8",IDC_BUTTON_8,33,40,25,20
+    PUSHBUTTON      "9",IDC_BUTTON_9,63,40,25,20
+    PUSHBUTTON      "4",IDC_BUTTON_4,3,65,25,20
+    PUSHBUTTON      "5",IDC_BUTTON_5,33,65,25,20
+    PUSHBUTTON      "6",IDC_BUTTON_6,63,65,25,20
+    PUSHBUTTON      "1",IDC_BUTTON_1,3,90,25,20
+    PUSHBUTTON      "2",IDC_BUTTON_2,33,90,25,20
+    PUSHBUTTON      "3",IDC_BUTTON_3,63,90,25,20
+    PUSHBUTTON      "0",IDC_BUTTON_0,3,115,55,20
+    PUSHBUTTON      ".",IDC_BUTTON_DECIMAL,63,115,25,20
+    PUSHBUTTON      "Convert",IDC_BUTTON_CONVERT,93,40,40,20
+    PUSHBUTTON      "Clear",IDC_BUTTON_CLEAR,93,65,40,20
+    PUSHBUTTON      "<-",IDC_BUTTON_BACKSPACE,93,90,40,20
+END
+
+IDD_EDITOR DIALOG DISCARDABLE  0, 0, 135, 150
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Modify Currency"
+FONT 8, "System"
+BEGIN
+    LTEXT           "Select the currency to edit",IDC_STATIC,7,5,121,8
+    LISTBOX         IDC_CURRENTY_LIST,7,16,121,47,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Current Rate:",IDC_STATIC,8,85,46,8
+    EDITTEXT        IDC_CURRENT_RATE,61,82,70,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "New Rate:",IDC_STATIC,18,102,35,10
+    EDITTEXT        IDC_NEW_RATE,61,100,70,14,ES_AUTOHSCROLL
+    CONTROL         "Visible in Lists:",IDC_VISIBLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,7,119,61,10
+    PUSHBUTTON      "Reset Currency",IDC_RESET_CURRENCY,6,131,58,15
+    PUSHBUTTON      "Change Currency",IDC_COMMIT,66,131,65,15
+    GROUPBOX        "Edit Currency",IDC_STATIC,3,66,131,83
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONVERTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PPCCUR              ICON    DISCARDABLE     "PPCCur.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "Currency Converter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELP                "Tools"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DROPDOWN_FORMAT     "%1 - %2"
+    IDS_ERROR_CAPTION       "Error"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_UNABLETOBRINGUPDIALOG "Unable to create the dialog.\n%2"
+    IDS_ERROR_UNABLETOCONVERT 
+                            "Unable to convert with given rates and amount.\n%2"
+    IDS_LISTBOX_FORMAT      "%1 - %2"
+    IDS_ERROR_UNABLETOCHANGERATE "Unable to change the rate.\n%2"
+    IDS_ERROR_UNABLETORESET "Unable to reset the rate to defaults.\n%2"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "..\cur.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

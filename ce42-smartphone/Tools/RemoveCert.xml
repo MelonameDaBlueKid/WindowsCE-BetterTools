@@ -1,0 +1,8 @@
+<!-- Sample XML to remove a certificate from the store -->
+<wap-provisioningdoc>
+	<characteristic type="CertificateStore">
+		<characteristic type="{Enter certificate store name over here}">
+			<nocharacteristic-query type="{Enter certificate SHA-1 thumbprint in hexadecimal here}" />
+		</characteristic>
+	</characteristic>
+</wap-provisioningdoc>

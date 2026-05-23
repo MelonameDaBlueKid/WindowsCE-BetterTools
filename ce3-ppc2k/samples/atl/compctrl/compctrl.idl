@@ -1,0 +1,50 @@
+#include <olectl.h>
+// CompCtrl.idl : IDL source for CompCtrl.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CompCtrl.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+	[
+		object,
+		uuid(5E52C82F-D880-11D1-9355-00600820B4FF),
+		dual,
+		helpstring("ICComCtrl Interface"),
+		pointer_default(unique)
+	]
+	interface ICComCtrl : IDispatch
+	{
+	};
+[
+	uuid(5E52C823-D880-11D1-9355-00600820B4FF),
+	version(1.0),
+	helpstring("CompCtrl 1.0 Type Library")
+]
+library COMPCTRLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(5E52C822-D880-11D1-9355-00600820B4FF),
+		helpstring("Event interface for ICComCtrl")
+	]
+	dispinterface _CompEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(5E52C830-D880-11D1-9355-00600820B4FF),
+		helpstring("CComCtrl Class")
+	]
+	coclass CComCtrl
+	{
+		[default] interface ICComCtrl;
+		[default, source] dispinterface _CompEvents;
+	};
+};

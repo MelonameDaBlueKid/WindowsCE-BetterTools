@@ -1,0 +1,210 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resrc1.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "newres.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SCR1 DIALOG DISCARDABLE  0, 0, 160, 179
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_CONTROL_DTS_LONGDATEFORMAT,"SysDateTimePick32",
+                    DTS_LONGDATEFORMAT,0,0,124,12
+    CONTROL         "",IDC_CONTROL_DTS_SHOWNONE,"SysDateTimePick32",
+                    DTS_SHOWNONE,0,16,92,12
+    CONTROL         "",IDC_CONTROL_DTS_SHORTDATEFORMAT,"SysDateTimePick32",
+                    0x0,0,30,92,12
+    CONTROL         "",IDC_CONTROL_DTS_TIMEFORMAT,"SysDateTimePick32",
+                    DTS_UPDOWN | 0x8,0,44,92,12
+    CONTROL         "",IDC_CONTROL_DTS_UPDOWN,"SysDateTimePick32",DTS_UPDOWN,
+                    0,58,92,12
+    LTEXT           "LONGDATE",IDC_STATIC,124,3,36,8
+    LTEXT           "SHOWNONE",IDC_STATIC,96,16,62,10
+    LTEXT           "SHORTDATEFORMAT ",IDC_STATIC,96,30,62,10
+    LTEXT           "TIMEFORMAT",IDC_STATIC,96,44,62,10
+    LTEXT           "UPDOWN ",IDC_STATIC,96,58,62,10
+    CONTROL         "",IDC_CONTROL_MCS_WEEKNUMBERS,"SysMonthCal32",
+                    MCS_WEEKNUMBERS,0,72,132,96
+END
+
+IDD_DIALOG DIALOG DISCARDABLE  0, 0, 93, 71
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CalendarSample"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "WindowsCE",IDC_STATIC,28,3,38,8
+    LTEXT           "CalendarSample",IDC_STATIC,30,15,52,8
+    LTEXT           "Version 0.9.0",IDC_STATIC,27,27,44,8
+    ICON            IDI_ICON1,IDC_STATIC,2,6,20,20,WS_GROUP
+END
+
+IDD_SCR2 DIALOG DISCARDABLE  0, 0, 162, 175
+STYLE WS_CHILD | WS_BORDER
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_CONTROL_MCS_WEEKNUMBERS,"SysMonthCal32",
+                    MCS_WEEKNUMBERS,0,0,162,175
+END
+
+IDD_SCR3 DIALOG DISCARDABLE  0, 0, 160, 179
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_CONTROL_DTS_LONGDATEFORMAT1,"SysDateTimePick32",
+                    DTS_LONGDATEFORMAT,8,14,136,12
+    LTEXT           "Custom LONGDATE",-1,84,4,70,8
+    CONTROL         "",IDC_CONTROL_DTS_LONGDATEFORMAT2,"SysDateTimePick32",
+                    DTS_LONGDATEFORMAT,8,33,136,12
+    CONTROL         "",IDC_CONTROL_DTS_LONGDATEFORMAT3,"SysDateTimePick32",
+                    DTS_LONGDATEFORMAT,8,52,136,12
+    CONTROL         "",IDC_CONTROL_DTS_LONGDATEFORMAT4,"SysDateTimePick32",
+                    DTS_LONGDATEFORMAT,2,71,156,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MAIN_MENU RCDATA DISCARDABLE
+BEGIN
+  IDM_MAIN_MENU, 
+  2,  
+  (-2), IDM_MAIN_MENUITEM2, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM2, 0, 0, //Next popup menu
+
+  (-2), IDM_MAIN_MENUITEM3, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM3, 0, 1, //Next popup menu
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "View"
+    BEGIN
+        MENUITEM "Screen 1",                    IDM_VIEW_SCREEN1
+        MENUITEM "Screen 2",                    IDM_VIEW_SCREEN2
+        MENUITEM "Screen 3",                    IDM_VIEW_SCREEN3
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About...",                    IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "palmcal.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""newres.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SCR2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 151
+        BOTTOMMARGIN, 144
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAIN_MENUITEM1      "File"
+    IDS_MAIN_MENUITEM2      "View"
+    IDS_MAIN_MENUITEM3      "Help"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

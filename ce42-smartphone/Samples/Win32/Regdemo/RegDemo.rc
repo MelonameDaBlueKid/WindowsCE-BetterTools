@@ -1,0 +1,133 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 100, 120
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    LTEXT           "String1",IDC_REGDEMO_LBLSTR,4,5,93,10
+    EDITTEXT        IDC_REGDEMO_STRING1,4,15,93,12,ES_AUTOHSCROLL & NOT 
+                    WS_BORDER
+    LTEXT           "DWORD1",IDC_REGDEMO_LBLDW,4,30,93,10
+    EDITTEXT        IDC_REGDEMO_DWORD1,4,40,93,12,(ES_AUTOHSCROLL | ES_NUMBER) & NOT WS_BORDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDR_REGDEMO_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Update Values",               IDM_REGDEMO_UPDATE
+        MENUITEM "Remove Existing Keys",        IDM_REGDEMO_REMOVE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REGDEMO_TITLE       "RegDemo"
+    IDS_REGDEMO_OPTIONS     "Options"
+    IDS_REGDEMO_QUIT        "Quit"
+    IDS_ERROR_TITLE         "Error"
+    IDS_DIALOG_ERROR        "An error occurred while initializing the dialog."
+    IDS_REGCREATEKEYEX_FAILED "RegCreateKeyEx failed."
+    IDS_GETDWORD1_FAILED    "Cannot retrieve value DWORD1."
+    IDS_GETSTRING1_FAILED   "Cannot retrieve value STRING1."
+    IDS_MALLOC_FAILED       "Unable to allocate memory."
+    IDS_REGDELETEVALUE_FAILED "RegDeleteValue failed."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

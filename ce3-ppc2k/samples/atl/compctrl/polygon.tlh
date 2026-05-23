@@ -1,0 +1,80 @@
+// Created by Microsoft (R) C/C++ Compiler Version 11.00.0000 (2046ae6d).
+//
+// x86emDbg/Polygon.tlh
+//
+// C++ source equivalent of Win32 type library Polygon.dll
+// compiler-generated file created 04/20/98 at 15:37:26 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("4cbbc677-507f-11d0-b98b-000000000000"))
+/* dispinterface */ _PolyEvents;
+struct /* coclass */ PolyCtl;
+struct __declspec(uuid("4cbbc675-507f-11d0-b98b-000000000000"))
+/* dual interface */ IPolyCtl;
+struct /* coclass */ PolyProp;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_PolyEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IPolyCtl, __uuidof(IPolyCtl));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("4cbbc677-507f-11d0-b98b-000000000000"))
+_PolyEvents : IDispatch
+{};
+
+struct __declspec(uuid("4cbbc676-507f-11d0-b98b-000000000000"))
+PolyCtl;
+    // [ default ] interface IPolyCtl
+    // [ default, source ] dispinterface _PolyEvents
+
+struct __declspec(uuid("4cbbc675-507f-11d0-b98b-000000000000"))
+IPolyCtl : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall put_FillColor (
+        unsigned long pclr ) = 0;
+    virtual HRESULT __stdcall get_FillColor (
+        unsigned long * pclr ) = 0;
+    virtual HRESULT __stdcall get_Sides (
+        short * newVal ) = 0;
+    virtual HRESULT __stdcall put_Sides (
+        short newVal ) = 0;
+};
+
+struct __declspec(uuid("a3121f30-516b-11d0-b98c-000000000000"))
+PolyProp;
+    // [ default ] interface IUnknown
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_POLYGONLib =
+    {0x4cbbc673,0x507f,0x11d0,{0xb9,0x8b,0x00,0x00,0x00,0x00,0x00,0x00}};
+extern "C" const GUID __declspec(selectany) DIID__PolyEvents =
+    {0x4cbbc677,0x507f,0x11d0,{0xb9,0x8b,0x00,0x00,0x00,0x00,0x00,0x00}};
+extern "C" const GUID __declspec(selectany) CLSID_PolyCtl =
+    {0x4cbbc676,0x507f,0x11d0,{0xb9,0x8b,0x00,0x00,0x00,0x00,0x00,0x00}};
+extern "C" const GUID __declspec(selectany) IID_IPolyCtl =
+    {0x4cbbc675,0x507f,0x11d0,{0xb9,0x8b,0x00,0x00,0x00,0x00,0x00,0x00}};
+extern "C" const GUID __declspec(selectany) CLSID_PolyProp =
+    {0xa3121f30,0x516b,0x11d0,{0xb9,0x8c,0x00,0x00,0x00,0x00,0x00,0x00}};
+
+#pragma pack(pop)

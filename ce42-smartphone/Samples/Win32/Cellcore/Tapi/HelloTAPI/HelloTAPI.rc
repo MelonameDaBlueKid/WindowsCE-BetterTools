@@ -1,0 +1,116 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+#include <commctrl.h>
+#include <aygshell.h>
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 101, 96
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_PHONENUM,5,45,90,10,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Please Enter A Phone Number To Dial, or leave blank to dial the default number (1-425-882-8080)",
+                    IDC_STATIC,5,5,90,35
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 94
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <windows.h>\r\n"
+    "#include <commctrl.h>\r\n"
+    "#include <aygshell.h>\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELLOMAPI_CANCEL    "Cancel"
+    IDS_HELLOMAPI_DIAL      "Dial"
+    IDS_HELLOMAPI_TITLE     "Hello TAPI"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELLOMAPI_AREYOUSURE "Are you sure you want to dial"
+    IDS_HELLOMAPI_DIALCONFIRMATION "Dial Confirmation"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

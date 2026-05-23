@@ -1,0 +1,168 @@
+VERSION 5.00
+Begin VB.Form frmAbout 
+   Appearance      =   0  'Flat
+   BackColor       =   &H00000000&
+   Caption         =   "About Simon Says"
+   ClientHeight    =   2175
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   3495
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   2175
+   ScaleWidth      =   3495
+   ShowOK          =   -1  'True
+   Begin VBCE.CommandButton cmdOK 
+      Height          =   275
+      Left            =   2400
+      TabIndex        =   4
+      Top             =   1320
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "OK"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.Label Label1 
+      Height          =   255
+      Left            =   240
+      TabIndex        =   3
+      Top             =   1560
+      Width           =   1575
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Version: 1.0.0"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   12648447
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label2 
+      Height          =   255
+      Left            =   240
+      TabIndex        =   2
+      Top             =   1200
+      Width           =   1575
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Date: 12/14/99"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   12648447
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblAuthor 
+      Height          =   255
+      Left            =   240
+      TabIndex        =   1
+      Top             =   960
+      Width           =   1575
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Author: Kevin Yang"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   12648447
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblAboutTitle 
+      Height          =   255
+      Left            =   840
+      TabIndex        =   0
+      Top             =   360
+      Width           =   1815
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Simon Says Game"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   12648447
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+End
+Attribute VB_Name = "frmAbout"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Private Sub cmdOK_Click()
+    frmAbout.Hide
+End Sub
+
+Private Sub Form_OKClick()
+    frmAbout.Hide
+End Sub

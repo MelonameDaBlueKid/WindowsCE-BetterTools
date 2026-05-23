@@ -1,0 +1,233 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "&Object Store"
+    BEGIN
+        MENUITEM "&Create Database",            IDM_CREATEDB
+        MENUITEM "&Delete Database",            IDM_DELETEDB
+        MENUITEM "&Modify Indexes",             IDM_INDEXDB
+        MENUITEM "&Use Indexes",                IDM_USEINDEXES
+        MENUITEM "&Storage Space",              ID_OBJECTSTORE_STORAGESPACE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 185, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "DbviewDialog"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,77,50,14
+    CTEXT           "Dbview Sample Application\nCopyright Microsoft Corporation",
+                    IDC_STATIC,36,18,112,21
+    ICON            IDI_APP_ICON,IDC_STATIC,83,45,18,20
+    GROUPBOX        "",IDC_STATIC,12,3,161,70
+END
+
+IDD_NEWDBNAME DIALOG DISCARDABLE  0, 0, 136, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Database"
+FONT 8, "DbviewDialog"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,42,26,50,14
+    LTEXT           "Name",IDC_STATIC,13,6,20,8
+    EDITTEXT        IDC_DBNAME,36,4,82,12
+END
+
+IDD_PEGMEMORY DIALOG DISCARDABLE  0, 0, 143, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Object Store Information"
+FONT 8, "DbviewDialog"
+BEGIN
+    EDITTEXT        IDC_AVAIL,73,11,56,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_FREE,73,23,56,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Bytes free",IDC_STATIC,13,24,52,8
+    LTEXT           "Bytes available",IDC_STATIC,13,12,52,8
+END
+
+IDD_NEWRECORDPROPS DIALOG DISCARDABLE  0, 0, 270, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Record"
+FONT 8, "DbviewDialog"
+BEGIN
+    EDITTEXT        IDC_SHORT,15,11,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USHORT,75,11,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LONG,141,11,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ULONG,201,11,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,15,34,111,41,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    EDITTEXT        IDC_BLOB,144,34,111,41,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    LTEXT           "Short",IDC_STATIC,15,0,18,8
+    LTEXT           "Unsigned Short",IDC_STATIC,75,0,50,8
+    LTEXT           "Long",IDC_STATIC,141,0,17,8
+    LTEXT           "Unsigned Long",IDC_STATIC,201,0,49,8
+    LTEXT           "String",IDC_STATIC,15,24,19,8
+    LTEXT           "Blob",IDC_STATIC,144,25,15,8
+    PUSHBUTTON      "&Save",IDC_SAVE,114,82,43,12
+END
+
+IDD_MODINDEX DIALOG DISCARDABLE  0, 0, 292, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Modify Indexes"
+FONT 8, "DbviewDialog"
+BEGIN
+    LISTBOX         IDC_CURRENT,169,17,101,69,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         IDC_AVAILABLE,21,17,101,69,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADDINDEX,129,21,33,18,WS_DISABLED
+    PUSHBUTTON      "&Remove",IDC_REMINDEX,129,44,33,18,WS_DISABLED
+    LTEXT           "Properties",IDC_STATIC,21,9,32,8
+    LTEXT           "Indexed Properties",IDC_STATIC,169,9,82,8
+    PUSHBUTTON      "&OK",IDOK,129,67,33,18
+END
+
+IDD_SELECTINDEX DIALOG DISCARDABLE  0, 0, 135, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Index"
+FONT 8, "DbviewDialog"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,43,78,50,14
+    LISTBOX         IDC_INDEXES,13,7,107,64,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APP_ICON            ICON    DISCARDABLE     "appicon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IMAGE               BITMAP  DISCARDABLE     "IMAGES.BMP"
+IDB_BUTTONS             BITMAP  DISCARDABLE     "buttons.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_NEWRECORDPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 263
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_MODINDEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_SELECTINDEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

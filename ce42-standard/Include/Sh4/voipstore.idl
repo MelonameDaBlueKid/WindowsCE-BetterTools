@@ -1,0 +1,490 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of your Microsoft Windows CE
+// Source Alliance Program license form.  If you did not accept the terms of
+// such a license, you are not authorized to use this source code.
+//
+// VoIP.idl : IDL source for VoIP.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (VoIP.tlb) and marshalling code.
+
+// This is the default speed dial entry for a VoIPCallerInfoRecord.
+enum 
+{
+    VOIP_INVALID_SPEED_DIAL_ENTRY = -1,
+};
+
+typedef enum VoIPCallType
+{
+    e_vctInvalid = 0,
+    e_vctIncoming, 
+    e_vctOutgoing, 
+    e_vctMissed, 
+} VoIPCallType;
+
+//First and last are for validating the range or acceptable 
+//value for a voipcalltype
+const VoIPCallType VCT_FIRST = e_vctInvalid;
+const VoIPCallType VCT_LAST  = e_vctMissed;
+
+interface IVoIPCallerInfoDBEnum;
+interface IVoIPCallLogDBEnum;
+
+import "voiperrorcodes.h";
+import "oaidl.idl";
+import "ocidl.idl";
+    /*------------------------------------------------------------------------------
+        IVoIPCallRecord
+        
+        Interface wrapper for a call log database's call record.
+    ------------------------------------------------------------------------------*/
+    [
+        object,
+        uuid(AAC6F8C9-69AA-4C06-852E-BCBDA7FB77D5),
+        helpstring("IVoIPCallRecord Interface"),
+        pointer_default(unique)
+    ] 
+    interface IVoIPCallRecord : IUnknown
+    {
+        /*------------------------------------------------------------------------------
+            URI
+        ------------------------------------------------------------------------------*/
+        // Sets the URI for the recipient of this call.
+        HRESULT put_URI(
+            [in]BSTR bstrURI
+            );
+
+        // Gets the URI for the recipient of this call.
+        HRESULT get_URI(
+            [out, retval]BSTR *pbstrURI
+            );
+
+        /*------------------------------------------------------------------------------
+            FriendlyName
+        ------------------------------------------------------------------------------*/
+        // Sets the friendly name for the recipient of this call.
+        HRESULT put_FriendlyName(
+            [in]BSTR bstrFriendlyName
+            );
+
+        // Gets the friendly name for the recipient of this call.
+        HRESULT get_FriendlyName(
+            [out, retval]BSTR *pbstrFriendlyName
+            );
+
+        /*------------------------------------------------------------------------------
+            VoIPName
+        ------------------------------------------------------------------------------*/
+        // Sets the VoIP (RTC) name for the recipient of this call.
+        HRESULT put_VoIPName(
+            [in]BSTR bstrVoIPName
+            );
+
+        // Gets the VoIP (RTC) name for the recipient of this call.
+        HRESULT get_VoIPName(
+            [out, retval]BSTR *pbstrVoIPName
+            );
+
+        /*------------------------------------------------------------------------------
+            CallType
+        ------------------------------------------------------------------------------*/
+        // Sets the call type of this call.
+        HRESULT put_CallType(
+            [in]VoIPCallType vctType
+            );
+
+        // Gets the call type of this call.
+        HRESULT get_CallType(
+            [out, retval]VoIPCallType *pvctType
+            );
+
+        /*------------------------------------------------------------------------------
+            StartTime
+        ------------------------------------------------------------------------------*/
+        // Sets the time this call started.
+        HRESULT put_StartTime(
+            [in]SYSTEMTIME time
+            );
+
+        // Gets the time this call started.
+        HRESULT get_StartTime(
+            [out, retval]SYSTEMTIME *ptime
+            );
+
+        /*------------------------------------------------------------------------------
+            EndTime
+        ------------------------------------------------------------------------------*/
+        // Sets the time this call ended.
+        HRESULT put_EndTime(
+            [in]SYSTEMTIME time
+            );
+
+        // Gets the time this call ended.
+        HRESULT get_EndTime(
+            [out, retval]SYSTEMTIME *ptime
+            );
+
+        /*------------------------------------------------------------------------------
+            Duration
+        ------------------------------------------------------------------------------*/
+       // Gets the current duration of this call.
+        HRESULT get_Duration(
+            [in]SYSTEMTIME *ptime
+            );
+
+        /*------------------------------------------------------------------------------
+            Commit
+        ------------------------------------------------------------------------------*/
+        // Commits to the associated database any unsaved changes made to this record.
+        HRESULT Commit();
+
+        /*------------------------------------------------------------------------------
+            DeleteFromDB
+        ------------------------------------------------------------------------------*/
+        // Removes this record from the associated database.
+        HRESULT DeleteFromDB();
+    };
+    
+    /*------------------------------------------------------------------------------
+        IVoIPCallLogDB
+        
+        Interface wrapper for a call log database.
+    ------------------------------------------------------------------------------*/
+    [
+        object,
+        uuid(C1098634-9F60-4E94-BF0C-844A3D6F695B),
+        helpstring("IVoIPCallLogDB Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPCallLogDB : IUnknown
+    {
+        /*------------------------------------------------------------------------------
+            Init
+        ------------------------------------------------------------------------------*/
+        // Initializes the databases for the specified URI.
+        HRESULT Init(
+            [in]BSTR bstrURI
+            );
+
+        /*------------------------------------------------------------------------------
+            CreateRecord
+        ------------------------------------------------------------------------------*/
+        // Creates a new call log record for the specified database.
+        HRESULT CreateRecord(
+            [in]enum VoIPCallType, 
+            [out, retval]IVoIPCallRecord **ppiRecord
+            );
+
+        /*------------------------------------------------------------------------------
+            Capacity
+        ------------------------------------------------------------------------------*/
+        // Sets the capacity of each database.
+        HRESULT put_Capacity(
+            [in]int cRecords
+            );
+
+        // Gets the capacity of each database.
+        HRESULT get_Capacity(
+            [out, retval]int *cRecords
+            );
+
+        /*------------------------------------------------------------------------------
+            IncomingEnumerator
+        ------------------------------------------------------------------------------*/
+        // Gets an enumerator for the incoming call database.
+        HRESULT get_IncomingEnumerator(
+            [out, retval]IVoIPCallLogDBEnum **ppiEnum
+            );
+
+        /*------------------------------------------------------------------------------
+            OutgoingEnumerator
+        ------------------------------------------------------------------------------*/
+        // Gets an enumerator for the outgoing call database.
+        HRESULT get_OutgoingEnumerator(
+            [out, retval]IVoIPCallLogDBEnum  **ppiEnum
+            );
+
+        /*------------------------------------------------------------------------------
+            MissedEnumerator
+        ------------------------------------------------------------------------------*/
+        // Gets an enumerator for the missed call database.
+        HRESULT get_MissedEnumerator(
+            [out, retval]IVoIPCallLogDBEnum **ppiEnum
+            );
+
+    };
+    [ 
+        object,
+        uuid(25904F27-5B67-4829-837A-470C11975F75),
+        helpstring("IVoIPCallLogDBEnum Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPCallLogDBEnum : IUnknown
+    {
+        HRESULT     Reset();
+        
+        HRESULT     Skip(
+            [in]unsigned long celt
+            );
+        
+        HRESULT     Next(
+            [in] unsigned long celt, 
+            [out] IVoIPCallRecord **rgVoIPCallRecord, 
+            [out, retval] unsigned long *pceltFetched
+            );
+    
+    };
+
+    /*------------------------------------------------------------------------------
+        IVoIPCallerInfoRecord
+        
+        Interface wrapper for a caller info database's info record.
+    ------------------------------------------------------------------------------*/
+    [ 
+        object,
+        uuid(231AAD56-AF6D-4DA2-B97A-78D69906B875),
+        helpstring("IVoIPCallerInfoRecord Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPCallerInfoRecord : IUnknown
+    {
+        /*------------------------------------------------------------------------------
+            URI
+        ------------------------------------------------------------------------------*/
+        // Sets the caller's URI.
+        HRESULT put_URI(
+            [in]BSTR bstrURI
+            );
+        
+        // Gets the caller's URI.
+        HRESULT get_URI(
+            [out, retval]BSTR *pbstrURI
+            );
+            
+        /*------------------------------------------------------------------------------
+            FriendlyName
+        ------------------------------------------------------------------------------*/
+        // Sets the caller's friendly (display) name.
+        HRESULT put_FriendlyName(
+            [in]BSTR bstrFriendlyName
+            );
+        
+        // Gets the caller's friendly (display) name.
+        HRESULT get_FriendlyName(
+            [out, retval]BSTR *pbstrFriendlyName
+            );
+        
+        /*------------------------------------------------------------------------------
+            VoIPName
+        ------------------------------------------------------------------------------*/
+        // Sets the caller's VoIP (RTC) name.
+        HRESULT put_VoIPName(
+            [in]BSTR bstrVoIPName
+            );
+        
+        // Gets the caller's VoIP (RTC) name.
+        HRESULT get_VoIPName(
+            [out, retval]BSTR *pbstrVoIPName
+            );
+            
+        /*------------------------------------------------------------------------------
+            SpeedDialEntry
+        ------------------------------------------------------------------------------*/
+        // Sets the caller's numeric speed dial entry.
+        HRESULT put_SpeedDialEntry(
+            [in]int idxSpeedDial
+            );
+        
+        // Gets the caller's numeric speed dial entry.
+        HRESULT get_SpeedDialEntry(
+            [out, retval]int *pidxSpeedDial
+            );
+        
+        /*------------------------------------------------------------------------------
+            Blocked
+        ------------------------------------------------------------------------------*/
+        // Set to TRUE to block all future calls from this caller.
+        HRESULT put_Blocked(
+            [in]VARIANT_BOOL fBlocked
+            );
+        
+        // If TRUE, all future calls from this caller will be blocked.
+        HRESULT get_Blocked(
+            [out, retval]VARIANT_BOOL *pfBlocked
+            );
+    
+        /*------------------------------------------------------------------------------
+            ForwardingURI
+        ------------------------------------------------------------------------------*/
+        // Sets the URI to which to auto-forward calls from this caller.
+        HRESULT put_ForwardingURI(
+            [in]BSTR bstrForwardingURI
+            );
+        
+        // Gets the URI to which to auto-forward calls from this caller.
+        HRESULT get_ForwardingURI(
+            [out, retval]BSTR *pbstrForwardingURI
+            );
+    
+        /*------------------------------------------------------------------------------
+            RingTone
+        ------------------------------------------------------------------------------*/
+        // Sets the path to the ring tone to use when this caller is calling.  Set to NULL or the empty string to use the default ring.
+        HRESULT put_RingTone(
+            [in]BSTR bstrRingTonePath
+            );
+        
+        // Gets the path to the ring tone to use when this caller is calling.  If NULL or the empty string, the default ring will be used.
+        HRESULT get_RingTone(
+            [out, retval]BSTR *pbstrRingTonePath
+            );
+    
+        /*------------------------------------------------------------------------------
+            Commit
+        ------------------------------------------------------------------------------*/
+        // Commits to the associated database any unsaved changes made to this record.
+        HRESULT Commit();
+
+        /*------------------------------------------------------------------------------
+            DeleteFromDB
+        ------------------------------------------------------------------------------*/
+        // Removes this record from the associated database.
+        HRESULT DeleteFromDB();
+    };
+
+    /*------------------------------------------------------------------------------
+        IVoIPCallerInfoDB
+        
+        Interface wrapper for a caller info database.
+    ------------------------------------------------------------------------------*/
+    [ 
+        object,
+        uuid(D954B73A-8022-410C-B78F-90E49919C4AE),
+        helpstring("IVoIPCallerInfoDB Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPCallerInfoDB : IUnknown
+    {
+        /*------------------------------------------------------------------------------
+            Init
+        ------------------------------------------------------------------------------*/
+        // Initializes the database for this URI.
+        HRESULT Init(
+            [in]BSTR bstrURI
+            );
+        
+        /*------------------------------------------------------------------------------
+            CreateRecord
+        ------------------------------------------------------------------------------*/
+        // Creates a new caller info record associated with this database.
+        HRESULT CreateRecord(
+            [out, retval]IVoIPCallerInfoRecord **ppiRecord
+            );
+        
+        /*------------------------------------------------------------------------------
+            Enumerator
+        ------------------------------------------------------------------------------*/
+        // Gets an enumerator for iterating over the database records.
+        HRESULT get_Enumerator(
+            [out, retval]IVoIPCallerInfoDBEnum  **ppiEnum
+            );
+
+        /*------------------------------------------------------------------------------
+            FindCallerInfoByURI
+        ------------------------------------------------------------------------------*/
+        // Searches over the database for a record whose URI matches bstrURI.
+        HRESULT FindCallerInfoByURI(
+            [in]BSTR bstrURI, 
+            [out, retval]IVoIPCallerInfoRecord **ppiRecord
+            );
+
+        
+        /*------------------------------------------------------------------------------
+            FindCallerInfoBySpeedDialEntry
+        ------------------------------------------------------------------------------*/
+        // Searches over the database for a record whose speed dial entry matches this one.
+        HRESULT FindCallerInfoBySpeedDialEntry(
+            [in]INT idxSpeedDial, 
+            [out, retval]IVoIPCallerInfoRecord **ppiRecord
+            );
+            
+        /*------------------------------------------------------------------------------
+            Speed Dial Enumerator
+        ------------------------------------------------------------------------------*/
+        // Gets a speed dial enumerator for iterating over the database records.
+        HRESULT get_SpeedDialEnumerator(
+            [out, retval]IVoIPCallerInfoDBEnum  **ppiEnum
+            );
+
+        /*------------------------------------------------------------------------------
+            Friendly Name Enumerator
+        ------------------------------------------------------------------------------*/
+        // Gets a friendly name enumerator for iterating over the database records.
+        HRESULT get_FriendlyNameEnumerator(
+            [out, retval]IVoIPCallerInfoDBEnum  **ppiEnum
+            );
+            
+    };
+    
+    [ 
+        object,
+        uuid(11928FC4-FE62-4412-8CAF-1EC68994FDCB),
+        helpstring("IVoIPCallerInfoDBEnum Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPCallerInfoDBEnum : IUnknown
+    {
+        HRESULT     Reset();
+        
+        HRESULT     Skip(
+            [in]unsigned long celt
+            );
+        
+        HRESULT     Next(
+            [in] unsigned long celt, 
+            [out] IVoIPCallerInfoRecord **rgVoIPCallerInfoRecord, 
+            [out, retval] unsigned long *pceltFetched
+            );
+    
+    };
+
+[
+    uuid(DDD0C98E-8BA5-4CA6-ADA5-63A399714008),
+    version(1.0),
+    helpstring("VoIP 1.0 Type Library")
+]
+library VOIPLib
+{
+    importlib("stdole32.tlb");
+    importlib("stdole2.tlb");
+
+    [
+        uuid(822E2EB8-3544-491D-8355-FB4941C55DE6),
+        helpstring("VoIPCallRecord Class")
+    ]
+    coclass VoIPCallLogRecord
+    {
+        [default] interface IVoIPCallRecord;
+    };
+    [
+        uuid(6362637C-D330-4621-8A98-1BACEE1E8065),
+        helpstring("VoIPCallLogDB Class")
+    ]
+    coclass VoIPCallLogDB
+    {
+        [default] interface IVoIPCallLogDB;
+    };
+    [
+        uuid(8555B292-2CD4-41A8-AFD7-0A3D74E6E2F5),
+        helpstring("VoIPCallerInfoDB Class")
+    ]
+    coclass VoIPCallerInfoDB
+    {
+        [default] interface IVoIPCallerInfoDB;
+    };
+
+};

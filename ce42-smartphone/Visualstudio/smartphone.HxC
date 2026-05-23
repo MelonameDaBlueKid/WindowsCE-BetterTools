@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE HelpCollection>
+<HelpCollection DTDVersion="1.0" FileVersion="1.0.0.0" LangId="1033" Title="Visual Studio .NET 2003 Smartphone 2003 Addon Collection" Copyright="Microsoft">
+   
+   <AttributeDef File="smartphone.HxA" />
+   
+   <TOCDef File="smartphone.HxT" />
+   
+   <KeywordIndexDef File="SmartphoneKIndex.HxK" />
+   <KeywordIndexDef File="SmartphoneAIndex.HxK" />
+   <KeywordIndexDef File="SmartphoneFIndex.HxK" />
+   
+<ItemMoniker Name="!DefaultToc" ProgId="HxDs.HxHierarchy" InitData="" />
+<ItemMoniker Name="!DefaultFullTextSearch" ProgId="HxDs.HxFullTextSearch" InitData="" />
+<ItemMoniker Name="!DefaultKeywordIndex" ProgId="HxDs.HxIndex" InitData="K" />
+<ItemMoniker Name="!DefaultAssociativeIndex" ProgId="HxDs.HxIndex" InitData="A" />
+<ItemMoniker Name="!DefaultContextWindowIndex" ProgId="HxDs.HxIndex" InitData="F" />
+</HelpCollection>

@@ -1,0 +1,1999 @@
+# Microsoft Developer Studio Generated NMAKE File, Based on CeDialer.vcp
+!IF "$(CFG)" == ""
+CFG=CeDialer - Win32 (WCE MIPS) Debug
+!MESSAGE No configuration specified. Defaulting to CeDialer - Win32 (WCE MIPS) Debug.
+!ENDIF 
+
+!IF "$(CESubsystem)" == ""
+CESubsystem=windowsce,2.0
+!MESSAGE Variable CESubsystem not specified. Defaulting to windowsce,2.11
+!ENDIF 
+
+!IF "$(CEVersion)" == ""
+CEVersion=200
+!MESSAGE Variable CEVersion not specified. Defaulting to 211
+!ENDIF 
+
+!IF "$(CEConfigName)" == ""
+CEConfigName=H/PC Ver. 2.00
+!MESSAGE Variable CEConfigName not specified.  Defaulting to H/PC Pro Ver. 2.11
+!ENDIF 
+
+!IF $(CEVersion) < 201
+CECrt=L
+CECrtDebug=Ld
+CECrtMT=T
+CECrtMTDebug=Td
+CENoDefaultLib=corelibc.lib
+CEx86Corelibc= 
+!ELSE 
+CECrt=C
+CECrtDebug=C
+CECrtMT=C
+CECrtMTDebug=C
+CENoDefaultLib=libc.lib /nodefaultlib:libcd.lib /nodefaultlib:libcmt.lib /nodefaultlib:libcmtd.lib /nodefaultlib:msvcrt.lib /nodefaultlib:msvcrtd.lib
+CEx86Corelibc=corelibc.lib
+!ENDIF 
+
+!IF "$(CFG)" != "CeDialer - Win32 (WCE MIPS) Release" && "$(CFG)" != "CeDialer - Win32 (WCE MIPS) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE SH4) Release" && "$(CFG)" != "CeDialer - Win32 (WCE SH4) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE SH3) Release" && "$(CFG)" != "CeDialer - Win32 (WCE SH3) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE THUMB) Release" && "$(CFG)" != "CeDialer - Win32 (WCE THUMB) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE ARM) Release" && "$(CFG)" != "CeDialer - Win32 (WCE ARM) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE MIPSFP) Release" && "$(CFG)" != "CeDialer - Win32 (WCE MIPSFP) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE MIPS16) Release" && "$(CFG)" != "CeDialer - Win32 (WCE MIPS16) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE CEF) Release" && "$(CFG)" != "CeDialer - Win32 (WCE CEF) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE x86) Release" && "$(CFG)" != "CeDialer - Win32 (WCE x86) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE x86em) Release" && "$(CFG)" != "CeDialer - Win32 (WCE x86em) Debug" && "$(CFG)" != "CeDialer - Win32 (WCE PPC) Release" && "$(CFG)" != "CeDialer - Win32 (WCE PPC) Debug"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "CeDialer.vcn" CFG="CeDialer - Win32 (WCE MIPS) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "CeDialer - Win32 (WCE MIPS) Release" (based on "Win32 (WCE MIPS) Application")
+!MESSAGE "CeDialer - Win32 (WCE MIPS) Debug" (based on "Win32 (WCE MIPS) Application")
+!MESSAGE "CeDialer - Win32 (WCE SH4) Release" (based on "Win32 (WCE SH4) Application")
+!MESSAGE "CeDialer - Win32 (WCE SH4) Debug" (based on "Win32 (WCE SH4) Application")
+!MESSAGE "CeDialer - Win32 (WCE SH3) Release" (based on "Win32 (WCE SH3) Application")
+!MESSAGE "CeDialer - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Application")
+!MESSAGE "CeDialer - Win32 (WCE THUMB) Release" (based on "Win32 (WCE THUMB) Application")
+!MESSAGE "CeDialer - Win32 (WCE THUMB) Debug" (based on "Win32 (WCE THUMB) Application")
+!MESSAGE "CeDialer - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "CeDialer - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "CeDialer - Win32 (WCE MIPSFP) Release" (based on "Win32 (WCE MIPSFP) Application")
+!MESSAGE "CeDialer - Win32 (WCE MIPSFP) Debug" (based on "Win32 (WCE MIPSFP) Application")
+!MESSAGE "CeDialer - Win32 (WCE MIPS16) Release" (based on "Win32 (WCE MIPS16) Application")
+!MESSAGE "CeDialer - Win32 (WCE MIPS16) Debug" (based on "Win32 (WCE MIPS16) Application")
+!MESSAGE "CeDialer - Win32 (WCE CEF) Release" (based on "Win32 (WCE CEF) Application")
+!MESSAGE "CeDialer - Win32 (WCE CEF) Debug" (based on "Win32 (WCE CEF) Application")
+!MESSAGE "CeDialer - Win32 (WCE x86) Release" (based on "Win32 (WCE x86) Application")
+!MESSAGE "CeDialer - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Application")
+!MESSAGE "CeDialer - Win32 (WCE x86em) Release" (based on "Win32 (WCE x86em) Application")
+!MESSAGE "CeDialer - Win32 (WCE x86em) Debug" (based on "Win32 (WCE x86em) Application")
+!MESSAGE "CeDialer - Win32 (WCE PPC) Release" (based on "Win32 (WCE PPC) Application")
+!MESSAGE "CeDialer - Win32 (WCE PPC) Debug" (based on "Win32 (WCE PPC) Application")
+!MESSAGE 
+!ERROR An invalid configuration is specified.
+!ENDIF 
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+!IF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Release"
+
+OUTDIR=.\WCEMIPSRel
+INTDIR=.\WCEMIPSRel
+# Begin Custom Macros
+OutDir=.\WCEMIPSRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clmips.exe
+CPP_PROJ=/nologo /M$(CECrt) /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:MIPS /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Debug"
+
+OUTDIR=.\WCEMIPSDbg
+INTDIR=.\WCEMIPSDbg
+# Begin Custom Macros
+OutDir=.\WCEMIPSDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe" "$(OUTDIR)\CeDialer.bsc"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\CeDialer.sbr"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.bsc"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clmips.exe
+CPP_PROJ=/nologo /M$(CECrtDebug) /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /FR"$(INTDIR)\\" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	"$(INTDIR)\CeDialer.sbr"
+
+"$(OUTDIR)\CeDialer.bsc" : "$(OUTDIR)" $(BSC32_SBRS)
+    $(BSC32) @<<
+  $(BSC32_FLAGS) $(BSC32_SBRS)
+<<
+
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:MIPS /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH4) Release"
+
+OUTDIR=.\WCESH4Rel
+INTDIR=.\WCESH4Rel
+# Begin Custom Macros
+OutDir=.\WCESH4Rel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=shcl.exe
+CPP_PROJ=/nologo /Qsh4 /MC /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:SH4 /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH4) Debug"
+
+OUTDIR=.\WCESH4Dbg
+INTDIR=.\WCESH4Dbg
+# Begin Custom Macros
+OutDir=.\WCESH4Dbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=shcl.exe
+CPP_PROJ=/nologo /Qsh4 /MC /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:SH4 /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH3) Release"
+
+OUTDIR=.\WCESH3Rel
+INTDIR=.\WCESH3Rel
+# Begin Custom Macros
+OutDir=.\WCESH3Rel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=shcl.exe
+CPP_PROJ=/nologo /M$(CECrt) /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:SH3 /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH3) Debug"
+
+OUTDIR=.\WCESH3Dbg
+INTDIR=.\WCESH3Dbg
+# Begin Custom Macros
+OutDir=.\WCESH3Dbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=shcl.exe
+CPP_PROJ=/nologo /M$(CECrtDebug) /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:SH3 /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Release"
+
+OUTDIR=.\WCETHUMBRel
+INTDIR=.\WCETHUMBRel
+# Begin Custom Macros
+OutDir=.\WCETHUMBRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clthumb.exe
+CPP_PROJ=/nologo /MC /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /QRarch4T /QRinterwork-return /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=coredll.lib commctrl.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:THUMB /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Debug"
+
+OUTDIR=.\WCETHUMBDbg
+INTDIR=.\WCETHUMBDbg
+# Begin Custom Macros
+OutDir=.\WCETHUMBDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clthumb.exe
+CPP_PROJ=/nologo /MC /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "ARM" /D "_ARM_" /D "DEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /QRarch4T /QRinterwork-return /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=coredll.lib commctrl.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:THUMB /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE ARM) Release"
+
+OUTDIR=.\WCEARMRel
+INTDIR=.\WCEARMRel
+# Begin Custom Macros
+OutDir=.\WCEARMRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clarm.exe
+CPP_PROJ=/nologo /MC /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=coredll.lib commctrl.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:ARM /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE ARM) Debug"
+
+OUTDIR=.\WCEARMDbg
+INTDIR=.\WCEARMDbg
+# Begin Custom Macros
+OutDir=.\WCEARMDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clarm.exe
+CPP_PROJ=/nologo /MC /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=coredll.lib commctrl.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:ARM /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Release"
+
+OUTDIR=.\WMIPSFPRel
+INTDIR=.\WMIPSFPRel
+# Begin Custom Macros
+OutDir=.\WMIPSFPRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clmips.exe
+CPP_PROJ=/nologo /QMFWCE /MC /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:MIPS /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Debug"
+
+OUTDIR=.\WMIPSFPDbg
+INTDIR=.\WMIPSFPDbg
+# Begin Custom Macros
+OutDir=.\WMIPSFPDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clmips.exe
+CPP_PROJ=/nologo /QMFWCE /MC /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:MIPS /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Release"
+
+OUTDIR=.\WCEMIPS16Rel
+INTDIR=.\WCEMIPS16Rel
+# Begin Custom Macros
+OutDir=.\WCEMIPS16Rel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clmips.exe
+CPP_PROJ=/nologo /M$(CECrt) /W3 /O2 /D "MIPS16SUPPORT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /ase16 /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /out:"$(OUTDIR)\CeDialer.exe" /MACHINE:MIPS16 /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Debug"
+
+OUTDIR=.\WCEMIPS16Dbg
+INTDIR=.\WCEMIPS16Dbg
+# Begin Custom Macros
+OutDir=.\WCEMIPS16Dbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clmips.exe
+CPP_PROJ=/nologo /M$(CECrtDebug) /W3 /Zi /Od /D "MIPS16SUPPORT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /ase16 /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /out:"$(OUTDIR)\CeDialer.exe" /MACHINE:MIPS16 /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE CEF) Release"
+
+OUTDIR=.\WCECEFRel
+INTDIR=.\WCECEFRel
+# Begin Custom Macros
+OutDir=.\WCECEFRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe" "$(OUTDIR)\CeDialer.bsc"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\CeDialer.sbr"
+	-@erase "$(OUTDIR)\CeDialer.bsc"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clcef.exe
+CPP_PROJ=/nologo /W3 /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /FR"$(INTDIR)\\" /Fo"$(INTDIR)\\" /cef /TP /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	"$(INTDIR)\CeDialer.sbr"
+
+"$(OUTDIR)\CeDialer.bsc" : "$(OUTDIR)" $(BSC32_SBRS)
+    $(BSC32) @<<
+  $(BSC32_FLAGS) $(BSC32_SBRS)
+<<
+
+LINK32=linkcef.exe
+LINK32_FLAGS=$(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:CEE /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /Fixed:no 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE CEF) Debug"
+
+OUTDIR=.\WCECEFDbg
+INTDIR=.\WCECEFDbg
+# Begin Custom Macros
+OutDir=.\WCECEFDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clcef.exe
+CPP_PROJ=/nologo /W3 /Zi /Od /D "CEF" /D "UNICODE" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /cef /TP /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=linkcef.exe
+LINK32_FLAGS=$(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:CEE /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /Fixed:no 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86) Release"
+
+OUTDIR=.\WCEX86Rel
+INTDIR=.\WCEX86Rel
+# Begin Custom Macros
+OutDir=.\WCEX86Rel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /ML /W3 /O2 /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "_WIN32_WCE_CEPC" /D "UNICODE" /D "NDEBUG" /D "i_386_" /Fo"$(INTDIR)\\" /Gs8192 /GF /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=$(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /nodefaultlib:$(CENoDefaultLib) /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86) Debug"
+
+OUTDIR=.\WCEX86Dbg
+INTDIR=.\WCEX86Dbg
+# Begin Custom Macros
+OutDir=.\WCEX86Dbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MLd /W3 /Zi /Od /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D UNDER_CE=$(CEVersion) /D "_WIN32_WCE_CEPC" /D "UNICODE" /D "DEBUG" /D "i_386_" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /Gs8192 /GF /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=$(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /nodefaultlib:$(CENoDefaultLib) /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86em) Release"
+
+OUTDIR=.\WCEx86emRel
+INTDIR=.\WCEx86emRel
+# Begin Custom Macros
+OutDir=.\WCEx86emRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /ML /W3 /O2 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\CeDialer.res" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=$(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /stack:0x10000,0x1000 /subsystem:windows /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:I386 /nodefaultlib:$(CENoDefaultLib) /out:"$(OUTDIR)\CeDialer.exe" /windowsce:emulation 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86em) Debug"
+
+OUTDIR=.\WCEx86emDbg
+INTDIR=.\WCEx86emDbg
+# Begin Custom Macros
+OutDir=.\WCEx86emDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.idb"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MLd /W3 /Gm /Zi /Od /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "_DEBUG" /D "x86" /D "i486" /D "_X86_" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\CeDialer.res" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "_DEBUG" /d "x86" /d "i486" /d "_X86_" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=$(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /stack:0x10000,0x1000 /subsystem:windows /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:I386 /nodefaultlib:$(CENoDefaultLib) /out:"$(OUTDIR)\CeDialer.exe" /windowsce:emulation 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE PPC) Release"
+
+OUTDIR=.\WCEPPCRel
+INTDIR=.\WCEPPCRel
+# Begin Custom Macros
+OutDir=.\WCEPPCRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clppc.exe
+CPP_PROJ=/nologo /M$(CECrt) /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"$(OUTDIR)\CeDialer.pdb" /machine:PPC /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE PPC) Debug"
+
+OUTDIR=.\WCEPPCDbg
+INTDIR=.\WCEPPCDbg
+# Begin Custom Macros
+OutDir=.\WCEPPCDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\CeDialer.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\CeDialer.obj"
+	-@erase "$(INTDIR)\CeDialer.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\CeDialer.exe"
+	-@erase "$(OUTDIR)\CeDialer.ilk"
+	-@erase "$(OUTDIR)\CeDialer.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=clppc.exe
+CPP_PROJ=/nologo /M$(CECrtDebug) /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "DEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"$(INTDIR)\CeDialer.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /r /fo"$(INTDIR)\CeDialer.res" /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" 
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CeDialer.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:yes /pdb:"$(OUTDIR)\CeDialer.pdb" /debug /machine:PPC /nodefaultlib:"$(CENoDefaultLib)" /out:"$(OUTDIR)\CeDialer.exe" /subsystem:$(CESubsystem) /STACK:65536,4096 
+LINK32_OBJS= \
+	"$(INTDIR)\CeDialer.obj" \
+	"$(INTDIR)\CeDialer.res"
+
+"$(OUTDIR)\CeDialer.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ENDIF 
+
+
+!IF "$(NO_EXTERNAL_DEPS)" != "1"
+!IF EXISTS("CeDialer.dep")
+!INCLUDE "CeDialer.dep"
+!ELSE 
+!MESSAGE Warning: cannot find "CeDialer.dep"
+!ENDIF 
+!ENDIF 
+
+
+!IF "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Release" || "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE SH4) Release" || "$(CFG)" == "CeDialer - Win32 (WCE SH4) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE SH3) Release" || "$(CFG)" == "CeDialer - Win32 (WCE SH3) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Release" || "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE ARM) Release" || "$(CFG)" == "CeDialer - Win32 (WCE ARM) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Release" || "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Release" || "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE CEF) Release" || "$(CFG)" == "CeDialer - Win32 (WCE CEF) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE x86) Release" || "$(CFG)" == "CeDialer - Win32 (WCE x86) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE x86em) Release" || "$(CFG)" == "CeDialer - Win32 (WCE x86em) Debug" || "$(CFG)" == "CeDialer - Win32 (WCE PPC) Release" || "$(CFG)" == "CeDialer - Win32 (WCE PPC) Debug"
+SOURCE=.\CeDialer.c
+
+!IF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Debug"
+
+
+"$(INTDIR)\CeDialer.obj"	"$(INTDIR)\CeDialer.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH4) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH4) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH3) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH3) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE ARM) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE ARM) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE CEF) Release"
+
+
+"$(INTDIR)\CeDialer.obj"	"$(INTDIR)\CeDialer.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE CEF) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86em) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86em) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE PPC) Release"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE PPC) Debug"
+
+
+"$(INTDIR)\CeDialer.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ENDIF 
+
+SOURCE=.\CeDialer.rc
+
+!IF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH4) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH4) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH3) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE SH3) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE THUMB) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE ARM) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE ARM) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPSFP) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE MIPS16) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE CEF) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE CEF) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86em) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE x86em) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE PPC) Release"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "CeDialer - Win32 (WCE PPC) Debug"
+
+
+"$(INTDIR)\CeDialer.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ENDIF 
+
+
+!ENDIF 
+

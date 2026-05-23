@@ -1,0 +1,906 @@
+VERSION 5.00
+Object = "{23CE4CF5-25A1-11D1-9A72-00A0C986B84A}#1.0#0"; "mscewinsock.dll"
+Begin VB.Form frmWSock 
+   Caption         =   "Universal Winsock Connector"
+   ClientHeight    =   2820
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   7080
+   ScaleHeight     =   2820
+   ScaleWidth      =   7080
+   Begin WinSockCtl.WinSock W1 
+      Left            =   5160
+      Top             =   480
+      _cx             =   1800
+      _cy             =   1000
+      LocalPort       =   0
+      Protocol        =   0
+      RemoteHost      =   ""
+      RemotePort      =   0
+      ServiceName     =   ""
+   End
+   Begin VBCE.CommandButton Command2 
+      Height          =   255
+      Left            =   255
+      TabIndex        =   22
+      Top             =   1785
+      Width           =   960
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Clear"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton Command1 
+      Height          =   255
+      Left            =   255
+      TabIndex        =   21
+      Top             =   2415
+      Width           =   960
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Clear"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdSend 
+      Height          =   255
+      Left            =   120
+      TabIndex        =   14
+      Top             =   1050
+      Width           =   960
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Send"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdClear 
+      Height          =   375
+      Left            =   3615
+      TabIndex        =   13
+      Top             =   1110
+      Width           =   375
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "X"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdBuildString 
+      Height          =   375
+      Left            =   3255
+      TabIndex        =   12
+      Top             =   1110
+      Width           =   375
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "%"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.TextBox txtRecv 
+      Height          =   630
+      Left            =   1320
+      TabIndex        =   11
+      Top             =   2145
+      Width           =   5655
+      _cx             =   2175
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483643
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Text            =   ""
+      Alignment       =   0
+      HideSelection   =   -1  'True
+      Locked          =   0   'False
+      MaxLength       =   0
+      MultiLine       =   -1  'True
+      PasswordChar    =   ""
+      ScrollBars      =   2
+   End
+   Begin VBCE.CommandButton cmdErr 
+      Height          =   375
+      Left            =   2895
+      TabIndex        =   10
+      Top             =   1110
+      Width           =   375
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "!"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.TextBox txtSend 
+      Height          =   630
+      Left            =   1320
+      TabIndex        =   9
+      Top             =   1500
+      Width           =   5655
+      _cx             =   2175
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483643
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Text            =   ""
+      Alignment       =   0
+      HideSelection   =   -1  'True
+      Locked          =   0   'False
+      MaxLength       =   0
+      MultiLine       =   -1  'True
+      PasswordChar    =   ""
+      ScrollBars      =   2
+   End
+   Begin VBCE.CommandButton cmdListen 
+      Height          =   375
+      Left            =   1215
+      TabIndex        =   8
+      Top             =   1110
+      Width           =   1575
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Start as Server"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdConnect 
+      Height          =   375
+      Left            =   1215
+      TabIndex        =   7
+      Top             =   750
+      Width           =   1575
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Connect to Server"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.OptionButton optIRDA 
+      Height          =   195
+      Left            =   15
+      TabIndex        =   6
+      Top             =   750
+      Width           =   1000
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483633
+      Caption         =   "2 - IRDA"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      Value           =   0   'False
+   End
+   Begin VBCE.OptionButton optUDP 
+      Height          =   195
+      Left            =   0
+      TabIndex        =   5
+      Top             =   510
+      Width           =   1005
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483633
+      Caption         =   "1 - UDP"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      Value           =   0   'False
+   End
+   Begin VBCE.OptionButton optTCP 
+      Height          =   195
+      Left            =   15
+      TabIndex        =   4
+      Top             =   270
+      Width           =   1000
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483633
+      Caption         =   "0 - TCP"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      Value           =   -1  'True
+   End
+   Begin VBCE.CommandButton cmdStatus 
+      Height          =   375
+      Left            =   2895
+      TabIndex        =   3
+      Top             =   750
+      Width           =   1095
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Status"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.ListBox lstRecv 
+      Height          =   1035
+      Left            =   4080
+      TabIndex        =   0
+      Top             =   270
+      Width           =   2880
+      _cx             =   5080
+      _cy             =   1826
+      Appearance      =   1
+      BackColor       =   -2147483643
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Columns         =   0
+      IntegralHeight  =   -1  'True
+      MultiSelect     =   0
+      Sorted          =   0   'False
+   End
+   Begin VBCE.TextBox txtServer 
+      Height          =   375
+      Left            =   1215
+      TabIndex        =   1
+      Top             =   270
+      Width           =   1695
+      _cx             =   2175
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483643
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Text            =   ""
+      Alignment       =   0
+      HideSelection   =   -1  'True
+      Locked          =   0   'False
+      MaxLength       =   0
+      MultiLine       =   0   'False
+      PasswordChar    =   ""
+      ScrollBars      =   0
+   End
+   Begin VBCE.TextBox txtPort 
+      Height          =   375
+      Left            =   3015
+      TabIndex        =   2
+      Top             =   270
+      Width           =   975
+      _cx             =   2175
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483643
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Text            =   ""
+      Alignment       =   0
+      HideSelection   =   -1  'True
+      Locked          =   0   'False
+      MaxLength       =   0
+      MultiLine       =   0   'False
+      PasswordChar    =   ""
+      ScrollBars      =   0
+   End
+   Begin VBCE.Label Label6 
+      Height          =   255
+      Left            =   4095
+      TabIndex        =   20
+      Top             =   15
+      Width           =   1575
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Messages:"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label5 
+      Height          =   255
+      Left            =   15
+      TabIndex        =   19
+      Top             =   0
+      Width           =   975
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Protocol:"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label4 
+      Height          =   255
+      Left            =   3015
+      TabIndex        =   18
+      Top             =   15
+      Width           =   975
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Server Port:"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label3 
+      Height          =   255
+      Left            =   1215
+      TabIndex        =   17
+      Top             =   0
+      Width           =   1455
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Server Name:"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label2 
+      Height          =   255
+      Left            =   120
+      TabIndex        =   16
+      Top             =   2130
+      Width           =   1215
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Data Received:"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label1 
+      Height          =   255
+      Left            =   150
+      TabIndex        =   15
+      Top             =   1515
+      Width           =   1095
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Data to Send:"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+End
+Attribute VB_Name = "frmWSock"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'********************************************************************************
+'*
+'*  WSock - Main code for WSock sample
+'*
+'*  Copyright (c) 1998 Microsoft Corporation
+
+Option Explicit
+Dim xd 'Used to count hw many times the DataArrival event fires
+
+Private Sub cmdBuildString_Click()
+    Dim N, M, I
+    N = InputBox("How many K do you want to send?", "Prepare data for output")
+    M = ""
+    For I = 1 To N
+        M = M & String(1022, "*") & vbCrLf ' makes 1024 bytes
+    Next
+    MsgBox "String of length " & Len(M) & " buffered.", vbOKOnly, "Data Prepared"
+    txtSend.Text = M
+End Sub
+
+Private Sub cmdClear_Click()
+    lstRecv.Clear
+    txtRecv.Text = ""
+End Sub
+
+Private Sub cmdConnect_Click()
+    
+    'After attempting a connection of any kind, we set the caption of this button to "Disconnect"
+    'Saves on screen real estate to have a multi-use button and prevents multiple connects
+    
+    If cmdConnect.Caption = "Disconnect" Then
+    
+        'note - the Close event only fires if the connection was closed on the other end
+        lstRecv.AddItem "Closing Connection, " & "State= " & GetState(W1)
+        W1.Close
+        
+        W1.LocalPort = 0 'this is is recommended practice for the VB version
+        
+        'reset all the buttons to normal state
+        cmdListen.Enabled = True
+        cmdConnect.Caption = "Connect to Server"
+        
+        Exit Sub ' Exit and don't try to re-establish a connection via the code below--we just closed it!
+        
+    End If
+    
+    ' If we don't already have a connection, let's try to make a new one
+    ' based on which protocol we're trying to use...
+    
+    ' If the protocol is TCP, then try to connect to a particular port
+    ' Possible errors we get back are --- (make list)
+
+    If optTCP Then
+        W1.Protocol = CInt(0)
+        W1.RemotePort = txtPort.Text ' had to remove VAL, but VB5 needed it
+        W1.RemoteHost = txtServer.Text 'check to see if this supports IP addresses
+        lstRecv.AddItem "Connecting to " & W1.RemoteHost & ":" & W1.RemotePort & ", " & "State= " & GetState(W1)
+        W1.Connect
+        
+        'modify UI to show we're
+        cmdListen.Enabled = False
+        cmdConnect.Caption = "Disconnect"
+    
+    'If the protocol is UDP, then we bind to a local port and listen to it
+    'We also have to set a  remote port to talk to, so we do that in the connect button
+    'NOTE: UDP is not an available option in the VBCE winsock control!
+    'Because we only put one port box on the form, we must query the user for it
+    
+    ElseIf optUDP Then
+        W1.Protocol = 1
+        W1.RemotePort = txtPort.Text ' Had to remove VAL
+        W1.RemoteHost = txtServer.Text
+        lstRecv.AddItem "Connecting to " & W1.RemoteHost & ":" & W1.RemotePort
+        cmdListen.Enabled = False
+        W1.Bind Val(InputBox("What port do you want to bind to?", "UDP Local Port Options"))
+        lstRecv.AddItem "Binding to Local Port: " & W1.LocalPort
+        cmdConnect.Caption = "Disconnect"
+        
+    'IF the protocol is set to IRDA then we set it up to connect to a service
+    'The information in the port box will be the service name
+    'The regular VB5 winsock does not have this functionality
+        
+    ElseIf optIRDA Then
+        W1.Protocol = 2 ' IRDA
+        W1.RemoteHost = txtServer.Text 'how does IRSQUIRT connect without specifying a host?
+        W1.ServiceName = txtPort.Text 'we set a service instead of a port
+            
+        'change the UI to show that we're a client
+        cmdListen.Enabled = False
+        cmdConnect.Caption = "Disconnect"
+        lstRecv.AddItem "Connecting to " & W1.RemoteHost & ":" & W1.ServiceName
+        W1.Connect
+        
+    
+    'Make sure we've covered all our bases
+    'The VB5 winsock control gives an error 380 if we try to use a bogus protocol number
+        
+    Else
+        MsgBox "Unknown Protocol Request"
+    End If
+
+End Sub
+
+Private Sub cmdErr_Click()
+    MsgBox Err.Description, vbExclamation, Err
+End Sub
+
+Private Sub cmdListen_Click()
+   
+    ' If the protocol is TCP, then we set up a server listening for a request
+    ' to connect to a particular port
+
+    If optTCP Then
+    
+        W1.Protocol = "0" ' I had to quote this because I was getting a winsock error 380: invailid prop value
+                         'shouldn't be a winsock error, should it? Didn't happen on MIPS, only sh3...
+                         ' is this a compiler error? Doesn't happen in emulator...
+                         
+        
+        W1.LocalPort = txtPort.Text
+        W1.Listen
+        lstRecv.AddItem "Listening at Port " & W1.LocalPort
+        
+        'change UI to show we're a server
+        cmdListen.Enabled = False
+        cmdConnect.Caption = "Disconnect"
+    
+    'If the protocol is UDP, then we bind to a local port and listen to it
+    'We also have to set a  remote port to talk to, so we do that in the connect button
+    'NOTE: UDP is not an available option in the VBCE winsock control!
+    'Because we only put one port box on the form, we must query the user for it
+
+    ElseIf optUDP Then
+        W1.Protocol = 1
+        W1.Bind txtPort.Text
+        lstRecv.AddItem "Binding to Local Port: " & W1.LocalPort
+        cmdListen.Enabled = False
+        cmdConnect.Caption = "Disconnect"
+        W1.RemoteHost = txtServer.Text
+        cmdListen.Enabled = False
+        W1.RemotePort = InputBox("What port do you want to connect to?" & vbCrLf & "You are bound to Local Port " & W1.LocalPort, "UDP Remote Port Options")
+        lstRecv.AddItem "Connecting to " & W1.RemoteHost & ":" & W1.RemotePort
+    
+    
+    'IF the protocol is set to IRDA then we set it up to connect to a service
+    'The information in the port box will be the service name
+    'The regular VB5 winsock does not have this functionality
+        
+    ElseIf optIRDA Then
+        W1.Protocol = "2"
+        W1.ServiceName = txtPort.Text
+        W1.Listen
+        cmdListen.Enabled = False
+        cmdConnect.Caption = "Disconnect"
+        lstRecv.AddItem "Listening for Service " & W1.ServiceName
+    
+        
+    'Make sure we've covered all our bases
+    'The VB5 winsock control gives an error 380 if we try to use a bogus protocol number
+        
+    Else
+        MsgBox "Unknown Protocol Request"
+    End If
+
+End Sub
+
+
+Private Sub cmdSend_Click()
+    W1.SendData txtSend.Text
+    lstRecv.AddItem "SendData done on " & Len(txtSend.Text) & " bytes"
+End Sub
+
+Private Sub cmdStatus_Click()
+
+    Dim M
+    M = M & "BytesReceived= " & W1.BytesReceived & vbCrLf
+    M = M & "LocalHostName= " & W1.LocalHostName & vbCrLf
+    M = M & "LocalIP= " & W1.LocalIP & vbCrLf
+    M = M & "LocalPort= " & W1.LocalPort & vbCrLf
+    M = M & "Protocol= " & W1.Protocol & vbCrLf
+    M = M & "RemoteHost= " & W1.RemoteHost & vbCrLf
+    M = M & "RemoteHostIP= " & W1.RemoteHostIP & vbCrLf
+    M = M & "RemotePort= " & W1.RemotePort & vbCrLf
+    M = M & "SocketHandle= " & W1.SocketHandle & vbCrLf
+    M = M & "State= " & GetState(W1) & vbCrLf
+    'M = M & "ServiceName = " & W1.ServiceName & vbCrLf
+    MsgBox M, vbInformation, "Winsock Control Status"
+End Sub
+
+Private Sub Command1_Click()
+    txtRecv.Text = ""
+End Sub
+
+Private Sub Command2_Click()
+    txtSend.Text = ""
+End Sub
+
+Private Sub Form_Load()
+    'resize forms and controls to maximize real-estate
+    frmWSock.Width = Screen.Width
+    frmWSock.Top = 0
+    frmWSock.Left = 0
+    lstRecv.Width = frmWSock.Width - lstRecv.Left
+    txtSend.Width = frmWSock.Width - txtSend.Left
+    txtRecv.Width = frmWSock.Width - txtRecv.Left
+End Sub
+
+Private Sub W1_Close()
+    lstRecv.AddItem "Close Confirmed: " & "State= " & GetState(W1)
+End Sub
+
+Private Sub W1_Connect()
+    lstRecv.AddItem "Connect Confirmed: " & "State= " & GetState(W1)
+End Sub
+
+'TCP Servers can receive a connection request while listening on a Socket
+'The requestID is an encoded version of the requesting socket's IP and port (or so rumor has it)
+'I don't know why the connection needs to be closed before it's accepted
+'In theory, you can use W2 to accept the connection and keep listening on W1
+'In theory, that is...
+
+Private Sub W1_ConnectionRequest()
+    'If W1.State <> 0 Then W1.Close   'Can't close because there is no request ID
+    lstRecv.AddItem "Connection Request: " & "State= " & GetState(W1)
+    W1.Accept
+    lstRecv.AddItem "Connection Accepted: " & "State= " & GetState(W1)
+End Sub
+
+Private Sub W1_DataArrival(ByVal bytesTotal)
+    xd = xd + 1 'counts the number of times the DataArrival event fires
+    'MsgBox "DataArrival" & sockdata
+    Dim sockdata, retstuff
+    W1.GetData sockdata
+    txtRecv.Text = txtRecv.Text & sockdata
+    lstRecv.AddItem xd & ": Received " & bytesTotal & " bytes"
+End Sub
+
+Function GetState(WS)
+    Select Case WS.State
+        Case 0
+             GetState = "Closed (0)"
+        Case 1
+             GetState = "Open (1)"
+        Case 2
+             GetState = "Listening (2)"
+        Case 3
+             GetState = "Connection Pending (3)"
+        Case 4
+             GetState = "Resolving Host (4)"
+        Case 5
+             GetState = "Host Resolved (5)"
+        Case 6
+             GetState = "Connecting (6)"
+        Case 7
+             GetState = "Connected (7)"
+        Case 8
+             GetState = "Closing (8)"
+        Case 9
+             GetState = "Error (9)"
+     End Select
+End Function
+
+Private Sub W1_Error(ByVal Number, ByVal Description)
+    lstRecv.AddItem "ERROR (" & Number & ") " & Description
+End Sub
+
+Private Sub W1_SendComplete()
+    lstRecv.AddItem "Send Complete"
+End Sub
+
+Private Sub W1_SendProgress(ByVal bytesSent, ByVal bytesRemaining)
+    lstRecv.AddItem "Progress: " & bytesSent & " sent, " & bytesRemaining & " to go"
+End Sub

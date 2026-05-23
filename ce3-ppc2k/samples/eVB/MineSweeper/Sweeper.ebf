@@ -1,0 +1,835 @@
+VERSION 5.00
+Object = "{532C2BF5-6B55-11D1-9AA5-00C04FAD5AEC}#1.0#0"; "MSCEGRID.DLL"
+Object = "{F7DEA2C9-BA8F-446E-A292-B4840F3BD661}#1.0#0"; "mscemenubar.dll"
+Object = "{338D5EA5-4BBD-11D1-9A7D-00C04FAD5AEC}#1.0#0"; "mscepicture.dll"
+Object = "{25C953A7-5464-11D1-A714-00AA0044064C}#1.0#0"; "MSCEFILE.DLL"
+Begin VB.Form frmSweeper 
+   Appearance      =   0  'Flat
+   BackColor       =   &H00808080&
+   Caption         =   "Mine Sweeper Game"
+   ClientHeight    =   4020
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   3600
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   4020
+   ScaleWidth      =   3600
+   Begin FILECTLCtl.File File1 
+      Left            =   540
+      Top             =   315
+      _cx             =   1000
+      _cy             =   1000
+   End
+   Begin MenuBarLib.MenuBar MenuBar 
+      Left            =   2475
+      Top             =   270
+      _cx             =   1455
+      _cy             =   1058
+      Enabled         =   -1  'True
+      NewButton       =   0   'False
+   End
+   Begin VBCE.Frame Frame1 
+      Height          =   465
+      Left            =   105
+      TabIndex        =   1
+      Top             =   3510
+      Width           =   3390
+      _cx             =   2000
+      _cy             =   2000
+      BackColor       =   0
+      BorderStyle     =   0
+      Caption         =   "Frame1"
+      Enabled         =   -1  'True
+      ForeColor       =   -2147483640
+      ClipControls    =   -1  'True
+      Begin PictureBoxCtl.PictureBox pboxFace 
+         Height          =   420
+         Left            =   1560
+         TabIndex        =   8
+         Top             =   15
+         Width           =   465
+         _cx             =   820
+         _cy             =   741
+         AutoSize        =   0   'False
+         BackColor       =   0
+         BorderStyle     =   0
+         DrawMode        =   13
+         DrawStyle       =   0
+         DrawWidth       =   1
+         FillColor       =   -2147483640
+         FillStyle       =   1
+         ForeColor       =   -2147483640
+         FontBold        =   -1  'True
+         FontItalic      =   0   'False
+         FontStrikethru  =   0   'False
+         FontUnderline   =   0   'False
+         FontName        =   ""
+         FontSize        =   10
+         FontTransparent =   -1  'True
+         Object.Height          =   28
+         Object.Width           =   31
+         Object.Left            =   104
+         Object.Top             =   1
+         Picture         =   ""
+         ScaleHeight     =   420
+         ScaleWidth      =   465
+         ScaleLeft       =   0
+         ScaleTop        =   0
+         ScaleMode       =   1
+         Enabled         =   -1  'True
+      End
+      Begin PictureBoxCtl.PictureBox pboxClock 
+         Height          =   240
+         Left            =   3015
+         TabIndex        =   6
+         Top             =   0
+         Width           =   375
+         _cx             =   661
+         _cy             =   423
+         AutoSize        =   0   'False
+         BackColor       =   0
+         BorderStyle     =   0
+         DrawMode        =   13
+         DrawStyle       =   0
+         DrawWidth       =   1
+         FillColor       =   -2147483640
+         FillStyle       =   1
+         ForeColor       =   -2147483640
+         FontBold        =   -1  'True
+         FontItalic      =   0   'False
+         FontStrikethru  =   0   'False
+         FontUnderline   =   0   'False
+         FontName        =   ""
+         FontSize        =   10
+         FontTransparent =   -1  'True
+         Object.Height          =   16
+         Object.Width           =   25
+         Object.Left            =   201
+         Object.Top             =   0
+         Picture         =   ""
+         ScaleHeight     =   240
+         ScaleWidth      =   375
+         ScaleLeft       =   0
+         ScaleTop        =   0
+         ScaleMode       =   1
+         Enabled         =   -1  'True
+      End
+      Begin PictureBoxCtl.PictureBox pboxFlag 
+         Height          =   240
+         Left            =   2430
+         TabIndex        =   7
+         Top             =   0
+         Width           =   330
+         _cx             =   582
+         _cy             =   423
+         AutoSize        =   0   'False
+         BackColor       =   0
+         BorderStyle     =   0
+         DrawMode        =   13
+         DrawStyle       =   0
+         DrawWidth       =   1
+         FillColor       =   -2147483640
+         FillStyle       =   1
+         ForeColor       =   -2147483640
+         FontBold        =   -1  'True
+         FontItalic      =   0   'False
+         FontStrikethru  =   0   'False
+         FontUnderline   =   0   'False
+         FontName        =   ""
+         FontSize        =   10
+         FontTransparent =   -1  'True
+         Object.Height          =   16
+         Object.Width           =   22
+         Object.Left            =   162
+         Object.Top             =   0
+         Picture         =   ""
+         ScaleHeight     =   240
+         ScaleWidth      =   330
+         ScaleLeft       =   0
+         ScaleTop        =   0
+         ScaleMode       =   1
+         Enabled         =   -1  'True
+      End
+      Begin VBCE.OptionButton radRight 
+         Height          =   195
+         Left            =   0
+         TabIndex        =   3
+         Top             =   260
+         Width           =   915
+         _cx             =   2143
+         _cy             =   873
+         BackColor       =   0
+         Caption         =   "Mark"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   65535
+         Alignment       =   0
+         Value           =   0   'False
+      End
+      Begin VBCE.OptionButton radLeft 
+         Height          =   195
+         Left            =   0
+         TabIndex        =   2
+         Top             =   10
+         Width           =   915
+         _cx             =   2143
+         _cy             =   873
+         BackColor       =   0
+         Caption         =   "Expose"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   65535
+         Alignment       =   0
+         Value           =   -1  'True
+      End
+      Begin VBCE.Label lblFlag 
+         Height          =   195
+         Left            =   2430
+         TabIndex        =   5
+         Top             =   255
+         Width           =   285
+         _cx             =   2500
+         _cy             =   500
+         AutoSize        =   0   'False
+         BackColor       =   0
+         BackStyle       =   1
+         BorderStyle     =   0
+         Caption         =   "30"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   65280
+         Alignment       =   0
+         UseMnemonic     =   -1  'True
+         WordWrap        =   0   'False
+      End
+      Begin VBCE.Label lblTime 
+         Height          =   195
+         Left            =   2700
+         TabIndex        =   4
+         Top             =   255
+         Width           =   690
+         _cx             =   2500
+         _cy             =   500
+         AutoSize        =   0   'False
+         BackColor       =   0
+         BackStyle       =   1
+         BorderStyle     =   0
+         Caption         =   "0 secs"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   65280
+         Alignment       =   1
+         UseMnemonic     =   -1  'True
+         WordWrap        =   0   'False
+      End
+   End
+   Begin GRIDLibCtl.GridCtrl gridGame 
+      Height          =   3420
+      Left            =   90
+      TabIndex        =   0
+      Top             =   45
+      Width           =   3420
+      _cx             =   6032
+      _cy             =   6032
+      BackColor       =   0
+      BackColorBkg    =   0
+      BackColorSel    =   8388608
+      Cols            =   14
+      FillStyle       =   0
+      FocusRect       =   0
+      ForeColor       =   12582912
+      ForeColorSel    =   16777215
+      GridColor       =   8421504
+      GridLines       =   1
+      GridLineWidth   =   1
+      HighLight       =   0
+      Redraw          =   -1  'True
+      RowHeightMin    =   0
+      Rows            =   14
+      ScrollBars      =   0
+      ScrollTrack     =   0   'False
+      SelectionMode   =   0
+      TextStyle       =   0
+      WordWrap        =   0   'False
+      Enabled         =   -1  'True
+   End
+   Begin VBCE.Timer TimerGame 
+      Left            =   1215
+      Top             =   1755
+      _cx             =   847
+      _cy             =   847
+      Enabled         =   -1  'True
+      Interval        =   0
+   End
+End
+Attribute VB_Name = "frmSweeper"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Option Explicit
+
+Private Sub Form_Load()
+    Dim myMenu
+    Set myMenu = MenuBar.Controls.AddMenu("Options")
+    
+    myMenu.Items.Add , , "New Game"
+    myMenu.Items.Add , , "Mark (?)"
+    myMenu.Items(2).Checked = True
+    myMenu.Items.Add , , "Best Time..."
+    myMenu.Items.Add , , ""
+    myMenu.Items(4).Style = mbrMenuSeparator
+    myMenu.Items.Add , , "Pause"
+    myMenu.Items.Add , , "Exit"
+    
+    gridGame.ColWidth(-1) = gridGame.Width / MAX_SIZE
+    ResetGame
+    
+    Set myMenu = Nothing
+End Sub
+
+
+Private Sub DrawBoard()
+    Dim rowIndex, colIndex
+    
+    'Clear previous content
+    gridGame.Clear
+    
+    For rowIndex = 1 To MAX_SIZE
+        For colIndex = 1 To MAX_SIZE
+            SetCellFocus rowIndex, colIndex
+            gridGame.CellBackColor = UNEXPOSED_BITMAP
+            gridGame.CellAlignment = flexAlignCenterCenter
+            gridGame.CellFontBold = True
+        Next
+    Next
+End Sub
+
+
+Private Sub LeftButtonClick()
+
+    Dim rowIndex, colIndex
+    Dim cellState, cellValue
+
+    If (gameStatus = GAME_INPLAY) Then
+
+        If (elapsedTime = 0) Then
+            TimerGame.Interval = 1000
+        End If
+
+        'Get row and column index
+        GetCell rowIndex, colIndex
+
+        cellState = gameState(rowIndex, colIndex)
+        cellValue = gameValue(rowIndex, colIndex)
+
+        If (cellState = UNEXPOSED) Or (cellState = MARKED) Then
+
+            'Keep the row and column index of the exposed mine cell
+            If (cellValue = MINE) Then
+                rowIndexExposed = rowIndex
+                colIndexExposed = colIndex
+            End If
+
+            'Expose cell
+            ExposeCell rowIndex, colIndex
+
+            'Game over - you lose
+            If (cellValue = MINE) Then
+                'Game over
+                gameStatus = GAME_LOSE
+
+                'Expose all mine cells
+                TimerGame.Interval = 0
+                ExposeAll
+                
+                'Show sadly face
+                pboxFace.Picture = AppPath & SADLYFACE_BMP
+                
+            'Game over - all non-mine cells were exposed - you win
+            ElseIf (GAME_WIN = GetGameStatus) Then
+
+                'Mark all remain mine cells with the flags
+                TimerGame.Interval = 0
+                MarkAll
+                
+                'Show smileyFace face
+                pboxFace.Picture = AppPath & SMILEYFACE_BMP
+                
+                'Update best record if needed
+                UpdateBestRecord File1
+
+            End If
+
+        End If
+
+    End If
+
+End Sub
+
+
+Private Sub RightButtonClick()
+    Dim rowIndex, colIndex
+
+    If (gameStatus = GAME_INPLAY) Then
+        'Get row and column index
+        GetCell rowIndex, colIndex
+
+        'Mark cell
+        MarkCell rowIndex, colIndex
+    End If
+
+End Sub
+
+
+Private Sub GetCell(rowIndex, colIndex)
+    rowIndex = gridGame.RowSel + 1
+    colIndex = gridGame.ColSel + 1
+End Sub
+
+
+Private Sub ExposeCell(rowIndex, colIndex)
+
+    Dim cellState
+    cellState = gameState(rowIndex, colIndex)
+
+    'Set cell state to EXPOSED
+    If (((cellState = UNEXPOSED) Or (cellState = MARKED)) And _
+        (Not IsOutOfBound(rowIndex, colIndex))) Then
+
+        'Set focus to the grid cell
+        'SetCellFocus rowIndex, colIndex
+
+        gameState(rowIndex, colIndex) = EXPOSED
+
+        'Display bitmap
+        DisplayBitMap rowIndex, colIndex
+
+        If gameValue(rowIndex, colIndex) = BLANK Then SelfExpose rowIndex, colIndex
+
+    End If
+
+End Sub
+
+
+Private Sub SelfExpose(rowIndex, colIndex)
+    Dim i, j
+
+    For i = rowIndex - 1 To rowIndex + 1
+        For j = colIndex - 1 To colIndex + 1
+            ExposeCell i, j
+        Next
+    Next
+
+End Sub
+
+
+Private Sub ExposeAll()
+
+    Dim rowIndex, colIndex, cellState
+    button = LEFT_BUTTON
+    
+    For rowIndex = 1 To MAX_SIZE
+
+        For colIndex = 1 To MAX_SIZE
+
+            cellState = gameState(rowIndex, colIndex)
+
+            If (cellState <> EXPOSED) Then
+
+                If (gameValue(rowIndex, colIndex) = MINE) Then
+
+                    'Expose all mine cells if they were UNEXPOSED or MARKED
+                    If (cellState = UNEXPOSED) Or (cellState = MARKED) Then
+                        gameState(rowIndex, colIndex) = EXPOSED
+                        DisplayBitMap rowIndex, colIndex
+                    End If
+                Else
+                    'Expose all non-mine cells which were wrongly marked
+                    If (cellState = MARKED) Or (cellState = FLAGED) Then
+                        gameState(rowIndex, colIndex) = BAD_MARKED
+                        DisplayBitMap rowIndex, colIndex
+                    End If
+
+                End If
+
+            End If
+
+        Next
+
+    Next
+
+End Sub
+
+
+Private Sub MarkCell(rowIndex, colIndex)
+
+    Dim cellState, newCellState
+    cellState = gameState(rowIndex, colIndex)
+
+    'Set cell state to either FLAG or MARKED
+    If (cellState <> EXPOSED) And (Not IsOutOfBound(rowIndex, colIndex)) Then
+
+        If allowQuestion Then
+
+            Select Case cellState
+                Case UNEXPOSED:
+                    newCellState = FLAGED
+                    flagCount = flagCount - 1
+
+                Case FLAGED:
+                    newCellState = MARKED
+                    flagCount = flagCount + 1
+
+                Case MARKED:
+                    newCellState = UNEXPOSED
+            End Select
+
+        Else
+
+            Select Case cellState
+                Case UNEXPOSED:
+                    newCellState = FLAGED
+                    flagCount = flagCount - 1
+
+                Case Else:
+                    newCellState = UNEXPOSED
+                    flagCount = flagCount + 1
+            End Select
+
+        End If
+
+        gameState(rowIndex, colIndex) = newCellState
+
+        'Display bitmap
+        DisplayBitMap rowIndex, colIndex
+
+        'Update flag count
+        lblFlag.Caption = CStr(flagCount)
+        
+    End If
+
+End Sub
+
+
+Private Sub MarkAll()
+
+    Dim rowIndex, colIndex
+
+    For rowIndex = 1 To MAX_SIZE
+
+        For colIndex = 1 To MAX_SIZE
+            If (gameValue(rowIndex, colIndex) = MINE) And _
+               (gameState(rowIndex, colIndex) = UNEXPOSED) Then
+                gameState(rowIndex, colIndex) = FLAGED
+
+                'Set cell forecolor to yellow
+                'SetCellFocus rowIndex, colIndex
+                'gridGame.CellForeColor = vbYellow
+                
+                'Display a flag bitmap for all remaining unexposed mine cells
+                button = RIGHT_BUTTON
+                DisplayBitMap rowIndex, colIndex
+
+            End If
+        Next
+
+    Next
+
+    'No more mine left to flag
+    flagCount = 0
+    
+    'Update flag count
+    lblFlag.Caption = CStr(flagCount)
+    
+End Sub
+
+
+Private Sub DisplayBitMap(rowIndex, colIndex)
+
+    Dim myBitmap
+    
+    'Set focus to the grid's cell
+    SetCellFocus rowIndex, colIndex
+                
+    'Select correct bitmap
+    If (button = LEFT_BUTTON) Then
+    
+        If gameStatus = GAME_LOSE Then
+            gridGame.CellBackColor = ORANGE
+            
+            If gameState(rowIndex, colIndex) = BAD_MARKED Then
+                gridGame.CellForeColor = vbYellow
+            ElseIf gameValue(rowIndex, colIndex) = MINE Then
+                gridGame.CellForeColor = vbBlue
+            End If
+            
+        Else
+            gridGame.CellBackColor = BLANK_BITMAP
+            
+            If gameStatus = GAME_WIN Then
+                gridGame.CellForeColor = vbYellow
+            Else
+                gridGame.CellForeColor = vbBlue
+            End If
+            
+        End If
+        
+        myBitmap = LeftButtonClickSelectBitmap(rowIndex, colIndex)
+    Else
+        gridGame.CellForeColor = vbYellow
+        myBitmap = RightButtonClickSelectBitmap(rowIndex, colIndex)
+    End If
+
+    gridGame.Text = myBitmap
+
+End Sub
+
+
+Private Function LeftButtonClickSelectBitmap(rowIndex, colIndex)
+
+    Dim cellState, cellValue
+
+    cellState = gameState(rowIndex, colIndex)
+    cellValue = gameValue(rowIndex, colIndex)
+
+    If (cellValue = MINE) And (cellState = EXPOSED) Then
+
+        If (rowIndex = rowIndexExposed) And (colIndex = colIndexExposed) Then
+            gridGame.CellBackColor = vbRed
+            LeftButtonClickSelectBitmap = EXPOSED_MINE_BITMAP
+        Else
+            LeftButtonClickSelectBitmap = MINE_BITMAP
+        End If
+
+    ElseIf (cellValue <> MINE) And (cellState = BAD_MARKED) Then
+        LeftButtonClickSelectBitmap = BAD_MINE_BITMAP
+
+    ElseIf (cellValue <> BLANK) Then
+
+            Select Case cellValue
+
+            Case 1: LeftButtonClickSelectBitmap = ONE_BITMAP
+
+            Case 2: LeftButtonClickSelectBitmap = TWO_BITMAP
+
+            Case 3: LeftButtonClickSelectBitmap = THREE_BITMAP
+
+            Case 4: LeftButtonClickSelectBitmap = FOUR_BITMAP
+
+            Case 5: LeftButtonClickSelectBitmap = FIVE_BITMAP
+
+            Case 6: LeftButtonClickSelectBitmap = SIX_BITMAP
+
+            Case 7: LeftButtonClickSelectBitmap = SEVEN_BITMAP
+
+            Case 8: LeftButtonClickSelectBitmap = EIGHT_BITMAP
+
+        End Select
+
+    Else
+        LeftButtonClickSelectBitmap = EMPTY_BITMAP
+    End If
+
+End Function
+
+
+Function RightButtonClickSelectBitmap(rowIndex, colIndex)
+
+    Dim cellState
+    cellState = gameState(rowIndex, colIndex)
+
+    If (cellState = FLAGED) Then
+        RightButtonClickSelectBitmap = FLAG_BITMAP
+
+    ElseIf (cellState = MARKED) Then
+        RightButtonClickSelectBitmap = MARK_BITMAP
+
+    Else
+        RightButtonClickSelectBitmap = EMPTY_BITMAP
+    End If
+
+End Function
+
+
+
+Private Sub SetCellFocus(rowIndex, colIndex)
+    'Set focus to that cell
+    gridGame.Row = rowIndex - 1
+    gridGame.RowSel = rowIndex - 1
+    gridGame.Col = colIndex - 1
+    gridGame.ColSel = colIndex - 1
+End Sub
+
+
+Private Sub ResetGame()
+    
+    radLeft.Value = True
+    lblFlag.Caption = CStr(MAX_MINE)
+    lblTime.Caption = "0 secs"
+    pboxFlag.Picture = AppPath & FLAG_BMP
+    pboxClock.Picture = AppPath & CLOCK1_BMP
+    pboxFace.Picture = AppPath & SMILEYFACE_BMP
+    
+    InitializeGame
+    DrawBoard
+    
+End Sub
+
+Private Sub Frame1_MouseDown(ByVal button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
+
+End Sub
+
+'-------------------------------- WINDOWS EVENTS -----------------------------
+
+
+Private Sub gridGame_Click()
+        
+    If gameStatus = GAME_INPLAY Then
+        Dim cellState
+        
+        If radLeft.Value Then button = LEFT_BUTTON Else button = RIGHT_BUTTON
+            
+        If button = LEFT_BUTTON Then
+            Dim rowIndex, colIndex
+            
+            'Do not change cell forecolor if cell state is FLAGED
+            GetCell rowIndex, colIndex
+            cellState = gameState(rowIndex, colIndex)
+            
+            If cellState <> FLAGED Then
+                'gridGame.CellForeColor = vbBlue
+                LeftButtonClick
+            End If
+            
+        Else
+            'If cellState <> EXPOSED Then gridGame.CellForeColor = vbYellow
+            RightButtonClick
+        End If
+    End If
+    
+End Sub
+
+
+Private Sub pboxFace_Click()
+
+End Sub
+
+Private Sub radLeft_Click()
+    SelectButton
+End Sub
+
+
+Private Sub radRight_Click()
+    SelectButton
+End Sub
+
+
+Private Sub SelectButton()
+    If radLeft.Value Then button = LEFT_BUTTON Else button = RIGHT_BUTTON
+End Sub
+
+
+Private Sub TimerGame_Timer()
+
+    elapsedTime = elapsedTime + 1
+    lblTime.Caption = CStr(elapsedTime) & " secs"
+    
+    'Show worried faces
+    If elapsedTime Mod 2 Then pboxFace.Picture = AppPath & WORRIEDFACE1_BMP Else pboxFace.Picture = AppPath & WORRIEDFACE2_BMP
+    
+    'Show diffrent clock bitmap
+    Select Case (elapsedTime Mod 4)
+        Case 0: pboxClock.Picture = AppPath & CLOCK1_BMP
+        Case 1: pboxClock.Picture = AppPath & CLOCK2_BMP
+        Case 2: pboxClock.Picture = AppPath & CLOCK3_BMP
+        Case 3: pboxClock.Picture = AppPath & CLOCK4_BMP
+    End Select
+    
+    If (elapsedTime = MAX_TIME) Then
+        gameStatus = GAME_LOSE
+        ExposeAll
+        pboxFace.Picture = AppPath & SADLYFACE_BMP
+        
+        TimerGame.Interval = 0
+        MsgBox "Time was up! You've lost", vbOK + vbInformation, "Mine Sweeper Game"
+    End If
+
+End Sub
+
+
+Private Sub MenuBar_MenuClick(ByVal Item As MenuBarLib.Item)
+    Select Case Item.Index
+    
+        'Start new game
+        Case 1
+            MenuBar.Controls.Clear
+            Form_Load
+        
+        'Allow question mark or not
+        Case 2
+            allowQuestion = Not allowQuestion
+            Item.Checked = Not Item.Checked
+            
+        'Show best player name
+        Case 3
+            frmBestTime.Show
+            
+        'Pause game
+        Case 5
+            Item.Checked = Not Item.Checked
+            
+            If Item.Checked Then
+                TimerGame.Interval = 0
+                gameStatus = GAME_PAUSE
+            Else
+                TimerGame.Interval = 1000
+                gameStatus = GAME_INPLAY
+            End If
+            
+        'Exit the game
+        Case Else
+            App.End
+                    
+    End Select
+End Sub

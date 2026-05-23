@@ -1,0 +1,29 @@
+; CLW file contains information for the MFC ClassWizard
+
+[General Info]
+Version=1
+LastClass=CMainWindow
+LastTemplate=CDialog
+NewFileInclude1=#include "stdafx.h"
+NewFileInclude2=#include "generic.h"
+LastPage=0
+
+ClassCount=1
+Class1=CMainWindow
+
+ResourceCount=1
+Resource1=IDR_MAINFRAME
+
+[CLS:CMainWindow]
+Type=0
+BaseClass=CFrameWnd
+HeaderFile=generic.cpp
+ImplementationFile=generic.cpp
+LastObject=CMainWindow
+
+[MNU:IDR_MAINFRAME]
+Type=1
+Class=?
+Command1=ID_FILE_EXIT
+CommandCount=1
+

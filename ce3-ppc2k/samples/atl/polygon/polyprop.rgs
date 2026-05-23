@@ -1,0 +1,21 @@
+HKCR
+{
+	PolyProp.PolyProp.1 = s 'PolyProp Class'
+	{
+		CLSID = s '{A3121F30-516B-11D0-B98C-000000000000}'
+	}
+	PolyProp.PolyProp = s 'PolyProp Class'
+	{
+		CurVer = s 'PolyProp.PolyProp.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A3121F30-516B-11D0-B98C-000000000000} = s 'PolyProp Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

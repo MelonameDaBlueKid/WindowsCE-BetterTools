@@ -1,0 +1,25 @@
+<HTML>
+<HEAD><TITLE>ActiveX Sample</TITLE></HEAD>
+<BODY>
+<OBJECT
+    ID="AXSample"
+    CLASSID="clsid:546E636A-DD23-4E22-A6F7-07AD4CB96642"
+    WIDTH=100
+    HEIGHT=100
+>
+<PARAM NAME="FillColor" VALUE="0">
+</OBJECT>
+
+<SCRIPT LANGUAGE="JScript">
+function fillColorChange()
+{
+    AXSample.FillColor = 32000;
+}
+</SCRIPT>
+
+<FORM>
+<INPUT TYPE="BUTTON" VALUE="Change Fill Color" ONCLICK="fillColorChange()">
+<BR>
+</FORM>
+</BODY>
+</HTML>

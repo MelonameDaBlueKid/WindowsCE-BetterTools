@@ -1,0 +1,319 @@
+VERSION 5.00
+Object = "{25C953A7-5464-11D1-A714-00AA0044064C}#1.0#0"; "MSCEFILE.DLL"
+Object = "{A32A88B3-817C-11D1-A762-00AA0044064C}#1.0#0"; "mscecomdlg.dll"
+Object = "{BE67ABF5-0137-11D2-9B8A-00C04FAD5AEC}#1.0#0"; "mscecommandbar.dll"
+Object = "{E491F001-98EC-11D1-9B3D-00C04FAD5AEC}#1.0#0"; "msceimagelist.dll"
+Begin VB.Form frmCEPad 
+   BorderStyle     =   0  'None
+   Caption         =   "CEPad"
+   ClientHeight    =   2820
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   7080
+   ScaleHeight     =   2820
+   ScaleWidth      =   7080
+   ShowInTaskbar   =   0   'False
+   WindowState     =   2  'Maximized
+   Begin CEImageListCtl.ImageList imgList 
+      Left            =   3360
+      Top             =   0
+      _cx             =   990
+      _cy             =   990
+      ImageWidth      =   15
+      ImageHeight     =   15
+   End
+   Begin FILECTLCtl.File File 
+      Left            =   2040
+      Top             =   0
+      _cx             =   1000
+      _cy             =   1000
+   End
+   Begin CEComDlgCtl.CommonDialog ComDlg 
+      Left            =   2760
+      Top             =   0
+      _cx             =   847
+      _cy             =   847
+      CancelError     =   0   'False
+      Color           =   0
+      DefaultExt      =   ""
+      DialogTitle     =   ""
+      FileName        =   ""
+      Filter          =   ""
+      FilterIndex     =   0
+      Flags           =   0
+      HelpCommand     =   0
+      HelpContext     =   ""
+      HelpFile        =   ""
+      InitDir         =   ""
+      MaxFileSize     =   256
+      FontBold        =   0   'False
+      FontItalic      =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontUnderline   =   0   'False
+      Max             =   0
+      Min             =   0
+      FontStrikethru  =   0   'False
+   End
+   Begin CommandbarLib.CommandBar cmdBar 
+      Height          =   345
+      Left            =   0
+      TabIndex        =   0
+      Top             =   0
+      Width           =   1935
+      _cx             =   5000
+      _cy             =   5080
+      Enabled         =   -1  'True
+      OKButton        =   0   'False
+      HelpButton      =   0   'False
+      CloseButton     =   -1  'True
+   End
+   Begin VBCE.TextBox txtData 
+      Height          =   2175
+      Left            =   0
+      TabIndex        =   1
+      Top             =   600
+      Width           =   6930
+      _cx             =   2175
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   -2147483643
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Text            =   ""
+      Alignment       =   0
+      HideSelection   =   -1  'True
+      Locked          =   0   'False
+      MaxLength       =   0
+      MultiLine       =   -1  'True
+      PasswordChar    =   ""
+      ScrollBars      =   2
+   End
+End
+Attribute VB_Name = "frmCEPad"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'********************************************************************************
+'*
+'*  CEPad - Main codebase handling initializing CommandBar and acting on
+'*          CommandBar commands
+'*
+'*  Copyright (c) 1998 Microsoft Corporation
+
+Option Explicit
+
+'VARIABLES
+Dim cmdSearch As CommandBarComboBox
+Dim sCurrentFilename As String
+
+Private Sub Form_Load()
+  ScreenSizeChange
+  InitCommandBar
+End Sub
+
+Private Sub cmdBar_MenuClick(ByVal Item As CommandbarLib.Item)
+  Dim sTempFilename
+
+  Select Case Item.Key
+  Case keySave
+    sTempFilename = GetFileName(False)
+    If Len(sTempFilename) <> 0 Then
+      sCurrentFilename = sTempFilename
+      WriteFile sCurrentFilename
+    End If
+  Case keyOpen
+    sTempFilename = GetFileName(True)
+    If Len(sTempFilename) <> 0 Then
+      sCurrentFilename = sTempFilename
+      ReadFile sCurrentFilename
+    End If
+  Case keySetFont
+    SetFont
+  Case keyAbout
+    CenterForm frmAbout, Me
+    frmAbout.Show
+  Case keyExit
+    CloseApp
+  End Select
+End Sub
+
+Private Function FindString(sSearch As String) As Boolean
+  FindString = False
+  If Len(sSearch) = 0 Then
+    MsgBox LoadResString(SEARCH_MSG)
+    Exit Function
+  End If
+  
+  Dim nPos As Integer
+  Dim nStart As Integer
+  
+  nStart = txtData.SelStart + 2
+  If nStart = 2 Then nStart = 1
+  
+  nPos = InStr(nStart, txtData.Text, sSearch, vbTextCompare)
+  If nPos = 0 Then
+    If nStart <> 1 Then
+      txtData.SelStart = 0
+      FindString = FindString(sSearch)
+    Else
+      MsgBox ReplaceString(LoadResString(SEARCH_PHRASE), "<SearchPhrase>", sSearch)
+    End If
+    Exit Function
+  End If
+  
+  txtData.SelStart = nPos - 1
+  txtData.SelLength = Len(sSearch)
+  txtData.SetFocus
+  
+  FindString = True
+End Function
+
+Private Sub cmdBar_ButtonClick(ByVal Button As CommandbarLib.CommandBarButton)
+  If FindString(cmdSearch.Text) Then
+    cmdSearch.AddItem cmdSearch.Text, 0
+    If cmdSearch.ListCount = 6 Then cmdSearch.RemoveItem 5
+  End If
+End Sub
+
+Private Sub cmdBar_ComboBoxClick(ByVal ComboBox As CommandbarLib.CommandBarComboBox)
+  FindString cmdSearch.List(cmdSearch.ListIndex)
+End Sub
+
+
+Sub InitCommandBar()
+  Dim mnuMain As CommandbarLib.CommandBarMenuBar
+  Dim mnuFile As CommandbarLib.Item
+  Dim mnuEdit As CommandbarLib.Item
+  Dim mnuSearch As CommandbarLib.Item
+  
+  Dim cmdBtn As CommandBarButton
+  
+  imgList.Add App.Path & "search.bmp"
+  
+  cmdBar.ImageList = imgList.hImageList
+  
+  Set mnuMain = cmdBar.Controls.Add(cbrMenuBar, "MainMenu")
+  'add File menu items
+  Set mnuFile = mnuMain.Items.Add(1, "File", LoadResString(MENU_FILE))
+  mnuFile.SubItems.Add , keyOpen, LoadResString(MENU_OPEN)
+  mnuFile.SubItems.Add , keySave, LoadResString(MENU_SAVE)
+  mnuFile.SubItems.Add , "", "", cbrMenuSeparator
+  mnuFile.SubItems.Add , keyAbout, LoadResString(MENU_ABOUT)
+  mnuFile.SubItems.Add , "", "", cbrMenuSeparator
+  mnuFile.SubItems.Add , keyExit, LoadResString(MENU_EXIT)
+  
+  'add Edit menu items
+  Set mnuEdit = mnuMain.Items.Add(2, "Edit", LoadResString(MENU_EDIT))
+  mnuEdit.SubItems.Add , keySetFont, LoadResString(MENU_SETFONT)
+  
+  Set cmdBtn = cmdBar.Controls.Add(cbrButton)
+  cmdBtn.Style = cbrSeparator
+      
+  Set cmdSearch = cmdBar.Controls.Add(cbrComboBox)
+  cmdSearch.Width = 4000
+          
+  Set cmdBtn = cmdBar.Controls.Add(cbrButton)
+  cmdBtn.Style = cbrSeparator
+  
+  Set cmdBtn = cmdBar.Controls.Add(cbrButton)
+  cmdBtn.Image = 0
+End Sub
+
+Sub ScreenSizeChange()
+  cmdBar.Left = 0
+  cmdBar.Top = 0
+  cmdBar.Width = Me.Width
+  
+  txtData.Left = 0
+  txtData.Top = cmdBar.Height
+  txtData.Height = Me.Height - cmdBar.Height
+  txtData.Width = Me.Width
+End Sub
+
+Private Sub CenterForm(frmCenter As Form, frmParent As Form)
+  Dim nLeft, nTop
+  
+  nLeft = (frmParent.Width - frmCenter.Width) / 2
+  nTop = (frmParent.Height - frmCenter.Height) / 2
+  
+  If nLeft < 0 Then nLeft = 0
+  If nTop < 0 Then nTop = 0
+  
+  frmCenter.Left = nLeft
+  frmCenter.Top = nTop
+End Sub
+
+Sub CloseApp()
+    App.End
+End Sub
+
+Sub SetFont()
+  ComDlg.FontBold = txtData.FontBold
+  ComDlg.FontItalic = txtData.FontItalic
+  ComDlg.FontName = txtData.FontName
+  ComDlg.FontSize = txtData.FontSize
+  ComDlg.FontStrikethru = txtData.FontStrikethru
+  ComDlg.FontUnderline = txtData.FontUnderline
+  ComDlg.Color = txtData.ForeColor
+  
+  ComDlg.CancelError = True
+  On Error Resume Next
+  ComDlg.ShowFont
+  If Err = 0 Then
+    txtData.FontBold = ComDlg.FontBold
+    txtData.FontItalic = ComDlg.FontItalic
+    txtData.FontName = ComDlg.FontName
+    txtData.FontSize = ComDlg.FontSize
+    txtData.FontStrikethru = ComDlg.FontStrikethru
+    txtData.FontUnderline = ComDlg.FontUnderline
+    txtData.ForeColor = ComDlg.Color
+  End If
+End Sub
+
+Sub ReadFile(strFileName As String)
+  Dim strBuffer As String
+  
+  File.Open strFileName, fsModeInput, fsAccessRead, fsLockRead
+  If Not File.EOF Then
+    strBuffer = File.Input(File.LOF)
+  End If
+  txtData.Text = strBuffer
+  File.Close
+End Sub
+
+Sub WriteFile(strFileName As String)
+  File.Open strFileName, fsModeOutput, fsAccessWrite, fsLockReadWrite
+  File.LinePrint txtData.Text
+  File.Close
+End Sub
+
+Function GetFileName(bOpen As Boolean) As String
+  ComDlg.DefaultExt = "txt"
+  ComDlg.Filter = "Text (*.txt)|*.txt|All (*.*)|*.*"
+  If Not bOpen Then ComDlg.FileName = sCurrentFilename
+  ComDlg.CancelError = True
+  
+  On Error Resume Next
+  If bOpen Then
+    ComDlg.ShowOpen
+  Else
+    ComDlg.ShowSave
+  End If
+  
+  If Err = 0 Then 'picked a file name
+    GetFileName = ComDlg.FileName
+  End If
+  
+End Function

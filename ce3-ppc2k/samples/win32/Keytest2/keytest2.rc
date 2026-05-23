@@ -1,0 +1,165 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON    DISCARDABLE     "keytest2.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MAIN_MENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDM_MAIN_MENU, 1,
+    I_IMAGENONE, IDM_MAIN_MENUITEM1, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MAIN_MENUITEM1, 0, 0,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        POPUP "Show"
+        BEGIN
+            MENUITEM "WM_KEYDOWN",                  ID_FILE_SHOW_WMKEYDOWN
+            MENUITEM "WM_KEYUP",                    ID_FILE_SHOW_WMKEYUP
+            MENUITEM "WM_CHAR",                     ID_FILE_SHOW_WMCHAR
+            MENUITEM "WM_MOUSEMOVE",                ID_FILE_SHOW_WMMOUSEMOVE
+            MENUITEM "WM_LBUTTONDOWN",              ID_FILE_SHOW_WMLBUTTONDOWN
+
+            MENUITEM "WM_LBUTTONDBLCLK",            ID_FILE_SHOW_WMLBUTTONDBLCLK
+
+            MENUITEM "WM_LBUTTONUP",                ID_FILE_SHOW_WMLBUTTONUP
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 110, 55
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "About keytest2"
+BEGIN
+    ICON            IDI_ICON,IDC_STATIC,11,17,20,20
+    LTEXT           "keytest2 Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999",IDC_STATIC,40,25,119,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 56
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CLASSNAME           "keytest2"
+    IDS_HELLO               "Hello World!"
+    IDC_KEYTEST2            "KEYTEST2"
+    IDS_WINDOWNAME          "keytest2"
+    IDS_APPNAME             "keytest2.exe"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAIN_MENUITEM1      "File"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

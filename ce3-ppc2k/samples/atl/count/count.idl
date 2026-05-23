@@ -1,0 +1,71 @@
+// NOTE:  ATL-BASED CONTROLS ARE ONLY SUPPORTED ON WINDOWS CE 2.0 OR LATER
+
+#if defined(_WIN32_WCE) && _WIN32_WCE < 200
+#error "This sample can only be compiled for Windows CE 2.0 or later."
+#endif
+
+#include <olectl.h>
+// Count.idl : IDL source for Count.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Count.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	
+
+	[
+		object,
+		uuid(30533700-41C6-11D1-9307-00600820B4FF),
+		dual,
+		helpstring("ICounter Interface"),
+		pointer_default(unique)
+	]
+	interface ICounter : IDispatch
+	{
+		[id(1), helpstring("method StartCounting")] HRESULT StartCounting();
+		[id(2), helpstring("method SetMaxCounter")] HRESULT SetMaxCounter([in]int nMax);
+		[id(3), helpstring("method GetInfoFromCounter")] HRESULT GetInfoFromCounter([in]BSTR pInfo);
+	};
+	[
+		object,
+		uuid(30533702-41C6-11D1-9307-00600820B4FF),
+		dual,
+		helpstring("IObject1 Interface"),
+		pointer_default(unique)
+	]
+	interface IObject1 : IDispatch
+	{
+		[id(1), helpstring("method SetMax")] HRESULT SetMax([in]int nMax);
+		[id(2), helpstring("method Start")] HRESULT Start();
+		[id(3), helpstring("method Initialize")] HRESULT Initialize([in]DWORD pInterface);
+	};
+[
+	uuid(1113B1A5-41BA-11D1-9307-00600820B4FF),
+	version(1.0),
+	helpstring("Count 1.0 Type Library")
+]
+library COUNTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(30533701-41C6-11D1-9307-00600820B4FF),
+		helpstring("Counter Class")
+	]
+	coclass Counter
+	{
+		[default] interface ICounter;
+	};
+	[
+		uuid(30533703-41C6-11D1-9307-00600820B4FF),
+		helpstring("Object1 Class")
+	]
+	coclass Object1
+	{
+		[default] interface IObject1;
+	};
+};

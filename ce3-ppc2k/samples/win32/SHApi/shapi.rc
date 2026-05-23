@@ -1,0 +1,213 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SHAPI               ICON    DISCARDABLE     "shapi.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 110, 55
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "About shapi"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDI_SHAPI,IDC_STATIC,11,17,20,20
+    LTEXT           "shapi Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999",IDC_STATIC,40,25,119,8
+END
+
+IDD_TESTDIALOG DIALOG DISCARDABLE  0, 0, 134, 124
+STYLE DS_MODALFRAME | WS_POPUP
+EXSTYLE WS_EX_CAPTIONOKBTN
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDI_SHAPI,IDC_STATIC,54,60,21,20
+    CTEXT           "SHApi Test Dialog",IDC_STATIC,32,36,64,14,SS_NOPREFIX
+    LTEXT           "OrigTop",IDC_STATIC,0,0,44,12,WS_BORDER
+    RTEXT           "OrigBottom",IDC_STATIC,90,112,44,12,WS_BORDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 56
+        TOPMARGIN, 7
+    END
+
+    IDD_TESTDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 80
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MAIN_MENU MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "Shell API"
+    BEGIN
+        MENUITEM "SHGetAutoRunPath",            ID_SHAPI_SHGETAUTORUNPATH
+        MENUITEM "SHInitDialog",                ID_SHAPI_SHINITDIALOG
+        POPUP "SHInitDialog Flags"
+        BEGIN
+            MENUITEM "SHIDIF_DONEBUTTON",           ID_SHAPI_SHINITDIALOGFLAGS_SHIDIFDONEBUTTON
+
+            MENUITEM "SHIDIF_SIZEDLG",              ID_SHAPI_SHINITDIALOGFLAGS_SHIDIFSIZEDLG
+
+            MENUITEM "SHIDIF_SIZEDLGFULLSCREEN",    ID_SHAPI_SHINITDIALOGFLAGS_SHIDIFSIZEDLGFULLSCREEN
+
+            MENUITEM "SHIDIF_SIPDOWN",              ID_SHAPI_SHINITDIALOGFLAGS_SHIDIFSIPDOWN
+
+            MENUITEM "SHIDIF_FULLSCREENNOMENUBAR",  ID_SHAPI_SHINITDIALOGFLAGS_SHIDIFFULLSCREENNOMENUBAR
+
+        END
+        MENUITEM SEPARATOR
+        POPUP "SHFullScreen"
+        BEGIN
+            MENUITEM "SHFS_SHOWTASKBAR",            ID_SHAPI_SHFULLSCREEN_SHFSSHOWTASKBAR
+
+            MENUITEM "SHFS_HIDETASKBAR",            ID_SHAPI_SHFULLSCREEN_SHFSHIDETASKBAR
+
+            MENUITEM "SHFS_SHOWSIPBUTTON",          ID_SHAPI_SHFULLSCREEN_SHFSSHOWSIPBUTTON
+
+            MENUITEM "SHFS_HIDESIPBUTTON",          ID_SHAPI_SHFULLSCREEN_SHFSHIDESIPBUTTON
+
+            MENUITEM "SHFS_SHOWSTARTICON",          ID_SHAPI_SHFULLSCREEN_SHFSSHOWSTARTICON
+
+            MENUITEM "SHFS_HIDESTARTICON",          ID_SHAPI_SHFULLSCREEN_SHFSHIDESTARTICON
+
+        END
+        MENUITEM "SHFullScreen Window",         ID_SHAPI_SHFULLSCREENWINDOW
+        MENUITEM SEPARATOR
+        MENUITEM "SHDoneButton",                ID_SHAPI_SHDONEBUTTON
+        MENUITEM SEPARATOR
+        POPUP "SHSetNavBarText"
+        BEGIN
+            MENUITEM "Here Today",                  ID_SHAPI_SHSETNAVBARTEXT_HERETODAY
+
+            MENUITEM "Gone Tomorrow",               ID_SHAPI_SHSETNAVBARTEXT_GONETOMORROW
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "About...",                    IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MAIN_MENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDM_MAIN_MENU, 1,
+    I_IMAGENONE, ID_SHAPI_SHINITDIALOG, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_SHAPI, 0, 0,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "shapi"
+    IDS_SHAPI_TEXT          "Tap Screen To Reset TaskBar"
+    IDC_SHAPI               "SHAPI"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SHAPI               "Shell API"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,12 @@
+
+#if !defined(AFX_COMCTLS_H__44E8F369_0709_11D3_8065_525400DA9DDD__INCLUDED_)
+#define AFX_COMCTLS_H__44E8F369_0709_11D3_8065_525400DA9DDD__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include <windowsx.h>
+#include "resource.h"
+
+#endif // !defined(AFX_COMCTLS_H__44E8F369_0709_11D3_8065_525400DA9DDD__INCLUDED_)

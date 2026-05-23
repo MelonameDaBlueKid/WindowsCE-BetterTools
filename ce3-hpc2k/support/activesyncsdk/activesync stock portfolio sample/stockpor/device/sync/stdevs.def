@@ -1,0 +1,12 @@
+; stdevs.def - Declares the module parameters for the DLL.
+
+LIBRARY STDEVS
+DESCRIPTION  'Stock Portfolio Device ActiveSync Module for Windows CE Services Version 2.0'
+
+EXPORTS
+	InitObjType
+	ObjectNotify
+	GetObjTypeInfo
+	ReportStatus
+    FindObjects
+    SyncData

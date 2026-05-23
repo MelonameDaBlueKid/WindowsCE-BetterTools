@@ -1,0 +1,37 @@
+; CLW file contains information for the MFC ClassWizard
+
+[General Info]
+Version=1
+LastClass=CCompCntrDlg
+LastTemplate=CDialog
+NewFileInclude1=#include "stdafx.h"
+NewFileInclude2=#include "CompCntr.h"
+
+ClassCount=2
+Class1=CCompCntrApp
+Class2=CCompCntrDlg
+
+ResourceCount=3
+Resource2=IDR_MAINFRAME
+Resource3=IDD_COMPCNTR_DIALOG
+
+[CLS:CCompCntrApp]
+Type=0
+HeaderFile=CompCntr.h
+ImplementationFile=CompCntr.cpp
+Filter=N
+
+[CLS:CCompCntrDlg]
+Type=0
+HeaderFile=CompDlg.h
+ImplementationFile=CompDlg.cpp
+Filter=D
+LastObject=IDC_ACTIVEXCONTROL1
+
+
+[DLG:IDD_COMPCNTR_DIALOG]
+Type=1
+Class=CCompCntrDlg
+ControlCount=1
+Control1=IDC_ACTIVEXCONTROL1,{5E52C830-D880-11D1-9355-00600820B4FF},1342242816
+

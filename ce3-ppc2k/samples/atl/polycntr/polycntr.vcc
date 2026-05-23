@@ -1,0 +1,38 @@
+; CLW file contains information for the MFC ClassWizard
+
+[General Info]
+Version=1
+LastClass=CPolyCntrApp
+LastTemplate=CDialog
+NewFileInclude1=#include "stdafx.h"
+NewFileInclude2=#include "polycntr.h"
+LastPage=0
+CDK=Y
+
+ClassCount=2
+Class1=CPolyCntrApp
+Class2=CPolyCntrDlg
+
+ResourceCount=1
+Resource1=IDD_POLYCNTR_DIALOG
+
+[CLS:CPolyCntrApp]
+Type=0
+BaseClass=CWinApp
+HeaderFile=POLYCNTR.H
+ImplementationFile=POLYCNTR.CPP
+LastObject=CPolyCntrApp
+
+[CLS:CPolyCntrDlg]
+Type=0
+BaseClass=CDialog
+HeaderFile=POLYDLG.H
+ImplementationFile=POLYDLG.CPP
+
+[DLG:IDD_POLYCNTR_DIALOG]
+Type=1
+Class=CPolyCntrDlg
+ControlCount=2
+Control1=IDC_STATIC,static,1342308352
+Control2=IDC_POLYCTL1,{4CBBC676-507F-11D0-B98B-000000000000},1342242816
+

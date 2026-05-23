@@ -1,0 +1,267 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="sdk_tools_readme_files/filelist.xml">
+<title>Smartphone SDK Tools</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>75</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1><span class=SpellE>Smartphone</span> 2003 Software Development Kit (SDK<span
+class=GramE>)</span><br>
+Additional Tools and XML Samples</h1>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+directory contains several additional tools and sample XML files, some of which
+are not described in the SDK documentation. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'>Cabsigner.exe<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+tool signs the contents of a CAB file and then resigning the CAB file with the
+same certificate.<span style='mso-spacerun:yes'>  </span>For more information
+refer to cabSigner_Readme.htm in the SDK tools folder.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Arial'>CabWiz.ddf</span></b></span><b style='mso-bidi-font-weight:
+normal'><span style='font-family:Arial'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Arial'>Template directive file to
+create CAB files<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'><span style='mso-spacerun:yes'> </span>CabwizSP.exe </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+is a special version of the <span class=SpellE>CabWiz</span> tool that supports
+the additional security aspects of <span class=SpellE>Smartphone</span> 2002
+.CAB files. This tool is documented in the SDK documentation. (Look in the
+Index under “<span class=SpellE>CabWizSP</span>”.)</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Arial'>EmuASCfg.exe</span></b><span style='font-family:Arial'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Arial'>This tool configures
+ActiveSync and the Pocket PC emulator to allow establishment of an ActiveSync
+partnership over the Ethernet Virtual Switch.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Arial'>You must use <span
+class=SpellE>eMbedded</span> Visual C++ to boot the Pocket PC emulator using
+the <span class=SpellE>VirtualSwitch</span> option before running this
+tool.<span style='mso-spacerun:yes'>  </span>For usage information, type
+“emuascfg.exe /?” at the command line.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'>Extract.exe </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+tool allows you to selectively extract files out of a .CAB file. For usage
+information, type “extract /?” at the command line. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'>Makecert.exe </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+tool is also available on the Microsoft Developer Network (MSDN). It provides a
+quick way to create certificate files. For usage information, type “<span
+class=SpellE>makecert</span> /?” at the command line or consult MSDN.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'>RapiConfig.exe </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><span
+style='font-family:Arial'>RapiConfig</span></span><span style='font-family:
+Arial'> provides a way to cause configuration XML to be executed on a device or
+emulator connected via ActiveSync. For usage information, type “<span
+class=SpellE>rapiconfig</span> /?” at the command line.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'>Revoke.exe </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+tool generates provisioning XML files for revoking a file or certificate on the
+device. For usage information, type “revoke /?” at the command line.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'>Signcode.exe</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+tool is also available on the Microsoft Developer Network (MSDN). It allows you
+to sign a file with a certificate. For usage information, type “<span
+class=SpellE>signcode</span> /?” at the command line or consult MSDN.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Arial'>Spdps.exe</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>This
+tool prepares the various development packages (groups of files used for
+debugging or runtime support) for use in the emulator or on a real device. This
+is documented in the SDK documentation. (Look in the Index under “development
+file signing tool”)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>AddCert.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to add a certificate to the certificate
+store.</span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>PolicyAdd.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Arial'>Sample
+XML to add or change a security policy.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>PolicyQuery.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to query a security policy.</span></span><span
+style='font-family:Arial'> <b>Note:</b> Configuration Manager <span
+class=GramE>queries</span> can only succeed if run locally on the device using <span
+class=SpellE>DMProcessConfigXML</span>. They do not function via Over-The-Air
+configuration.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>QueryCert.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to query a certificate from the
+certificate store.</span></span><span style='font-family:Arial'> <b>Note:</b>
+Configuration Manager <span class=GramE>queries</span> can only succeed if run
+locally on the device using <span class=SpellE>DMProcessConfigXML</span>. They
+do not function via Over-The-Air configuration.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>QueryCertParms.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to query the base64 encoded certificate
+and role mask individually of a certificate.</span></span><span
+style='font-family:Arial'> <b>Note:</b> Configuration Manager <span
+class=GramE>queries</span> can only succeed if run locally on the device using <span
+class=SpellE>DMProcessConfigXML</span>. They do not function via Over-The-Air
+configuration.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>QueryStore.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to query the certificate store.</span></span><span
+style='font-family:Arial'> <b>Note:</b> Configuration Manager <span
+class=GramE>queries</span> can only succeed if run locally on the device using <span
+class=SpellE>DMProcessConfigXML</span>. They do not function via Over-The-Air
+configuration.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>RemoveCert.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to remove a certificate from the store.</span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>RevAdd.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to add a hash to the revocation list.</span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>RevHashQuery.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to query if a particular hash is in the
+revocation list.</span></span><span style='font-family:Arial'> <b>Note:</b>
+Configuration Manager <span class=GramE>queries</span> can only succeed if run
+locally on the device using <span class=SpellE>DMProcessConfigXML</span>. They
+do not function via Over-The-Air configuration.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b><span
+style='font-family:Arial'>RevListQuery.xml</span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE><span
+style='font-family:Arial'>Sample XML to query the <span class=SpellE>revoaction</span>
+hash list.</span></span><span style='font-family:Arial'> <b>Note:</b>
+Configuration Manager <span class=GramE>queries</span> can only succeed if run
+locally on the device using <span class=SpellE>DMProcessConfigXML</span>. They
+do not function via Over-The-Air configuration.</span></p>
+
+</div>
+
+</body>
+
+</html>

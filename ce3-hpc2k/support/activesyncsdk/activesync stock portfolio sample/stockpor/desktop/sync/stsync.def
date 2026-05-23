@@ -1,0 +1,8 @@
+; stsync.def - Declares the module parameters for the DLL.
+
+LIBRARY      "STSYNC"
+DESCRIPTION  'Desktop PC Synchronization Module for Stock Portfolio'
+
+EXPORTS
+       DllCanUnloadNow   PRIVATE
+       DllGetClassObject PRIVATE

@@ -1,0 +1,64 @@
+//*******************************************************************************************
+//
+// Filename : treedir.rc
+//	
+// Copyright (c) 1997 Microsoft Corporation. All rights reserved
+//
+//*******************************************************************************************
+
+#include "resource.h"
+#include "windows.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_GENERIC MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 185, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "TreedirDialog"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,77,50,14
+    CTEXT           "Treedir Sample Application\nCopyright Microsoft Corporation",
+                    IDC_STATIC,36,18,112,21
+    ICON            IDI_APPICON,IDC_STATIC,83,45,18,20
+    GROUPBOX        "",IDC_STATIC,12,3,161,70
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON    DISCARDABLE     "appicon.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IMAGES              BITMAP  DISCARDABLE     "images.bmp"

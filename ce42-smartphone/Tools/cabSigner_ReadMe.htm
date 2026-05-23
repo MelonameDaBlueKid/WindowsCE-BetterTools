@@ -1,0 +1,712 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0083)http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm -->
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="cabSigner_ReadMe_files/filelist.xml">
+<title>CabSigner ReadMe</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author></o:Author>
+  <o:LastAuthor></o:LastAuthor>
+  <o:Revision>12</o:Revision>
+  <o:TotalTime>2915</o:TotalTime>
+  <o:Created>2002-10-01T17:14:00Z</o:Created>
+  <o:LastSaved>2003-01-28T00:09:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>473</o:Words>
+  <o:Characters>2699</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>22</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3166</o:CharactersWithSpaces>
+  <o:Version>10.4219</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:UIApproved dt:dt="string">0</o:UIApproved>
+  <o:Test_x0020_Design_x0020_Spec dt:dt="string">, </o:Test_x0020_Design_x0020_Spec>
+  <o:Group dt:dt="string">1</o:Group>
+  <o:PM dt:dt="string">368</o:PM>
+  <o:Dev dt:dt="string">18</o:Dev>
+  <o:LocApproved dt:dt="string">0</o:LocApproved>
+  <o:Ready_x0020_to_x0020_Publish dt:dt="string">0</o:Ready_x0020_to_x0020_Publish>
+  <o:Area dt:dt="string">39</o:Area>
+  <o:Milestone dt:dt="string">M3</o:Milestone>
+  <o:Priority dt:dt="string">2</o:Priority>
+  <o:PMApproved dt:dt="string">0</o:PMApproved>
+  <o:TestApproved dt:dt="string">0</o:TestApproved>
+  <o:UEApproved dt:dt="string">0</o:UEApproved>
+  <o:VisionPillar dt:dt="string">1</o:VisionPillar>
+  <o:Team dt:dt="string">10</o:Team>
+  <o:Status dt:dt="string">Reviewed</o:Status>
+  <o:UE dt:dt="string">375</o:UE>
+  <o:DevApproved dt:dt="string">0</o:DevApproved>
+  <o:URApproved dt:dt="string">0</o:URApproved>
+  <o:CheckPointApproved dt:dt="string">0</o:CheckPointApproved>
+  <o:Test dt:dt="string">231</o:Test>
+  <o:SubArea dt:dt="string"></o:SubArea>
+  <o:Loc dt:dt="string"></o:Loc>
+  <o:UI dt:dt="string"></o:UI>
+  <o:UR dt:dt="string"></o:UR>
+  <o:DevEst dt:dt="string"></o:DevEst>
+  <o:TestEstimate dt:dt="string"></o:TestEstimate>
+  <o:SummarySpecDue dt:dt="string"></o:SummarySpecDue>
+  <o:SpecDue dt:dt="string"></o:SpecDue>
+  <o:Team0 dt:dt="string"></o:Team0>
+  <o:Spec_x0020_Review dt:dt="string"></o:Spec_x0020_Review>
+  <o:Mgmt_x0020_Review dt:dt="string"></o:Mgmt_x0020_Review>
+  <o:Spec_x0020_Inspection dt:dt="string"></o:Spec_x0020_Inspection>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:24.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:22.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Tahoma;
+	color:gray;
+	mso-font-kerning:12.0pt;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:18.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:Verdana;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:77026678;
+	mso-list-template-ids:73169538;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:508255335;
+	mso-list-template-ids:1808300102;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:558590903;
+	mso-list-type:hybrid;
+	mso-list-template-ids:765900930 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1249271895;
+	mso-list-template-ids:1448893444;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1269582592;
+	mso-list-template-ids:930645194;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:1350790901;
+	mso-list-template-ids:-347020278;}
+@list l6
+	{mso-list-id:1567954357;
+	mso-list-template-ids:-715483436;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h2 style='line-height:24.0pt;mso-line-height-rule:exactly'><a
+name="_Toc31447055"></a><a name="_Toc31447016"><span style='mso-bookmark:_Toc31447055'></span></a><span
+class=SpellE><span style='mso-bookmark:_Toc31447016'><span style='mso-bookmark:
+_Toc31447055'>CabSigner</span></span></span><span style='mso-bookmark:_Toc31447055'></span><span
+style='mso-bookmark:_Toc31447016'></span></h2>
+
+<p class=MsoNormal>A Win32 tool that cracks a CAB file, digitally signs all the
+relevant files inside the cab with a certificate, rebuilds the cab file, and
+signs the cab with the same certificate.<span style='mso-spacerun:yes'> 
+</span>This is useful on <span class=SpellE>Smartphone</span> for ensuring that
+all of a package’s files meet the security requirements of a specific phone.</p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><a name="_Toc31447017"></a><a
+name="_Toc21230997"></a><a name="_Sample_Overview"></a><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='mso-spacerun:yes'> </span>TOC \o
+&quot;1-3&quot; \h \z \u <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><a
+href="#_Toc31447055"><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='mso-no-proof:yes'>CabSigner</span></span></span><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'> PAGEREF
+_Toc31447055 \h </span></span></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;mso-no-proof:
+yes;text-decoration:none;text-underline:none'><span style='display:none;
+mso-hide:screen'><span style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330031003400340037003000350035000000</w:data>
+</xml><![endif]--></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span></a><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></span></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><a
+href="#_Toc31447056"><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='mso-no-proof:yes'>Tool Overview</span></span></span><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'> PAGEREF
+_Toc31447056 \h </span></span></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;mso-no-proof:
+yes;text-decoration:none;text-underline:none'><span style='display:none;
+mso-hide:screen'><span style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330031003400340037003000350036000000</w:data>
+</xml><![endif]--></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span></a><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></span></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><a
+href="#_Toc31447057"><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='mso-no-proof:yes'>Usage</span></span></span><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'> PAGEREF
+_Toc31447057 \h </span></span></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;mso-no-proof:
+yes;text-decoration:none;text-underline:none'><span style='display:none;
+mso-hide:screen'><span style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330031003400340037003000350037000000</w:data>
+</xml><![endif]--></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span></a><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></span></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><a
+href="#_Toc31447058"><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='mso-no-proof:yes'>Requirements</span></span></span><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'> PAGEREF
+_Toc31447058 \h </span></span></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;mso-no-proof:
+yes;text-decoration:none;text-underline:none'><span style='display:none;
+mso-hide:screen'><span style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330031003400340037003000350038000000</w:data>
+</xml><![endif]--></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span></a><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></span></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><a
+href="#_Toc31447059"><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='mso-no-proof:yes'>Example</span></span></span><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'> PAGEREF
+_Toc31447059 \h </span></span></span><span style='mso-bookmark:_Toc31447017'><span
+style='mso-bookmark:_Toc21230997'><span style='color:windowtext;mso-no-proof:
+yes;text-decoration:none;text-underline:none'><span style='display:none;
+mso-hide:screen'><span style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300330031003400340037003000350039000000</w:data>
+</xml><![endif]--></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span></a><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc31447017'><span style='mso-bookmark:_Toc21230997'><a name="_Toc31447056"><o:p>&nbsp;</o:p></a></span></span></h3>
+
+<h3><span style='mso-bookmark:_Toc31447017'><span style='mso-bookmark:_Toc21230997'><span
+style='mso-bookmark:_Toc31447056'>Tool Overview</span></span></span></h3>
+
+<p class=MsoNormal>A Win32 tool that cracks a CAB file, digitally signs all the
+relevant files inside the cab with a certificate, rebuilds the cab file, and
+signs the cab with the same certificate.<span style='mso-spacerun:yes'> 
+</span>This is useful on <span class=SpellE>Smartphone</span> for ensuring that
+all of a package’s files meet the security requirements of a specific phone.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc31447057"></a><a name="_Toc31447018"></a><a
+name="_Requirements"></a><a name="_Requirements_and_Dependencies"></a><span
+style='mso-bookmark:_Toc31447057'><span style='mso-bookmark:_Toc31447018'>Usage</span></span></h3>
+
+<p class=MsoNormal>c:\&gt;cabsigner.exe source destination [options] [-<span
+class=SpellE>exesign</span> options]<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE>Signs a CAB and all its executable content
+(.exe, .<span class=SpellE>dll</span>) with the specified certificate(s).</span><o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span><o:p></o:p></p>
+
+<p class=MsoNormal>CABSIGNER source destination [options]</p>
+
+<p class=MsoNormal><span class=GramE>(Uses the same certificate to sign both
+the CAB and its executable content.)</span><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>CABSIGNER source destination [options] –<span class=SpellE>exesign</span>
+[options]<o:p></o:p></p>
+
+<p class=MsoNormal><span class=GramE>(Uses the first certificate to sign the
+CAB and the second to sign its executable content.)</span><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=GramE><i
+style='mso-bidi-font-style:normal'><span style='font-family:"Courier New"'>source</span></i></span><i
+style='mso-bidi-font-style:normal'><span style='font-family:"Courier New"'>: </span></i>Name
+of unsigned input CAB file (.cab or .<span class=SpellE>hme</span>).<o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=GramE><i
+style='mso-bidi-font-style:normal'><span style='font-family:"Courier New"'>destination</span></i></span>:
+Name of signed output CAB file. <o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=GramE><i
+style='mso-bidi-font-style:normal'><span style='font-family:"Courier New"'>options</span></i></span>:
+Parameters to be used by signcode.exe. Use signcode.exe /? <span class=GramE>for</span>
+a full list.<o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=SpellE><span
+class=GramE><i style='mso-bidi-font-style:normal'><span style='font-family:
+"Courier New"'>exesign</span></i></span></span>: Specify this parameter and
+subsequent signcode.exe options to sign the executable contents with a
+different certificate.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc31447058"></a><a name="_Toc31447019"></a><a name="_Topics"></a><span
+style='mso-bookmark:_Toc31447058'><span style='mso-bookmark:_Toc31447019'>Requirements</span></span></h3>
+
+<p class=MsoNormal>1. <span class=GramE>signcode.exe</span> should be in a
+location pointed to by system path<o:p></o:p></p>
+
+<p class=MsoNormal>2. <span class=GramE>makecab.exe</span> should be in a
+location pointed to by system path<o:p></o:p></p>
+
+<p class=MsoNormal>3. You should have the certificate files (.<span
+class=SpellE>cer</span> and .<span class=SpellE>pvk</span> file) handy. These
+files contain the keys used to sign your application. <o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc31447059"></a><a name="_Toc31447020"></a><a
+name="_Building_the_Sample"></a><span style='mso-bookmark:_Toc31447059'><span
+style='mso-bookmark:_Toc31447020'>Example</span></span></h3>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Suppose you want re-sign <span class=SpellE>foo.cab</span>.
+Here are the steps:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo10;tab-stops:list .5in'>Copy <span
+     class=SpellE>foo.cab</span> to a new directory, for example, c:\Temp\Resign</li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo10;tab-stops:list .5in'>Copy
+     the files cabsigner.exe, signcode.exe and makecab.exe to c:\Temp\Resign (if
+     <span class=SpellE>signcode</span> and <span class=SpellE>makecab</span>
+     are in the system path, you need not copy them)<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo10;tab-stops:list .5in'>Copy
+     the files <span class=SpellE>cabpriv.cer</span> and <span class=SpellE>cabpriv.pvk</span>
+     to c:\Temp\Resign (these are the certificates you will use to sign the CAB.)<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo10;tab-stops:list .5in'>Copy
+     the files <span class=SpellE>exepriv.cer</span> and <span class=SpellE>exepriv.pvk</span>
+     to c:\Temp\Resign (these are the certificates you will use to sign the
+     executables in the CAB.)<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo10;tab-stops:list .5in'>Execute
+     the following <span class=SpellE>cmd</span> line: <br>
+     <i style='mso-bidi-font-style:normal'><span style='font-family:"Courier New"'>c:\Temp\Resign&gt;
+     <span class=SpellE>cabsigner</span> <span class=SpellE>foo.cab</span> <span
+     class=SpellE>foo_signed.cab</span> -<span class=SpellE>spc</span> <span
+     class=SpellE>cabpriv.cer</span> -v <span class=SpellE>cabpriv.pvk</span>
+     -n &quot;Signed using <span class=SpellE>cabpriv.cer</span>&quot; -a sha1
+     -<span class=SpellE>exesign</span> -<span class=SpellE>spc</span> <span
+     class=SpellE>exepriv.cer</span> -v <span class=SpellE>exepriv.pvk</span>
+     -n &quot;Signed using <span class=SpellE>exepriv.cer</span>&quot; -a sha1</span></i></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo10;tab-stops:list .5in'>If
+     all goes well, this will result in a cab named <span class=SpellE>foo_signed.cab</span>
+     in the c:\Temp\Resign directory<o:p></o:p></li>
+</ol>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Signing a single EXE file:<o:p></o:p></p>
+
+<p class=MsoNormal>~~~~~~~~~~~~~~~~~~~~~~~~~~<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The following is a sample command line to sign an EXE file
+with signcode.exe<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>c:\Temp\Resign&gt; signcode.exe -<span
+class=SpellE>spc</span> <span class=SpellE>exepriv.cer</span> -v <span
+class=SpellE>exepriv.pvk</span> -n &quot;Signed using <span class=SpellE>exepriv.cer</span>&quot;
+-a sha1 &lt;filename&gt;<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

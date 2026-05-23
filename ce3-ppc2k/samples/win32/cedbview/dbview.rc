@@ -1,0 +1,271 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+IDM_MAIN_MENU RCDATA DISCARDABLE
+BEGIN
+  //Popup menu name
+  IDM_MAIN_MENU, 
+  //Count of items to put on the menu (er... toolbar)
+  2, //3
+
+  
+  //I_IMAGENONE, IDM_MAIN_MENUITEM1, TBSTATE_ENABLED,
+  //TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  //IDS_MAIN_MENUITEM1, 0, 0, //First popup menu
+
+  I_IMAGENONE, IDM_MAIN_MENUITEM2, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM2, 0, 0, //1, //Next popup menu
+
+  I_IMAGENONE, IDM_MAIN_MENUITEM3, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM3, 0, 1, //2, //Next popup menu
+
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    //POPUP "File"
+    //BEGIN
+    //    MENUITEM "Exit",                       IDM_FILE_EXIT
+    //END
+    POPUP "ObjStore"
+    BEGIN
+        MENUITEM "Create Database",            IDM_CREATEDB
+        MENUITEM "Delete Database",            IDM_DELETEDB
+        MENUITEM "Modify Indexes",             IDM_INDEXDB
+        MENUITEM "Use Indexes",                IDM_USEINDEXES
+        MENUITEM "Storage Space",              ID_OBJECTSTORE_STORAGESPACE
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About...",                   IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 108, 72
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "About"
+FONT 8, "DbviewDialog"
+BEGIN
+    CTEXT           "Dbview Sample Application\n(C) Microsoft Corporation",
+                    IDC_STATIC,12,15,85,28
+    ICON            IDI_APP_ICON,IDC_STATIC,46,43,20,20
+    GROUPBOX        "",IDC_STATIC,7,3,95,61
+END
+
+IDD_NEWDBNAME DIALOGEX 0, 0, 136, 22
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "New Database"
+FONT 8, "DbviewDialog"
+BEGIN
+    LTEXT           "Name",IDC_STATIC,13,6,20,8
+    EDITTEXT        IDC_DBNAME,36,4,82,12
+END
+
+IDD_PEGMEMORY DIALOG DISCARDABLE  0, 0, 143, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Object Store Information"
+FONT 8, "DbviewDialog"
+BEGIN
+    EDITTEXT        IDC_AVAIL,73,11,56,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_FREE,73,23,56,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Bytes free",IDC_STATIC,13,24,52,8
+    LTEXT           "Bytes available",IDC_STATIC,13,12,52,8
+END
+
+IDD_NEWRECORDPROPS DIALOG DISCARDABLE  0, 0, 127, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Record"
+FONT 8, "DbviewDialog"
+BEGIN
+    EDITTEXT        IDC_SHORT,6,11,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USHORT,66,11,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LONG,6,81,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ULONG,66,81,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,6,34,111,34,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    EDITTEXT        IDC_BLOB,6,104,111,34,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    LTEXT           "Short",IDC_STATIC,6,0,18,8
+    LTEXT           "Unsigned Short",IDC_STATIC,66,0,50,8
+    LTEXT           "Long",IDC_STATIC,6,70,17,8
+    LTEXT           "Unsigned Long",IDC_STATIC,66,70,49,8
+    LTEXT           "String",IDC_STATIC,6,24,19,8
+    LTEXT           "Blob",IDC_STATIC,6,95,15,8
+    PUSHBUTTON      "Save",IDC_SAVE,40,142,43,12
+END
+
+IDD_MODINDEX DIALOG DISCARDABLE  0, 0, 152, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Modify Indexes"
+FONT 8, "DbviewDialog"
+BEGIN
+    LISTBOX         IDC_CURRENT,8,93,101,61,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LISTBOX         IDC_AVAILABLE,8,17,101,61,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_ADDINDEX,112,16,33,18,WS_DISABLED
+    PUSHBUTTON      "Remove",IDC_REMINDEX,112,38,33,18,WS_DISABLED
+    LTEXT           "Properties",IDC_STATIC,8,6,58,8
+    LTEXT           "Indexed Properties",IDC_STATIC,11,81,82,8
+    PUSHBUTTON      "OK",IDOK,112,60,33,18
+END
+
+IDD_SELECTINDEX DIALOGEX 0, 0, 135, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "Select Index"
+FONT 8, "DbviewDialog"
+BEGIN
+    LISTBOX         IDC_INDEXES,13,7,107,64,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APP_ICON            ICON    DISCARDABLE     "appicon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IMAGE               BITMAP  DISCARDABLE     "IMAGES.BMP"
+IDB_BUTTONS             BITMAP  DISCARDABLE     "buttons.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""newres.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_NEWRECORDPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 120
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_MODINDEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_SELECTINDEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    //IDS_MAIN_MENUITEM1      "File"
+    IDS_MAIN_MENUITEM2      "ObjStore"
+    IDS_MAIN_MENUITEM3      "Help"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

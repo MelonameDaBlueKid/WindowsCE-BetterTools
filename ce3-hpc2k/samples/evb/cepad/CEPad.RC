@@ -1,0 +1,12 @@
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1                       "You must enter something to search for in the combobox to the left"
+    2                       """<SearchPhrase>"" was not found."
+    3                       "&File"
+    4                       "&Open"
+    5                       "&Save"
+    6                       "&About"
+    7                       "E&xit"
+    8                       "&Edit"
+    9                       "Set &Font"
+END

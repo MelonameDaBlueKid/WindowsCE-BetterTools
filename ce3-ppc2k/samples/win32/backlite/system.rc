@@ -1,0 +1,125 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "newres.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "system.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+SYSTEM_ICON             ICON    DISCARDABLE     "WCE\\system.ic2"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+TAB_DLG DIALOG DISCARDABLE  3, 2, 152, 111
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",WS_GROUP | WS_TABSTOP,0,0,
+                    150,111
+END
+
+LIGHT_DLG DIALOG DISCARDABLE  3, 15, 143, 91
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 8, "Tahoma"
+BEGIN
+    RTEXT           "Light",IDC_STATIC,0,33,27,10
+    LTEXT           "Dark",IDC_STATIC,100,33,27,10
+    CONTROL         "",IDC_TRACKBAR,"msctls_trackbar32",WS_TABSTOP,3,51,137,
+                    23
+    CTEXT           "#",IDC_STATIC_NUM,50,34,27,10
+    CTEXT           "Move slider to the left for Lighter screen,\rmove to the right for Darker screen.",
+                    IDC_STATIC,3,1,137,23
+END
+
+GENERAL_DLG DIALOG DISCARDABLE  6, 15, 143, 58
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 8, "Tahoma"
+BEGIN
+    CTEXT           "Put your controls for the",IDC_STATIC,23,18,96,11
+    CTEXT           "'general' tab in here...",IDC_STATIC,23,30,96,11
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""newres.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""system.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SYSTEM_NAME             "BackLight"
+    SYSTEM_DESC             "Changes screen backlighting."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,4 @@
+<!-- Sample XML to query the revoaction hash list  -->
+<wap-provisioningdoc>
+	<characteristic-query type="LoaderRevocation" />
+</wap-provisioningdoc>

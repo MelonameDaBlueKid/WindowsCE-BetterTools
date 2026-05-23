@@ -1,0 +1,31 @@
+; ========================= DeviceConfigCtl.inf ========================
+; This .inf file will control the installation of the DeviceConfig
+; control. 
+
+[version]
+; version signature (same for both NT and Win95) do not remove
+signature="$CHICAGO$"
+AdvancedINF=2.0
+
+[Add.Code]
+DeviceConfigCtl.dll=DeviceConfigCtl.dll
+DeferredInstaller.exe=DeferredInstaller.exe
+
+; thiscab is a keyword which, in this case, means that DeviceConfigCtl.dll
+; can be found in the same .cab file as this .inf file
+; file-win32-x86 is an x86 platform specific identifier
+; See the ActiveX SDK - ActiveX Controls - Internet Component Download -
+; Packaging component code for automatic download
+
+[DeviceConfigCtl.dll]
+file-win32-x86=thiscab
+; *** add your controls CLSID here ***
+clsid={A37C489D-D1AE-442B-BE41-0DB1802732B8}
+; Add your ocx's file version here.
+FileVersion=1,0,0,1
+RegisterServer=yes
+
+[DeferredInstaller.exe]
+file-win32-x86=thiscab
+
+; ====================== end of DeviceConfigCtl.inf ===================== 

@@ -1,0 +1,247 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_POOMMASTER          ICON    DISCARDABLE     "PoomMaster.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MAINMENU SHMENUBAR MOVEABLE PURE 
+BEGIN
+    IDM_MAINMENU, 2,
+    I_IMAGENONE, IDM_NEWITEM, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_NEW, 
+    0, NOMENU,
+    I_IMAGENONE, IDM_POOMCAT, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_MODE, 0, 1,
+END
+
+IDM_NEWITEMMENU SHMENUBAR MOVEABLE PURE 
+BEGIN
+    IDM_NEWITEMMENU, 2,
+    I_IMAGENONE, IDM_OK, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_OK, 0, 
+    NOMENU,
+    I_IMAGENONE, IDM_CANCEL, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 
+    IDS_CAP_CANCEL, 0, NOMENU,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MAINMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "New",                         IDM_NEWITEM
+    POPUP "Mode"
+    BEGIN
+        MENUITEM "Tasks",                       IDM_MODE_TASKS
+        MENUITEM "Contacts",                    IDM_MODE_CONTACTS
+        MENUITEM "Calendar",                    IDM_MODE_CALENDAR
+        MENUITEM "Quit",                        IDM_QUIT
+    END
+END
+
+IDM_NEWITEMMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "OK",                          IDM_OK
+    MENUITEM "Cancel",                      IDM_CANCEL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOG DISCARDABLE  0, 0, 171, 171
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "POOMmaster"
+FONT 8, "System"
+BEGIN
+END
+
+IDD_NEWTASK DIALOG DISCARDABLE  0, 0, 147, 177
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "New Task"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_TASKDESC,4,16,90,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_IMPORTANCE,4,42,80,12,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    LTEXT           "Task Description",IDC_STATIC,4,4,90,12
+    LTEXT           "Importance",IDC_STATIC,4,28,90,12
+END
+
+IDD_NEWCONTACT DIALOG DISCARDABLE  0, 0, 116, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "New Contact"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_FIRSTNAME,4,14,80,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LASTNAME,4,36,80,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHONENUMBER,4,58,80,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "First Name",IDC_STATIC1,4,4,80,10
+    LTEXT           "Last Name",IDC_STATIC,4,26,80,10
+    LTEXT           "Phone Number",IDC_STATIC,4,48,80,10
+END
+
+IDD_NEWAPPNTMNT DIALOG DISCARDABLE  0, 0, 104, 161
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "New Appointment"
+FONT 8, "System"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_DAYMONTHPICKER,"SysDateTimePick32",
+                    WS_TABSTOP,4,16,60,12
+    CONTROL         "DateTimePicker2",IDC_TIMEPICKER,"SysDateTimePick32",
+                    DTS_UPDOWN | DTS_APPCANPARSE | WS_BORDER | WS_TABSTOP | 
+                    0x8,4,40,60,12
+    LTEXT           "Date",IDC_STATIC,4,4,54,10
+    LTEXT           "Time",IDC_STATIC,4,28,45,10
+    EDITTEXT        IDC_DESC,4,62,89,12,ES_AUTOHSCROLL
+    LTEXT           "Description",IDC_STATIC,4,52,90,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_POOMMASTER ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            IDM_HELP_ABOUT,         VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDOK,                   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_NEWTASK, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_NEWCONTACT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 114
+        BOTTOMMARGIN, 90
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "PoomMaster"
+    IDS_HELLO               "Hello World!"
+    IDC_POOMMASTER          "POOMMASTER"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_MODE            "Mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELP                "Options"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OPTIONS             "Options"
+    IDS_OK                  "OK"
+    IDS_CAP_CANCEL          "Cancel"
+    IDS_CAP_NEW             "New"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

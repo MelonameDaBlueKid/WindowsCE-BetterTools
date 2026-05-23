@@ -1,0 +1,329 @@
+;
+; AppInstall Sample "Blackjack" CabWiz INF file
+;   This sample INF file is used as the input file for "Cabwiz.exe".
+;   Along with sample binary files, it will create multiple CAB files for the following devices:
+;
+;       - Pocket PC using CEF (Compiled Executable Format) files
+;
+;       - H/PC with the SH3 cpu
+;       - H/PC with the MIPS cpu
+;
+;       - H/PC Pro with the ARM cpu
+;       - H/PC Pro with the SH3 cpu
+;       - H/PC Pro with the MIPS cpu
+;
+;       - Palm-size PC with the SH3 cpu
+;       - Palm-size PC with the MIPS cpu
+;
+
+
+;
+; Required "Version" section
+;   Contains INF version information
+;
+[Version]
+Signature   = "$Windows NT$"    ; required as-is
+Provider    = "Microsoft"       ; full app name will be "<Provider> <AppName>"
+CESignature = "$Windows CE$"    ; required as-is
+
+
+;
+; Required "CEStrings" section
+;   Specific strings used by Windows CE AppInstall
+;
+[CEStrings]
+AppName     = "Blackjack Sample" ; full app name will be "<Provider> <AppName>"
+InstallDir  = %CE8%\%AppName%    ; default install directory,
+                                 ; (which can be changed by end user on H/PCs)
+                                 ; %CE8% resolves to \Program Files\Games
+
+
+;
+; Required "CEDevice[.label]" section
+;   Specifies the various types of CAB files that will be generated
+;
+
+; Pocket PC using CEF files
+[CEDevice.PPC3_CEF]
+
+; a processor type of zero means this CAB can install on all processor types - this is required when using CEF
+ProcessorType           = 0
+
+; CEF is only supported on Pocket PC devices. To identify a Pocket PC device, the UnsupportedPlatforms
+; list must not include "Palm PC", and the min/max CE-OS version information must be provided
+UnsupportedPlatforms    = "HPC","Jupiter"
+VersionMin              = 3.0                   ; CE-OS version for Pocket PC is 3.0
+VersionMax              = 100.0                 ; support future devices - set an arbitrary high value
+
+
+[CEDevice.HPC_SH3]                              ; H/PC on SH3
+ProcessorType           = 10003                 ; SH3 cpu numeric value
+UnsupportedPlatforms    = "Palm PC","Jupiter"   ; exclude PsPC and H/PC Pro devices
+
+[CEDevice.HPC_MIPS]                             ; H/PC on MIPS
+ProcessorType           = 4000                  ; MIPS cpu numeric value
+UnsupportedPlatforms    = "Palm PC","Jupiter"
+
+[CEDevice.HPCPro_ARM]                           ; H/PC Pro on ARM
+ProcessorType           = 2577                  ; StrongARM cpu numeric value
+UnsupportedPlatforms    = "Palm PC","HPC"
+
+[CEDevice.HPCPro_SH3]                           ; H/PC Pro on SH3
+ProcessorType           = 10003
+UnsupportedPlatforms    = "Palm PC","HPC"
+
+[CEDevice.HPCPro_MIPS]                          ; H/PC Pro on MIPS
+ProcessorType           = 4000
+UnsupportedPlatforms    = "Palm PC","HPC"
+
+[CEDevice.PPC_SH3]                              ; Palm-size PC on SH3
+ProcessorType           = 10003
+UnsupportedPlatforms    = "HPC","Jupiter"
+
+[CEDevice.PPC_MIPS]                             ; Palm-size PC on MIPS
+ProcessorType           = 4000
+UnsupportedPlatforms    = "HPC","Jupiter"
+
+
+;
+; Required "SourceDisksNames[.label]" section
+;   Specifies the source directories of the binary files
+;
+;   Format:     <source ID> = ,<comments>,,<source directory>
+;       <source ID> will be used to specify the source files belonging to this directory
+;       <comments> is unused
+;       <source directory> is the relative or absolute directory of the source files
+;
+[SourceDisksNames]                  ; CPU-independent files
+1 = ,"Common files",,Platform       ; files are in .\Platform directory
+
+[SourceDisksNames.PPC3_CEF]         ; PocketPC using CEF
+2 = ,"CEF files",,Cpu\CE_3.0\CEF    ; CEF-compiled files
+3 = ,"PPC3 files",,Platform\PPC3    ; Pocket PC -specific files
+
+[SourceDisksNames.HPC_SH3]          ; H/PC on SH3
+2 = ,"SH3 files",,Cpu\CE_2.0\SH3    ; SH3-specific files are in .\Cpu\SH3
+3 = ,"H/PC files",,Platform\HPC     ; H/PC-specific files are in .\Platform\HPC
+
+[SourceDisksNames.HPC_MIPS]         ; H/PC on MIPS
+2 = ,"MIPS files",,Cpu\CE_2.0\MIPS
+3 = ,"H/PC files",,Platform\HPC
+
+[SourceDisksNames.HPCPro_ARM]       ; H/PC Pro on ARM
+2 = ,"ARM files",,Cpu\CE_2.1\ARM
+3 = ,"H/PC Pro files",,Platform\HPCPro
+
+[SourceDisksNames.HPCPro_SH3]       ; H/PC Pro on SH3
+2 = ,"SH3 files",,Cpu\CE_2.1\SH3
+3 = ,"H/PC Pro files",,Platform\HPCPro
+
+[SourceDisksNames.HPCPro_MIPS]      ; H/PC Pro on MIPS
+2 = ,"MIPS files",,Cpu\CE_2.1\MIPS
+3 = ,"H/PC Pro files",,Platform\HPCPro
+
+[SourceDisksNames.PPC_SH3]          ; Palm-size PC on SH3
+2 = ,"SH3 files",,Cpu\CE_2.1\SH3
+3 = ,"PsPC files",,Platform\PPC
+
+[SourceDisksNames.PPC_MIPS]         ; Palm-size PC on MIPS
+2 = ,"MIPS files",,Cpu\CE_2.1\MIPS
+3 = ,"PsPC files",,Platform\PPC
+
+
+;
+; Required "SourceDisksFiles[.label]" section
+;   Specifies the source filenames that will be packaged in the CAB files
+;
+;   Format:     <filename> = <source ID>
+;       <filename> is the source filename (enclose in doublequotes for long filenames)
+;       <source ID> is the ID used in [SourceDisksNames] to specify the source directory
+;
+[SourceDisksFiles]
+    ;
+    ; CPU-independent files
+    ;
+Help.htm        = 1     ; sample help file
+LoseGame.wav    = 1     ; sample .wav file, shared by other apps
+WinGame.wav     = 1     ; sample .wav file, shared by other apps
+Sample.BJL      = 1     ; sample data file associated with the Blackjack executable
+    ;
+    ; CPU-specific files
+    ;
+Blkjack.exe     = 2     ; sample executable
+SelfReg.dll     = 2     ; sample self-registering file
+CESetup.dll     = 2     ; sample AppInstall "CE Setup.DLL"
+
+Sample.txt      = 3     ; sample platform-specific cpu-independent readme file
+
+
+;
+; Required "DefaultInstall" section
+;   Specifies the INF sections for file copying, registry settings and creating shortcuts
+;   INF sections that are not listed here will not be used
+;
+[DefaultInstall]
+    ;
+    ; Required INF sections that lists the files to be copied
+    ;
+CopyFiles   = Files.Windows,Files.InstallDir,Files.StartMenu
+    ;
+    ; Required INF sections that lists the registry entries to be created
+    ;
+AddReg      = RegData
+    ;
+    ; Optional INF sections that lists the shortcuts to be created
+    ;
+CEShortcuts = Links
+    ;
+    ; Optional "Setup.DLL" to use during installation runtime
+    ; - this file must be specified in the [SourceDisksFiles] section
+    ; - AppInstall will call the DLL's exported functions (when appropriate):
+    ;       Install_Init, Install_Exit, Uninstall_Init, Uninstall_Exit
+    ;
+CESetupDLL  = "CESetup.dll"
+    ;
+    ; Optional list of self-registering files that will be registered/unregistered during runtime
+    ; - these files must be specified in the [SourceDisksFiles] section
+    ; - AppInstall will call the DLL's exported functions (when appropriate):
+    ;       DllRegisterServer, DllUnregisterServer
+    ;
+CESelfRegister = "SelfReg.dll"
+
+
+;
+; Required "DestinationDirs" section
+;   Specifies the directories to use for the file copy lists
+;
+;   Format:     <section name> = 0,<dest directory>
+;       <section name> is the section name used in "[DefaultInstall] CopyFiles"
+;       <dest directory> is the destination directory, using an absolute device path,
+;                   the directory macros, or the install directory %InstallDir%
+;
+[DestinationDirs]
+Files.Windows       = ,%CE2%            ; %CE2% resolves to \Windows
+Files.InstallDir    = ,%InstallDir%
+Files.StartMenu     = ,%CE11%           ; %CE11% resolves to \Windows\<StartMenu>\Programs
+Links               = ,%CE11%           ; default dest dir for shortcuts specified in [Links]
+                                        ;   %CE11% resolves to \Windows\<StartMenu>\Programs
+DefaultDestDir      = ,%InstallDir%     ; default install dir for all other sections
+
+
+;
+; Required sections specified in "[DefaultInstall] CopyFiles" key
+;   Specifies the files to copy
+;
+;   Format:     <dest filename>,<source filename>,,<copy flags>
+;       <dest filename> is the destination filename (or the source filename if <source filename>
+;                       is empty)
+;       <source filename> is the source filename
+;       <copy flags> is the copy flags to use (the list of copy flags is in the CE SDK docs)
+;
+[Files.Windows]
+    ;
+    ; Rename this file, and warn the user if this file is being skipped copying
+    ;
+"Blackjack Sample Help.htm",Help.htm,,0x00000001
+    ;
+    ; Rename this file, and increase the reference count for the following "shared" wav files
+    ;
+"BJ Sample Lose Game.wav",LoseGame.wav,,0x80000000
+"BJ Sample Win Game.wav",WinGame.wav,,0x80000000
+
+[Files.InstallDir]
+"Blackjack.exe",Blkjack.exe
+    ;
+    ; Rename this file, ignore the date checking, and warn the user if this file copy is skipped
+    ;
+"Blackjack SelfReg.dll","SelfReg.dll",,0x40000001
+    ;
+    ; Note that CESetup.dll has not been copied, since it is the AppInstall's "CE Setup.DLL",
+    ; which is a "temporary" file used only by AppInstall
+    ;
+
+[Files.StartMenu]
+"BJ Sample Readme.txt",Sample.txt
+"BJ Sample Datafile.BJL",Sample.BJL
+
+
+;
+; Required sections specified in "[DefaultInstall] AddReg" key
+;   Specifies the registry entries to create
+;
+;   Format:     <reg root>,<reg key>,<reg val>,<reg flags>,<reg data>[,<reg data>]
+;       <reg root> is HKCR, HKLM or HKCU
+;       <reg key> is the registry key name
+;       <reg val> is the registry value name, which is set to "default" if empty
+;       <reg flags> is the registry type/flags to use
+;       <reg data> is the numeric/string registry data, which depends on the <reg flags> used
+;
+[RegData]
+    ;
+    ; Set a sample application version number, using the TYPE_DWORD registry type
+    ;
+HKLM,Software\Microsoft\%AppName%,MajorVersion,0x00010001,1
+HKLM,Software\Microsoft\%AppName%,MinorVersion,0x00010001,0
+    ;
+    ; Set a sample default player name, using the TYPE_SZ registry type.
+    ; Also, do not replace if already exists.
+    ;
+HKCU,Software\Microsoft\%AppName%,"DefaultPlayer",0x00000002,%PlayerName%
+    ;
+    ; Set a sample high score list (4 string multi-string), using the MULTI_SZ registry type.
+    ; Also, do not replace if already exists.
+    ;
+HKCU,Software\Microsoft\%AppName%,"HighScores",0x00010002,%HighScorer1%,"200",%HighScorer2%,"100"
+    ;
+    ; Set a sample binary stream (8-bytes), using the BINARY registry type
+    ;
+HKLM,Software\Microsoft\%AppName%,"ProductID",0x00000001,2,F,B,3,0,A,6,D
+    ;
+    ; Associate .BJL files (a sample data file) with the "Blackjack.exe" executable
+    ;
+HKCR,.BJL,,0x00000000,BlkjackFile
+HKCR,BlkjackFile\Shell\Open\Command,,0x00000000,"""%InstallDir%\Blackjack.exe""" %%1
+
+
+;
+; Sections specified in "[DefaultInstall] CEShortcuts" key
+;   Specifies the shortcuts to create
+;
+;   Format:     <shortcut filename>,<shortcut type>,<target file/path>[,<standard dest path>]
+;       <shortcut filename> is the filename of the shortcut
+;       <shortcut type> specifies if the shortcut is to a file or a folder
+;       <target file/path> is the target filename or pathname, which depends on the
+;                          <shortcut type> flag used
+;       <standard dest path> is an optional destination directory macro (or %InstallDir%) to use
+;
+[Links]
+    ;
+    ; shortcut to a file, created in the "[DestinationDirs] Links" directory
+    ;
+%LinkFilename%,0,"Blackjack.exe"
+    ;
+    ; shortcut to a file, created in the %InstallDir% directory
+    ;
+%LinkFilename%,0,"Blackjack.exe",%InstallDir%
+    ;
+    ; shortcut to a file, created in the standard destination path %CE14%
+    ;   (%CE14% resolves to \Windows\<StartMenu>\Programs\Games)
+    ;
+%LinkFilename%,0,"Blackjack.exe",%CE14%
+    ;
+    ; shortcut to a folder, created in the standard destination path %CE3%
+    ;   (%CE3% resolves to \Windows\Desktop)
+    ;
+%LinkPathname%,1,%InstallDir%,%CE3%
+
+
+;
+; Optional "Strings" section
+;   Contains string substitutions replacing the key string (enclosed with percent symbols)
+;       with the value string.
+;   For this example, it will store language-dependent strings
+;
+[Strings]
+PlayerName          = "John Smith"
+HighScorer1         = "Jane Doe",
+HighScorer2         = "John Smith"
+LinkFilename        = "Blackjack Sample App"
+LinkPathname        = "Blackjack Sample Folder"

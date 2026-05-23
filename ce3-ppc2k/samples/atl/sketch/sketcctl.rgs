@@ -1,0 +1,33 @@
+HKCR
+{
+	SketcCtl.SketcCtl.1 = s 'SketcCtl Class'
+	{
+		CLSID = s '{CBF9C2BE-E8CB-11D0-AFAE-00600811D2B6}'
+	}
+	SketcCtl.SketcCtl = s 'SketcCtl Class'
+	{
+		CurVer = s 'SketcCtl.SketcCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CBF9C2BE-E8CB-11D0-AFAE-00600811D2B6} = s 'SketcCtl Class'
+		{
+			ProgID = s 'SketcCtl.SketcCtl.1'
+			VersionIndependentProgID = s 'SketcCtl.SketcCtl'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{CBF9C2B0-E8CB-11D0-AFAE-00600811D2B6}'
+			'Version' = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,37 @@
+; CLW file contains information for the MFC ClassWizard
+
+[General Info]
+Version=1
+LastClass=CSKETCNTRApp
+LastTemplate=CDialog
+NewFileInclude1=#include "stdafx.h"
+NewFileInclude2=#include "sketcntr.h"
+LastPage=0
+
+ClassCount=2
+Class1=CSKETCNTRDlg
+Class2=CSKETCNTRApp
+
+ResourceCount=1
+Resource1=IDD_SKETCNTR_DIALOG
+
+[CLS:CSKETCNTRDlg]
+Type=0
+BaseClass=CDialog
+HeaderFile=SKETCDLG.H
+ImplementationFile=SKETCDLG.CPP
+
+[CLS:CSKETCNTRApp]
+Type=0
+BaseClass=CWinApp
+HeaderFile=SKETCNTR.H
+ImplementationFile=SKETCNTR.CPP
+LastObject=CSKETCNTRApp
+
+[DLG:IDD_SKETCNTR_DIALOG]
+Type=1
+Class=CSKETCNTRDlg
+ControlCount=2
+Control1=IDC_SKETCH1,{CBF9C2BE-E8CB-11D0-AFAE-00600811D2B6},1342242816
+Control2=IDC_ERASE,button,1342242816
+

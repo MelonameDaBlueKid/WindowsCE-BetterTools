@@ -1,0 +1,33 @@
+HKCR
+{
+	PolyCtl.PolyCtl.1 = s 'PolyCtl Class'
+	{
+		CLSID = s '{4CBBC676-507F-11D0-B98B-000000000000}'
+	}
+	PolyCtl.PolyCtl = s 'PolyCtl Class'
+	{
+		CurVer = s 'PolyCtl.PolyCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4CBBC676-507F-11D0-B98B-000000000000} = s 'PolyCtl Class'
+		{
+			ProgID = s 'PolyCtl.PolyCtl.1'
+			VersionIndependentProgID = s 'PolyCtl.PolyCtl'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{4CBBC673-507F-11D0-B98B-000000000000}'
+			'Version' = s '1.0'
+		}
+	}
+}

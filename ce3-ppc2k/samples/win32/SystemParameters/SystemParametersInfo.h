@@ -1,0 +1,14 @@
+//
+// Written for the book 
+// Copyright (C) 1999 Unsupported Software Company
+//
+#if !defined(AFX_SYSTEMPARAMETERSINFO_H__44E8F341_0709_11D3_8065_525400DA9DDD__INCLUDED_)
+#define AFX_SYSTEMPARAMETERSINFO_H__44E8F341_0709_11D3_8065_525400DA9DDD__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "resource.h"
+
+#endif // !defined(AFX_SYSTEMPARAMETERSINFO_H__44E8F341_0709_11D3_8065_525400DA9DDD__INCLUDED_)

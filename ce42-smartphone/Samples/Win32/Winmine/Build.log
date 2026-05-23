@@ -1,0 +1,44 @@
+BUILD: Computing Include file dependencies:
+BUILD: Examining f:\main03\developr\hdang\test\exes\winmine directory for files to compile.
+Compiling f:\main03\developr\hdang\test\exes\winmine directory ********************
+'NMAKE.EXE  -i -c BUILDMSG=Stop. NTTEST= UMTEST= NOLINK=1 NOPASS0=1'
+makefile.def: BUILDROOT is F:\Main03\developr\hdang\test\exes
+makefile.def: including F:\Main03\developr\hdang\test\exes\sources.cmn
+makefile.def: including F:\Main03\public\smartfon\oak\misc\makefile.inc
+clarm -nologo    /Gy -Foobj\ARMV4\retail\registry.obj -W3 -c -IARM\ -I. -IF:\Main03\private\apps\inc -IF:\Main03\public\smartfon\oak\inc -IF:\Main03\public\smartfon\sdk\inc -IF:\Main03\public\smartfon\ddk\inc -IF:\Main03\public\mdd\oak\inc -IF:\Main03\public\mdd\sdk\inc -IF:\Main03\public\mdd\ddk\inc -IF:\Main03\public\apps\oak\inc -IF:\Main03\public\apps\sdk\inc -IF:\Main03\public\apps\ddk\inc -IF:\Main03\public\shellw\oak\inc -IF:\Main03\public\shellw\sdk\inc -IF:\Main03\public\shellw\ddk\inc -IF:\Main03\public\ossvcs\oak\inc -IF:\Main03\public\ossvcs\sdk\inc -IF:\Main03\public\ossvcs\ddk\inc -IF:\Main03\public\servers\oak\inc -IF:\Main03\public\servers\sdk\inc -IF:\Main03\public\servers\ddk\inc -IF:\Main03\public\directx\oak\inc -IF:\Main03\public\directx\sdk\inc -IF:\Main03\public\directx\ddk\inc -IF:\Main03\public\ie\oak\inc -IF:\Main03\public\ie\sdk\inc -IF:\Main03\public\ie\ddk\inc -IF:\Main03\public\script\oak\inc -IF:\Main03\public\script\sdk\inc -IF:\Main03\public\script\ddk\inc -IF:\Main03\public\dcom\oak\inc -IF:\Main03\public\dcom\sdk\inc -IF:\Main03\public\dcom\ddk\inc -IF:\Main03\public\smartfon\cesysgen\oak\inc -IF:\Main03\public\smartfon\cesysgen\sdk\inc -IF:\Main03\public\smartfon\cesysgen\ddk\inc -IF:\Main03\sdk\CE\inc -I.\Resource\0409 -Oxs -GF -Zi -FdF:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.pdb -DUNICODE -D_UNICODE -DUNDER_CE -D_WIN32_WCE=420 -DWINCEOEM -DWINCEINTERNAL -DWIN32 -DSTRICT -DARM -DARMV4 -D_ARM_  -DNDEBUG -DCONN_INTERNAL -DWINCEOSVER=420  -DTPC -DWPC -DINTERNATIONAL -DL0409 -DINTLMSG_CODEPAGE=1252 -WX F:\Main03\developr\hdang\test\exes\winmine\.\registry.cpp
+registry.cpp
+Stop.
+Linking f:\main03\developr\hdang\test\exes\winmine directory ********************
+'NMAKE.EXE  -i -c BUILDMSG=Stop. LINKONLY=1 NOPASS0=1 NTTEST= UMTEST='
+makefile.def: BUILDROOT is F:\Main03\developr\hdang\test\exes
+makefile.def: including F:\Main03\developr\hdang\test\exes\sources.cmn
+makefile.def: including F:\Main03\public\smartfon\oak\misc\makefile.inc
+	set LIB=F:\Main03\sdk\CE\lib
+	link /LARGEADDRESSAWARE -out:F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.exe -machine:ARM @C:\DOCUME~1\hdang\LOCALS~1\Temp\nm395C.tmp
+Microsoft (R) Incremental Linker Version 6.24.2064
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+-nodefaultlib 
+-entry:WinMainCRTStartup 
+-debug -debugtype:cv -incremental:no /opt:ref -pdb:F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.pdb 
+-map:F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.map 
+-savebaserelocations:F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.rel 
+-MERGE:.rdata=.text -merge:.astart=.text -MAPINFO:EXPORTS -MAPINFO:LINES -align:4096 -ignore:4001,4070,4078,4086,4089,4096,4099,4108 /STACK:65536,4096 
+-subsystem:windowsce,4.20 
+-base:0x00010000 
+obj\ARMV4\retail\winmine.res obj\ARMV4\retail\main.obj obj\ARMV4\retail\game.obj obj\ARMV4\retail\graphics.obj obj\ARMV4\retail\dialog.obj obj\ARMV4\retail\registry.obj 
+F:\Main03\public\smartfon\cesysgen\oak\lib\ARMV4\retail\ossvcs.lib F:\Main03\public\smartfon\cesysgen\sdk\lib\ARMV4\retail\coredll.lib F:\Main03\public\smartfon\cesysgen\sdk\lib\ARMV4\retail\aygshell.lib F:\Main03\public\smartfon\cesysgen\sdk\lib\ARMV4\retail\corelibc.lib 
+	signbin F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.exe
+SIGNING: 'F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.exe'
+Warning: This file is signed, but not timestamped.
+Succeeded
+	copy F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.exe F:\Main03\release\smartfon\AR11\retail\WinMine.exe
+        1 file(s) copied.
+	copy F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.map F:\Main03\release\smartfon\AR11\retail\WinMine.map
+        1 file(s) copied.
+	copy F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.pdb F:\Main03\release\smartfon\AR11\retail
+        1 file(s) copied.
+	if exist F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.rel copy F:\Main03\public\apps\oak\target\ARMV4\retail\WinMine.rel F:\Main03\release\smartfon\AR11\retail\WinMine.rel
+Stop.
+BUILD: Done
+

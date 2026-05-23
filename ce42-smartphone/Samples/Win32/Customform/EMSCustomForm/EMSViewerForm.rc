@@ -1,0 +1,6 @@
+#include <windows.h>
+#include <aygshell.h>
+#include "resource.h"
+
+IDB_GLYPHS BITMAP DISCARDABLE "images.bmp"
+

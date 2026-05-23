@@ -1,0 +1,74 @@
+// Smile.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (Smile.tlb) that will become a resource in
+// Smile.ocx.
+
+#if defined(_WIN32_WCE) && (_WIN32_WCE < 200)
+#error "This sample can only be compiled for Windows CE 2.0 or later."
+#endif
+
+#include <olectl.h>
+
+[ uuid(181CB000-BEED-11CE-9611-00AA004A75CF), version(1.0),
+  helpstring("Maths2 OLE Custom Control module"), control ]
+library Maths2Lib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CMaths2Ctrl
+
+	[ uuid(181CB001-BEED-11CE-9611-00AA004A75CF),
+	  helpstring("Dispatch interface for Maths2 Control"), hidden ]
+	dispinterface _DMaths2
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CMaths2Ctrl)
+			[id(DISPID_BACKCOLOR), bindable, requestedit] OLE_COLOR BackColor;
+			[id(DISPID_FORECOLOR), bindable, requestedit] OLE_COLOR ForeColor;
+			[id(1)] boolean Opposite;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CMaths2Ctrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CMaths2Ctrl
+
+	[ uuid(181CB002-BEED-11CE-9611-00AA004A75CF),
+	  helpstring("Event interface for Maths2 Control") ]
+	dispinterface _DMaths2Events
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CMaths2Ctrl)
+			[id(1)] void Outside();
+			[id(2)] void Inside(OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CMaths2Ctrl
+
+	[ uuid(181CB003-BEED-11CE-9611-00AA004A75CF),
+	  helpstring("Maths2 Control"), control ]
+	coclass Maths2
+	{
+		[default] dispinterface _DMaths2;
+		[default, source] dispinterface _DMaths2Events;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+};

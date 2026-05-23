@@ -1,0 +1,116 @@
+﻿<?xml version="1.0"?>
+<home>
+	<title lang="0x0409">HelloPlug</title>
+
+	<default font-face="nina" font-size="14" font-weight="bold" padding-left="4" padding-right="4" bgcolor="transparent" fgcolor="COLOR_HOMETEXT" padding-top="2" b-border-color="COLOR_HOMERULE" b-border-width="1">
+		<format state="selected" fgcolor="COLOR_HOMEHIGHLIGHTTEXT"/>
+	</default>
+	<background bgimage="\windows\luna.gif" valign="bottom"/>
+	<scheme>
+		<color name="COLOR_WINDOW" value="#FFFFFF"/>
+		<color name="COLOR_STATIC" value="#FFFFFF"/>
+		<color name="COLOR_STATICTEXT" value="#000000"/>
+		<color name="COLOR_HIGHLIGHT" value="#2A2CC5"/>
+		<color name="COLOR_HIGHLIGHTTEXT" value="#FFFFFF"/>
+		<color name="COLOR_MENU" value="#C7E8FF"/>
+		<color name="COLOR_MENUTEXT" value="#000000"/>
+		<color name="COLOR_GRAYTEXT" value="#808080"/>
+		<color name="COLOR_GRADLEFT" value="#FEFEFF"/>
+		<color name="COLOR_GRADRIGHT" value="#C9D5F4"/>
+		<color name="COLOR_INTGRADLEFT" value="#FEFEFF"/>
+		<color name="COLOR_INTGRADRIGHT" value="#9EDFF7"/>
+		<color name="COLOR_TRAYGRADLEFT" value="#33349A"/>
+		<color name="COLOR_TRAYGRADRIGHT" value="#0198FE"/>
+		<color name="COLOR_HIGHGRADLEFT" value="#2A2CC5"/>
+		<color name="COLOR_HIGHGRADRIGHT" value="#2A2CC5"/>
+		<color name="COLOR_TRAYTEXT" value="#FFFFFF"/>
+		<color name="COLOR_WINDOWFRAME" value="#000000"/>
+		<color name="COLOR_BTNFACE" value="#9EDFF7"/>
+		<color name="COLOR_BTNTEXT" value="#000000"/>
+		<color name="COLOR_SCROLLBAR" value="#91A9E9"/>
+		<color name="COLOR_HOMETEXT" value="#003D79"/>
+		<color name="COLOR_HOMEHIGHLIGHT" value="#2A2CC5"/>
+		<color name="COLOR_HOMEHIGHLIGHTTEXT" value="#FFFFFF"/>
+		<color name="COLOR_HOMERULE" value="#3080CF"/>
+		<color name="COLOR_ALERTWINDOW" value="#E3E9F9"/>
+		<color name="COLOR_ALERTTITLE" value="#2D5DC7"/>
+		<color name="COLOR_ALERTRULE" value="#819AE4"/>
+	</scheme>
+
+	<!-- Here is the sample plugin! -->
+	<plugin clsid="{30DF3430-0266-11cf-BAA6-00AA003E0EED}">
+	</plugin>
+
+	<plugin clsid="{837FC251-FE69-43ad-84E0-EBCEDEBA0884}" name="iconbar" height="20">
+		<iconbar fgcolor="COLOR_TRAYTEXT"/>
+		<background gradient="title" bgcolor="COLOR_TRAYGRADLEFT" b-border-color="COLOR_WINDOWFRAME" b-border-width="1"/>
+	</plugin>
+	<plugin clsid="{79EFB752-CB70-446d-B317-499723482B3D}" name="startmru" height="38">
+		<mru y="2"/>
+	</plugin>
+	<plugin clsid="{E09043DF-510E-4841-B652-388316977A7A}" name="carrier" height="40">
+		<label>
+			<text>Carrier:<carrier/></text>
+		</label>
+		<clock>
+			<time y="17"/>
+		</clock>
+	</plugin>
+	<plugin clsid="{37391041-C324-4725-BEE1-3232ED3539CA}" name="callprog" height="41">
+		<background>
+			<format state="selected" bgcolor="COLOR_HOMEHIGHLIGHT"/>
+		</background>
+		<format state="nocall" visible="false"/>
+		<label>
+			<text lang="0x0409">Call in progress:</text>
+		</label>
+		<label y="17">
+			<text><progress/></text>
+		</label>
+	</plugin>
+	<plugin clsid="{0BA8ABB8-1F1D-417f-88C6-DA8530E2E7A6}" name="missedcalls" height="20">
+		<background>
+			<format state="selected" bgcolor="COLOR_HOMEHIGHLIGHT"/>
+		</background>
+		<format state="nocall" visible="false"/>
+		<label h="16">
+			<text lang="0x0409">Missed calls: <calls/></text>
+		</label>
+	</plugin>
+	<plugin clsid="{2FFD93B3-0FF0-4228-A6D6-D2DF177D7D92}" name="alldayevent" height="20">
+		<background>
+			<format state="selected" bgcolor="COLOR_HOMEHIGHLIGHT"/>
+		</background>
+		<format state="noevent" visible="false"/>
+		<label h="16">
+			<text><subject/></text>
+		</label>
+	</plugin>
+	<plugin clsid="{865A354A-4A96-4687-B001-C155DC0DBE76}" name="calendar" height="40">
+		<background>
+			<format state="selected" bgcolor="COLOR_HOMEHIGHLIGHT"/>
+		</background>
+		<label h="16">
+			<text><subject/></text>
+		</label>
+		<label y="17">
+			<text><time/></text>
+		</label>
+	</plugin>
+	<plugin clsid="{2F930BF0-6FE9-4a53-9E17-88E9247BAB48}" name="msgcount" height="20">
+		<background>
+			<format state="selected" bgcolor="COLOR_HOMEHIGHLIGHT"/>
+		</background>
+		<label>
+			<text lang="0x0409">E-mail (<unreadEmail/>), SMS (<unreadSMS/>)</text>
+		</label>
+	</plugin>
+	<plugin clsid="{95976968-45D5-40c9-9779-2B859B1C2FEC}" name="profile" height="20">
+		<background b-border-width="0">
+			<format state="selected" bgcolor="COLOR_HOMEHIGHLIGHT"/>
+		</background>
+		<label>
+			<text lang="0x0409">Profile: <profile/></text>
+		</label>
+	</plugin>
+</home>

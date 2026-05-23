@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------------------*\
+ *
+ * (c) Copyright Microsoft Corp. 1997 All Rights Reserved
+ *
+ *  module: svcsampl.rc
+ *
+ *  purpose: Sample Service Resource File
+ *
+\*---------------------------------------------------------------------------*/
+
+#include <windows.h>
+#include "svcsampl.h"
+
+STRINGTABLE
+{
+    TRANS_ERR_NONE              "No error"
+    TRANS_ERR_NO_SVC_DIR	"Service directory unavailable."
+    TRANS_ERR_HANDLE_NOT_ALLOC	"Could not allocate memory for service handle."
+    TRANS_ERR_CANT_SEND		"Could not create message file."
+    TRANS_ERR_INV_MSG_ID	"Invalid message ID specified."
+    TRANS_ERR_CANT_OPEN		"Could not open mail message."
+    TRANS_ERR_NO_MSG_BUF	"Could not allocate message buffer."
+    TRANS_ERR_READ		"There was an error reading the message."
+}

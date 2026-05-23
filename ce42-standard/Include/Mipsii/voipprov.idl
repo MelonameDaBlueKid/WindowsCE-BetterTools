@@ -1,0 +1,49 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of your Microsoft Windows CE
+// Source Alliance Program license form.  If you did not accept the terms of
+// such a license, you are not authorized to use this source code.
+//
+// voipprov_idl.inc : IDL source common to all implementors of IVoIPDirectoryClient
+//
+
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "voipmanager.idl";
+[
+    object,
+    uuid(21B9AAE6-4741-44BE-9374-4D56572C3CF3),
+    helpstring("IVoIPDirectoryClient Interface"),
+    pointer_default(unique)
+]
+interface IVoIPDirectoryClient : IUnknown
+{
+    //The DirectoryClient is an interface used exclusively by the voip manager. 
+    //It is responsible for returning the "SipServerParameters" to the voip manager - namely
+    //The URI of the phone, the Server the phone registers with, and the fully qualified
+    //RTC Profile string used for registering an RTC client with a SIP server. The profile
+    //string *must* adhere to the RTC profile XML schema. 
+
+    
+    //put the parameters necessary to authenticate with the *directory client* (if necessary)
+    HRESULT put_RegistrationParameters(
+        [in]DirectoryClientRegParams    *pdcrp
+        );
+
+    //put the password used to register with the *SIP* server
+    HRESULT put_SipPassword(
+        [in] BSTR bstrSipPassword
+        );
+
+    //get the parameters used to register with the SIP Server through RTC
+    HRESULT get_SipServerParameters(
+        [out]BSTR *pbstrMyURI,          //The URI of the phone
+        [out]BSTR *pbstrMyServer,       //The server to call through
+        [out]BSTR *pbstrProfileString   //The RTC XML Profile String 
+        );
+
+};
+

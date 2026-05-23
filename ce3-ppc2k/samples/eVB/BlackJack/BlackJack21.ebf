@@ -1,0 +1,1167 @@
+VERSION 5.00
+Object = "{338D5EA5-4BBD-11D1-9A7D-00C04FAD5AEC}#1.0#0"; "mscepicture.dll"
+Object = "{F7DEA2C9-BA8F-446E-A292-B4840F3BD661}#1.0#0"; "mscemenubar.dll"
+Begin VB.Form frmBlackJack21 
+   Appearance      =   0  'Flat
+   BackColor       =   &H00000000&
+   Caption         =   "BlackJack 21"
+   ClientHeight    =   4020
+   ClientLeft      =   3630
+   ClientTop       =   2100
+   ClientWidth     =   3600
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   4020
+   ScaleWidth      =   3600
+   Begin MenuBarLib.MenuBar MenuBar 
+      Left            =   0
+      Top             =   3690
+      _cx             =   6376
+      _cy             =   450
+      Enabled         =   -1  'True
+      NewButton       =   0   'False
+   End
+   Begin PictureBoxCtl.PictureBox PictureBox1 
+      Height          =   480
+      Left            =   1560
+      TabIndex        =   0
+      Top             =   890
+      Width           =   480
+      _cx             =   847
+      _cy             =   847
+      AutoSize        =   0   'False
+      BackColor       =   16777215
+      BorderStyle     =   0
+      DrawMode        =   13
+      DrawStyle       =   0
+      DrawWidth       =   1
+      FillColor       =   0
+      FillStyle       =   1
+      ForeColor       =   -2147483640
+      FontBold        =   -1  'True
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontTransparent =   -1  'True
+      Object.Height          =   32
+      Object.Width           =   32
+      Object.Left            =   104
+      Object.Top             =   59
+      Picture         =   ""
+      ScaleHeight     =   480
+      ScaleWidth      =   480
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   1
+      Enabled         =   -1  'True
+   End
+   Begin VBCE.CommandButton cmdDeal 
+      Height          =   240
+      Left            =   2520
+      TabIndex        =   15
+      Top             =   1395
+      Width           =   735
+      _cx             =   1296
+      _cy             =   423
+      BackColor       =   12632256
+      Caption         =   "Deal"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdStay 
+      Height          =   240
+      Left            =   2520
+      TabIndex        =   13
+      Top             =   1080
+      Width           =   735
+      _cx             =   1296
+      _cy             =   423
+      BackColor       =   12632256
+      Caption         =   "Stay"
+      Enabled         =   0   'False
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdHitMe 
+      Height          =   240
+      Left            =   2520
+      TabIndex        =   11
+      Top             =   765
+      Width           =   735
+      _cx             =   1296
+      _cy             =   423
+      BackColor       =   12632256
+      Caption         =   "Hit Me"
+      Enabled         =   0   'False
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.Label Label20 
+      Height          =   285
+      Left            =   1200
+      TabIndex        =   14
+      Top             =   2040
+      Visible         =   0   'False
+      Width           =   195
+      _cx             =   344
+      _cy             =   503
+      AutoSize        =   0   'False
+      BackColor       =   14737632
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblTitle 
+      Height          =   255
+      Left            =   1150
+      TabIndex        =   12
+      Top             =   240
+      Width           =   1335
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "BlackJack 21"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   16744576
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VB.Shape Shape2 
+      FillColor       =   &H00FF0000&
+      FillStyle       =   0  'Solid
+      Height          =   375
+      Left            =   1680
+      Top             =   1440
+      Width           =   255
+   End
+   Begin VBCE.Label Label10 
+      Height          =   300
+      Left            =   2400
+      TabIndex        =   10
+      Top             =   3240
+      Visible         =   0   'False
+      Width           =   255
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label9 
+      Height          =   300
+      Left            =   2040
+      TabIndex        =   9
+      Top             =   3240
+      Visible         =   0   'False
+      Width           =   255
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label8 
+      Height          =   300
+      Left            =   1680
+      TabIndex        =   8
+      Top             =   3240
+      Visible         =   0   'False
+      Width           =   255
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label7 
+      Height          =   300
+      Left            =   1320
+      TabIndex        =   7
+      Top             =   3240
+      Visible         =   0   'False
+      Width           =   255
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label6 
+      Height          =   300
+      Left            =   945
+      TabIndex        =   6
+      Top             =   3240
+      Visible         =   0   'False
+      Width           =   255
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label5 
+      Height          =   285
+      Left            =   2160
+      TabIndex        =   5
+      Top             =   2025
+      Visible         =   0   'False
+      Width           =   195
+      _cx             =   344
+      _cy             =   503
+      AutoSize        =   0   'False
+      BackColor       =   14737632
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label4 
+      Height          =   285
+      Left            =   1920
+      TabIndex        =   4
+      Top             =   2025
+      Visible         =   0   'False
+      Width           =   195
+      _cx             =   344
+      _cy             =   503
+      AutoSize        =   0   'False
+      BackColor       =   14737632
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label3 
+      Height          =   285
+      Left            =   1680
+      TabIndex        =   3
+      Top             =   2025
+      Visible         =   0   'False
+      Width           =   195
+      _cx             =   344
+      _cy             =   503
+      AutoSize        =   0   'False
+      BackColor       =   14737632
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label2 
+      Height          =   285
+      Left            =   1440
+      TabIndex        =   2
+      Top             =   2025
+      Visible         =   0   'False
+      Width           =   195
+      _cx             =   344
+      _cy             =   503
+      AutoSize        =   0   'False
+      BackColor       =   14737632
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label1 
+      Height          =   285
+      Left            =   1200
+      TabIndex        =   1
+      Top             =   2025
+      Visible         =   0   'False
+      Width           =   195
+      _cx             =   344
+      _cy             =   503
+      AutoSize        =   0   'False
+      BackColor       =   14737632
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VB.Shape Shape17 
+      FillColor       =   &H000080FF&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   2280
+      Shape           =   3  'Circle
+      Top             =   480
+      Width           =   135
+   End
+   Begin VB.Shape Shape16 
+      FillColor       =   &H000000FF&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   1200
+      Shape           =   3  'Circle
+      Top             =   480
+      Width           =   135
+   End
+   Begin VB.Shape Shape15 
+      FillColor       =   &H00FFC0FF&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   2280
+      Shape           =   3  'Circle
+      Top             =   120
+      Width           =   135
+   End
+   Begin VB.Shape Shape14 
+      FillColor       =   &H00FFC0C0&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   1200
+      Shape           =   3  'Circle
+      Top             =   120
+      Width           =   135
+   End
+   Begin VB.Shape Shape13 
+      FillColor       =   &H0000FF00&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   2770
+      Shape           =   3  'Circle
+      Top             =   300
+      Width           =   135
+   End
+   Begin VB.Shape Shape12 
+      FillColor       =   &H00FF0000&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   720
+      Shape           =   3  'Circle
+      Top             =   300
+      Width           =   135
+   End
+   Begin VB.Shape Shape11 
+      FillColor       =   &H00FF80FF&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   2640
+      Shape           =   3  'Circle
+      Top             =   480
+      Width           =   135
+   End
+   Begin VB.Shape Shape10 
+      FillColor       =   &H00FFFF80&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   1740
+      Shape           =   3  'Circle
+      Top             =   480
+      Width           =   135
+   End
+   Begin VB.Shape Shape9 
+      FillColor       =   &H0080FF80&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   840
+      Shape           =   3  'Circle
+      Top             =   480
+      Width           =   135
+   End
+   Begin VB.Shape Shape8 
+      FillColor       =   &H0080FFFF&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   2640
+      Shape           =   3  'Circle
+      Top             =   120
+      Width           =   135
+   End
+   Begin VB.Shape Shape7 
+      FillColor       =   &H0080C0FF&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   1740
+      Shape           =   3  'Circle
+      Top             =   120
+      Width           =   135
+   End
+   Begin VB.Shape Shape6 
+      FillColor       =   &H008080FF&
+      FillStyle       =   0  'Solid
+      Height          =   135
+      Left            =   840
+      Shape           =   3  'Circle
+      Top             =   120
+      Width           =   135
+   End
+   Begin VB.Shape Shape5 
+      FillColor       =   &H00C0E0FF&
+      FillStyle       =   0  'Solid
+      Height          =   220
+      Left            =   1740
+      Shape           =   2  'Oval
+      Top             =   1340
+      Width           =   135
+   End
+   Begin VB.Shape Shape4 
+      FillColor       =   &H00C0E0FF&
+      FillStyle       =   0  'Solid
+      Height          =   120
+      Left            =   1320
+      Shape           =   2  'Oval
+      Top             =   1500
+      Width           =   375
+   End
+   Begin VB.Shape Shape3 
+      FillColor       =   &H00C0E0FF&
+      FillStyle       =   0  'Solid
+      Height          =   120
+      Left            =   1920
+      Shape           =   2  'Oval
+      Top             =   1500
+      Width           =   375
+   End
+   Begin VB.Line Line4 
+      BorderColor     =   &H000080FF&
+      BorderWidth     =   2
+      X1              =   2640
+      X2              =   2640
+      Y1              =   2400
+      Y2              =   2880
+   End
+   Begin VB.Line Line3 
+      BorderColor     =   &H000080FF&
+      BorderWidth     =   2
+      X1              =   960
+      X2              =   960
+      Y1              =   2400
+      Y2              =   2880
+   End
+   Begin VB.Line Line2 
+      BorderColor     =   &H000080FF&
+      BorderWidth     =   3
+      X1              =   2160
+      X2              =   2160
+      Y1              =   2520
+      Y2              =   3000
+   End
+   Begin VB.Line Line1 
+      BorderColor     =   &H000080FF&
+      BorderWidth     =   3
+      X1              =   1440
+      X2              =   1440
+      Y1              =   2520
+      Y2              =   3000
+   End
+   Begin VB.Shape Shape1 
+      FillColor       =   &H000040C0&
+      FillStyle       =   0  'Solid
+      Height          =   735
+      Left            =   720
+      Shape           =   2  'Oval
+      Top             =   1800
+      Width           =   2175
+   End
+End
+Attribute VB_Name = "frmBlackJack21"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Option Explicit
+
+Private Sub cmdDeal_Click()
+    Call StartNewGame
+End Sub
+
+Private Sub cmdStay_Click()
+    cmdHitMe.Enabled = False
+    Label20.Visible = False
+    Call InitialCardValue
+    
+    c11 = ComputerCard(0)
+    c22 = ComputerCard(1)
+    c33 = ComputerCard(2)
+    c44 = ComputerCard(3)
+    c55 = ComputerCard(4)
+    
+    If c1 = 1 Then
+        ComputerHand5 = ComputerHand5 + 10
+        If ComputerHand5 >= 22 Then
+            ComputerHand5 = ComputerHand5 - 10
+        End If
+    End If
+    If c2 = 1 Then
+        ComputerHand5 = ComputerHand5 + 10
+        If ComputerHand5 >= 22 Then
+            ComputerHand5 = ComputerHand5 - 10
+        End If
+    End If
+    If c3 = 1 Then
+        ComputerHand5 = ComputerHand5 + 10
+        If ComputerHand5 >= 22 Then
+            ComputerHand5 = ComputerHand5 - 10
+        End If
+    End If
+    If c4 = 1 Then
+        ComputerHand5 = ComputerHand5 + 10
+        If ComputerHand5 >= 22 Then
+            ComputerHand5 = ComputerHand5 - 10
+        End If
+    End If
+    If c5 = 1 Then
+        ComputerHand5 = ComputerHand5 + 10
+        If ComputerHand5 >= 22 Then
+            ComputerHand5 = ComputerHand5 - 10
+        End If
+    End If
+    
+    While (ComputerHand2 < 17) And (ComputerHand3 < 17) And (ComputerHand4 < 17) And (ComputerHand5 < 17)
+        Call GenerateCards(1)
+        Call InitialCardValue
+        If c11 = 1 Then
+            ComputerHand5 = ComputerHand5 + 10
+            If ComputerHand5 >= 22 Then
+                ComputerHand5 = ComputerHand5 - 10
+            End If
+        End If
+        If c22 = 1 Then
+            ComputerHand5 = ComputerHand5 + 10
+            If ComputerHand5 >= 22 Then
+                ComputerHand5 = ComputerHand5 - 10
+            End If
+        End If
+        If c33 = 1 Then
+            ComputerHand5 = ComputerHand5 + 10
+            If ComputerHand5 >= 22 Then
+                ComputerHand5 = ComputerHand5 - 10
+            End If
+        End If
+        If c44 = 1 Then
+            ComputerHand5 = ComputerHand5 + 10
+            If ComputerHand5 >= 22 Then
+                ComputerHand5 = ComputerHand5 - 10
+            End If
+        End If
+        If c55 = 1 Then
+            ComputerHand5 = ComputerHand5 + 10
+            If ComputerHand5 >= 22 Then
+                ComputerHand5 = ComputerHand5 - 10
+            End If
+        End If
+    Wend
+    Call CheckCardHand
+End Sub
+
+Private Sub Form_Load()
+    frmAbout.Hide
+    
+    Dim strPath As String
+    strPath = App.Path
+    If strPath = "\" Then
+    strPath = ""
+    End If
+    
+    PictureBox1.Picture = strPath & "\Smile2.bmp"
+    PositionComputer = 1
+    PositionPlayer = 1
+    Call InitializeMenu
+End Sub
+
+Private Sub cmdHitMe_Click()
+    If PositionPlayer <= 5 Then
+        Call GenerateCards(2)
+    Else
+        MsgBox "Can't draw anymore cards", vbOKOnly, "Message from Dealer"
+    End If
+    Call CheckPlayerOver
+End Sub
+
+Private Sub HideCards()
+    'Hide the cards on computer's side
+    Label1.Visible = False
+    Label20.Visible = False
+    Label2.Visible = False
+    Label3.Visible = False
+    Label4.Visible = False
+    Label5.Visible = False
+    
+    'Hide the cards on the player's side
+    Label6.Visible = False
+    Label7.Visible = False
+    Label8.Visible = False
+    Label9.Visible = False
+    Label10.Visible = False
+End Sub
+
+Private Sub SelectCardPlayer(CardToPick As Integer)
+    If PositionPlayer < 6 Then
+        Select Case PositionPlayer
+            Case 1
+                Label6.Visible = True
+                Label6.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 2
+                Label7.Visible = True
+                Label7.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 3
+                Label8.Visible = True
+                Label8.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 4
+                Label9.Visible = True
+                Label9.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 5
+                Label10.Visible = True
+                Label10.Caption = CStr(CheckHigherCard(CardToPick))
+        End Select
+        If CardToPick > 10 Then
+            PlayerCard(PositionPlayer - 1) = 10
+        Else
+            PlayerCard(PositionPlayer - 1) = CardToPick
+        End If
+        PositionPlayer = PositionPlayer + 1
+    End If
+End Sub
+
+Private Sub SelectCardComputer(CardToPick As Integer)
+    If PositionComputer < 6 Then
+        Select Case PositionComputer
+            Case 1
+                Label1.Visible = True
+                Label20.Visible = True
+                Label1.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 2
+                Label2.Visible = True
+                Label2.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 3
+                Label3.Visible = True
+                Label3.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 4
+                Label4.Visible = True
+                Label4.Caption = CStr(CheckHigherCard(CardToPick))
+            Case 5
+                Label5.Visible = True
+                Label5.Caption = CStr(CheckHigherCard(CardToPick))
+        End Select
+        If CardToPick > 10 Then
+            ComputerCard(PositionComputer - 1) = 10
+        Else
+            ComputerCard(PositionComputer - 1) = CardToPick
+        End If
+        PositionComputer = PositionComputer + 1
+    End If
+End Sub
+
+Private Sub GenerateCards(GenerateCode As Integer)
+    Dim Card As Integer
+    
+    Randomize
+    Card = Int((13 * Rnd + 1))
+    
+    If GenerateCode = 1 Then
+        Call SelectCardComputer(Card)
+    End If
+    
+    If GenerateCode = 2 Then
+        Call SelectCardPlayer(Card)
+    End If
+End Sub
+
+Private Sub StartGame()
+    Dim I As Integer
+    Dim N As Integer
+    
+    'Generate the cards for the computer
+    For I = 1 To 2
+        Call GenerateCards(1)
+    Next I
+    
+    'Generate the cards for the player
+    For N = 1 To 2
+        Call GenerateCards(2)
+    Next N
+    cmdHitMe.Enabled = True
+    cmdStay.Enabled = True
+End Sub
+
+Private Function CheckHigherCard(CheckCard As Integer) As String
+    If (CheckCard > 1) And (CheckCard < 11) Then
+        CheckHigherCard = CStr(CheckCard)
+    Else
+        Select Case CheckCard
+            Case 1
+                CheckHigherCard = "A"
+            Case 11
+                CheckHigherCard = "J"
+            Case 12
+                CheckHigherCard = "Q"
+            Case 13
+                CheckHigherCard = "K"
+        End Select
+    End If
+End Function
+
+Private Sub CheckCardHand()
+    Dim Response As Integer
+    
+    Call InitialCardValue
+       
+    If p1 = 1 Then
+        PlayerHand5 = PlayerHand5 + 10
+        If PlayerHand5 >= 22 Then
+            PlayerHand5 = PlayerHand5 - 10
+        End If
+    End If
+    If p2 = 1 Then
+        PlayerHand5 = PlayerHand5 + 10
+        If PlayerHand5 >= 22 Then
+            PlayerHand5 = PlayerHand5 - 10
+        End If
+    End If
+    If p3 = 1 Then
+        PlayerHand5 = PlayerHand5 + 10
+        If PlayerHand5 >= 22 Then
+            PlayerHand5 = PlayerHand5 - 10
+        End If
+    End If
+    If p4 = 1 Then
+        PlayerHand5 = PlayerHand5 + 10
+        If PlayerHand5 >= 22 Then
+            PlayerHand5 = PlayerHand5 - 10
+        End If
+    End If
+    If p5 = 1 Then
+        PlayerHand5 = PlayerHand5 + 10
+        If PlayerHand5 >= 22 Then
+            PlayerHand5 = PlayerHand5 - 10
+        End If
+    End If
+    
+    If (ComputerHand2 > PlayerHand5 And ComputerHand2 >= 17) And (ComputerHand2 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand2 & ". Computer wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (ComputerHand3 > PlayerHand5 And ComputerHand3 >= 17) And (ComputerHand3 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand3 & ". Computer wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (ComputerHand4 > PlayerHand5 And ComputerHand4 >= 17) And (ComputerHand4 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand4 & ". Computer wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (ComputerHand5 > PlayerHand5 And ComputerHand5 >= 17) And (ComputerHand5 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand5 & ". Computer wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand2 > ComputerHand5) And (PlayerHand5 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player has " & PlayerHand5 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand3 > ComputerHand5) And (PlayerHand3 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player has " & PlayerHand5 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand4 > ComputerHand5) And (PlayerHand4 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player has " & PlayerHand5 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand5 > ComputerHand5) And (PlayerHand5 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player has " & PlayerHand5 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand2 = ComputerHand5) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player and Computer both have " & PlayerHand5 & ". Push!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand3 = ComputerHand5) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player and Computer both have " & PlayerHand3 & ". Push!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand4 = ComputerHand5) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player and Computer both have " & PlayerHand4 & ". Push!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (PlayerHand5 = ComputerHand5) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Player and Computer both have " & PlayerHand5 & ". Push!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (ComputerHand2 >= 22) And (PlayerHand5 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand2 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (ComputerHand3 >= 22) And (PlayerHand5 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand3 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (ComputerHand4 >= 22) And (PlayerHand5 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand4 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    ElseIf (ComputerHand5 >= 22) And (PlayerHand5 < 22) Then
+        Label20.Visible = False
+        cmdStay.Enabled = False
+        MsgBox "Computer has " & ComputerHand5 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    End If
+End Sub
+
+Private Sub MenuBar_MenuClick(ByVal Item As MenuBarLib.Item)
+    Dim Response As Integer
+    
+    Select Case Item.Caption
+        'Exit the game
+        Case "Exit"
+            Response = MsgBox("Do you want to quit the game?", vbYesNo, "Black Jack 21")
+            If Response = 6 Then
+                App.End
+            End If
+        'Start the game
+        Case "Start"
+            Call StartNewGame
+        Case "About BlackJack 21"
+            frmAbout.Show
+    End Select
+End Sub
+
+Sub StartNewGame()
+    PositionComputer = 1
+    PositionPlayer = 1
+    Label20.Visible = True
+    Call InitializeArray
+    Call HideCards
+    Call StartGame
+    Call PlayerComputerTwentyOne
+End Sub
+
+Private Sub InitializeMenu()
+    'Initialize the menubar items
+    Dim MenuItems
+   
+    Set MenuItems = frmBlackJack21.MenuBar.Controls.AddMenu("File")
+    MenuItems.Items.Add , , "Exit"
+
+    Set MenuItems = frmBlackJack21.MenuBar.Controls.AddMenu("Game")
+    MenuItems.Items.Add , , "Start"
+
+    Set MenuItems = frmBlackJack21.MenuBar.Controls.AddMenu("Help")
+    MenuItems.Items.Add , , "About BlackJack 21"
+
+End Sub
+
+Private Sub InitializeArray()
+    Dim I As Integer
+    Dim N As Integer
+    
+    For I = 0 To 4
+        ComputerCard(I) = 0
+    Next I
+    
+    For N = 0 To 4
+        PlayerCard(N) = 0
+    Next N
+End Sub
+
+Private Sub CheckPlayerOver()
+    Call InitialCardValue
+    If PlayerHand5 > 21 Then
+        MsgBox "Player has " & PlayerHand5 & ". Computer Wins.", vbOKOnly, "Message"
+    End If
+End Sub
+    
+Private Sub InitialCardValue()
+    c1 = ComputerCard(0)
+    c2 = ComputerCard(1)
+    c3 = ComputerCard(2)
+    c4 = ComputerCard(3)
+    c5 = ComputerCard(4)
+    
+    p1 = PlayerCard(0)
+    p2 = PlayerCard(1)
+    p3 = PlayerCard(2)
+    p4 = PlayerCard(3)
+    p5 = PlayerCard(4)
+    
+    PlayerHand5 = p1 + p2
+    ComputerHand2 = c1 + c2
+    
+    PlayerHand3 = p1 + p2 + p3
+    ComputerHand3 = c1 + c2 + c3
+    
+    PlayerHand4 = p1 + p2 + p3 + p4
+    ComputerHand4 = c1 + c2 + c3 + c4
+    
+    PlayerHand5 = p1 + p2 + p3 + p4 + p5
+    ComputerHand5 = c1 + c2 + c3 + c4 + c5
+End Sub
+
+Private Sub PlayerComputerTwentyOne()
+    Dim temp1 As Integer
+    Dim temp2 As Integer
+    
+    ptemp1 = PlayerCard(0)
+    ptemp2 = PlayerCard(1)
+    ctemp1 = ComputerCard(0)
+    ctemp2 = ComputerCard(1)
+    
+    temp1 = ptemp1 + ptemp2
+    temp2 = ctemp1 + ctemp2
+    
+    If (temp1 = 21) And (temp2 = 21) Then
+        cmdHitMe.Enabled = False
+        cmdStay.Enabled = False
+        Label20.Visible = False
+        PlayerHand5 = 21
+        MsgBox "Player and Computer have " & PlayerHand5 & ". Push!", vbOKOnly, "Message"
+        Exit Sub
+    End If
+    If (ctemp1 = 1) And (ctemp2 = 10) Then
+        cmdHitMe.Enabled = False
+        cmdStay.Enabled = False
+        Label20.Visible = False
+        ComputerHand5 = 21
+        MsgBox "Computer has " & ComputerHand5 & ". Computer wins!", vbOKOnly, "Message"
+        Exit Sub
+    End If
+    If (ctemp1 = 10) And (ctemp2 = 1) Then
+        cmdHitMe.Enabled = False
+        cmdStay.Enabled = False
+        Label20.Visible = False
+        ComputerHand5 = 21
+        MsgBox "Computer has " & ComputerHand5 & ". Computer wins!", vbOKOnly, "Message"
+        Exit Sub
+    End If
+    If (ptemp1 = 1) And (ptemp2 = 10) Then
+        cmdHitMe.Enabled = False
+        cmdStay.Enabled = False
+        Label20.Visible = False
+        PlayerHand5 = 21
+        MsgBox "Player has " & PlayerHand5 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    End If
+    If (ptemp1 = 10) And (ptemp2 = 1) Then
+        cmdHitMe.Enabled = False
+        cmdStay.Enabled = False
+        Label20.Visible = False
+        PlayerHand5 = 21
+        MsgBox "Player has " & PlayerHand5 & ". Player wins!", vbOKOnly, "Message"
+        Exit Sub
+    End If
+End Sub
+
+
+
+
+

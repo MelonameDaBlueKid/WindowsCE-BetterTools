@@ -1,0 +1,1959 @@
+VERSION 5.00
+Object = "{338D5EA5-4BBD-11D1-9A7D-00C04FAD5AEC}#1.0#0"; "mscepicture.dll"
+Object = "{BE67ABF5-0137-11D2-9B8A-00C04FAD5AEC}#1.0#0"; "mscecommandbar.dll"
+Begin VB.Form frmMain 
+   BackColor       =   &H8000000A&
+   Caption         =   "Game Demo"
+   ClientHeight    =   2535
+   ClientLeft      =   60
+   ClientTop       =   630
+   ClientWidth     =   7080
+   ScaleHeight     =   2535
+   ScaleWidth      =   7080
+   Begin CommandbarLib.CommandBar cmdBar 
+      Height          =   345
+      Left            =   0
+      TabIndex        =   38
+      Top             =   0
+      Width           =   7095
+      _cx             =   12515
+      _cy             =   600
+      Enabled         =   -1  'True
+      OKButton        =   0   'False
+      HelpButton      =   0   'False
+      CloseButton     =   0   'False
+   End
+   Begin PictureBoxCtl.PictureBox imgD1 
+      Height          =   390
+      Left            =   1080
+      TabIndex        =   39
+      Top             =   600
+      Width           =   390
+      _cx             =   688
+      _cy             =   688
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BorderStyle     =   0
+      DrawMode        =   13
+      DrawStyle       =   0
+      DrawWidth       =   2
+      FillColor       =   0
+      FillStyle       =   1
+      ForeColor       =   0
+      FontBold        =   -1  'True
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontTransparent =   -1  'True
+      Object.Height          =   26
+      Object.Width           =   26
+      Object.Left            =   72
+      Object.Top             =   40
+      Picture         =   ""
+      ScaleHeight     =   390
+      ScaleWidth      =   390
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   1
+      Enabled         =   -1  'True
+   End
+   Begin PictureBoxCtl.PictureBox imgD2 
+      Height          =   390
+      Left            =   1560
+      TabIndex        =   40
+      Top             =   600
+      Width           =   390
+      _cx             =   688
+      _cy             =   688
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BorderStyle     =   0
+      DrawMode        =   13
+      DrawStyle       =   0
+      DrawWidth       =   2
+      FillColor       =   0
+      FillStyle       =   1
+      ForeColor       =   0
+      FontBold        =   -1  'True
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontTransparent =   -1  'True
+      Object.Height          =   26
+      Object.Width           =   26
+      Object.Left            =   104
+      Object.Top             =   40
+      Picture         =   ""
+      ScaleHeight     =   390
+      ScaleWidth      =   390
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   1
+      Enabled         =   -1  'True
+   End
+   Begin PictureBoxCtl.PictureBox imgD3 
+      Height          =   390
+      Left            =   2040
+      TabIndex        =   41
+      Top             =   600
+      Width           =   390
+      _cx             =   688
+      _cy             =   688
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BorderStyle     =   0
+      DrawMode        =   13
+      DrawStyle       =   0
+      DrawWidth       =   2
+      FillColor       =   0
+      FillStyle       =   1
+      ForeColor       =   0
+      FontBold        =   -1  'True
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontTransparent =   -1  'True
+      Object.Height          =   26
+      Object.Width           =   26
+      Object.Left            =   136
+      Object.Top             =   40
+      Picture         =   ""
+      ScaleHeight     =   390
+      ScaleWidth      =   390
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   1
+      Enabled         =   -1  'True
+   End
+   Begin PictureBoxCtl.PictureBox imgD4 
+      Height          =   390
+      Left            =   2520
+      TabIndex        =   42
+      Top             =   600
+      Width           =   390
+      _cx             =   688
+      _cy             =   688
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BorderStyle     =   0
+      DrawMode        =   13
+      DrawStyle       =   0
+      DrawWidth       =   2
+      FillColor       =   0
+      FillStyle       =   1
+      ForeColor       =   0
+      FontBold        =   -1  'True
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontTransparent =   -1  'True
+      Object.Height          =   26
+      Object.Width           =   26
+      Object.Left            =   168
+      Object.Top             =   40
+      Picture         =   ""
+      ScaleHeight     =   390
+      ScaleWidth      =   390
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   1
+      Enabled         =   -1  'True
+   End
+   Begin PictureBoxCtl.PictureBox imgD5 
+      Height          =   390
+      Left            =   3000
+      TabIndex        =   43
+      Top             =   600
+      Width           =   390
+      _cx             =   688
+      _cy             =   688
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BorderStyle     =   0
+      DrawMode        =   13
+      DrawStyle       =   0
+      DrawWidth       =   2
+      FillColor       =   0
+      FillStyle       =   1
+      ForeColor       =   0
+      FontBold        =   -1  'True
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontTransparent =   -1  'True
+      Object.Height          =   26
+      Object.Width           =   26
+      Object.Left            =   200
+      Object.Top             =   40
+      Picture         =   ""
+      ScaleHeight     =   390
+      ScaleWidth      =   390
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   1
+      Enabled         =   -1  'True
+   End
+   Begin VBCE.CommandButton cmdTwo 
+      Height          =   240
+      Left            =   1680
+      TabIndex        =   13
+      Top             =   1290
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "2's"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdThree 
+      Height          =   240
+      Left            =   2400
+      TabIndex        =   12
+      Top             =   1290
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "3's"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdFour 
+      Height          =   240
+      Left            =   3120
+      TabIndex        =   11
+      Top             =   1290
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "4's"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdFive 
+      Height          =   240
+      Left            =   3840
+      TabIndex        =   10
+      Top             =   1290
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "5's"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdSix 
+      Height          =   240
+      Left            =   4560
+      TabIndex        =   9
+      Top             =   1290
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "6's"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmd3K 
+      Height          =   240
+      Left            =   960
+      TabIndex        =   8
+      Top             =   2010
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "3 Kind"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmd4K 
+      Height          =   240
+      Left            =   1680
+      TabIndex        =   7
+      Top             =   2010
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "4 Kind"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdSS 
+      Height          =   240
+      Left            =   2400
+      TabIndex        =   6
+      Top             =   2010
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Sm Str"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdLS 
+      Height          =   240
+      Left            =   3120
+      TabIndex        =   5
+      Top             =   2010
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Lg Str"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdFH 
+      Height          =   240
+      Left            =   3840
+      TabIndex        =   4
+      Top             =   2010
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Full Hs"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdSweep 
+      Height          =   240
+      Left            =   4560
+      TabIndex        =   3
+      Top             =   2010
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Sweep"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdChance 
+      Height          =   240
+      Left            =   5280
+      TabIndex        =   2
+      Top             =   2010
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Chance"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdOne 
+      Height          =   240
+      Left            =   960
+      TabIndex        =   1
+      Top             =   1290
+      Width           =   675
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "1's"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.CommandButton cmdRoll 
+      Height          =   375
+      Left            =   120
+      TabIndex        =   0
+      Top             =   600
+      Width           =   855
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "Roll 1"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.Label Label2 
+      Height          =   645
+      Left            =   3465
+      TabIndex        =   37
+      Top             =   420
+      Width           =   2445
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Label2"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1Tot 
+      Height          =   285
+      Left            =   5985
+      TabIndex        =   36
+      Top             =   645
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   "0"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label1 
+      Height          =   195
+      Left            =   6000
+      TabIndex        =   35
+      Top             =   360
+      Width           =   570
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Total"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP11 
+      Height          =   240
+      Left            =   960
+      TabIndex        =   34
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP12 
+      Height          =   240
+      Left            =   1680
+      TabIndex        =   33
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP13 
+      Height          =   240
+      Left            =   2400
+      TabIndex        =   32
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP14 
+      Height          =   240
+      Left            =   3120
+      TabIndex        =   31
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP15 
+      Height          =   240
+      Left            =   3840
+      TabIndex        =   30
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP16 
+      Height          =   240
+      Left            =   4560
+      TabIndex        =   29
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP13K 
+      Height          =   240
+      Left            =   960
+      TabIndex        =   28
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP14K 
+      Height          =   240
+      Left            =   1680
+      TabIndex        =   27
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1SS 
+      Height          =   240
+      Left            =   2400
+      TabIndex        =   26
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1LS 
+      Height          =   240
+      Left            =   3120
+      TabIndex        =   25
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1FH 
+      Height          =   240
+      Left            =   3840
+      TabIndex        =   24
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1Sweep 
+      Height          =   240
+      Left            =   4560
+      TabIndex        =   23
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1Chance 
+      Height          =   240
+      Left            =   5280
+      TabIndex        =   22
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483639
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblTotBtm 
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   21
+      Top             =   2010
+      Width           =   765
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "SubTotal"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblTotTop 
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   20
+      Top             =   1290
+      Width           =   765
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "SubTotal"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblBonus 
+      Height          =   240
+      Left            =   5280
+      TabIndex        =   19
+      Top             =   1290
+      Width           =   585
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   0
+      AutoSize        =   0   'False
+      BackColor       =   -2147483644
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Bonus"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1B 
+      Height          =   240
+      Left            =   120
+      TabIndex        =   18
+      Top             =   2295
+      Width           =   735
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Player 1"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1T 
+      Height          =   240
+      Left            =   120
+      TabIndex        =   17
+      Top             =   1575
+      Width           =   735
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Player 1"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1Bonus 
+      Height          =   240
+      Left            =   5280
+      TabIndex        =   16
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   ""
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1TopTot 
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   15
+      Top             =   1575
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   "0"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblP1BtmTot 
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   14
+      Top             =   2295
+      Width           =   675
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483638
+      BackStyle       =   1
+      BorderStyle     =   1
+      Caption         =   "0"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VB.Line Line1 
+      X1              =   120
+      X2              =   6840
+      Y1              =   1125
+      Y2              =   1125
+   End
+End
+Attribute VB_Name = "frmMain"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'********************************************************************************
+'*
+'*  Dice - Main form code
+'*
+'*  Copyright (c) 1998 Microsoft Corporation
+
+Option Explicit
+
+Dim RollCount
+Dim DiceVals(5)
+Dim DieLocked(5)
+Const Bonus = 35
+Dim sumDice
+Dim DieNum
+Dim Small
+Dim Large
+Dim isTwoKind
+Dim isThreeKind
+Dim isFourKind
+Dim isYahtzee
+Dim TurnOver
+Dim CatLeft
+Dim ImgWidth
+Dim ImgHeight
+
+Private Sub cmdBar_MenuClick(ByVal Item As CommandbarLib.Item)
+  Select Case Item.Key
+  Case "New"
+    NewGame
+  Case "About"
+    frmAbout.Show
+  Case "Exit"
+    App.End
+  End Select
+End Sub
+
+Private Sub cmdRoll_Click()
+    TurnOver = "False"
+    'Increment the roll counter
+    RollCount = RollCount + 1
+    'unfreeze dice to enable selection
+    imgD1.Enabled = True
+    imgD2.Enabled = True
+    imgD3.Enabled = True
+    imgD4.Enabled = True
+    imgD5.Enabled = True
+    PlayWaveFile (App.Path & "rolldice.wav")
+    'check for which roll we're on
+    Select Case RollCount
+        Case 1, 2
+            cmdRoll.Caption = "Roll " & RollCount + 1
+            RollDice
+        Case 3
+            RollDice
+            cmdRoll.Caption = "Roll 1"
+            cmdRoll.Enabled = False
+            RollCount = 0
+            Exit Sub
+    End Select
+End Sub
+
+Private Sub Form_Load()
+    imgD1.Top = -100
+    imgD2.Top = -100
+    imgD3.Top = -100
+    imgD4.Top = -100
+    imgD5.Top = -100
+    imgD1.Top = 600
+    imgD2.Top = 600
+    imgD3.Top = 600
+    imgD4.Top = 600
+    imgD5.Top = 600
+    
+    cmdBar.Left = 0
+    cmdBar.Top = 0
+    cmdBar.Width = Me.Width
+
+    Dim mnuMain As CommandbarLib.CommandBarMenuBar
+    Dim mnuFile As CommandbarLib.Item
+    
+    Set mnuMain = cmdBar.Controls.Add(cbrMenuBar, "MainMenu")
+    'add File menu items
+    Set mnuFile = mnuMain.Items.Add(1, "File", "&File")
+    mnuFile.SubItems.Add , "New", "&New"
+    mnuFile.SubItems.Add , "", "", cbrMenuSeparator
+    mnuFile.SubItems.Add , "About", "&About"
+    mnuFile.SubItems.Add , "", "", cbrMenuSeparator
+    mnuFile.SubItems.Add , "Exit", "E&xit"
+    
+    'initialize variables
+    RollCount = 0
+    CatLeft = 13
+    ImgWidth = imgD1.Width
+    ImgHeight = imgD1.Height
+    DieLocked(1) = False
+    DieLocked(2) = False
+    DieLocked(3) = False
+    DieLocked(4) = False
+    DieLocked(5) = False
+    'set totals and subtotals to zero
+    lblP1Tot.Caption = 0
+    lblP1TopTot.Caption = 0
+    lblP1BtmTot.Caption = 0
+    'set label caption
+    Label2.Caption = "Click the dice to freeze them." _
+        & vbCrLf & "Select the buttons below" _
+        & vbCrLf & "to record your score."
+    FreezeDice
+End Sub
+
+Sub ResetRoll()
+    'this routine resets all necessary UI objects after
+    'one turn is complete.  Note that because the Image
+    'BorderStyle property contains a bug which causes the
+    'bitmap to be improperly drawn, I need to use DrawLine
+    'to set and clear image "borders".
+    RollCount = 0
+    cmdRoll.Caption = "Roll 1"
+    DieLocked(1) = False
+    DieLocked(2) = False
+    DieLocked(3) = False
+    DieLocked(4) = False
+    DieLocked(5) = False
+    ClearBorder imgD1
+    ClearBorder imgD2
+    ClearBorder imgD3
+    ClearBorder imgD4
+    ClearBorder imgD5
+    cmdRoll.Enabled = True
+    TurnOver = "True"
+    FreezeDice
+End Sub
+
+Private Sub cmdOne_Click()
+ScoreSound
+'Enter ones
+    If TurnOver = "False" Then
+        sumDice = 0
+        For DieNum = 0 To 4
+            If DiceVals(DieNum) = 1 Then
+                sumDice = sumDice + DiceVals(DieNum)
+            End If
+        Next
+        lblP11.Caption = sumDice
+        CheckBonus sumDice
+        cmdOne.Enabled = False
+        lblP11.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdTwo_Click()
+ScoreSound
+'Enter twos
+    If TurnOver = "False" Then
+        sumDice = 0
+        For DieNum = 0 To 4
+            If DiceVals(DieNum) = 2 Then
+                sumDice = sumDice + DiceVals(DieNum)
+            End If
+        Next
+        lblP12.Caption = sumDice
+        CheckBonus sumDice
+        cmdTwo.Enabled = False
+        lblP12.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdThree_Click()
+ScoreSound
+'Enter threes
+    If TurnOver = "False" Then
+        sumDice = 0
+        For DieNum = 0 To 4
+            If DiceVals(DieNum) = 3 Then
+                sumDice = sumDice + DiceVals(DieNum)
+            End If
+        Next
+        lblP13.Caption = sumDice
+        CheckBonus sumDice
+        cmdThree.Enabled = False
+        lblP13.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdFour_Click()
+ScoreSound
+'Enter fours
+    If TurnOver = "False" Then
+        sumDice = 0
+        For DieNum = 0 To 4
+            If DiceVals(DieNum) = 4 Then
+                sumDice = sumDice + DiceVals(DieNum)
+            End If
+        Next
+        lblP14.Caption = sumDice
+        CheckBonus sumDice
+        cmdFour.Enabled = False
+        lblP14.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdFive_Click()
+ScoreSound
+'Enter fives
+    If TurnOver = "False" Then
+        sumDice = 0
+        For DieNum = 0 To 4
+            If DiceVals(DieNum) = 5 Then
+                sumDice = sumDice + DiceVals(DieNum)
+            End If
+        Next
+        lblP15.Caption = sumDice
+        CheckBonus sumDice
+        cmdFive.Enabled = False
+        lblP15.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdSix_Click()
+ScoreSound
+'Enter sixes
+    If TurnOver = "False" Then
+        sumDice = 0
+        For DieNum = 0 To 4
+            If DiceVals(DieNum) = 6 Then
+                sumDice = sumDice + DiceVals(DieNum)
+            End If
+        Next
+        lblP16.Caption = sumDice
+        CheckBonus sumDice
+        cmdSix.Enabled = False
+        lblP16.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmd3K_Click()
+'Enter three of a kind
+    If TurnOver = "False" Then
+        Dim ThreeKTotal
+        CountDups
+        If isThreeKind = "True" Or isFourKind = "True" Or isYahtzee = "True" Then
+            ScoreSound
+            For DieNum = 0 To 4
+                ThreeKTotal = ThreeKTotal + DiceVals(DieNum)
+            Next
+            lblP1BtmTot.Caption = lblP1BtmTot.Caption + ThreeKTotal
+            lblP1Tot.Caption = lblP1Tot.Caption + ThreeKTotal
+            lblP13K.Caption = ThreeKTotal
+        Else
+            SorrySound
+            lblP13K.Caption = 0
+        End If
+        cmd3K.Enabled = False
+        lblP13K.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmd4K_Click()
+'Enter four of a kind
+    If TurnOver = "False" Then
+        Dim FourKTotal
+        CountDups
+        If isFourKind = "True" Or isYahtzee = "True" Then
+            ScoreSound
+            For DieNum = 0 To 4
+                FourKTotal = FourKTotal + DiceVals(DieNum)
+            Next
+            lblP1BtmTot.Caption = lblP1BtmTot.Caption + FourKTotal
+            lblP1Tot.Caption = lblP1Tot.Caption + FourKTotal
+            lblP14K.Caption = FourKTotal
+        Else
+            SorrySound
+            lblP14K.Caption = 0
+        End If
+        cmd4K.Enabled = False
+        lblP14K.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdSS_Click()
+'Enter small straight
+    If TurnOver = "False" Then
+        CheckSmallStraight
+        If Small = "True" Then
+            ScoreSound
+            lblP1SS.Caption = 30
+            lblP1BtmTot.Caption = lblP1BtmTot.Caption + 30
+            lblP1Tot.Caption = lblP1Tot.Caption + 30
+        Else
+            SorrySound
+            lblP1SS.Caption = 0
+        End If
+        
+        cmdSS.Enabled = False
+        lblP1SS.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdLS_Click()
+'Enter large straight
+    If TurnOver = "False" Then
+        CheckLargeStraight
+        If Large = "True" Then
+            ScoreSound
+            lblP1LS.Caption = 40
+            lblP1BtmTot.Caption = lblP1BtmTot.Caption + 40
+            lblP1Tot.Caption = lblP1Tot.Caption + 40
+        Else
+            SorrySound
+            lblP1LS.Caption = 0
+        End If
+        
+        cmdLS.Enabled = False
+        lblP1LS.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdFH_Click()
+'Enter Full House
+    If TurnOver = "False" Then
+        CountDups
+        If isTwoKind = "True" And isThreeKind = "True" Then
+            ScoreSound
+            lblP1FH.Caption = 25
+            lblP1BtmTot.Caption = lblP1BtmTot.Caption + 25
+            lblP1Tot.Caption = lblP1Tot.Caption + 25
+        Else
+            SorrySound
+            lblP1FH.Caption = 0
+        End If
+        
+        cmdFH.Enabled = False
+        lblP1FH.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub cmdChance_Click()
+ScoreSound
+'Enter chance
+    If TurnOver = "False" Then
+        Dim ChanceTotal
+        ChanceTotal = 0
+        For DieNum = 0 To 4
+            ChanceTotal = ChanceTotal + DiceVals(DieNum)
+        Next
+        lblP1Chance.Caption = ChanceTotal
+        lblP1BtmTot.Caption = lblP1BtmTot.Caption + ChanceTotal
+        lblP1Tot.Caption = lblP1Tot.Caption + ChanceTotal
+        
+        cmdChance.Enabled = False
+        lblP1Chance.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+Private Sub cmdSweep_Click()
+'Enter sweep
+    If TurnOver = "False" Then
+        CountDups
+        If isYahtzee = "True" Then
+            ScoreSound
+            lblP1Sweep.Caption = 50
+            lblP1BtmTot.Caption = lblP1BtmTot.Caption + 50
+            lblP1Tot.Caption = lblP1Tot.Caption + 50
+        Else
+            SorrySound
+            lblP1Sweep.Caption = 0
+        End If
+        
+        cmdSweep.Enabled = False
+        lblP1Sweep.BackColor = &H8000000F
+        CheckIfDone
+        ResetRoll
+    End If
+End Sub
+
+Private Sub CheckIfDone()
+    'Check to see of the game is complete based upon the CatLeft
+    'variable which is decremented each time a category
+    '(1's, 2's, etc.) is completed.
+    Dim Over, Top, Low
+    CatLeft = CatLeft - 1
+    If CatLeft = 0 Then
+        frmMain.Enabled = False
+        Over = MsgBox("Thank you for playing, you had a score of " & lblP1Tot.Caption & ".  Would you like to play again?", vbYesNo, "Game Over")
+        frmMain.Enabled = True
+        If Over = vbYes Then
+            mnuGameNew_Click
+        Else
+            App.End
+        End If
+    End If
+End Sub
+Sub RollDice()
+    'Re-populates the images with new Dice bmp's if the borderstyle
+    'is set to 0.  If it's set to 1, then it's been "frozen" and
+    'should not be re-populated.
+    If Not DieLocked(1) Then
+        imgD1.Picture = ChooseBitmap
+        imgD1.Tag = GetValue
+        DiceVals(0) = GetValue
+    End If
+    If Not DieLocked(2) Then
+        imgD2.Picture = ChooseBitmap
+        imgD2.Tag = GetValue
+        DiceVals(1) = GetValue
+    End If
+    If Not DieLocked(3) Then
+        imgD3.Picture = ChooseBitmap
+        imgD3.Tag = GetValue
+        DiceVals(2) = GetValue
+    End If
+    If Not DieLocked(4) Then
+        imgD4.Picture = ChooseBitmap
+        imgD4.Tag = GetValue
+        DiceVals(3) = GetValue
+    End If
+    If Not DieLocked(5) Then
+        imgD5.Picture = ChooseBitmap
+        imgD5.Tag = GetValue
+        DiceVals(4) = GetValue
+    End If
+End Sub
+
+'These routines set and clear the "frozen" state of the dice
+
+'Since ImageBorders don't paint properly, do a DrawLine
+Private Sub imgD1_Click()
+    PlayWaveFile (App.Path & "select.wav")
+    DieLocked(1) = Not DieLocked(1)
+    If DieLocked(1) Then
+        SetBorder imgD1
+    Else
+        ClearBorder imgD1
+    End If
+End Sub
+Private Sub imgD2_Click()
+    PlayWaveFile (App.Path & "select.wav")
+    DieLocked(2) = Not DieLocked(2)
+    If DieLocked(2) Then
+        SetBorder imgD2
+    Else
+        ClearBorder imgD2
+    End If
+End Sub
+Private Sub imgD3_Click()
+    PlayWaveFile (App.Path & "select.wav")
+    DieLocked(3) = Not DieLocked(3)
+    If DieLocked(3) Then
+        SetBorder imgD3
+    Else
+        ClearBorder imgD3
+    End If
+End Sub
+Private Sub imgD4_Click()
+    PlayWaveFile (App.Path & "select.wav")
+    DieLocked(4) = Not DieLocked(4)
+    If DieLocked(4) Then
+        SetBorder imgD4
+    Else
+        ClearBorder imgD4
+    End If
+End Sub
+Private Sub imgD5_Click()
+    PlayWaveFile (App.Path & "select.wav")
+    DieLocked(5) = Not DieLocked(5)
+    If DieLocked(5) Then
+        SetBorder imgD5
+    Else
+        ClearBorder imgD5
+    End If
+End Sub
+'Sets the border of a selected die
+Sub SetBorder(img)
+    img.DrawLine 0, 0, ImgHeight, 0, vbBlack                  'left
+    img.DrawLine 0, ImgWidth, 0, 0, vbBlack                   'top
+    img.DrawLine 0, ImgWidth, ImgHeight, ImgWidth, vbBlack    'right
+    img.DrawLine ImgHeight, ImgWidth, ImgHeight, 0, vbBlack   'bottom
+End Sub
+'Clears the border of a de-selected die
+Sub ClearBorder(img)
+    img.DrawLine 0, 0, ImgHeight, 0, &HC0C0C0                 'left
+    img.DrawLine 0, ImgWidth, 0, 0, &HC0C0C0                  'top
+    img.DrawLine 0, ImgWidth, ImgHeight, ImgWidth, &HC0C0C0   'right
+    img.DrawLine ImgHeight, ImgWidth, ImgHeight, 0, &HC0C0C0  'bottom
+End Sub
+Sub CheckBonus(sumDice)
+    lblP1Tot.Caption = lblP1Tot.Caption + sumDice
+    lblP1TopTot.Caption = lblP1TopTot.Caption + sumDice
+    If lblP1TopTot.Caption > 62 Then
+        lblP1Bonus.Caption = Bonus
+        lblP1TopTot.Caption = lblP1TopTot.Caption + Bonus
+        lblP1Tot.Caption = lblP1Tot.Caption + Bonus
+    End If
+End Sub
+
+Sub CheckSmallStraight()
+    Dim IsOne, IsTwo, IsThree, IsFour, IsFive, IsSix
+    For DieNum = 0 To 4
+        If DiceVals(DieNum) = 1 Then
+            If IsOne = "" Then
+                IsOne = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 2 Then
+            If IsTwo = "" Then
+                IsTwo = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 3 Then
+            If IsThree = "" Then
+                IsThree = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 4 Then
+            If IsFour = "" Then
+                IsFour = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 5 Then
+            If IsFive = "" Then
+                IsFive = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 6 Then
+            If IsSix = "" Then
+                IsSix = "True"
+            End If
+        End If
+    Next
+    If IsOne = "True" And IsTwo = "True" And IsThree = "True" And IsFour = "True" Then
+        Small = "True"
+    ElseIf IsTwo = "True" And IsThree = "True" And IsFour = "True" And IsFive = "True" Then
+        Small = "True"
+    ElseIf IsThree = "True" And IsFour = "True" And IsFive = "True" And IsSix = "True" Then
+        Small = "True"
+    Else
+        Small = "False"
+    End If
+End Sub
+
+Sub CheckLargeStraight()
+    Dim IsOne, IsTwo, IsThree, IsFour, IsFive, IsSix
+    For DieNum = 0 To 4
+        If DiceVals(DieNum) = 1 Then
+            If IsOne = "" Then
+                IsOne = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 2 Then
+            If IsTwo = "" Then
+                IsTwo = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 3 Then
+            If IsThree = "" Then
+                IsThree = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 4 Then
+            If IsFour = "" Then
+                IsFour = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 5 Then
+            If IsFive = "" Then
+                IsFive = "True"
+            End If
+        End If
+        If DiceVals(DieNum) = 6 Then
+            If IsSix = "" Then
+                IsSix = "True"
+            End If
+        End If
+    Next
+    If IsOne = "True" And IsTwo = "True" And IsThree = "True" And IsFour = "True" And IsFive = "True" Then
+        Large = "True"
+    ElseIf IsTwo = "True" And IsThree = "True" And IsFour = "True" And IsFive = "True" And IsSix = "True" Then
+        Large = "True"
+    Else
+        Large = "False"
+    End If
+End Sub
+'  This sub counts duplicate dice
+Sub CountDups()
+    Dim OnesCount, TwosCount, ThreesCount, FoursCount, FivesCount, SixesCount
+    isTwoKind = "False"
+    isThreeKind = "False"
+    isFourKind = "False"
+    isYahtzee = "False"
+    For DieNum = 0 To 4
+        If DiceVals(DieNum) = 1 Then
+            OnesCount = OnesCount + 1
+        End If
+        If DiceVals(DieNum) = 2 Then
+            TwosCount = TwosCount + 1
+        End If
+        If DiceVals(DieNum) = 3 Then
+            ThreesCount = ThreesCount + 1
+        End If
+        If DiceVals(DieNum) = 4 Then
+            FoursCount = FoursCount + 1
+        End If
+        If DiceVals(DieNum) = 5 Then
+            FivesCount = FivesCount + 1
+        End If
+        If DiceVals(DieNum) = 6 Then
+            SixesCount = SixesCount + 1
+        End If
+    Next
+    If OnesCount = 2 Or TwosCount = 2 Or ThreesCount = 2 Or FoursCount = 2 Or FivesCount = 2 Or SixesCount = 2 Then
+        isTwoKind = "True"
+    End If
+    If OnesCount = 3 Or TwosCount = 3 Or ThreesCount = 3 Or FoursCount = 3 Or FivesCount = 3 Or SixesCount = 3 Then
+        isThreeKind = "True"
+    End If
+    If OnesCount = 4 Or TwosCount = 4 Or ThreesCount = 4 Or FoursCount = 4 Or FivesCount = 4 Or SixesCount = 4 Then
+        isFourKind = "True"
+    End If
+    If OnesCount = 5 Or TwosCount = 5 Or ThreesCount = 5 Or FoursCount = 5 Or FivesCount = 5 Or SixesCount = 5 Then
+        isYahtzee = "True"
+    End If
+End Sub
+
+Private Sub NewGame()
+    'Reset UI and variables for a new game.
+    ResetRoll
+    CatLeft = 13
+    lblP1Tot.Caption = 0
+    lblP1TopTot.Caption = 0
+    lblP1BtmTot.Caption = 0
+    lblP11.Caption = ""
+    lblP12.Caption = ""
+    lblP13.Caption = ""
+    lblP14.Caption = ""
+    lblP15.Caption = ""
+    lblP16.Caption = ""
+    lblP1Bonus.Caption = ""
+    lblP13K.Caption = ""
+    lblP14K.Caption = ""
+    lblP1FH.Caption = ""
+    lblP1Sweep.Caption = ""
+    lblP1SS.Caption = ""
+    lblP1LS.Caption = ""
+    lblP1Chance.Caption = ""
+    lblP11.BackColor = &H80000009
+    lblP12.BackColor = &H80000009
+    lblP13.BackColor = &H80000009
+    lblP14.BackColor = &H80000009
+    lblP15.BackColor = &H80000009
+    lblP16.BackColor = &H80000009
+    lblP13K.BackColor = &H80000009
+    lblP14K.BackColor = &H80000009
+    lblP1FH.BackColor = &H80000009
+    lblP1Sweep.BackColor = &H80000009
+    lblP1SS.BackColor = &H80000009
+    lblP1LS.BackColor = &H80000009
+    lblP1Chance.BackColor = &H80000009
+    cmd3K.Enabled = True
+    cmd4K.Enabled = True
+    cmdFH.Enabled = True
+    cmdChance.Enabled = True
+    cmdSweep.Enabled = True
+    cmdOne.Enabled = True
+    cmdTwo.Enabled = True
+    cmdThree.Enabled = True
+    cmdFour.Enabled = True
+    cmdFive.Enabled = True
+    cmdSix.Enabled = True
+    cmdSS.Enabled = True
+    cmdLS.Enabled = True
+End Sub
+
+Private Sub mnuGameTopScores_Click()
+    frmMain.Enabled = False
+    frmTop.Show
+End Sub
+
+Private Sub mnuHelpAbout_Click()
+    frmAbout.Show
+End Sub
+    
+Sub FreezeDice()
+    'freeze dice to enable selection
+    imgD1.Enabled = False
+    imgD2.Enabled = False
+    imgD3.Enabled = False
+    imgD4.Enabled = False
+    imgD5.Enabled = False
+End Sub
+
+Sub ScoreSound()
+    PlayWaveFile (App.Path & "cluck1.wav")
+End Sub
+
+Sub SorrySound()
+    PlayWaveFile (App.Path & "do'h.wav")
+End Sub
+
+
+
+

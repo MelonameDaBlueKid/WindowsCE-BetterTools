@@ -1,0 +1,716 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\collect.rc2""  // non-App Studio edited resources\r\n"
+    "\r\n"
+    "#include ""afxres.rc""  \t// Standard components\r\n"
+    "#include ""afxprint.rc""\t// printing/print preview resources\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\COLLECT.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "RES\\TOOLBAR.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Example"
+    BEGIN
+        MENUITEM "CStringList",                 ID_STRINGLIST
+        MENUITEM "CTypedPtrList<...>",          ID_TYPEDLIST
+        MENUITEM "CList<...>",                  ID_INTLIST
+        MENUITEM SEPARATOR
+        MENUITEM "CDWordArray",                 ID_DWORDARRAY
+        MENUITEM "CTypedPtrArray<...>",         ID_TYPEDPTRARRAY
+        MENUITEM "CArray<...>",                 ID_POINTARRAY
+        MENUITEM SEPARATOR
+        MENUITEM "CMapStringToString",          ID_MAPSTRINGTOSTRING
+        MENUITEM "CTypedPtrMap<...>",           ID_TYPEDPTRMAP
+        MENUITEM "CMap<...>",                   ID_MAPDWORDTOMYSTRUCT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Collect...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 140, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Collect"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,11,21,20
+    LTEXT           "Collect",IDC_STATIC,44,11,77,8
+    LTEXT           "Copyright © 2000",IDC_STATIC,44,23,80,8
+END
+
+IDD_STRING_LIST DIALOG DISCARDABLE  0, 0, 239, 107
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_ELEMENT,50,18,116,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,21,38,148,61,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,176,6,50,14
+    PUSHBUTTON      "&Insert Before",IDC_INSERT_BEFORE,176,26,50,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,176,46,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,176,66,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,176,86,50,14
+    LTEXT           "String:",IDC_STATIC,15,23,30,8
+    LTEXT           "Example: CStringList",IDC_STATIC,15,4,116,8
+END
+
+IDD_TYPED_PTR_LIST DIALOG DISCARDABLE  0, 0, 235, 106
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_INT,74,20,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,74,36,43,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,74,55,90,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,11,71,152,32,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "CMyStruct char:",IDC_STATIC,14,42,57,8
+    LTEXT           "CMyStruct int:",IDC_STATIC,14,26,58,8
+    LTEXT           "CMyStruct str:",IDC_STATIC,14,58,55,8
+    LTEXT           "Example:  CTypedPtrList<CPtrList,CMyStruct*>",
+                    IDC_STATIC,14,6,200,8
+    DEFPUSHBUTTON   "&Add",IDC_ADD,175,17,50,14
+    PUSHBUTTON      "&Insert Before",IDC_INSERT_BEFORE,175,35,50,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,175,53,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,175,71,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,175,89,50,14
+END
+
+IDD_INT_LIST DIALOG DISCARDABLE  0, 0, 239, 104
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_ELEMENT,49,17,21,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,17,37,148,60,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,178,4,50,14
+    PUSHBUTTON      "&Insert Before",IDC_INSERT_BEFORE,178,25,50,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,178,44,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,178,65,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,179,84,50,14
+    LTEXT           "Integer:",IDC_STATIC,14,22,30,8
+    LTEXT           "Example:  CList<int,int>",IDC_STATIC,17,3,135,8
+END
+
+IDD_DWORD_ARRAY DIALOG DISCARDABLE  0, 0, 239, 97
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_DWORD,49,17,53,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,16,37,149,53,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,177,9,50,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,177,31,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,177,54,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,177,76,50,14
+    LTEXT           "DWORD:",IDC_STATIC,14,22,30,8
+    LTEXT           "Example:  CDWordArray",IDC_STATIC,14,3,151,8
+END
+
+IDD_TYPED_PTR_ARRAY DIALOG DISCARDABLE  0, 0, 239, 104
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_INT,74,20,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,74,36,43,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,74,55,90,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,11,69,152,31,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,177,23,50,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,177,44,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,177,65,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,177,86,50,14
+    LTEXT           "CMyObject char:",IDC_STATIC,14,42,57,8
+    LTEXT           "CMyObject int:",IDC_STATIC,14,26,59,8
+    LTEXT           "CMyObject str:",IDC_STATIC,14,58,57,8
+    LTEXT           "Example:  CTypePtrArray<CObArray,CMyObject*>",
+                    IDC_STATIC,14,6,216,8
+END
+
+IDD_POINT_ARRAY DIALOG DISCARDABLE  0, 0, 239, 108
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_X,51,21,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y,51,37,30,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,10,57,152,43,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,177,23,50,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,177,44,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,177,65,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,177,86,50,14
+    LTEXT           "CPoint y:",-1,14,42,31,8
+    LTEXT           "CPoint x:",-1,14,26,31,8
+    LTEXT           "Example: CArray<CPoint,CPoint>",-1,14,6,185,8
+END
+
+IDD_MAP_STRING_TO_STRING DIALOG DISCARDABLE  0, 0, 239, 102
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_KEY,63,21,92,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VALUE,63,37,92,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,10,57,152,37,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,180,13,50,14
+    PUSHBUTTON      "Fi&nd",IDC_FIND,180,34,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,180,55,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,180,76,50,14
+    LTEXT           "Value (string):",-1,14,42,47,8
+    LTEXT           "Key (string):",-1,14,26,48,8
+    LTEXT           "Example: CMapStringToString",-1,14,4,155,8
+END
+
+IDD_TYPED_PTR_MAP DIALOG DISCARDABLE  0, 0, 288, 109
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_KEY,55,27,63,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INT,189,22,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,189,38,43,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,189,57,90,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,11,58,106,47,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,129,74,50,14
+    PUSHBUTTON      "Fi&nd",IDC_FIND,129,91,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,189,91,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,189,74,50,14
+    LTEXT           "CMyObject char:",IDC_STATIC,129,44,57,8
+    LTEXT           "CMyObject int:",IDC_STATIC,129,28,59,8
+    LTEXT           "CMyObject str:",IDC_STATIC,129,60,57,8
+    LTEXT           "Example:  CTypedPtrMap<CMapStringToOb,CString,CMyObject*>",
+                    IDC_STATIC,11,4,266,8
+    LTEXT           "Key (string):",IDC_STATIC,11,29,40,8
+END
+
+IDD_MAP_DWORD_TO_MYSTRUCT DIALOG DISCARDABLE  0, 0, 273, 103
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_KEY,66,27,52,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INT,190,15,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,190,31,43,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,190,50,63,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,11,48,101,51,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,137,66,50,14
+    PUSHBUTTON      "Fi&nd",IDC_FIND,137,85,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,199,66,50,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,199,85,50,14
+    LTEXT           "CMyStruct char:",IDC_STATIC,130,37,57,8
+    LTEXT           "CMyStruct int:",IDC_STATIC,130,21,54,8
+    LTEXT           "CMyStruct str:",IDC_STATIC,130,53,58,8
+    LTEXT           "Example: CMap<DWORD,DWORD,CMyStruct*,CMyStruct*&&>",
+                    IDC_STATIC,11,4,242,8
+    LTEXT           "Key (DWORD):",IDC_STATIC,11,29,50,8
+END
+
+IDD_DWORD_ARRAY_PSPC DIALOG DISCARDABLE  0, 0, 156, 97
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_DWORD,39,17,63,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,3,38,100,53,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,108,10,44,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,108,32,44,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,108,55,44,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,108,77,44,14
+    LTEXT           "DWORD:",IDC_STATIC,3,17,30,8
+    LTEXT           "Example:  CDWordArray",IDC_STATIC,3,3,93,8
+END
+
+IDD_INT_LIST_PSPC DIALOG DISCARDABLE  0, 0, 157, 104
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_ELEMENT,49,17,27,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,5,37,97,60,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,105,4,48,14
+    PUSHBUTTON      "&Insert Before",IDC_INSERT_BEFORE,105,26,48,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,105,44,48,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,105,66,48,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,105,84,48,14
+    LTEXT           "Integer:",IDC_STATIC,5,17,30,8
+    LTEXT           "Example:  CList<int,int>",IDC_STATIC,5,3,86,8
+END
+
+IDD_MAP_DWORD_TO_MYSTRUCT_PSPC DIALOG DISCARDABLE  0, 0, 154, 152
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_KEY,61,36,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INT,61,54,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,61,70,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,61,89,39,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,5,104,143,42,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,105,36,43,14
+    PUSHBUTTON      "Fi&nd",IDC_FIND,105,53,43,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,105,70,43,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,105,87,43,14
+    LTEXT           "CMyStruct char:",IDC_STATIC,6,70,57,8
+    LTEXT           "CMyStruct int:",IDC_STATIC,6,54,52,8
+    LTEXT           "CMyStruct str:",IDC_STATIC,6,89,55,8
+    LTEXT           "Example: CMap<DWORD,DWORD,",IDC_STATIC,0,6,151,8
+    LTEXT           "CMyStruct*, CMyStruct*>",IDC_STATIC,53,17,85,8
+    LTEXT           "Key (DWORD):",IDC_STATIC,6,36,50,8
+END
+
+IDD_MAP_STRING_TO_STRING_PSPC DIALOG DISCARDABLE  0, 0, 155, 141
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_KEY,52,22,46,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VALUE,52,38,46,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,4,58,93,73,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,105,18,44,14
+    PUSHBUTTON      "Fi&nd",IDC_FIND,105,39,44,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,105,60,44,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,105,81,44,14
+    LTEXT           "Value (string):",-1,4,42,47,8
+    LTEXT           "Key (string):",-1,4,26,46,8
+    LTEXT           "Example: CMapStringToString",-1,0,4,152,8
+END
+
+IDD_POINT_ARRAY_PSPC DIALOG DISCARDABLE  0, 0, 157, 108
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_X,51,21,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y,51,37,30,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,7,57,95,43,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,111,20,39,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,111,42,39,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,111,63,39,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,111,84,39,14
+    LTEXT           "CPoint y:",-1,14,42,31,8
+    LTEXT           "CPoint x:",-1,14,26,31,8
+    LTEXT           "Example: CArray<CPoint,CPoint>",-1,7,6,123,8
+END
+
+IDD_STRING_LIST_PSPC DIALOG DISCARDABLE  0, 0, 154, 154
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_ELEMENT,51,18,45,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,6,38,90,61,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_ADD,103,5,47,14
+    PUSHBUTTON      "&Insert Before",IDC_INSERT_BEFORE,103,26,47,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,103,45,47,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,103,66,47,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,103,85,47,14
+    LTEXT           "String:",IDC_STATIC,6,18,30,8
+    LTEXT           "Example: CStringList",IDC_STATIC,6,4,88,8
+END
+
+IDD_TYPED_PTR_ARRAY_PSPC DIALOG DISCARDABLE  0, 0, 153, 152
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_INT,69,40,38,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,69,58,38,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,69,76,38,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,6,97,101,54,LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    DEFPUSHBUTTON   "&Add",IDC_ADD,109,39,39,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,109,63,39,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,109,87,39,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,109,111,39,14
+    LTEXT           "CMyObject char:",IDC_STATIC,6,63,57,8
+    LTEXT           "CMyObject int:",IDC_STATIC,6,47,61,8
+    LTEXT           "CMyObject str:",IDC_STATIC,6,79,58,8
+    LTEXT           "Example:  CTypePtrArray<CObArray,",IDC_STATIC,6,6,130,8
+    LTEXT           "CMyObject*>",IDC_STATIC,93,19,46,8
+END
+
+IDD_TYPED_PTR_LIST_PSPC DIALOG DISCARDABLE  0, 0, 155, 143
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_INT,62,20,41,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,62,36,41,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,62,55,41,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,6,73,97,58,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "CMyStruct char:",IDC_STATIC,6,42,57,8
+    LTEXT           "CMyStruct int:",IDC_STATIC,6,26,55,8
+    LTEXT           "CMyStruct str:",IDC_STATIC,6,58,54,8
+    LTEXT           "Example:  CTypedPtrList<CPtrList,CMyStruct*>",
+                    IDC_STATIC,0,6,155,8
+    DEFPUSHBUTTON   "&Add",IDC_ADD,105,18,47,14
+    PUSHBUTTON      "&Insert Before",IDC_INSERT_BEFORE,105,36,47,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,105,54,47,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,105,71,47,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,105,90,47,14
+END
+
+IDD_TYPED_PTR_MAP_PSPC DIALOG DISCARDABLE  0, 0, 157, 153
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_KEY,59,33,44,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INT,59,52,44,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAR,59,68,44,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STRING,59,90,44,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,3,108,147,39,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,106,32,45,14
+    PUSHBUTTON      "Fi&nd",IDC_FIND,106,48,45,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,106,88,45,14
+    PUSHBUTTON      "Re&move All",IDC_REMOVE_ALL,106,69,45,14
+    LTEXT           "CMyObject char:",IDC_STATIC,1,68,57,8
+    LTEXT           "CMyObject int:",IDC_STATIC,1,52,55,8
+    LTEXT           "CMyObject str:",IDC_STATIC,1,90,56,8
+    LTEXT           "Example:  CTypedPtrMap<CMapStringToOb,",IDC_STATIC,1,4,
+                    154,8
+    LTEXT           "Key (string):",IDC_STATIC,3,33,54,8
+    LTEXT           "CString,CMyObject*>",IDC_STATIC,81,18,74,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "COLLECT MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "COLLECT\0"
+            VALUE "LegalCopyright", "Copyright © 2000\0"
+            VALUE "OriginalFilename", "COLLECT.EXE\0"
+            VALUE "ProductName", "COLLECT Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 125
+    END
+
+    IDD_DWORD_ARRAY_PSPC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 155
+    END
+
+    IDD_MAP_DWORD_TO_MYSTRUCT_PSPC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 151
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_MAP_STRING_TO_STRING_PSPC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 152
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_POINT_ARRAY_PSPC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 156
+    END
+
+    IDD_STRING_LIST_PSPC, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_TYPED_PTR_ARRAY_PSPC, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_TYPED_PTR_LIST_PSPC, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_TYPED_PTR_MAP_PSPC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 155
+        BOTTOMMARGIN, 148
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Collect\ncoll\nCollections Document\nCollections Files (*.col)\n.col\nCollect.collect.1\nCollections Document\nCOLL\nCollect Files"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Collect"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document"
+    ID_FILE_OPEN            "Open an existing document"
+    ID_FILE_CLOSE           "Close the active document"
+    ID_FILE_SAVE            "Save the active document"
+    ID_FILE_SAVE_AS         "Save the active document with a new name"
+    ID_FILE_PAGE_SETUP      "Change the printing options"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options"
+    ID_FILE_PRINT           "Print the active document"
+    ID_FILE_PRINT_PREVIEW   "Display full pages"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_DESKACCESSORY   "Opens the selected item"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright"
+    ID_APP_EXIT             "Quit the application; prompts to save documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane"
+    ID_PREV_PANE            "Switch back to the previous window pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection"
+    ID_EDIT_CLEAR_ALL       "Erase everything"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard"
+    ID_EDIT_FIND            "Find the specified text"
+    ID_EDIT_PASTE           "Insert Clipboard contents"
+    ID_EDIT_REPEAT          "Repeat the last action"
+    ID_EDIT_REPLACE         "Replace specific text with different text"
+    ID_EDIT_SELECT_ALL      "Select the entire document"
+    ID_EDIT_UNDO            "Undo the last action"
+    ID_EDIT_REDO            "Redo the previously undone action"
+    IDS_INITIAL_STRING      "text"
+    IDS_INITIAL_KEY         "key"
+    IDS_INITIAL_VALUE       "value"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SELECT_DWORD_TO_UPDATE 
+                            "From the listbox select the DWORD to be updated."
+    IDS_SELECT_DWORD_TO_REMOVE 
+                            "From the listbox select the DWORD to be removed."
+    IDS_SELECT_INTEGER      "Select integer from the list box."
+    IDS_KEY_NOT_FOUND       "Key not found"
+    IDS_KEY_NOT_FOUND_CHOOSE_REMOVE_AGAIN 
+                            "Key found.  Choose Remove again to remove."
+    IDS_SELECT_POINT_TO_BE_UPDATED 
+                            "From the listbox select the point to be updated."
+    IDS_SELECT_POINT_TO_BE_REMOVED 
+                            "From the listbox select the point to be removed."
+    IDS_SELECT_STRING_FIRST "Select a string from the listbox first."
+    IDS_SELECT_ENTRY_TO_BE_UPDATED 
+                            "From the listbox select the entry to be updated."
+    IDS_SELECT_ENTRY_TO_BE_REMOVED 
+                            "From the listbox select the entry to be removed."
+    IDS_BLANK_CHARS_NOT_ALLOWED "Blank characters not allowed in string."
+    IDS_SELECT_ENTRY        "From the listbox select the entry to be updated or removed."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_STRINGLIST           "Demonstrate CStringList"
+    ID_TYPEDLIST            "Demonstrate CTypedPtrList<...>"
+    ID_INTLIST              "Demonstrate CList<...>"
+    ID_DWORDARRAY           "Demonstrate CDWordArray"
+    ID_TYPEDPTRARRAY        "Demonstrate CTypedPtrArray<CObArray...>"
+    ID_POINTARRAY           "Demonstrate CArray<...>"
+    ID_MAPSTRINGTOSTRING    "Demonstrate CMapStringToString"
+    ID_TYPEDPTRMAP          "Demonstrate CTypedPtrMap<...>"
+    ID_MAPDWORDTOMYSTRUCT   "Demonstrate CMap<...>"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\collect.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"  	// Standard components
+#include "afxprint.rc"	// printing/print preview resources
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

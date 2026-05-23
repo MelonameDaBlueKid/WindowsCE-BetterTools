@@ -1,0 +1,184 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BEZIER              ICON    DISCARDABLE     "Bezier.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MAIN_MENU RCDATA DISCARDABLE
+BEGIN
+  //Popup menu name
+  IDM_MAIN_MENU, 
+  //Count of items to put on the menu (er... toolbar)
+  3,
+
+  
+  I_IMAGENONE, IDM_MAIN_MENUITEM2, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM2, 0, 0, 
+  I_IMAGENONE, IDM_QUICKTEST, TBSTATE_ENABLED,
+  TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM3, 0, 1, 
+  I_IMAGENONE, IDM_MAIN_MENUITEM4, TBSTATE_ENABLED,
+  TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+  IDS_MAIN_MENUITEM4, 0, 2, 
+
+END
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Settings"
+    BEGIN
+        POPUP "Degree"
+        BEGIN
+            MENUITEM "2nd",                        IDM_DEGREE2
+            MENUITEM "3rd (NT Standard)",          IDM_DEGREE3
+            MENUITEM "4th",                        IDM_DEGREE4
+            MENUITEM "5th",                        IDM_DEGREE5
+            MENUITEM "6th",                        IDM_DEGREE6
+            MENUITEM "7th",                        IDM_DEGREE7
+            MENUITEM "8th",                        IDM_DEGREE8
+        END
+        MENUITEM "Show Guides",                IDM_SHOWGUIDES
+    END
+    MENUITEM "Quick Test!",                IDM_QUICKTEST
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                      IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 128, 114
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "About Bezier"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDI_BEZIER,IDC_STATIC,4,4,21,20
+    LTEXT           "Bezier Version 1.0",IDC_STATIC,28,6,62,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999",IDC_STATIC,28,18,66,8
+    LTEXT           "Place points into the client using the stylus.  When you have added enough points to define a curve (default is four) of the specified degree,  the curve will be drawn automatically.  You may also select ""Quick Test"" to use random points.",
+                    IDC_STATIC,4,38,118,70
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 74
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "Bezier"
+    IDS_HELLO               "Hello World!"
+    IDC_BEZIER              "BEZIER"
+END
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAIN_MENUITEM1      "File"
+    IDS_MAIN_MENUITEM2      "Settings"
+    IDS_MAIN_MENUITEM3      "Quick Test!"
+    IDS_MAIN_MENUITEM4      "Help"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

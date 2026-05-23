@@ -1,0 +1,2239 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./SPreadme_files/filelist.xml">
+<title>Microsoft® Windows® SDK for Smartphone 2003</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:LastAuthor></o:LastAuthor>
+  <o:Revision>11</o:Revision>
+  <o:TotalTime>1796</o:TotalTime>
+  <o:Created>2003-04-22T22:22:00Z</o:Created>
+  <o:LastSaved>2003-05-23T23:27:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>3648</o:Words>
+  <o:Characters>20797</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>173</o:Lines>
+  <o:Paragraphs>41</o:Paragraphs>
+  <o:CharactersWithSpaces>25540</o:CharactersWithSpaces>
+  <o:Version>9.4402</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>95</w:Zoom>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+p.MSOTOC1
+	{mso-style-noshow:yes;}
+li.MSOTOC1
+	{mso-style-noshow:yes;}
+div.MSOTOC1
+	{mso-style-noshow:yes;}
+p.MSOTOC2
+	{mso-style-noshow:yes;}
+li.MSOTOC2
+	{mso-style-noshow:yes;}
+div.MSOTOC2
+	{mso-style-noshow:yes;}
+p.MSOTOC3
+	{mso-style-noshow:yes;}
+li.MSOTOC3
+	{mso-style-noshow:yes;}
+div.MSOTOC3
+	{mso-style-noshow:yes;}
+p.MSOTOC5
+	{mso-style-noshow:yes;}
+li.MSOTOC5
+	{mso-style-noshow:yes;}
+div.MSOTOC5
+	{mso-style-noshow:yes;}
+span.SPELLE
+	{mso-spl-e:yes;}
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.msocommentsubject, li.msocommentsubject, div.msocommentsubject
+	{mso-style-name:msocommentsubject;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+span.heading2char
+	{mso-style-name:heading2char;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+span.emailstyle21
+	{mso-style-name:emailstyle21;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+span.msoins0
+	{mso-style-name:msoins;
+	text-decoration:underline;
+	text-underline:single;}
+span.msodel0
+	{mso-style-name:msodel;
+	color:red;
+	text-decoration:line-through;}
+p.text, li.text, div.text
+	{mso-style-name:text;
+	margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.numberedlist1, li.numberedlist1, div.numberedlist1
+	{mso-style-name:numberedlist1;
+	margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.alerttext, li.alerttext, div.alerttext
+	{mso-style-name:alerttext;
+	margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:461194899;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1377216970 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1
+	{mso-list-id:631207004;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1998328534 -1728125204 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level2
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:4.25in;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.75in;
+	mso-level-number-position:left;
+	margin-left:4.75in;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:5.25in;
+	mso-level-number-position:left;
+	margin-left:5.25in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:784890746;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1833038324 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:1429423134;
+	mso-list-template-ids:-555833582;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1601403893;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2051188398 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5
+	{mso-list-id:1644307653;
+	mso-list-template-ids:-1472425822;}
+@list l5:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">  </w:LatentStyles>
+</xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1><a name="_Toc38084920"></a><a name="_Toc36546356"></a><a name="_Toc36546302"></a><a
+name="_Toc25231555"></a><a name="_Toc24615906"></a><a name="_Toc24376664"></a><a
+name="_Toc23819994"></a><a name="_Toc37129084"></a><a name="_Toc39468314"></a><a
+name="_Toc41470524"><span style='mso-bookmark:_Toc39468314'><span
+style='mso-bookmark:_Toc37129084'><span style='mso-bookmark:_Toc23819994'><span
+style='mso-bookmark:_Toc24376664'><span style='mso-bookmark:_Toc24615906'><span
+style='mso-bookmark:_Toc25231555'><span style='mso-bookmark:_Toc36546302'><span
+style='mso-bookmark:_Toc36546356'><span style='mso-bookmark:_Toc38084920'>MICROSOFT
+WINDOWS POWERED SMARTPHONE </span></span></span></span></span></span></span></span>2003
+SDK</span></a></h1>
+
+<p class=MsoNormal>© 2003 Microsoft Corporation.<span style="mso-spacerun:
+yes">  </span>All Rights Reserved.</p>
+
+<p class=MsoNormal>&nbsp;<o:p></o:p></p>
+
+<div style='mso-element:para-border-div'>
+
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+
+<p class=MsoNormal style='border:none;mso-border-bottom-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>This product is licensed to you
+pursuant to the End User License Agreement detailed in the “Smartphone 2003 SDK
+EULA.rtf” file.</p>
+
+<p class=MsoNormal style='border:none;mso-border-bottom-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>&nbsp;<o:p></o:p></p>
+
+</div>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This file contains important information about the Microsoft
+Windows Powered Smartphone 2003 Software Development Kit. <b>Read this file
+completely before installing the SDK.</b></p>
+
+<p class=MsoNormal>To locate material in this document, select one of the
+general categories under Contents, or choose <b>Find</b> from the <b>Edit</b>
+menu of the browser.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This version of the Smartphone 2003 SDK allows you to create
+Smartphone applications using eMbedded Visual C++ 4.0 (with Service Pack 2),
+and applications written in C# or Visual Basic .NET using Visual Studio .NET
+2003.&nbsp;</p>
+
+<h2><a name="_Toc38084717"></a><a name="_Toc36546357"></a><a name="_Toc36546303"></a><a
+name="_Toc25231556"></a><a name="_Toc23819995"></a><a name="_Toc37129085"></a><a
+name="_Toc38429889"></a><a name="_Toc24615907"></a><a name="_Toc39468315"></a><a
+name="_Toc41470525"><span style='mso-bookmark:_Toc39468315'><span
+style='mso-bookmark:_Toc24615907'><span style='mso-bookmark:_Toc38429889'><span
+style='mso-bookmark:_Toc37129085'><span style='mso-bookmark:_Toc23819995'><span
+style='mso-bookmark:_Toc25231556'><span style='mso-bookmark:_Toc36546303'><span
+style='mso-bookmark:_Toc36546357'><span style='mso-bookmark:_Toc38084717'>Contents</span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc39468315'><span style='mso-bookmark:_Toc24615907'><span
+style='mso-bookmark:_Toc38429889'></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc39468315'><span style='mso-bookmark:_Toc24615907'><span
+style='mso-bookmark:_Toc38429889'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc39468315'><span
+style='mso-bookmark:_Toc24615907'><span style='mso-bookmark:_Toc38429889'> TOC
+\o &quot;1-5&quot; \h \z \u <span style='mso-element:field-separator'></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc39468315'><span style='mso-bookmark:_Toc24615907'><span
+style='mso-bookmark:_Toc38429889'></span></span></span><span style='mso-no-proof:
+yes'><o:p></o:p></h2>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470526">Requirements<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470526 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500320036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470527">What’s New<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470527 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500320037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470528">Installation Instructions<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470528 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500320038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470529">1. Close All Programs, Remote
+Development Tools, and Emulators Before Proceeding<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470529 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500320039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470530">2. Uninstall Previous Versions of
+the Smartphone 2003 SDK<span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1 dotted'>.. </span></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span></span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'> PAGEREF
+_Toc41470530 \h </span><span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470531">3. Install Microsoft ActiveSync 3.7<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470531 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470532">4. Install eMbedded Visual C++ 4.0
+and Service Pack 2<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470532 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470533">5. Install Visual Studio .NET 2003<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470533 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470534">6. Install the Smartphone 2003 SDK<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470534 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470535">eMbedded Visual C++ 4.0<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470535 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470536">Getting Started<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470536 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470537">Targeting your Smartphone Device<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470537 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470538">eMbedded Visual Tools 3.0<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470538 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470539">eMbedded Visual Basic<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470539 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500330039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470540">eMbedded Visual C++ 3.0<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470540 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470541">Windows CE Emulator and Smartphone
+2003 Emulator Images<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470541 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470542">Emulator Image Failure (“Cannot
+obtain DHCP address”) when Booting an Image using Virtual Switch Networking
+Support<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470542 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470543">Using the Radio Add-On Pack<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470543 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470544">Configuring the Emulator to Access
+the Internet<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470544 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470545">Using ActiveSync with the Emulator<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470545 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470546">Starting the Emulator from the
+Command Line<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470546 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470547">Emulator Clock and WM_TIMER Messages<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470547 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470548">English-Only Characters in Edit
+Control<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470548 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470549">.NET Compact Framework<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470549 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500340039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470550">Visual Studio .NET 2003 Smartphone
+Support<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470550 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470551">Prerequisites<span style='color:
+windowtext;display:none;mso-hide:screen;text-decoration:none;text-underline:
+none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470551 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470552">Upgrading ActiveSync<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470552 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470553">Creating a Smartphone Project<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470553 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470554">Accessing Help<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470554 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470555">DataGrid Control not supported on
+Smartphone<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470555 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470556">Modifying the tab order on a
+Smartphone form.<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470556 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470557">Building a distributable CAB file
+for Smartphone<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470557 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470558">Some unsupported control properties
+or events appear in the Property Browser<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470558 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470559">Some controls will appear
+differently at runtime than at design time.<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470559 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500350039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470560">Changing Smartphone emulator
+configuration results in screen height error.<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470560 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470561">Some unsupported properties,
+methods, or events may appear in Intellisense help or the VS shell.<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470561 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470562">Deploying Satellite dlls to a locked
+device or emulator is not supported<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470562 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470563">Using the Smartphone 2003 Emulator
+(Radio Required) emulator image<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470563 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470564">Deploying localized versions of the
+System_SR files<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470564 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470565">Setting the correct font and font
+size for double byte character languages<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470565 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470566">TextBox and TreeView controls can’t
+display double-byte characters in the WinForms designer for the Nina Font<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470566 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470567">Correcting the Help filter in
+non-English versions of Visual Studio .NET<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470567 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470568">Smartphone 2003 SDK Documentation</span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span><span
+style='mso-no-proof:yes'></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span></span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'> PAGEREF
+_Toc41470568 \h </span><span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470569">Technical Support<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470569 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500360039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc41470570">Legal Information<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc41470570 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300340031003400370030003500370030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><o:p></o:p></p>
+
+<p class=MsoNormal><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->&nbsp;</p>
+
+<h2><a name="_Toc36546304"></a><a name="_Toc41470526"></a><a
+name="_Requirements"></a><span style='mso-bookmark:_Toc36546304'><span
+style='mso-bookmark:_Toc41470526'>Requirements</span></span></h2>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Processor: PC with a Pentium II-class processor, 450 MHz or
+higher (Pentium III-class, 600 MHz recommended)</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>256MB RAM</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>One of the following operating systems: </p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l5 level2 lfo2;
+tab-stops:list 1.0in'><![if !supportLists]>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Microsoft Windows 2000 Professional with Service Pack 3
+installed</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l5 level2 lfo2;
+tab-stops:list 1.0in'><![if !supportLists]>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Microsoft Windows 2000 Server with Service Pack 3 installed</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l5 level2 lfo2;
+tab-stops:list 1.0in'><![if !supportLists]>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Microsoft Windows XP Professional with Service Pack 1
+installed</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Display adapter and monitor capable of displaying a resolution
+of 1024x768 at 65536 colors (or higher)</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Microsoft eMbedded Visual C++ 4.0 installed with Service Pack
+2 and/or Visual Studio .NET 2003</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>You must be logged on using an account with local
+administrative rights on the computer onto which you are installing the SDK. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc41470527">What’s New</a></h2>
+
+<p class=MsoNormal>For an overview of new features and capabilities provided in
+the Smartphone 2003 SDK, please refer to the “What's New with Microsoft Windows
+Powered Smartphone 2003” section of the SDK documentation.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc41470528"></a><a name="_Contents_of_this_SDK"></a><a
+name="_Installation_Instructions"></a><span style='mso-bookmark:_Toc41470528'>Installation
+Instructions</span></h2>
+
+<p class=MsoNormal>The following installation steps requires you to be logged
+onto to your computer using an account with Local Administrator privileges.</p>
+
+<h3 style='margin-left:.5in'><a name="_Toc41470529">1. Close All Programs, Remote
+Development Tools, and Emulators Before Proceeding</a></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>You should close the following
+programs before proceeding with the Smartphone 2003 SDK installation:</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.25in'><![if !supportLists]><span style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>eMbedded
+Visual Tools 3.0</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.25in'><![if !supportLists]><span style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>eMbedded
+Visual C++ 4.0</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.25in'><![if !supportLists]><span style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Visual
+Studio .NET 2003</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.25in'><![if !supportLists]><span style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>The
+SDK also requires that you close the emulators provided with eMbedded Visual
+Tools, eMbedded Visual C++, or Visual Studio .NET. Under some circumstances the
+Windows CE Emulator, or related processes may continue to run even though it
+seems the applications have exited. It may be advisable to reboot your computer
+before proceeding with the installation to ensure no conflicts with existing
+running programs occur.</p>
+
+<h3 style='margin-left:.5in'><a name="_Toc41470530">2. Uninstall Previous
+Versions of the Smartphone 2003 SDK</a></h3>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='color:black'>You do
+not need to uninstall any version of the&nbsp;Smartphone 2002 SDK to use the
+Smartphone 2003 SDK, but any previous versions of the Smartphone 2003 SDK do
+need to be uninstalled. If you are upgrading from a previous version of the
+Smartphone 2003 SDK, after uninstalling the previous version but before
+installing the current version, run eMbedded Visual C++ 4.0 and view the Help
+contents. After this is done, close Help and the eMbedded Visual C++ 4.0
+environment and install the new Smartphone 2003 SDK</span></span></span>. This
+ensures that the latest Help documentation gets installed into the eMbedded
+Visual C++ 4.0 environment.</p>
+
+<h3 style='margin-left:.5in'><a name="_Toc41470531">3. Install Microsoft
+ActiveSync 3.7</a></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>The Smartphone 2003 SDK requires
+ActiveSync 3.7 for application development and deployment using eMbedded Visual
+C++ 4.0 or Visual Studio .NET 2003.<span style="mso-spacerun: yes">  </span>You
+must first uninstall previous versions of ActiveSync before installing
+ActiveSync 3.7. If you do not have ActiveSync 3.7, you may obtain it from <a
+href="http://www.microsoft.com/mobile/pocketpc/downloads">http://www.microsoft.com/mobile/pocketpc/downloads</a>.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>If you already have Visual Studio
+.NET 2003 installed, and then uninstall and reinstall ActiveSync 3.7, you will
+have to <b style='mso-bidi-font-weight:normal'>Repair</b> your installation of
+Visual Studio .NET 2003 from <b style='mso-bidi-font-weight:normal'>Add/Remove
+Programs</b>.</p>
+
+<h3 style='margin-left:.5in'><a name="_Toc41470532">4. Install eMbedded Visual
+C++ 4.0 and Service Pack 2</a></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>In order to develop C++
+applications using the Smartphone 2003 SDK, you must install Microsoft eMbedded
+Visual C++ 4.0 and Service Pack 2 before installing the Smartphone 2003 SDK. If
+you do not already have eMbedded Visual C++ 4.0 or Service Pack 2 you may
+download them from <a
+href="http://msdn.microsoft.com/vstudio/device/embedded/download.asp">http://msdn.microsoft.com/vstudio/device/embedded/download.asp</a>.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Note, installing eMbedded Visual
+C++ 4.0 Service Pack 2 on Windows Server 2003 causes a pop-dialog box to come
+up and prompt that one of the emulator drivers isn't signed. You should accept
+the unsigned driver and continue.</p>
+
+<h3 style='margin-left:.5in'><a name="_Toc41470533">5. Install Visual Studio
+.NET 2003</a></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>In order to develop applications in
+C# or VB.NET for Smartphone 2003, you must install Visual Studio .NET 2003
+before installing the SDK.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Smartphone 2003 devices and the
+Smartphone 2003 Emulation images already contain the .NET Compact Framework.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>For more information on Visual
+Studio .NET 2003 or the .NET Compact Framework, see: <a
+href="http://msdn.microsoft.com/vstudio/">http://msdn.microsoft.com/vstudio/</a>.</p>
+
+<h3 style='margin-left:.5in'><a name="_Toc41470534">6. Install the Smartphone
+2003 SDK</a></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>You can now proceed with the
+installation of the Smartphone 2003 SDK.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>For updates, tools, and whitepapers
+please check the Microsoft Mobile Device Developers website: <a
+href="http://www.microsoft.com/mobile/developer">http://www.microsoft.com/mobile/developer</a>.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'>&nbsp;</p>
+
+<h2><a name="_Emulator_window_does_not_automatica"></a><a name="_Toc41470535"></a><a
+name="_Installing_with_the_Microsoft_Pocke"></a><a name="_Installing_the_SDK"></a><a
+name="_Working_with_the_Emulator"></a><a
+name="_Emulator_requires_network_connectio"></a><a
+name="_Emulator_does_not_support_voice_rec"></a><a
+name="_Embedded_Visual_C++_3.0"></a><span style='mso-bookmark:_Emulator_window_does_not_automatica'><span
+style='mso-bookmark:_Toc41470535'>eMbedded Visual C++ 4.0</span></span></h2>
+
+<h3><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470536"></a><a name="_Smartphone_2002_SDK_not_compatible_"></a><a
+name="_Emulator_requires_x86_compiler_when"></a><a
+name="_Select_x86_Configuration_when_targe"></a><a
+name="_eMbedded_Visual_Basic_3.0"></a><a name="_Active_Sync"></a><a
+name="_Using_the_Radio_Add_on_Pack"></a><a name="_Getting_Started"></a><span
+style='mso-bookmark:_Toc41470536'>Getting Started</span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>This
+section walks you through the creation of a simple Hello World application in
+eMbedded Visual C++ 4.0 using the emulator.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>Open
+eMbedded Visual C++ 4.0.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>From
+the <b style='mso-bidi-font-weight:normal'>File</b> menu, choose <b
+style='mso-bidi-font-weight:normal'>New.</b></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>In
+the <b style='mso-bidi-font-weight:normal'>New</b> dialog, select <b
+style='mso-bidi-font-weight:normal'>WCE Smartphone 2003 Application</b> in the
+Projects tab.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>In
+the <b style='mso-bidi-font-weight:normal'>Project Name</b> text box, enter <b
+style='mso-bidi-font-weight:normal'>TestSDK</b> as the name for your
+application.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>Ensure
+the <b style='mso-bidi-font-weight:normal'>Win32 (WCE emulator)</b> check box
+in the bottom right corner of the New dialog is selected. (Including the x86
+target in the project allows you to build the application for the emulator).</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>In
+the first step of the application wizard, select <b style='mso-bidi-font-weight:
+normal'>A typical 'Hello World' application</b> and click <b style='mso-bidi-font-weight:
+normal'>Finish.</b></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>In
+the <b style='mso-bidi-font-weight:normal'>New Project Information</b> dialog,
+click <b style='mso-bidi-font-weight:normal'>OK.</b></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>For
+the active WCE Configuration choose <b style='mso-bidi-font-weight:normal'>Smartphone
+2003</b> and <b style='mso-bidi-font-weight:normal'>Win32 (WCE emulator)
+Release</b>. For the Device drop-down choose <b style='mso-bidi-font-weight:
+normal'>Smartphone 2003 Emulator</b> to send the application to the emulator.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l0 level1 lfo6;
+tab-stops:list .5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'><![if !supportLists]>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>Select
+<b style='mso-bidi-font-weight:normal'>Build-Rebuild All.</b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>&nbsp;</span></p>
+
+<h3><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470537"></a><a name="_Building_Applications"></a><a
+name="_Other_known_issues_and_Clarificatio"></a><a name="_eMbedded_Visual_Basic"></a><span
+style='mso-bookmark:_Toc41470537'>Targeting your Smartphone Device</span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>Before
+using eMbedded Visual C++ 4.0 with your smartphone device you’ll need to run
+the Smartphone Development Package Signer tool (spdps.exe) found in the SDK
+tools folder.<span style="mso-spacerun: yes">  </span>For most users the
+command will be “spdps /device /create”.<span style="mso-spacerun: yes"> 
+</span>Please refer to the “Using the Development File Signing Tool” document
+for further information on using the Smartphone Development Package Signer
+tool.&nbsp;</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>&nbsp;</span></p>
+
+<h2><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470538">eMbedded Visual Tools 3.0</a></span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>The
+Smartphone 2003 SDK is not compatible with eMbedded Visual Tools 3.0.</span></p>
+
+<h2><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470539">eMbedded Visual Basic</a></span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>The
+Smartphone 2003 SDK does not support development using eMbedded Visual Basic.</span></p>
+
+<h2><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470540">eMbedded Visual C++ 3.0</a></span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>The
+Smartphone 2003 SDK does not support development using eMbedded Visual C++
+3.0.<span style="mso-spacerun: yes">  </span>Only eMbedded Visual C++ 4.0 with
+Service Pack 2 is supported for C++ development.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Emulator_window_does_not_automatica'>&nbsp;</span></p>
+
+<h2><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470541">Windows CE Emulator and Smartphone 2003 Emulator Images</a><a
+name="_1024x768_or_higher_resolution_recom"></a><a
+name="_Applications_and_the_Persistent_Fil"></a><a
+name="_Getting_the_Latest_Information_abou"></a><a
+name="_Applications_and_the_Persistent_Fil_1"></a><a
+name="_1024x768_or_Higher_Resolution_Recom_1"></a></span></h2>
+
+<h3><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470542">Emulator Image Failure (“Cannot obtain DHCP address”) when
+Booting an Image using Virtual Switch Networking Support</a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>When
+using the Virtual Switch networking option with the emulator, on some occasions
+the emulator image may fail to boot correctly (as a result of not being able to
+obtain an IP Address from a DHCP Server). To work around this issue, shut down
+the emulator (and ensure the emulator process pbemulator.exe is no longer
+running in Task Manager), and restart the emulator.</span></p>
+
+<h3><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470543"></a><a name="_Using_ActiveSync_and_the_Radio_Pack"></a><span
+style='mso-bookmark:_Toc41470543'>Using the Radio Add-On Pack</span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>A
+radio add-on pack can be purchased directly from </span><a
+href="http://www.wavecom.com/" target="_blank"><span style='mso-bookmark:_Emulator_window_does_not_automatica'>http://www.wavecom.com/</span><span
+style='mso-bookmark:_Emulator_window_does_not_automatica'></span></a><span
+style='mso-bookmark:_Emulator_window_does_not_automatica'>.<span
+style="mso-spacerun: yes">  </span>When installed, the radio will enable you to
+make phone calls, send and receive SMS messages, and so on, from the
+emulator.<span style="mso-spacerun: yes">  </span>For more details, use the SDK
+documentation index to find the topics “Wireless GSM Telephony in the Emulator”
+and “Switching the Emulator Image to a Radio or Non-Radio Build.”</span></p>
+
+<h3><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470544">Configuring the Emulator to Access the Internet</a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>For
+more information about configuring the emulator to access the Internet,
+configuration related to proxy servers, and MSN Instant Messenger, see the
+“Configuring the Smartphone 2003 Connection Manager” section in the SDK
+documentation.</span></p>
+
+<h3><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470545">Using ActiveSync with the Emulator</a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>For
+information about using ActiveSync with the emulator see the “Using ActiveSync
+with the Emulator” section of the SDK documentation.</span></p>
+
+<h3><span style='mso-bookmark:_Emulator_window_does_not_automatica'><a
+name="_Toc41470546"></a><a name="_Starting_the_emulator_from_the_comm"></a><span
+style='mso-bookmark:_Toc41470546'>Starting the Emulator from the Command Line</span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Emulator_window_does_not_automatica'>For
+information about starting the emulator from the command line see the “Emulator
+Command Line Parameters” section of the SDK documentation.</span></p>
+
+<span style='mso-bookmark:_Emulator_window_does_not_automatica'></span>
+
+<h3><a name="_Unsupported_Development_Tools"></a><a name="_Toc41470547"><span
+style='mso-bookmark:_Unsupported_Development_Tools'>Emulator Clock and WM_TIMER
+Messages</span></a><span style='mso-bookmark:_Unsupported_Development_Tools'></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Unsupported_Development_Tools'>Under
+some circumstances the emulator clock may be running slightly slower or faster
+than the clock on the host PC.<span style="mso-spacerun: yes">  </span>This can
+result in different date/time being reported in the emulator than is report on
+the host PC.</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Unsupported_Development_Tools'>In
+addition, the emulator timer (SetTimer) that generates WM_TIMER messages does
+not work the same as a real device. As a result, WM_TIMER messages may not be
+generated as often. This can cause some difficulty when working with timer
+dependent applications in the emulator.</span></p>
+
+<span style='mso-bookmark:_Unsupported_Development_Tools'></span>
+
+<h3><a name="_Toc41470548">English-Only Characters in Edit Control</a></h3>
+
+<p class=MsoNormal>Expect to see English-only characters when entering characters
+into an edit control in an eEmulator image, even if your desktop locale or
+keyboard configuration is not English. The keyboard driver for the emulator is
+provided only in English.</p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></i></b></p>
+
+<h2><a name="_Toc41470549">.NET Compact Framework</a></h2>
+
+<p class=MsoNormal>For an up-to-date listing of all issues relating to the .NET
+Compact Framework and Visual Studio .NET device features, please see our
+Frequently Asked Questions page.<span style="mso-spacerun: yes">  </span>The
+FAQ page can be reached by going to <a href="http://msdn.microsoft.com/mobility">http://msdn.microsoft.com/mobility</a>.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc37661547"></a><a name="_Toc25231583"></a><a name="_Toc41470550"><span
+style='mso-bookmark:_Toc25231583'><span style='mso-bookmark:_Toc37661547'>Visual
+Studio .NET 2003 Smartphone Support</span></span></a><span style='mso-bookmark:
+_Toc25231583'></span></h2>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661548"></a><a
+name="_Toc41470551"><span style='mso-bookmark:_Toc37661548'>Prerequisites</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>ActiveSync 3.7 or
+greater and Visual Studio .NET 2003 must be installed prior to installing the
+Smartphone 2003 SDK to enable Smartphone device support in Visual Studio .NET. </span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661549"></a><a
+name="_Toc41470552"><span style='mso-bookmark:_Toc37661549'>Upgrading
+ActiveSync</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>If you are upgrading
+ActiveSync from a previous version, and Visual Studio .NET is installed, it is
+important that you NOT uninstall the previous version.&nbsp; Install ActiveSync
+as an upgrade.&nbsp; If you uninstall ActiveSync it will cause errors in the
+installation of Visual Studio .NET.&nbsp; If this happens you can remove, then
+re-install Smart Device Project support in maintenance mode in Visual Studio
+.NET Setup.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661550"></a><a
+name="_Toc41470553"><span style='mso-bookmark:_Toc37661550'>Creating a
+Smartphone Project</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>After installing the
+SDK, the Smartphone platform becomes an additional option within Smart Device
+Application projects for C# and VB .NET.&nbsp; To create a Smart Device
+Application, choose File menu, then click New Project, then choose Visual Basic
+Projects or Visual C# Projects, then choose Smart Device Application.&nbsp; You
+can then use the Application Wizard to choose to create an application based on
+the Smartphone platform.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661551"></a><a
+name="_Toc41470554"><span style='mso-bookmark:_Toc37661551'>Accessing Help</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>Help topics specific
+to development for the .NET Compact Framework is available within the Visual
+Studio .NET help collection.&nbsp; See Smartphone 2003 Help in the Visual
+Studio Help Contents.&nbsp; General development help is available from the
+Start menu.&nbsp; Choose Start, All Programs, Microsoft Smartphone 2003 SDK,
+Smartphone 2003 Help.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661552"></a><a
+name="_Toc41470555"><span style='mso-bookmark:_Toc37661552'>DataGrid Control
+not supported on Smartphone</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>The DataGrid control
+is enabled as an option in the Device Toolbox in a Smartphone project; however,
+this control is not supported on Smartphone 2003, and will cause an error at
+build time if it is used.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661553"></a><a
+name="_Toc41470556"><span style='mso-bookmark:_Toc37661553'>Modifying the tab
+order on a Smartphone form.</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>The Smartphone forms
+designer requires the Smartphone Tab Order tool to adjust the tab order.&nbsp;
+Choose View<span style='color:navy'>,</span> Smartphone Tab Order to access
+this tool.&nbsp; The other Tab Order tool on the View menu does not work with a
+Smartphone project.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661554"></a><a
+name="_Toc41470557"><span style='mso-bookmark:_Toc37661554'>Building a
+distributable CAB file for Smartphone</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>CAB files for
+Smartphone must be built using the CabWizSP.exe command line tool.&nbsp; The
+Build CAB tool in Visual Studio .NET is not compatible with Smartphone.&nbsp;
+This file is found in the Tools directory of the SDK install location.&nbsp; By
+default, this is in \Program Files\Windows CE Tools\wce420\SMARTPHONE
+2003\Tools. &nbsp;See the Smartphone 2003 Help documentation for details.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661555"></a><a
+name="_Toc41470558"><span style='mso-bookmark:_Toc37661555'>Some unsupported
+control properties or events appear in the Property Browser</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>The property browser
+displays some properties that are not supported on the Smartphone.&nbsp; The
+ContextMenu property is not supported on any control or form.&nbsp; The
+MinimizeBox, MaximizeBox, and ToolBar properties are not supported on a
+form.&nbsp; The CheckBoxes property is not supported on the TreeView control.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661556"></a><a
+name="_Toc41470559"><span style='mso-bookmark:_Toc37661556'>Some controls will
+appear differently at runtime than at design time.</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>The forms designer
+displays several controls using a standard Desktop application appearance;
+however their appearance at runtime on the Smartphone or emulator will conform
+to the Smartphone UI guidelines.&nbsp; These include the MainMenu, ScrollBar,
+ComboBox, and ProgressBar controls, as well as the form itself.&nbsp; If the
+WinForms designer Font property is set to a font that is not supported on the
+device or emulator, the default font for the device will be rendered at
+runtime.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661557"></a><a
+name="_Toc41470560"><span style='mso-bookmark:_Toc37661557'>Changing Smartphone
+emulator configuration results in screen height error.</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>Making a change to
+the emulator configuration results in an error dialog that states, “Screen
+height value must be any multiple of 8 between 64 and 768.”&nbsp; &nbsp;To work
+around this issue, set the values to a multiple of eight.&nbsp; Note that these
+values are over-ridden by values in the emulator skin files, and have no
+effect.</span></p>
+
+<h3 style='text-align:justify'><span style='mso-bookmark:_Toc25231583'><a
+name="_Toc37661558"></a><a name="_Toc41470561"><span style='mso-bookmark:_Toc37661558'>Some
+unsupported properties, methods, or events may appear in Intellisense help or
+the VS shell.</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>In some cases, the
+Intellisense help, the property browser, or the VB.NET control events drop-down
+list may display properties, methods, or events that are not supported by the
+Smartphone or by the .NET Compact Framework.</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>Attempting to hook
+an unsupported event will result in the event handler not firing at runtime.</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>For a list of
+properties, methods, and events supported by the .NET Compact Frameworks,
+please consult the Smart Devices help in the MSDN Online help in Visual Studio
+.NET.&nbsp; For Smartphone-specific questions, see the Smartphone SDK
+documentation.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661559"></a><a
+name="_Toc41470562"><span style='mso-bookmark:_Toc37661559'>Deploying Satellite
+dlls to a locked device or emulator is not supported</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>During the
+deployment process, Visual Studio .NET signs the project output assemblies, but
+does not sign the resource satellite dlls with a certificate.&nbsp; If the
+device or emulator is locked and the device trusts the certificate, the
+satellite dlls will fail to load at runtime.&nbsp; To work around this,
+manually sign the project files using SignCode.exe and create an Application
+Deployment CAB file using CABWizSP.exe. See the section Security in Managed
+Code in the Visual Studio .NET, Smartphone 2003 Help.</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'><a
+name="_Toc37661560"><b><span style='font-size:13.0pt;font-family:Arial'>Using
+the Smartphone 2003 device<o:p></o:p></span></b></a></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'><span
+style='mso-bookmark:_Toc37661560'>Before Visual Studio .NET 2003 can deploy and
+debug managed applications on your Smartphone device you’ll need to do one of
+the following:</span></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc25231583'><span style='mso-bookmark:_Toc37661560'>Provision
+     your Smartphone device with the SDKTestCerts.xml document contained in the
+     SDK tools folder.<span style="mso-spacerun: yes">  </span>For more
+     information on provisioning a device refer to the SDK documentation.</span></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc25231583'><span style='mso-bookmark:_Toc37661560'>Update
+     the Visual Studio .NET 2003 configuration file to use a certificate
+     already trusted on the device.<span style="mso-spacerun: yes"> 
+     </span>Open the file “microsoft.smartphone2003.1.0.xsl” located at
+     %ALLUSERSPROFILE%\Application Data\Microsoft\visualstudio\devices\addons.<span
+     style="mso-spacerun: yes">  </span>Find the “SignArgs” property and
+     replace it with all appropriate command line options for
+     signcode.exe.<span style="mso-spacerun: yes">  </span>For more information
+     on signcode.exe visit </span></span><a
+     href="http://msdn.microsoft.com/library/default.asp?url=/workshop/security/authcode/signing.asp"
+     title="http://msdn.microsoft.com/library/default.asp?url=/workshop/security/authcode/signing.asp"><span
+     style='mso-bookmark:_Toc25231583'><span style='mso-bookmark:_Toc37661560'>http://msdn.microsoft.com/library/default.asp?url=/workshop/security/authcode/signing.asp</span></span></a><span
+     style='mso-bookmark:_Toc25231583'><span style='mso-bookmark:_Toc37661560'><span
+     style='font-size:10.0pt;font-family:Arial'>.<o:p></o:p></span></span></span></li>
+</ul>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'><span
+style='mso-bookmark:_Toc37661560'><span style='font-size:10.0pt;font-family:
+Arial'>&nbsp;<o:p></o:p></span></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><span style='mso-bookmark:_Toc37661560'><a
+name="_Toc41470563">Using the Smartphone 2003 Emulator (Radio Required)
+emulator image</a></span></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>1.<span style='mso-tab-count:1'>   </span>Connect
+the radio to power and a COM port on the desktop machine. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>2.<span style='mso-tab-count:1'>   </span>Start
+Visual Studio .NET 2003. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>3.<span style='mso-tab-count:1'>   </span>From
+the <b style='mso-bidi-font-weight:normal'>Tools</b> menu chose <b
+style='mso-bidi-font-weight:normal'>Options…</b> </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>4.<span style='mso-tab-count:1'>   </span>Select
+the <b style='mso-bidi-font-weight:normal'>Device Tools</b> item, <b
+style='mso-bidi-font-weight:normal'>Devices </b>sub item. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>5.<span style='mso-tab-count:1'>   </span>Change
+the <b style='mso-bidi-font-weight:normal'>Show devices for platform: </b>to <b
+style='mso-bidi-font-weight:normal'>Smartphone</b>. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>6.<span style='mso-tab-count:1'>   </span>Select
+the <b style='mso-bidi-font-weight:normal'>Smartphone 2003 Emulator</b> item. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>7.<span style='mso-tab-count:1'>   </span>Click
+the <b style='mso-bidi-font-weight:normal'>Configure…</b>button to the right of
+the <b style='mso-bidi-font-weight:normal'>Startup server:</b> listbox control.
+</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>8.<span style='mso-tab-count:1'>   </span>Click
+the <b style='mso-bidi-font-weight:normal'>Hardware</b> tab. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>9.<span style='mso-tab-count:1'>   </span>Set
+<b style='mso-bidi-font-weight:normal'>Serial port 2:</b> to the COM port the
+radio was connected to in step 1. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>10.<span style='mso-tab-count:1'> </span>Click
+the <b style='mso-bidi-font-weight:normal'>OK</b> button. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>11.<span style='mso-tab-count:1'> </span>Click
+the <b style='mso-bidi-font-weight:normal'>OK</b> button. </span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='mso-bookmark:_Toc25231583'>Note:
+If you have used the <b style='mso-bidi-font-weight:normal'>Smartphone 2003
+Emulator</b> image before you will need to close the emulator without saving
+state for the changes to take effect.</span></p>
+
+<h3><span style='mso-bookmark:_Toc25231583'><a name="_Toc37661561"></a><a
+name="_Toc41470564"><span style='mso-bookmark:_Toc37661561'>Deploying localized
+versions of the System_SR files</span></a></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc25231583'>To change the
+language version of the System_SR file that is deployed to during debugging, do
+the following:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>1.<span style='mso-tab-count:1'>   </span>Close
+Visual Studio .NET</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>2.<span style='mso-tab-count:1'>   </span>Open
+the following file in a text editor:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'><b style='mso-bidi-font-weight:normal'><span
+style='mso-tab-count:1'>      </span>&lt;All users profile&gt;\Application
+Data\Microsoft\visualstudio<br>
+\devices\addons\microsoft.smartphone2003.1.0.1033.xml<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'>3.<span style='mso-tab-count:1'>   </span>Change
+the string, &quot;System_SR_ENU.phone.cab&quot; in the following XML tag, to
+the language of your choice, according to the table below:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><span
+style='mso-bookmark:_Toc25231583'><b style='mso-bidi-font-weight:normal'><span
+style='mso-tab-count:1'>      </span>&lt;PHONE_CABFILE_SYSTEM_SR <br>
+_locID=&quot;PHONE_CABFILE_SYSTEM_SR&quot;&gt;<br>
+System_SR_ENU.phone.cab&lt;/PHONE_CABFILE_SYSTEM_SR&gt;</b></span><b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;<o:p></o:p></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=558 style='width:4.65in;
+ margin-left:41.4pt;border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'><b style='mso-bidi-font-weight:normal'>Language<o:p></o:p></b></p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><b
+  style='mso-bidi-font-weight:normal'>Replacement string<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>Chinese Simplified</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_CHS.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>Chinese Traditional</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_CHT.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>German</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_DE.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>Spanish</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_ES.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>French</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_FR.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>Italian</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_IT.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>Japanese</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_JA.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>Korean</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_KO.phone.cab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+  <td width=247 valign=top style='width:148.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;tab-stops:
+  .25in'>Portuguese-Brazil</p>
+  </td>
+  <td width=311 valign=top style='width:186.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>System_SR_pt-BR.phone.cab</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>4.<span
+style='mso-tab-count:1'>   </span>Delete the following file:</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><b
+style='mso-bidi-font-weight:normal'><span style='mso-tab-count:1'>      </span>&lt;All
+users profile&gt;\ Application Data\Microsoft\visualstudio<br>
+\devices\1033\microsoft.smartphone2003.1.0.xml<o:p></o:p></b></p>
+
+<h3><a name="_Toc37661562"></a><a name="_Toc41470565"><span style='mso-bookmark:
+_Toc37661562'>Setting the correct font and font size for double byte character
+languages</span></a></h3>
+
+<p class=MsoNormal>The default font for Smartphone projects is Nina 11pt, which
+is not included on devices or emulators whose localization language uses a
+double-byte code page. In this case, the device will render characters using
+the default font for the device and the default font size for the Smartphone
+project, which is 11pt. To be able accurately set fonts at run-time, set the
+Font property in the Properties window to a font supported by the emulator.</p>
+
+<h3><a name="_Toc37661563"></a><a name="_Toc41470566"><span style='mso-bookmark:
+_Toc37661563'>TextBox and TreeView controls can’t display double-byte
+characters in the WinForms designer for the Nina Font</span></a></h3>
+
+<p class=MsoNormal>To display readable double-byte characters at design-time in
+the TextBox and TreeView controls, set the Font property to a font supported both
+on the device and desktop.&nbsp; Note that this is a design-time only issue –
+runtime behavior is not affected.</p>
+
+<h3><a name="_Toc41470567">Correcting the Help filter in non-English versions
+of Visual Studio .NET</a></h3>
+
+<p class=MsoNormal>Smartphone Help topics do not appear in non-English versions
+of Visual Studio .NET when <b style='mso-bidi-font-weight:normal'>.NET Compact
+Framework</b> is selected in the <b style='mso-bidi-font-weight:normal'>Filtered
+by</b> box. To correct this problem, edit the .NET Compact Framework filter:<o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>1.<span
+style='mso-tab-count:1'>   </span>On the <b style='mso-bidi-font-weight:normal'>Help</b>
+menu, click <b style='mso-bidi-font-weight:normal'>Edit Filters</b>.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>2.<span
+style='mso-tab-count:1'>   </span>In the <b style='mso-bidi-font-weight:normal'>Filter</b>
+box, select <b style='mso-bidi-font-weight:normal'>.Net Compact Framework</b>.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>3.<span
+style='mso-tab-count:1'>   </span>In the <b style='mso-bidi-font-weight:normal'>Filter
+Definition</b> box, remove the &quot;Locale&quot; clause. For example, in the
+Japanese version of Visual Studio .NET, you would remove &quot;AND
+'Locale'='KBJapanese'&quot;.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'><b
+style='mso-bidi-font-weight:normal'>Note</b><span style="mso-spacerun: yes">  
+</span>The language specified in the &quot;Locale&quot; clause depends on the
+language of Visual Studio .NET.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;tab-stops:.5in'>4.<span
+style='mso-tab-count:1'>   </span>Click <b style='mso-bidi-font-weight:normal'>Save</b>.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc40092557"></a><a name="_Toc41470568"><span style='mso-bookmark:
+_Toc40092557'>Smartphone 2003 SDK Documentation</span></span></a><span
+style='mso-no-proof:yes'><o:p></o:p></h2>
+
+</span>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>For the latest developer
+documentation for Smartphone visit MSDN at <a href="http://msdn.microsoft.com/">http://msdn.microsoft.com/</a>.<o:p></o:p></p>
+
+</span>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>&nbsp;<o:p></o:p></p>
+
+</span>
+
+<h2><a name="_Toc41470569">Technical Support</a></h2>
+
+<p class=MsoNormal>You can obtain technical support by visiting <a
+href="http://support.microsoft.com/servicedesks/msdn/"><span style='font-size:
+8.5pt;font-family:Verdana'>MSDN Online Support</span></a>. This site provides
+resources ranging from self-help tools to direct assistance from a Microsoft
+technical engineer. These resources include: </p>
+
+<p class=MsoNormal>Using the Developer Support Microsoft Knowledge Base </p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l2 level1 lfo13;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Searching
+for other information online </p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l2 level1 lfo13;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Connecting
+with your peers through newsgroups </p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l2 level1 lfo13;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Contacting
+a Support Professional </p>
+
+<p class=MsoNormal>For additional technical articles, samples, and information
+concerning software development for Smartphone 2003, please visit <a
+href="http://www.microsoft.com/mobile/developer">www.microsoft.com/mobile/developer</a>
+on a regular basis. </p>
+
+<h3>&nbsp;</h3>
+
+<h2><a name="_Toc41470570"></a><a name="_Emulator_WM_TIMER_Messages"></a><a
+name="_Hardware_Information"></a><a name="_Technical_Support"></a><a
+name="_Configuring_the_Emulator_to_Access_"></a><a name="_Technical_Support_1"></a><a
+name="_Legal_Information"></a><span style='mso-bookmark:_Toc41470570'>Legal
+Information</span></h2>
+
+<p class=MsoNormal>MICROSOFT SMARTPHONE 2003 SDK</p>
+
+<p class=MsoNormal>© 2003 Microsoft Corporation.<span style="mso-spacerun:
+yes">  </span>All Rights Reserved.<span style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal>This product is licensed to you pursuant to the End User
+License Agreement detailed in the “Smartphone 2003 SDK EULA.rtf” file.<span
+style="mso-spacerun: yes">  </span>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

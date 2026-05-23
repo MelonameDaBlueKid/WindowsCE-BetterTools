@@ -1,0 +1,210 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	IDS_WINMINE_OK,				"Done"
+	IDS_WINMINE_OPTIONS,		"Menu"
+	IDS_WINMINE_QUIT,			"Quit"
+	IDS_WINMINE_TITLE,			"Minesweeper"
+	IDS_WINMINE_APPNAME,		"WINMINE"
+	IDS_WINMINE_MENUFAIL,		"Unable to create the main menu bar"
+	IDS_WINMINE_ERROR,			"Error!!!"
+	IDS_WINMINE_BADTIMER,		"Unable to destroy the timer"
+	IDS_WINMINE_INITFAIL,		"Unable to initialize a required object"
+	IDS_WINMINE_SAVEFAIL,		"Unable to save settings to the registry"
+	IDS_WINMINE_MINES,			"Mines: "
+	IDS_WINMINE_TIME,			"Time: "
+	IDS_WINMINE_STARTFAIL,		"Unable to start a new game"
+	IDS_WINMINE_WINNER,			"You Win!!!"
+	IDS_WINMINE_PAUSEMB			"The game is paused.  Press OK to return."
+	IDS_WINMINE_RESUME			"Do you wish to continue your previous game?"
+	IDS_WINMINE_PREFS			"You cannot use the same key for multiple actions.  Please change your selections and try again."
+	IDS_WINMINE_PAUSE			"Pause"
+	IDS_WINMINE_NEWGAME			"New Game"
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WINMINE_HELP DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_VISIBLE | WS_VSCROLL | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Use the arrow keys to move around the board.  Trying to move off the edge of the screen will move you to the opposite edge.",
+                    IDC_STATIC,5,5,130,35
+    LTEXT           "You can uncover a square by pressing the Uncover a Square key (default: Action Key).  If you uncover a mine, you lose the game.",
+                    IDC_STATIC,5,40,130,35
+    LTEXT           "If a number appears on a square, it indicates how many mines are in the 8 squares that surround it.",
+                    IDC_STATIC,5,75,130,27
+    LTEXT           "To mark a square that you suspect contains a mine, highlight it and press the Mark key (default: Numerical Key 1).",
+                    IDC_STATIC,5,102,130,35
+    LTEXT           "If you have marked all the mines around a numbered square, you can uncover the remaining squares around it by highlighting it and pressing the Uncover Neighbors key (default: Numerical Key 2).",
+                    IDC_STATIC,5,137,130,51
+	LTEXT			"To win the game you must correctly flag every square that contains a mine and uncover all remaining squares without stepping on a mine.",
+					IDC_STATIC,5,188,130,35
+END
+
+IDD_WINMINE_NEWHIGH DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_VISIBLE | WS_VSCROLL | WS_POPUP
+BEGIN
+    LTEXT           "Congratulations!  You have the fastest time for this level.  Please enter your name.",
+                    IDC_STATIC,5,5,90,35
+    EDITTEXT        IDC_WINMINE_HIGHNAME,5,45,90,10,ES_AUTOHSCROLL
+END
+
+IDD_WINMINE_HIGH DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_VISIBLE | WS_VSCROLL | WS_POPUP
+BEGIN
+	CTEXT "Best Times",IDC_STATIC,4,5,93,10
+	LTEXT "Beginner:",IDC_WINMINE_BLBL,5,20,90,10
+	LTEXT "", IDC_WINMINE_BNAME,5,30,70,10
+	LTEXT "", IDC_WINMINE_BTIME,75,30,20,10
+	LTEXT "Intermediate:",IDC_WINMINE_ILBL,5,40,90,10
+	LTEXT "", IDC_WINMINE_INAME,5,50,70,10
+	LTEXT "", IDC_WINMINE_ITIME,75,50,20,10
+	LTEXT "Expert:",IDC_WINMINE_ELBL,5,60,90,10
+	LTEXT "", IDC_WINMINE_ENAME,5,70,70,10
+	LTEXT "", IDC_WINMINE_ETIME,75,70,20,10
+END
+
+IDD_WINMINE_PREFS DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_VISIBLE | WS_VSCROLL | WS_POPUP
+BEGIN
+    LTEXT "Uncover a Square:",IDC_WINMINE_LBLMOVE,4,5,93,10
+	CONTROL "", IDC_WINMINE_MOVELIST, "listbox", WS_TABSTOP | WS_VISIBLE |
+	LBS_NOINTEGRALHEIGHT | LBS_NOTIFY,4,15,93,10
+	CONTROL "", IDC_WINMINE_MOVEUD, UPDOWN_CLASS, WS_VISIBLE | UDS_AUTOBUDDY | UDS_EXPANDABLE | 
+	UDS_HORZ | UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_SETBUDDYINT | UDS_WRAP,0,0,0,0
+
+    LTEXT "Mark a Square:",IDC_WINMINE_LBLMARK,4,27,93,10
+	CONTROL "", IDC_WINMINE_MARKLIST, "listbox", WS_TABSTOP | WS_VISIBLE |
+	LBS_NOINTEGRALHEIGHT | LBS_NOTIFY,4,37,93,10
+	CONTROL "", IDC_WINMINE_MARKUD, UPDOWN_CLASS, WS_VISIBLE | UDS_AUTOBUDDY | UDS_EXPANDABLE | 
+	UDS_HORZ | UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_SETBUDDYINT,0,0,0,0
+
+    LTEXT "Uncover Neighbors:",IDC_WINMINE_LBLUNC,4,49,93,10
+	CONTROL "", IDC_WINMINE_UNCLIST, "listbox", WS_TABSTOP | WS_VISIBLE |
+	LBS_NOINTEGRALHEIGHT | LBS_NOTIFY,4,59,93,10
+	CONTROL "", IDC_WINMINE_UNCUD, UPDOWN_CLASS, WS_VISIBLE | UDS_AUTOBUDDY | UDS_EXPANDABLE | 
+	UDS_HORZ | UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_SETBUDDYINT,0,0,0,0
+
+	CONTROL "Play Sounds", IDC_WINMINE_SOUNDS, "Button", BS_CHECKBOX | WS_TABSTOP,4,71,93,10
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_WINMINE_DLGMENU RCDATA
+BEGIN
+	0,
+	1,
+	I_IMAGENONE, IDM_WINMINE_OK, TBSTATE_ENABLED, 
+	TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_WINMINE_OK, 0, NOMENU,
+END
+
+IDR_WINMINE_MAINMENU RCDATA
+BEGIN
+	IDR_WINMINE_OPTIONS,
+	2,
+	I_IMAGENONE, IDM_WINMINE_PAUSE, TBSTATE_ENABLED, 
+	TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_WINMINE_PAUSE, 0, NOMENU,
+	I_IMAGENONE, IDM_WINMINE_OPTIONS, TBSTATE_ENABLED, 
+	TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_WINMINE_OPTIONS, 0, 0,
+END
+
+IDR_WINMINE_OPTIONS MENU
+	BEGIN
+	POPUP ""
+		BEGIN
+		MENUITEM "New Game",		IDM_WINMINE_NEWGAME
+		MENUITEM "Beginner",		IDM_WINMINE_BEGINNER
+		MENUITEM "Intermediate",	IDM_WINMINE_INTERMEDIATE
+		MENUITEM "Expert",			IDM_WINMINE_EXPERT
+		MENUITEM "Best Times",		IDM_WINMINE_SHOWHIGH
+		MENUITEM "Options",			IDM_WINMINE_PREFS
+		MENUITEM "Help",			IDM_WINMINE_HELP
+		MENUITEM "Quit",			IDM_WINMINE_QUIT
+		END
+	END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+IDR_WINMINE_BLOCKS		BITMAP					glyphs_13b.bmp
+// IDR_WINMINE_BLOCKSBW	BITMAP					blocksbw2.bmp
+IDI_WINMINE_ICON        ICON					winmine.ico
+
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

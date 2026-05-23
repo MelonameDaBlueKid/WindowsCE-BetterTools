@@ -1,0 +1,11 @@
+; stdevs.def - Declares the module parameters for the DLL.
+
+LIBRARY DEVSYNC
+
+EXPORTS
+	InitObjType
+	ObjectNotify
+	GetObjTypeInfo
+	ReportStatus
+    FindObjects
+    SyncData

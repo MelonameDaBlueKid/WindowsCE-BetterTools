@@ -1,0 +1,47 @@
+SAMPLE=comctls
+RCFILE=$(SAMPLE)
+CC=cl.exe
+LINK=link.exe
+RC=rc.exe
+
+#CDEBUG=-DDEBUG=1 -Zi -Fd$(SAMPLE).pdb
+#LDEBUG=-debug -debugtype:cv -pdb:$(SAMPLE).pdb
+
+LIBS=corelibc.lib coredll.lib aygshell.lib
+
+CDEFINES=-DUNDER_CE -DUNICODE -D_UNICODE -DWIN32 -DSTRICT \
+	-Dx86 -Di486 -D_X86_ -D_WIN32_WCE=300 \
+	-D_WIN32_WCE_EMULATION -DUSA \
+	-DINTLMSG_CODEPAGE=1252
+
+RDEFINES=-DUNDER_CE -DUNICODE -D_UNICODE -DWIN32 -DSTRICT \
+	-Dx86 -Di486 -D_X86_ -D_WIN32_WCE=300 \
+	-D_WIN32_WCE_EMULATION -DUSA \
+	-DINTLMSG_CODEPAGE=1252
+
+LDEFINES=-nologo -subsystem:windows -incremental:no \
+         -out:$(SAMPLE).exe -machine:x86 -nodefaultlib -entry:WinMainCRTStartup \
+         $(LDEBUG) $(LIBS) 
+
+all: \
+	$(SAMPLE).exe
+
+clean: \
+	; \
+	del /Q *.obj *.res *.exe
+
+$(SAMPLE).exe: \
+	$(RCFILE).res \
+	$(SAMPLE).obj ; \
+	$(LINK) $(LDEFINES) \
+	$(RCFILE).res $(SAMPLE).obj
+
+$(RCFILE).res: \
+	$(RCFILE).rc ; \
+	$(RC) -r $(RDEFINES) -c 1252 \
+	$(RCFILE).rc
+
+$(SAMPLE).obj: \
+	$(SAMPLE).cpp ; \
+	$(CC) $(CDEFINES) $(CDEBUG) -c \
+	$(SAMPLE).cpp

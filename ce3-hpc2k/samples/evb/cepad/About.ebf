@@ -1,0 +1,165 @@
+VERSION 5.00
+Begin VB.Form frmAbout 
+   BorderStyle     =   3  'Fixed Dialog
+   Caption         =   "About MyApp"
+   ClientHeight    =   2535
+   ClientLeft      =   2340
+   ClientTop       =   1935
+   ClientWidth     =   4350
+   ClipControls    =   0   'False
+   ScaleHeight     =   2535
+   ScaleWidth      =   4350
+   ShowInTaskbar   =   0   'False
+   Begin VBCE.CommandButton cmdOK 
+      Cancel          =   -1  'True
+      Default         =   -1  'True
+      Height          =   345
+      Left            =   2880
+      TabIndex        =   0
+      Top             =   2040
+      Width           =   1260
+      _cx             =   2143
+      _cy             =   873
+      Appearance      =   1
+      BackColor       =   12632256
+      Caption         =   "OK"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VB.Line Line2 
+      BorderColor     =   &H00808080&
+      BorderStyle     =   6  'Transparent
+      X1              =   90
+      X2              =   4200
+      Y1              =   1965
+      Y2              =   1965
+   End
+   Begin VBCE.Label lblDescription 
+      Height          =   690
+      Left            =   210
+      TabIndex        =   1
+      Top             =   1125
+      Width           =   3885
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "App Description"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   0
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblTitle 
+      Height          =   480
+      Left            =   210
+      TabIndex        =   2
+      Top             =   240
+      Width           =   3885
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Application Title"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   0
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VB.Line Line1 
+      BorderColor     =   &H00FFFFFF&
+      BorderWidth     =   2
+      X1              =   105
+      X2              =   4200
+      Y1              =   1980
+      Y2              =   1980
+   End
+   Begin VBCE.Label lblVersion 
+      Height          =   225
+      Left            =   210
+      TabIndex        =   3
+      Top             =   780
+      Width           =   3885
+      _cx             =   2500
+      _cy             =   500
+      Appearance      =   1
+      AutoSize        =   0   'False
+      BackColor       =   -2147483633
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Version"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+End
+Attribute VB_Name = "frmAbout"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'********************************************************************************
+'*
+'*  CEPad - About Box code
+'*
+'*  Copyright (c) 1998 Microsoft Corporation
+
+Option Explicit
+
+Private Sub cmdOK_Click()
+  Me.Hide
+End Sub
+
+Private Sub Form_Load()
+  Me.Caption = "About " & App.Title
+  lblVersion.Caption = "Version " & App.Major & "." & App.Minor & "." & App.Revision
+  lblTitle.Caption = App.Title
+  frmAbout.lblDescription.Caption = App.Comments
+End Sub
+

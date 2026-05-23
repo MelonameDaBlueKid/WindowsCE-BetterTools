@@ -1,0 +1,439 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="readme_files/filelist.xml">
+<title>SendMail sample readme</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ori Amiga</o:Author>
+  <o:LastAuthor>a-nickm</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>9</o:TotalTime>
+  <o:Created>2002-10-24T22:34:00Z</o:Created>
+  <o:LastSaved>2003-01-29T00:56:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>341</o:Words>
+  <o:Characters>1950</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>16</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2287</o:CharactersWithSpaces>
+  <o:Version>10.4219</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:UIApproved dt:dt="string">0</o:UIApproved>
+  <o:Test_x0020_Design_x0020_Spec dt:dt="string">,</o:Test_x0020_Design_x0020_Spec>
+  <o:Group dt:dt="string">1</o:Group>
+  <o:PM dt:dt="string">368</o:PM>
+  <o:Dev dt:dt="string">18</o:Dev>
+  <o:LocApproved dt:dt="string">0</o:LocApproved>
+  <o:Ready_x0020_to_x0020_Publish dt:dt="string">0</o:Ready_x0020_to_x0020_Publish>
+  <o:Area dt:dt="string">39</o:Area>
+  <o:Milestone dt:dt="string">M3</o:Milestone>
+  <o:Priority dt:dt="string">2</o:Priority>
+  <o:PMApproved dt:dt="string">0</o:PMApproved>
+  <o:TestApproved dt:dt="string">0</o:TestApproved>
+  <o:UEApproved dt:dt="string">0</o:UEApproved>
+  <o:VisionPillar dt:dt="string">1</o:VisionPillar>
+  <o:Team dt:dt="string">10</o:Team>
+  <o:Status dt:dt="string">Reviewed</o:Status>
+  <o:UE dt:dt="string">375</o:UE>
+  <o:DevApproved dt:dt="string">0</o:DevApproved>
+  <o:URApproved dt:dt="string">0</o:URApproved>
+  <o:CheckPointApproved dt:dt="string">0</o:CheckPointApproved>
+  <o:Test dt:dt="string">231</o:Test>
+  <o:_AdHocReviewCycleID dt:dt="float">1923761812</o:_AdHocReviewCycleID>
+  <o:_EmailSubject dt:dt="string">first pass at SendMail sample</o:_EmailSubject>
+  <o:_AuthorEmail dt:dt="string">a-nickm@microsoft.com</o:_AuthorEmail>
+  <o:_AuthorEmailDisplayName dt:dt="string">Nick Monkman</o:_AuthorEmailDisplayName>
+  <o:_ReviewingToolsShownOnce dt:dt="string"></o:_ReviewingToolsShownOnce>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-alt:"?l?r ???????";
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:24.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:22.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Tahoma;
+	color:gray;
+	mso-font-kerning:12.0pt;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:18.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:Verdana;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:678122297;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-741558488 562303062 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1386566677;
+	mso-list-template-ids:-184657720;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h2 style='line-height:24.0pt;mso-line-height-rule:exactly'>SendMail</h2>
+
+<p class=MsoNormal>Send a mail message using CEMAPI</p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=square>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Sample_Overview">Sample
+     Overview</a><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Requirements_and_Dependencies">Requirements
+     and Dependencies</a><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Topics">Topics</a></span><span
+     class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+     text-underline:none'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Building_the_Sample">Building
+     the Sample</a></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Running_the_Sample">Running
+     the Sample</a><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Notes">Notes</a><o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="_Toc21230997"></a><a name="_Sample_Overview"></a><span
+style='mso-bookmark:_Toc21230997'>Sample Overview</span></h3>
+
+<p class=MsoNormal>This sample demonstrates the use of several CEMAPI APIs.
+Using these APIs, the sample application sends an e-mail message per account to
+a list of recipients. One message per each account on the device (POP3,
+ActiveSync, etc) will be stored in that account’s outbox. The recipient list,
+subject, and message body are specified in code and can be changed. When the
+program is complete, the message(s) will either be in the device’s outbox, or
+will have been sent if the appropriate partnership is set up.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Basic program flow:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Logon to the message store</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Get the message stores table</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For each entry (i.e. local account)</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span>Open current
+store entry</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span>Get the
+Drafts folder (necessary for outgoing mail)</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span>Create a new
+message in this folder</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span>Set relevant
+message properties (Recipients, Subject, Body, etc)</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span>Create a file
+attachment</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span>Send the
+message</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Clean up</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21230998"></a><a name="_Requirements"></a><a
+name="_Requirements_and_Dependencies"></a><span style='mso-bookmark:_Toc21230998'>Requirements</span>
+and Dependencies</h3>
+
+<p class=MsoNormal>This sample requires either the Pocket PC or Smartphone 2003
+SDKs. A valid partnership or network connection is needed to actually send the mail
+messages – otherwise they will remain in the device’s outbox.</p>
+
+<h3><a name="_Topics"></a>Topics</h3>
+
+<p class=MsoNormal>CEMAPI</p>
+
+<p class=MsoNormal>MapiLogonEx</p>
+
+<p class=MsoNormal>SRowSet</p>
+
+<p class=MsoNormal>IMapiSession::GetMsgStoresTable</p>
+
+<p class=MsoNormal>IMapiSession::OpenMsgStore</p>
+
+<p class=MsoNormal>IMapiTable::QueryRows</p>
+
+<p class=MsoNormal>IMsgStore::OpenEntry</p>
+
+<p class=MsoNormal>IMsgStore::GetProps</p>
+
+<p class=MsoNormal>IMapiFolder::CreateMessage</p>
+
+<p class=MsoNormal>IMessage::SubmitMessage</p>
+
+<p class=MsoNormal>MAPIFreeBuffer</p>
+
+<p class=MsoNormal>FreeProws</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Building_the_Sample"></a>Building the Sample</h3>
+
+<p class=MsoNormal>Simply open the project file (.vcw) in Embedded Visual
+Studio, choose the target platform (Pocket PC, or Smartphone, Emulator or
+Device) and build.</p>
+
+<h3><a name="_Toc21230999"></a><a name="_Running_the_Sample"></a><span
+style='mso-bookmark:_Toc21230999'>Running the Sample</span></h3>
+
+<p class=MsoNormal>Run the application normally (i.e. select it from the
+device’s file manager or start menu), or run it by hitting CTRL-F5 from
+eMbedded Visual C++ with the project loaded. The sample application has no UI
+and requires no interaction. After running the application, check your Outbox
+or Sent Items (depending on your network / partnership access) and you should
+see your message(s).</p>
+
+<p class=MsoNormal><a name="_Notes"></a><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

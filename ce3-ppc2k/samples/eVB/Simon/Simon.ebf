@@ -1,0 +1,494 @@
+VERSION 5.00
+Object = "{F7DEA2C9-BA8F-446E-A292-B4840F3BD661}#1.0#0"; "mscemenubar.dll"
+Begin VB.Form frmSimon 
+   Appearance      =   0  'Flat
+   BackColor       =   &H00000000&
+   Caption         =   "The Game of Simon"
+   ClientHeight    =   4020
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   3600
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   LockControls    =   -1  'True
+   ScaleHeight     =   4020
+   ScaleWidth      =   3600
+   Begin MenuBarLib.MenuBar MenuBar 
+      Left            =   0
+      Top             =   3720
+      _cx             =   6376
+      _cy             =   661
+      Enabled         =   -1  'True
+      NewButton       =   0   'False
+   End
+   Begin VBCE.CommandButton cmdEnter 
+      Height          =   350
+      Left            =   1500
+      TabIndex        =   11
+      Top             =   2880
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   16744576
+      Caption         =   "Enter"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   1
+   End
+   Begin VBCE.CommandButton cmdPurple 
+      Height          =   615
+      Left            =   2280
+      TabIndex        =   10
+      Top             =   1800
+      Width           =   735
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Purple"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   1
+   End
+   Begin VBCE.CommandButton cmdBlue 
+      Height          =   615
+      Left            =   1440
+      TabIndex        =   9
+      Top             =   1800
+      Width           =   735
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Blue"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   1
+   End
+   Begin VBCE.CommandButton cmdGreen 
+      Height          =   615
+      Left            =   600
+      TabIndex        =   8
+      Top             =   1800
+      Width           =   735
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Green"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   1
+   End
+   Begin VBCE.CommandButton cmdYellow 
+      Height          =   615
+      Left            =   2280
+      TabIndex        =   7
+      Top             =   960
+      Width           =   735
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Yellow"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   1
+   End
+   Begin VBCE.CommandButton cmdOrange 
+      Height          =   615
+      Left            =   1440
+      TabIndex        =   6
+      Top             =   960
+      Width           =   735
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Orange"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   1
+   End
+   Begin VBCE.CommandButton cmdRed 
+      Height          =   615
+      Left            =   600
+      TabIndex        =   5
+      Top             =   960
+      Width           =   735
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "Red"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   1
+   End
+   Begin VBCE.Label Label5 
+      Height          =   15
+      Left            =   360
+      TabIndex        =   4
+      Top             =   2640
+      Width           =   2895
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   8388608
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Label5"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label3 
+      Height          =   1935
+      Left            =   3240
+      TabIndex        =   3
+      Top             =   720
+      Width           =   75
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   8388608
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Label3"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label2 
+      Height          =   1935
+      Left            =   330
+      TabIndex        =   2
+      Top             =   720
+      Width           =   75
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   8388608
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Label2"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label Label4 
+      Height          =   15
+      Left            =   360
+      TabIndex        =   1
+      Top             =   720
+      Width           =   2895
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   8388608
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Label4"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+   Begin VBCE.Label lblTitle 
+      Height          =   255
+      Left            =   960
+      TabIndex        =   0
+      Top             =   240
+      Width           =   1815
+      _cx             =   2500
+      _cy             =   500
+      AutoSize        =   0   'False
+      BackColor       =   0
+      BackStyle       =   1
+      BorderStyle     =   0
+      Caption         =   "Simon Says Game"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   16744576
+      Alignment       =   2
+      UseMnemonic     =   -1  'True
+      WordWrap        =   0   'False
+   End
+End
+Attribute VB_Name = "frmSimon"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Option Explicit
+
+Private Sub Form_Load()
+    Call DisableButtons
+    Call Initialize_Menu
+    Call Initialize_Game
+End Sub
+
+Private Sub cmdBlue_Click()
+    UserString = UserString + "B"
+End Sub
+
+Private Sub cmdGreen_Click()
+    UserString = UserString + "G"
+End Sub
+
+Private Sub cmdOrange_Click()
+    UserString = UserString + "O"
+End Sub
+
+Private Sub cmdPurple_Click()
+    UserString = UserString + "P"
+End Sub
+
+Private Sub cmdYellow_Click()
+    UserString = UserString + "Y"
+End Sub
+
+Private Sub cmdRed_Click()
+    UserString = UserString + "R"
+End Sub
+
+Private Sub cmdEnter_Click()
+    Call DisableButtons
+    Call CheckGuess
+End Sub
+
+Private Sub Initialize_Game()
+    'Set the initial backcolor of the buttons
+    cmdRed.BackColor = &HE0E0E0            'Red
+    cmdOrange.BackColor = &HE0E0E0         'Orange
+    cmdYellow.BackColor = &HE0E0E0         'Yellow
+    cmdGreen.BackColor = &HE0E0E0          'Green
+    cmdBlue.BackColor = &HE0E0E0           'Blue
+    cmdPurple.BackColor = &HE0E0E0         'Purple
+End Sub
+
+Private Sub FlashButton(ByRef Button As CommandButton, ByRef Color As Long)
+    Button.BackColor = Color
+    Button.Refresh
+    Sleep (300)
+    Button.BackColor = &HE0E0E0
+    Button.Refresh
+End Sub
+
+
+Private Sub Initialize_SimonSay()
+    Call DisableButtons
+    
+    Dim i
+    i = 0
+    While i < GuessLevel
+        i = i + 1
+        
+        'Randomly generate a color code
+        Randomize
+        
+        'Pick the color to change depending on the color code
+        Select Case (Int((6 * Rnd + 1)))
+            Case 1
+                Call FlashButton(cmdRed, &HFF&)
+                ComputerString = ComputerString + "R"
+            Case 2
+                Call FlashButton(cmdOrange, &H80FF&)
+                ComputerString = ComputerString + "O"
+            Case 3
+                Call FlashButton(cmdYellow, &HFFFF&)
+                ComputerString = ComputerString + "Y"
+            Case 4
+                Call FlashButton(cmdGreen, &HFF00&)
+                ComputerString = ComputerString + "G"
+            Case 5
+                Call FlashButton(cmdBlue, &HFF0000)
+                ComputerString = ComputerString + "B"
+            Case 6
+                Call FlashButton(cmdPurple, &HFF00FF)
+                ComputerString = ComputerString + "P"
+        End Select
+        
+        Sleep (500)
+    Wend
+    
+    Call EnableButtons
+End Sub
+
+Public Sub CheckGuess()
+    Dim ReturnValue As Integer
+    
+    ReturnValue = StrComp(ComputerString, UserString, 1)
+    ComputerString = ""
+    UserString = ""
+    
+    If ReturnValue = 0 Then
+        GuessLevel = GuessLevel + 1
+        Call Initialize_SimonSay
+    Else
+        MsgBox "Simon says you lose!", vbOKOnly, "Game Over"
+        Call DisableButtons
+    End If
+End Sub
+
+Private Sub MenuBar_MenuClick(ByVal Item As MenuBarLib.Item)
+    Dim Response As Integer
+    
+    Select Case Item.Caption
+        'Exit the game
+        Case "Exit"
+            Response = MsgBox("Do you want to quit the game?", vbYesNo, "Simon Says")
+            If Response = 6 Then
+                App.End
+            End If
+        'Start the game
+        Case "Start"
+            GuessLevel = 1
+            ComputerString = ""
+            UserString = ""
+            
+            Call Initialize_SimonSay
+        Case "About Simon Say"
+            frmAbout.Show
+    End Select
+End Sub
+
+Private Sub Initialize_Menu()
+    'Initialize the menubar items
+    Set FileMenu = frmSimon.MenuBar.Controls.AddMenu("File")
+    FileMenu.Items.Add , , "Exit"
+    
+    Set GameMenu = frmSimon.MenuBar.Controls.AddMenu("Game")
+    GameMenu.Items.Add , , "Start"
+    
+    Set HelpMenu = frmSimon.MenuBar.Controls.AddMenu("Help")
+    HelpMenu.Items.Add , , "About Simon Say"
+End Sub
+
+Private Sub DisableButtons()
+    cmdRed.Enabled = False
+    cmdOrange.Enabled = False
+    cmdYellow.Enabled = False
+    cmdGreen.Enabled = False
+    cmdBlue.Enabled = False
+    cmdPurple.Enabled = False
+    cmdEnter.Enabled = False
+End Sub
+
+Private Sub EnableButtons()
+    cmdRed.Enabled = True
+    cmdOrange.Enabled = True
+    cmdYellow.Enabled = True
+    cmdGreen.Enabled = True
+    cmdBlue.Enabled = True
+    cmdPurple.Enabled = True
+    cmdEnter.Enabled = True
+End Sub

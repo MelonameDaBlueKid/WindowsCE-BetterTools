@@ -1,0 +1,6 @@
+<!-- Sample XML to query a security policy  -->
+<wap-provisioningdoc>
+	<characteristic type="SecurityPolicy">
+		<parm-query name="{Decimal Security policy ID}" />
+	</characteristic>
+</wap-provisioningdoc>

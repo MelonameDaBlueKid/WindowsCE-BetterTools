@@ -1,0 +1,40 @@
+; CLW file contains information for the MFC ClassWizard
+
+[General Info]
+Version=1
+LastClass=CCountCtnApp
+LastTemplate=CDialog
+NewFileInclude1=#include "stdafx.h"
+NewFileInclude2=#include "countctn.h"
+LastPage=0
+
+ClassCount=2
+Class1=CCountCtnApp
+Class2=CCountCtnDlg
+
+ResourceCount=1
+Resource1=IDD_COUNTCTN_DIALOG
+
+[CLS:CCountCtnApp]
+Type=0
+BaseClass=CWinApp
+HeaderFile=COUNTCTN.H
+ImplementationFile=COUNTCTN.CPP
+LastObject=CCountCtnApp
+
+[CLS:CCountCtnDlg]
+Type=0
+BaseClass=CDialog
+HeaderFile=COUNTDLG.H
+ImplementationFile=COUNTDLG.CPP
+
+[DLG:IDD_COUNTCTN_DIALOG]
+Type=1
+Class=CCountctnDlg
+ControlCount=5
+Control1=IDC_COUNTER,{30533701-41C6-11D1-9307-00600820B4FF},1342242816
+Control2=IDC_START,button,1342242816
+Control3=IDC_APPLY,button,1342242816
+Control4=IDC_EDIT_MAXCOUNTER,edit,1350631552
+Control5=IDC_STATIC,static,1342308352
+

@@ -1,0 +1,1012 @@
+# Microsoft eMbedded Visual Tools Project File - Name="Spintest" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE x86) Application" 0x8301
+# TARGTYPE "Win32 (WCE ARM) Application" 0x8501
+# TARGTYPE "Win32 (WCE PPC) Application" 0x8401
+# TARGTYPE "Win32 (WCE x86em) Application" 0x7f01
+# TARGTYPE "Win32 (WCE MIPS16) Application" 0x8901
+# TARGTYPE "Win32 (WCE SH3) Application" 0x8101
+# TARGTYPE "Win32 (WCE SH4) Application" 0x8601
+# TARGTYPE "Win32 (WCE MIPS) Application" 0x8201
+# TARGTYPE "Win32 (WCE MIPSFP) Application" 0x8701
+# TARGTYPE "Win32 (WCE CEF) Application" 0x8a01
+# TARGTYPE "Win32 (WCE THUMB) Application" 0x8801
+
+CFG=Spintest - Win32 (WCE MIPS) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "Spintest.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "Spintest.vcn" CFG="Spintest - Win32 (WCE MIPS) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "Spintest - Win32 (WCE MIPS) Release" (based on "Win32 (WCE MIPS) Application")
+!MESSAGE "Spintest - Win32 (WCE MIPS) Debug" (based on "Win32 (WCE MIPS) Application")
+!MESSAGE "Spintest - Win32 (WCE SH4) Release" (based on "Win32 (WCE SH4) Application")
+!MESSAGE "Spintest - Win32 (WCE SH4) Debug" (based on "Win32 (WCE SH4) Application")
+!MESSAGE "Spintest - Win32 (WCE SH3) Release" (based on "Win32 (WCE SH3) Application")
+!MESSAGE "Spintest - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Application")
+!MESSAGE "Spintest - Win32 (WCE THUMB) Release" (based on "Win32 (WCE THUMB) Application")
+!MESSAGE "Spintest - Win32 (WCE THUMB) Debug" (based on "Win32 (WCE THUMB) Application")
+!MESSAGE "Spintest - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "Spintest - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "Spintest - Win32 (WCE MIPSFP) Release" (based on "Win32 (WCE MIPSFP) Application")
+!MESSAGE "Spintest - Win32 (WCE MIPSFP) Debug" (based on "Win32 (WCE MIPSFP) Application")
+!MESSAGE "Spintest - Win32 (WCE MIPS16) Release" (based on "Win32 (WCE MIPS16) Application")
+!MESSAGE "Spintest - Win32 (WCE MIPS16) Debug" (based on "Win32 (WCE MIPS16) Application")
+!MESSAGE "Spintest - Win32 (WCE CEF) Release" (based on "Win32 (WCE CEF) Application")
+!MESSAGE "Spintest - Win32 (WCE CEF) Debug" (based on "Win32 (WCE CEF) Application")
+!MESSAGE "Spintest - Win32 (WCE x86em) Release" (based on "Win32 (WCE x86em) Application")
+!MESSAGE "Spintest - Win32 (WCE x86em) Debug" (based on "Win32 (WCE x86em) Application")
+!MESSAGE "Spintest - Win32 (WCE PPC) Release" (based on "Win32 (WCE PPC) Application")
+!MESSAGE "Spintest - Win32 (WCE PPC) Debug" (based on "Win32 (WCE PPC) Application")
+!MESSAGE "Spintest - Win32 (WCE x86) Release" (based on "Win32 (WCE x86) Application")
+!MESSAGE "Spintest - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Application")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+
+!IF  "$(CFG)" == "Spintest - Win32 (WCE MIPS) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSRel"
+# PROP BASE Intermediate_Dir "MIPSRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSRel"
+# PROP Intermediate_Dir "MIPSRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPSDbg"
+# PROP BASE Intermediate_Dir "MIPSDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPSDbg"
+# PROP Intermediate_Dir "MIPSDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH4) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH4Rel"
+# PROP BASE Intermediate_Dir "SH4Rel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH4Rel"
+# PROP Intermediate_Dir "SH4Rel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Qsh4 /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Qsh4 /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH4 /subsystem:$(CESubsystem) /MACHINE:SH4
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH4 /subsystem:$(CESubsystem) /MACHINE:SH4
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH4) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "SH4Dbg"
+# PROP BASE Intermediate_Dir "SH4Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "SH4Dbg"
+# PROP Intermediate_Dir "SH4Dbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /Qsh4 /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /Qsh4 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH4 /subsystem:$(CESubsystem) /MACHINE:SH4
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH4 /subsystem:$(CESubsystem) /MACHINE:SH4
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH3) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH3Rel"
+# PROP BASE Intermediate_Dir "SH3Rel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH3Rel"
+# PROP Intermediate_Dir "SH3Rel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH3 /subsystem:$(CESubsystem) /MACHINE:SH3
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH3 /subsystem:$(CESubsystem) /MACHINE:SH3
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH3) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "SH3Dbg"
+# PROP BASE Intermediate_Dir "SH3Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "SH3Dbg"
+# PROP Intermediate_Dir "SH3Dbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH3 /subsystem:$(CESubsystem) /MACHINE:SH3
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:SH3 /subsystem:$(CESubsystem) /MACHINE:SH3
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE THUMB) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "THUMBRel"
+# PROP BASE Intermediate_Dir "THUMBRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "THUMBRel"
+# PROP Intermediate_Dir "THUMBRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clthumb.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /QRarch4T /QRinterwork-return /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /QRarch4T /QRinterwork-return /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:THUMB /subsystem:$(CESubsystem) /MACHINE:THUMB
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:THUMB /subsystem:$(CESubsystem) /MACHINE:THUMB
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE THUMB) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "THUMBDbg"
+# PROP BASE Intermediate_Dir "THUMBDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "THUMBDbg"
+# PROP Intermediate_Dir "THUMBDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "THUMB" /d "_THUMB_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=clthumb.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "ARM" /D "_ARM_" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /QRarch4T /QRinterwork-return /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "THUMB" /D "_THUMB_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "ARM" /D "_ARM_" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /QRarch4T /QRinterwork-return /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:THUMB /subsystem:$(CESubsystem) /MACHINE:THUMB
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:THUMB /subsystem:$(CESubsystem) /MACHINE:THUMB
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRel"
+# PROP BASE Intermediate_Dir "ARMRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRel"
+# PROP Intermediate_Dir "ARMRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:ARM /subsystem:$(CESubsystem) /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:ARM /subsystem:$(CESubsystem) /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:ARM /subsystem:$(CESubsystem) /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:ARM /subsystem:$(CESubsystem) /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPSFP) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSFPRel"
+# PROP BASE Intermediate_Dir "MIPSFPRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSFPRel"
+# PROP Intermediate_Dir "MIPSFPRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /QMFWCE /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /QMFWCE /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPSFP) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPSFPDbg"
+# PROP BASE Intermediate_Dir "MIPSFPDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPSFPDbg"
+# PROP Intermediate_Dir "MIPSFPDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /QMFWCE /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /QMFWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS /subsystem:$(CESubsystem) /MACHINE:MIPS
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS16) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPS16Rel"
+# PROP BASE Intermediate_Dir "MIPS16Rel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPS16Rel"
+# PROP Intermediate_Dir "MIPS16Rel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O2 /D "MIPS16SUPPORT" /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /QMRWCE /ase16 /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D "MIPS16SUPPORT" /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /QMRWCE /ase16 /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS16 /subsystem:$(CESubsystem) /MACHINE:MIPS16
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS16 /subsystem:$(CESubsystem) /MACHINE:MIPS16
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS16) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPS16Dbg"
+# PROP BASE Intermediate_Dir "MIPS16Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPS16Dbg"
+# PROP Intermediate_Dir "MIPS16Dbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "MIPS16SUPPORT" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /QMRWCE /ase16 /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "MIPS16SUPPORT" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /QMRWCE /ase16 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS16 /subsystem:$(CESubsystem) /MACHINE:MIPS16
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:MIPS16 /subsystem:$(CESubsystem) /MACHINE:MIPS16
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE CEF) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "CEFRel"
+# PROP BASE Intermediate_Dir "CEFRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "CEFRel"
+# PROP Intermediate_Dir "CEFRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clcef.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "CEF" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /cef /TP /c
+# ADD CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "CEF" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /cef /TP /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=linkcef.exe
+# ADD BASE LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:CEE /subsystem:$(CESubsystem) /Fixed:no /MACHINE:CEE
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:CEE /subsystem:$(CESubsystem) /Fixed:no /MACHINE:CEE
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE CEF) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "CEFDbg"
+# PROP BASE Intermediate_Dir "CEFDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "CEFDbg"
+# PROP Intermediate_Dir "CEFDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "CEF" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=clcef.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "CEF" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /cef /TP /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "CEF" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /cef /TP /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=linkcef.exe
+# ADD BASE LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:CEE /subsystem:$(CESubsystem) /Fixed:no /MACHINE:CEE
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:CEE /subsystem:$(CESubsystem) /Fixed:no /MACHINE:CEE
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86em) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86EMRel"
+# PROP BASE Intermediate_Dir "X86EMRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86EMRel"
+# PROP Intermediate_Dir "X86EMRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "x86" /d "i486" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "x86" /d "i486" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gz /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:I386 /windowsce:emulation /MACHINE:I386
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:I386 /windowsce:emulation /MACHINE:I386
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86em) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86EMDbg"
+# PROP BASE Intermediate_Dir "X86EMDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86EMDbg"
+# PROP Intermediate_Dir "X86EMDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "_DEBUG" /d "x86" /d "i486" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "_DEBUG" /d "x86" /d "i486" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_DEBUG" /D "x86" /D "i486" /D "_X86_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D WCE_PLATFORM=$(CePlatform) /YX /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_DEBUG" /D "x86" /D "i486" /D "_X86_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D WCE_PLATFORM=$(CePlatform) /YX /Gz /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:I386 /windowsce:emulation /MACHINE:I386
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:I386 /windowsce:emulation /MACHINE:I386
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE PPC) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "PPCRel"
+# PROP BASE Intermediate_Dir "PPCRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "PPCRel"
+# PROP Intermediate_Dir "PPCRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "PPC" /d "_PPC_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "PPC" /d "_PPC_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clppc.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:PPC /subsystem:$(CESubsystem) /MACHINE:PPC
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:PPC /subsystem:$(CESubsystem) /MACHINE:PPC
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE PPC) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "PPCDbg"
+# PROP BASE Intermediate_Dir "PPCDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "PPCDbg"
+# PROP Intermediate_Dir "PPCDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "PPC" /d "_PPC_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "PPC" /d "_PPC_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /r
+CPP=clppc.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D WCE_PLATFORM=$(CePlatform) /D "_UNICODE" /YX /M$(CECrtMtDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:PPC /subsystem:$(CESubsystem) /MACHINE:PPC
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /MACHINE:PPC /subsystem:$(CESubsystem) /MACHINE:PPC
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86Rel"
+# PROP BASE Intermediate_Dir "X86Rel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86Rel"
+# PROP Intermediate_Dir "X86Rel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "_WIN32_WCE_CEPC" /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "x86" /D "_i386_" /D "_X86_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gs8192 /GF /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "_WIN32_WCE_CEPC" /D WCE_PLATFORM=$(CePlatform) /D "NDEBUG" /D "x86" /D "_i386_" /D "_X86_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:ix86 /subsystem:$(CESubsystem) /MACHINE:ix86
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:ix86 /subsystem:$(CESubsystem) /MACHINE:ix86
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86Dbg"
+# PROP BASE Intermediate_Dir "X86Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86Dbg"
+# PROP Intermediate_Dir "X86Dbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "DEBUG" /d "_DEBUG" /d "x86" /d "_i386_" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /r
+# ADD RSC /l 0x409 /d "DEBUG" /d "_DEBUG" /d "x86" /d "_i386_" /d "_X86_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_DEBUG" /D "x86" /D "_i386_" /D "_X86_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_WIN32_WCE_CEPC" /D WCE_PLATFORM=$(CePlatform) /YX /Gs8192 /GF /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_DEBUG" /D "x86" /D "_i386_" /D "_X86_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_WIN32_WCE_CEPC" /D WCE_PLATFORM=$(CePlatform) /YX /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:ix86 /subsystem:$(CESubsystem) /MACHINE:ix86
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib aygshell.lib /nologo /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /MACHINE:ix86 /subsystem:$(CESubsystem) /MACHINE:ix86
+
+!ENDIF 
+
+# Begin Target
+
+# Name "Spintest - Win32 (WCE MIPS) Release"
+# Name "Spintest - Win32 (WCE MIPS) Debug"
+# Name "Spintest - Win32 (WCE SH4) Release"
+# Name "Spintest - Win32 (WCE SH4) Debug"
+# Name "Spintest - Win32 (WCE SH3) Release"
+# Name "Spintest - Win32 (WCE SH3) Debug"
+# Name "Spintest - Win32 (WCE THUMB) Release"
+# Name "Spintest - Win32 (WCE THUMB) Debug"
+# Name "Spintest - Win32 (WCE ARM) Release"
+# Name "Spintest - Win32 (WCE ARM) Debug"
+# Name "Spintest - Win32 (WCE MIPSFP) Release"
+# Name "Spintest - Win32 (WCE MIPSFP) Debug"
+# Name "Spintest - Win32 (WCE MIPS16) Release"
+# Name "Spintest - Win32 (WCE MIPS16) Debug"
+# Name "Spintest - Win32 (WCE CEF) Release"
+# Name "Spintest - Win32 (WCE CEF) Debug"
+# Name "Spintest - Win32 (WCE x86em) Release"
+# Name "Spintest - Win32 (WCE x86em) Debug"
+# Name "Spintest - Win32 (WCE PPC) Release"
+# Name "Spintest - Win32 (WCE PPC) Debug"
+# Name "Spintest - Win32 (WCE x86) Release"
+# Name "Spintest - Win32 (WCE x86) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\Spintest.cpp
+
+!IF  "$(CFG)" == "Spintest - Win32 (WCE MIPS) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\ipapi.h"\
+	".\spincube.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH4) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH4) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH3) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH3) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE THUMB) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE THUMB) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE ARM) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE ARM) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS16) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS16) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE CEF) Release"
+
+DEP_CPP_SPINT=\
+	".\Spincube\Spincube.h"\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\ipapi.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE CEF) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\ipapi.h"\
+	".\spincube.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86em) Release"
+
+DEP_CPP_SPINT=\
+	".\Spincube\Spincube.h"\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\ipapi.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86em) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\ipapi.h"\
+	".\spincube.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE PPC) Release"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE PPC) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86) Release"
+
+DEP_CPP_SPINT=\
+	".\Spincube\Spincube.h"\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\ipapi.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86) Debug"
+
+DEP_CPP_SPINT=\
+	".\Spintest.h"\
+	
+NODEP_CPP_SPINT=\
+	".\spincube.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\Spintest.def
+# End Source File
+# Begin Source File
+
+SOURCE=.\Spintest.rc
+
+!IF  "$(CFG)" == "Spintest - Win32 (WCE MIPS) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH4) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH4) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH3) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE SH3) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE THUMB) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE THUMB) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE ARM) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE ARM) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPSFP) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPSFP) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS16) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE MIPS16) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE CEF) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE CEF) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86em) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86em) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE PPC) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE PPC) Debug"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86) Release"
+
+!ELSEIF  "$(CFG)" == "Spintest - Win32 (WCE x86) Debug"
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# Begin Source File
+
+SOURCE=.\Spintest.ico
+# End Source File
+# End Group
+# End Target
+# End Project

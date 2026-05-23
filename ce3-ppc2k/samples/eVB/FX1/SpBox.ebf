@@ -1,0 +1,183 @@
+VERSION 5.00
+Begin VB.Form Form2 
+   Appearance      =   0  'Flat
+   BackColor       =   &H80000005&
+   Caption         =   "Game speed"
+   ClientHeight    =   2115
+   ClientLeft      =   555
+   ClientTop       =   1050
+   ClientWidth     =   1200
+   ControlBox      =   0   'False
+   ForeColor       =   &H80000008&
+   FormResize      =   2  'vbFormUserSize
+   ScaleHeight     =   2115
+   ScaleWidth      =   1200
+   Begin VBCE.CommandButton Command1 
+      Height          =   255
+      Left            =   480
+      TabIndex        =   4
+      Top             =   1680
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   12632256
+      Caption         =   "OK"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Style           =   0
+   End
+   Begin VBCE.OptionButton Option4 
+      Height          =   255
+      Left            =   120
+      TabIndex        =   3
+      Top             =   1320
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   -2147483643
+      Caption         =   "450"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      Value           =   0   'False
+   End
+   Begin VBCE.OptionButton Option3 
+      Height          =   255
+      Left            =   120
+      TabIndex        =   2
+      Top             =   960
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   -2147483643
+      Caption         =   "350"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      Value           =   0   'False
+   End
+   Begin VBCE.OptionButton Option2 
+      Height          =   255
+      Left            =   120
+      TabIndex        =   1
+      Top             =   600
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   -2147483643
+      Caption         =   "250"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      Value           =   0   'False
+   End
+   Begin VBCE.OptionButton Option1 
+      Height          =   255
+      Left            =   120
+      TabIndex        =   0
+      Top             =   240
+      Width           =   615
+      _cx             =   2143
+      _cy             =   873
+      BackColor       =   -2147483643
+      Caption         =   "150"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      Alignment       =   0
+      Value           =   -1  'True
+   End
+End
+Attribute VB_Name = "Form2"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'PARTICULAR PURPOSE.
+
+'Copyright  2000  Microsoft Corporation.  All Rights Reserved
+
+Option Explicit
+
+Private Sub Command1_Click()
+    Form2.Hide
+    Form1.Timer1.Interval = Form1.speed
+End Sub
+
+Private Sub Form_Load()
+    Select Case Form1.speed
+
+    Case 150
+        Option1.Value = True
+    Case 250
+        Option2.Value = True
+    Case 350
+        Option2.Value = True
+    Case 450
+        Option2.Value = True
+    Case Else
+
+    End Select
+End Sub
+
+Private Sub Option1_Click()
+    Form1.speed = 150
+End Sub
+
+Private Sub Option2_Click()
+    Form1.speed = 250
+End Sub
+
+Private Sub Option3_Click()
+    Form1.speed = 350
+End Sub
+
+Private Sub Option4_Click()
+    Form1.speed = 450
+End Sub

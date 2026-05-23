@@ -1,0 +1,33 @@
+/******************************************************************************\
+*       This is a part of the Microsoft Source Code Samples.
+*       Copyright (C) 1993-1997 Microsoft Corporation.
+*       All rights reserved.
+*       This source code is only intended as a supplement to
+*       Microsoft Development Tools and/or WinHelp documentation.
+*       See these sources for detailed information regarding the
+*       Microsoft samples programs.
+\******************************************************************************/
+#include <windows.h>
+#include "..\..\resource.h"
+
+IDI_ICON                ICON    DISCARDABLE     "..\\stockpor.ico"
+
+SYNCOPTDLG DIALOG DISCARDABLE  0, 0, 233, 211
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Stock Portfolio Synchronization"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Synchronize All Stocks",IDC_SYNC_ALL,"Button",
+                    BS_AUTORADIOBUTTON,7,7,88,10
+    CONTROL         "Synchronize Stocks From A to M",IDC_SYNC_AM,"Button",
+                    BS_AUTORADIOBUTTON,7,21,119,10
+    CONTROL         "Synchronize Stocks From N to Z",IDC_SYNC_NZ,"Button",
+                    BS_AUTORADIOBUTTON,7,35,118,10
+    LTEXT           "Current Database Volume:",IDC_STATIC,7,121,80,8
+    EDITTEXT        IDC_DB_VOL,7,131,166,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Synchronize with:",IDC_STATIC,7,150,141,8
+    EDITTEXT        IDC_FILE,7,160,166,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,60,190,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,190,50,14
+END
+

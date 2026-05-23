@@ -1,0 +1,8 @@
+NAME         Spintest
+
+HEAPSIZE     1024
+STACKSIZE    5120
+
+EXPORTS
+    MainWndProc  @1
+    DlgProc      @2

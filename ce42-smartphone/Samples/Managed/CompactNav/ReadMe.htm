@@ -1,0 +1,485 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0083)http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm -->
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="ReadMe_files/filelist.xml">
+<title>HomeScreen Sample ReadMe</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ori Amiga</o:Author>
+  <o:LastAuthor>a-nickm</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>2954</o:TotalTime>
+  <o:Created>2003-03-22T02:09:00Z</o:Created>
+  <o:LastSaved>2003-03-22T02:10:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>372</o:Words>
+  <o:Characters>2125</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>17</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2493</o:CharactersWithSpaces>
+  <o:Version>10.4219</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:UIApproved dt:dt="string">0</o:UIApproved>
+  <o:Test_x0020_Design_x0020_Spec dt:dt="string">, </o:Test_x0020_Design_x0020_Spec>
+  <o:Group dt:dt="string">1</o:Group>
+  <o:PM dt:dt="string">368</o:PM>
+  <o:Dev dt:dt="string">18</o:Dev>
+  <o:LocApproved dt:dt="string">0</o:LocApproved>
+  <o:Ready_x0020_to_x0020_Publish dt:dt="string">0</o:Ready_x0020_to_x0020_Publish>
+  <o:Area dt:dt="string">39</o:Area>
+  <o:Milestone dt:dt="string">M3</o:Milestone>
+  <o:Priority dt:dt="string">2</o:Priority>
+  <o:PMApproved dt:dt="string">0</o:PMApproved>
+  <o:TestApproved dt:dt="string">0</o:TestApproved>
+  <o:UEApproved dt:dt="string">0</o:UEApproved>
+  <o:VisionPillar dt:dt="string">1</o:VisionPillar>
+  <o:Team dt:dt="string">10</o:Team>
+  <o:Status dt:dt="string">Reviewed</o:Status>
+  <o:UE dt:dt="string">375</o:UE>
+  <o:DevApproved dt:dt="string">0</o:DevApproved>
+  <o:URApproved dt:dt="string">0</o:URApproved>
+  <o:CheckPointApproved dt:dt="string">0</o:CheckPointApproved>
+  <o:Test dt:dt="string">231</o:Test>
+  <o:SubArea dt:dt="string"></o:SubArea>
+  <o:Loc dt:dt="string"></o:Loc>
+  <o:UI dt:dt="string"></o:UI>
+  <o:UR dt:dt="string"></o:UR>
+  <o:DevEst dt:dt="string"></o:DevEst>
+  <o:TestEstimate dt:dt="string"></o:TestEstimate>
+  <o:SummarySpecDue dt:dt="string"></o:SummarySpecDue>
+  <o:SpecDue dt:dt="string"></o:SpecDue>
+  <o:Team0 dt:dt="string"></o:Team0>
+  <o:Spec_x0020_Review dt:dt="string"></o:Spec_x0020_Review>
+  <o:Mgmt_x0020_Review dt:dt="string"></o:Mgmt_x0020_Review>
+  <o:Spec_x0020_Inspection dt:dt="string"></o:Spec_x0020_Inspection>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:24.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:22.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Tahoma;
+	color:gray;
+	mso-font-kerning:12.0pt;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:18.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:Verdana;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:77026678;
+	mso-list-template-ids:73169538;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:508255335;
+	mso-list-template-ids:1808300102;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1249271895;
+	mso-list-template-ids:1448893444;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1373386635;
+	mso-list-template-ids:822632210;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:2007779239;
+	mso-list-template-ids:941361390;}
+@list l5
+	{mso-list-id:2056847562;
+	mso-list-template-ids:6873570;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h2 style='line-height:24.0pt;mso-line-height-rule:exactly'>CompactNav</h2>
+
+<p class=MsoNormal>A Smartphone file-system browser written in managed code
+(C#) using the .NET Compact Framework</p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=square>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Sample_Overview">Sample
+     Overview</a></span> <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Requirements_and_Dependencies">Requirements
+     and Dependencies</a></span> <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Topics">Topics</a></span>
+     <span class=MsoHyperlink><span style='color:windowtext;text-decoration:
+     none;text-underline:none'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Building_the_Sample">Building
+     the Sample</a></span> </li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Running_the_Sample">Running
+     the Sample</a></span> <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a
+     href="http://devices/common/Specs03/mdpg%2003%20-%20sdk%20samples%20readme%20template.htm#_Notes">Notes</a></span>
+     <span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="_Toc21230997"></a><a name="_Sample_Overview"></a><span
+style='mso-bookmark:_Toc21230997'>Sample Overview</span></h3>
+
+<p class=MsoNormal>This sample demonstrates how to implement a basic .NETCF
+file-system navigator, as well has how to use Platform Invoking (pInvoke) to
+make calls to unmanaged APIs (in this case, CreateProcess). Some exception
+handling is shown, as well as how to load images from the file system. Executable
+files may be executed by selecting them (using the aforementioned pInvoke’d
+CreateProcess), and directories may be entered by selecting them and hitting
+the action key. Parent directories may be accessed using a menu item (UpDir) or
+by selecting the conventional “..” directory. There is also a Quit option,
+which is provided for testing convenience only, as this is not typical or
+recommended for real Smartphone applications.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21230998"></a><a name="_Requirements"></a><a
+name="_Requirements_and_Dependencies"></a><span style='mso-bookmark:_Toc21230998'>Requirements</span>
+and Dependencies</h3>
+
+<p class=MsoNormal>Smartphone 2003 SDK</p>
+
+<p class=MsoNormal>Visual Studio .NET 2003 w/ .NETCF runtimes</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Topics"></a>Topics</h3>
+
+<p class=MsoNormal>.NETCF</p>
+
+<p class=MsoNormal>Files and Directories collections</p>
+
+<p class=MsoNormal>C# Exception Handling</p>
+
+<p class=MsoNormal>Bitmap Image loading and Imagelist display</p>
+
+<p class=MsoNormal>.NETCF widgets (Listview, menus)</p>
+
+<h3><a name="_Building_the_Sample"></a>Building the Sample</h3>
+
+<p class=MsoNormal>Load the project in VS.NET 2003. Select the platform you are
+targeting (Smartphone device or emulator). Build and deploy the application
+normally. You may be prompted (on the device) to install the .NETCF runtime if
+the device or emulator has not been provisioned with this previously</p>
+
+<h3><a name="_Toc21230999"></a><a name="_Running_the_Sample"></a><span
+style='mso-bookmark:_Toc21230999'>Running the Sample</span></h3>
+
+<p class=MsoNormal>Hit Ctrl-F5 from VS.NET. Alternatively, you can create short
+cut and place it in \Storage\Windows\Start Menu.<span
+style='mso-spacerun:yes'>  </span>Use the directional keys to navigate up and
+down and hit the action key to either enter a directory or execute an
+executable program.</p>
+
+<h3><a name="_Toc21231000"></a><a name="_Notes"></a><span style='mso-bookmark:
+_Toc21231000'>Notes</span></h3>
+
+</div>
+
+</body>
+
+</html>

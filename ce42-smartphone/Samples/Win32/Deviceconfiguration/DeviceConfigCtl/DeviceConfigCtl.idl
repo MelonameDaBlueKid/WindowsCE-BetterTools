@@ -1,0 +1,55 @@
+// DeviceConfigCtl.idl : IDL source for DeviceConfigCtl
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DeviceConfigCtl.tlb) and marshalling code.
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C82A11BE-EB51-45B9-9F29-7BAB1980C20F),
+	dual,
+	nonextensible,
+	helpstring("ICPFInstaller Interface"),
+	pointer_default(unique)
+]
+interface ICPFInstaller : IDispatch{
+	[id(1), helpstring("method InitProfiles")] HRESULT InitProfiles([out,retval] LONG* dwProfileCount);
+	[id(2), helpstring("method GetProfileString")] HRESULT GetProfileString([in] LONG dwProfileIndex, [in] BSTR bstrValueName, [out,retval] BSTR* pbstrProfileValue);
+	[id(3), helpstring("method GetCurrentDeviceName")] HRESULT GetCurrentDeviceName([out,retval] BSTR* pbstrDeviceName);
+	[id(4), helpstring("method IsDeviceConnected")] HRESULT IsDeviceConnected([out,retval] VARIANT_BOOL* pfDeviceConnected);
+	[id(5), helpstring("method InstallToDevice")] HRESULT InstallToDevice([in] BSTR bstrServerCPFLocation, [in] BSTR bstrDeviceName, [out,retval] VARIANT_BOOL* pfSuccess);
+	[id(6), helpstring("method InstallToCurrentDevice")] HRESULT InstallToCurrentDevice([in] BSTR bstrServerCPFLocation, [out,retval] VARIANT_BOOL* pfSuccess);
+};
+
+[
+	uuid(BA33407B-CA16-4D82-9AE9-C19065965A31),
+	version(1.0),
+	helpstring("DeviceConfigCtl 1.0 Type Library")
+]
+library DeviceConfigCtlLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(8349D2DF-7733-4B76-814A-7442F8017CAE),
+		helpstring("_ICPFInstallerEvents Interface")
+	]
+	dispinterface _ICPFInstallerEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method StatusMessage")] HRESULT StatusMessage([in] BSTR Message);
+	};
+	[
+		uuid(A37C489D-D1AE-442B-BE41-0DB1802732B8),
+		helpstring("CPFInstaller Class")
+	]
+	coclass CPFInstaller
+	{
+		[default] interface ICPFInstaller;
+		[default, source] dispinterface _ICPFInstallerEvents;
+	};
+};

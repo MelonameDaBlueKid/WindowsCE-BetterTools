@@ -1,0 +1,24 @@
+HKCR
+{
+	Object1.Object1.1 = s 'Object1 Class'
+	{
+		CLSID = s '{30533703-41C6-11D1-9307-00600820B4FF}'
+	}
+	Object1.Object1 = s 'Object1 Class'
+	{
+		CurVer = s 'Object1.Object1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {30533703-41C6-11D1-9307-00600820B4FF} = s 'Object1 Class'
+		{
+			ProgID = s 'Object1.Object1.1'
+			VersionIndependentProgID = s 'Object1.Object1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

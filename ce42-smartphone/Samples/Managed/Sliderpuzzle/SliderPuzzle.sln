@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{20D4826A-C6FA-45DB-90F4-C717570B9F32}") = "SliderPuzzle", "SliderPuzzle.csdproj", "{A0A14538-D3B1-4B36-B701-D35319A09792}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A0A14538-D3B1-4B36-B701-D35319A09792}.Debug.ActiveCfg = Debug|Smartphone
+		{A0A14538-D3B1-4B36-B701-D35319A09792}.Debug.Build.0 = Debug|Smartphone
+		{A0A14538-D3B1-4B36-B701-D35319A09792}.Debug.Deploy.0 = Debug|Smartphone
+		{A0A14538-D3B1-4B36-B701-D35319A09792}.Release.ActiveCfg = Release|Smartphone
+		{A0A14538-D3B1-4B36-B701-D35319A09792}.Release.Build.0 = Release|Smartphone
+		{A0A14538-D3B1-4B36-B701-D35319A09792}.Release.Deploy.0 = Release|Smartphone
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

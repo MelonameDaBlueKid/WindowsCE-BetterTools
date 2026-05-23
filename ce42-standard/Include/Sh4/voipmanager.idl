@@ -1,0 +1,402 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of your Microsoft Windows CE
+// Source Alliance Program license form.  If you did not accept the terms of
+// such a license, you are not authorized to use this source code.
+//
+// voipmanager.idl : IDL source for voipmanager.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (voipmanager.tlb) and marshalling code.
+
+import "voiperrorcodes.h";
+
+import "rtccore.idl";
+import "voipstore.idl";
+import "oaidl.idl";
+import "ocidl.idl";
+import "voipmediamanager.idl";
+
+interface IVoIPUI;
+interface IVoIPCurrentCallEnumerator;
+    /*-------------
+    Struct DirectoryClientRegParams and all associated masks
+    --------------*/
+    typedef struct DirectoryClientRegParams
+    {
+        DWORD   dwFlags;        
+        DWORD   dwMask;         
+        BSTR    bstrUserName;   
+        BSTR    bstrPassword;
+        BOOL    fIsPasswordSet;
+        BSTR    bstrExtraXML;
+        BSTR    bstrDomain;
+    } DirectoryClientRegParams;
+
+    const long  DCRP_VALID_USERNAME     = 0x00000001;
+    const long  DCRP_VALID_PASSWORD     = 0x00000002;
+    const long  DCRP_VALID_XML          = 0x00000004;
+    const long  DCRP_VALID_DOMAIN       = 0x00000008;
+    const long  DCRP_VALID_ALL          = DCRP_VALID_USERNAME |
+                                          DCRP_VALID_PASSWORD |
+                                          DCRP_VALID_XML |
+                                          DCRP_VALID_DOMAIN;
+
+    /*-----------
+    Struct VoIPMgrParams - an aggregation of the previous structs
+    ------------*/
+    typedef struct VoIPMgrParameters
+    {
+        DirectoryClientRegParams    DCRegParams;
+        BSTR                        bstrSipPassword;
+    } VoIPMgrParameters;
+
+    typedef enum VoIPCallStatus
+    {
+        e_vcsInvalid                = 0,
+        e_vcsIdle                   = RTCSS_IDLE,
+        e_vcsIncoming               = RTCSS_INCOMING,
+        e_vcsAnswering              = RTCSS_ANSWERING,
+        e_vcsInProgress             = RTCSS_INPROGRESS,
+        e_vcsConnected              = RTCSS_CONNECTED,
+        e_vcsDisconnected           = RTCSS_DISCONNECTED,
+        e_vcsHolding                = RTCSS_HOLD,
+        e_vcsReferring              = RTCSS_REFER,
+    } VoIPCallStatus;
+
+    // ********* 
+    // If you make changes to VoIPCallStatus, update the following
+    // constants to point to the new first and last elements! 
+    // *********
+    const VoIPCallStatus VCS_FIRST  = e_vcsInvalid;
+    const VoIPCallStatus VCS_LAST   = e_vcsHolding;
+
+
+    typedef ULONG   VoIPManagerState;
+    const VoIPManagerState  VMS_NOT_READY               = 0x00000000;
+    const VoIPManagerState  VMS_INITIALIZED             = 0x00000001;
+    const VoIPManagerState  VMS_REGISTERED              = 0x00000002;
+    const VoIPManagerState  VMS_SHUTTING_DOWN           = 0x00000004;
+    const VoIPManagerState  VMS_CALL_LOG_DB_READY       = 0x00000008;
+    const VoIPManagerState  VMS_CALLER_INFO_DB_READY    = 0x00000010;
+    const VoIPManagerState  VMS_AUTOFORWARDING          = 0x00000020;
+    const VoIPManagerState  VMS_DBS_READY               = VMS_CALL_LOG_DB_READY | 
+                                                          VMS_CALLER_INFO_DB_READY;
+    const VoIPManagerState  VMS_REREGISTERING           = 0x00000040;
+
+    
+    //Forward declaration
+    interface IVoIPCurrentCall;
+    [
+        object,
+        uuid(BEBB5090-4E76-4664-9281-D218B005D65B),
+        helpstring("IVoIPMgr Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPMgr : IUnknown
+    {
+        HRESULT Initialize(
+            [in] IVoIPUI            *piUI,
+            [in] VoIPMgrParameters  *pvmpMgrParams   
+            );
+
+        HRESULT Uninitialize();
+    
+        HRESULT Call(
+            [in] BSTR bstrURI, 
+            [out, retval] IVoIPCurrentCall **ppiCurrentCall
+            );
+
+        HRESULT Reregister(
+            [in] VoIPMgrParameters  *pvmpMgrParams
+            );
+
+
+        // Gets the Call log db associated with this mgr
+        HRESULT get_CallLogDB(
+            [out, retval]IVoIPCallLogDB **piCallLogDB
+            );
+
+
+        // Gets the Caller info db associated with this mgr
+        HRESULT get_CallerInfoDB(
+            [out, retval]IVoIPCallerInfoDB **ppiCallerInfoDB
+            );
+
+        // Gets the internal RTCClient interface pointer that the manager is using
+        // (not recommended).
+        HRESULT get_RTCClient(
+            [out, retval]IRTCClient **ppiRTCClient
+            );
+
+        // Sends a DTMF tone to the currently active call.
+        HRESULT SendDTMF(
+            [in] RTC_DTMF rtcdtmf
+            );
+
+        // Gets an enumerator over the CurrentCall objects which represent the 
+        // current calls
+        HRESULT get_CurrentCallEnumerator(
+            [out, retval] IVoIPCurrentCallEnumerator **ppiEnum
+            );
+
+        // Gets the speaker's current volume setting (0.0 - 1.0)
+        HRESULT get_SpeakerVolume(
+            [out, retval] float *pfpVolume
+            );
+
+        // Sets the speaker's current volume setting (0.0 - 1.0)
+        HRESULT put_SpeakerVolume(
+            [in] float fpVolume
+            );
+        
+        // Gets the microphone's current volume setting (0.0 - 1.0)
+        HRESULT get_MicrophoneVolume(
+            [out, retval] float *pfpVolume
+            );
+        
+        // Sets the microphone's current volume setting (0.0 - 1.0)
+        HRESULT put_MicrophoneVolume(
+            [in] float fpVolume
+            );
+
+        // Gets TRUE if the speaker is muted
+        HRESULT get_SpeakerMute(
+            [out, retval] VARIANT_BOOL *pfMuted
+            );
+        
+        // Set to TRUE to mute the speaker
+        HRESULT put_SpeakerMute(
+            [in] VARIANT_BOOL fMuted
+            );
+        
+        // Gets TRUE if the microphone is muted
+        HRESULT get_MicrophoneMute(
+            [out, retval] VARIANT_BOOL *pfMuted
+            );
+        
+        // Set to TRUE to mute the microphone
+        HRESULT put_MicrophoneMute(
+            [in] VARIANT_BOOL fMuted
+            );
+
+        // Gets the phone's ringtone path
+        HRESULT get_RingTone(
+            [out, retval]BSTR *pbstrRingTone
+            );
+
+        // Sets the phone's ringtone path
+        HRESULT put_RingTone(
+            [in] BSTR bstrRingTone
+            );
+            
+        // Gets the current call properties object for the active call (i.e. connected call)
+        HRESULT  get_ActiveCurrentCall(
+            [out, retval] IVoIPCurrentCall  **ppiCall
+            );
+
+        // Sets the duration of time before an unanswered incoming call becomes a missed call (in milliseconds)
+        HRESULT   put_MissedCallTimeout(
+            [in] UINT    nTimeoutMilliseconds
+            );
+
+        // Gets the duration of time before an unanswered incoming call becomes a missed call (in milliseconds)
+        HRESULT   get_MissedCallTimeout(
+            [out, retval] UINT    *pnTimeoutMilliseconds
+            );
+
+        // Gets the phones URI that the phone is registered with
+        HRESULT   get_MyURI(
+            [out, retval] BSTR  *pbstrURI
+            );
+
+        // Gets the phones Server that the phone makes and receives calls through
+        HRESULT    get_MyServer(
+            [out, retval] BSTR  *pbstrServer
+            );
+
+        // Gets the VoIPMgr parameters that the manager actually used in registration
+        HRESULT    get_Parameters(
+            [out, retval] VoIPMgrParameters *pvmpUsed
+            );
+
+        // Gets the current state of the manager.
+        HRESULT    get_State(
+            [out, retval] VoIPManagerState *pulState
+            );
+
+        // Sets the autoforwarding URI (if non-empty, all calls are forwarded here)
+        HRESULT    put_AutoForwardURI(
+            [in]BSTR    bstrAutoForward
+            );
+
+        // Gets the autoforwarding URI
+        HRESULT    get_AutoForwardURI(
+            [out, retval]BSTR   *pbstrAutoForward
+            );
+
+        //Call throughs to IVoIPMediaMgr
+        HRESULT PlayProgressTone(
+            [in]VoIPProgressTone vpt
+            );
+        
+        HRESULT StopProgressTone();
+    };
+
+    [
+        object,
+        uuid(1B975DFE-B516-437C-B1AB-322EFDA8DB6A),
+        helpstring("IVoIPCurrentCall Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPCurrentCall : IUnknown
+    {
+        // Gets the URI of the other person
+        HRESULT get_URI(
+            [out, retval] BSTR *pbstrURI
+            );
+
+        // Gets the Friendly Name of the other person
+        HRESULT get_FriendlyName(
+            [out, retval] BSTR *pbstrFriendlyName
+            );
+
+        // Gets the VoIP Name of the other person
+        HRESULT get_VoIPName(
+            [out, retval] BSTR *pbstrVoIPName
+            );
+
+        // Gets the StartTime of the call
+        HRESULT get_StartTime(
+            [out, retval] SYSTEMTIME *pstStart
+            );
+        
+        // Gets the duration of the call
+        HRESULT get_Duration(
+            [out, retval] SYSTEMTIME *pstDuration
+            );
+
+        // Gets the RTC Session associated with the call
+        HRESULT  get_RTCSession(
+            [out, retval] IRTCSession **piSession
+            );
+
+        // Gets the call type of this call
+        HRESULT  get_Type(
+            [out, retval] VoIPCallType *pvctType
+            );
+
+        // Gets the status of this call
+        HRESULT get_Status(
+            [out, retval] VoIPCallStatus *pvcsStatus
+            );
+
+        // Gets the RTC participant associated with this call
+        HRESULT get_RTCParticipant(
+            [out, retval] IRTCParticipant **piparticipant 
+            );
+
+        HRESULT get_NetworkStatus(
+            [out, retval] LONG  *plReason
+            );
+
+        HRESULT Hold();
+
+        HRESULT Unhold();
+
+        HRESULT Answer(
+            [in] BOOL   fAccept
+            );
+
+        HRESULT Hangup();
+
+        HRESULT Ignore();
+
+        HRESULT Redirect(
+            [in] BSTR bstrRedirectURI
+            );
+    };
+
+    [
+        object,
+        uuid(5915B8CD-DD70-4E0A-83DD-4A1099022B75),
+        helpstring("IVoIPCurrentCallEnumerator Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPCurrentCallEnumerator : IUnknown
+    {
+        HRESULT     Reset();
+
+        HRESULT     Skip(
+            [in]unsigned long celt
+            );
+
+        HRESULT     Next(
+            [in] unsigned long celt, 
+            [out] IVoIPCurrentCall **rgCCP, 
+            [out, retval] unsigned long *pceltFetched
+            );
+    };
+
+    /* The events that the UI knows about */
+    typedef enum VoIPCallEvent
+    {
+        e_vceInvalid = 0,
+        e_vceStatusChanged,
+        e_vceMissed,
+        e_vceAutoBlocked,
+        e_vceAutoForwarded,
+        e_vceDropped,
+        e_vceRedirectSucceeded,
+        e_vceRedirectFailed,
+    } VoIPCallEvent;
+
+    typedef enum VoIPSystemEvent
+    {
+        e_vseInvalid = 0,
+        e_vseTerminated,
+        e_vseRegistering,
+        e_vseRegistrationSucceeded,
+        e_vseRegistrationFailed,
+    } VoIPSystemEvent;
+    
+    [
+        object,
+        uuid(74D206B8-32AD-4BD8-B941-4A9E0522988E),
+        helpstring("IVoIPUI Interface"),
+        pointer_default(unique)
+    ]
+    interface IVoIPUI : IUnknown
+    {
+        HRESULT OnCallEvent(
+            [in] VoIPCallEvent  vceEvent,
+            [in] IVoIPCurrentCall *piCurrentCall
+            );
+
+        HRESULT OnSystemEvent(
+            [in] VoIPSystemEvent vseEvent,
+            [in] INT_PTR iptrParam
+            );
+    };
+[
+    uuid(D8AB2E1C-AF13-46B2-87A9-C731C4C4AB76),
+    version(1.0),
+    helpstring("voipmanager 1.0 Type Library")
+]
+library VOIPMANAGERLib
+{
+    importlib("stdole32.tlb");
+    importlib("stdole2.tlb");
+
+    [
+        uuid(254D6845-7CF1-4B90-A658-E4C430C3A7BE),
+        helpstring("VoIPMgr Class")
+    ]
+    coclass VoIPMgr
+    {
+        [default] interface IVoIPMgr;
+    };
+};

@@ -1,0 +1,72 @@
+// NOTE:  ATL-BASED CONTROLS ARE ONLY SUPPORTED ON WINDOWS CE 2.0 OR LATER
+
+#if defined(_WIN32_WCE) && _WIN32_WCE < 200
+#error "This sample can only be compiled for Windows CE 2.0 or later."
+#endif
+
+#include <olectl.h>
+// Polygon.idl : IDL source for Polygon.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Polygon.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+		object,
+		uuid(4CBBC675-507F-11D0-B98B-000000000000),
+		dual,
+		helpstring("IPolyCtl Interface"),
+		pointer_default(unique)
+	]
+	interface IPolyCtl : IDispatch
+	{
+		[propput, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([in]OLE_COLOR clr);
+		[propget, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([out, retval]OLE_COLOR* pclr);
+		[propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *newVal);
+		[propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+	};
+[
+	uuid(4CBBC673-507F-11D0-B98B-000000000000),
+	version(1.0),
+	helpstring("Polygon 1.0 Type Library")
+]
+library POLYGONLib
+{
+	importlib("stdole32.tlb");
+
+	[
+		uuid(4CBBC677-507F-11D0-B98B-000000000000),
+		helpstring("Event interface for PolyCtl")
+	]
+	dispinterface _PolyEvents
+	{
+		properties:
+		methods:
+		[id(1)] void ClickIn([in]long x, [in] long y);
+		[id(2)] void ClickOut([in]long x, [in] long y);
+	};
+
+	[
+		uuid(4CBBC676-507F-11D0-B98B-000000000000),
+		helpstring("PolyCtl Class")
+	]
+	coclass PolyCtl
+	{
+		[default] interface IPolyCtl;
+		[default, source] dispinterface _PolyEvents;
+	};
+	
+
+	[
+		uuid(A3121F30-516B-11D0-B98C-000000000000),
+		helpstring("PolyProp Class")
+	]
+	coclass PolyProp
+	{
+		interface IUnknown;
+	};
+};

@@ -1,0 +1,124 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of your Microsoft Windows CE
+// Source Alliance Program license form.  If you did not accept the terms of
+// such a license, you are not authorized to use this source code.
+//
+import "oaidl.idl";
+import "ocidl.idl";
+import "rtccore.idl";
+
+typedef enum VoIPProgressTone
+{
+    e_vptInvalid = 0,
+    e_vptDial,              
+    e_vptStutter,           //Typically, user does a hook-flash instead of offhook
+    e_vptOffHookWarning,    
+    e_vptConfirmation,      //User configures feature (e.g. Forwarding)
+    e_vptMessageWaiting,
+    e_vptRingback,
+    e_vptCallWaiting,       // 1 call connected and another incoming
+    e_vptReorder,           //Local error - e.g. wrong digitmap
+    e_vptCongestion,        //Call client receives a network error (timeout, unreachable)
+    e_vptClientBusy,        //other client is busy
+    e_vptNetworkBusy,        //network is busy
+} VoIPProgressTone;
+
+[
+    object,
+    uuid(DF6605B3-ECE0-40a5-94D3-2EDF3983C6EA),
+    helpstring("IVoIPMediaMgr Interface"),
+    pointer_default(unique)
+]
+interface IVoIPMediaMgr : IUnknown
+{
+    HRESULT Initialize();
+    
+    HRESULT InitializeRTCClient(
+        [in] IRTCClient2    *piClient
+        );
+
+    HRESULT CreatePCToPCSession(
+        [in]          IRTCClient2    *piClient,
+        [in]          IRTCProfile    *piProfile,
+        [out, retval] IRTCSession2   **ppiSession
+        ); 
+        
+    HRESULT AnswerSession(
+        [in] IRTCSession2   *piSession
+        );
+
+    HRESULT HoldSession(
+        [in] IRTCSession2   *piSession
+        );
+
+    HRESULT UnholdSession(
+        [in] IRTCSession2   *piSession
+        );
+
+    HRESULT SendDTMF(
+        [in] RTC_DTMF       dtmf
+        );
+    
+    HRESULT get_SpeakerVolume(
+        [out, retval] float *pfpVolume
+        );
+    
+    HRESULT put_SpeakerVolume(
+        [in] float fpVolume
+        );
+    
+    HRESULT get_MicrophoneVolume(
+        [out, retval] float *pfpVolume
+        );
+    
+    HRESULT put_MicrophoneVolume(
+        [in] float fpVolume
+        );
+    
+    HRESULT get_SpeakerMute(
+        [out, retval] VARIANT_BOOL *pfMuted
+        );
+    
+    HRESULT put_SpeakerMute(
+        [in] VARIANT_BOOL fMuted
+        );
+    
+    HRESULT get_MicrophoneMute(
+        [out, retval] VARIANT_BOOL *pfMuted
+        );
+    
+    HRESULT put_MicrophoneMute(
+        [in] VARIANT_BOOL fMuted
+        );
+    
+    HRESULT PlaySound(
+        [in] BSTR    bstrFilePath,
+        [in] INT_PTR hCallback
+        );
+
+    HRESULT StopSound();
+
+    HRESULT PlayProgressTone(
+        [in] VoIPProgressTone vpt
+        );
+
+    HRESULT StopProgressTone();
+
+    HRESULT OnReinviteEvent(
+        [in] IRTCReInviteEvent  *piReinviteEvent
+        );
+
+    HRESULT OnSessionStateChangeEvent(
+        [in] IRTCSessionStateChangeEvent *piSSCEvent
+        );
+        
+    HRESULT EvaluateSessionDescription(
+        [in] BSTR bstrContentType,
+        [in] BSTR bstrSessionDescription,
+        [in, out] VARIANT_BOOL *pfApplicationSession
+        ); 
+     
+};

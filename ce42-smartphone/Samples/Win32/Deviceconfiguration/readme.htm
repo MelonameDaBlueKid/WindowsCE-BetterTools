@@ -1,0 +1,648 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="readme_files/filelist.xml">
+<title>MDPG '03 SDK Samples Readme Template</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ori Amiga</o:Author>
+  <o:LastAuthor>a-nickm</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>4373</o:TotalTime>
+  <o:Created>2003-03-13T21:56:00Z</o:Created>
+  <o:LastSaved>2003-03-13T21:56:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1350</o:Words>
+  <o:Characters>7701</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>64</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>9033</o:CharactersWithSpaces>
+  <o:Version>10.4219</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:UIApproved dt:dt="string">0</o:UIApproved>
+  <o:Test_x0020_Design_x0020_Spec dt:dt="string">, </o:Test_x0020_Design_x0020_Spec>
+  <o:Group dt:dt="string">1</o:Group>
+  <o:PM dt:dt="string">368</o:PM>
+  <o:Dev dt:dt="string">18</o:Dev>
+  <o:LocApproved dt:dt="string">0</o:LocApproved>
+  <o:Ready_x0020_to_x0020_Publish dt:dt="string">0</o:Ready_x0020_to_x0020_Publish>
+  <o:Area dt:dt="string">39</o:Area>
+  <o:Milestone dt:dt="string">M3</o:Milestone>
+  <o:Priority dt:dt="string">2</o:Priority>
+  <o:PMApproved dt:dt="string">0</o:PMApproved>
+  <o:TestApproved dt:dt="string">0</o:TestApproved>
+  <o:UEApproved dt:dt="string">0</o:UEApproved>
+  <o:VisionPillar dt:dt="string">1</o:VisionPillar>
+  <o:Team dt:dt="string">10</o:Team>
+  <o:Status dt:dt="string">Reviewed</o:Status>
+  <o:UE dt:dt="string">375</o:UE>
+  <o:DevApproved dt:dt="string">0</o:DevApproved>
+  <o:URApproved dt:dt="string">0</o:URApproved>
+  <o:CheckPointApproved dt:dt="string">0</o:CheckPointApproved>
+  <o:Test dt:dt="string">231</o:Test>
+  <o:SubArea dt:dt="string"></o:SubArea>
+  <o:Loc dt:dt="string"></o:Loc>
+  <o:UI dt:dt="string"></o:UI>
+  <o:UR dt:dt="string"></o:UR>
+  <o:DevEst dt:dt="string"></o:DevEst>
+  <o:TestEstimate dt:dt="string"></o:TestEstimate>
+  <o:SummarySpecDue dt:dt="string"></o:SummarySpecDue>
+  <o:SpecDue dt:dt="string"></o:SpecDue>
+  <o:Team0 dt:dt="string"></o:Team0>
+  <o:Spec_x0020_Review dt:dt="string"></o:Spec_x0020_Review>
+  <o:Mgmt_x0020_Review dt:dt="string"></o:Mgmt_x0020_Review>
+  <o:Spec_x0020_Inspection dt:dt="string"></o:Spec_x0020_Inspection>
+  <o:_AdHocReviewCycleID dt:dt="float">953353304</o:_AdHocReviewCycleID>
+  <o:_EmailSubject dt:dt="string">Device configuration Sample readme</o:_EmailSubject>
+  <o:_AuthorEmail dt:dt="string">rathraj@Exchange.Microsoft.com</o:_AuthorEmail>
+  <o:_AuthorEmailDisplayName dt:dt="string">Ratheesh Rajan</o:_AuthorEmailDisplayName>
+  <o:_PreviousAdHocReviewCycleID dt:dt="float">1390202766</o:_PreviousAdHocReviewCycleID>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-alt:Verdana;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:24.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:22.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Tahoma;
+	color:gray;
+	mso-font-kerning:12.0pt;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:18.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:Verdana;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:116067642;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1231444684 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:678122297;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-741558488 562303062 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:736517822;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-222812380 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1346206051;
+	mso-list-type:hybrid;
+	mso-list-template-ids:898020724 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1609897808;
+	mso-list-template-ids:806912372;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:1913469842;
+	mso-list-type:hybrid;
+	mso-list-template-ids:342370780 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h2 style='line-height:24.0pt;mso-line-height-rule:exactly'><span class=SpellE>DeviceConfiguration</span></h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=square>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Sample_Overview">Sample
+     Overview</a><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Requirements_and_Dependencies">Requirements
+     and Dependencies</a><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Topics">Topics</a></span><span
+     class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+     text-underline:none'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Building_the_Sample">Building
+     the Sample</a></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Running_the_Sample">Running
+     the Sample</a><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-bidi-font-size:10.0pt'><a href="#_Notes">Notes</a><o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="_Toc21230997"></a><a name="_Sample_Overview"></a><span
+style='mso-bookmark:_Toc21230997'>Sample Overview</span></h3>
+
+<p class=MsoNormal>This sample demonstrates the process of configuring a device
+from a web site, using various optional transport methods (SMS, ActiveSync, or
+even e-mail). The sample consists of several components, including the web site
+itself (ASP), the control which configures the device (ActiveX, hosted on the
+aforementioned web site), a deferred installer distributed with the ActiveX
+control, and the configuration XML generated by the control. The entire sample
+exists only on the desktop and is meant to configure the device, rather than
+actually run on it. This sample will be most useful to those wishing to set up
+a corporate or operator website which will deliver a consistent configuration
+to multiple devices.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The sample files are separated into main directories,
+Website and <span class=SpellE>DeviceConfigCtl</span>. The Website folder
+contains the files relevant for the device configuration website, and contains
+various options for configuring the device. The website depends on an ActiveX
+control called <span class=SpellE>DeviceConfigCtl</span> for one of the four
+configuration delivery options. The source for the ActiveX control can be found
+in the aforementioned <span class=SpellE>DeviceConfigCtl</span> folder. Implemented
+using ATL, this control provides the functionality of installing a CPF file on
+to the device using ActiveSync. The ActiveX control in turn depends on an
+executable named DeferredInstaller.exe which, as the name suggests, is used to
+send configuration to a device at a later time if no device is connected at the
+time of configuration. The source for DeferredInstaller.exe is included in the <span
+class=SpellE>DeferredInstaller</span> subfolder under the <span class=SpellE>DeviceConfigCtl</span>
+folder. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21230998"></a><a name="_Requirements"></a><a
+name="_Requirements_and_Dependencies"></a><span style='mso-bookmark:_Toc21230998'>Requirements</span>
+and Dependencies</h3>
+
+<p class=MsoNormal>The website requires itself to be hosted on a Windows Server
+or a Windows machine running Microsoft Internet Information Server (IIS). The
+site also requires that a <span class=SpellE>perl</span> scripting engine be
+installed on the server so that the <span class=SpellE>perl</span> scripts that
+are part of the site can be run with adequate permissions. In addition to
+these, the following requirements also apply depending on the extent of
+functionality intended for the website.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4;
+     tab-stops:list .5in'>In order to use the “Send <span class=GramE>Via</span>
+     Email” feature, the server machine should have either CDONTS or the Microsoft
+     .NET Framework installed.</li>
+ <li class=MsoNormal style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4;
+     tab-stops:list .5in'>In order to use the “Send <span class=GramE>Via</span>
+     SMS” feature, the server machine should have access to a Over-the-Air
+     (OTA) push server.</li>
+ <li class=MsoNormal style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4;
+     tab-stops:list .5in'>In order to use the “Send Via ActiveSync” feature,
+     the ActiveX control (<span class=SpellE>deviceconfigctl.cab</span>) should
+     either be signed with a valid Authenticode certificate and marked “Safe
+     for Scripting and Initializing” or the users of the site should be
+     notified to change their client browser settings accordingly.</li>
+ <li class=MsoNormal style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4;
+     tab-stops:list .5in'>If the user of the website wants to configure locked
+     down <span class=SpellE>Smartphones</span>, a secure code signing
+     mechanism should be in place such that the CPF (Cab Provisioning Format) file
+     generated by the <span class=SpellE>perl</span> scripts in the website can
+     be signed by the appropriate Authenticode certificates that are already
+     provisioned on the device. The <span class=SpellE>perl</span> scripts in
+     the Website folder have placeholders in them where scripting code for the
+     same could be added.</li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The ActiveSync CPF Installer control (<span class=SpellE>DeviceConfigCtl</span>)
+source code in the <span class=SpellE>DeviceConfigCtl</span> folder is an ATL
+7.0 project, built using Visual Studio .Net. The source for
+DeferredInstaller.exe, which is in the <span class=SpellE>DeferredInstaller</span>
+folder, is a Win32 project, also built using Visual Studio .Net. In order to
+rebuild these if changes are made to sources, Visual Studio .Net should be
+installed. The ActiveX control and the Deferred Installer are already pre-built
+and packaged into the <span class=SpellE>DeviceConfigCtl.cab</span> file in the
+Website folder. So if no modifications are required, there is no need build
+either of these projects. Building a Release version of the <span class=SpellE>DeviceConfigCtl</span>
+project requires that the Cabarc.exe tool, which is part of the Microsoft
+Cabinet SDK, is installed on the development machine. See the “Building the
+Sample” section for more details on how to rebuild the Visual Studio .Net
+projects.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Topics"></a>Topics</h3>
+
+<p class=MsoNormal>The topics covered by this sample are the following:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l5 level1 lfo5;
+     tab-stops:list .5in'>Generating XML configuration files for configuring <span
+     class=SpellE>Smartphone</span> and Pocket PC devices.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l5 level1 lfo5;
+     tab-stops:list .5in'>Different ways to send configuration settings to <span
+     class=SpellE>Smartphone</span> and Pocket PC devices.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l5 level1 lfo5;
+     tab-stops:list .5in'>Use of Remote API (RAPI) and <span class=SpellE>CeUtils</span>
+     provided by ActiveSync to interact with <span class=SpellE>Smartphone</span>
+     and Pocket PC devices.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l5 level1 lfo5;
+     tab-stops:list .5in'>Building desktop ActiveX controls to interact with <span
+     class=SpellE>Smartphone</span> and Pocket PC devices.</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Building_the_Sample"></a>Building the Sample</h3>
+
+<p class=MsoNormal>The Website does not require any building step. It only
+requires a few setup steps to get it up and running. See the “Running the
+Sample” section for setup instructions for the website.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>As mentioned earlier, the <span class=SpellE>DeviceConfigCtl</span>
+and <span class=SpellE>DeferredInstaller</span> projects are Visual Studio .Net
+projects. Double click on the &lt;<span class=SpellE>projectname</span>&gt;.<span
+class=SpellE>sln</span> file in the respective directory to open the project in
+Visual Studio .Net. Before any of the projects can be built, Visual Studio
+should be pointed correctly to locate the files it needs to build. The
+following steps should be taken for this:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l2 level1 lfo6;
+     tab-stops:list .5in'>Open the Options dialog by clicking Tools-&gt;Options
+     from the main menu in Visual Studio .Net IDE. </li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l2 level1 lfo6;
+     tab-stops:list .5in'>Select “VC++ Directories” in the “Projects”
+     sub-folder. </li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l2 level2 lfo6;
+      tab-stops:list 1.0in'>Select “Include Files” in the “Show directories
+      for:” drop down box. Add “&lt;SDK_INSTALL_DIR&gt;\ActiveSync\Inc”.
+      SDK_INSTALL_DIR is the installed path of this SDK. </li>
+  <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l2 level2 lfo6;
+      tab-stops:list 1.0in'>Select “Library Files” in the “Show directories
+      for:” drop down box and add “&lt;SDK_INSTALL_DIR&gt;\ActiveSync\Lib”</li>
+  <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l2 level2 lfo6;
+      tab-stops:list 1.0in'>Select “Executable Files” in the “Show directories
+      for:” drop down box and add the location where Cabarc.exe exists.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The <span class=SpellE>DeferredInstaller</span> project
+should be built first prior to building the <span class=SpellE>DeviceConfigCtl</span>
+project if any modifications are made to the Deferred Installer source files.
+This can be automated by adding the <span class=SpellE>DeferredInstaller</span>
+project as a dependency or a pre-build step in the <span class=SpellE>DeviceConfigCtl</span>
+project. After building the <span class=SpellE>DeferredInstaller</span>
+project, the EXE file should be copied from its release directory to the <span
+class=SpellE>DeviceConfigCtl</span> directory. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Building the <span class=SpellE>DeviceConfigCtl</span>
+project is simple. Double click on the Visual Studio solution file (.<span
+class=SpellE>sln</span>), make the required changes to the source files if any,
+and build the solution. This will generate the DeviceConfigCtl.dll file and
+will register the control on the development machine for debugging purposes. If
+the Active Configuration of the project is set to “Release”, there is an
+additional custom post-build step for generating the CAB file for the ActiveX
+control. The post-build step uses the <span class=SpellE>DeviceConfigCtl.inf</span>
+file in the same folder and calls Cabarc.exe to package up the Control’s DLL
+and DeferredInstaller.EXE into a CAB that can be deployed in the Website. If
+any changes are made to the control, bump up the version number of the DLL
+before building the solution. This can be done by opening the version strings in
+the resource view of the project. The version number should also be updated in
+the INF file and in <span class=SpellE>ASInstall.asp</span> file in the
+Website.<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21230999"></a><a name="_Running_the_Sample"></a><span
+style='mso-bookmark:_Toc21230999'>Running the Sample</span></h3>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The following steps need to be taken when the setting up the
+website for the first time.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Copy the entire content from the Website folder to
+     the <span class=SpellE>wwwroot</span> folder or a different virtual folder
+     under IIS.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Setup IIS permissions as required for the intended
+     user group. </li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Give write permission for the “Profiles” directory to
+     the intended user group.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Give execute permission for the <span class=SpellE>perl</span>
+     scripting engine to the intended user group.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Edit “<span class=SpellE>global.asa</span>” file in
+     the root folder of the website and make sure that the “<span class=SpellE>Loginpage</span>”
+     variable points to the correct path. This path depends on how the website
+     is configured.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Edit “<span class=SpellE>Admin_Email.inc</span>” file
+     in the “inc” folder in the website with the correct email address. This
+     will the “From” address for configuration emails sent from the site, when
+     using the “Send <span class=GramE>Via</span> Email” option.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Edit “<span class=SpellE>SMTP_Server.inc</span>” file
+     in the same folder with the IP address of the SMTP server which will be
+     used for sending emails.</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Edit “<span class=SpellE>TPPG_address.inc</span>”
+     file with the URL for the OTA push server. This is required to use the
+     “Send via SMS” option of delivering the configuration to the device</li>
+ <li class=MsoNormal style='margin-bottom:3.0pt;mso-list:l3 level1 lfo7;
+     tab-stops:list .5in'>Edit “<span class=SpellE>TPPG_name.inc</span>” file
+     with the friendly name of the OTA push server. </li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc21231000"></a><a name="_Notes"></a><span style='mso-bookmark:
+_Toc21231000'>Notes</span></h3>
+
+<p class=MsoNormal>The ActiveX control in this sample is not marked safe for
+scripting and initialization. Hence it might not work properly on some client
+browsers, even if the control is signed with a valid Authenticode signature.
+The problem could be fixed by either changing the security settings of client
+browser accordingly or by including code in the control’s source files to mark
+the control safe for scripting and initializing. Please follow instructions and
+guidelines given in MSDN to mark an ActiveX control safe for scripting and
+initializing.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+HKCR
+{
+	CComCtrl.CComCtrl.1 = s 'CComCtrl Class'
+	{
+		CLSID = s '{5E52C830-D880-11D1-9355-00600820B4FF}'
+	}
+	CComCtrl.CComCtrl = s 'CComCtrl Class'
+	{
+		CLSID = s '{5E52C830-D880-11D1-9355-00600820B4FF}'
+		CurVer = s 'CComCtrl.CComCtrl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5E52C830-D880-11D1-9355-00600820B4FF} = s 'CComCtrl Class'
+		{
+			ProgID = s 'CComCtrl.CComCtrl.1'
+			VersionIndependentProgID = s 'CComCtrl.CComCtrl'
+			InprocServer32 = s '%MODULE%'
+			{
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{5E52C823-D880-11D1-9355-00600820B4FF}'
+			'Version' = s '1.0'
+		}
+	}
+}

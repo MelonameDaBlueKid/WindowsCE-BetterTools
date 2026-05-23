@@ -1,0 +1,11 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_DT_MENUBAR SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_DT_MENUBAR, 1,
+    I_IMAGENONE, IDM_DT_QUIT, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_DT_QUIT, 
+    0, NOMENU,
+END

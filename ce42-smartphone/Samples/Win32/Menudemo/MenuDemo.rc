@@ -1,0 +1,150 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MENU_DIALOG DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_VISIBLE | WS_VSCROLL
+BEGIN
+    LTEXT           "Softkey Action:",IDC_STATIC,5,5,90,10
+    LISTBOX         IDC_LIST,5,15,90,10,LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_UPDOWN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ,0,0,0,0
+    CONTROL         "Disable Options->Quit",IDC_QUIT_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,30,90,10
+    CONTROL         "Disable Softkey",IDC_SK_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,40,90,10
+    CONTROL         "Swap Softkeys",IDC_SWAP_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,50,90,10
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDR_MENU_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Uncheck All",                 IDM_MENU_UNCHECK
+        MENUITEM "Quit",                        IDM_MENU_QUIT
+    END
+    MENUITEM "Quit",                        IDM_MENU_QUIT
+END
+
+IDR_MENU_MENU2 MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Quit",                        IDM_MENU_QUIT
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Uncheck All",                 IDM_MENU_UNCHECK
+        MENUITEM "Quit",                        IDM_MENU_QUIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_MENU_MENU1 SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_MENU_MENU1, 2,
+    I_IMAGENONE, IDM_MENU_OPTIONS, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MENU_OPTIONS, 0, 0,
+    I_IMAGENONE, IDM_MENU_QUIT, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 
+    IDS_MENU_QUIT, 0, NOMENU,
+END
+
+IDR_MENU_MENU2 SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_MENU_MENU2, 2,
+    I_IMAGENONE, IDM_MENU_QUIT, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 
+    IDS_MENU_QUIT, 0, NOMENU,
+    I_IMAGENONE, IDM_MENU_OPTIONS, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MENU_OPTIONS, 0, 1,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MENU_QUIT           "Quit"
+    IDS_MENU_UNCHECK        "Uncheck All"
+    IDS_MENU_TITLE          "Menu Demo"
+    IDS_MENU_OPTIONS        "Options"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

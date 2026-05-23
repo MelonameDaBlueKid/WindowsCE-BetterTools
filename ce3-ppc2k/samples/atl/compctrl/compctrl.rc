@@ -1,0 +1,184 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CompCtrl.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CompCtrl Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "COMPCTRL\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "COMPCTRL.DLL\0"
+            VALUE "ProductName", "CompCtrl Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CCOMCTRL            REGISTRY DISCARDABLE    "CComCtrl.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_COMPCTRL DIALOG DISCARDABLE  0, 0, 130, 97
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_POLYCTL1,"{4CBBC676-507F-11D0-B98B-000000000000}",
+                    WS_TABSTOP,12,41,46,37
+    PUSHBUTTON      "&Increment",IDC_INCREMENT,6,5,58,15
+    PUSHBUTTON      "&Decrement",IDC_DECREMENT,6,22,58,15
+    LTEXT           "",IDC_SIDES,9,79,53,10
+    PUSHBUTTON      "S&mile",IDC_SMILE,73,7,46,14
+    PUSHBUTTON      "S&ad",IDC_SAD,73,23,46,14
+    PUSHBUTTON      "&Wink",IDC_WINK,73,40,46,14
+    CONTROL         "",IDC_SMILECTRL1,"{C01FA303-B475-11D1-87E8-006097BA8D75}",
+                    WS_TABSTOP,73,58,44,31
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_COMPCTRL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 129
+        BOTTOMMARGIN, 89
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_COMPCTRL DLGINIT
+BEGIN
+    IDC_POLYCTL1, 0x376, 26, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x0722, 0x0000, 0x0634, 0x0000, 0x0002, 
+0x0004, 0x0013, 0xff00, 0x0000, 
+    IDC_SMILECTRL1, 0x376, 42, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x06d2, 0x0000, 0x052b, 0x0000, 0x002b, 
+0x0000, 0x4d0a, 0x4346, 0x5320, 0x696d, 0x656c, 0x0079, 0x0000, 0xff00, 
+0x00ff, 0x0000, 0xe002, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CompCtrl"
+    IDS_SIDES               "Sides: %d"
+    IDS_SIMPLE              "Clicked inside Smile control"
+    IDS_OUTSIDE             "Clicked outside Smile control"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CompCtrl.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

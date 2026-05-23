@@ -1,0 +1,11 @@
+<!-- Sample XML to add a certificate to the CertStore  -->
+<wap-provisioningdoc>
+	<characteristic type="CertificateStore">
+		<characteristic type="{Enter certificate store name over here}">
+			<characteristic type="{Enter certificate SHA-1 thumbprint in hexadecimal here}">
+				<parm name="EncodedCertificate" value="{Enter base64 encoded X.509 certificate here}" />
+				<parm name="Role" value="{Enter decimal role mask here}" />
+			</characteristic>
+		</characteristic>
+	</characteristic>
+</wap-provisioningdoc>

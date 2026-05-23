@@ -1,0 +1,42 @@
+//*******************************************************************************************
+//
+// Filename : monkey.rc
+//	
+// Copyright (c) 1997 Microsoft Corporation. All rights reserved
+//
+//*******************************************************************************************
+
+#include "resource.h"
+#include "windows.h"
+#include "monkey.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+MONKEYDLG DIALOG DISCARDABLE  19, 65510, 315, 114
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Registry Sample"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Key",-1,3,22,19,8
+    LTEXT           "Path",-1,2,7,20,8
+    EDITTEXT        IDE_NAME,24,20,96,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Class",-1,3,37,20,8
+    EDITTEXT        IDE_CLASS,24,35,96,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Type",-1,3,89,22,8
+    LTEXT           "Entry",-1,3,102,22,8
+    EDITTEXT        IDE_VALUE1,24,88,288,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDE_VALUE2,24,100,288,12,ES_AUTOHSCROLL | ES_READONLY
+    LISTBOX         IDL_LISTBOX,121,19,100,68,WS_VSCROLL | WS_HSCROLL |
+                    WS_TABSTOP
+    LISTBOX         IDL_LISTBOX2,223,19,88,53,WS_VSCROLL | WS_HSCROLL |
+                    WS_TABSTOP
+    RTEXT           "VALUES:",-1,227,75,38,8
+    PUSHBUTTON      "Next/Down",IDB_NEXT,73,60,46,14
+    PUSHBUTTON      "Back/Up",IDB_BACK,25,60,46,14
+    EDITTEXT        IDE_CVALUES,265,73,31,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDE_TEXTOUT,24,5,288,12,ES_READONLY
+END

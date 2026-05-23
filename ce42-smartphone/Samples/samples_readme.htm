@@ -1,0 +1,1079 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./samples_readme_sp_files/filelist.xml">
+<title>Smartphone 2003 SDK Samples</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>95</w:Zoom>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+span.SPELLE
+	{mso-spl-e:yes;}
+span.GRAME
+	{mso-gram-e:yes;}
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+span.mercuryemphasis
+	{mso-style-name:mercuryemphasis;
+	mso-ascii-font-family:"Trebuchet MS";
+	mso-hansi-font-family:"Trebuchet MS";
+	font-weight:bold;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:65618009;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-926779022 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:154952024;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1393081668 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:178542994;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1585441052 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:211695483;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-480207242 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:214434284;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-34410382 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:306862149;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1421001976 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:317392418;
+	mso-list-type:hybrid;
+	mso-list-template-ids:70161830 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:476607602;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-292359208 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:578558645;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2030400776 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9
+	{mso-list-id:610473209;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1589059210 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:621228128;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1213250146 67698689 67698703 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:621306605;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-675792490 67698689 67698691 67698689 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l11:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12
+	{mso-list-id:718894101;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-588360588 67698689 67698703 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:733700476;
+	mso-list-template-ids:1000096266;}
+@list l13:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l14
+	{mso-list-id:756748529;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1378209660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l15
+	{mso-list-id:767506087;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-630162678 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l15:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l16
+	{mso-list-id:814644366;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1886696280 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l16:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l17
+	{mso-list-id:1190794751;
+	mso-list-type:hybrid;
+	mso-list-template-ids:717113490 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l18
+	{mso-list-id:1261570338;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1123682000 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l18:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l19
+	{mso-list-id:1451819214;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1041944782 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l19:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l20
+	{mso-list-id:1458063946;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2056829560 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l20:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21
+	{mso-list-id:1481656889;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2046264832 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l21:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l22
+	{mso-list-id:1618029380;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-164999542 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l22:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l23
+	{mso-list-id:1647202518;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-586373392 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l23:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l24
+	{mso-list-id:1681656573;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1654512078 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l24:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25
+	{mso-list-id:1728601468;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1449684896 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l25:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l26
+	{mso-list-id:1761443501;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-29169494 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l26:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l27
+	{mso-list-id:1856190829;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2078099890 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l27:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l28
+	{mso-list-id:1914125069;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1397403668 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l28:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l29
+	{mso-list-id:1956207425;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1517825504 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l29:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="country-region"/><o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place"/>
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Smartphone 2003 SDK Samples</h1>
+
+<p class=MsoNormal>This document contains information on the samples included
+in this installation of the SDK. To run each of these samples, start eVC, and
+open the sample workspace (*.VCW) for the sample you want to examine or run. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>By default all sample files get downloaded to
+\Storage\Application Data\Volatile\. To have eVC download samples to the
+Programs list change the following setting in eVC. With an open project select
+the &quot;Project&quot; menu item, subitem &quot;Settings...&quot; Select the
+&quot;Debug&quot; tab and change the &quot;Download directory:&quot; to
+&quot;\Storage\Windows\Start Menu\Accessories&quot;. Remember to download
+directory is set per build configuration (&quot;Win32 (WCE ARMV4) Debug&quot;
+or &quot;Win32 (WCE emulator) Release&quot;) and the sample needs to be rebuilt
+for the sample to appear in the Programs view. Programs only updates when the
+folder view changes, so you may need to navigate out of the accessories folder
+and back to see recently deployed applications.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Unless otherwise noted, all samples work on the emulator as
+well as the mobile device.</p>
+
+<h2>Win32 Samples</h2>
+
+<h2>Autorun</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l15 level1 lfo71;tab-stops:list .5in'>Demonstrates
+     an Autorun application for storage cards. </li>
+ <li class=MsoNormal style='mso-list:l15 level1 lfo71;tab-stops:list .5in'>If
+     you provide applications on storage cards, you must include an Autorun
+     application on the card because the Smartphone doesn’t provide any way for
+     the user to directly access the files system, and thus they wouldn’t be
+     able to get to your application.</li>
+</ul>
+
+<h2>Back</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l26 level1 lfo72;tab-stops:list .5in'>Demonstrates
+     how to support the system Back key in an application. </li>
+ <li class=MsoNormal style='mso-list:l26 level1 lfo72;tab-stops:list .5in'>The
+     Back key acts as a backspace key in edit boxes as well as a navigation
+     tool to go back to the previous application. Correct use of the Back key
+     in your applications is important to providing a good and consistent end
+     user experience. </li>
+</ul>
+
+<h2>Cegetdev</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l29 level1 lfo3;tab-stops:list .5in'>Demonstrates
+     getting information about the display capabilities of the device at runtime
+     from the GetDeviceCaps function. </li>
+</ul>
+
+<h2>Cellcore – CeDialer</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l29 level1 lfo3;tab-stops:list .5in'>Demonstrates
+     how to choose, open, and make a call on a TAPI line.</li>
+ <li class=MsoNormal style='mso-list:l29 level1 lfo3;tab-stops:list .5in'>This
+     sample also demonstrates how to write a common code base for Smartphone
+     and Pocket PC.</li>
+</ul>
+
+<h2>Cellcore – ExTAPI</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l28 level1 lfo7;tab-stops:list .5in'>Demonstrates
+     how to open a line and get general information.</li>
+ <li class=MsoNormal style='mso-list:l28 level1 lfo7;tab-stops:list .5in'>This
+     sample requires either a real device or a GSM radio attached to the
+     emulator. The device or radio must have a SIM and service from a mobile
+     operator. </li>
+</ul>
+
+<h2>Cellcore – ExTAPIAsync</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l16 level1 lfo10;tab-stops:list .5in'>Demonstrates
+     how to use the asynchronous features of ExTAPI by trying to register an
+     alternate operator.</li>
+ <li class=MsoNormal style='mso-list:l16 level1 lfo10;tab-stops:list .5in'>This
+     sample requires either a real device or a GSM radio attached to the
+     emulator. The device or radio must have a SIM and service from a mobile
+     operator.</li>
+</ul>
+
+<h2>Cellcore – SMS – Hello SMS</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo13;tab-stops:list .5in'>Demonstrates
+     a simple SMS message sender.</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo13;tab-stops:list .5in'>This
+     sample requires either a real device or a GSM radio attached to the
+     emulator. The device or radio must have a SIM and service from a mobile
+     operator that provides SMS. </li>
+</ul>
+
+<h2>Cellcore – TAPI – Hello TAPI</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo16;tab-stops:list .5in'>Demonstrates
+     a Simple TAPI phone dialer. After selecting either dial option from the
+     menu, the application will close and a blank Call Progress dialog will
+     appear. Press the home button to return to the home screen. </li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo16;tab-stops:list .5in'>This
+     sample requires either a real device or a GSM radio attached to the
+     emulator. The device or radio must have a SIM and service from a mobile
+     operator. </li>
+</ul>
+
+<h2>Cellcore - WDP_SMS</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l27 level1 lfo19;tab-stops:list .5in'>Shows
+     how to send and receive WDP messages over Short Message Service (SMS),
+     using SMS to transport data. </li>
+ <li class=MsoNormal style='mso-list:l27 level1 lfo19;tab-stops:list .5in'>This
+     sample requires either a real device or a GSM radio attached to the
+     emulator. The device or radio must have a SIM and service from a mobile
+     operator that provides SMS. </li>
+</ul>
+
+<h2>CfgClient</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo22;tab-stops:list .5in'>Demonstrates
+     how a push client receives a push message and sends a response via HTTP or
+     WSP.<span style="mso-spacerun: yes">  </span></li>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo22;tab-stops:list .5in'>This
+     sample utilizes the device management API to process the configuration
+     push message.</li>
+</ul>
+
+<h2>Closewindow</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo73;tab-stops:list .5in'>Demonstrates
+     forcing a program into base state when it is re-launched. Make sure that
+     child windows have a parent because this sample will not work if any
+     window has a NULL parent.</li>
+</ul>
+
+<h2>CMTime </h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo73;tab-stops:list .5in'>Demonstrates
+     how to use connection manager by using it to establish a connection.</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo73;tab-stops:list .5in'>Connects
+     to a time server and synchronizes the phone with the current time.</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo73;tab-stops:list .5in'>Near
+     the start of the file cmtime.cpp (and identified by a comment block), the
+     variable g_in_addr is initialized as the IP address for the time server
+     the program should use to obtain the time. By default, g_in_addr is set to
+     the IP address of a time server operated by the <st1:country-region><st1:place>United
+     States</st1:place></st1:country-region> government.</li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l11 level2 lfo73;tab-stops:list 1.0in'>If
+      you are using the TimeServer application on your computer, you can change
+      g_in_addr to the IP address of the computer running TimeServer.EXE. </li>
+  <li class=MsoNormal style='mso-list:l11 level2 lfo73;tab-stops:list 1.0in'>If
+      you want to use the sample to connect to a time server on the Internet,
+      you can set the IP address for that server in g_in_addr. You can
+      substitute the IP address of any time server that supports Time Protocol
+      (RFC-868). Note that using a time server on the Internet requires that
+      your computer be able to access port 37. Depending on your network and
+      proxy server configuration, you may need to ask your network
+      administrator or help desk what you need to do to access traffic on port
+      37. Generally, this will require you to install or configure a proxy
+      client on your desktop computer. If your network is not allowing port 37
+      traffic through to your computer, you will see the message “…Finding
+      Connection…” in the CMTime application window for about one minute
+      followed by the message “Error getting time!”</li>
+ </ul>
+</ul>
+
+<h2>CMTime – TimeServer</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo73;tab-stops:list .5in'>This
+     is a Win32 console app that mimics a time server for use with the CMTime
+     device sample. When you run TimeServer.exe the command window will indicate
+     activity when an application connects to get the time.</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo73;tab-stops:list .5in'>An
+     executable for this sample is included in the SDK. If you wish to build it
+     yourself, you must do so using desktop Visual C++. This sample was
+     compiled and tested using Visual C++ 6.0. </li>
+</ul>
+
+<h2>CreateCab</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l22 level1 lfo74;tab-stops:list .5in'>Demonstrates
+     how to create, sign, and install a .cab archive file.</li>
+</ul>
+
+<h2>Currency</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l22 level1 lfo74;tab-stops:list .5in'>Demonstrate
+     how to port a Pocket PC application (a simple currency converter) to
+     Smartphone 2003.</li>
+ <li class=MsoNormal style='mso-list:l22 level1 lfo74;tab-stops:list .5in'>A
+     complete explanation of the way this sample is organized is contained in
+     the readme.txt file in the Currency directory.</li>
+</ul>
+
+<h2>Customform</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l18 level1 lfo75;tab-stops:list .5in'>Demonstrates
+     how to use the IMailRuleClient interface to intercept incoming MAPI
+     messages.</li>
+ <li class=MsoNormal style='mso-list:l18 level1 lfo75;tab-stops:list .5in'>Shows
+     processing of incoming <st1:place>EMS</st1:place> messages.</li>
+ <li class=MsoNormal style='mso-list:l18 level1 lfo75;tab-stops:list .5in'>Implements
+     a custom read form to display <st1:place>EMS</st1:place> messages.</li>
+</ul>
+
+<h2>DeviceConfiguration</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l23 level1 lfo76;tab-stops:list .5in'>Demonstrates
+     a device configuration web site for generating and configuring Smartphone
+     devices.</li>
+</ul>
+
+<h2>DrawingText</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Demonstrates
+     simple Win32 text and shape drawing.</li>
+</ul>
+
+<h2>Enroll</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Demonstrates
+     how to use WinInet and security protocols to log in to secure web sites
+     and download and store certificates.</li>
+</ul>
+
+<h2>Etcha</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Shows
+     how to use the navigation pad.</li>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>This
+     sample is similar to the familiar drawing toy. It starts off in the center
+     of the screen and draws as you use the navigation pad. </li>
+</ul>
+
+<h2 style='tab-stops:99.75pt'>FileClient</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Demonstrates
+     a push client that receives a wireless push message, saves the message
+     body to a file, and then calls ShellExecuteEx on that file.</li>
+</ul>
+
+<h2>GapiApp</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Shows
+     a well behaved Game API (GAPI) application on smartphone.</li>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>This
+     sample specifically demonstrates handling WM_ACTIVATE messages, keyboard
+     events for Home and Back and how to use the keyboard driver to locate
+     input visualizations.</li>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>This
+     sample is NOT an example of a well designed rendering system.<span
+     style="mso-spacerun: yes">  </span>Specifically, the sample implements SetPixel
+     as a function rather than as a Macro which significantly impacts
+     performance. </li>
+</ul>
+
+<h2>GetUuid</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Demonstrates
+     how to access the device's unique ID. This ID can be used for enterprise
+     asset management systems or other applications that require a device to be
+     uniquely identified.</li>
+</ul>
+
+<h2>HelloPlug</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Demonstrates
+     a simple Home Screen plug-in for Smartphone. </li>
+</ul>
+
+<h2>HomeScreen</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Demonstrates
+     a more complex Home Screen plug-in for Smartphone. </li>
+ <li class=MsoNormal style='mso-list:l14 level1 lfo25;tab-stops:list .5in'>Displays
+     the device’ current memory state.</li>
+</ul>
+
+<h2>KeyTest</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo32;tab-stops:list .5in'>Displays
+     WM_CHAR, KEY_UP and KEY_DOWN messages sent to the application.</li>
+</ul>
+
+<h2>MAPIRule</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo32;tab-stops:list .5in'>Demonstrates
+     how to use the IMailRuleClient interface to intercept incoming MAPI
+     messages.</li>
+</ul>
+
+<h2>MenuDemo</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo32;tab-stops:list .5in'>Demonstrates
+     how to work with the soft keys and soft key menus.</li>
+</ul>
+
+<h2>MSMQ – VisAdm</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo35;tab-stops:list .5in'>The
+     MSMQ Visual Administrator tool ported to function on Pocket PC.<span
+     style="mso-spacerun: yes">  </span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo35;tab-stops:list .5in'>This
+     sample also demonstrates how to make an application UI function on both
+     Pocket PC and Smartphone devices.</li>
+</ul>
+
+<h2>MUIHello</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l20 level1 lfo77;tab-stops:list .5in'>Demonstrates
+     how an application takes advantage of the Multilanguage User Interface
+     (MUI) on Smartphone 2003. This is a very simple application that displays
+     some strings. </li>
+ <li class=MsoNormal style='mso-list:l20 level1 lfo77;tab-stops:list .5in'>Running
+     this application on the device or emulator set to English causes the
+     strings from the English resource file to be displayed, while switching to
+     German causes the strings from the German resource file to be displayed.
+     Note that the strings in this sample are not actually German words, just
+     the English words followed by (Ger). </li>
+</ul>
+
+<h2>OwnerListView</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l12 level1 lfo38;tab-stops:list .5in'>Displays
+     a simple owner-drawn ListView control.</li>
+</ul>
+
+<h2>PoomMaster</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l12 level1 lfo38;tab-stops:list .5in'>Demonstrates
+     the use of the POOM API for managing and listing PIM contacts, tasks, and
+     appointments objects.</li>
+ <li class=MsoNormal style='mso-list:l12 level1 lfo38;tab-stops:list .5in'>This
+     sample also utilizes an owner-drawn list box.</li>
+ <li class=MsoNormal style='mso-list:l12 level1 lfo38;tab-stops:list .5in'>This
+     sample code is a common code base for both Smartphone and Pocket PC
+     devices.</li>
+</ul>
+
+<h2>PoomTasks</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo78;tab-stops:list .5in'>Implements
+     a Tasks application by using the Pocket Outlook Object Model (POOM) API.</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo78;tab-stops:list .5in'>Data
+     storage for the application is handled by POOM and is therefore available
+     to any POOM-based application.</li>
+</ul>
+
+<h2>PSM</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l19 level1 lfo79;tab-stops:list .5in'>Demonstrates
+     the use of persistent storage on Smartphone 2003 to store application
+     data. All applications should be stored, along with any data they use
+     because the RAM file store is very limited in size and anything not stored
+     in the persistent storage is lost when the phone is turned off.</li>
+ <li class=MsoNormal style='mso-list:l19 level1 lfo79;tab-stops:list .5in'>Since
+     the emulator does not have a persistent file store, this sample functions,
+     but behaves differently than it would on a real device. </li>
+ <li class=MsoNormal style='mso-list:l19 level1 lfo79;tab-stops:list .5in'>This
+     sample uses a #ifdef...#else construct to allow it to function if
+     CSIDL_APPDATA is not defined. Pocket PC does not define CSIDL_APPDATA, so
+     this is a good example for real applications to follow to ensure code
+     portability between Smartphone and Pocket PC. </li>
+</ul>
+
+<h2>PViewCE</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l13 level1 lfo42;tab-stops:list .5in'>A
+     Process/thread/module viewer.</li>
+ <li class=MsoNormal style='mso-list:l13 level1 lfo42;tab-stops:list .5in'>This
+     sample uses the ToolHelp API (tlhelp32.h). Applications using the ToolHelp
+     API are required to be signed using a Privileged certificate in order to
+     function correctly.</li>
+</ul>
+
+<h2>RAPI – Pdblist</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>Uses
+     the Remote API to list databases on the device.</li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>This
+     sample is a desktop application.</li>
+</ul>
+
+<h2>RAPI – Pdir</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>Uses
+     the Remote API to list files in a given directory on the device.</li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>This
+     sample is a desktop application.</li>
+</ul>
+
+<h2>RAPI – Pget</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>Uses
+     the Remote API to copy a file from the device onto the desktop machine it
+     is connected to.</li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>This
+     sample is a desktop application.</li>
+</ul>
+
+<h2>RAPI – Pput</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>Uses
+     the Remote API to copy a file to the device from the desktop machine it is
+     connected to.</li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>This
+     sample is a desktop application.</li>
+</ul>
+
+<h2>RAPI – PregDump</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>Uses
+     the Remote API to demonstrate how to get a list of registry entries from
+     the connected device.</li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>This
+     sample is a desktop application.</li>
+</ul>
+
+<h2>RAPI – Prun</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>Uses
+     the Remote API to demonstrate how to execute an executable file on the
+     connected device.</li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>This
+     sample is a desktop application.</li>
+</ul>
+
+<h2>RAPI – Ptree</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>Uses
+     the Remote API to demonstrate how to list all the files and directories on
+     the connected device.</li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo45;tab-stops:list .5in'>This
+     sample is a desktop application.</li>
+</ul>
+
+<h2>RegDemo</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l6 level1 lfo80;tab-stops:list .5in'>Shows
+     how to get and set registry values. </li>
+ <li class=MsoNormal style='mso-list:l6 level1 lfo80;tab-stops:list .5in'>This
+     sample provides a pair of edit boxes and allows you to view and set the
+     two pre-determined registry values. If you set the values, quit the
+     program and restart it, you will see that the values were persisted.</li>
+</ul>
+
+<h2>SendMail</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l17 level1 lfo54;tab-stops:list .5in'>Shows
+     programmatic sending of an e-mail message using the CEMAPI messaging API.</li>
+ <li class=MsoNormal style='mso-list:l17 level1 lfo54;tab-stops:list .5in'>This
+     sample has no user interface, it simply puts a trivial message (with
+     attachment) in the outbox of each installed account.</li>
+</ul>
+
+<h2>SetupDLL</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l7 level1 lfo57;tab-stops:list .5in'>Demonstrates
+     how to implement a custom setup DLL for custom application installation,
+     which is installed via cab file. </li>
+ <li class=MsoNormal style='mso-list:l7 level1 lfo57;tab-stops:list .5in'>This
+     sample is also used with the CfgClient sample.</li>
+</ul>
+
+<h2>ShowFontInfo</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l7 level1 lfo57;tab-stops:list .5in'>Demonstrates
+     font rendering on the device and allows adjustments to font
+     parameters.<span style="mso-spacerun: yes">  </span></li>
+ <li class=MsoNormal style='mso-list:l7 level1 lfo57;tab-stops:list .5in'>This
+     sample also demonstrates a single-compilation application that runs on
+     both Pocket PC and Smartphone.</li>
+</ul>
+
+<h2>SIMMgr</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l21 level1 lfo81;tab-stops:list .5in'>Demonstrates
+     how to read the phone book entries off the SIM.</li>
+ <li class=MsoNormal style='mso-list:l21 level1 lfo81;tab-stops:list .5in'>This
+     sample requires either a real device or a GSM radio attached to the
+     emulator. The device or radio must have a valid SIM.</li>
+</ul>
+
+<h2>SystemInfo</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l8 level1 lfo61;tab-stops:list .5in'>Displays
+     information about the device or emulator. This includes information about
+     processor, OS version, power status, system time, etc. </li>
+</ul>
+
+<h2>SystemParameters</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l8 level1 lfo61;tab-stops:list .5in'>Shows
+     how to retrieve various system parameters.</li>
+</ul>
+
+<h2>VirtualListView</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l24 level1 lfo65;tab-stops:list .5in'>Demonstrates
+     using a virtual list view. </li>
+</ul>
+
+<h2>Winmine</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l24 level1 lfo65;tab-stops:list .5in'>Demonstrates
+     drawing of bitmaps and handling user input.</li>
+ <li class=MsoNormal style='mso-list:l24 level1 lfo65;tab-stops:list .5in'>This
+     sample is an implementation of the popular Minesweeper game.</li>
+</ul>
+
+<h2>WMHibernate</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l24 level1 lfo65;tab-stops:list .5in'>Demonstrates
+     memory management features by allocating memory using malloc until the
+     automatic memory management features take effect.</li>
+ <li class=MsoNormal style='mso-list:l24 level1 lfo65;tab-stops:list .5in'>This
+     sample allows you to keep malloc'ing memory until the OS sends the
+     WM_HIBERNATE message, at which point a MessageBox pops up, warning you of
+     low memory.<span style="mso-spacerun: yes">  </span>After dismissing the
+     message box the sample app closes in response to the WM_HIBERNATE message.</li>
+ <li class=MsoNormal style='mso-list:l24 level1 lfo65;tab-stops:list .5in'>This
+     sample is designed to force a WM_HIBERNATE message from the OS. Memory is
+     allocated by malloc (heap allocation) but no corresponding calls to free
+     are made. The sample relies on the OS cleaning up all allocations when the
+     process shuts down. Therefore, this sample is not to be used as an example
+     of good programming practices.</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2>ATL Samples</h2>
+
+<h2>AXSample</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo69;tab-stops:list .5in'>Demonstrates
+     how to write an ActiveX control using ATL and then demonstrates embedding
+     the ActiveX control into a Pocket Internet Explorer web page.</li>
+</ul>
+
+<h2>pIEHelper</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo69;tab-stops:list .5in'>Demonstrates
+     implementing the IObjectWithSite interface to listen to Pocket Internet
+     Explorer browser events.</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2>Managed Code Samples</h2>
+
+<h2>CompactNav</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo69;tab-stops:list .5in'>Demonstrates
+     pInvoke calls to unmanaged code, loading bitmaps, and exception handling.</li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo69;tab-stops:list .5in'>This
+     sample implements a basic file system navigator using the .NET Compact
+     Framework.<span style="mso-spacerun: yes">  </span></li>
+</ul>
+
+<h2>SliderPuzzel</h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l25 level1 lfo82;tab-stops:list .5in'>Demonstrates
+     image manipulation and drawing code using the .NET Compact Framework.</li>
+</ul>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

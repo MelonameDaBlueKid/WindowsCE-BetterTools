@@ -1,0 +1,161 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FONTINFO_PPC DIALOG DISCARDABLE  0, 0, 160, 160
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Nina"
+BEGIN
+    LTEXT           "Typeface:",IDC_STATIC,4,4,32,10
+    LTEXT           "Height:",IDC_STATIC,4,16,32,10
+    LTEXT           "Width:",IDC_STATIC,4,28,32,10
+    LTEXT           "Weight:",IDC_STATIC,4,40,32,10
+    LISTBOX         IDD_FONTLIST,40,4,116,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_FONTLIST_UPDOWN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ,4,156,10,10
+    EDITTEXT        IDD_HEIGHT,40,16,40,10,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDD_WIDTH,40,28,40,10,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDD_WEIGHT,40,40,40,10,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Example Font:",IDC_STATIC,4,52,46,10
+    RTEXT           "",IDD_TM_NAME,50,52,106,10
+    EDITTEXT        IDC_EDIT1,4,64,152,92,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_FONTINFO_SPH DIALOG DISCARDABLE  0, 0, 140, 160
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Nina"
+BEGIN
+    LTEXT           "Typeface:",IDC_STATIC,4,4,32,10
+    LTEXT           "Height:",IDC_STATIC,4,16,32,10
+    LTEXT           "Width:",IDC_STATIC,4,28,32,10
+    LTEXT           "Weight:",IDC_STATIC,4,40,32,10
+    LISTBOX         IDD_FONTLIST,40,4,96,10,LBS_NOINTEGRALHEIGHT | NOT 
+                    WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_FONTLIST_UPDOWN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ,4,136,10,10
+    EDITTEXT        IDD_HEIGHT,40,16,40,10,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER
+    EDITTEXT        IDD_WIDTH,40,28,40,10,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER
+    EDITTEXT        IDD_WEIGHT,40,40,40,10,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER
+    LTEXT           "Example Font:",IDC_STATIC,4,52,46,10
+    RTEXT           "",IDD_TM_NAME,50,52,86,10
+    EDITTEXT        IDC_EDIT1,4,64,132,44,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER
+    CONTROL         "Sample",IDC_EDIT1_SPIN,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_EXPANDABLE | UDS_NOSCROLL,2,4,6,6
+END
+
+IDD_METRICS DIALOG DISCARDABLE  0, 0, 120, 160
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "Courier"
+BEGIN
+    LTEXT           "Height",IDC_STATIC,3,15,30,8
+    LTEXT           "Ascent",IDC_STATIC,3,25,30,8
+    LTEXT           "Descent",IDC_STATIC,3,35,30,8
+    LTEXT           "Int Lead",IDC_STATIC,65,35,30,8
+    LTEXT           "Ext Lead",IDC_STATIC,65,45,30,8
+    LTEXT           "Avg Width",IDC_STATIC,3,45,30,8
+    LTEXT           "Max Width",IDC_STATIC,3,55,30,8
+    LTEXT           "Weight",IDC_STATIC,65,55,30,8
+    LTEXT           "Overhang",IDC_STATIC,65,65,35,8
+    LTEXT           "X Aspect",IDC_STATIC,65,15,30,8
+    LTEXT           "Y Aspect",IDC_STATIC,65,25,30,8
+    LTEXT           "Font",IDC_STATIC,3,5,37,8
+    RTEXT           "0",IDD_TM_HEIGHT,35,15,15,8
+    RTEXT           "0",IDD_TM_ASCENT,35,25,15,8
+    RTEXT           "0",IDD_TM_DESCENT,35,35,15,8
+    RTEXT           "0",IDD_TM_LEADEXT,95,45,20,8
+    RTEXT           "0",IDD_TM_LEADINT,95,35,20,8
+    RTEXT           "0",IDD_TM_WIDTHAVG,35,45,15,8
+    RTEXT           "0",IDD_TM_WIDTHMAX,35,55,15,8
+    RTEXT           "0",IDD_TM_WEIGHT,95,55,20,8
+    RTEXT           "0",IDD_TM_OVER,95,65,20,8
+    RTEXT           "0",IDD_TM_DIGITX,95,15,20,8
+    RTEXT           "0",IDD_TM_DIGITY,95,25,20,8
+    RTEXT           "",IDD_TM_NAME,35,5,50,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SHOWFONT_OK         "OK"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SHOWFONT_METRICS    "Details"
+    IDS_SHOWFONT_EXIT       "Exit"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

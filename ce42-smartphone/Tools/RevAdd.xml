@@ -1,0 +1,6 @@
+<!-- Sample XML to add a hash to the revocation list  -->
+<wap-provisioningdoc>
+	<characteristic type="LoaderRevocation">
+		<parm name="{Put base64 encoded hash here}" />
+	</characteristic>
+</wap-provisioningdoc>

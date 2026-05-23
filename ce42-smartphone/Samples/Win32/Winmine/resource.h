@@ -1,0 +1,72 @@
+#pragma once
+
+// BUGBUG
+#define I_IMAGENONE						(-2)
+
+#include <windows.h>
+#include <aygshell.h>
+#include <winuserm.h>
+#include <tpcshell.h>
+
+#define IDC_STATIC						(-1)
+#define IDR_WINMINE_DLGMENU				1
+#define IDM_WINMINE_OK					2
+#define IDS_WINMINE_OK					3
+#define IDD_WINMINE_HELP				4
+#define IDS_WINMINE_QUIT				5
+#define IDM_WINMINE_QUIT				6
+#define IDS_WINMINE_OPTIONS				7
+#define IDM_WINMINE_OPTIONS				8
+#define IDR_WINMINE_OPTIONS				9
+#define IDM_WINMINE_HELP				10
+#define IDS_WINMINE_TITLE				11
+#define IDS_WINMINE_APPNAME				12
+#define IDR_WINMINE_MAINMENU			13
+#define IDR_WINMINE_BLOCKS				14
+#define IDM_WINMINE_BEGINNER			15
+#define IDM_WINMINE_INTERMEDIATE		16
+#define IDM_WINMINE_EXPERT				17
+#define IDM_WINMINE_NEWGAME				18
+//#define IDR_WINMINE_BLOCKSBW			19
+#define IDR_WINMINE_TIMER				20
+#define IDS_WINMINE_MENUFAIL			21
+#define IDS_WINMINE_ERROR				22
+#define IDS_WINMINE_INITFAIL			23
+#define IDS_WINMINE_MINES				24
+#define IDS_WINMINE_TIME				25
+#define IDS_WINMINE_STARTFAIL			26
+#define IDS_WINMINE_WINNER				27
+#define IDD_WINMINE_NEWHIGH				28
+#define IDC_WINMINE_HIGHNAME			29
+#define IDD_WINMINE_HIGH				30
+#define IDC_WINMINE_BLBL				31
+#define IDC_WINMINE_BNAME				32
+#define IDC_WINMINE_BTIME				33
+#define IDC_WINMINE_ILBL				34
+#define IDC_WINMINE_INAME				35
+#define IDC_WINMINE_ITIME				36
+#define IDC_WINMINE_ELBL				37
+#define IDC_WINMINE_ENAME				38
+#define IDC_WINMINE_ETIME				39
+#define IDM_WINMINE_SHOWHIGH			40
+#define IDM_WINMINE_PAUSE				41
+#define IDS_WINMINE_PAUSE				42
+#define IDS_WINMINE_RESUME				43
+#define IDI_WINMINE_ICON				44
+#define IDD_WINMINE_PREFS				45
+#define IDM_WINMINE_PREFS				46
+#define IDC_WINMINE_LBLMOVE				47
+#define IDC_WINMINE_LBLMARK				48
+#define IDC_WINMINE_LBLUNC				49
+#define IDC_WINMINE_MOVELIST			50
+#define IDC_WINMINE_MOVEUD				51
+#define IDC_WINMINE_MARKLIST			52
+#define IDC_WINMINE_MARKUD				53
+#define IDC_WINMINE_UNCLIST				54
+#define IDC_WINMINE_UNCUD				55
+#define IDS_WINMINE_PREFS				56
+#define IDS_WINMINE_BADTIMER			57
+#define IDS_WINMINE_SAVEFAIL			58
+#define IDS_WINMINE_PAUSEMB				59
+#define IDC_WINMINE_SOUNDS				60
+#define IDS_WINMINE_NEWGAME				61

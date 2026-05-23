@@ -1,0 +1,104 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+#include <tapi.h>
+#include <extapi.h>
+#include <tsp.h>
+#include <winuserm.h>
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <windows.h>\r\n"
+    "#include <tapi.h>\r\n"
+    "#include <extapi.h>\r\n"
+    "#include <tsp.h>\r\n"
+    "#include <winuserm.h>\r\n"
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EXTAPIA_DLGMAIN DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_POPUP | WS_VISIBLE | WS_VSCROLL
+BEGIN
+    LTEXT           "Current Operator:",IDC_STATIC,4,5,93,10
+    LTEXT           "",IDC_EXTAPIA_CUROP,4,15,93,10
+    LTEXT           "Available Operators:",IDC_STATIC,4,30,93,10
+    LISTBOX         IDC_EXTAPIA_AVAILOP,4,40,93,10,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_EXTAPIA_AVAILOPUD,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | UDS_EXPANDABLE,0,0,0,0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EXTAPIA_APPNAME     "ExTAPIAsync"
+    IDS_EXTAPIA_TITLE       "ExTAPIAsync Sample"
+    IDS_EXTAPIA_QUIT        "Quit"
+    IDS_EXTAPIA_REG         "Register"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

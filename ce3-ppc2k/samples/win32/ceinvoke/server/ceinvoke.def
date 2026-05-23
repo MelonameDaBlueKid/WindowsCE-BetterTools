@@ -1,0 +1,6 @@
+LIBRARY CEINVOKE
+
+EXPORTS
+    FnBlockMode
+    FnStreamMode1
+    FnStreamMode2

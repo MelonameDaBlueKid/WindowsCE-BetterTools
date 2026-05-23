@@ -1,0 +1,6 @@
+<!-- Sample XML to query if a particular hash is in the revocation list  -->
+<wap-provisioningdoc>
+	<characteristic type="LoaderRevocation">
+		<parm-query name="{Put base64 encoded hash here}" />
+	</characteristic>
+</wap-provisioningdoc>

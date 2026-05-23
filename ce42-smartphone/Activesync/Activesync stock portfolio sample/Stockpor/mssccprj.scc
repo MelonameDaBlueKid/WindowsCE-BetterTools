@@ -1,0 +1,21 @@
+SCC = This is a Source Code Control file
+
+[DeskApp.dsp]
+SCC_Aux_Path = "D:\vc\VSS"
+SCC_Project_Name = "$/Xena/SDK/ACTIVESYNC STOCK PORTFOLIO SAMPLE/STOCKPOR", OCBAAAAA
+
+[DeskSync.dsp]
+SCC_Aux_Path = "D:\vc\VSS"
+SCC_Project_Name = "$/Xena/SDK/ACTIVESYNC STOCK PORTFOLIO SAMPLE/STOCKPOR", OCBAAAAA
+
+[DevApp.dsp]
+SCC_Aux_Path = "D:\vc\VSS"
+SCC_Project_Name = "$/Xena/SDK/ACTIVESYNC STOCK PORTFOLIO SAMPLE/STOCKPOR", OCBAAAAA
+
+[DevSetup.dsp]
+SCC_Aux_Path = "D:\vc\VSS"
+SCC_Project_Name = "$/Xena/SDK/ACTIVESYNC STOCK PORTFOLIO SAMPLE/STOCKPOR", OCBAAAAA
+
+[DevSync.dsp]
+SCC_Aux_Path = "D:\vc\VSS"
+SCC_Project_Name = "$/Xena/SDK/ACTIVESYNC STOCK PORTFOLIO SAMPLE/STOCKPOR", OCBAAAAA

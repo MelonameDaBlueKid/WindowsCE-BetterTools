@@ -1,0 +1,74 @@
+// Smile.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (Smile.tlb) that will become a resource in
+// Smile.ocx.
+
+#if defined(_WIN32_WCE) && (_WIN32_WCE < 200)
+#error "This sample can only be compiled for Windows CE 2.0 or later."
+#endif
+
+#include <olectl.h>
+
+[ uuid(182CB000-BEED-11CE-9611-00AA004A75CF), version(1.0),
+  helpstring("Maths3 OLE Custom Control module"), control ]
+library Maths3Lib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CMaths3Ctrl
+
+	[ uuid(182CB001-BEED-11CE-9611-00AA004A75CF),
+	  helpstring("Dispatch interface for Maths3 Control"), hidden ]
+	dispinterface _DMaths3
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CMaths3Ctrl)
+			[id(DISPID_BACKCOLOR), bindable, requestedit] OLE_COLOR BackColor;
+			[id(DISPID_FORECOLOR), bindable, requestedit] OLE_COLOR ForeColor;
+			[id(1)] boolean Opposite;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CMaths3Ctrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CMaths3Ctrl
+
+	[ uuid(182CB002-BEED-11CE-9611-00AA004A75CF),
+	  helpstring("Event interface for Maths3 Control") ]
+	dispinterface _DMaths3Events
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CMaths3Ctrl)
+			[id(1)] void Outside();
+			[id(2)] void Inside(OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CMaths3Ctrl
+
+	[ uuid(182CB003-BEED-11CE-9611-00AA004A75CF),
+	  helpstring("Maths3 Control"), control ]
+	coclass Maths3
+	{
+		[default] dispinterface _DMaths3;
+		[default, source] dispinterface _DMaths3Events;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+};

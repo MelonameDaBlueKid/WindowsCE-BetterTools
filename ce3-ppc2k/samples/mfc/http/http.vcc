@@ -1,0 +1,41 @@
+; CLW file contains information for the MFC ClassWizard
+
+[General Info]
+Version=1
+LastClass=CHttpDlg
+LastTemplate=CDialog
+NewFileInclude1=#include "stdafx.h"
+NewFileInclude2=#include "http.h"
+LastPage=0
+
+ClassCount=2
+Class1=CHttpApp
+Class2=CHttpDlg
+
+ResourceCount=1
+Resource1=IDD_HTTP_DIALOG
+
+[CLS:CHttpApp]
+Type=0
+BaseClass=CWinApp
+HeaderFile=Http.h
+ImplementationFile=HttpDlg.cpp
+LastObject=CHttpApp
+
+[CLS:CHttpDlg]
+Type=0
+BaseClass=CDialog
+HeaderFile=HttpDlg.h
+ImplementationFile=HttpDlg.cpp
+LastObject=CHttpDlg
+
+[DLG:IDD_HTTP_DIALOG]
+Type=1
+Class=CHttpDlg
+ControlCount=5
+Control1=ID_DOWNLOADPAGE,button,1342242816
+Control2=IDC_ADDRESS,edit,1350631552
+Control3=IDC_STATIC,button,1342177287
+Control4=IDC_EDIT_PAGE,edit,1353781444
+Control5=IDC_MESSAGE,edit,1350631552
+

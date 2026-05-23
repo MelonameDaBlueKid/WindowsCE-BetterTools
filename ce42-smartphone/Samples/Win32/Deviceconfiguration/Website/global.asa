@@ -1,0 +1,15 @@
+<SCRIPT RUNAT=Server Language=VBScript>
+
+Sub Session_OnStart
+    
+    loginPage = "/default.asp"
+
+    currentPage = Request.ServerVariables("SCRIPT_NAME")
+
+    If strcomp(currentPage, loginPage, 1) Then
+           errorstr = "The current session has been inactive for too long. Please login again."
+           loginpagelocation = loginpage & "?error=" & errorstr
+           Response.Redirect(loginpagelocation)
+    End If
+End Sub
+</SCRIPT>

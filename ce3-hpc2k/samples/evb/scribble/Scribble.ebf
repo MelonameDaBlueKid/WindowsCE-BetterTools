@@ -1,0 +1,691 @@
+VERSION 5.00
+Object = "{338D5EA5-4BBD-11D1-9A7D-00C04FAD5AEC}#1.0#0"; "mscepicture.dll"
+Object = "{BE67ABF5-0137-11D2-9B8A-00C04FAD5AEC}#1.0#0"; "mscecommandbar.dll"
+Object = "{A32A88B3-817C-11D1-A762-00AA0044064C}#1.0#0"; "mscecomdlg.dll"
+Object = "{E491F001-98EC-11D1-9B3D-00C04FAD5AEC}#1.0#0"; "msceimagelist.dll"
+Begin VB.Form frmScribble 
+   BackColor       =   &H00C0C0C0&
+   BorderStyle     =   0  'None
+   Caption         =   "VB Scribble"
+   ClientHeight    =   2820
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   7080
+   ScaleHeight     =   2820
+   ScaleWidth      =   7080
+   ShowInTaskbar   =   0   'False
+   WindowState     =   2  'Maximized
+   Begin CEImageListCtl.ImageList ImageList1 
+      Left            =   6360
+      Top             =   480
+      _cx             =   990
+      _cy             =   990
+      ImageWidth      =   16
+      ImageHeight     =   16
+   End
+   Begin PictureBoxCtl.PictureBox PictureStatus 
+      Height          =   255
+      Left            =   0
+      TabIndex        =   2
+      Top             =   2520
+      Width           =   6975
+      _cx             =   12303
+      _cy             =   450
+      AutoSize        =   0   'False
+      BackColor       =   12632256
+      BorderStyle     =   1
+      DrawMode        =   13
+      DrawStyle       =   0
+      DrawWidth       =   1
+      FillColor       =   0
+      FillStyle       =   1
+      ForeColor       =   0
+      FontBold        =   0   'False
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   "Arial"
+      FontSize        =   9
+      FontTransparent =   -1  'True
+      Object.Height          =   17
+      Object.Width           =   465
+      Object.Left            =   0
+      Object.Top             =   168
+      Picture         =   ""
+      ScaleHeight     =   17
+      ScaleWidth      =   465
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   3
+      Enabled         =   -1  'True
+   End
+   Begin CEComDlgCtl.CommonDialog CommonDialog1 
+      Left            =   5760
+      Top             =   480
+      _cx             =   847
+      _cy             =   847
+      CancelError     =   0   'False
+      Color           =   0
+      DefaultExt      =   ""
+      DialogTitle     =   ""
+      FileName        =   ""
+      Filter          =   ""
+      FilterIndex     =   0
+      Flags           =   0
+      HelpCommand     =   0
+      HelpContext     =   ""
+      HelpFile        =   ""
+      InitDir         =   ""
+      MaxFileSize     =   256
+      FontBold        =   0   'False
+      FontItalic      =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontUnderline   =   0   'False
+      Max             =   0
+      Min             =   0
+      FontStrikethru  =   0   'False
+   End
+   Begin CommandbarLib.CommandBar CommandBar1 
+      Height          =   345
+      Left            =   0
+      TabIndex        =   1
+      Top             =   0
+      Width           =   7095
+      _cx             =   5000
+      _cy             =   5080
+      Enabled         =   0   'False
+      OKButton        =   0   'False
+      HelpButton      =   0   'False
+      CloseButton     =   -1  'True
+   End
+   Begin PictureBoxCtl.PictureBox PictureBox1 
+      Height          =   2055
+      Left            =   0
+      TabIndex        =   0
+      Top             =   360
+      Width           =   7095
+      _cx             =   12515
+      _cy             =   3625
+      AutoSize        =   0   'False
+      BackColor       =   16777215
+      BorderStyle     =   1
+      DrawMode        =   6
+      DrawStyle       =   0
+      DrawWidth       =   2
+      FillColor       =   16777215
+      FillStyle       =   1
+      ForeColor       =   0
+      FontBold        =   -1  'True
+      FontItalic      =   0   'False
+      FontStrikethru  =   0   'False
+      FontUnderline   =   0   'False
+      FontName        =   ""
+      FontSize        =   10
+      FontTransparent =   -1  'True
+      Object.Height          =   137
+      Object.Width           =   473
+      Object.Left            =   0
+      Object.Top             =   24
+      Picture         =   ""
+      ScaleHeight     =   137
+      ScaleWidth      =   473
+      ScaleLeft       =   0
+      ScaleTop        =   0
+      ScaleMode       =   3
+      Enabled         =   -1  'True
+   End
+End
+Attribute VB_Name = "frmScribble"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+' VB Scribble Sample
+' Copyright (c) 1998 Microsoft Corporation
+
+' ******************************************************************
+' ***  Be sure to create a new folder \Scribble prior to running ***
+' ******************************************************************
+
+Option Explicit
+
+' drawing state
+Dim fMouseDown As Boolean
+Dim lastX As Float
+Dim lastY As Float
+
+' active colors
+Dim BackgroundColor As Long
+Dim ForegroundColor As Long
+
+' active drawing tool information
+Dim ActiveTool As Long
+Dim ActiveBrush As Long
+Dim ActivePicture As String
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Form_Load -- initialize the application
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub Form_Load()
+    Dim Menu As CommandbarLib.CommandBarMenuBar
+    Dim FileMenuItem As CommandbarLib.Item
+    Dim ToolMenuItem As CommandbarLib.Item
+    Dim BrushMenuItem As CommandbarLib.Item
+    Dim ColorMenuItem As CommandbarLib.Item
+    
+    ' adjust the width of the command bar for the current screen size
+    CommandBar1.Width = Me.Width
+    
+    ' adjust the size of the status bar for the current screen size
+    PictureStatus.Width = Me.Width - 100
+    PictureStatus.Left = 50
+    PictureStatus.Top = Me.Height - 50 - PictureStatus.Height
+    
+    ' adjust the size of the picturebox for the current screen size
+    PictureBox1.Width = Me.Width - 100
+    PictureBox1.Left = 50
+    PictureBox1.Height = Me.Height - CommandBar1.Height - 100 - PictureStatus.Height - 50
+    PictureBox1.Top = CommandBar1.Height + 50
+    
+    ' add a menu to the command bar
+    Set Menu = CommandBar1.Controls.Add(cbrMenuBar, "menu")
+            
+    ' add the file menu to the command bar
+    Set FileMenuItem = Menu.Items.Add(1, , "&File")
+    FileMenuItem.SubItems.Add 1, , "&Clear Picture"
+    FileMenuItem.SubItems.Add 2, , "E&xit"
+        
+    ' add the brush menu to the command bar
+    Set BrushMenuItem = Menu.Items.Add(2, , "&Brush")
+    BrushMenuItem.SubItems.Add 1, , "&Thin"
+    BrushMenuItem.SubItems.Add 2, , "&Thick"
+    
+    ' add the tool menu to the command bar
+    Set ToolMenuItem = Menu.Items.Add(3, , "&Tool")
+    ToolMenuItem.SubItems.Add 1, , "P&oint"
+    ToolMenuItem.SubItems.Add 2, , "&Pen"
+    ToolMenuItem.SubItems.Add 3, , "&Line"
+    ToolMenuItem.SubItems.Add 4, , "&Text"
+    ToolMenuItem.SubItems.Add 5, , "&Picture"
+    ToolMenuItem.SubItems.Add 6, , "&Ellipse"
+    ToolMenuItem.SubItems.Add 7, , "&Rectangle"
+    ToolMenuItem.SubItems.Add 8, , "&Erase"
+       
+    ' add the color menu to the command bar
+    Set ColorMenuItem = Menu.Items.Add(4, , "&Colors")
+    ColorMenuItem.SubItems.Add 1, , "&Drawing"
+    ColorMenuItem.SubItems.Add 2, , "&Background"
+   
+    ' set up the imagelist for the toolbar buttons
+    ImageList1.Add App.Path & "scribbar.bmp"
+    
+    ' tell the commandbar where to pick the button images up
+    CommandBar1.ImageList = ImageList1.hImageList
+        
+    ' add the toolbar buttons
+    
+    ' if the screen is very narrow, use menus only.
+    
+    If Me.Width >= SIZE_SUPPORTSBUTTONS Then
+    
+        Dim Button As CommandbarLib.CommandBarButton
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "sep0")
+        Button.Style = cbrSeparator
+         
+        Set Button = CommandBar1.Controls.Add(cbrButton, "thin")
+        Button.Style = cbrButtonGroup
+        Button.Image = 0
+        Button.Tag = ID_THIN
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "thick")
+        Button.Style = cbrButtonGroup
+        Button.Image = 1
+        Button.Tag = ID_THICK
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "sep1")
+        Button.Style = cbrSeparator
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "point")
+        Button.Style = cbrButtonGroup
+        Button.Image = 2
+        Button.Tag = ID_POINT
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "pen")
+        Button.Style = cbrButtonGroup
+        Button.Image = 3
+        Button.Tag = ID_PEN
+               
+        Set Button = CommandBar1.Controls.Add(cbrButton, "line")
+        Button.Style = cbrButtonGroup
+        Button.Image = 4
+        Button.Tag = ID_LINE
+            
+        Set Button = CommandBar1.Controls.Add(cbrButton, "text")
+        Button.Style = cbrButtonGroup
+        Button.Image = 5
+        Button.Tag = ID_TEXT
+            
+        Set Button = CommandBar1.Controls.Add(cbrButton, "picture")
+        Button.Style = cbrButtonGroup
+        Button.Image = 6
+        Button.Tag = ID_PICTURE
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "ellipse")
+        Button.Style = cbrButtonGroup
+        Button.Image = 7
+        Button.Tag = ID_ELLIPSE
+            
+        Set Button = CommandBar1.Controls.Add(cbrButton, "rectangle")
+        Button.Style = cbrButtonGroup
+        Button.Image = 8
+        Button.Tag = ID_RECTANGLE
+            
+        Set Button = CommandBar1.Controls.Add(cbrButton, "erase")
+        Button.Style = cbrButtonGroup
+        Button.Image = 9
+        Button.Tag = ID_ERASE
+    
+        Set Button = CommandBar1.Controls.Add(cbrButton, "sep2")
+        Button.Style = cbrSeparator
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "drawing")
+        Button.Image = 10
+        Button.Tag = ID_DRAWING
+        
+        Set Button = CommandBar1.Controls.Add(cbrButton, "background")
+        Button.Image = 11
+        Button.Tag = ID_BACKGROUND
+   
+    End If
+   
+    ' initialize mouse state
+    fMouseDown = False
+    ForegroundColor = RGB(255, 255, 255)
+    BackgroundColor = RGB(0, 0, 0)
+    
+    ' active colors
+    BackgroundColor = PictureBox1.BackColor
+    ForegroundColor = PictureBox1.ForeColor
+    
+    ' active tool
+    ActiveTool = ID_PEN
+    ActiveBrush = ID_THIN
+    
+    ToggleCheck ActiveTool, False
+    ToggleCheck ActiveBrush, False
+    
+    StatusbarUpdate
+    
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' InvokeAction - handle user command input from all sources
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub InvokeAction(ID As Integer, FromButton As Boolean)
+    Select Case (ID)
+    Case ID_CLEAR       ' clear the current picture
+        PictureBox1.Cls
+        
+    Case ID_EXIT        ' terminate the app
+        App.End
+        
+    Case ID_THIN        ' thin brush mode
+        PictureBox1.DrawWidth = 2
+        ToggleCheck ActiveBrush, FromButton
+        ActiveBrush = ID_THIN
+        ToggleCheck ID_THIN, FromButton
+    
+    Case ID_THICK       ' thick brush mode
+        PictureBox1.DrawWidth = 5
+        ToggleCheck ActiveBrush, FromButton
+        ActiveBrush = ID_THICK
+        ToggleCheck ID_THICK, FromButton
+        
+    Case ID_ERASE       ' eraser tool
+        ToggleCheck ActiveTool, FromButton
+        ActiveTool = ID_ERASE
+        ToggleCheck ActiveTool, FromButton
+    
+    Case ID_POINT       ' point tool
+        ToggleCheck ActiveTool, FromButton
+        ActiveTool = ID_POINT
+        ToggleCheck ActiveTool, FromButton
+        
+    Case ID_PEN         ' pen tool
+        ToggleCheck ActiveTool, FromButton
+        ActiveTool = ID_PEN
+        ToggleCheck ActiveTool, FromButton
+    
+    Case ID_LINE        ' line tool
+        ToggleCheck ActiveTool, FromButton
+        ActiveTool = ID_LINE
+        ToggleCheck ActiveTool, FromButton
+    
+    Case ID_ELLIPSE     ' ellipse tool
+        ToggleCheck ActiveTool, FromButton
+        ActiveTool = ID_ELLIPSE
+        ToggleCheck ActiveTool, FromButton
+    
+    Case ID_RECTANGLE   ' rectangle tool
+        ToggleCheck ActiveTool, FromButton
+        ActiveTool = ID_RECTANGLE
+        ToggleCheck ActiveTool, FromButton
+    
+    Case ID_DRAWING     ' set drawing color
+        If SelectColor("Drawing", ForegroundColor) Then
+            PictureBox1.ForeColor = ForegroundColor
+        End If
+    
+    Case ID_BACKGROUND  ' set background color
+        If SelectColor("Background", BackgroundColor) Then
+            PictureBox1.BackColor = BackgroundColor
+            PictureBox1.FillColor = BackgroundColor
+        End If
+    
+    Case ID_PICTURE     ' enter picture tool mode
+        CommonDialog1.DialogTitle = "Select picture"
+        CommonDialog1.DefaultExt = "bmp"
+        CommonDialog1.Filter = "Pictures (*.bmp)|*.bmp"
+        CommonDialog1.FilterIndex = 1
+        CommonDialog1.ShowOpen
+     
+        If CommonDialog1.CancelError <> True Then
+            ActivePicture = CommonDialog1.FileName
+            ToggleCheck ActiveTool, FromButton
+            ActiveTool = ID_PICTURE
+            ToggleCheck ActiveTool, FromButton
+        End If
+        
+    Case ID_TEXT        ' enter text tool mode
+        CommonDialog1.DialogTitle = "Select font"
+        CommonDialog1.FontBold = PictureBox1.FontBold
+        CommonDialog1.FontItalic = PictureBox1.FontItalic
+        CommonDialog1.FontName = PictureBox1.FontName
+        CommonDialog1.FontSize = PictureBox1.FontSize
+        CommonDialog1.FontStrikethru = PictureBox1.FontStrikethru
+        CommonDialog1.ShowFont
+        If CommonDialog1.CancelError <> True Then
+            PictureBox1.FontBold = CommonDialog1.FontBold
+            PictureBox1.FontItalic = CommonDialog1.FontItalic
+            PictureBox1.FontName = CommonDialog1.FontName
+            PictureBox1.FontSize = CommonDialog1.FontSize
+            PictureBox1.FontStrikethru = CommonDialog1.FontStrikethru
+            ToggleCheck ActiveTool, FromButton
+            ActiveTool = ID_TEXT
+            ToggleCheck ActiveTool, FromButton
+        End If
+    Case Else
+        ' programming error -- undefined tool
+        MsgBox "Undefined Commandbar Command!"
+    End Select
+    
+    ' update the statusbar with the current help
+    StatusbarUpdate
+
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' SelectColor - run the color common dialog to get fore or back
+' color.
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Function SelectColor(Name As String, CurColor As Long) As Boolean
+    CommonDialog1.DialogTitle = "Select " & Name & " Color"
+    CommonDialog1.Color = CurColor
+    CommonDialog1.ShowColor
+        
+    If Not CommonDialog1.CancelError Then
+        CurColor = CommonDialog1.Color
+        SelectColor = True
+    Else
+        SelectColor = False
+    End If
+    
+End Function
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' StatusbarUpdate - update the status bar with current
+' information
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub StatusbarUpdate()
+    PictureStatus.Cls
+    If ActiveTool <> ID_TEXT And ActiveTool <> ID_PICTURE Then
+        PictureStatus.DrawText Toolname(ActiveBrush) & " " & Toolname(ActiveTool), 1, 0
+    End If
+    If ActiveTool = ID_TEXT Then
+        PictureStatus.DrawText "Tap the drawing to add text.", 1, 0
+    End If
+    If ActiveTool = ID_PICTURE Then
+        PictureStatus.DrawText "Tap the drawing to add picture " & ActivePicture & ".", 1, 0
+    End If
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Toolname - return the name of a given tool
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Function Toolname(ToolID As Integer)
+
+    Select Case (ToolID)
+    Case ID_THIN
+        Toolname = "Thin"
+    Case ID_THICK
+        Toolname = "Thick"
+    Case ID_ERASE
+        Toolname = "Erase"
+    Case ID_POINT
+        Toolname = "Point"
+    Case ID_PEN
+        Toolname = "Pen"
+    Case ID_LINE
+        Toolname = "Line"
+    Case ID_ELLIPSE
+        Toolname = "Ellipse"
+    Case ID_RECTANGLE
+        Toolname = "Rectangle"
+    End Select
+    
+End Function
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' DrawColor - based on the tool, select the current drawing
+' color.
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Function DrawColor()
+    If (ActiveTool = ID_ERASE) Then
+        DrawColor = BackgroundColor
+    Else
+        DrawColor = ForegroundColor
+    End If
+End Function
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' ToggleCheck - update the CommandBar based on the current
+' command
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub ToggleCheck(MenuID As Integer, FromButton As Boolean)
+    Dim SubItem As CommandbarLib.Item
+    Dim ItemNum As Integer
+    Dim SubItemNum As Integer
+        
+    ' Menu items do not automatically toggle to a single check
+    ' per menu.  Set the menu check state whether the item was
+    ' selected by a menu pick or a button press
+    
+    ' derive the exact menu from the ID
+    ItemNum = CInt(MenuID / 100)
+    SubItemNum = MenuID - 100 * ItemNum
+    
+    ' get the menu item to check
+    Set SubItem = CommandBar1.Controls(1).Items(ItemNum).SubItems(SubItemNum)
+    
+    ' toggle the check value
+    SubItem.Checked = Not SubItem.Checked
+
+
+    ' Grouped toolbar buttons toggle the previously selected
+    ' button automatically, do not try to set the button state
+    ' if a button generated this action
+    
+    If FromButton = False And Me.Width >= SIZE_SUPPORTSBUTTONS Then
+        Dim ButtonNum As Integer
+        
+        ' based on the item number, come up with a button number
+        ' offset in the command bar
+        Select Case (ItemNum)
+        Case 2
+            ButtonNum = 2
+        Case 3
+            ButtonNum = 5
+        Case Default
+            ' programming error:  invalid item
+            MsgBox "invalid button to check"
+        End Select
+    
+        ' now add the sub item to index to the exact button we're
+        ' interested in
+        ButtonNum = ButtonNum + SubItemNum
+    
+        Dim Button As CommandbarLib.CommandBarButton
+        
+        ' get the button from the commandbar and set the state
+        Set Button = CommandBar1.Controls(ButtonNum)
+        
+        If Button.Value = cbrPressed Then
+            Button.Value = cbrUnPressed
+        Else
+            Button.Value = cbrPressed
+        End If
+    End If
+   
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Min - get the minimum of the two variants passed in
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Function Min(x As Variant, y As Variant) As Variant
+    If x < y Then Min = x
+    If x >= y Then Min = y
+End Function
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' CommandBar1_ButtonClick - handle the clicking of a toolbar
+' button.
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub CommandBar1_ButtonClick(ByVal Button As CommandbarLib.CommandBarButton)
+    ' one way to identify a button:  use the tag
+    InvokeAction CInt(Button.Tag), True
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' CommandBar1_MenuClick - handle the clicking of a menu item
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub CommandBar1_MenuClick(ByVal Item As CommandbarLib.Item)
+    ' alternative way to identify a menu item:  use the index and
+    ' parent index to identify the item.  See Constants.bas
+    InvokeAction (Item.Index + (100 * Item.Parent.Index)), False
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' PictureBox1_MouseDown - handle drawing on the picture
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub PictureBox1_MouseDown(ByVal Button As Long, ByVal Shift As Long, ByVal x As Long, ByVal y As Long)
+    Dim CurColor As Long
+    
+    ' get the drawing color
+    CurColor = DrawColor()
+      
+    ' if appropriate, draw a start point
+    If (ActiveTool <> ID_ELLIPSE And ActiveTool <> ID_RECTANGLE And ActiveTool <> ID_TEXT And ActiveTool <> ID_PICTURE) Then
+        PictureBox1.DrawPoint x, y, CurColor
+    End If
+    
+    ' if we're a multi-step tool, remember the state
+    If (ActiveTool <> ID_POINT) Then
+        lastX = x
+        lastY = y
+        fMouseDown = True
+    End If
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' PictureBox1_MouseMove - track the mouse while drawing
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub PictureBox1_MouseMove(ByVal Button As Long, ByVal Shift As Long, ByVal x As Long, ByVal y As Long)
+    Dim CurColor As Long
+    
+    ' if we're continuously drawing, connect the previous points
+    If (ActiveTool = ID_ERASE Or ActiveTool = ID_PEN) Then
+        ' get the drawing color
+        CurColor = DrawColor()
+        
+        If fMouseDown = True Then PictureBox1.DrawLine lastX, lastY, x, y, CurColor
+        lastX = x
+        lastY = y
+    End If
+
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' PictureBox1_MouseUp - complete the drawing operation
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Sub PictureBox1_MouseUp(ByVal Button As Long, ByVal Shift As Long, ByVal x As Long, ByVal y As Long)
+    Dim CurColor As Long
+    Dim ActiveText As String
+    
+    ' get the active drawing color
+    CurColor = DrawColor()
+       
+    ' every tool but point handles mouse up
+    If (ActiveTool <> ID_POINT) Then
+        fMouseDown = False
+        
+        ' if needed, draw a rectangle
+        If (ActiveTool = ID_RECTANGLE) Then
+            PictureBox1.DrawLine lastX, lastY, x, y, CurColor, True
+        End If
+        
+        ' if needed, finish a line or continuous drawing operation
+        If (ActiveTool = ID_PEN Or ActiveTool = ID_ERASE Or ActiveTool = ID_LINE) Then
+            PictureBox1.DrawLine lastX, lastY, x, y, CurColor, False
+        End If
+           
+        ' if needed, draw an ellipse
+        If (ActiveTool = ID_ELLIPSE) Then
+            If (lastX <> x And lastY <> y) Then
+                If (Abs(lastX - x) > Abs(lastY - y)) Then
+                    PictureBox1.DrawCircle Min(lastX, x) + Abs(lastX - x) / 2, Min(lastY, y) + Abs(lastY - y) / 2, Abs(lastX - x) / 2, CurColor, Abs(lastY - y) / Abs(lastX - x)
+                Else
+                    PictureBox1.DrawCircle Min(lastX, x) + Abs(lastX - x) / 2, Min(lastY, y) + Abs(lastY - y) / 2, Abs(lastY - y) / 2, CurColor, Abs(lastY - y) / Abs(lastX - x)
+                End If
+            End If
+        End If
+           
+        ' if needed, draw a picture on the screen
+        If (ActiveTool = ID_PICTURE) Then
+            PictureBox1.DrawPicture ActivePicture, x, y
+        End If
+        
+        ' if needed, draw text to the screen
+        If (ActiveTool = ID_TEXT) Then
+            ' get the text
+            ActiveText = InputBox("Enter text", "VB Scribble", "")
+            ' draw it
+            PictureBox1.DrawText ActiveText, x, y
+        End If
+    End If
+End Sub
+

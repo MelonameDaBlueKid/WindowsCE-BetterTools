@@ -1,0 +1,11 @@
+<!-- Sample XML to query the base64 encoded certificate / role mask individually of a certificate  -->
+<wap-provisioningdoc>
+	<characteristic type="CertificateStore">
+		<characteristic type="{Enter certificate store name over here}">
+			<characteristic type="{Enter certificate SHA-1 thumbprint in hexadecimal here}">
+				<parm-query name="EncodedCertificate" />
+				<parm-query name="Role" />
+			</characteristic>
+		</characteristic>
+	</characteristic>
+</wap-provisioningdoc>
