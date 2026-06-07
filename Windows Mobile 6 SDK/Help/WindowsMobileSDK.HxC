@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HelpCollection>
+<HelpCollection DTDVersion="1.0" FileVersion="1.0.0.0" LangId="1033" Title="Windows Mobile 6 SDK" Id="TOC">
+    <TOCDef File="WindowsMobileSDK.HxT" />
+    <KeywordIndexDef File="WindowsMobileSDK_K.HxK" />
+    <KeywordIndexDef File="WindowsMobileSDK_A.HxK" />
+    <KeywordIndexDef File="WindowsMobileSDK_F.HxK" />
+    <KeywordIndexDef File="WindowsMobileSDK_NamedUrl.HxK" />
+    <ItemMoniker Name="!DefaultToc" ProgId="HxDs.HxHierarchy" InitData="" />
+    <ItemMoniker Name="!DefaultFullTextSearch" ProgId="HxDs.HxFullTextSearch" InitData="" />
+    <ItemMoniker Name="!DefaultAssociativeIndex" ProgId="HxDs.HxIndex" InitData="A" />
+    <ItemMoniker Name="!DefaultKeywordIndex" ProgId="HxDs.HxIndex" InitData="K" />
+    <ItemMoniker Name="!DefaultContextWindowIndex" ProgId="HxDs.HxIndex" InitData="F" />
+    <ItemMoniker Name="!DefaultNamedUrlIndex" ProgId="HxDs.HxIndex" InitData="NamedUrl" />
+    <ItemMoniker Name="!SampleInfo" ProgId="HxDs.HxSampleCollection" InitData="" />
+</HelpCollection>

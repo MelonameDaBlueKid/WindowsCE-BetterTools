@@ -1,0 +1,69 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+
+#include "resource.h"
+#include <aygshell.h>
+
+#define SHMENUBAR RCDATA
+
+IDD_TASKTREE DIALOG DISCARDABLE 0, 0, 80, 80
+    WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "TaskTree"
+BEGIN
+    CONTROL 	"", IDC_TREE_VIEW, "SysTreeView32",
+		WS_VISIBLE | WS_CHILD | WS_BORDER | TVS_HASLINES | TVS_HASBUTTONS | TVS_LINESATROOT | TVS_CHECKBOXES |
+		WS_VSCROLL |WS_TABSTOP, 2, 30,134, 120
+    EDITTEXT	IDC_NEW_SUBJECT,2,4,134,10,ES_AUTOHSCROLL
+    COMBOBOX    IDC_PARENT,2,16,134,140, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+ID_BTNBARRES RCDATA MOVEABLE PURE
+BEGIN
+    ID_MENU, 2,
+    I_IMAGENONE, IDM_OK, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE | TBSTYLE_BUTTON, IDS_OK, 0, NOMENU
+    I_IMAGENONE, IDM_POP, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE | TBSTYLE_DROPDOWN, IDS_MENU, 0, 0
+END
+
+
+ID_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&Menu"
+    BEGIN
+        MENUITEM "Refresh",                     IDM_ACTION_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "Add Task",                    IDM_ACTION_NEW_TASK
+        MENUITEM "Delete Task",                 IDM_ACTION_DELETE_TASK, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Exit"                         IDM_EXIT
+    END
+END
+
+
+IDM_ACTION_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "Action"
+    BEGIN
+    MENUITEM "Refresh",                     IDM_ACTION_REFRESH
+    MENUITEM "Add Task",                    IDM_ACTION_NEW_TASK
+    END
+END
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_MENU "Menu"
+    IDS_EXIT "Exit"
+    IDS_OK " "
+    IDS_SK_LEFT "Action"
+END
+

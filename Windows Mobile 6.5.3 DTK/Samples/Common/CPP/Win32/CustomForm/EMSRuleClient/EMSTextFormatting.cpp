@@ -1,0 +1,108 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+/******************************************************************************
+
+	File: EMSTextFormatting.cpp
+    
+    Purpose: Implement EMS processing for text formatting 
+
+******************************************************************************/
+#include "SDKEMSViewerRuleClient.h"
+
+/******************************************************************************
+
+    CEMSTextFormatting::CEMSTextFormatting - C'TOR
+
+    Params:
+    Chain to base class, see CEMSBaseObject
+
+    Returns:
+    Nothing
+
+    Remarks:
+
+******************************************************************************/
+CEMSTextFormatting::CEMSTextFormatting(LPBYTE lpData, 
+                                       ULONG cbData, 
+                                       ULONG ulBaseOffset, 
+                                       LPCTSTR szUserData) :
+CEMSBaseObject(lpData, cbData, ulBaseOffset, szUserData),
+m_chLen(0),
+m_eAlignment(CEMSTextFormatting::EMSTF_ALIGN_LEFT),
+m_eFontSize(CEMSTextFormatting::EMSTF_FONTSIZE_NORMAL),
+m_fBold(FALSE),
+m_fItalics(FALSE),
+m_fUnderlined(FALSE),
+m_fStrikethrough(FALSE),
+m_ulBaseOffset(ulBaseOffset)
+{
+    //Initialize members and chain to base class...
+}
+
+/******************************************************************************
+
+    CEMSTextFormatting::ValidateData - Attempt to validate the EMS data 
+
+    Params:
+    None
+
+    Returns:
+    TRUE if data is valid
+
+    Remarks:
+
+******************************************************************************/
+BOOL CEMSTextFormatting::ValidateData()
+{
+    return TRUE;
+}
+
+/******************************************************************************
+
+    CEMSTextFormatting::ExtractInfoFromHeader - Parse the EMS header data and 
+        extract the relevant info for the text formatting object
+
+    Params:
+    None
+
+    Returns:
+    TRUE on success, FALSE OTW
+
+    Remarks:
+
+******************************************************************************/
+BOOL CEMSTextFormatting::ExtractInfoFromHeader()
+{
+    return TRUE;
+}
+
+/******************************************************************************
+
+    CEMSTextFormatting::ToString - Convert to string that the custom form will 
+        recognize
+
+    Params:
+    ppszObjectData[in/out] - pointer where string will be written
+    
+    Returns:
+    TRUE on success, FALSE OTW
+
+    Remarks:
+    Format is - [ID][Offset][Format Len][Align][B][I][U][S][Text Len][Text]
+
+******************************************************************************/
+BOOL CEMSTextFormatting::ToString(LPTSTR* ppszObjectData)
+{
+    return TRUE;
+}
+

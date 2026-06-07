@@ -1,0 +1,1 @@
+﻿This folder contains all Visual Basic .NET (VB) samples for the Windows Mobile SDK.

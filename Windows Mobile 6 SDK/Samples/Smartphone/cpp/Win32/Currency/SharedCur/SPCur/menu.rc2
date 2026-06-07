@@ -1,0 +1,57 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+
+
+
+IDM_SP_CURRENCY_CONVERTER RCDATA DISCARDABLE 
+BEGIN
+    IDM_SP_CURRENCY_CONVERTER,
+    2,
+
+    I_IMAGENONE, IDC_BUTTON_CONVERT, TBSTATE_ENABLED,
+    TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, 
+    IDS_CAP_CONVERT, 0, NOMENU,
+
+    I_IMAGENONE, 0, TBSTATE_ENABLED,
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+    IDS_CAP_MENU, 0, 0/* use menu 0 from IDM_MAIN_MENU */,
+END
+
+
+IDM_SP_CURRENCY_CONVERTER MENU DISCARDABLE 
+BEGIN
+    POPUP "" // Text ignored
+        BEGIN
+        MENUITEM "Convert",                     IDC_BUTTON_CONVERT
+        MENUITEM "Modify rates",                IDM_CHANGE_RATES
+        MENUITEM "Download rates",              IDM_DOWNLOAD
+        MENUITEM "Quit",                        IDM_QUIT
+        END
+END
+
+
+IDM_CURRENCY_EDITOR RCDATA DISCARDABLE 
+BEGIN
+    IDM_CURRENCY_EDITOR,
+    2,
+
+    I_IMAGENONE, IDOK, TBSTATE_ENABLED,
+    TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, 
+    IDS_DONE, 0, NOMENU,
+
+    I_IMAGENONE, IDC_RESET_CURRENCY, TBSTATE_ENABLED,
+    TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, 
+    IDS_RESET, 0, NOMENU,
+END
+
+

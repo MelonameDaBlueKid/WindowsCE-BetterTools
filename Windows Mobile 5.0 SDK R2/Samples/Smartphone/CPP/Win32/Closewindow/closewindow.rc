@@ -1,0 +1,129 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDIALOG DIALOG DISCARDABLE  0, 0, 101, 96
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    LTEXT           "Base Window for Close Window Application \nLEVEL 1",
+                    IDC_STATIC,5,5,90,25
+END
+
+IDD_SUBDIALOG DIALOG DISCARDABLE  0, 0, 101, 96
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    LTEXT           "SUB dialog window \nLEVEL2",IDC_STATIC,5,5,90,25
+END
+
+IDD_SUBDIALOG2 DIALOG DISCARDABLE  0, 0, 101, 96
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    LTEXT           "SUB2 dialog window \nLEVEL3",IDC_STATIC,5,5,90,25
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 94
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <windows.h>\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CLOSEWIN_EXIT       "Exit"
+    IDS_CLOSEWIN_POPULATE   "Populate"
+    IDS_CLOSEWINDOW_TITLE   "Close Window App"
+    IDS_SUBDIALOG_TITLE     "Sub Dialog"
+    IDS_MESSAGEBOX_TEXT     "Message Box \nLEVEL 4"
+    IDS_MESSAGEBOX_TITLE    "Sub Message Box 1"
+    IDS_MANUALMBOX_TEXT     "Manually Populated\nMessage Box\nLEVEL 4"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MANUALMBOX_TITLE    "Sub Message Box 2"
+    IDS_CLOSEWIN_CLASS      "CloseWindowApp"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

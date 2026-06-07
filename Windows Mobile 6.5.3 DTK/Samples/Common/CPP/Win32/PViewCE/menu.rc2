@@ -1,0 +1,71 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_PVIEWCE_SUBMENU RCDATA
+BEGIN
+    0,
+    1,
+    I_IMAGENONE, IDM_PVIEWCE_BACK, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_PVIEWCE_BACK, 0, NOMENU,
+END
+
+
+IDR_MENU_BAR SHMENUBAR DISCARDABLE 
+BEGIN
+    IDM_MENU, 2,
+    I_IMAGENONE, IDM_MENU_SOFT1, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_MENU_SOFT1, 0, NOMENU,
+    I_IMAGENONE, IDM_MENU, TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MENU_SOFT2, 0, 0,
+END
+
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MENU_SOFT1      "Details"
+    IDS_MENU_SOFT2      "Menu"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_PROCESS     "Process"
+    IDS_PID         "PID"
+
+    IDS_TID         "TID"
+    IDS_BASEPRI     "Pri"
+
+    IDS_MODULE      "Module"
+    IDS_MID         "MID"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+
+IDM_MENU MENU DISCARDABLE
+BEGIN 
+    POPUP ""
+    BEGIN
+        MENUITEM "Processes"    IDM_MENU_PROCESS
+        MENUITEM "Threads"      IDM_MENU_THREAD
+        MENUITEM "Modules"      IDM_MENU_MODULE
+        MENUITEM "Refresh"      IDM_MENU_REFRESH
+        MENUITEM "Quit"         IDM_MENU_QUIT
+    END
+END
+
+
+

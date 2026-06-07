@@ -1,0 +1,298 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CROSSWORD           ICON    DISCARDABLE     "Crossword.ICO"
+IDI_CROSSWORD2          ICON    DISCARDABLE     "crossword2.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MENU SHMENUBAR MOVEABLE PURE 
+BEGIN
+    IDM_MENU, 5,
+    I_IMAGENONE, IDM_MAIN_COMMAND1, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_HELP, 0, 0,
+    0, 40010, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, 0, NOMENU,
+    1, 40012, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, 0, NOMENU,
+    2, 40011, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, 0, NOMENU,
+    3, 40013, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, 0, NOMENU,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Options",                     ID_TOOLS_OPTIONS
+        MENUITEM "About",                       ID_TOOLS_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TOOLS_ABOUT DIALOGEX 0, 0, 132, 151
+STYLE WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "About CrosswordSample"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_CROSSWORD,IDC_STATIC,5,5,20,20
+    LTEXT           "Crossword Sample\nCopyright(c) 2003 Microsoft Corp., all rights reserved.",
+                    IDC_STATIC,30,5,100,25
+    LTEXT           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    IDC_STATIC_1,30,35,100,110
+END
+
+IDD_TOOLS_OPTIONS_1 DIALOG DISCARDABLE  0, 0, 142, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Puzzle / Background"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_CROSSWORD,IDC_STATIC_1,10,5,20,20
+    LTEXT           "Crossword puzzle:",IDC_STATIC_2,35,5,100,8
+    LISTBOX         IDC_LIST1,5,25,130,40,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Background image:",IDC_STATIC_3,5,70,62,8
+    CONTROL         "",IDC_PREVIEW,"Static",SS_BITMAP | SS_CENTERIMAGE,10,95,
+                    120,35
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,5,80,130,55
+END
+
+IDD_TOOLS_OPTIONS_2 DIALOG DISCARDABLE  0, 0, 142, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "System"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,5,15,130,120
+    LTEXT           "Font picker -- Portrait",IDC_STATIC,5,5,125,10
+END
+
+IDD_TOOLS_OPTIONS_1_WIDE DIALOG DISCARDABLE  0, 0, 187, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_CROSSWORD2,IDC_STATIC_1,5,5,21,20
+    LTEXT           "Crossword puzzle:",IDC_STATIC_2,30,5,60,10
+    LISTBOX         IDC_LIST1,5,25,85,60,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Background image:",IDC_STATIC_3,95,5,62,8
+    CONTROL         "",IDC_PREVIEW,"Static",SS_BITMAP | SS_CENTERIMAGE,100,
+                    40,75,40
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,95,25,85,60
+END
+
+IDD_TOOLS_OPTIONS_2_WIDE DIALOG DISCARDABLE  0, 0, 186, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "System"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,5,15,175,75
+    LTEXT           "Font picker -- Landscape",IDC_STATIC,5,5,125,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_CROSSWORDSAMPLE ACCELERATORS DISCARDABLE 
+BEGIN
+    "Q",            IDOK,                   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TOOLS_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_TOOLS_OPTIONS_1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_TOOLS_OPTIONS_2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_TOOLS_OPTIONS_1_WIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_TOOLS_OPTIONS_2_WIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BACKGROUND_1        BITMAP  DISCARDABLE     "background1.bmp"
+IDR_TOOLBAR1            BITMAP  DISCARDABLE     "toolbar1.bmp"
+IDB_ENTERBTN            BITMAP  DISCARDABLE     "enter.bmp"
+IDB_BACKGROUND_2        BITMAP  DISCARDABLE     "background2.bmp"
+IDB_BACKGROUND_3        BITMAP  DISCARDABLE     "background3.bmp"
+IDB_PATTERN             BITMAP  DISCARDABLE     "pattern.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_BUTTON40005
+    BUTTON      ID_BUTTON40006
+    BUTTON      ID_BUTTON40007
+    BUTTON      ID_BUTTON40008
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "CrosswordSample"
+    IDC_CROSSWORDSAMPLE     "CROSSWORDSAMPLE"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELP                "Tools"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMMAND1            "Done "
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

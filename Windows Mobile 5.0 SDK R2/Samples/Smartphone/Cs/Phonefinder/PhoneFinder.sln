@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneFinder", "PhoneFinder.csproj", "{9D1845FE-D407-48E9-8353-41787F29A7E1}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "PhoneFinderCab", "PhoneFinderCab\PhoneFinderCab.vddproj", "{B7630E72-C2B0-4826-A888-E58218EFF553}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D1845FE-D407-48E9-8353-41787F29A7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1845FE-D407-48E9-8353-41787F29A7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1845FE-D407-48E9-8353-41787F29A7E1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9D1845FE-D407-48E9-8353-41787F29A7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1845FE-D407-48E9-8353-41787F29A7E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1845FE-D407-48E9-8353-41787F29A7E1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B7630E72-C2B0-4826-A888-E58218EFF553}.Debug|Any CPU.ActiveCfg = Debug
+		{B7630E72-C2B0-4826-A888-E58218EFF553}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

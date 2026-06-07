@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeScreen", "HomeScreen.vcproj", "{982B4796-6A32-4667-BE8E-D850824C7E96}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "HomescreenCab", "HomescreenCab\HomescreenCab.vddproj", "{4CDA06D3-FEDF-4563-B64F-95B1A8923588}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Mobile 6 Standard SDK (ARMV4I) = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		Release|Windows Mobile 6 Standard SDK (ARMV4I) = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{982B4796-6A32-4667-BE8E-D850824C7E96}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{982B4796-6A32-4667-BE8E-D850824C7E96}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{982B4796-6A32-4667-BE8E-D850824C7E96}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{982B4796-6A32-4667-BE8E-D850824C7E96}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{982B4796-6A32-4667-BE8E-D850824C7E96}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{982B4796-6A32-4667-BE8E-D850824C7E96}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4CDA06D3-FEDF-4563-B64F-95B1A8923588}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug
+		{4CDA06D3-FEDF-4563-B64F-95B1A8923588}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

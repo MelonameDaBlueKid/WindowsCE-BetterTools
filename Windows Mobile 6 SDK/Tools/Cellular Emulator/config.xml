@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+  <commport>
+    <name>COM6:</name>
+  </commport>
+  <filters>
+    <filter priority="01"  file="EMPFilter.dll">
+      <actions>
+        <action text="Call control" function="CallControl"></action>
+      </actions>
+      <initcommands>
+        <initAT>
+          <command>%ALS=</command>
+          <param>0</param>
+        </initAT>
+      </initcommands>
+    </filter>
+    <filter priority="08" file="PacketDataFilter.dll">
+      <initcommands>
+        <initAT>
+          <command>+CHST=</command>
+          <param>0,0</param>
+        </initAT>
+        <initAT>
+          <command>+CHSA=</command>
+          <command>+CHSR=</command>
+          <command>+CHSU=</command>
+          <param>0</param>
+        </initAT>
+        <initAT>
+          <command>+CHSN=</command>
+          <param>1,0,0,0</param>
+        </initAT>
+        <initAT>
+          <command>+ES=</command>
+          <param>0,0,0</param>
+        </initAT>
+        <initAT>
+          <command>+CBST=</command>
+          <param>7,0,1</param>
+        </initAT>
+        <initAT>
+          <command>+CRLP=</command>
+          <param>61,61,48,6,1</param>
+        </initAT>
+        <initAT>
+          <command>+DS=</command>
+          <param>0,0,2304,128</param>
+        </initAT>
+      </initcommands>
+    </filter>
+    <filter file="SMSFilter.dll">
+      <initcommands>
+        <initAT>
+          <command>+CSCB=</command>
+          <param>0,"0,1-5","0-3,5"</param>
+        </initAT>
+        <initAT>
+          <command>+CSCA=</command>
+          <param>"+8613800100500",145</param>
+        </initAT>
+      </initcommands>
+    </filter>
+    <filter>SIMFilter.dll</filter>
+    <filter priority="01" file="NetServiceFilter.dll">
+      <initcommands>
+        <initAT>
+          <command>+WS46=</command>
+          <param>12</param>
+        </initAT>
+      </initcommands>
+    </filter>
+    <filter>VGCSFilter.dll</filter>
+  </filters>
+  <start>auto</start>
+  <syntaxfile>.\GSMSyntax.txt</syntaxfile>
+  <lines>
+    <line>
+      <number>13912345678</number>
+      <type>voice</type>
+      <!--voice, data, fax-->
+    </line>
+  </lines>
+  <operators>
+    <operator>
+      <short>short name</short>
+      <printable>pritable</printable>
+      <numberic>1860</numberic>
+      <long>long name of the operator</long>
+    </operator>
+  </operators>
+</config>

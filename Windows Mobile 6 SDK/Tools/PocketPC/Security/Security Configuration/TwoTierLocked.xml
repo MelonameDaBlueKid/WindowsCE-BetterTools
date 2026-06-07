@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wap-provisioningdoc>
+	<characteristic type="SecurityPolicy">
+		<!--
+		=============================================================
+		Security policies
+		=============================================================
+		-->
+		<!-- 
+        2-tier device -->
+		<parm name="4123" value="0" />
+		<!-- 
+        Grant Manager Role to MANAGER-->
+		<parm name="4119" value="8" />
+		<!--
+		=============================================================
+		Applications
+		=============================================================
+		-->
+		<!-- 
+        Do not allow unsigned CABs to install -->
+		<parm name="4101" value="0" />
+		<!-- 
+        Do not allow unsigned apps to run -->
+		<parm name="4102" value="0" />
+		<!-- 
+        Prompt user. 
+        This policy has no effect because unsigned applications are disabled (policy 4102) -->
+		<parm name="4122" value="0" />
+		<!--
+		=============================================================
+		Configuration access
+		=============================================================
+		-->
+		<!-- 
+		AutoRun Policy: 0 -->
+		<parm name="2" value="0" />
+		<!-- 
+		Grant User Authenticated Policy -->
+		<parm name="4120" value="16" />
+		<!-- 
+        Do not allow unsigned themes to install -->
+		<parm name="4103" value="0" />
+		<!--
+		=============================================================
+		Remote access
+		=============================================================
+		-->
+		<!-- 
+		RAPI mode : Disabled -->
+		<parm name="4097" value="0" />
+	</characteristic>
+</wap-provisioningdoc>

@@ -1,0 +1,8 @@
+LIBRARY         TV_Inbox 
+;DESCRIPTION     'IPM.SMStext.TV Handler'
+
+EXPORTS
+    FormFactoryEx
+    DllCanUnloadNow   PRIVATE
+    DllGetClassObject PRIVATE
+    DllRegisterServer PRIVATE

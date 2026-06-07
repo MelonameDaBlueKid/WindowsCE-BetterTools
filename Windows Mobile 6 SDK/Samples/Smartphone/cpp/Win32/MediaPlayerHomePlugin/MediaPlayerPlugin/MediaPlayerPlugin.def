@@ -1,0 +1,6 @@
+LIBRARY	MPHP_MediaPlayerPlugin
+
+EXPORTS
+	DllGetClassObject	PRIVATE
+	DllCanUnloadNow		PRIVATE
+	DllRegisterServer	PRIVATE

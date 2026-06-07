@@ -1,0 +1,200 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resourceppc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resdefce.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UILAYOUT            ICON                    "UILayout.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    MENUITEM "Exit",                        ID_EXIT
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Demo 1",                      ID_DEMO1
+        MENUITEM "Demo 2",                      ID_DEMO2
+        MENUITEM "Demo 3",                      ID_DEMO3
+    END
+END
+
+IDR_DIALOG MENU 
+BEGIN
+    MENUITEM "Done",                        IDOK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DEMO1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 88
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_DEMO2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 81
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_DEMO3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resourceppc.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resdefce.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""UILayoutppc.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DEMO1 DIALOG  0, 0, 95, 129
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Demo 1"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,48,57,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,7,82,48,40,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DEMO2 DIALOG  0, 0, 88, 99
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Demo 2"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Full name:",IDC_STATIC1,7,6,34,8
+    EDITTEXT        IDC_EDIT1,7,16,40,14,ES_AUTOHSCROLL
+    LTEXT           "Phone number:",IDC_STATIC2,7,36,50,8
+    EDITTEXT        IDC_EDIT2,7,46,40,14,ES_AUTOHSCROLL
+    LTEXT           "Notes:",IDC_STATIC3,7,68,22,8
+    EDITTEXT        IDC_EDIT3,7,78,40,14,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_DEMO3 DIALOG  0, 0, 137, 102
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Demo 3"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Themes:",IDC_STATIC1,7,5,66,8
+    CONTROL         "Use this picture as a background:",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,17,123,10
+    EDITTEXT        IDC_EDIT1,7,32,40,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST1,7,53,48,40,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Beam",IDC_BUTTON1,63,53,50,14
+    PUSHBUTTON      "Delete",IDC_BUTTON2,63,69,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "UILayout"
+    IDC_UILAYOUT            "UILAYOUT"
+    IDS_EXIT                "Exit"
+    IDS_DONE                "Done"
+    IDS_MENU                "Menu"
+    IDS_INSTRUCTIONS        "This is a docked control. Press Menu to see more ScreenLib demos.\r\n\r\nDemo 1 shows controls docked to various edges of the screen.\r\n\r\nDemo 2 shows how to stretch controls to utilize maximum screen space.\r\n\r\nDemo 3 shows a more complex UI by aligning buttons to the right of a stretchable listbox control."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "UILayoutppc.rc2"  // non-Microsoft Visual C++ edited resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

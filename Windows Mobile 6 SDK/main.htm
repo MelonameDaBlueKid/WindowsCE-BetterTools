@@ -1,0 +1,373 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <title>Windows Mobile 6 SDK Refresh</title>
+    <style type="text/css"> 
+@import url(readme.htm);
+h2
+	{margin-top:12pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	font-size:13.0pt;
+	font-family:Arial;
+	color:maroon;
+	}
+</style>
+    <base target="_blank" />
+</head>
+<body>
+    <h1>
+        <a name="Introduction">Windows Mobile 6 SDK Refresh</a></h1>
+    <p>
+        The <i>Windows Mobile 6 SDK Refresh</i> adds documentation, sample code, header and library
+        files, emulator images and tools to Visual Studio that let you build applications
+        for Windows Mobile 6. This document contains important information about this package.
+        For general information about writing software for Windows Mobile, please see the
+        <a href="http://msdn.microsoft.com/windowsmobile/">Windows Mobile Developer Center</a>.</p>
+    <h1>
+        <a name="WhatIsNew">What’s New in the Windows Mobile 6 SDK Refresh?</a></h1>
+    <table width="100%">
+        <tr>
+            <td class="gray">
+                <b>Developer Experience Features</b></td>
+            <td class="gray">
+                <b>Description</b></td>
+        </tr>
+        <tr>
+            <td>
+                <b>Windows Mobile 6</b>
+            </td>
+            <td>
+                <p>
+                    With Windows Mobile 6, we are revising our SKU taxonomy and naming to better align
+                    our brand and products with the realities of today’s mobile device marketplace.
+                    The historical form-factor based distinction between Windows Mobile powered Smartphone
+                    and Windows Mobile powered Pocket PC Phone Edition is blurring dramatically. We
+                    want our taxonomies and terminology to evolve to better reflect the evolution of
+                    the mobile device industry.</p>
+                <p>
+                    The table below summarizes the changes:</p>
+                <center>
+                    <table width="60%">
+                        <tr>
+                            <td>
+                                <b>Previous Categories</b></td>
+                            <td>
+                                <b>New Categories</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Windows Mobile for Pocket PC</td>
+                            <td>
+                                Windows Mobile Classic</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Windows Mobile for Pocket PC Phone Edition</td>
+                            <td>
+                                Windows Mobile Professional</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Windows Mobile for Smartphone</td>
+                            <td>
+                                Windows Mobile Standard</td>
+                        </tr>
+                    </table>
+                </center>
+                <p>
+                    The Windows Mobile 6 SDK Refresh reflects these changes on the naming of &quot;Project Templates&quot;
+                    and &quot;Emulator Images&quot;.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Cellular Emulator</b>
+            </td>
+            <td>
+                Cellular Emulator is a software-based emulator to help developers and testers develop
+                and test Windows Mobile platform applications. Cellular Emulator replaces the radio
+                module, FakeRIL, in both development and test environments. The advantage of Cellular
+                Emulator is that it provides not only voice but also data connectivity. Moreover,
+                the Cellular Emulator is a powerful tool to test various applications under different
+                wireless network conditions in GSM/GPRS and/or UMTS networks.<br />
+                <br />
+                Cellular Emulator, or CellEmu, offers the following features:
+                <br />
+                <ul>
+                    <li>CellEmu is a UI-driven application desktop application, making it easy to operate.
+                    </li>
+                    <li>CellEmu device images incorporate an actual production radio driver.</li>
+                    <li>CellEmu supports PPP data connection.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Emulator Images</b></td>
+            <td>
+                Windows Mobile 6 SDK Refresh comes with the following Emulator Images:<br />
+                <br />
+                <u>Windows Mobile 6 Professional</u><br />
+                <ul>
+                    <li>Windows Mobile 6 Classic Emulator</li>
+                    <li>Windows Mobile 6 Professional Emulator</li>
+                    <li>Windows Mobile 6 Professional Square Emulator</li>
+                    <li>Windows Mobile 6 Professional VGA Emulator</li>
+                    <li>Windows Mobile 6 Professional Square VGA Emulator</li>
+                    <li>Windows Mobile 6 Professional Square QVGA Emulator (320x320 pixels)</li>
+                </ul>
+                <u>Windows Mobile 6 Standard</u><br />
+                <ul>
+                    <li>Windows Mobile 6 Standard Emulator</li>
+                    <li>Windows Mobile 6 Standard QVGA Emulator</li>
+                    <li>Windows Mobile 6 Standard Landscape QVGA Emulator</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>.NET Compact Framework</b></td>
+            <td>
+                <p>
+                    The .NET Compact Framework is a hardware-independent environment for running programs
+                    on resource-constrained computing devices - it is a subset of the .NET Framework
+                    class library and also contains classes exclusively designed for it. It inherits
+                    the full .NET Framework architecture of the common language runtime and managed
+                    code execution.</p>
+                <p>
+                    <u>The .NET Compact Framework 2.0 Service Pack 2 is now included in the ROM of Windows
+                        Mobile 6 devices.</u></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Microsoft® SQL Server ™ 2005 Compact Edition</b></td>
+            <td>
+                SQL Server Compact Edition is a lightweight relational database for use as a compact
+                local database on a PC, Tablet PC, Windows Mobile powered, or Windows CE-based device.
+                Developers will be able to use the same database to develop occasionally-connected
+                applications consistently across all Microsoft client platforms. The database can
+                be used for local storage as well as for data synchronization with other editions
+                of SQL Server 2005.
+                <p>
+                    <u>SQL Server Compact Edition is included in ROM of Windows Mobile 6 devices.</u>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Device Emulator</b></td>
+            <td>
+                Device Emulator 2.0 provides greatly improved performance at executing ARM instruction.
+                It reduces cold-boot time and improves application execution speed. It provides
+                high resolution input, the ability to change emulator options on-the-fly and has
+                added driver support in the BSP for peripherals such as battery and headset/speakerphone
+                with Windows Mobile 6 emulator images.</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Windows Mobile Ink</b></td>
+            <td>
+                Windows Mobile Ink is the ink service platform for Windows Mobile Classic and Professional.
+                It provides full interoperability with ink data from Tablet PC through ISF stream
+                and brings a rich inking experience, similar to Tablet PC, to Windows Mobile through
+                high quality, curve-fitted ink. It provides APIs for Ink Collection, recognition,
+                rendering, and Ink data management.</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Sound APIs</b></td>
+            <td>
+                A new set of APIs were introduced in Windows Mobile 6 to make it easier to manage
+                and play sound. The new APIs support playing sounds in a variety of formats that
+                Windows Media Player supports (MID, WMA, MP3, WAV etc.) and provide the option to
+                respect the phone’s profile when playing sounds.
+                <p>
+                    These APIs are defined in &lt;soundfile.h&gt;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Documentation</b></td>
+            <td>
+                Documentation can be accessed as a standalone collection through the Start Menu
+                or using "F1" inside Visual Studio.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>New Tools</b></td>
+            <td>
+                FakeGPS - Enables developers to receive data using the GPS APIs even if there is
+                no GPS receiver on the device.<p>
+                    GPSSettings - Enables Windows Mobile Standard users to configure the GPS Intermediate
+                    driver. It works in the same way as the built-in GPS Settings applet on Windows
+                    Mobile Classic and Professional.</p>
+                <p>
+                    Hopper - A software test tool that simulates input stress on Windows Mobile powered
+                    devices. Hopper stresses all applications made available through the menu system
+                    by rapidly sending keystrokes and screen taps in a random fashion.</p>
+                <p>
+                    CabSignerTool - CabSignTool signs a CAB and all its executable content (.exe, .dll)
+                    with specified certificate(s).</p>
+                <p>
+                    FakeServer - A generic server library that enables users to write web services that
+                    run on the device locally.</p>
+				<p>
+                    Windows Mobile Test Framework - The Windows Mobile Test 
+					Framework contains a collection of classes, interfaces, and 
+					value types that allow your test code to access controls and 
+					resources on a Windows Mobile device. </p>
+            </td>
+        </tr>
+    </table>
+    <h1>
+        <a name="Requirements">Requirements</a></h1>
+The following software is required. Please check each application's system requirements individually.
+    <br />
+    <br />
+    <b>Windows Server 2003<br />
+    </b>
+    <ul>
+        <li>Windows Server 2003 Service Pack 2.</li>
+        <li>Microsoft Visual Studio 2005, Standard Edition or above (Express Editions are not
+            supported). <a href="http://go.microsoft.com/fwlink/?LinkId=77643">SP1 recommended.</a>
+        </li>
+        <li><a href="http://go.microsoft.com/fwlink/?LinkId=86934&clcid=0x409">
+            Microsoft .NET Compact Framework v2 SP2</a>. </li>
+        <li>ActiveSync 4.5. If not currently installed, it is available from <a href="http://go.microsoft.com/fwlink/?LinkId=82622">
+            Microsoft Windows Mobile web site</a>. </li>
+    </ul>
+    <b>Windows XP<br />
+    </b>
+    <ul>
+        <li>
+Microsoft Windows XP Service Pack 2. </li>
+        <li>Microsoft Visual Studio 2005, Standard Edition or above (Express Editions are not
+            supported). <a href="http://go.microsoft.com/fwlink/?LinkId=77643">SP1 recommended</a>.
+        </li>
+        <li><a href="http://go.microsoft.com/fwlink/?LinkId=86934&clcid=0x409">
+            Microsoft .NET Compact Framework v2 SP2</a>. </li>
+        <li>ActiveSync 4.5. If not currently installed, it is available from <a href="http://go.microsoft.com/fwlink/?LinkId=82622">
+            Microsoft Windows Mobile web site</a>. </li>
+    </ul>
+    <b>
+Windows Vista<br />
+    </b>
+    <ul>
+        <li>
+Microsoft Windows Vista.</li>
+        <li>Microsoft Visual Studio 2005, Standard Edition or above (Express Editions are not
+            supported). <a href="http://go.microsoft.com/fwlink/?LinkId=77643">SP1</a> and <a href="http://www.microsoft.com/downloads/details.aspx?familyid=90e2942d-3ad1-4873-a2ee-4acc0aace5b6&displaylang=en">SP1 Update for Windows Vista</a> required.
+        </li>
+        <li><a href="http://go.microsoft.com/fwlink/?LinkId=86934&clcid=0x409">
+            Microsoft .NET Compact Framework v2 SP2</a>. </li>
+        <li>
+For synchronizing data, the Windows Mobile Device Center is required. It is available from <a href="http://go.microsoft.com/fwlink/?LinkId=82622">Microsoft Windows Mobile
+                web site</a>. </li>
+    </ul>
+<br />
+<b>Important: </b>"Visual C++ Smart Device Programmability", which is an option of Microsoft Visual Studio 2005 Setup, must be selected and installed during Visual Studio 2005 installation.        
+    <br />
+    <br />
+        Please read and take note of all requirements for those packages, which are detailed
+        on the appropriate download pages.<p>
+        Click <a href="http://go.microsoft.com/fwlink/?LinkId=71212">here</a> for more information
+        on software requirements for Windows Mobile 6 SDK Refresh.</p>
+    <h1>
+        <a name="Installation">Installation</a></h1>
+    <p>
+        Install the <i>SDK</i> package by double-clicking on the compressed archive (MSI
+        file).</p>
+    <h1>
+        <a name="Development_Notes">Development Notes</a></h1>
+    <h2>
+        Windows Mobile Managed Assemblies</h2>
+    <p>
+        Installing Windows Mobile 5.0 SDK and Windows Mobile 6 SDK Refresh will cause duplication
+        of the Windows Mobile managed assemblies in the “Add Reference…” dialog in Visual
+        Studio 2005. Windows Mobile 6 managed assemblies are those installed in the &quot;Windows
+        Mobile 6 SDK&quot; directory under &quot;Program Files&quot;.</p>
+    <h2>
+        Toolbox is empty after installing Windows Mobile 6 SDK Refresh</h2>
+    <p>
+        If toolbox is empty after installing Windows Mobile 6 SDK Refresh, right click on the Toolbox
+        window and click on "Reset Toolbox" - this will bring back all controls.</p>
+    <h2>
+        Deploying managed applications to the emulator always causes the .Net Compact Framework
+        to be deployed</h2>
+    <p>
+        When an application is deployed to the device or emulator, Visual Studio checks
+        if .NET Compact Framework 2.0 is installed - if it is not installed Visual Studio
+        deploys the framework and then the application. Although Windows Mobile 6 powered
+        devices and emulator images have .NET Compact Framework 2.0 <b>SP2</b> in the ROM,
+        Visual Studio continues to check for the <b>2.0</b> release and every time tries
+        to deploy it; however the installation fails because it is not possible to install
+        an older version (2.0) on top of a newer version (2.0 SP1) - as the installation
+        failed, next time Visual Studio will try to deploy it again. To fix this behavior
+        install the .<a href="http://go.microsoft.com/fwlink/?LinkId=86934&clcid=0x409">NET
+            Compact Framework 2.0 Service Pack 2</a>.</p>
+    <h2>
+        Windows Mobile 6 SDK Refresh installation rolls back</h2>
+    <p>
+        "Visual C++ Smart Device Programmability", which is an option of Visual Studio 2005
+        Setup, must be selected and installed before installing Windows Mobile 6 SDK 
+		Refresh. If
+        this feature is not installed, the Windows Mobile 6 SDK Refresh Setup will roll back and
+        not install properly.
+    </p>
+    <h2>
+        Compiling Samples under Windows Vista</h2>
+    <p>
+        On Windows Vista, it may not be possible to compile the samples directly on the
+        Windows Mobile 6 SDK Samples installation folder due to permissions. Please, copy
+        the samples to a location where you have read and write permissions before opening
+        them in Visual Studio.
+    </p>
+    <h2>
+        Microsoft Cellular Emulator does not support Windows XP Professional x64 Edition</h2>
+    <p>
+        The current version of the Cellular Emulator does not support Windows XP Professional
+        x64 Edition. If you run the Cellular Emulator on Windows XP Professional x64 Edition,
+        the OS returns an error message stating that there is not enough pairs of XPVCOM
+        in the system.</p>
+    <h2>
+        Windows Server 2003 and SDK installation</h2>
+    <p>
+        Security polices can trigger at the Software Restrictions Polices level when the
+        SDK loads into memory because of the size and number of files in the SDK. The installation
+        fails with a message stating that the package was rejected by digital signature
+        policy. A workaround is available <a href="http://blogs.msdn.com/heaths/archive/2006/08/23/715558.aspx">here</a>.</p>
+    <h1>
+        <a name="Developer_Support">Developer Support</a></h1>
+    <p>
+        For information on Microsoft Developer Support, please see <a href="http://msdn.microsoft.com/support/">
+            http://msdn.microsoft.com/support/</a>.</p>
+    <p>
+        For information on the .NET Framework, its associated SDKs, redistributables and
+        service packs, visit the <a href="http://msdn.microsoft.com/netframework/downloads/updates/default.aspx">
+            MSDN .NET Framework Developer Center</a>.</p>
+    <h1>
+        <a name="License_Agreement">License Agreement</a>
+    </h1>
+    <p>
+        The contents included in the <i>SDK </i>are licensed to you, the end user. Your
+        use of the <i>SDK </i>is subject to the terms of an End User License Agreement (&quot;EULA&quot;)
+        accompanying the <i>SDK</i>. You must read and accept the terms of the EULA before
+        you access or use the SDK. If you do not agree to the terms of the EULA, you are
+        not authorized to use the <i>SDK</i>.
+    </p>
+    <p>
+        The license agreement is installed to your hard disk.</p>
+    <h1>
+        <a name="Feedback">Feedback</a>
+    </h1>
+    <p>
+        Submit bug reports or suggestions to <a href="mailto:mddsdkfb@microsoft.com?subject=Windows Mobile 6 SDK Refresh - Readme">
+            mddsdkfb@microsoft.com</a>.
+    </p>
+    <p>
+        ©2007 Microsoft Corporation.</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wap-provisioningdoc>
+	<characteristic type="SecurityPolicy">
+		<!--
+		=============================================================
+		Security policies
+		=============================================================
+		-->
+		<!-- 
+        1-tier device -->
+		<parm name="4123" value="1" />
+		<!-- 
+        Grant Manager Role to USERAUTH -->
+		<parm name="4119" value="16" />
+		<!--
+		=============================================================
+		Applications
+		=============================================================
+		-->
+		<!-- 
+        Allow unsigned CABs to install with UserAUTH permissions -->
+		<parm name="4101" value="16" />
+		<!-- 
+        Allow unsigned apps to run -->
+		<parm name="4102" value="1" />
+		<!-- 
+        Enable user prompts -->
+		<parm name="4122" value="0" />
+		<!--
+		=============================================================
+		Configuration access
+		=============================================================
+		-->
+		<!-- 
+		AutoRun Policy: 0 -->
+		<parm name="2" value="0" />
+		<!-- 
+		Grant User Authenticated Policy -->
+		<parm name="4120" value="16" />
+		<!-- 
+        Allow unsigned themes to install with UserUNAUTH permissions -->
+		<parm name="4103" value="64" />
+		<!--
+		=============================================================
+		Remote access
+		=============================================================
+		-->
+		<!-- 
+		RAPI mode : Restricted -->
+		<parm name="4097" value="2" />
+	</characteristic>
+</wap-provisioningdoc>

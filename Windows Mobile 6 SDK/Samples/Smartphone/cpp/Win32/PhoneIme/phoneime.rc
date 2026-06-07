@@ -1,0 +1,51 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+/*************************************************************************
+*
+*  Copyright (C) 2000 Microsoft Corporation. All rights reserved.
+*
+*  MODULE : phoneime.rc
+*
+*
+*
+*************************************************************************/
+
+#include <windows.h>
+#include <windowsx.h>
+#include <commctrl.h>
+#include <aygshell.h>
+#include "resource.h"
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_SYMBOLS       "Symbols"
+    IDS_SYMBOL_DATA   "'-!""$%&(),./:;?@#*[\]^_`~¡´¿+<=>«»£€"
+    IDS_MTAP_CHARS      "0\0.,?!-'@:1\0abc2\0def3\0ghi4\0jkl5\0mno6\0pqrs7\0tuv8\0wxyz9\0"
+    IDS_MTAP_SHIFTCHARS "0\0.,?!-'@:1\0ABC2\0DEF3\0GHI4\0JKL5\0MNO6\0PQRS7\0TUV8\0WXYZ9\0"
+    IDS_DONE           "Done"
+    IDS_CANCEL         "Cancel"
+END
+
+// Symbols menu menubar
+IDR_SYMBOLS_CMDBAR RCDATA
+BEGIN
+    0,
+    2,
+    I_IMAGENONE, IDM_DONE,   TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_DONE, 0, NOMENU
+    I_IMAGENONE, IDM_CANCEL, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_CANCEL, 0, NOMENU
+END
+
+IDB_CUSTOMINPUT BITMAP custom.bmp
+
+

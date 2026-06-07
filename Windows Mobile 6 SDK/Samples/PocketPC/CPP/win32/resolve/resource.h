@@ -1,0 +1,38 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+
+// ****************************************************************************
+// FILE: resource.h
+// ABTRACT: header file that defines resource id's used in resource.cpp
+// ****************************************************************************
+//
+
+// Microsoft Developer Studio generated include file.
+// Used by resolve.rc
+//
+#define IDD_RESOLVE                     104
+#define IDC_INPUT                       1001
+#define IDC_IPTOHOST                    1002
+#define IDC_HOSTTOIP                    1003
+#define IDC_RESULTS                     1004
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        105
+#define _APS_NEXT_COMMAND_VALUE         40004
+#define _APS_NEXT_CONTROL_VALUE         1005
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

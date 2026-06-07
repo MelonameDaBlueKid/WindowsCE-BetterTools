@@ -1,0 +1,4609 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Windows Mobile 6 SDK Refresh - Samples</title>
+    <style type="text/css">
+<!--
+body
+	{
+	margin: 2px 10px 0px 10px;
+	padding: 0px 0px 0px 0px;
+	background: #ffffff; 
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	width: 100%;
+	}
+h1, h2, h3, h4, h5, h6
+	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 0px;
+	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	}
+h1
+	{
+	font-size: 140%;
+	}
+h2
+	{
+	font-size: 130%;
+	}
+h3
+	{
+	font-size: 120%;
+	}
+h4
+	{
+	font-size: 100%;
+	}
+p
+	{
+	margin: .5em 0em .5em 0em;
+	}
+blockquote
+	{
+	margin: .5em 1.5em .5em 2em;
+	}
+a:link
+	{
+	color: #0000ff;
+	}
+a:visited
+	{
+	color: #666699; 
+	}
+a:hover
+	{
+	color: #3366ff;
+	}
+img
+	{
+	border: none; 
+	}
+pre
+	{
+	margin-top: .5em;
+	margin-bottom: .5em; 
+	}
+pre, code, .code
+	{
+	font: 100% Courier New, Courier, mono;
+	color: #000066;
+	}
+pre b, code b
+	{
+	letter-spacing: .1em;
+	}
+pre.syntax
+	{
+	background: #cccccc;
+	padding: 4px 8px;
+	cursor: text;
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+	}
+table
+	{
+	width: 100%;
+	margin-top: .6em;
+	margin-bottom: .3em;
+	font-size: 100%;
+	}
+th, td
+	{ 
+	padding: 4px 6px;
+	text-align: left;
+	}
+th	
+	{ 
+	vertical-align: bottom;
+	}
+
+td	
+	{
+	vertical-align: top;
+	}
+-->
+</style>
+</head>
+<body>
+    <h1>
+        Windows Mobile 6 SDK Refresh - Samples</h1>
+    <p>
+        The Windows Mobile Software Developer's Kit (SDK) ships with over a hundred code
+        samples. These are working applications that can help you learn to develop software
+        for the Windows Mobile platform.</p>
+    <p>
+        The code samples are installed when you install the Windows Mobile 6 Professional
+        SDK Refresh and the Windows Mobile 6 Standard SDK Refresh. Each SDK ships with code samples that
+        are common to both platforms, as well as samples that are specific to each platform.</p>
+    <p>
+        By default, the Windows Mobile Professional code samples are copied to the folder</p>
+    <pre>C:\Program Files\Windows Mobile 6 SDK\Samples\PocketPC\</pre>
+    <p>
+        By default, the Windows Mobile Standard code samples are copied to the folder</p>
+    <pre>C:\Program Files\Windows Mobile 6 SDK\Samples\Smartphone\</pre>
+    <p>
+        By default, common code samples are copied to the folder</p>
+    <pre>C:\Program Files\Windows Mobile 6 SDK\Samples\Common\</pre>
+    <p>
+        The majority of the code samples are C++ Win32 applications. These are found in
+        the CPP subfolder.</p>
+        <b>Note:</b>
+    <p>
+        To use a code sample, on Windows XP, navigate to the solution file (*.sln) you want to study, and
+        double-click it. Microsoft Visual Studio 2005 launches, loading the solution. You
+        can then build the solution, modify it, and deploy it.</p>
+        <p>On Windows Vista, you will
+        need to copy the sample to a folder where you have read and write permissions.</p>
+    <p>
+
+    <p>
+        &nbsp;</p>
+    <table border="1" cellspacing="0" cellpadding="0" width="100%" style='width: 100.0%;
+        background: #CCCCCC'>
+        <tr>
+            <td>
+                <p>
+                    <b>Feature Area </b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <b>Code Sample Topic </b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <b>Language </b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <b>PPC </b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <b>SP </b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <b>APIs Used </b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <b>Description </b>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>ActiveSync</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Sync Manager
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    ActiveSyncStart, ActiveSyncStop</p>
+            </td>
+            <td>
+                <p>
+                    Launches and terminates sync sessions. Displays the use of State and Notification
+                    APIs to register for changes to the two sync related Status Entries.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\SyncManager</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Camera</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Camera Capture Graph
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    ICaptureGraphBuilder2 Interface
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the basic video capture functionalities using the native Camera APIs.
+                    Captures and encodes a video clip in WMV format. Captures and encodes a still image
+                    in jpeg format.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\CameraCapture</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Camera Capture
+            </td>
+            <td>
+                C++ Win32</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                SHCameraCapture,</td>
+            <td>
+                Take pictures and videos using the native Camera Capture API.<p>
+                    <b>Folder</b> : \Common\CPP\Win32\CECamera</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Camera Capture</td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                Microsoft.WindowsMobile.Forms.CameraCaptureDialog</td>
+            <td>
+                Demonstrates how to take pictures and videos using the CameraCaptureDialog managed
+                API.<p>
+                    <b>Folder: </b>\Common\CS\CECamera</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Cellcore</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Telephone Dialer
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    lineInitialize, lineNegotiateAPIVersion, lineGetDevCaps, lineDrop, lineDeallocateCall,
+                    lineClose.</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to dial a call with a modem using TAPI.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CellCore\CeDialer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Synchronous TAPI
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    lineNegotiateAPIVersion, lineGetDevCaps, lineGetGeneralInfo, lineInitializeEx, lineOpen,
+                    lineClose, lineShutdown</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates ExTAPI functionality.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CellCore\ExTAPI</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Asychronous TAPI
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    lineNegotiateAPIVersion, lineGetDevCaps, lineGetGeneralInfo, LINEINITIALIZEEXPARAMS,
+                    lineNegotiateExtVersion, lineGetOperatorStatus, lineOpen, lineClose, lineShutdown</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates ExTAPI asynchronous functionality.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CellCore\ExTAPIAsync</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Hello (SMS)
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    SmsSendMessage
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates simple SMS message Sender.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CellCore\SMS\HelloSMS</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Hello (Telephone)
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    tapiRequestMakeCall
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates simple TAPI dialer.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CellCore\TAPI\HelloTAPI</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Sending Data over SMS
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    WapOpen, WapSend, WapRead, WapClose</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates both sending and receiving data via the Wireless Datagram Protocol
+                    (WDP) over Short Messaging Service (SMS).</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CellCore\WDP_SMS</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Phone and Communications</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Bluetooth Device Discovery
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Bluetooth, Implementing Synchronous Device Discovery, Winsock Support in Windows
+                    CE, WSALookupServiceBegin (Windows Sockets), WSALookupServiceNext (Windows Sockets),
+                    WSALookupServiceEnd (Windows Sockets)</p>
+            </td>
+            <td>
+                <p>
+                    Provides an implementation of simple Bluetooth device discovery via the Winsock
+                    2 API.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Bluetooth\btsearch</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Chatting over Bluetooth
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Bluetooth , Implementing Asynchronous Device Discovery</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to create peer-to-peer communications between two devices using
+                    Bluetooth wireless technology.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Bluetooth\BthChat</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Bluetooth Game</td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                System.Drawing,<br>
+                Microsoft.WindowsMobile.SharedSource.Bluetooth</td>
+            <td>
+                Demonstrates how to use the Windows Embedded Source Tools for Bluetooth Technology.<p>
+                    <b>Folder: </b>\Common\CS\Bluetooth\SpaceWar2D</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Connection Manager Helper
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ MFC</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    ConnMgrEstablishConnection, ConnMgrConnectionStatus, ConnMgrReleaseConnection, ConnMgrMapURL,
+                    ConnMgrProviderMessage</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to write a simplified Connection Manager client by deriving functionality
+                    from a helper class.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\MFC\CMHELPER</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Time Server Synchronization
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    ConnMgrReleaseConnection, ConnMgrEnumDestinations, ConnMgrEstablishConnection</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use Connection Manager to establish a connection to a Time Server, and synchronize the Smartphone's internal
+                    clock.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\CPP\Win32\CMTime</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    WDP over SMS
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    WapOpen, WapSend, WapRead, WapClose</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to send and receive data using the Wireless Datagram Protocol (WDP),
+                    over the Short Messaging Service (SMS) transport.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CellCore\WDP_SMS</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                WAP at WDP Layer</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                WapOpen, WapSend, WapRead, WapClose, WapGetNextPrimitiveSize</td>
+            <td>
+                Demonstrates how to use the WAP APIs at the WDP Layer.<p>
+                    <b>Folder</b> : \Common\CPP\Win32\WDP</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Ringtone manager</td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                SndGetSoundDirectoriesList, SndPlaySync, SndPlayAsync, SndOpen, SndStop, SndClose,
+                PInvoke</td>
+            <td>
+                Scans the device for audio files and also lets you copy those files to a directory
+                where they will be recognize as a ring tone file. It PInvokes SndPlayAsync in order
+                to preview the ringtones.<p>
+                    <b>Folder</b> : \Common\CS\RingtoneManager</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Device</b> <b>Configuration and Security</b></p>
+            </td>
+            <td>
+                <p>
+                    WAP Provisioning Client
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    DMProcessConfigXML
+                </p>
+            </td>
+            <td>
+                <p>
+                    Loads WAP provisioning XML from a string resource and passes it to DMProcessConfigXML.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CfgClient</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Setup in a CAB
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Installation Functions Customizing the Setup Wizard and Property Sheets for a Thin
+                    Client, Debugging Setup, CreateProcess</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates a user-interactive sample of a setup.dll that can be included in CAB
+                    files to perform complex operations.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\SetupDLL</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Viewing Security Settings
+                </p>
+            </td>
+            <td>
+                <p>
+                    C#</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    ProcessConfiguration, TestConfiguration</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how work with security policies and certificates.</p>
+                <p>
+                    <b>Folder</b> : \Common\CS\SecurityViewer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Custom Authentication Reset Component
+            </td>
+            <td>
+                C++</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                ARCSetup, ARCRequest, ARCGetValue</td>
+            <td>
+                Demonstrates how to create a custom Authentication Reset Component (ARC).<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\AuthReset</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                LAP Plug-in for Pocket PC</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                InitLAP, DeinitLAP, VerifyUser, VerifyUserStart, VerifyUserStop<br>
+                VerifyUserToTop, LAPCreateEnrollmentConfigDialog, LAPCancelVerifySequence, LAPDisplayCodeword,
+                LAPDisplayPreWipe, LAPLockoutUser, LASSGetValue</td>
+            <td>
+                Implements a LAP plug-in, including all optional LAP APIs.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\LAP</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                LAP Plug-in for Smartphone</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                InitLAP, DeinitLAP, VerifyUser, VerifyUserStart, VerifyUserStop<br>
+                VerifyUserToTop, LAPCreateEnrollmentConfigDialog, LAPCancelVerifySequence, LAPDisplayCodeword,
+                LAPDisplayPreWipe, LAPLockoutUser, LASSGetValue</td>
+            <td>
+                Implements a LAP plug-in, including all optional LAP APIs.<p>
+                    <b>Folder</b>
+                : \Smartphone\CPP\win32\LAP</td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Direct 3D</b> <b>Mobile</b></p>
+            </td>
+            <td>
+                <p>
+                    D3D Create Device
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Direct3D Mobile Application Development
+                </p>
+            </td>
+            <td>
+                <p>
+                    Creates a Direct3D device and uses it to clear the window.</p>
+                <p>
+                    <b>Folder</b> :<br>
+                    \PocketPC\CPP\win32\Directx\d3dm\tutorials\tut01_createdevice</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    D3D Vertices
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Direct3D Mobile Application Development, IDirect3DMobileDevice::CreateVertexBuffer</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the way vertices are transformed (meaning they are already in 2D window
+                    coordinates) and lit (meaning we are not using Direct3D Mobile lighting, but are
+                    supplying our own colors).</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\d3dm\tutorials\Tut02_vertices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    D3D Matrices
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Direct3D Mobile Application Development, IDirect3DMobileDevice::SetTransform</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the use of 4x4 matrices to transform the geometry with translations,
+                    rotations, scaling, and setting up our camera.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\d3dm\tutorials\Tut03_matrices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    D3D Dynamic Lighting
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Direct3D Mobile Application Development, D3DMLIGHT, D3DM_SETLIGHT, IDirect3DMobileDevice::LightEnable</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to render 3D geometry with dynamic lighting.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\d3dm\tutorials\Tut04_lights</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    D3D Texture Mapping
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Direct3D Mobile Application Development, IDirect3DMobileDevice::SetTexture, IDirect3DMobileDevice::SetTextureStageState</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to render texture-mapped 3D geometry.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\d3dm\tutorials\Tut05_textures</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    D3D Fixed Point Data
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Direct3D Mobile Application Development
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to accept both floating point and fixed point (16.16) data types.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\D3DM\tutorials\Tut06_fixedpoint</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Direct Draw</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    DDraw Initialization
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DirectDraw
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to initialize DirectDraw and create a DirectDraw surface.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\DDraw\DDex1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DDraw and Bitmaps
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DirectDraw
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to add a bitmap. Extends DDex1.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\DDraw\Ddex2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DDraw Off-Screen Surfaces
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DirectDraw
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the use of off-screen surfaces.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\DDraw\Ddex3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DDraw and Audio
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DirectDraw
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to combine DirectDraw and waveform audio.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\DDraw\Donuts2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DDraw and Animation
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    DirectDraw
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates DirectDraw animation using overlays.</p>
+                <p>
+                    <b>Folder</b> :
+                    <br>
+                    \PocketPC\CPP\win32\Directx\DDraw\Mosquito</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Screen Size and Orientation Awareness</b></td>
+            <td>
+                UILayout
+            </td>
+            <td>
+                C++ Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                ScreenLib - a class that makes it very easy to resize and stretch controls to maximize
+                usage of the available screen space.
+            </td>
+            <td>
+                Demonstrates a technique to achieve screen size and orientation independence in
+                your applications. Since Windows Mobile devices come in a variety of shapes and
+                sizes, it is a good practice to stretch and shrink your dialog box controls depending
+                on screen size, which can even change at runtime.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\UILayout</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>DPI Awareness</b></td>
+            <td>
+                Crossword
+            </td>
+            <td>
+                C++ Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                ChangeDisplaySettingsEx, WM_SETTINGCHANGE, WM_SIZE, GetDeviceCaps, GetSystemMetrics,
+                SHGetUIMetrics</td>
+            <td>
+                Demonstrates how to convert a basic application into a high DPI aware application
+                and into a landscape/portrait aware application.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Crossword</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Screen Resolution
+            </td>
+            <td>
+                C++ Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                Developing DPI Aware Applications
+            </td>
+            <td>
+                As you are developing applications for new high-resolution Pocket PCs with 192 DPI
+                resolution displays, you might wonder where the new high-resolution bitmaps and
+                resources should go. The simplest solution is to include them in the same EXECUTABLE
+                alongside the old, low-resolution resources. However, this approach wastes storage
+                space. Device screens only have one resolution, which never changes for that device.
+                Therefore, if the application is deployed to a 96 DPI device, it doesn't need 192
+                DPI resources - and vice versa.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Resdll</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>EDB</b></td>
+            <td>
+                CEDB to EDB migration</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                EDB/CEDB, CeOidGetInfoEx2, CeMountDBVol, CeCreateDatabaseWithProps,<br>
+                CeCreateSession, CeOpenDatabaseInSession, CeSeekDatabaseEx</td>
+            <td>
+                Demonstrates how an application that used CEDB can been ported to use EDB.<p>
+                    <b>Folder</b> : \Common\CPP\Win32\FileDB</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>FileDRM</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    DRM Files
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    FileDrmIsDRM, FileDrmShowLicenseInfo, FileDrmVerifyRights, FileDrmCreateFile, FileDrmGetMetric,
+                    FileDrmCommitRights</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use the FileDRM APIs.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\FileDRM</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Imaging</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Imaging Sample
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IImage, IImagingFactory</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use the imaging.dll to load and display an image file.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Imaging</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Internet Explorer Mobile</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    AXSample
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ ATL</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=59389" target="_blank">ActiveX Controls</a>,
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=59390" target="_blank">ATL</a>,
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=59391" target="_blank">COM</a></p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use ATL to create an <a href="http://go.microsoft.com/fwlink/?LinkId=59389"
+                        target="_blank">ActiveX control, and how to access it in a web page.</a></p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\ATL\AXSample</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Web Browsing
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    HTML Control API
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the use of the HTML Viewer control, including the use of the DTM_NAVIGATE
+                    message to cause the control to download and display content from a URL.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\browse</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    The Browser Helper Object (BHO)
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ ATL</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IWebBrowser2, DWebBrowserEvents2</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates now to create a Browser Helper Object (BHO), which Internet Explorer
+                    (IE) Mobile loads each time it starts up.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\ATL\PIEHelper</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Using Internet Explorer Mobile In Your Application
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ ATL</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IWebBrowser2, DWebBrowserEvents2</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to reuse the Internet Explorer Mobile web browser in a mobile application.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\ATL\MiniPIE</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                AJAX</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                <p>Ajax demonstration for Internet Explorer Mobile</p></td>
+            <td>
+                <p>This sample demonstrates how to use the Ajax-model of web page 
+				design in a way that is compatible with Internet Explorer 
+				Mobile.</p>
+				<p><b>Folder</b> : \Common\AJAX\</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Menu extensions, POOM Named Properties</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Medical History
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    IItem::SetProps, IPOutlookApp2::GetIDsFromNames, IPOutlookApp2 (, IPOutlookApp2::GetItemFromOidEx),
+                    IItem (, IItem::Save), Menu Extensibility, IContextMenu, IObjectWithSite</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to add a menu extension to the contacts summary card.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\MedicalHistory</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Message Queuing</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Message Queuing
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Using the MSMQAdm Utility, Debugging MSMQ Installations, MSMQ Reference</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use message queuing (MSMQ). It is a visual wrapper around MSMQADM.exe.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\MSMQ\VisAdm</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Messaging</b> <b>(MAPI)</b></p>
+            </td>
+            <td>
+                <p>
+                    Push Messaging
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    ShellExecuteEx
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates a push client that receives a push message and saves the message's
+                    body into a file and then calls ShellExecuteEx on that file.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\FileClient</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Set Message Store Properties
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IMAPISession, IMAPITable, IMAPIProp::GetProps, IMAPIProp::SetProps</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use IMsgStore::GetProps and IMsgStore::SetProps how to retrieve
+                    and set properties on message stores.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\MailSet</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    MAPI Rules
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IMailRuleClient, IMailRuleClient::ProcessMessage, IMailRuleClient::Initialize, IMsgStore,
+                    IMsgStore::OpenEntry, IMessage, IMAPIProp::GetProps, MAPI Properties</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to implement a MAPI Rule Client, a COM object which can handle
+                    and filter incoming MAPI messages.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\MapiRule</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Read View Menu Extension
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Menu Extensibility, IContextMenu, IObjectWithSite, MailComposeMessage</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to reply to an email message using a default email account.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\ReadViewMenuExt</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Sending E-mail
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Messaging API (MAPI), MAPILogonEx, SRowSet, IMAPISession::GetMsgStoresTable, IMAPISession::OpenMsgStore,
+                    IMAPITable::QueryRows, IMsgStore::OpenEntry, IMAPIProp::GetProps, IMAPIFolder::CreateMessage,
+                    IMessage::SubmitMessage, MAPIFreeBuffer, FreeProws</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use several CEMAPI APIs.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\SendMail</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    New Messaging Transport
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    IMailSyncHandler
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to create a new messaging transport.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\TransportDemo</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    New Message Class
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    IFormProviderEx, IMailRuleClient</p>
+            </td>
+            <td>
+                <p>
+                    Implements a new message class appropriate for SMS notifications from your DVR.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\TV_Inbox</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Phone</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Calling Card
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    PhoneMakeCall, IContextMenu::QueryContextMenu</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to make a calling card call directly from the Contacts screen.</p>
+                <p>
+                    <b>Folder</b> : Common\CPP\Win32\CallingCard</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Get Device's Phone Number
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IWebBrowser2, DWebBrowserEvents2</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to retrieve the phone number of a device.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\GetPhoneNumber</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Find a Lost Phone
+                </p>
+            </td>
+            <td>
+                <p>
+                    C#, VB</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    State and Notifications Broker, Microsoft.WindowsMobile.PocketOutlook.MessageInterception,
+                    Microsoft.WindowsMobile.Status, PlaySound, <a href="http://go.microsoft.com/fwlink/?LinkId=59392"
+                        target="_blank">PInvoke</a></p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to write an application that helps you locate your phone if you
+                    lose it.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\CS\PhoneFinder</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\VB\PhoneFinder</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Manage SIM Contacts
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    SIM Manager, SimDeinitialize, SimGetDevCaps, SimInitialize, SimReadPhonebookEntry,
+                    Telephony</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to add phone numbers to, and delete phone numbers from, a Subscriber
+                    Identity Module (SIM).</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\SIMMgr</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>POOM</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Calendar List View
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    CEPROPVAL, GetCursor, IDispatch, IFolder, IItem, InitCommonControlsEx, INITCOMMONCONTROLSEX,
+                    IPOutlookApp2, IPOutlookItemCollection, LoadCursor, LVCOLUMN, LVITEM, MSG, SetCursor,
+                    SHINITDLGINFO, SHMENUBARINFO</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use the POOM IItem interface for appointment items, and POOM
+                    notifications. It displays a list-view with all calendar items.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\CalendarView</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Picture Dialer
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Pocket Outlook Object Model (POOM), ChooseContact</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to associate a phone number and picture with a digit in a grid.
+                    Pressing the digit will dial the phone number.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\PictureDialer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Register a Source Provider
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    CEPROPVAL, IPimSrcContactListIcon::Paint, IPimSrcContactSummaryCard::Display, PIMSRC_COLOR,
+                    Source Provider Customization Type Flags</p>
+            </td>
+            <td>
+                <p>
+                    The following application registers a source provider for the Contacts and Calendar
+                    applications.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\PimExProvider</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    POOM Master
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Pocket Outlook Object Model (POOM), IPOutlookApp, IPOutlookItemCollection, ITask,
+                    IContact, IAppointment, ListView_InsertItem, Date and Time Picker Controls</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use the POOM API. Via an owner-drawn list-view control, POOMMaster
+                    displays currently stored PIM items (Contacts, Tasks, and calendar Appointments).</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\PoomMaster</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Manage Tasks
+            </td>
+            <td>
+                C++ Win32</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                x</td>
+            <td>
+                IPOutlookItemCollection, IRecurrencePattern, ITask</td>
+            <td>
+                Demonstrates how to write a Personal Information Manager (PIM)/Messaging application
+                that uses API members from the Pocket Outlook Object Model (POOM) to create, delete,
+                and otherwise manage tasks.<p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\poomtasks</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Task Tree
+            </td>
+            <td>
+                C++ Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                Pocket Outlook Object Model (POOM), Custom properties</td>
+            <td>
+                Demonstrates how to display tasks in a tree view. Enables user to add new tasks
+                to the tree.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\TaskTree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                POOM Application
+            </td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                Microsoft.WindowsMobile.PocketOutlook, Microsoft.WindowsMobile.Telephony</td>
+            <td>
+                Demonstrates how to write a Personal Information Manager (PIM)/Messaging application
+                that uses API members from the Microsoft.WindowsMobile.PocketOutlook namespace,
+                along with API members from the Microsoft.WindowsMobile.Telephony namespace.<p>
+                    <b>Folder</b> : \PocketPC\CS\Pocketoutlooksample</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Add Contacts' Birthdays to Calendar
+            </td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                Microsoft.WindowsMobile.PocketOutlook, Microsoft.WindowsMobile.PocketOutlook.Appointment,
+                Appointment.RecurrencePattern, Recurrence</td>
+            <td>
+                Demonstrates how to write a managed Pocket Outlook Object Model (POOM) application.
+                <p>
+                    <b>Folder</b> : \Common\CS\BirthdaysToCalendar</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Add Picture to Contact</td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                Microsoft.WindowsMobile.Forms.ChooseContactDialog,<br>
+                Microsoft.WindowsMobile.Forms.SelectPictureDialog,<br>
+                Microsoft.WindowsMobile.PocketOutlook.OutlookSession,<br>
+                Microsoft.WindowsMobile.PocketOutlook.Contact</td>
+            <td>
+                Demonstrates how to use the ChooseContactDialog and the SelectPictureDialog APIs
+                to select a contact and then attach a picture to it.<p>
+                    <b>Folder </b>
+                    : \Common\CS\AddPictureToContact</td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Send Meeting Requests Over SMS
+            </td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                Pocket Outlook Object Model (POOM), Pocket Outlook Object Model (POOM) API, Microsoft.WindowsMobile.PocketOutlook
+                Namespace</td>
+            <td>
+                Demonstrates how to use custom controls to pick an Appointment and a Contact, then
+                send a meeting request to the Contact over SMS.<p>
+                    <b>Folder</b> : \PocketPC\CS\AppointmentOverSms</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                SMSIM
+            </td>
+            <td>
+                C#</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                Pocket Outlook Object Model (POOM), MessageInterceptor Class</td>
+            <td>
+                Demonstrates how to use C# to write a managed code version of a Short Messaging
+                Service (SMS) interception application.<p>
+                    <b>Folder</b> : \PocketPC\CS\SmsIm</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\CS\SmsIM</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>POOM,</b> <b>PicturePicker</b></p>
+            </td>
+            <td>
+                <p>
+                    Add a Contact Picture
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    ChooseContact, GetOpenFileNameEx, IItem</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to allow the user to select a contact (using the Contact Chooser),
+                    select a picture (using the Picture Picker), and then adds the selected picture
+                    to the selected contact, and displays the summary card for that contact.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\AddContactPicture</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>POOM,</b> <b>MAPI</b></p>
+            </td>
+            <td>
+                <p>
+                    Rules Client Custom Form
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IMailRuleClient, IFormProviderEx</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to implement a Rule Client to capture and process SMS/EMS, process
+                    multipart EMS, and implement a custom read form to display the EMS in the Inbox
+                    application.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\CustomForm</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Power</b> <b>Management</b></p>
+            </td>
+            <td>
+                <p>
+                    Power Manager
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    RequestPowerNotifications, StopPowerNotifications, SetPowerRequirement, ReleasePowerRequirement,
+                    GetSystemPowerState, SetSystemPowerState</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how an application can use the Power Manager APIs to register for power
+                    notifications, set minimum device power requirements, and get and set the system
+                    power state.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\PowerManager</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>RAPI</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    CE Invoke
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    CeRapiInvoke
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use the CEInvoke API for the client, and for the server.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Ceinvoke</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Get Device Information
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    EnumDevices IRAPIDesktop:IUnknown, IRAPIDevice::GetConnectionInfo, IRAPIDevice::GetDeviceInfo,
+                    IRAPIDevice:IUnknown, Remote API (RAPI)</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use the IRAPI interfaces to get information about the Windows
+                    Mobile-based device connected through ActiveSync and the corresponding communication
+                    medium used. Once the information is collected, it is printed on the console window.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Rapi\DeviceInfo</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    List a Directory and its Files
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CeRapiInit, CeFindFirstFile, CeFindNextFile, CeFindClose, CeRapiUninit</p>
+            </td>
+            <td>
+                <p>
+                    This application runs on a desktop host computer, and demonstrates how to list a
+                    directory's files and directories on a Mobile device.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Rapi\Pdir</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Copy a File from a Device
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CeRapiInit, CeReadFile, CeCloseHandle, CeRapiUninit</p>
+            </td>
+            <td>
+                <p>
+                    This application runs on a desktop host computer, and demonstrates how to copy a
+                    file from a Mobile device to a desktop computer.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Pget</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Copy a File to a Device
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CeRapiInit, CeWriteFile, CeCloseHandle, CeRapiUninit</p>
+            </td>
+            <td>
+                <p>
+                    This application runs on a desktop host computer, and demonstrates how to copy a
+                    file from the desktop computer to a Mobile device.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Pput</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Retrieve Registry Settings
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CeRapiInit, CeRegEnumKeyEx, CeRegOpenKeyEx, CeRegEnumValue, CeRegCloseKey, CeRapiUninit</p>
+            </td>
+            <td>
+                <p>
+                    This application runs on a desktop host computer, and demonstrates how to retrieve
+                    a Mobile device's list of registry settings.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Pregdmp</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Execute an Application on a Device
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CeRapiInit, CeCreateProcess, CeCloseHandle, CeRapiUninit</p>
+            </td>
+            <td>
+                <p>
+                    This application runs on a desktop host computer, and demonstrates how to execute
+                    an executable file on a Mobile device.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Prun</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    List all Directories and their Files
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CeRapiInit, CeFindAllFiles, CeRapiFreeBuffer, CeRapiUninit</p>
+            </td>
+            <td>
+                <p>
+                    This application runs on a desktop host computer, and demonstrates how to list all
+                    of the files and directories on a Mobile device.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Ptree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Communication with Sockets
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    EnumDevices, IRAPIDesktop:IUnknown, IRAPIDevice::GetConnectionInfo, IRAPIDevice:IUnknown</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use sockets to communicate with a Windows Mobile-based device.
+                    At first hand, the application uses IRAPI interfaces to get the IP of the Windows
+                    Mobile connected through ActiveSync. In a second step, it sends a hello string and
+                    listen for the mobile device to respond back</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\SockApp</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                RAPI EDB Database Application</td>
+            <td>
+                C++<br>
+                Win32<br>
+                &nbsp;</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                RAPI, EDB</td>
+            <td>
+                Demonstrates how to use RAPI to access EDB databases.<p>
+                    <b>Folder</b> : \Common\CPP\Win32\Rapi\EdbRapi</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Shell</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Card Autorun
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    SHGetAutoRunPath
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to handle Autorun notifications when an MMC card is inserted/removed
+                    from the mobile device.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\Autorun</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Basic Shell
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    RegisterClass, CreateWindow, SetForegroundWindow, SHCreateMenuBar, SHInitDialog,
+                    SHGetUIMetrics, SHHandleWMActivate, SHHandleWMSettingChange, SHLoadImageResource,
+                    WM_HIBERNATE</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to implement a basic application that uses the major Shell APIs
+                    to interact properly with the Windows Mobile OS.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\BasicApp</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Calendar and DTP Controls
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Date and Time Picker Controls
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use the Calendar and date and time picker controls.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\CalendarAndDTP</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Context Menu Extension Handler
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    IContextMenu
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to implement a context menu extension handler, and specifically
+                    one that extends the context menu in File Explorer when tapping and holding on a
+                    file.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\CtxMenu</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Currency Converter
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CreateMutex, SHCreateMenuBar, SetFocus</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to port an application written for Pocket PC, and port it to Smartphone.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\Currency</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    File System Browser
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    FindFirstFile, FindNextFile, Tree View Controls Reference</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to browse the file system and display all directories and files
+                    by name.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\DirTree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Dynamic Menu
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    SHGetSubMenu, SHSetSubMenu, CheckMenuRadioItem, CheckMenuItem, InsertMenu, DeleteMenu</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates techniques for using, getting, and setting menu handles on Pocket PC.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Dynamenu</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    File Change Notification
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    SHChangeNotifyRegister, SHChangeNotifyDeregister</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to listen for changes to the file system.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\FileChangeNotif</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Full Screen</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                SHFullScreen, SHCMBM_OVERRIDEKEY
+            </td>
+            <td>
+                Demonstrates how an application can make full use of the device screen for displaying
+                content using several shell APIs.<p>
+                    <b>Folder</b> : \Common\CPP\Win32\FullScreen</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    SIP Handles
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    SipGetInfo, Common Controls, Software-Based Input Panel</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use SIP functions.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\HandleSIP</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    HTML Viewer Host
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Creating HTML Control
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the programmatic accessibility of the HTML Viewer control and produces
+                    debug output based on the user actions within the control.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\HTMLHost</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Hardware Navigation
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    WM_GETDLGCODE
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how focus moves around a dialog when the user performs various hardware
+                    navigation actions.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\HWNavigation</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Inbox Menu Extensions
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Menu Extensibility, IContextMenu, IObjectWithSite, IMAPIFolder::DeleteMessages,
+                    IMAPIFolder::CopyMessages</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to add items to the menus which are seen while in the message list
+                    view within the Inbox (tmail.exe).</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\InboxMenuExtensibility</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Ink2
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    RichInk Control Reference
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to stream rtf and txt formatted data into and out of a RichInk
+                    control.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Ink2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Inky
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    RichInk Control Reference
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the capabilities of the RichInk control.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\inky</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    List Views
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    ListView control.</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates techniques for using the List-view Control.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\ListView</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Memory Watcher
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Today Screen
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to create a custom Today screen item for Pocket PC.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\MemWatcher</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Custom plug-in sample</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                Today screen plug-in sample.</td>
+            <td>
+                <p>
+                    Demonstrates how to create a custom Today screen item for Pocket PC.</p>
+                <p>
+                    <b>Folder</b> : PocketPC\cpp\win32\Memwatcher</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Menu
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Menu Extensibility
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to append, create, and insert sub menu items.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Menu</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    My Backlight
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    CPlApplet
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to create a simple control panel application for a Windows Mobile-based
+                    Pocket PC device.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\myBackLight</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Shell notifications</td>
+            <td>
+                C++<br>
+                Win32<br>
+                &nbsp;</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                SHNotificationAdd, SHNotificationUpdate, SHNotificationRemove</td>
+            <td>
+                Demonstrates how to add, update and remove tray notifications.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\notifications</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    NotifyMFC
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ MFC</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    SHNotificationAdd, SHNotificationUpdate, SHNotificationRemove</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the capabilities and options of the Pocket PC notifications and alerts
+                    API.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\MFC\notifyMFC</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Owner Drawn List-View
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    ListView_GetItem, Win32 Classes, GDI Reference</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to implement an owner drawn List-view control. Also demonstrates
+                    how to use various List-view notification events.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\OwnerListView</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Project Enumeration
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    File and Application Management API, FindWindow&nbsp;, OPENFILENAME, SHMENUBARINFO</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the Project document and file manipulation API.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\ProjectEnumeration</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Registry Viewer
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    RegOpenKeyEx, RegQueryInfoKey, RegEnumValue, RegEnumKeyEx</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates to a Pocket PC registry viewer application.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Regviewer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Resolve Host
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Winsock Application Development, gethostbyaddr, gethostbyname</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to resolve a host name (e.g. www.microsoft.com) into an IP address,
+                    or an IP address into a host name.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Resolve</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Shell Demo
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    SHInitDialog, SHDoneButton, SHSetNavBarText, SHFullScreen, SHGetAutoRunPath, SHCreateMenuBar,
+                    SHEnableSoftkey</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the Shell API's. It demonstrates how to show/hide task bars, menu bars,
+                    and SIP buttons. It also shows how to use SHInitDialog for full screen dialogs,
+                    and use SHCreateMenuBar in different ways.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\ShellApiDemo</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Spin Test
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Common Controls, CreateWindow</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates the implementation and use of a custom control (SpinCube).</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Spintest</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Tray Application
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Shell_NotifyIcon
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to put an icon on the tray on the today page. It also shows how
+                    to do a popup dialog from that icon.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Trayapp</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Tray Task List
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Shell_NotifyIcon, CreateToolhelp32Snapshot, Process32First, Process32Next</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to get a list of running tasks (and their window names) into a
+                    popup item on the tray.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Traytasklist</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Terminal Emulator
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    CloseHandle, COMMTIMEOUTS, CreateFile, CreateThread, DCB, EscapeCommFunction, GetCommModemStatus,
+                    GetCommState, GetCommTimeouts, GetLastError, MessageBox, SetCommMask, SetCommState,
+                    WaitCommEvent</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to open, configure, and close a serial communications port and
+                    perform read/write operations for a TTY terminal emulation application.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Tty</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Virtual List-View
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    ListView_SetItemCount, ListView_SetExtendedListViewStyle, ListView_GetExtendedListViewStyle,
+                    ListView_SetImageList, ListView_InsertColumn</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use a virtual list view.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\VirtualListView</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Capture Back Button Press Events
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    SHCMBM_OVERRIDEKEY, SHNavigateBack</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to detect when the Back Button is pressed on Smartphone, and how
+                    you can programmatically interact with it.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\back</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Close all Child Windows
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    GetWindow, GetWindowThreadProcessId, IsWindowVisible, IsWindowEnabled</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to force an application to revert back to its base state when it
+                    is relaunched, and how to destroy a chain of child windows.</p>
+                <p>
+                    <b>Folder: </b>\Smartphone\cpp\Win32\CloseWindow</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Dvorak Soft Input Panel
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ ATL</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    IInputMethod, <a href="http://go.microsoft.com/fwlink/?LinkId=59390" target="_blank">
+                        ATL</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59391" target="_blank">COM</a></p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to create a custom Soft Input Panel (SIP) as a COM object. It is
+                    intended to help users and service providers in foreign countries support different
+                    languages in the SIP. The application is a COM component that implements the IInputMethod
+                    Interface.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\ATL\DvorakSIP</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Create a Custom Home Screen
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    IHomePlugin, IPersistStream:IPersist, IHomePluginEnvironment</p>
+            </td>
+            <td>
+                <p>
+                    Requires the installation of the SDKSamplePrivDeveloper certificate.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\HomeScreen</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Create Soft Key Menus
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    AYGShell, SHCreateMenuBar, SHMENUBARINFO</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to create and manipulate Soft Key menus.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\MenuDemo</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Create a Custom Input Method
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    SHImeSetCustomInputIcons, SHImeSetModeIcon, SHImeOnKeyPress, SHImeGetClearMessage</p>
+            </td>
+            <td>
+                <p>
+                    Requires the installation of the SDKSamplePrivDeveloper certificate.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\PhoneIme</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Setup and Deployment</b></td>
+            <td>
+                Multiple CAB Install</td>
+            <td>
+                C++<br>
+                Win32<br>
+                &nbsp;</td>
+            <td>
+                x</td>
+            <td>
+                x</td>
+            <td>
+                Setup DLL, WCELoad</td>
+            <td>
+                Demonstrates how to create a program to unpack all
+                <br>
+                the cabs in a container cab ('uber-cab').<p>
+                    <b>Folder</b> : \Common\CPP\Win32\multicabinstall</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>System</b> <b>Information</b></p>
+            </td>
+            <td>
+                <p>
+                    State and Notification Broker Viewer
+                </p>
+            </td>
+            <td>
+                <p>
+                    C#</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    State and Notifications Broker, Microsft.WindowsMobile.Status Namespace</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to get both state values and state change notifications from the
+                    State and Notifications Broker.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CS\StateAndNotificationBrokerViewer</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\CS\StateAndNotificationBrokerViewer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Battery Status</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                RegistryGetDWORD, RegistryNotifyWindow, RegistryNotifyCallback, RegistryNotifyApp</td>
+            <td>
+                Demonstrates how to use the State and Notification Broker APIs to get notified of
+                the battery strength.<p>
+                    <b>Folder</b>
+                : \PocketPC\CPP\win32\battstat</td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>System</b> <b>Management</b></p>
+            </td>
+            <td>
+                <p>
+                    Get Device ID
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    GetDeviceUniqueID
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to protect the privacy of a device. Multiple applications need
+                    to use a device's unique identifier to communicate with servers. To protect a device's
+                    privacy, multiple servers should not be able to correlate data from the same device.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\GetDeviceID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>ToolHelp</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Process Viewer
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    CreateToolhelp32Snapshot
+                </p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates a process viewer for CE devices.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\PViewCE</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <b>Windows</b>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Reversi
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    CheckMenuItem, CreateWindow, DeleteObject, DialogBox, DispatchMessage, Ellipse,
+                    EndDialog, EndPaint, ExtTextOut, GetClientRect, GetDC, GetDeviceCaps, GetStockObject,
+                    GetSystemMetrics, GetTextExtentExPoint, GetTextMetrics, DefWindowProc, KillTimer,
+                    LoadAccelerators, LoadImage, LoadCursor, LocalAlloc, LocalFree, MessageBox, PostMessage,
+                    Rectangle, RegisterClass, ReleaseCapture, ReleaseDC, SelectObject, SetBkMode, SetCapture,
+                    SetFocus, SetTimer, SetWindowText, ShowWindow, TranslateAccelerator, TranslateMessage</p>
+            </td>
+            <td>
+                <p>
+                    Implements the Reversi game for Pocket PC. It demonstrates drawing, game logic,
+                    and a recursive MiniMax algorithm.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\Reversi</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    SliderPuzzle
+                </p>
+            </td>
+            <td>
+                <p>
+                    C#</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=59400" target="_blank">System.Drawing
+                        NamespaceSystem.Drawing Namespace</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59399"
+                            target="_blank">System.Windows.Forms NamespaceSystem.Windows.Forms Namespace</a></p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to write a Smartphone application in C#. The application is a game
+                    where the object is to unscramble the tiles. You can only slide the puzzle pieces
+                    into the space that is empty.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\CS\SliderPuzzle</p>
+            </td>
+        </tr>
+        <tr>
+            <td height="101">
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td height="101">
+                <p>
+                    WebCrawler
+                </p>
+            </td>
+            <td height="101">
+                <p>
+                    C#</p>
+            </td>
+            <td height="101">
+                <p>
+                    x</p>
+            </td>
+            <td height="101">
+                <p>
+                    x</p>
+            </td>
+            <td height="101">
+                <p>
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=59402" target="_blank">System.Collections
+                        NamespaceSystem.Collections Namespace</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59403"
+                            target="_blank">System.Diagnostics NamespaceSystem.Diagnostics Namespace</a>,
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=59404" target="_blank">System.IO NamespaceSystem.IO
+                        Namespace</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59405" target="_blank">
+                            System.Net Namespace</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59409"
+                                target="_blank">System.Text.RegularExpressions NamespaceSystem.Text.RegularExpressions
+                                Namespace</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59410" target="_blank">
+                                    System.Threading NamespaceSystem.Threading Namespace</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59399"
+                                        target="_blank">System.Windows.Forms NamespaceSystem.Windows.Forms Namespace</a></p>
+            </td>
+            <td height="101">
+                <p>
+                    Demonstrates how to use managed code to write a C# Windows Mobile application. The
+                    application counts the links on a web site, and also counts all of the links that
+                    branch from the web site. When done, <b>WebCrawler</b> displays a listing of the
+                    results.</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CS\WebCrawler</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    CompactNav
+                </p>
+            </td>
+            <td>
+                <p>
+                    C#</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    List-View Controls Reference, <a href="http://go.microsoft.com/fwlink/?LinkId=59392"
+                        target="_blank">PInvoke</a></p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to implement a basic <a href="http://go.microsoft.com/fwlink/?LinkId=59411"
+                        target="_blank">.NET Compact Framework file-system navigator</a>, as well has
+                    how to use &quot;Platform Invoking&quot; (<a href="http://go.microsoft.com/fwlink/?LinkId=59392"
+                        target="_blank">PInvoke</a>) to make calls to unmanaged APIs (in this case,
+                    CreateProcess).</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\CS\CompactNav</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    GPS
+                </p>
+            </td>
+            <td>
+                <p>
+                    C#</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    GPS Intermediate Driver Reference, <a href="http://go.microsoft.com/fwlink/?LinkId=59392"
+                        target="_blank">PInvoke</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59412"
+                            target="_blank">System.Runtime.InteropServicesSystem.Runtime.InteropServices</a>,
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=59410" target="_blank">System.Threading
+                        NamespaceSystem.Threading Namespace</a>, <a href="http://go.microsoft.com/fwlink/?LinkId=59399"
+                            target="_blank">System.Windows.Forms NamespaceSystem.Windows.Forms Namespace</a></p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use managed code to write a C# Windows Mobile Global Positioning
+                    System (GPS) application. This code sample demonstrates how to wrap the native GPS
+                    APIs in a C# class. It demonstrates how to use &quot;Platform Invoking&quot; (<a
+                        href="http://go.microsoft.com/fwlink/?LinkId=59392" target="_blank">PInvoke</a>)
+                    to make calls to unmanaged APIs (in this case, CreateProcess).</p>
+                <p>
+                    <b>Folder</b> : \PocketPC\CS\GPS</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    Mobile GPS
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    GPS_DEVICE, GPS_POSITION, GPSCloseDevice, GPSGetDeviceState, GPSGetPosition, GPSOpenDevice</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to use native GPS Intermediate Driver Reference to asynchronously
+                    retrieve the location data and the GPS Intermediate Driver state.</p>
+                <p>
+                    <b>Folder</b> : \Common\CPP\Win32\gps\</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    MUIHello
+                </p>
+            </td>
+            <td>
+                <p>
+                    C++ Win32</p>
+            </td>
+            <td>
+                <p>
+                    &nbsp;</p>
+            </td>
+            <td>
+                <p>
+                    x</p>
+            </td>
+            <td>
+                <p>
+                    Input Method Manager (IMM) Reference, Multilingual User Interface (MUI) Reference,
+                    National Language Support (NLS) Reference</p>
+            </td>
+            <td>
+                <p>
+                    Demonstrates how to write a Multilingual User Interface (MUI) version of a &quot;Hello
+                    World!&quot; application.</p>
+                <p>
+                    <b>Folder</b> : \Smartphone\cpp\Win32\muihello</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Windows Mobile Ink</b></td>
+            <td>
+                Windows Mobile Ink Text Recognition</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                WispLite, InkCanvas</td>
+            <td>
+                Demonstrates how to use WISP Lite to to allows a user to input text with the stylus,
+                and then use WISPLite to recognize the text.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\WISPLite\BasicRecognition</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Windows Mobile Ink Notes</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                WispLite, InkCanvas</td>
+            <td>
+                Demonstrates how to use WISP Lite to allows a user to view and edit ink notes. These
+                ink notes can also be imported to OneNote on the desktop.<p>
+                    <b>Folder</b> : \PocketPC\CPP\win32\WISPLite\InkNotes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Windows Mobile Ink Serialization</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                WispLite, InkOverlay and InkExtendedProperties</td>
+            <td>
+                Demonstrates how to use WISP Lite to allow a user to sign on a region and save the
+                signature along with the user's name in a file.<br>
+                <br>
+                <b>Folder</b> : \PocketPC\CPP\win32\WISPLite\InkSerialization</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Windows Media Player</b></td>
+            <td>
+                Windows Media Player Application</td>
+            <td>
+                C++<br>
+                ATL</td>
+            <td>
+                x</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                Windows Media Player OCX</td>
+            <td>
+                Demonstrates how to use the Windows Media Player ATL control from a Win32 application.<p>
+                    <b>Folder</b> : \PocketPC\CPP\ATL\WmpSample</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Windows Media Player Home Plug-in</td>
+            <td>
+                C++<br>
+                Win32</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                x</td>
+            <td>
+                IHomePlugin, IPersistStream, IHomePluginEnvironment2, IWMPPluginUI,<br>
+                IWMPEvents</td>
+            <td>
+                Implements a homescreen plug-in that allows the user to view information about the
+                current media item playing in Windows Media Player, and provides controls to pause
+                or restart playback, to move to the next media item in the current playlist, and
+                to move to the previous media item in the current playlist.<p>
+                    <b>Folder:</b> \Smartphone\CPP\Win32\MediaPlayerHomePlugin</p>
+            </td>
+        </tr>
+    </table>
+    <h1>
+        Remarks</h1>
+    <p>
+        You must compile these applications with <a href="http://go.microsoft.com/fwlink/?LinkId=61668"
+            target="_blank">Visual Studio 2005 or newer.</a></p>
+    <p>
+        To setup the Visual Studio environment
+    </p>
+    <p>
+        1. Open the solution file in Visual Studio.</p>
+    <p>
+        2. Navigate to <b>Tools</b> &gt; <b>Options</b>.</p>
+    <p>
+        3. Expand <b>Projects and Solutions</b>.</p>
+    <p>
+        4. Click <b>VC++ Directories</b>.</p>
+    <p>
+        5. In <b>Show directories for:</b> select <b>Include files</b>.</p>
+    <p>
+        6. Add the path to the mobile device include directory. If you accepted the defaults
+        when installing Windows Mobile SDK, then the new directory will be</p>
+    <pre>C:\Program Files\Windows Mobile 6 SDK\Activesync\Inc</pre>
+    <p>
+        In <b>Show directories for:</b> select <b>Library files</b>.</p>
+    <p>
+        Add the path to the mobile device library directory. If you accepted the defaults
+        when installing Windows Mobile SDK, then the new directory will be</p>
+    <pre>C:\Program Files\Windows Mobile 6 SDK\Activesync\Lib</pre>
+    <p>
+        Navigate to <b>Build</b> and click <b>ReBuild All</b> to compile the executable
+        file.</p>
+    <h1>
+        Feedback</h1>
+    <p>
+        Submit bug reports or suggestions to <a href="mailto:mddsdkfb@microsoft.com?subject=Windows Mobile 6 SDK Refresh - Readme">
+            mddsdkfb@microsoft.com</a>.</p>
+    <p>
+        ©2007 Microsoft Corporation.</p>
+</body>
+</html>

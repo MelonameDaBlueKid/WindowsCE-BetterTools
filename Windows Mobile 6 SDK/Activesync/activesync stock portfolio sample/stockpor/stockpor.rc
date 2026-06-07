@@ -1,0 +1,159 @@
+/******************************************************************************\
+*       This is a part of the Microsoft Source Code Samples.
+*       Copyright (C) 1993-1997 Microsoft Corporation.
+*       All rights reserved.
+*       This source code is only intended as a supplement to
+*       Microsoft Development Tools and/or WinHelp documentation.
+*       See these sources for detailed information regarding the
+*       Microsoft samples programs.
+\******************************************************************************/
+#include <windows.h>
+#include "resource.h"
+
+#ifdef _WIN32_WCE
+#include <commctrl.h>
+#include <aygshell.h>
+#endif
+
+#ifdef _WIN32_WCE
+IDI_ICON                ICON    DISCARDABLE     "device\stockpor.ico"
+#else
+IDI_ICON                ICON    DISCARDABLE     "desktop\stockpor.ico"
+#endif
+
+#ifndef I_IMAGENONE
+#define I_IMAGENONE		(-2)
+#endif
+
+IDR_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+#ifndef _WIN32_WCE
+    MENUITEM "&Open",                       IDC_OPEN
+#endif
+    MENUITEM "&Add Stock",                  IDC_ADD
+    MENUITEM "&Change Stock",               IDC_CHANGE, GRAYED
+    MENUITEM "&Delete Stock",               IDC_DELETE, GRAYED
+#ifndef _WIN32_WCE
+    MENUITEM "&Synchronize",                IDC_SYNC_NOW
+#endif
+END
+
+
+#ifdef _WIN32_WCE
+
+// smartphone menu
+IDR_MAIN_MENU_SP MENU 
+BEGIN
+  //SUBMENU 2. This submenu is displayed by the right soft key
+  POPUP ""
+  BEGIN
+   MENUITEM "Add"     IDC_ADD
+   MENUITEM "Change"  IDC_CHANGE
+   MENUITEM "Delete"  IDC_DELETE
+  END  
+END
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_STOCK_EDIT  "Details"
+  IDS_STOCK_MENU  "Menu"  
+
+  IDS_STOCK_ADD     "Add"
+  IDS_STOCK_CHANGE  "Change"
+  IDS_STOCK_OK      "Done"
+END
+
+//Card View Menu Bar
+IDR_SP_MENUBAR RCDATA
+BEGIN
+ IDR_MAIN_MENU_SP, 
+ 2,      //  count of buttons
+ I_IMAGENONE, IDM_STOCK_SK1_DETAILS, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_STOCK_EDIT, 0, NOMENU,
+ I_IMAGENONE, IDM_STOCK_SK2_MENU, TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_STOCK_MENU, 0, 0,      
+END
+
+IDR_SP_ADD_BAR RCDATA
+BEGIN
+ 0, 
+ 1,      //  count of buttons
+ I_IMAGENONE, IDM_STOCK_SK1_ADD, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_STOCK_ADD, 0, NOMENU,
+END
+
+IDR_SP_CHANGE_BAR RCDATA
+BEGIN
+ 0, 
+ 1,      //  count of buttons
+ I_IMAGENONE, IDM_STOCK_SK1_CHANGE, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_STOCK_CHANGE, 0, NOMENU,
+END
+
+IDR_SP_DETAIL_BAR RCDATA
+BEGIN
+ 0, 
+ 1,      //  count of buttons
+ I_IMAGENONE, IDOK, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_STOCK_OK, 0, NOMENU,
+END
+
+
+#endif  //_WIN32_WCE
+
+
+
+ADD_CHANGE DIALOG DISCARDABLE  0, 0, 200, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add/Change Stock"
+BEGIN
+    LTEXT           "&Symbol:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_SYMBOL,54,7,81,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "C&ompany:",IDC_STATIC,7,25,40,8
+    EDITTEXT        IDC_COMPANY,54,22,81,12,ES_AUTOHSCROLL
+    LTEXT           "&Last Price:",IDC_STATIC,7,40,40,8
+    EDITTEXT        IDC_LAST_PRICE,54,37,81,12,ES_AUTOHSCROLL
+    LTEXT           "Pur. &Date:",IDC_STATIC,7,55,40,8
+    EDITTEXT        IDC_PUR_DATE,54,52,81,12,ES_AUTOHSCROLL
+    LTEXT           "Pur. &Price:",IDC_STATIC,7,70,40,8
+    EDITTEXT        IDC_PUR_PRICE,54,67,81,12,ES_AUTOHSCROLL
+    LTEXT           "&Gain/Loss:",IDC_STATIC,7,85,40,8
+    EDITTEXT        IDC_GAIN_LOSS,54,82,81,12,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "&Add",IDC_ADD_CHG,140,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,23,50,14
+END
+
+
+ADD_CHANGE_SP DIALOG DISCARDABLE  0, 0, 100, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_SYSMENU | WS_CAPTION | WS_VSCROLL 
+CAPTION "Add/Change Stock"
+BEGIN
+    LTEXT           "Symbol:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_SYMBOL,52,7,40,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "Company:",IDC_STATIC,7,25,40,8
+    EDITTEXT        IDC_COMPANY,52,22,40,12,ES_AUTOHSCROLL
+    LTEXT           "Last Price:",IDC_STATIC,7,40,40,8
+    EDITTEXT        IDC_LAST_PRICE,52,37,40,12,ES_AUTOHSCROLL
+    LTEXT           "Pur. Date:",IDC_STATIC,7,55,40,8
+    EDITTEXT        IDC_PUR_DATE,52,52,40,12,ES_AUTOHSCROLL
+    LTEXT           "Pur. Price:",IDC_STATIC,7,70,40,8
+    EDITTEXT        IDC_PUR_PRICE,52,67,40,12,ES_AUTOHSCROLL
+END
+
+SHOW_DETAILS DIALOG DISCARDABLE  0, 0, 200, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VSCROLL
+CAPTION "Details"
+BEGIN
+    LTEXT           "Symbol:",IDC_STATIC,4,5,40,8
+    LTEXT        	"",IDC_SYMBOL,50,5,81,8
+    LTEXT           "Company:",IDC_STATIC,4,15,40,8
+    LTEXT        	"",IDC_COMPANY,50,15,81,8
+    LTEXT           "Last Price:",IDC_STATIC,4,25,40,8
+    LTEXT        	"",IDC_LAST_PRICE,50,25,81,8
+    LTEXT           "Pur. Date:",IDC_STATIC,4,35,40,8
+    LTEXT        	"",IDC_PUR_DATE,50,35,81,8
+    LTEXT           "Pur. Price:",IDC_STATIC,4,45,40,8
+    LTEXT       	"",IDC_PUR_PRICE,50,45,81,8
+    LTEXT           "Gain/Loss:",IDC_STATIC,4,55,40,8
+    LTEXT        	"",IDC_GAIN_LOSS,50,55,81,8
+    LTEXT           "Last update:"IDC_STATIC,4,65,50,8
+    LTEXT        	"",IDC_LAST_UPDATE,50,65,81,8
+END
+
+

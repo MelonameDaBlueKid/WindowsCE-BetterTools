@@ -1,0 +1,9 @@
+LIBRARY         SDKEMSViewerRuleClient
+
+;DESCRIPTION    'EMS viewer rule client'
+
+EXPORTS
+                DllCanUnloadNow         PRIVATE
+                DllGetClassObject       PRIVATE
+                DllRegisterServer       PRIVATE
+                DllUnregisterServer     PRIVATE

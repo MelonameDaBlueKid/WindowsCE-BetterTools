@@ -1,0 +1,99 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of your Windows Mobile
+// Software Shared Source Premium Derivatives License Form or other
+// applicable Microsoft license agreement for the software. If you did not
+// accept the terms of such a license, you are not authorized to use this
+// source code.
+//
+/*---------------------------------------------------------------------------*\
+ *
+ * Microsoft Smartphone home screen interfaces.
+ *
+ *
+ *  module: home.idl
+ *
+ *
+\*---------------------------------------------------------------------------*/
+
+import "wtypes.idl";
+import "oaidl.idl";
+import "oleidl.idl";
+import "msxml2.idl";
+import "ocidl.idl";
+
+typedef DWORD HPLUGIN;
+
+[ uuid(FF328DC0-22F5-4ac1-A103-19B389C633FA) ]
+interface IHomePluginEnvironment : IUnknown
+	{
+	const DWORD IPF_HEIGHT_CHANGED          = 0x00000001;
+	// set this if the height of the plugin changed (this causes a full redraw so use this sparingly)
+	const DWORD IPF_SELECTABILITY_CHANGED   = 0x00000002;
+	// set this if the selectability of the plugin changed (this currently causes a full redraw so use this sparingly)
+
+    HRESULT InvalidatePlugin([in] HPLUGIN hPlugin, [in] DWORD dwFlags);
+
+    // You will only get one PE_TIMER event after calling this.  Use timers sparingly, they
+    // cause the system to wake up and will run down your battery.
+    HRESULT SetSingleShotTimer([in] HPLUGIN hPlugin, [in] UINT cMiliseconds);
+	};
+
+typedef enum _PluginEventID
+	{
+    PE_KEYDOWN, // Sent when the user presses a key that is not otherwise handled by the home screen.  You will currently only receive events for the left and right arrows.  Plugins should ignore any keys it does not handle in case this changes.
+    PE_ACTION,	// Sent when the user presses the action/doit/enter/etc. key with this plugin selected.
+    PE_PAINT, // Sent when you need to paint your plugin.  prcPaint is the full rect of the plugin in the DC.
+    PE_SYSCOLORCHANGE, 	// Sent when a WM_SYSCOLORCHANGE is broadcast to the system.
+    PE_TIMER, // Sent in response to a IHomePluginEnvironment::SetSingleShotTimer call.  Use timer events sparingly, they prevent the system from sleeping and run down your battery.
+    PE_DATACHANGE, // Sent when your plugin's data changes.  If you want to re-draw you need to call IPluginManagerEnvironment::InvalidatePlugin
+	} PluginEventID;
+
+typedef struct _PEKeyDown
+	{
+	WORD wVKey;
+	} PEKeyDown;
+
+typedef struct _PEPaint
+	{
+    HDC hdc;
+    BOOL fSelected;
+    RECT rcDraw;
+	} PEPaint;
+
+typedef [switch_type(PluginEventID)] union _PluginEventParametersUnion
+	{
+	[case(PE_KEYDOWN)] 	PEKeyDown key;
+	[case(PE_PAINT)]	PEPaint paint;
+	[default] ;
+	} PluginEventParametersUnion;
+
+typedef struct _PluginEvent
+	{
+	PluginEventID idEvent;
+	[switch_is(idEvent)] PluginEventParametersUnion p;
+	} PluginEvent;
+
+[ uuid(E01A8A84-DDEF-438e-9004-3FB2A908E465) ]
+interface IHomePluginEnvironment2 : IHomePluginEnvironment
+	{
+	HRESULT GetColor([in] HPLUGIN hPlugin, [in] BSTR bstrColorName, [out] COLORREF *pcr);
+	};
+
+[ uuid(7F0C58E9-4F30-47bb-9693-D778E999C433) ]
+interface IHomePlugin : IObjectWithSite
+	{
+	HRESULT Initialize([in] HPLUGIN hPlugin, [in] IXMLDOMNode* pnodeParams, [in] IXMLDOMNode* pnodeDefault);
+
+	HRESULT GetHeight([out] int* pdyPlugin);
+
+	HRESULT GetSelectability([out] BOOL* pfSelectable);
+
+	// General event handler.
+	// Plugins should ignore any events they do not handle in case new events are added.
+	HRESULT OnEvent([in,out] PluginEvent* ppe);
+	};
+
+

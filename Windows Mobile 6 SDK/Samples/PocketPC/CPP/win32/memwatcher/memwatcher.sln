@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "memwatcher", "memwatcher.vcproj", "{E86A05B7-61BA-4F59-A656-ADE7A6424CDB}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "memwatchercab", "memwatchercab\memwatchercab.vddproj", "{E367A166-9BCE-4466-8586-3117B97B9F50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Mobile 6 Professional SDK (ARMV4I) = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		Release|Windows Mobile 6 Professional SDK (ARMV4I) = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E86A05B7-61BA-4F59-A656-ADE7A6424CDB}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		{E86A05B7-61BA-4F59-A656-ADE7A6424CDB}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		{E86A05B7-61BA-4F59-A656-ADE7A6424CDB}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		{E86A05B7-61BA-4F59-A656-ADE7A6424CDB}.Release|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		{E86A05B7-61BA-4F59-A656-ADE7A6424CDB}.Release|Windows Mobile 6 Professional SDK (ARMV4I).Build.0 = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		{E86A05B7-61BA-4F59-A656-ADE7A6424CDB}.Release|Windows Mobile 6 Professional SDK (ARMV4I).Deploy.0 = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		{E367A166-9BCE-4466-8586-3117B97B9F50}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Debug
+		{E367A166-9BCE-4466-8586-3117B97B9F50}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).Build.0 = Debug
+		{E367A166-9BCE-4466-8586-3117B97B9F50}.Release|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Release
+		{E367A166-9BCE-4466-8586-3117B97B9F50}.Release|Windows Mobile 6 Professional SDK (ARMV4I).Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

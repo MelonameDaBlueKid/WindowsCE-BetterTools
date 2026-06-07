@@ -1,0 +1,40 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+
+#include <windows.h>
+#include "util.h"
+
+typedef function3<void, HWND, PASSWDINFO const &, PASSWDINFO const &> PasswordSaveCallback;
+
+struct EnrollmentParams
+{
+    EnrollmentParams(BOOL secure, PasswordSaveCallback & saver)
+        : m_secure(secure)
+        , m_passwdSaver(saver)
+    {}
+
+    BOOL m_secure;
+    PasswordSaveCallback & m_passwdSaver;
+};
+
+void    DoEnrollment(HWND parent, BOOL fSecure, PasswordSaveCallback & passwdSaver);
+BOOL    DoEnrollment(HWND hwndParent, BOOL fSecure);
+BOOL    EnrollDlgProc(HWND hwndDlg, UINT uMsg, UINT wParam, LONG lParam);
+BOOL    ValidatePassword(PASSWDINFO* ppwi);
+BOOL    VerifyPasswordInfo(HWND hwndDlg, PASSWDINFO* ppwi);
+BOOL    IsPasswordInfoChanged(PASSWDINFO* ppwiOld, PASSWDINFO* ppwiNew);
+void    GetDlgPasswordInfo(HWND hwndDlg, PASSWDINFO* ppwi);
+void    EnableControls(HWND hwndDlg, PASSWDINFO* ppwi);
+void    InitControls(HWND hwndDlg, PASSWDINFO* ppwi);
+void    InitPasswordInfo(PASSWDINFO* ppwi);
+BOOL    PasswordDlgProc(HWND hwndDlg, UINT uMsg, UINT wParam, LONG lParam);

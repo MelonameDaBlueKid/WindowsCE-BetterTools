@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wap-provisioningdoc>
+	<characteristic type="SecurityPolicy">
+		<!-- 
+		RAPI mode : Disabled -->
+		<parm name="4097" value="0" />
+	</characteristic>
+</wap-provisioningdoc>

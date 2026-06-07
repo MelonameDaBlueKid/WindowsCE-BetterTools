@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<skin>
+	<view
+		titleBar ="Windows Mobile 6 Standard - Landscape"
+		
+		displayPosX="30"
+		displayPosY="59"
+		
+		displayWidth="320"
+		displayHeight="240"
+
+		displayDepth="16"
+
+		mappingImage="smartphone_landscape_QVGA_mask.png"
+		normalImage="smartphone_landscape_QVGA_up.png"
+		downImage= "smartphone_landscape_QVGA_down.png">
+
+  <button
+			toolTip="Soft Key 1"
+			onPressAndHold="0x3B"
+  		mappingColor="0x0000FE"
+			KeyEvent="F1"
+			Comment="Not handled when menu is present."
+	/>
+  
+  <button
+	  toolTip="Soft Key 2"
+    onPressAndHold="0x3C"
+    mappingColor="0x0000AC"
+    KeyEvent="F2"
+    Comment="Not handled when menu is present."
+	/>
+
+    
+  <button	toolTip="Power" onPressAndHold="0x75" mappingColor="0x1EC1FE"/>
+  <button toolTip="Record" onPressAndHold="0x44" mappingColor="0x7CABFE" />
+  <button toolTip="Volume Up" onPressAndHold="0x40" mappingColor="0x79FEFE" />
+  <button toolTip="Volume Down" onPressAndHold="0x41" mappingColor="0x00FEFE" />
+  <button toolTip="Talk" onPressAndHold="0x3D" mappingColor="0xE6ADF3" />
+  <button toolTip="End" onPressAndHold="0x3E" mappingColor="0xB678C5" />
+  <button toolTip="Up" onPressAndHold="0x48" mappingColor="0x95FE5E" KeyEvent="Up" />
+  <button toolTip="Right" onPressAndHold="0x4D" mappingColor="0x80D053" KeyEvent="Right" />
+  <button toolTip="Down" onPressAndHold="0x50" mappingColor="0x71B14C" KeyEvent="Down" />
+  <button toolTip="Left" onPressAndHold="0x4B" mappingColor="0x5C8643" KeyEvent="Left" />
+  <button toolTip="Enter" onPressAndHold="0x1C" mappingColor="0xFE9600" KeyEvent="Return" />
+
+  <button toolTip="Back" onPressAndHold="0x01" mappingColor="0xDA3EFE" /> 
+  <button toolTip="Home" onPressAndHold="0x5B" mappingColor="0xA50CCB" />
+
+  <button toolTip="Q" onPressAndHold="0x10" mappingColor="0x7E5E54" />
+  <button toolTip="W" onPressAndHold="0x11" mappingColor="0x00FE54" />
+  <button toolTip="E" onPressAndHold="0x12" mappingColor="0x98FEFE" />
+  <button toolTip="R" onPressAndHold="0x13" mappingColor="0xFE9E00" />
+  <button toolTip="T" onPressAndHold="0x14" mappingColor="0xFE0054" />
+  <button toolTip="Y" onPressAndHold="0x15" mappingColor="0xD37EA9" />
+  <button toolTip="U" onPressAndHold="0x16" mappingColor="0xD30000" />
+  <button toolTip="I" onPressAndHold="0x17" mappingColor="0xA97EA9" />
+  <button toolTip="O" onPressAndHold="0x18" mappingColor="0xA90000" />
+  <button toolTip="P" onPressAndHold="0x19" mappingColor="0x545EFE" />
+
+
+    <button toolTip="A" onPressAndHold="0x1e" mappingColor="0x7E7EA9" />
+    <button toolTip="S" onPressAndHold="0x1f" mappingColor="0x7E0054" />
+    <button toolTip="D" onPressAndHold="0x20" mappingColor="0x547EA9" />
+    <button toolTip="F" onPressAndHold="0x21" mappingColor="0x540000" />
+    <button toolTip="G" onPressAndHold="0x22" mappingColor="0x297EA9" />
+    <button toolTip="H" onPressAndHold="0x23" mappingColor="0x297EFE" />
+    <button toolTip="J" onPressAndHold="0x24" mappingColor="0x540054" />
+    <button toolTip="K" onPressAndHold="0x25" mappingColor="0x547EFE" />
+    <button toolTip="L" onPressAndHold="0x26" mappingColor="0x7E2929" />
+
+    <button toolTip="Tab" onPressAndHold="0x0f" mappingColor="0xA90054" />
+    <button toolTip="Z" onPressAndHold="0x2c" mappingColor="0xA97EFE" />
+    <button toolTip="X" onPressAndHold="0x2d" mappingColor="0xD30054" />
+    <button toolTip="C" onPressAndHold="0x2e" mappingColor="0xD37EFE" />
+    <button toolTip="V" onPressAndHold="0x2f" mappingColor="0xFE00A9" />
+    <button toolTip="B" onPressAndHold="0x30" mappingColor="0xFE9E54" />
+    <button toolTip="N" onPressAndHold="0x31" mappingColor="0xCBFEFE" />
+    <button toolTip="M" onPressAndHold="0x32" mappingColor="0x00FEA9" />
+    <button toolTip="Enter" onPressAndHold="0x1c" mappingColor="0xFE9EA9" />
+    
+    <button toolTip="0" onPressAndHold="0x0B" mappingColor="0xD39E00" KeyEvent="D0"/>
+    
+    <button toolTip="Delete" onPressAndHold="0x0e" mappingColor="0x7E7EFE" />
+    <button toolTip="Space" onPressAndHold="0x39" mappingColor="0xCBCBFE" />
+    
+    
+    <button toolTip="Period" onPressAndHold="0x34" mappingColor="0x007E00" />
+
+
+    <button toolTip="FN" onClick="DOWN:Key_RightShift UP:Key_RightShift" mappingColor="0xD3FE00" />
+    <button toolTip="Shift" onClick="DOWN:Key_LeftShift UP:Key_LeftShift" mappingColor="0xFE1E00" />
+
+    <button toolTip="?" onPressAndHold="0x35" mappingColor="0xD300A9" />
+    <button toolTip="[" onPressAndHold="0x1a" mappingColor="0x7E9E00" />
+    <button toolTip="]" onPressAndHold="0x1b" mappingColor="0x7E00A9" />
+    
+  </view>
+
+</skin>
+

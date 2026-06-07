@@ -1,0 +1,214 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_HANDLESIP           ICON    DISCARDABLE     "HandleSIP.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MAIN_MENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDM_MAIN_MENU, 2,
+    I_IMAGENONE, IDM_MAIN_MENUITEM2, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MAIN_MENUITEM2, 0, 0,
+    I_IMAGENONE, IDM_MAIN_MENUITEM3, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MAIN_MENUITEM3, 0, 1,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Show"
+    BEGIN
+        POPUP "SHSipPrefrence"
+        BEGIN
+            MENUITEM "SIP_UP",                      ID_SHOW_SHSIPPREFRENCE_SIPUP
+
+            MENUITEM "SIP_DOWN",                    ID_SHOW_SHSIPPREFRENCE_SIPDOWN
+
+            MENUITEM "SIP_FORCEDOWN",               ID_SHOW_SHSIPPREFRENCE_SIPFORCEDOWN
+
+            MENUITEM "SIP_UNCHANGED",               ID_SHOW_SHSIPPREFRENCE_SIPUNCHANGED
+
+        END
+        MENUITEM "SH Force Resize",             ID_SHOW_SHFORCERESIZE
+        MENUITEM "On EN_FOCUS",                 ID_SHOW_ONENFOCUS
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 110, 55
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "About HandleSIP"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDI_HANDLESIP,IDC_STATIC,11,17,20,20
+    LTEXT           "HandleSIP Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999",IDC_STATIC,40,25,119,8
+END
+
+IDD_MAIN DIALOG DISCARDABLE  0, 0, 134, 73
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HandleSIP"
+FONT 8, "System"
+BEGIN
+    LTEXT           "SipDOWN",IDC_SIPSTATE,74,44,60,10
+    EDITTEXT        IDC_SIPPOPPER,4,16,66,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Message",IDC_MESSAGE,4,44,60,9
+    EDITTEXT        IDC_FOCUSSTEALER,74,16,58,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "SIP on EN_FOCUS:",IDC_STATIC,4,4,65,10
+    LTEXT           "Steal focus:",IDC_STATIC,74,4,58,10
+    LTEXT           "Last Message:",IDC_STATIC,4,34,60,10
+    LTEXT           "SIP State:",IDC_STATIC,74,34,58,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 56
+        TOPMARGIN, 7
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 127
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "HandleSIP"
+    IDS_HELLO               "Center Window"
+    IDC_HANDLESIP           "HANDLESIP"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAIN_MENUITEM1      "File"
+    IDS_MAIN_MENUITEM2      "Show"
+    IDS_MAIN_MENUITEM3      "Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_HAHA            "haha"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,191 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_NOTIFY              ICON                    "notify.ico"
+IDI_MESSAGE             ICON                    "icon1.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RCDATA
+//
+
+IDR_MENU_DATA RCDATA 
+BEGIN
+    0x0000, 0x0001, 0xfffe, 0x000b, 0x0004, 0x0010, 0x0001, 0x0000, 0xffff
+
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NOTIFYMAIN DIALOG  0, 0, 140, 157
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Notification Control"
+FONT 8, "System"
+BEGIN
+    PUSHBUTTON      "Add",IDC_ADD,90,7,43,14
+    PUSHBUTTON      "Custom",IDC_CUSTOM,90,27,43,14
+    GROUPBOX        "",IDC_STATIC,7,76,126,9
+    LTEXT           "Notifications Added:",IDC_STATIC,7,86,66,9
+    PUSHBUTTON      "Remove",IDC_REMOVE,90,97,43,13
+    LTEXT           "Normal (INFORM) priority with a duration opf 20 seconds and no flags.",IDC_INFOTEXT,7,26,75,51
+    COMBOBOX        IDC_NOTIFICATIONPRIORITY,7,7,77,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_REMOVELIST,7,97,75,53,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Note: Iconic notifications are not removable.",IDC_STATIC,91,114,42,36
+    CONTROL         "",IDC_STATIC,"SIPPREF",NOT WS_VISIBLE,-10,-10,5,5
+END
+
+IDD_CUSTOMOPTIONS DIALOG  0, 0, 140, 157
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | WS_CAPTION | WS_SYSMENU
+CAPTION "Custom Options"
+FONT 8, "System"
+BEGIN
+    RTEXT           "Duration:",IDC_STATIC,7,7,31,12
+    LTEXT           "seconds",IDC_STATIC,87,7,33,10
+    RTEXT           "Priority:",IDC_STATIC,7,26,29,13
+    COMBOBOX        IDC_PRIORITYLIST,38,26,95,40,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TITLESOURCE,38,45,95,12,ES_AUTOHSCROLL
+    RTEXT           "Title:",IDC_STATIC,7,48,30,10
+    EDITTEXT        IDC_HTMLSOURCE,38,64,95,41,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    RTEXT           "HTML:",IDC_STATIC,13,65,24,14
+    RTEXT           "Flags:",IDC_STATIC,15,113,21,9
+    CONTROL         "SHNF_STRAIGHTTOTRAY",IDC_SHNF_STRAIGHTTOTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,38,112,95,10
+    CONTROL         "SHNF_CRITICAL",IDC_SHNF_CRITICAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,38,122,95,10
+    CONTROL         "SHNF_FORCEMESSAGE",IDC_SHNF_FORCEMESSAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,38,131,95,10
+    EDITTEXT        IDC_SECONDS,38,7,45,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"SIPPREF",NOT WS_VISIBLE,-10,-10,5,5
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_NOTIFY ACCELERATORS 
+BEGIN
+    "Q",            IDOK,                   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_NOTIFYMAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_CUSTOMOPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SKMENU_DEFAULT MENU 
+BEGIN
+    MENUITEM "Ok",                          10
+    MENUITEM "Cancel",                      2
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

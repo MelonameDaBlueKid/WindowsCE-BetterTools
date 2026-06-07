@@ -1,0 +1,288 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Smartphone SDK Tools</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0in; margin-right:0in; margin-top:0in}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial}
+span.SpellE
+	{}
+span.GramE
+	{}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<h1><font face="Tahoma" size="2"><span class="SpellE">Windows Mobile &quot;Magneto&quot; 
+Smartphone - Developer Platform<br>
+</span>Additional Tools and XML Samples</font></h1>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Tahoma'>
+<font size="2">This
+directory contains several additional tools and sample XML files, some of which
+are not described in the SDK documentation. </font> </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:Tahoma'>
+<font size="2">&nbsp;</font></span></p>
+<p class=MsoNormal style='text-autospace:none'>
+<span style="font-family: Tahoma"><font size="2">Details on the tools will 
+appear in future releases.</font></span></p>
+<p class=MsoNormal style='text-autospace:none'>&nbsp;</p>
+<p class=MsoNormal style='text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2">Cabsigner.exe</font></span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">This
+tool signs the contents of a CAB file and then resigning the CAB file with the
+same certificate.  For more information
+refer to cabSigner_Readme.htm in the SDK tools folder.</font></span></p>
+
+<p class=MsoNormal><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">CabWiz.ddf</font></span></b></span></p>
+
+<p class=MsoNormal><span style='font-family:Tahoma; visibility:hidden'>
+<font size="2">Template directive file to
+create CAB files</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2"> CabwizSP.exe 
+</font> </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">This
+is a special version of the <span class=SpellE>CabWiz</span> tool that supports
+the additional security aspects of <span class=SpellE>Smartphone</span> 2002
+.CAB files. This tool is documented in the SDK documentation. (Look in the
+Index under “<span class=SpellE>CabWizSP</span>”.)</font></span></p>
+
+<p class=MsoNormal><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">EmuASCfg.exe</font></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Tahoma; visibility:hidden'>
+<font size="2">This tool configures
+ActiveSync and the Pocket PC emulator to allow establishment of an ActiveSync
+partnership over the Ethernet Virtual Switch.</font></span></p>
+
+<p class=MsoNormal><span style='font-family:Tahoma; visibility:hidden'>
+<font size="2">You must use <span
+class=SpellE>eMbedded</span> Visual C++ to boot the Pocket PC emulator using
+the <span class=SpellE>VirtualSwitch</span> option before running this
+tool.  For usage information, type
+“emuascfg.exe /?” at the command line.</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2">Extract.exe </font> </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">This
+tool allows you to selectively extract files out of a .CAB file. For usage
+information, type “extract /?” at the command line. </font> </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2">Makecert.exe </font> </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">This
+tool is also available on the Microsoft Developer Network (MSDN). It provides a
+quick way to create certificate files. For usage information, type “<span
+class=SpellE>makecert</span> /?” at the command line or consult MSDN.</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2">RapiConfig.exe </font> </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style="visibility: hidden"><span class=SpellE>
+<span
+style='font-family:Tahoma'><font size="2">RapiConfig</font></span></span><span style='font-family:
+Tahoma'><font size="2"> provides a way to cause configuration XML to be executed on a device or
+emulator connected via ActiveSync. For usage information, type “<span
+class=SpellE>rapiconfig</span> /?” at the command line.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2">Revoke.exe </font> </span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">This
+tool generates provisioning XML files for revoking a file or certificate on the
+device. For usage information, type “revoke /?” at the command line.</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2">Signcode.exe</font></span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">This
+tool is also available on the Microsoft Developer Network (MSDN). It allows you
+to sign a file with a certificate. For usage information, type “<span
+class=SpellE>signcode</span> /?” at the command line or consult MSDN.</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>
+<span style='font-family:
+Tahoma; visibility:hidden'><font size="2">Spdps.exe</font></span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">This
+tool prepares the various development packages (groups of files used for
+debugging or runtime support) for use in the emulator or on a real device. This
+is documented in the SDK documentation. (Look in the Index under “development
+file signing tool”)</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">&nbsp;</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">AddCert.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">Sample XML to add a certificate to the certificate
+store.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">PolicyAdd.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'>
+<span style='font-family:Tahoma; visibility:hidden'><font size="2">Sample
+XML to add or change a security policy.</font></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">PolicyQuery.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style="visibility: hidden"><span class=GramE>
+<span
+style='font-family:Tahoma'><font size="2">Sample XML to query a security policy.</font></span></span><span
+style='font-family:Tahoma'><font size="2"> <b>Note:</b> Configuration Manager <span
+class=GramE>queries</span> can only succeed if run locally on the device using <span
+class=SpellE>DMProcessConfigXML</span>. They do not function via Over-The-Air
+configuration.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">QueryCert.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style="visibility: hidden"><span class=GramE>
+<span
+style='font-family:Tahoma'><font size="2">Sample XML to query a certificate from the
+certificate store.</font></span></span><span style='font-family:Tahoma'><font size="2"> <b>Note:</b>
+Configuration Manager <span class=GramE>queries</span> can only succeed if run
+locally on the device using <span class=SpellE>DMProcessConfigXML</span>. They
+do not function via Over-The-Air configuration.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">QueryCertParms.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style="visibility: hidden"><span class=GramE>
+<span
+style='font-family:Tahoma'><font size="2">Sample XML to query the base64 encoded certificate
+and role mask individually of a certificate.</font></span></span><span
+style='font-family:Tahoma'><font size="2"> <b>Note:</b> Configuration Manager <span
+class=GramE>queries</span> can only succeed if run locally on the device using <span
+class=SpellE>DMProcessConfigXML</span>. They do not function via Over-The-Air
+configuration.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">QueryStore.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style="visibility: hidden"><span class=GramE>
+<span
+style='font-family:Tahoma'><font size="2">Sample XML to query the certificate store.</font></span></span><span
+style='font-family:Tahoma'><font size="2"> <b>Note:</b> Configuration Manager <span
+class=GramE>queries</span> can only succeed if run locally on the device using <span
+class=SpellE>DMProcessConfigXML</span>. They do not function via Over-The-Air
+configuration.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">RemoveCert.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">Sample XML to remove a certificate from the store.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">RevAdd.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=GramE>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">Sample XML to add a hash to the revocation list.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">RevHashQuery.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style="visibility: hidden"><span class=GramE>
+<span
+style='font-family:Tahoma'><font size="2">Sample XML to query if a particular hash is in the
+revocation list.</font></span></span><span style='font-family:Tahoma'><font size="2"> <b>Note:</b>
+Configuration Manager <span class=GramE>queries</span> can only succeed if run
+locally on the device using <span class=SpellE>DMProcessConfigXML</span>. They
+do not function via Over-The-Air configuration.</font></span></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class=SpellE><b>
+<span
+style='font-family:Tahoma; visibility:hidden'><font size="2">RevListQuery.xml</font></span></b></span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style="visibility: hidden"><span class=GramE>
+<span
+style='font-family:Tahoma'><font size="2">Sample XML to query the <span class=SpellE>revoaction</span>
+hash list.</font></span></span><span style='font-family:Tahoma'><font size="2"> <b>Note:</b>
+Configuration Manager <span class=GramE>queries</span> can only succeed if run
+locally on the device using <span class=SpellE>DMProcessConfigXML</span>. They
+do not function via Over-The-Air configuration.</font></span></span></p>
+
+</div>
+
+</body>
+
+</html>

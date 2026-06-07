@@ -1,0 +1,139 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of your Microsoft Windows CE
+// Source Alliance Program license form.  If you did not accept the terms of
+// such a license, you are not authorized to use this source code.
+//
+//+-------------------------------------------------------------------------
+//
+//  Microsoft Windows Media
+//
+//
+//  File:       wmcodectypes.h
+//
+//--------------------------------------------------------------------------
+
+#ifndef __WMCODECTYPES_H__
+#define __WMCODECTYPES_H__
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include <mmreg.h>
+
+//
+// FOURCC codes for Windows Media Codecs
+//
+
+#define FOURCC_WMV1     mmioFOURCC('W','M','V','1')
+#define FOURCC_wmv1     mmioFOURCC('w','m','v','1')
+#define FOURCC_WMV2     mmioFOURCC('W','M','V','2')
+#define FOURCC_wmv2     mmioFOURCC('w','m','v','2')
+#define FOURCC_WMV3     mmioFOURCC('W','M','V','3')
+#define FOURCC_wmv3     mmioFOURCC('w','m','v','3')
+#define FOURCC_WMVP     mmioFOURCC('W','M','V','P')
+#define FOURCC_wmvp     mmioFOURCC('w','m','v','p')
+#define FOURCC_WMVA     mmioFOURCC('W','M','V','A')
+#define FOURCC_wmva     mmioFOURCC('w','m','v','a')
+#define FOURCC_WVP2     mmioFOURCC('W','V','P','2')
+#define FOURCC_wvp2     mmioFOURCC('w','v','p','2')
+#define FOURCC_MPG4     mmioFOURCC('M','P','G','4')
+#define FOURCC_mpg4     mmioFOURCC('m','p','g','4')
+#define FOURCC_MP42     mmioFOURCC('M','P','4','2')
+#define FOURCC_mp42     mmioFOURCC('m','p','4','2')
+#define FOURCC_MP43     mmioFOURCC('M','P','4','3')
+#define FOURCC_mp43     mmioFOURCC('m','p','4','3')
+#define FOURCC_MP4S     mmioFOURCC('M','P','4','S')
+#define FOURCC_mp4s     mmioFOURCC('m','p','4','s')
+#define FOURCC_M4S2     mmioFOURCC('M','4','S','2')
+#define FOURCC_m4s2     mmioFOURCC('m','4','s','2')
+// these aren't used anywhere??
+#define FOURCC_MSS1     mmioFOURCC('M','S','S','1')
+#define FOURCC_mss1     mmioFOURCC('m','s','s','1')
+#define FOURCC_MSS2     mmioFOURCC('M','S','S','2')
+
+
+//
+// MEDIASUBTYPE GUIDs for Windows Media Codecs
+//
+
+EXTERN_GUID(MEDIASUBTYPE_WMV1,
+FOURCC_WMV1, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_wmv1,
+FOURCC_wmv1, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMV2,
+FOURCC_WMV2, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_wmv2,
+FOURCC_wmv2, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMV3,
+FOURCC_WMV3, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_wmv3,
+FOURCC_wmv3, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMVP,
+FOURCC_WMVP, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_wmvp,
+FOURCC_wmvp, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMVA,
+FOURCC_WMVA, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_wmva,
+FOURCC_wmva, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WVP2,
+FOURCC_WVP2, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_wvp2,
+FOURCC_wvp2, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_MPG4,
+FOURCC_MPG4, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_mpg4,
+FOURCC_mpg4, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_MP42,
+FOURCC_MP42, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_mp42,
+FOURCC_mp42, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_MP43,
+FOURCC_MP43, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_mp43,
+FOURCC_mp43, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_MP4S,
+FOURCC_MP4S, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_mp4s,
+FOURCC_mp4s, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMAVOICE9,
+WAVE_FORMAT_WMAVOICE9, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_MSAUDIO1,
+WAVE_FORMAT_MSAUDIO1, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMAUDIO2,
+WAVE_FORMAT_WMAUDIO2, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMAUDIO3,
+WAVE_FORMAT_WMAUDIO3, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+EXTERN_GUID(MEDIASUBTYPE_WMAUDIO_LOSSLESS,
+WAVE_FORMAT_WMAUDIO_LOSSLESS, 0x0000, 0x0010, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71);
+
+
+#endif //__WMCODECTYPES_H__

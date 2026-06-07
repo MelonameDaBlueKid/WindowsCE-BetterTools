@@ -1,0 +1,150 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+#include <commctrl.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <windows.h>\r\n"
+    "#include <commctrl.h>\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_POPUP | WS_VISIBLE | WS_VSCROLL
+BEGIN
+    LTEXT           "Connect to Network:",IDC_STATIC,4,5,93,10
+    LISTBOX         IDC_CMTIME_NETWORK,4,15,93,10,LBS_NOINTEGRALHEIGHT | NOT 
+                    WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_CMTIME_NETWORKUD,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | UDS_EXPANDABLE,0,0,0,0
+    LTEXT           "Select the network you wish to use and press Connect",
+                    IDC_CMTIME_STATUS,4,30,93,30
+    LTEXT           "",IDC_CMTIME_TSTATUS,4,65,93,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CMTIME_TITLE        "CMTime"
+    IDS_CMTIME_QUIT         "Quit"
+    IDS_CMTIME_CONNECT      "Connect"
+    IDS_CONNMGR_ESTABLISH_FAILED 
+                            "ConnMgrEstablishConnection failed.\r\nResult=%1!0x!"
+    IDS_ERROR_CAPTION       "Error"
+    IDS_ERROR_DIALOGINIT    "An error occurred while initializing the dialog."
+    IDS_STATE_DISCONNECTED  "...Disconnected..."
+    IDS_STATE_WAITING_CONNECTION "...Waiting Connection..."
+    IDS_STATE_WAITING_CONNECTION_ABORT "...Waiting Connection Abort..."
+    IDS_STATE_WAITING_DISCONNECTION "...Waiting Disconnection..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STATE_CONNECTED     "***Connected***"
+    IDS_ERROR_GETTING_TIME  "Error getting time!"
+    IDS_ERROR_SETTING_CLOCK "Error setting the System Clock"
+    IDS_STATE_CLOCK_SET     "***System Clock Successfully Updated***"
+    IDS_STATE_CONNECTION_FAILED "***Connection Failed***"
+    IDS_STATE_NOPATH        "**No Path to Destination***"
+    IDS_STATE_CONNECTION_CANCELED "***Connection Canceled***"
+    IDS_STATE_UNKNOWN_STATUS "Unrecognised Status"
+    IDS_STATE_FINDING_CONNECTION "...Finding Connection..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

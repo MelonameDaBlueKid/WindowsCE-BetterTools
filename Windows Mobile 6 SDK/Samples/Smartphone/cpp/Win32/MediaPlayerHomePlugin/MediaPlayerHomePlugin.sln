@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaPlayerPlugin", "MediaPlayerPlugin\MediaPlayerPlugin.vcproj", "{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomePlugin", "HomePlugin\HomePlugin.vcproj", "{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "WMPHomePlugin", "WMPHomePlugin\WMPHomePlugin.vddproj", "{B9BE0E9E-077F-4046-AD90-723E53EB8494}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC88A499-8CAD-48BA-A53F-4E63EE30E67F}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Mobile 6 Standard SDK (ARMV4I) = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		Release|Windows Mobile 6 Standard SDK (ARMV4I) = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{B9BE0E9E-077F-4046-AD90-723E53EB8494}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug
+		{B9BE0E9E-077F-4046-AD90-723E53EB8494}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug
+		{B9BE0E9E-077F-4046-AD90-723E53EB8494}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug
+		{B9BE0E9E-077F-4046-AD90-723E53EB8494}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

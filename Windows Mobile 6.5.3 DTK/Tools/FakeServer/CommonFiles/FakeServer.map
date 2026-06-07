@@ -1,0 +1,341 @@
+ FakeServer
+
+ Timestamp is 7f7b88eb                           
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000ea8H .rdata                  CODE
+ 0001:00000ea8 00000027H .rdata$debug            CODE
+ 0001:00000ed0 00003764H .text                   CODE
+ 0001:00004634 00000018H .text$yc                CODE
+ 0001:0000464c 0000002cH .text$yd                CODE
+ 0001:00004678 00000078H .idata$2                CODE
+ 0001:000046f0 00000014H .idata$3                CODE
+ 0001:00004704 00000134H .idata$4                CODE
+ 0001:00004838 000001fcH .idata$6                CODE
+ 0001:00004a40 00000094H .edata                  CODE
+ 0002:00000000 00000134H .idata$5                DATA
+ 0002:00000134 00000004H .CRT$XCA                DATA
+ 0002:00000138 00000004H .CRT$XCAA               DATA
+ 0002:0000013c 00000004H .CRT$XCU                DATA
+ 0002:00000140 00000004H .CRT$XCZ                DATA
+ 0002:00000144 00000004H .CRT$XIA                DATA
+ 0002:00000148 00000004H .CRT$XIZ                DATA
+ 0002:0000014c 00000004H .CRT$XPA                DATA
+ 0002:00000150 00000004H .CRT$XPZ                DATA
+ 0002:00000154 00000004H .CRT$XTA                DATA
+ 0002:00000158 00000004H .CRT$XTZ                DATA
+ 0002:0000015c 00000008H .data                   DATA
+ 0002:00000164 00000018H .bss                    DATA
+ 0003:00000000 00000338H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:0000001c       _GUID_38d3c4da_2fa7_40cd_b8b8_e0d35cf5f8d9 1000101c     FakeServerLib:fakeserverhelper.obj
+ 0001:0000002c       _GUID_dc342ebe_cabe_4f5d_9904_066f11b86fcf 1000102c     FakeServerLib:fakeserverhelper.obj
+ 0001:00000040       ?s_qit@CFakeServer@@1QBUQITAB@@B 10001040     FakeServerLib:fakeserver.obj
+ 0001:00000ab0       ??_C@_1HC@GFCNMIKG@?$AA?$HL?$AA?$CF?$AA0?$AA8?$AAx?$AA?9?$AA?$CF?$AA0?$AA4?$AAx?$AA?9?$AA?$CF?$AA0?$AA4?$AAx?$AA?9?$AA?$CF?$AA0?$AA2?$AAx@ 10001ab0     FakeServerLib:fakeserver.obj
+ 0001:00000b24       ??_C@_1CM@IAEAJIJC@?$AAS?$AAe?$AAr?$AAv?$AAe?$AAr?$AA?5?$AAA?$AAu?$AAt?$AAh?$AAe?$AAn?$AAt?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo@ 10001b24     FakeServerLib:fakeserver.obj
+ 0001:00000b50       ??_C@_15JNBOKNOG@?$AA?$AN?$AA?6?$AA?$AA@ 10001b50     FakeServerLib:fakeserver.obj
+ 0001:00000b58       ??_C@_15ELPOAHMG@?$AAM?$AAY?$AA?$AA@ 10001b58     FakeServerLib:fakeserver.obj
+ 0001:00000b60       ??_C@_11LOCGONAA@?$AA?$AA@ 10001b60     FakeServerLib:fakeserver.obj
+ 0001:00000b64       ??_C@_0CN@NMCHMJNP@Microsoft?5Unified?5Security?5Proto@ 10001b64     FakeServerLib:fakeserver.obj
+ 0001:00000b94       ??_C@_04FMMHFHOO@?$AN?6?$AN?6?$AA@ 10001b94     FakeServerLib:fakeserver.obj
+ 0001:00000b9c       ??_C@_0BA@DIGAFIOK@Content?9Length?3?$AA@ 10001b9c     FakeServerLib:fakeserver.obj
+ 0001:00000bac       ??_C@_02PFIAKEDG@80?$AA@   10001bac     FakeServerLib:fakeserver.obj
+ 0001:00000c68       _GUID_483b6126_59b4_493b_a9e3_972bdafeb341 10001c68     FakeServerLib:fakeserver.obj
+ 0001:00000c78       _GUID_67c73fbf_999e_44dd_af32_480e86cb7ea3 10001c78     FakeServerLib:fakeserver.obj
+ 0001:00000c88       _GUID_2933bf80_7b36_11d2_b20e_00c04f983e60 10001c88     FakeServerLib:fakeserver.obj
+ 0001:00000c98       _GUID_2933bf81_7b36_11d2_b20e_00c04f983e60 10001c98     FakeServerLib:fakeserver.obj
+ 0001:00000ca8       _GUID_2933bf90_7b36_11d2_b20e_00c04f983e60 10001ca8     FakeServerLib:fakeserver.obj
+ 0001:00000cb8       ??_C@_1DA@PMKJKCEO@?$AAC?$AAe?$AAr?$AAt?$AAE?$AAn?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?1?$AAL?$AAo?$AAc?$AAa?$AAl?$AAS?$AAr@ 10001cb8     FakeServerLib:fakeserver.obj
+ 0001:00000ce8       ??_C@_1CO@NAIJCKCK@?$AAI?$AAn?$AAi?$AAt?$AAS?$AAe?$AAc?$AAu?$AAr?$AAi?$AAt?$AAy?$AAI?$AAn?$AAt?$AAe?$AAr?$AAf?$AAa?$AAc@ 10001ce8     FakeServerLib:fakeserver.obj
+ 0001:00000d18       ??_C@_1BI@HLLGKMIP@?$AAs?$AAe?$AAc?$AAu?$AAr?$AA3?$AA2?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 10001d18     FakeServerLib:fakeserver.obj
+ 0001:00000dd8       ??_7?$CComObject@VCFakeServer@@@@6B@ 10001dd8     FakeServerLib:fakeserver.obj
+ 0001:00000e2c       ?s_qit@CFakeServerResponse@@1QBUQITAB@@B 10001e2c     FakeServerLib:FakeServerResp.obj
+ 0001:00000e3c       ??_7?$CComObject@VCFakeServerResponse@@@@6B@ 10001e3c     FakeServerLib:FakeServerResp.obj
+ 0001:00000e88       IID_IFakeServer            10001e88     FakeServerLib:fakeserverlib_i.obj
+ 0001:00000e98       IID_IFakeServerResponse    10001e98     FakeServerLib:fakeserverlib_i.obj
+ 0001:00000ed0       ?SetRequestCallback@@YAJP6AJPAEKPAPAEPAK@Z@Z 10001ed0 f   FakeServerDll.obj
+ 0001:00000ee8       ?CallBackFunction@@YAJPAUCLIENT_REQUEST@@PAUIFakeServerResponse@@K@Z 10001ee8 f   FakeServerDll.obj
+ 0001:00000f84       ?InitServer@@YAJP6AJPAEKPAPAEPAK@ZPAGK44@Z 10001f84 f   FakeServerDll.obj
+ 0001:00001108       ?StartServer@@YAJXZ        10002108 f   FakeServerDll.obj
+ 0001:00001130       ?StopServer@@YAJXZ         10002130 f   FakeServerDll.obj
+ 0001:00001158       WideCharToMultiByte        10002158 f   coredll:COREDLL.dll
+ 0001:00001168       ?FreeFkBuf@@YAXPAUFAKE_BUFFER@@@Z 10002168 f   FakeServerLib:fkbufhelper.obj
+ 0001:0000118c       ?FreeFkBufListEntry@@YAXPAUFAKE_BUFFER_LIST@@@Z 1000218c f   FakeServerLib:fkbufhelper.obj
+ 0001:000011d4       ?AllocateFkBuf@@YAPAUFAKE_BUFFER@@K@Z 100021d4 f   FakeServerLib:fkbufhelper.obj
+ 0001:00001224       ?AllocateFkBufListEntry@@YAPAUFAKE_BUFFER_LIST@@K@Z 10002224 f   FakeServerLib:fkbufhelper.obj
+ 0001:00001270       ?MergeBuffers@@YAJPAUFAKE_BUFFER_LIST@@PAPAUFAKE_BUFFER@@@Z 10002270 f   FakeServerLib:fkbufhelper.obj
+ 0001:00001360       ?AddfkBufToList@@YAHPAUFAKE_BUFFER@@PAPAUFAKE_BUFFER_LIST@@@Z 10002360 f   FakeServerLib:fkbufhelper.obj
+ 0001:000013f0       ?AllocateClientRequest@@YAPAUCLIENT_REQUEST@@K@Z 100023f0 f   FakeServerLib:fkbufhelper.obj
+ 0001:00001440       ?AllocateServerResponse@@YAPAUSERVER_RESPONSE@@K@Z 10002440 f   FakeServerLib:fkbufhelper.obj
+ 0001:000014a0       ?FreeServerResp@@YAXPAUSERVER_RESPONSE@@@Z 100024a0 f   FakeServerLib:fkbufhelper.obj
+ 0001:000014c4       CreateFakeServerObject     100024c4 f   FakeServerLib:fakeserverhelper.obj
+ 0001:00001540       CreateFakeServerResponseObject 10002540 f   FakeServerLib:fakeserverhelper.obj
+ 0001:000015bc       ??1CComBSTR@ATL@@QAA@XZ    100025bc f i FakeServerLib:fakeserver.obj
+ 0001:000015d0       DllAddRef                  100025d0 f   FakeServerLib:fakeserver.obj
+ 0001:000015d4       DllRelease                 100025d4 f   FakeServerLib:fakeserver.obj
+ 0001:000015d8       ?CloseServerSockets@CFakeServer@@AAAXXZ 100025d8 f   FakeServerLib:fakeserver.obj
+ 0001:00001630       ?GetUUID@CFakeServer@@AAAHXZ 10002630 f   FakeServerLib:fakeserver.obj
+ 0001:000016e8       ?WaitForEnroll@CFakeServer@@AAAJXZ 100026e8 f   FakeServerLib:fakeserver.obj
+ 0001:00001764       ?CheckCertStore@CFakeServer@@AAAHXZ 10002764 f   FakeServerLib:fakeserver.obj
+ 0001:00001a48       ?PFXImportCert@CFakeServer@@AAAHXZ 10002a48 f   FakeServerLib:fakeserver.obj
+ 0001:00001b54       ?CreateSSLCredentials@CFakeServer@@AAAJXZ 10002b54 f   FakeServerLib:fakeserver.obj
+ 0001:00001c10       ?FreeSSLCredential@CFakeServer@@AAAXXZ 10002c10 f   FakeServerLib:fakeserver.obj
+ 0001:00001c5c       ?Stop@CFakeServer@@UAAJXZ  10002c5c f   FakeServerLib:fakeserver.obj
+ 0001:00001cb4       ?SetPortNumber@CFakeServer@@UAAJPAD@Z 10002cb4 f   FakeServerLib:fakeserver.obj
+ 0001:00001cf4       ?SetCertPath@CFakeServer@@AAAJPAD@Z 10002cf4 f   FakeServerLib:fakeserver.obj
+ 0001:00001d44       ?SetCertPwd@CFakeServer@@AAAJPAD@Z 10002d44 f   FakeServerLib:fakeserver.obj
+ 0001:00001d94       ?SetSecure@CFakeServer@@UAAJXZ 10002d94 f   FakeServerLib:fakeserver.obj
+ 0001:00001da4       ?SetCallBack@CFakeServer@@UAAJP6AJPAUCLIENT_REQUEST@@PAUIFakeServerResponse@@K@Z@Z 10002da4 f   FakeServerLib:fakeserver.obj
+ 0001:00001db0       ?SetResponseId@CFakeServer@@UAAJK@Z 10002db0 f   FakeServerLib:fakeserver.obj
+ 0001:00001dbc       ?InitSocketSecurity@CClientConnContext@@QAAJPAU_SECURITY_FUNCTION_TABLE_A@@U_SecHandle@@@Z 10002dbc f   FakeServerLib:fakeserver.obj
+ 0001:00001e14       ?Init@CClientConnContext@@QAAJIP6AJPAUCLIENT_REQUEST@@PAUIFakeServerResponse@@K@ZK@Z 10002e14 f   FakeServerLib:fakeserver.obj
+ 0001:00001ed4       ?GetHeaders@CClientConnContext@@AAAJPAUFAKE_BUFFER@@PAK@Z 10002ed4 f   FakeServerLib:fakeserver.obj
+ 0001:00001f1c       ?GetContentLength@CClientConnContext@@AAAJPAUFAKE_BUFFER@@PAKPAHK@Z 10002f1c f   FakeServerLib:fakeserver.obj
+ 0001:00002048       ?ParseRequest@CClientConnContext@@AAAJPAUFAKE_BUFFER@@@Z 10003048 f   FakeServerLib:fakeserver.obj
+ 0001:000020a8       ?WaitForDataToRecv@CClientConnContext@@AAAJXZ 100030a8 f   FakeServerLib:fakeserver.obj
+ 0001:0000214c       ?ReceiveBytes@CClientConnContext@@AAAJPAUFAKE_BUFFER@@@Z 1000314c f   FakeServerLib:fakeserver.obj
+ 0001:000021dc       ?SendToClient@CClientConnContext@@AAAJPADK@Z 100031dc f   FakeServerLib:fakeserver.obj
+ 0001:00002238       ?CloseConnSocket@CClientConnContext@@AAAXXZ 10003238 f   FakeServerLib:fakeserver.obj
+ 0001:000022a4       ?CopyBytesToSSLMessageBuffer@CClientConnContext@@AAAJPADK@Z 100032a4 f   FakeServerLib:fakeserver.obj
+ 0001:000022ec       ?ReceiveEncryptedMessage@CClientConnContext@@AAAJPAUFAKE_BUFFER@@@Z 100032ec f   FakeServerLib:fakeserver.obj
+ 0001:00002480       ?SendEncryptedMessage@CClientConnContext@@AAAJPAEK@Z 10003480 f   FakeServerLib:fakeserver.obj
+ 0001:000025d0       ??1?$CComPtr@VCFakeServer@@@ATL@@QAA@XZ 100035d0 f i FakeServerLib:fakeserver.obj
+ 0001:000025f4       ??1?$CComPtr@UIConfigManager@@@ATL@@QAA@XZ 100035f4 f i FakeServerLib:fakeserver.obj
+ 0001:00002618       ??1?$CComPtr@UIXMLDOMDocument@@@ATL@@QAA@XZ 10003618 f i FakeServerLib:fakeserver.obj
+ 0001:0000263c       ??1?$CComPtr@UIXMLDOMNode@@@ATL@@QAA@XZ 1000363c f i FakeServerLib:fakeserver.obj
+ 0001:00002660       ??1?$CComPtr@UIFakeServerResponse@@@ATL@@QAA@XZ 10003660 f i FakeServerLib:fakeserver.obj
+ 0001:00002684       ?Reset@CFakeServer@@AAAXXZ 10003684 f   FakeServerLib:fakeserver.obj
+ 0001:00002744       ?DeInitSecurity@CFakeServer@@AAAXXZ 10003744 f   FakeServerLib:fakeserver.obj
+ 0001:000027d0       ?ProcessConfig@CFakeServer@@AAAJH@Z 100037d0 f   FakeServerLib:fakeserver.obj
+ 0001:00002a68       ?InitSecurity@CFakeServer@@AAAHXZ 10003a68 f   FakeServerLib:fakeserver.obj
+ 0001:00002b60       ??1CClientConnContext@@QAA@XZ 10003b60 f   FakeServerLib:fakeserver.obj
+ 0001:00002b90       ?ReceiveFromClient@CClientConnContext@@AAAJPAPAUFAKE_BUFFER@@@Z 10003b90 f   FakeServerLib:fakeserver.obj
+ 0001:00002c24       ?DoSSLHandShake@CClientConnContext@@AAAHIPAU_SecHandle@@0HHH@Z 10003c24 f   FakeServerLib:fakeserver.obj
+ 0001:00002f50       ?NegotiateSSLConnection@CClientConnContext@@QAAJXZ 10003f50 f   FakeServerLib:fakeserver.obj
+ 0001:00002fdc       ?CleanUp@CFakeServer@@AAAXXZ 10003fdc f   FakeServerLib:fakeserver.obj
+ 0001:00003044       ?Initialize@CFakeServer@@UAAJPADH00@Z 10004044 f   FakeServerLib:fakeserver.obj
+ 0001:000031f4       ?Listen@CFakeServer@@AAAJXZ 100041f4 f   FakeServerLib:fakeserver.obj
+ 0001:000032d4       ?ReceiveRequest@CClientConnContext@@AAAJXZ 100042d4 f   FakeServerLib:fakeserver.obj
+ 0001:00003454       ?HandleRequest@CClientConnContext@@QAAKXZ 10004454 f   FakeServerLib:fakeserver.obj
+ 0001:00003668       ?ClientThread@@YAKPAVCClientConnContext@@@Z 10004668 f   FakeServerLib:fakeserver.obj
+ 0001:00003684       ?AcceptConnections@CFakeServer@@AAAPAVCClientConnContext@@XZ 10004684 f   FakeServerLib:fakeserver.obj
+ 0001:00003938       ?FakeServerThread@CFakeServer@@QAAKXZ 10004938 f   FakeServerLib:fakeserver.obj
+ 0001:000039f0       ?QueryInterface@?$CComObject@VCFakeServer@@@@UAAJABU_GUID@@PAPAX@Z 100049f0 f i FakeServerLib:fakeserver.obj
+ 0001:00003a10       ?AddRef@?$CComObject@VCFakeServer@@@@UAAKXZ 10004a10 f i FakeServerLib:fakeserver.obj
+ 0001:00003a24       ?ServerThread@@YAKPAVCFakeServer@@@Z 10004a24 f   FakeServerLib:fakeserver.obj
+ 0001:00003a34       ?CreateServerThread@CFakeServer@@AAAJXZ 10004a34 f   FakeServerLib:fakeserver.obj
+ 0001:00003a8c       ?Start@CFakeServer@@UAAJXZ 10004a8c f   FakeServerLib:fakeserver.obj
+ 0001:00003b10       ?CreateInstance@?$CComObject@VCFakeServer@@@@SAJPAPAVCFakeServer@@@Z 10004b10 f i FakeServerLib:fakeserver.obj
+ 0001:00003b84       ?CreateInstance@CFakeServer@@SAJPAPAUIUnknown@@@Z 10004b84 f   FakeServerLib:fakeserver.obj
+ 0001:00003bcc       ?Release@?$CComObject@VCFakeServer@@@@UAAKXZ 10004bcc f i FakeServerLib:fakeserver.obj
+ 0001:00003c14       ?Initialize@CFakeServerResponse@@UAAJXZ 10004c14 f   FakeServerLib:FakeServerResp.obj
+ 0001:00003c1c       ?GenerateServerResponse@CFakeServerResponse@@UAAJPAPAUSERVER_RESPONSE@@@Z 10004c1c f   FakeServerLib:FakeServerResp.obj
+ 0001:00003c3c       ?SetResponse@CFakeServerResponse@@UAAJPAXK@Z 10004c3c f   FakeServerLib:FakeServerResp.obj
+ 0001:00003c7c       ?KeepConnectionAlive@CFakeServerResponse@@UAAJXZ 10004c7c f   FakeServerLib:FakeServerResp.obj
+ 0001:00003c8c       ?GetConnectionProperties@CFakeServerResponse@@UAAJPAPAUCONNECTION_PROPERTIES@@@Z 10004c8c f   FakeServerLib:FakeServerResp.obj
+ 0001:00003cc0       ??1?$CComPtr@VCFakeServerResponse@@@ATL@@QAA@XZ 10004cc0 f i FakeServerLib:FakeServerResp.obj
+ 0001:00003ce4       ?QueryInterface@?$CComObject@VCFakeServerResponse@@@@UAAJABU_GUID@@PAPAX@Z 10004ce4 f i FakeServerLib:FakeServerResp.obj
+ 0001:00003d04       ?AddRef@?$CComObject@VCFakeServerResponse@@@@UAAKXZ 10004d04 f i FakeServerLib:FakeServerResp.obj
+ 0001:00003d18       ?Release@?$CComObject@VCFakeServerResponse@@@@UAAKXZ 10004d18 f i FakeServerLib:FakeServerResp.obj
+ 0001:00003d6c       ?CreateInstance@?$CComObject@VCFakeServerResponse@@@@SAJPAPAVCFakeServerResponse@@@Z 10004d6c f i FakeServerLib:FakeServerResp.obj
+ 0001:00003ddc       ?CreateInstance@CFakeServerResponse@@SAJPAPAUIUnknown@@@Z 10004ddc f   FakeServerLib:FakeServerResp.obj
+ 0001:00003e24       DllMain                    10004e24 f   corelibc:dllmain.obj
+ 0001:00003e3c       _DllMainCRTStartup         10004e3c f   corelibc:pegdmain.obj
+ 0001:00003ed4       __security_check_cookie    10004ed4     corelibc:armsecgs.obj
+ 0001:00003ee8       __gsfailure                10004ee8     corelibc:armsecgs.obj
+ 0001:00003f2c       _onexit                    10004f2c f   corelibc:onexit.obj
+ 0001:00003fd8       atexit                     10004fd8 f   corelibc:onexit.obj
+ 0001:00003ff8       _cinit                     10004ff8 f   corelibc:crt0dat.obj
+ 0001:00004168       _cexit                     10005168 f   corelibc:crt0dat.obj
+ 0001:00004184       __security_init_cookie     10005184 f   corelibc:seccinit.obj
+ 0001:000041d4       free                       100051d4 f   coredll:COREDLL.dll
+ 0001:000041e4       malloc                     100051e4 f   coredll:COREDLL.dll
+ 0001:000041f4       memcpy                     100051f4 f   coredll:COREDLL.dll
+ 0001:00004204       memset                     10005204 f   coredll:COREDLL.dll
+ 0001:00004214       StringCchPrintfW           10005214 f   coredll:COREDLL.dll
+ 0001:00004224       GetLastError               10005224 f   coredll:COREDLL.dll
+ 0001:00004234       WaitForSingleObject        10005234 f   coredll:COREDLL.dll
+ 0001:00004244       wcsstr                     10005244 f   coredll:COREDLL.dll
+ 0001:00004254       mbstowcs                   10005254 f   coredll:COREDLL.dll
+ 0001:00004264       StringCchCopyW             10005264 f   coredll:COREDLL.dll
+ 0001:00004274       strlen                     10005274 f   coredll:COREDLL.dll
+ 0001:00004284       wcslen                     10005284 f   coredll:COREDLL.dll
+ 0001:00004294       CloseHandle                10005294 f   coredll:COREDLL.dll
+ 0001:000042a4       ReadFile                   100052a4 f   coredll:COREDLL.dll
+ 0001:000042b4       GetFileSize                100052b4 f   coredll:COREDLL.dll
+ 0001:000042c4       CreateFileW                100052c4 f   coredll:COREDLL.dll
+ 0001:000042d4       wcscmp                     100052d4 f   coredll:COREDLL.dll
+ 0001:000042e4       MultiByteToWideChar        100052e4 f   coredll:COREDLL.dll
+ 0001:000042f4       strstr                     100052f4 f   coredll:COREDLL.dll
+ 0001:00004304       atoi                       10005304 f   coredll:COREDLL.dll
+ 0001:00004314       wcscpy                     10005314 f   coredll:COREDLL.dll
+ 0001:00004324       FreeLibrary                10005324 f   coredll:COREDLL.dll
+ 0001:00004334       __CxxFrameHandler          10005334 f   coredll:COREDLL.dll
+ 0001:00004344       CreateEventW               10005344 f   coredll:COREDLL.dll
+ 0001:00004354       GetProcAddressW            10005354 f   coredll:COREDLL.dll
+ 0001:00004364       LoadLibraryW               10005364 f   coredll:COREDLL.dll
+ 0001:00004374       InitializeCriticalSection  10005374 f   coredll:COREDLL.dll
+ 0001:00004384       LeaveCriticalSection       10005384 f   coredll:COREDLL.dll
+ 0001:00004394       EnterCriticalSection       10005394 f   coredll:COREDLL.dll
+ 0001:000043a4       ??3@YAXPAX@Z               100053a4 f   coredll:COREDLL.dll
+ 0001:000043b4       ExitThread                 100053b4 f   coredll:COREDLL.dll
+ 0001:000043c4       ??2@YAPAXI@Z               100053c4 f   coredll:COREDLL.dll
+ 0001:000043d4       CreateThread               100053d4 f   coredll:COREDLL.dll
+ 0001:000043e4       InterlockedIncrement       100053e4 f   coredll:COREDLL.dll
+ 0001:000043f4       InterlockedDecrement       100053f4 f   coredll:COREDLL.dll
+ 0001:00004404       DisableThreadLibraryCalls  10005404 f   coredll:COREDLL.dll
+ 0001:00004414       __report_gsfailure         10005414 f   coredll:COREDLL.dll
+ 0001:00004424       LocalReAlloc               10005424 f   coredll:COREDLL.dll
+ 0001:00004434       LocalAlloc                 10005434 f   coredll:COREDLL.dll
+ 0001:00004444       LocalSize                  10005444 f   coredll:COREDLL.dll
+ 0001:00004454       LocalFree                  10005454 f   coredll:COREDLL.dll
+ 0001:00004464       __security_gen_cookie      10005464 f   coredll:COREDLL.dll
+ 0001:00004474       CoCreateGuid               10005474 f   ole32:ole32.dll
+ 0001:00004484       CoUninitialize             10005484 f   ole32:ole32.dll
+ 0001:00004494       CoInitializeEx             10005494 f   ole32:ole32.dll
+ 0001:000044a4       CoCreateInstance           100054a4 f   ole32:ole32.dll
+ 0001:000044b4       closesocket                100054b4 f   Ws2:WS2.dll
+ 0001:000044c4       WSAStartup                 100054c4 f   Ws2:WS2.dll
+ 0001:000044d4       WSAGetLastError            100054d4 f   Ws2:WS2.dll
+ 0001:000044e4       select                     100054e4 f   Ws2:WS2.dll
+ 0001:000044f4       recv                       100054f4 f   Ws2:WS2.dll
+ 0001:00004504       sendto                     10005504 f   Ws2:WS2.dll
+ 0001:00004514       WSACleanup                 10005514 f   Ws2:WS2.dll
+ 0001:00004524       freeaddrinfo               10005524 f   Ws2:WS2.dll
+ 0001:00004534       getaddrinfo                10005534 f   Ws2:WS2.dll
+ 0001:00004544       listen                     10005544 f   Ws2:WS2.dll
+ 0001:00004554       bind                       10005554 f   Ws2:WS2.dll
+ 0001:00004564       socket                     10005564 f   Ws2:WS2.dll
+ 0001:00004574       accept                     10005574 f   Ws2:WS2.dll
+ 0001:00004584       __WSAFDIsSet               10005584 f   Ws2:WS2.dll
+ 0001:00004594       SysAllocString             10005594 f   oleaut32:OLEAUT32.dll
+ 0001:000045a4       SysFreeString              100055a4 f   oleaut32:OLEAUT32.dll
+ 0001:000045b4       CUnk_QISearch              100055b4 f   shutil:ShUtil.dll
+ 0001:000045c4       CertCloseStore             100055c4 f   crypt32:CRYPT32.dll
+ 0001:000045d4       CertFreeCertificateContext 100055d4 f   crypt32:CRYPT32.dll
+ 0001:000045e4       CryptFindOIDInfo           100055e4 f   crypt32:CRYPT32.dll
+ 0001:000045f4       CertGetEnhancedKeyUsage    100055f4 f   crypt32:CRYPT32.dll
+ 0001:00004604       CertEnumCertificatesInStore 10005604 f   crypt32:CRYPT32.dll
+ 0001:00004614       CertOpenStore              10005614 f   crypt32:CRYPT32.dll
+ 0001:00004624       PFXImportCertStore         10005624 f   crypt32:CRYPT32.dll
+ 0001:00004678       __IMPORT_DESCRIPTOR_COREDLL 10005678     coredll:COREDLL.dll
+ 0001:0000468c       __IMPORT_DESCRIPTOR_ole32  1000568c     ole32:ole32.dll
+ 0001:000046a0       __IMPORT_DESCRIPTOR_WS2    100056a0     Ws2:WS2.dll
+ 0001:000046b4       __IMPORT_DESCRIPTOR_OLEAUT32 100056b4     oleaut32:OLEAUT32.dll
+ 0001:000046c8       __IMPORT_DESCRIPTOR_ShUtil 100056c8     shutil:ShUtil.dll
+ 0001:000046dc       __IMPORT_DESCRIPTOR_CRYPT32 100056dc     crypt32:CRYPT32.dll
+ 0001:000046f0       __NULL_IMPORT_DESCRIPTOR   100056f0     coredll:COREDLL.dll
+ 0002:00000000       __imp_WideCharToMultiByte  10006000     coredll:COREDLL.dll
+ 0002:00000004       __imp_free                 10006004     coredll:COREDLL.dll
+ 0002:00000008       __imp_malloc               10006008     coredll:COREDLL.dll
+ 0002:0000000c       __imp_memcpy               1000600c     coredll:COREDLL.dll
+ 0002:00000010       __imp_memset               10006010     coredll:COREDLL.dll
+ 0002:00000014       __imp_StringCchPrintfW     10006014     coredll:COREDLL.dll
+ 0002:00000018       __imp_GetLastError         10006018     coredll:COREDLL.dll
+ 0002:0000001c       __imp_WaitForSingleObject  1000601c     coredll:COREDLL.dll
+ 0002:00000020       __imp_wcsstr               10006020     coredll:COREDLL.dll
+ 0002:00000024       __imp_mbstowcs             10006024     coredll:COREDLL.dll
+ 0002:00000028       __imp_StringCchCopyW       10006028     coredll:COREDLL.dll
+ 0002:0000002c       __imp_strlen               1000602c     coredll:COREDLL.dll
+ 0002:00000030       __imp_wcslen               10006030     coredll:COREDLL.dll
+ 0002:00000034       __imp_CloseHandle          10006034     coredll:COREDLL.dll
+ 0002:00000038       __imp_ReadFile             10006038     coredll:COREDLL.dll
+ 0002:0000003c       __imp_GetFileSize          1000603c     coredll:COREDLL.dll
+ 0002:00000040       __imp_CreateFileW          10006040     coredll:COREDLL.dll
+ 0002:00000044       __imp_wcscmp               10006044     coredll:COREDLL.dll
+ 0002:00000048       __imp_MultiByteToWideChar  10006048     coredll:COREDLL.dll
+ 0002:0000004c       __imp_strstr               1000604c     coredll:COREDLL.dll
+ 0002:00000050       __imp_atoi                 10006050     coredll:COREDLL.dll
+ 0002:00000054       __imp_wcscpy               10006054     coredll:COREDLL.dll
+ 0002:00000058       __imp_FreeLibrary          10006058     coredll:COREDLL.dll
+ 0002:0000005c       __imp___CxxFrameHandler    1000605c     coredll:COREDLL.dll
+ 0002:00000060       __imp_CreateEventW         10006060     coredll:COREDLL.dll
+ 0002:00000064       __imp_GetProcAddressW      10006064     coredll:COREDLL.dll
+ 0002:00000068       __imp_LoadLibraryW         10006068     coredll:COREDLL.dll
+ 0002:0000006c       __imp_InitializeCriticalSection 1000606c     coredll:COREDLL.dll
+ 0002:00000070       __imp_LeaveCriticalSection 10006070     coredll:COREDLL.dll
+ 0002:00000074       __imp_EnterCriticalSection 10006074     coredll:COREDLL.dll
+ 0002:00000078       __imp_??3@YAXPAX@Z         10006078     coredll:COREDLL.dll
+ 0002:0000007c       __imp_ExitThread           1000607c     coredll:COREDLL.dll
+ 0002:00000080       __imp_??2@YAPAXI@Z         10006080     coredll:COREDLL.dll
+ 0002:00000084       __imp_CreateThread         10006084     coredll:COREDLL.dll
+ 0002:00000088       __imp_InterlockedIncrement 10006088     coredll:COREDLL.dll
+ 0002:0000008c       __imp_InterlockedDecrement 1000608c     coredll:COREDLL.dll
+ 0002:00000090       __imp_DisableThreadLibraryCalls 10006090     coredll:COREDLL.dll
+ 0002:00000094       __imp___report_gsfailure   10006094     coredll:COREDLL.dll
+ 0002:00000098       __imp_LocalReAlloc         10006098     coredll:COREDLL.dll
+ 0002:0000009c       __imp_LocalAlloc           1000609c     coredll:COREDLL.dll
+ 0002:000000a0       __imp_LocalSize            100060a0     coredll:COREDLL.dll
+ 0002:000000a4       __imp_LocalFree            100060a4     coredll:COREDLL.dll
+ 0002:000000a8       __imp___security_gen_cookie 100060a8     coredll:COREDLL.dll
+ 0002:000000ac       \177COREDLL_NULL_THUNK_DATA 100060ac     coredll:COREDLL.dll
+ 0002:000000b0       __imp_PFXImportCertStore   100060b0     crypt32:CRYPT32.dll
+ 0002:000000b4       __imp_CertOpenStore        100060b4     crypt32:CRYPT32.dll
+ 0002:000000b8       __imp_CertEnumCertificatesInStore 100060b8     crypt32:CRYPT32.dll
+ 0002:000000bc       __imp_CertGetEnhancedKeyUsage 100060bc     crypt32:CRYPT32.dll
+ 0002:000000c0       __imp_CertFreeCertificateContext 100060c0     crypt32:CRYPT32.dll
+ 0002:000000c4       __imp_CertCloseStore       100060c4     crypt32:CRYPT32.dll
+ 0002:000000c8       __imp_CryptFindOIDInfo     100060c8     crypt32:CRYPT32.dll
+ 0002:000000cc       \177CRYPT32_NULL_THUNK_DATA 100060cc     crypt32:CRYPT32.dll
+ 0002:000000d0       __imp_SysFreeString        100060d0     oleaut32:OLEAUT32.dll
+ 0002:000000d4       __imp_SysAllocString       100060d4     oleaut32:OLEAUT32.dll
+ 0002:000000d8       \177OLEAUT32_NULL_THUNK_DATA 100060d8     oleaut32:OLEAUT32.dll
+ 0002:000000dc       __imp_CUnk_QISearch        100060dc     shutil:ShUtil.dll
+ 0002:000000e0       \177ShUtil_NULL_THUNK_DATA 100060e0     shutil:ShUtil.dll
+ 0002:000000e4       __imp_getaddrinfo          100060e4     Ws2:WS2.dll
+ 0002:000000e8       __imp_WSAGetLastError      100060e8     Ws2:WS2.dll
+ 0002:000000ec       __imp_bind                 100060ec     Ws2:WS2.dll
+ 0002:000000f0       __imp_freeaddrinfo         100060f0     Ws2:WS2.dll
+ 0002:000000f4       __imp_accept               100060f4     Ws2:WS2.dll
+ 0002:000000f8       __imp___WSAFDIsSet         100060f8     Ws2:WS2.dll
+ 0002:000000fc       __imp_WSACleanup           100060fc     Ws2:WS2.dll
+ 0002:00000100       __imp_sendto               10006100     Ws2:WS2.dll
+ 0002:00000104       __imp_recv                 10006104     Ws2:WS2.dll
+ 0002:00000108       __imp_socket               10006108     Ws2:WS2.dll
+ 0002:0000010c       __imp_select               1000610c     Ws2:WS2.dll
+ 0002:00000110       __imp_WSAStartup           10006110     Ws2:WS2.dll
+ 0002:00000114       __imp_closesocket          10006114     Ws2:WS2.dll
+ 0002:00000118       __imp_listen               10006118     Ws2:WS2.dll
+ 0002:0000011c       \177WS2_NULL_THUNK_DATA    1000611c     Ws2:WS2.dll
+ 0002:00000120       __imp_CoCreateInstance     10006120     ole32:ole32.dll
+ 0002:00000124       __imp_CoInitializeEx       10006124     ole32:ole32.dll
+ 0002:00000128       __imp_CoUninitialize       10006128     ole32:ole32.dll
+ 0002:0000012c       __imp_CoCreateGuid         1000612c     ole32:ole32.dll
+ 0002:00000130       \177ole32_NULL_THUNK_DATA  10006130     ole32:ole32.dll
+ 0002:00000134       __xc_a                     10006134     corelibc:crt0init.obj
+ 0002:00000140       __xc_z                     10006140     corelibc:crt0init.obj
+ 0002:00000144       __xi_a                     10006144     corelibc:crt0init.obj
+ 0002:00000148       __xi_z                     10006148     corelibc:crt0init.obj
+ 0002:0000014c       __xp_a                     1000614c     corelibc:crt0init.obj
+ 0002:00000150       __xp_z                     10006150     corelibc:crt0init.obj
+ 0002:00000154       __xt_a                     10006154     corelibc:crt0init.obj
+ 0002:00000158       __xt_z                     10006158     corelibc:crt0init.obj
+ 0002:0000015c       __security_cookie_complement 1000615c     corelibc:seccook.obj
+ 0002:00000160       __security_cookie          10006160     corelibc:seccook.obj
+ 0002:00000164       ?g_pfnRequestCallback@@3P6AJPAEKPAPAEPAK@ZA 10006164     FakeServerDll.obj
+ 0002:00000168       ?g_pFakeServer@@3V?$CComPtr@UIFakeServer@@@ATL@@A 10006168     FakeServerDll.obj
+ 0002:0000016c       __onexitend                1000616c     <common>
+ 0002:00000170       __onexitbegin              10006170     <common>
+ 0002:00000174       _exitflag                  10006174     <common>
+ 0002:00000178       _pRawDllMain               10006178     <common>
+
+ entry point at        0001:00003e3c
+
+ Static symbols
+
+ 0001:000029e8       __unwind$58984             100039e8 f   FakeServerLib:fakeserver.obj
+ 0001:00002a00       __unwind$58985             10003a00 f   FakeServerLib:fakeserver.obj
+ 0001:00002a18       __unwind$58986             10003a18 f   FakeServerLib:fakeserver.obj
+ 0001:00002a30       __unwind$58987             10003a30 f   FakeServerLib:fakeserver.obj
+ 0001:00003658       __unwind$59327             10004658 f   FakeServerLib:fakeserver.obj
+ 0001:00003bbc       __unwind$59727             10004bbc f   FakeServerLib:fakeserver.obj
+ 0001:00003e14       __unwind$47396             10004e14 f   FakeServerLib:FakeServerResp.obj
+ 0001:00004064       doexit                     10005064 f   corelibc:crt0dat.obj
+ 0001:00004634       $E1                        10005634 f   FakeServerDll.obj
+ 0001:0000464c       $E2                        1000564c f   FakeServerDll.obj

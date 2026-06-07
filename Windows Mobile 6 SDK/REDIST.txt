@@ -1,0 +1,6 @@
+
+Windows Mobile 6 SDK Refresh
+============================
+CabSignTool.exe
+GPSSettings.exe
+Cabwiz Tool (Cabwiz.exe, Makecab.exe and Cabwiz.ddf)

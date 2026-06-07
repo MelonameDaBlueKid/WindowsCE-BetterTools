@@ -1,0 +1,36 @@
+LIBRARY "EdbRapiServer"
+
+EXPORTS
+
+  DevCeMountDBVolEx  
+  DevCeCreateDatabaseWithProps
+  DevCeOidGetInfoEx2
+  DevCeCreateSession
+  DevCeOpenDatabaseInSession
+  DevCeGetDatabaseSession
+  DevCeFlushDBVol
+  DevCeWriteRecordProps
+  DevCeChangeDatabaseLCID
+  DevCeSeekDatabaseEx
+  DevCeDeleteDatabaseEx
+  DevCeDeleteRecord
+  DevCeUnmountDBVol
+  DevCeEnumDBVolumes
+  DevCeReadRecordPropsEx
+  DevCeAddDatabaseProps
+  DevCeFindFirstDatabaseEx
+  DevCeFindNextDatabaseEx
+  DevCeGetDatabaseProps
+  DevCeRemoveDatabaseProps
+  DevCeGetDBInformationByHandle
+  DevCeSetDatabaseInfo
+  DevCeFreeNotification
+  DevCeSetSessionOption
+  DevCeBeginTransaction
+  DevCeEndTransaction
+  DevCeOpenStream
+  DevCeStreamRead
+  DecCeStreamSaveChanges
+  DevCeStreamSeek
+  DevCeStreamWrite
+  DevCeStreamSetSize

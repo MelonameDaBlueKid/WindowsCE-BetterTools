@@ -1,0 +1,1147 @@
+// GSM Syntax Definition 
+// =====================
+//
+// This file defines AT commands and responses understood by the GSM simulator.
+// By editting this file, you can make the simulator model any hardware you
+// like.
+//
+// These are the default command/responses.  You may edit a response at runtime
+// using the GUI, in which case it will be saved to the registry and will always
+// override the contents of this file.  If you specified a response here and 
+// it's not being reflected in the simulation, open regedit and look at:
+//
+//      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Stinger\GSMS\GSMCommands
+//
+
+
+
+// Command/Response Patterns and Variables
+// =======================================
+//
+// Each AT command and response is defined as a "pattern" or series of tokens. 
+// Tokens may be constants or variables. 
+//
+// Patterns may be thought of like printf()/scanf() format strings.  One pattern
+// is used to identify and validate an incoming AT command, and another pattern
+// formats the outgoing response.
+//
+// Variables in a command pattern will be assigned values from the input
+// string.  Variables in a response pattern will be replaced with that value.  
+// In this way you can save the phone number dialed, or the contents of a
+// "register" assignment, and then return it in response to a query.
+//
+// You may also pre-define variables, instead of assigning them from an AT 
+// command.  A good example might be the "firmware" version the emulator should
+// report.  See "GSM context-initialization" at the bottom of this file.
+// 
+
+
+
+// Format of a Pattern Token
+// =========================
+// 
+// Pattern tokens have a type, and are declared as follows:
+//   [Type:Range|Varname]      // the [,],:, and | chars are literal.
+//
+//  . Type is one of N,X,U,S,Y,V,H,O,INT, or TXT (see below).
+//  . Range is x-y (lower and upper limits on an integer) or ANY (accepts any input).
+//  . Varname is optional; if provided, the value of the token will be saved in
+//    a variable named Varname.
+//
+//
+// Token Types
+// ===========
+//
+// Const Integer:       [N:x-y]         // input must fall between x and y
+// 
+// Const String:        [X:cccc]        // just a string.
+// 
+// Variable Integer:    [V:x-y|varname] // input value will be stored in varname
+//
+// Variable String:     [S:ANY|varname] // NOT USED?
+// 
+// Variable String:     [Y:ANY|varname] // input value will be stored in varname
+//                                      // when varname used for output, the value
+//                                      // will be returned in quotes: "var contents"
+// 
+// Variable Phone #:    [U:ANY|varname] // accepts any input 
+//                                      // number will be stored in varname
+//                                      // not sure why you'd use this instead
+//                                      // of type S or Y.
+// 
+// 
+// Response Pattern Header:
+//      H:condition,repeat_count        // if(condition) then for(i=1..repeat_count)
+//                                      //    send response
+//                                      // Is repeat functionality implemented??
+// 
+// Command Operation:
+//      O:varname                       // Perform arithmetical operation on a 
+//                                      // variable.  For example, [O:varname++]
+//                                      // will increment the variable.  
+//                                      // Only ++ and -- currently supported?
+//                                      // TODO: implement assignment: 
+//                                      //      varname := value
+// 
+// GSMSim reserved command:
+//      R:command                       // will invoke a function in the 
+//                                      // simulator to do magic stuff.
+//                                      // << investigate/document this >>
+//
+//
+
+
+// Format of a Command/Response Mapping
+// ====================================
+//
+// Command/response pairs are defined as follows:
+//  
+//  struct SGSMRespPattern
+//  {
+//  	LPCTSTR m_szKey;			// GSM comand key
+//  	LPCTSTR m_szCmdPattern;		// GSM command pattern
+//  	LPCTSTR m_szRespPattern;	// GSM response pattern
+//  	LPCTSTR m_szSyntax;			// GSM response syntax
+//  	LPCTSTR m_szDescription;	// GSM command description
+//  	LPCTSTR	m_szErrCodes;		// posible error codes
+//  };
+//  
+//
+// Example:
+//
+//  +CCFC=
+//  [X:+CCFC=][V:0-5|STNG_INT_CCFC_REASON],[V:0-4|STNG_INT_CCFC_MODE]
+//  [X:OK]
+//  OK
+//  Call forwarding setting.
+//  Default
+//
+//
+// Let's take this entry one line at a time:
+// 
+// +CCFC=
+//
+//      The short form is used to match an input string to a command definition.
+//      Also used as a registry key.
+//
+//
+// [X:+CCFC=][V:0-5|STNG_INT_CCFC_REASON],[V:0-4|STNG_INT_CCFC_MODE]
+//
+//      The long form is used to parse/validate the input string:
+//      [X:+CCFC=] 
+//          - a constant string matching "+CCFC="
+//      [V:0-5|STNG_INT_CCFC_REASON] 
+//          - an integer between 0 and 5; saved to variable STNG_INT_CCFC_REASON
+//      [V:0-4|STNG_INT_CCFC_MODE]
+//          - an integer between 0 and 4; saved to variable STNG_INT_CCFC_MODE
+//
+//
+// [X:OK]
+//
+//      The response string for this command will always be "OK" if the command
+//      is successfully parsed.
+//
+//
+// OK
+//
+//      The response syntax.  If a response is more than "OK" you should 
+//      describe it here.  Informational purposes only.  See +CLCC for good
+//      example.
+//
+//
+// Call forwarding setting.
+//      
+//      A friendly description of this command.
+//
+// Default
+//  
+//      This command may return the Default error code.  The Default is hard-
+//      coded in the simulator to "ERROR".  As near as I can tell this param 
+//      is invariant/never used and should be removed from the simulator.
+//  
+
+//============================================================================
+//
+//                          Command/Response Mappings
+//
+//============================================================================
+
+//=====
+// UMTS AT Commands for UMTS packet domain. Working together with the packetdatafilter.
+//=====
++CGATT=
+[X:+CGATT=][V:0-1|STNG_INT_CGATT_STATE]
+[X:OK]
+Ok
+Desc
+Desc
+
++CGATT=?
+NONE
+[X:+CGATT: (0,1)]
+CGATT
+Desc
+Desc
+
++CGATT?
+None
+[X:+CGATT: ][V:0-1|STNG_INT_CGATT_STATE]
+CGATT
+Desc
+Desc
+
+//=====
+
++CIND?
+None
+[X:+CIND: 5,5,0,0,1,0,1,0,0,0,0,0]
+CGATT
+Desc
+Desc
+
++CGREG=
+[X:+CGREG=][V:0-2|STNG_INT_CGREG]
+[X:OK]
+OK
+Desc
+Desc
+
++CGREG?
+None
+[X:+CGREG: ][V:0-2|STNG_INT_CGREG],[X:1]
+OK
+Desc
+Desc
+//=====
++CGAUTO=
+[X:+CGAUTO=][V:0-3|STNG_INT_CGAUTO_STATE]
+[X:OK]
+Ok
+Desc
+Desc
+
++CGAUTO=?
+NONE
+[X:+CGAUTO: (0,1,2,3)]
+CGATT
+Desc
+Desc
+
++CGAUTO?
+None
+[X:+CGAUTO: ][V:0-3|STNG_INT_CGAUTO_STATE]
+CGATT
+Desc
+Desc
+
+//====
+
++CGANS=
+None
+[X:OK]
+Ok
+Desc
+Desc
+// we always get OK response. And there is no GET operation.
+//=====
++CGEREP=
+[X:+CGEREP=][V:0-2|STNG_INT_CGEREP_MODE], {V:0-2|STNG_INT_CGEREP_BFR}
+[X:OK]
+Ok
+Desc
+Desc
+
++CGEREP?
+None
+[X:+CGEREP: ][V:0-2|STNG_INT_CGEREP_MODE], [V:0-2|STNG_INT_CGEREP_BFR]
+Ok
+Desc
+Desc
+//=====
+
+//=====
++CGCLASS=
+[X:+CGCLASS=][Y:ANY|STNG_STR_CGCLASS_CLASS]
+[X:OK]
+Ok
+Desc
+Desc
+
++CGCLASS?
+None
+[X:+CGCLASS: ][Y:ANY|STNG_STR_CGCLASS_CLASS]
+Ok
+Desc
+Desc
+//=====
+
+//=====
++CGSMS=
+[X:+CGSMS=][V:0-3|STNG_INT_CGSMS_SERVICE]
+[X:OK]
+Ok
+Desc
+Desc
+
++CGSMS?
+None
+[X:+CGSMS: ][V:0-3|STNG_INT_CGSMS_SERVICE]
+Ok
+Desc
+Desc
+//=====
+
+//=====
++CAPTT=
+[X:+CAPTT=][V:0-2|STNG_INT_CAPTT_MODE], {V:3-255|STNG_INT_CAPTT_TIME}
+[X:OK]
+Ok
+Desc
+Desc
+
++CAPTT?
+None
+[X:+CAPTT: ][V:0-2|STNG_INT_CAPTT_MODE]
+OK
+Desc
+Desc
+//=====
+
+//=====
++CAULEV=
+[X:+CAULEV=][V:0-2|STNG_INT_CAULEV_MODE]
+[X:OK]
+Ok
+Desc
+Desc
+
++CAULEV?
+None
+[X:+CAULEV: ][V:0-2|STNG_INT_CAULEV_MODE][X:,]
+Ok
+Desc
+Desc
+//=====
+
+//=====
++CACSP=
+[X:+CACSP=][V:0-2|STNG_INT_CACSP_MODE]
+[X:OK]
+Ok
+Desc
+Desc
+
++CACSP?
+None
+[X:+CACSP: ][V:0-2|STNG_INT_CACSP_MODE]
+Ok
+Desc
+Desc
+//=====
+
+//=====
++CANCHEV=
+[X:+CANCHEV=][V:0-2|STNG_INT_CANCHEV_MODE]
+[X:OK]
+Ok
+Desc
+Desc
+
++CANCHEV?
+None
+[X:+CANCHEV: 0,][V:0-2|STNG_INT_CANCHEV_MODE]
+Ok
+Desc
+Desc
+//=====
+
+//=====
+// The Get of VGR/VGT do not follow the spec but the WAVECOM implementation.
++VGR?
+None
+[X:+VGR: ][V:0-255|STNG_INT_VGR]
+[X:OK]
+Desc
+Default
+
++VGT=
+[X:+VGT=][V:0-1000|STNG_INT_VGT]
+[X:OK]
+OK
+Desc
+Default
+
++VGT?
+None
+[X:+VGT: ][V:0-1000|STNG_INT_VGT]
+OK
+Desc
+Default
+
++VGS=
+[X:+VGS=][V:0-255|STNG_INT_VGS]
+[X:OK]
+OK
+Desc
+Default
+
++VGS?
+None
+[V:0-255|STNG_INT_VGS]
+OK
+Desc
+Default
+
++VTD?
+None
+[V:0-255|STNG_INT_VTD]
+OK
+Desc
+Default
+
++VTD=
+[X:+VTD=][V:0-255|STNG_INT_VTD]
+[X:OK]
+OK
+Desc
+Default
+
+//=====
+
+
+//=====
++CRLP=?
+None
+[X:+CRLP: (0-61),(0-61),(40-255),(1-255),(0,1)]
+OK
+Desc
+Default
+
++CPOL=?
+None
+[X:+CPOL: (1-8),(0-2)]
+OK
+Desc
+Default
+
++CPBS=?
+None
+[X:+CPBS: ("MC","RC","DC","LD","LA","ME","SM","FD","ON","BN","SD","VM")]
+OK
+Desc
+Default
+
++CPBR=?
+None
+[X:+CPBR: (1-250),44,16]
+OK
+Desc
+Default
+
++CPBF=?
+None
+[X:+CPBF: 44,16]
+OK
+Desc
+Default
+
++CPWD=?
+None
+[X:+CPWD: ("SC",8),("AO",4),("OI",4),("OX",4),("AI",4),("IR",4),("AB",4),("AG",4),("AC",4),("FD",8),("BN",8),("P2",8)]
+OK
+Desc
+Default
+
++CBST=?
+None
+[X:+CBST: (0-2,4-7,12,14,65,66,68,70,71,75),(0),(0-3)]
+OK
+Desc
+Default
+
++DS=?
+None
+[X:+DS: (0-3),(0,1),(512-4096),(6-250)]
+OK
+Desc
+Default
+
++ES=?
+None
+[X:+ES: (0-3),(0,1),(512-4096),(6-250)]
+OK
+Desc
+Default
+
++CFUN=?
+None
+[X:+CFUN: (0,1),(0,1)]
+OK
+Desc
+Default
+
++CPST=?
+None
+[X:+CPST: (0-8,12,14,65,66,68,70,71,75),(0),(0-3)]
+OK
+Desc
+Default
+
++CHLD=?
+None
+[X:+CHLD: (0,1,1x,2,2x,3,6,7)]
+OK
+Desc
+Default
+
+//=====
+//=====
++CRC?
+None
+[X:+CRC: ][V:0-1|STNG_INT_CRC]
+OK
+Desc
+Default
+
++CRC=
+[X:+CRC=][V:0-1|STNG_INT_CRC]
+[X:OK]
+OK
+Desc
+Default
+//=====
+
+//=====
++CTFR=
+[X:+CTFR=][Y:ANY|STNG_STR_CTFR_NUMBER],{V:0-255|STNG_INT_CTFR_TYPE},{Y:ANY|STNG_STR_CTFR_SUBADDR},{V:0-255|STNG_INT_CTFR_SATTYPE}
+[X:OK]
+OK
+Desc No GET.
+Default
+//=====
+
+//=====
++CHLD=
+None
+[X:OK]
+OK
+desc
+desc
+//=====
+
+//=====
++VTS=
+None
+[X:OK]
+OK
+Desc No GET
+Desc
+//=====
+
+//=====
++CHSD
+None
+[X:+CHSD: 0,0,0,1,127]
+Ok
+Desc
+Desc
+
++CHSC
+None
+[X:+CHSC: 0,0,8,0]
+Ok
+Desc
+Desc
+// no GET operation for above 2 commands.
+//=====
+
+//=====
++CCUG=
+[X:+CCUG=][V:0-1|STNG_INT_CCUG_N],{V:0-10|STNG_CCUG_INDEX},{V:0-3|STNG_CCUG_INFO}
+[X:OK]
+OK
+Desc
+Desc
++CCUG?
+None
+[X:+CCUG: ][V:0-1|STNG_INT_CCUG_N],[V:0-10|STNG_CCUG_INDEX],[V:0-3|STNG_CCUG_INFO]
+OK
+Desc
+Desc
+//=====
+//=====
++CDIP=
+[X:+CDIP=][V:0-1|STNG_INT_CDIP]
+[X:OK]
+Ok
+Desc
+Desc
++CDIP?
+None
+[X:+CDIP: ][V:0-1|STNG_INT_CDIP],[X:0]
+Ok
+Desc
+Desc
+//=====
+//=====
++CLIP=
+[X:+CLIP=][V:0-1|STNG_INT_CLIP]
+[X:OK]
++CLIP=[<n>]
+Line ID presentation.
+Default
++CLIP?
+None
+[X:+CLIP: ][V:0-1|STNG_INT_CLIP],[X:0]
+Ok
+Desc
+Desc
+//=====
+//=====
++CLIR=
+[X:+CLIR=][V:0-2|STNG_INT_CLIR]
+[X:OK]
+Ok
+Desc
+Desc
++CLIR?
+None
+[X:+CLIR: ][V:0-2|STNG_INT_CLIR],[X:0]
+Ok
+Desc
+Desc
+//=====
+//=====
++CSMS=
+[X:+CSMS=][V:0-1|STNG_INT_CSMS]
+[X:+CSMS: 1,1,1]
+OK
+Desc
+Desc
++CSMS?
+None
+[X:+CSMS: ][V:0-1|STNG_INT_CSMS][X:,1,1,1]
+OK
+Desc
+Desc
+//=====
+
+//=====
++CMMS=
+[X:+CMMS=][V:0-2|STNG_INT_CMMS]
+[X:OK]
+OK
+Desc
+Desc
+
++CMMS?
+None
+[X:+CMMS: ][V:0-2|STNG_INT_CMMS]
+OK
+Desc
+Desc
+//=====
+
+//=====
++COLP=
+[X:+COLP=][V:0-1|STNG_INT_COLP]
+[X:OK]
++COLP=[<n>]
+Connected line ID Presentation.
+Default
++COLP?
+None
+[X:+COLP: ][V:0-1|STNG_INT_COLP],[X:0]
+OK
+Desc
+Desc
+//=====
+
+//=====
++CMGF=
+[X:+CMGF=][V:0-1|STNG_INT_CMGF]
+[X:OK]
++CMGF=[<mode>]
+Desc
+Desc
++CMGF?
+None
+[X:+CMGF: ][V:0-1|STNG_INT_CMGF]
+OK
+Desc
+Desc
+//=====
+
+//=====WAVECOM
++CGMI
+None
+[X:Ericsson]
+Ok
+Desc
+Desc
+
++CGMM
+None
+[X:Ericsson Mobile Platform]
+Ok
+Desc
+Desc
+
++CGMR
+None
+[X:2005-09-02 13:56 DEVICEE CRHxxxxxx_Rxxxxx Uxxx_PT_BRIDGE_CCPU]
+Ok
+Desc
+Desc
+
++CGSN
+None
+[X:004601015860746]
+Ok
+Desc
+Desc
+// no GET operation for above 4 commands.
+
++CPBW=?
+None
+[X:+CPBW: (1-100),20,(129,145),14]
+Ok
+Desc
+Desc
+
++CIMI
+None
+[X:460001035005619]
+Ok
+Desc
+Desc
+// no GET operation for this command.
++CCED=
+None
+[X:+CCED: 460,00,1030,0a3f,63,38,63,,,0,,,0,0]
+Desc
+Desc
+Desc
++CCED?
+None
+[X:+CCED: 460,00,1030,0a3f,63,38,63,,,0,,,0,0]
+Desc
+Desc
+Desc
+//=====WAVECOM
+//==============
++FOO
+NONE
+[X:string1][X:\r\n][X:string2]
+No descriptions
+Default
+
+
++CCFC=
+[X:+CCFC=][V:0-5|STNG_INT_CCFC_REASON],[V:0-4|STNG_INT_CCFC_MODE]
+[X:OK]
+OK
+Call forwarding setting.
+Default
+
++CLCC
+NONE
+[H:STNG_INT_NUM_CALLS > 0,STNG_INT_NUM_CALLS][X:+CLCC: ][V:1-100|STNG_INT_NUM_CALLS],[V:0-1|STNG_INT_CLCC_CALL_DIR],[V:0-5|STNG_INT_CLCC_STAT],[V:0-9|STNG_INT_CLCC_MODE],[V:0-1|STNG_INT_CLCC_MPTY],{U:ANY|STNG_STR_D#},{V:0-1|STNG_INT_CLCC_TYPE}
++CLCC: <id1>,<dir>,<stat>,<mode>,<mpty>[<number>,<ac>]
+List current calls
+Default
+
++CPAS
+NONE
+[X:+CPAS: ][V:0-127|STNG_INT_CPAS]
+CPAS: <pas>
+Phone activity status
+Default
+// no GET operation for this command.
++CFUN=
+[X:+CFUN=][V:0-127|STNG_INT_FUN]
+[X:OK]
+OK
+Set phone functionality.
+Default
+
++CFUN?
+None
+[X:+CFUN: ][V:0-127|STNG_INT_FUN]
++CFUN=<func>
+Query phone functionality.
+Default
+
++CREG=
+[X:+CREG=][V:0-2|STNG_INT_CREG_N]
+[R:CREG=]
+OK
+Set command controls.
+Default
+
++CREG?
+None
+[X:+CREG: ][V:0-2|STNG_INT_CREG_N],[V:0-5|STNG_INT_CREG_STAT]
++CREG: <reg>
+Set command controls.
+Default
+
++COPS?
+None
+[R:COPS?]
++COPS?
+Query operator.
+Default
+
++COPS=?
+NONE
+[R:COPS=?]
++COPS=?
+List available operators.
+Default
+
++CLCK=?
+NONE
+[X:+CLCK: ("SC","AO","OI","OX","AI","IR","AB","AG","AC","FD","BN","PN","PU","PP","PC")]
++CLCK
++CLCK
++CLCK   // how is this a valid error response?
+
++CCFC=?
+NONE
+[X:+CCFC: (0-5)]
++CLCK   // uhm...
++CLCK   // I don't think so...
++CLCK   // how is this a valid error response?
+
++COPS=
+[X:+COPS=][V:0-4|STNG_INT_COPS_MODE],{V:0-2|STNG_INT_COPS_FORMAT},{Y:ANY|STNG_STR_COPS_OPR}
+[R:COPS=]
++COPS=<mode>[,<format>,<oper>
+Set operator.
+Default
+
++CPOL?
+None
+[R:CPOL?]
++CPOL?
+Edit user preferred list.
+Default
+
++CPOL=
+[X:+CPOL=][V:0-1000|STNG_INT_CPOL_INDEX],{V:0-2|STNG_INT_CPOL_FORMAT},{Y:ANY|STNG_STR_CPOL_OPER}
+[R:CPOL=]
++CPOL=[<index>][,<format>[,<oper>]]
+Set user preferred list.
+Default
+
++CMUT=
+[X:+CMUT=][V:0-1|STNG_INT_MUTE]
+[X:OK]
++CMUT=<on/off>
+Set mute control.
+Default
+
++CMUT?
+None
+[X:+CMUT: ][V:0-1|STNG_INT_MUTE]
++CMUT: <on/off>
+Query mute control.
+Default
+
++CR=
+[X:+CR=][V:0-1|STNG_INT_CR]
+[X:OK]
+OK
+Set service reporting control.
+Default
+
++CR?
+None
+[X:+CR: ][V:0-1|STNG_INT_CR]
+OK
+Set service reporting control.
+Default
+
++CMEE=
+[X:+CMEE=][V:0-2|STNG_INT_CMEE]
+[X:OK]
+OK
+Set error reporting mode.
+Default
+
++CMEE?
+None
+[X:+CMEE: ][V:0-2|STNG_INT_CMEE]
+OK
+Set error reporting mode.
+Default
+
++WIND=
+[X:+WIND=][V:0-511|STNG_INT_WIND]
+[X:OK]
+OK
+Wind???.
+Default
+
++WIND?
+None
+[X:+WIND: ][V:0-511|STNG_INT_WIND]
+OK
+Wind???.
+Default
+
++CMOD=
+[X:+CMOD=][V:0-3|STNG_INT_CMODE]
+[X:OK]
+OK
+Select call mode.
+Default
+
++CMOD?
+None
+[X:+CMOD: ][V:0-3|STNG_INT_CMODE]
+OK
+Select call mode.
+Default
+
++CLVL=
+[X:+CLVL=][V:0-255|STNG_INT_CLVL]
+[X:OK]
+OK
+Audio gain
+Default
+
++CLVL?
+None
+[X:+CLVL: ][V:0-255|STNG_INT_CLVL]
+OK
+Audio gain.
+Default
+
++CSSN=
+[X:+CSSN=][V:0-1|STNG_INT_CSSN_I],[V:0-1|STNG_INT_CSSN_U]
+[X:OK]
+OK
+Set the Supplementary service.
+Default
+
++CSSN?
+None
+[X:+CSSN: ][V:0-1|STNG_INT_CSSN_I],[V:0-1|STNG_INT_CSSN_U]
+OK
+Set the Supplementary service.
+Default
+
++VGR=
+[X:+VGR=][V:0-255|STNG_INT_VGR]
+[X:OK]
+OK
+Set the receiver gain.
+Default
+
++CNUM
+None
+[R:CNUM]
+OK
+List the numbers.
+Default
+// no GET operation for this command.
++CPIN?
+None
+[R:CPIN?]
+CPIN: [READY|FAIL]
+PIN Ready?
+Default
+
++CPIN=
+[X:+CPIN=][Y:ANY|STNG_STR_PIN]
+[R:CPIN=]
+CPIN=pin
+Enter PIN
+Default
+
++CSCS=
+[X:+CSCS=][Y:ANY|STNG_STR_CSCS]
+[X:OK]
++CSCS=[<chset>]
+Select TE Character Set.
+Default
+
++CSCS?
+None
+[X:+CSCS: ][Y:ANY|STNG_STR_CSCS]
++CSCS=[<chset>]
+Select TE Character Set.
+Default
+
++CSCB=
+[X:+CSCB=][V:0-1|STNG_INT_CSCB_MODE],{Y:ANY|STNG_STR_CSCB_MIDS},{Y:ANY|STNG_STR_CSCB_DCSS}
+[X:OK]
++CSCB=[<mode>[,<mids>[,<dcss>]]]]
+Select CB Message Type.
+Default
+
++CSCB?
+NONE
+[X:+CSCB: ][V:0-1|STNG_INT_CSCB_MODE],{Y:ANY|STNG_STR_CSCB_MIDS},{Y:ANY|STNG_STR_CSCB_DCSS}
++CSCB=[<mode>[,<mids>[,<dcss>]]]]
+Select CB Message Type.
+Default
+
++CRSM=
+[X:+CRSM=][V:176-242|STNG_INT_CRSM_COMMAND],{V:1000-28439|STNG_INT_CRSM_P1},{V:0-100|STNG_INT_CRSM_P2},{V:0-100|STNG_INT_CRSM_P3},{V:0-100|STNG_INT_CRSM_DATA}
+[X:OK]
++CRSM=[<command>, [<filed>, [<p1>,<p2>,<p3>[,<data]]]
+Restricted SIM access.
+Default
+
++CNMI=
+[X:+CNMI=][V:0-3|STNG_INT_CNMI_MODE],{V:0-3|STNG_INT_CNMI_MT},{V:0-3|STNG_INT_CNMI_BM},{V:0-2|STNG_INT_CNMI_DS},{V:0-1|STNG_INT_CNMI_BFR}
+[X:OK]
++CNMI=[<mode>, [<mt>, [<bm>[,<ds>,[bfr]]]]
+New Message Indication to TE.
+Default
+
++CNMI?
+None
+[X:+CNMI: ][V:0-3|STNG_INT_CNMI_MODE],{V:0-3|STNG_INT_CNMI_MT},{V:0-3|STNG_INT_CNMI_BM},{V:0-2|STNG_INT_CNMI_DS},{V:0-1|STNG_INT_CNMI_BFR}
++CNMI=[<mode>, [<mt>, [<bm>[,<ds>,[bfr]]]]
+New Message Indication to TE.
+Default
+
++CUSD=
+[X:+CUSD=][V:0-1|STNG_INT_CUSD_N],{Y:ANY|STNG_STR_CUSD_STR},{V:0-100|STNG_INT_CUSD_DCS}
+[X:OK]
++CUSD=[<n>, [<str>, [<dcs]]]
+Unstructured supplementary service data.
+Default
+
++CUSD?
+None
+[X:+CUSD: ][V:0-1|STNG_INT_CUSD_N]
++CUSD?
+Unstructured supplementary service data.
+Default
+
+// NOTE: the output values for this function are not context variables 
+// defined in this file; they are internal to the simulator and are adjusted
+// by the CSQ dialog box.
++CSQ
+None
+[X:+CSQ: ][N:0-31],[N:0-7]
++CSQ: <rssi>,<ber>
+Get Signal Quality.
+Default
+
++CSIM=14,A0A40000026F7E
+NONE
+[X:+CSIM: ][X:28],[X:0000000B6F7E0400110014010000]
++CSIM: <len>,<resp>
+CSIM status on EF-LOCI
+Default
+
+
++CSIM=10,A0B000000B
+NONE
+[X:+CSIM: ][X:22],[X:0102030405060708090A0B]
++CSIM: <len>,<resp>
+CSIM readbinary on EF-LOCI
+Default
+
+
++CSIM=32,A0D600000B0102030405060708090A0B
+NONE
+[X:+CSIM: ][X:0],[X:00]
++CSIM: <len>,<resp>
+CSIM updatebinary on EF-LOCI
+Default
+
+
+%ATR?
+None
+[X:%ATR: ][X:02],[X:0100]
+%ATR: <phase>,<atr>
+Answer to reset
+Default
+
+
+AT
+[X:AT]
+[X:OK]
+OK
+Unknown
+Default
+
+D
+[X:D][U:ANY|STNG_STR_D#]
+[X:OK][O:STNG_INT_NUM_CALLS++][O:STNG_INT_CLCC_CALL_DIR++]
+OK
+Dial a number
+Default
+
+DT
+[X:DT][U:ANY|STNG_STR_D#]
+[X:OK][O:STNG_INT_NUM_CALLS++][O:STNG_INT_CLCC_CALL_DIR++]
+OK
+Dial a ras number
+Default
+
+X
+[X:X][V:1-1000|STNG_INT_ATX]
+[X:OK]
+OK
+AT initialization
+Default
+
+&C1
+[X:&C1]
+[X:OK]
+OK
+Unknown
+Default
+
+&D1
+[X:&D1]
+[X:OK]
+OK
+Unknown
+Default
+
+H
+None
+[H:STNG_INT_NUM_CALLS > 0,1][X:OK][O:STNG_INT_NUM_CALLS--][O:STNG_INT_CLCC_CALL_DIR--]
+OK
+Hang up the current call.
+Default
+
+A
+None
+[X:OK]
+OK
+Take the phone off-hook (answer incoming call).
+Default
+
+ZS0=
+[X:ZS0=][Y:ANY|STNG_STR_ATZ]
+[X:OK]
+OK
+Initialize AT Command
+Default
+
+
+////////////////////// Section for GSM Context-initialization //////////////
+////////////////////// Define your own variables here         //////////////
+{
+INT:STNG_INT_FUN=1
+TXT:STNG_STR_TEST=ABCD
+
+INT:STNG_INT_CLCC_STAT=0    // active call
+INT:STNG_INT_CLCC_MODE=0    // voice call
+INT:STNG_INT_CLCC_MPTY=0    // not a conference call
+INT:STNG_INT_CLCC_TYPE=129  // call type (129 not in ESTI 24.08,but it seems to make my CEPC happy)
+
+}
+////////////////////// End of GSM Context-initialization ///////////////////
+
+***************End*************************

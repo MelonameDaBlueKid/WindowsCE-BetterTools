@@ -1,0 +1,72 @@
+<!-- GUEmu XpCaif Config File -->
+<GUEmu>
+  <characteristic type="Config">
+    <characteristic type="XpCaif">
+      <characteristic type="Link">
+        <characteristic type="Channel">
+          <!--This value should be in (0<->4))-->
+          <parm name="Count" value="4"/>
+          <!-- End ChannelCount-->
+        </characteristic>        
+        <characteristic type="FrameChannel">
+          <parm name="Auto" value="1"/>
+          <parm name="PortName" value="\\.\COM3"/>
+          <parm name="PortRate" value="115200"/>
+          <!-- End FrameChannel-->
+        </characteristic>
+
+        <characteristic type="ATChannel">
+          <parm name="PortName" value="\\.\COM4"/>
+          <parm name="PortRate" value="115200"/>
+          <!-- End ATChannel-->
+        </characteristic>
+
+        <characteristic type="DataChannel1">
+          <parm name="PortName" value="\\.\COM5"/>
+          <parm name="PortRate" value="115200"/>
+          <!-- End DataChannel-->
+        </characteristic>
+
+        <characteristic type="DataChannel2">
+          <parm name="PortName" value="\\.\COM6"/>
+          <parm name="PortRate" value="115200"/>
+          <!-- End DataChannel-->
+        </characteristic>
+
+        <characteristic type="DataChannel3">
+          <parm name="PortName" value="\\.\COM7"/>
+          <parm name="PortRate" value="115200"/>
+          <!-- End DataChannel-->
+        </characteristic>
+
+        <characteristic type="DataChannel4">
+          <parm name="PortName" value="\\.\COM8"/>
+          <parm name="PortRate" value="115200"/>
+          <!-- End DataChannel-->
+        </characteristic>
+
+        <characteristic type="DataChannel5">
+          <parm name="PortName" value="\\.\COM9"/>
+          <parm name="PortRate" value="115200"/>
+          <!-- End DataChannel-->
+        </characteristic>
+
+        <!-- End Link-->
+      </characteristic>
+
+      <characteristic type="STXSupport">
+        <parm name="Support" value="Yes"/>
+        <!-- End STXSupport-->
+      </characteristic>
+
+      <characteristic type="PayloadData">
+        <!--This value should be in (256<->4090)-->
+        <parm name="Size" value="256"/>
+        <!-- End PayloadData-->
+      </characteristic>
+
+      <!-- End XpCaif-->
+    </characteristic>
+    <!-- End Config-->
+  </characteristic>
+</GUEmu>

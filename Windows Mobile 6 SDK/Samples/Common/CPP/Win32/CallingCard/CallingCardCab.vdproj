@@ -1,0 +1,428 @@
+"DeployProject"
+{
+"VSVersion" = "3:701"
+"ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
+"IsWebType" = "8:FALSE"
+"ProjectName" = "8:CallingCardCab"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"SccProjectName" = "8:"
+"SccLocalPath" = "8:"
+"SccAuxPath" = "8:"
+"SccProvider" = "8:"
+    "Hierarchy"
+    {
+        "Entry"
+        {
+        "MsmKey" = "8:_3AB1848010A1443CBDF39CEF70073226"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+    }
+    "Configurations"
+    {
+        "Debug"
+        {
+        "DisplayName" = "8:Debug"
+        "IsDebugOnly" = "11:TRUE"
+        "IsReleaseOnly" = "11:FALSE"
+        "OutputFilename" = "8:CallingCardCab\\Debug\\CallingCardCab.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:TRUE"
+        "CertificateHash" = "8:1049B790EDA3C369E9C206B44AF16B2657CC1555"
+        "TimeStampServer" = "8:"
+        }
+        "Release"
+        {
+        "DisplayName" = "8:Release"
+        "IsDebugOnly" = "11:FALSE"
+        "IsReleaseOnly" = "11:TRUE"
+        "OutputFilename" = "8:CallingCardCab\\Release\\CallingCardCab.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:TRUE"
+        "CertificateHash" = "8:1049B790EDA3C369E9C206B44AF16B2657CC1555"
+        "TimeStampServer" = "8:"
+        }
+    }
+    "Deployable"
+    {
+        "File"
+        {
+        }
+        "Folder"
+        {
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_0C868C8764AF48698C377E44E164DA59"
+            {
+            "Name" = "8:#1911"
+            "Condition" = "8:"
+            "Property" = "8:%CE1%"
+                "Folders"
+                {
+                }
+            }
+            "{D5B00AC1-E6C3-4CC5-90FF-8E0F53D9E5E0}:_C05ADBE4836D4FF099869E2B9A884480"
+            {
+            "DefaultLocation" = "8:Windows"
+            "Name" = "8:#1920"
+            "Condition" = "8:"
+            "Property" = "8:%InstallDir%"
+                "Folders"
+                {
+                }
+            }
+        }
+        "Product"
+        {
+        "Name" = "8:Microsoft Visual Studio"
+        "ProductName" = "8:CallingCard"
+        "Manufacturer" = "8:Microsoft"
+        "OSVersionMin" = "8:5.0"
+        "OSVersionMax" = "8:5.99"
+        "NoUninstall" = "11:FALSE"
+        "Compress" = "11:FALSE"
+        "CESetupDLL" = "8:"
+        }
+        "ProjectOutput"
+        {
+            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_3AB1848010A1443CBDF39CEF70073226"
+            {
+            "SourcePath" = "8:Windows Mobile 5.0 Smartphone SDK (ARMV4I)\\Release\\CallingCard.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C05ADBE4836D4FF099869E2B9A884480"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:0"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{D92F1241-B030-4CAE-B56F-C5BA2CB6AE4E}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+        }
+        "Registry"
+        {
+            "HKLM"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_276E8A4DFF924DBC89F1FAFDF5878524"
+                    {
+                    "Name" = "8:Software"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_41F5EA67CD9744BF9E0AD0923500776E"
+                            {
+                            "Name" = "8:Microsoft"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_C5AC42528E274D0BB3165533F8E02711"
+                                    {
+                                    "Name" = "8:Shell"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_24671F1D9F21423386F053B1342FC778"
+                                            {
+                                            "Name" = "8:Extensions"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_1063E93E56744FFEB77758A7A2E3A52E"
+                                                    {
+                                                    "Name" = "8:ContextMenus"
+                                                    "Condition" = "8:"
+                                                        "Keys"
+                                                        {
+                                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_21E73B0041284DE29DBABE4AAD2DD985"
+                                                            {
+                                                            "Name" = "8:Contacts"
+                                                            "Condition" = "8:"
+                                                                "Keys"
+                                                                {
+                                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_0AF3794F5A4B48C49111243C6AD5DE2C"
+                                                                    {
+                                                                    "Name" = "8:Main_ContextMenu"
+                                                                    "Condition" = "8:"
+                                                                        "Keys"
+                                                                        {
+                                                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_D7222EB8B8F14E738E0B8D3489718346"
+                                                                            {
+                                                                            "Name" = "8:{A1A5BFA9-9790-4f33-BA9E-6106F767821E}"
+                                                                            "Condition" = "8:"
+                                                                                "Keys"
+                                                                                {
+                                                                                }
+                                                                                "Values"
+                                                                                {
+                                                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_E53895EB45D649D1A859B6C5DE27A19E"
+                                                                                    {
+                                                                                    "Name" = "8:"
+                                                                                    "Condition" = "8:"
+                                                                                    "ValueTypes" = "3:1"
+                                                                                    "Value" = "8:Contacts Context Menu Extension"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                        }
+                                                                    }
+                                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_80EC2652A516420F836720028E7EAA8C"
+                                                                    {
+                                                                    "Name" = "8:Main_Menu"
+                                                                    "Condition" = "8:"
+                                                                        "Keys"
+                                                                        {
+                                                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_4D195BCBB5A84DE8A0A6A3CFEA1B35B1"
+                                                                            {
+                                                                            "Name" = "8:{32E6CD28-CEBD-493e-AFEC-86BA2B9C5A14}"
+                                                                            "Condition" = "8:"
+                                                                                "Keys"
+                                                                                {
+                                                                                }
+                                                                                "Values"
+                                                                                {
+                                                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_1752FBC73F114B3893BF494BE2AEF134"
+                                                                                    {
+                                                                                    "Name" = "8:"
+                                                                                    "Condition" = "8:"
+                                                                                    "ValueTypes" = "3:1"
+                                                                                    "Value" = "8:Contacts Softkey Menu Extension"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                        }
+                                                                    }
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                }
+            }
+            "HKCU"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_8415C4C3C12346EAB8A8B3CEC09C9650"
+                    {
+                    "Name" = "8:Software"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_81F39B73969B4062B9789683C0396F4E"
+                            {
+                            "Name" = "8:Microsoft"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_27978F065591409C99705735A9FEEEA5"
+                                    {
+                                    "Name" = "8:CallingCard"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                        }
+                                        "Values"
+                                        {
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_424A41FFF24642ACB41F91CFE49B72B5"
+                                            {
+                                            "Name" = "8:Pause1"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:3"
+                                            "Value" = "3:2"
+                                            }
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_654F5A46BE624087B8A64E95CEE5C7AA"
+                                            {
+                                            "Name" = "8:Pin"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:12345678"
+                                            }
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_6BFC555BA2F947AE92619F2E2974463E"
+                                            {
+                                            "Name" = "8:Number"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:1-425-555-0155"
+                                            }
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_874FA1026CE94589B7E7F7124FE61E7F"
+                                            {
+                                            "Name" = "8:Description"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:Change the below keys to the values for the particular calling card. These are just sample values"
+                                            }
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_8B0E4C43B5964C1E9FC596BC16E42389"
+                                            {
+                                            "Name" = "8:Pause2"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:3"
+                                            "Value" = "3:2"
+                                            }
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                }
+            }
+            "HKCR"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_D975CF4DF4094E299568BACA2B4D8F5B"
+                    {
+                    "Name" = "8:CLSID"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_E58B1BE842FF45CFB71700974001A64A"
+                            {
+                            "Name" = "8:{A1A5BFA9-9790-4f33-BA9E-6106F767821E}"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_86F3A9B9A9B4472FB25C9E7B3E3244B6"
+                                    {
+                                    "Name" = "8:InprocServer32"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                        }
+                                        "Values"
+                                        {
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_5C9E9C7B2F494336B895E0F6F614EFD6"
+                                            {
+                                            "Name" = "8:"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:\\Program Files\\CallingCard\\callingcard.dll"
+                                            }
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_C2BB6E12DF9E4D96A99EF15D9C2FB038"
+                                    {
+                                    "Name" = "8:"
+                                    "Condition" = "8:"
+                                    "ValueTypes" = "3:1"
+                                    "Value" = "8:Contacts Context Menu Extension"
+                                    }
+                                }
+                            }
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_F0234BE54D094B21A2F6E7764EBFABD9"
+                            {
+                            "Name" = "8:{32E6CD28-CEBD-493e-AFEC-86BA2B9C5A14}"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_A8CF6024566C4641906E5E7CAD5E8376"
+                                    {
+                                    "Name" = "8:InprocServer32"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                        }
+                                        "Values"
+                                        {
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_AC0CFAEC27B841578C2C6EBE4A69F5EB"
+                                            {
+                                            "Name" = "8:"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:\\Program Files\\CallingCard\\callingcard.dll"
+                                            }
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_FDD6F03AEF82455697B0E2FE612DDB4E"
+                                    {
+                                    "Name" = "8:"
+                                    "Condition" = "8:"
+                                    "ValueTypes" = "3:1"
+                                    "Value" = "8:Contacts Softkey Menu Extension"
+                                    }
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                }
+            }
+            "HKU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKPU"
+            {
+                "Keys"
+                {
+                }
+            }
+        }
+        "Shortcut"
+        {
+        }
+    }
+}

@@ -1,0 +1,376 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Windows Mobile 6 SDK Refresh - Tools</title>
+    <style>
+<!--
+body
+	{
+	margin: 2px 10px 0px 10px;
+	padding: 0px 0px 0px 0px;
+	background: #ffffff; 
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	width: 100%;
+	}
+h1, h2, h3, h4, h5, h6
+	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 0px;
+	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	}
+h1
+	{
+	font-size: 140%;
+	}
+h2
+	{
+	font-size: 130%;
+	}
+h3
+	{
+	font-size: 120%;
+	}
+h4
+	{
+	font-size: 100%;
+	}
+p
+	{
+	margin: .5em 0em .5em 0em;
+	}
+blockquote
+	{
+	margin: .5em 1.5em .5em 2em;
+	}
+a:link
+	{
+	color: #0000ff;
+	}
+a:visited
+	{
+	color: #666699; 
+	}
+a:hover
+	{
+	color: #3366ff;
+	}
+img
+	{
+	border: none; 
+	}
+pre
+	{
+	margin-top: .5em;
+	margin-bottom: .5em; 
+	}
+pre, code, .code
+	{
+	font: 100% Courier New, Courier, mono;
+	color: #000066;
+	}
+pre b, code b
+	{
+	letter-spacing: .1em;
+	}
+pre.syntax
+	{
+	background: #cccccc;
+	padding: 4px 8px;
+	cursor: text;
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+	}
+table
+	{
+	width: 100%;
+	margin-top: .6em;
+	margin-bottom: .3em;
+	font-size: 100%;
+	}
+th, td
+	{ 
+	padding: 4px 6px;
+	text-align: left;
+	}
+th	
+	{ 
+	vertical-align: bottom;
+	}
+
+td	
+	{
+	vertical-align: top;
+	}
+	
+-->
+</style>
+</head>
+<body lang="EN-US">
+<h1>Windows Mobile 6 SDK Refresh - Tools</h1>
+    <p>
+        The Windows Mobile 6 SDK Refresh  includes tools designed to help developers create
+        applications for Windows Mobile devices.</p>
+    <h1>
+        GPS</h1>
+    <p>
+        Tools to help developers create location-aware applications.</p>
+    <table border="1" cellspacing="0" cellpadding="0" width="100%" style='width: 100.0%;
+        background: #CCCCCC'>
+        <tr>
+            <td style="width:10%">
+                <p align="center" style='text-align: center'>
+                    <b>Tool</b></p>
+            </td>
+            <td style="width:90%">
+                <p align="center" style='text-align: center'>
+                    <b>Description</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>FakeGPS</p>
+            </td>
+            <td>
+                <p>
+                    FakeGPS enables developers to receive data using the GPS APIs even if there is
+                    no GPS receiver on the device. The GPS data is read from NMEA .txt files installed
+                    by default in \Program Files\FakeGPS\GPSFiles.</p>
+                <p>
+                    FakeGPS must run in privileged mode because it interacts with the GPS Intermediate
+                    Driver and writes to the privileged area of the registry.</p>
+                <p>
+                    FakeGPS ships with a two sample data files:
+                <ul>
+                    <li>dixies.txt: NMEA files that immediately starts sending a GPS location to the GPS
+                    driver.</li>
+                <li>
+                    fakegpsdata.txt: Same as dixies.txt, but it takes some time to report a new location.</li></ul></p>
+                <p>Default location: C:\Program Files\Windows Mobile 6 SDK\Tools\GPS</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    GPSSettings</p>
+            </td>
+            <td>
+                <p>
+                    GPSSettings enables Windows Mobile Standard users to configure the GPS intermediate driver and
+                    works in the same way as the built-in GPS settings applet on Windows Mobile Pro devices.</p>
+                <p>
+                    To use this tool, start GPSSettings.exe and set the hrdware port to the port that
+                    receives the GPS data. If you are using a Bluetooth GPS receiver, make sure you
+                    pair the GPS device and set it to an outgoing port.</p>
+                <p>
+                    For example, if you choose COM7 as the outgoing port connected to your device on
+                    the Bluetooth settings, COM7 should be also the hardware port set on GPS settings.
+                    If you set a program port, it will receive a copy of the data streamed to the hardware
+                    port.</p>
+                <p>Default location: C:\Program Files\Windows Mobile 6 SDK\Tools\GPS</p>
+            
+            </td>
+        </tr>
+    </table>
+    
+    <h1>Resolution Awareness</h1>
+    <p>Windows Mobile powered devices are available in a variety of screen resolutions and orientations.</p>
+    <table border='1' cellspacing='0' cellpadding='0' style='width: 100%; background: #CCCCCC'>
+        <tr>
+            <td style="width:10%">
+                <p><b>Tool</b></p>
+            </td>
+            <td style="width:90%">
+                <p><b>Description </b></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>SetDPI.exe</p>
+            </td>
+            <td>
+                <p>This tool is used to set the DPI of a bitmap (BMP) file.</p>
+                <p>Usage: setdpi &lt;filename&gt;.bmp &lt;dpi&gt;</p>
+                <p>Default location: C:\Program Files\Windows Mobile 6 SDK\Tools\Resolution Aware</p>
+                       
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>HIDPI.exe and RES2EXE.exe</p>
+            </td>
+            <td>
+                <p>Used to mark a .Net Compact Framework application as resolution aware. For more information, see <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnppcgen/html/developing_orientation_and_resolution_aware_apps.asp">
+                        http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnppcgen/html/developing_orientation_and_resolution_aware_apps.asp</a>.</p>
+                <p>Default location: C:\Program Files\Windows Mobile 6 SDK\Tools\Resolution Aware</p>
+            </td>
+        </tr>
+    </table>
+    
+    <h1>Security</h1>
+    <p>Several tools and sample security certificates are provided to help developers discover,
+        simulate and predict issues regarding security and their applications.</p>
+    <table border="1" cellspacing="0" cellpadding="0" width="100%" style='width: 100.0%;background: #CCCCCC'>
+        <tr>
+            <td style="width:10%">
+                <p><b>Tool </b></p>
+            </td>
+            <td style="width:90%">
+                <p><b>Description </b></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>RapiSecurity</p>
+            </td>
+            <td>
+                <p>Consists of .CPF files and related provisioning XML files that allow changing the RAPI policy on a device.</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools\Security\RapiSecurity</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>SDK Development Certificates</p>
+            </td>
+            <td>
+                <p>These files contain .cer, .pfx., .pvk, and .spc files for Privileged, Unprivileged and
+                    Failsafe SDK development certificates. Certs.xml and .cab are used to provision
+                    the SDK development certificates on the device.</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools\Security\SDK Development Certificates</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Security Powertoy</p>
+            </td>
+            <td>
+                <p>Security Configuration Manager Powertoy for Windows Mobile is a remote configuration
+                    tool that runs on a host work station, and enables you to perform the following
+                    tasks:</p>
+                <p>Examine the security configuration of a Windows Mobile-based device.</p>
+                <p>Provision one of the Standard Security Configurations onto a mobile device.</p>
+                <p>Save a mobile device's security configuration.</p>
+                <p>Add a development certificate to a mobile device.</p>
+                <p>Sign a file with a Signing Certificate.</p>
+                <p>Check a file's digital signature.</p>
+                <p>To install the Security Configuration Manager Powertoy for Windows Mobile, just
+                    double-click the Setup.msi installer file.</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools\Security\Security Powertoy</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Security Configuration</p>
+            </td>
+            <td>
+                <p>.CPFs and related provisioning XML files that allow changing the security policies
+                    on the device to one of the standard security configurations.</p>
+                <p>Default Location:<br /> C:\Program Files\Windows Mobile 6 SDK\Tools\Pocket PC\Security\Security Configuration<br />C:\Program Files\Windows Mobile 6 SDK\Tools\Smartphone\SecurityConfiguration</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>RapiConfig</p>
+            </td>
+            <td>
+                <p>RapiConfig.exe is a desktop configuration tool that allows execution of provisioning
+                    XML on a Windows Mobile powered device or emulator connected using ActiveSync.</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools\Security\RapiSecurity\RapiConfig</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>CabSignTool</p>
+            </td>
+            <td>
+                <p>CabSignTool.exe signs a .cab file and all its executable content (.exe, .dll) with specified certificate(s).</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools\Security\CabSignTool</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Revoke</p>
+            </td>
+            <td>
+                <p>This tool generates the hash of a certificate or application and outputs an XML
+                    document to provision the device to revoke the application or certificate.</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools</p>
+            </td>
+        </tr>
+    </table>
+
+    <h1>Testing</h1>
+    <p>Tool to help developers test applications.</p>
+    <table border='1' cellspacing='0' cellpadding='0' style='width: 100%; background: #CCCCCC'>
+        <tr>
+            <td style="width:10%">
+                <p><b>Tool</b></p>
+            </td>
+            <td style="width:90%">
+                <p><b>Description </b></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Hopper</p>
+            </td>
+            <td>
+                <p>Hopper is a software test tool that simulates input stress on Windows Mobile based
+                    devices. Hopper will stress all applications made available through the menu system
+                    by rapidly sending keystrokes and screen taps in a random fashion.</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools\Hopper</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Windows Mobile Test Framework</td>
+            <td>
+                The Windows Mobile Test Framework contains a collection of classes, interfaces, and value types that allow your test code to access controls and resources on a Windows Mobile device.</td>
+        </tr>        
+    </table>
+    
+    <h1>Connectivity - Cellular Emulation</h1>
+    <p>Tool to emulate a cellular network</p>
+    <table border='1' cellspacing='0' cellpadding='0' style='width: 100%; background: #CCCCCC'>
+        <tr>
+            <td style="width:10%">
+                <p><b>Tool</b></p>
+            </td>
+            <td style="width:90%">
+                <p><b>Description </b></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Cellular Emulator</p>
+            </td>
+            <td>
+                <p>Cellular Emulator is a software-based emulator to facilitate developers and testers
+                in developing and testing their software under the Windows Mobile platform. The
+                design goal of Cellular Emulator is to replace the radio module in both development
+                and test environments. The advantage of Cellular Emulator is that it provides not
+                only voice but also data connectivity. Moreover, Cellular Emulator is a powerful
+                tool to test various applications under different wireless network conditions in
+                GSM/GPRS and/or UMTS networks. Cellular Emulator replaces FakeRIL on Windows Mobile
+                6 SDK.</p>
+                <p>Cellular Emulator can be started from the "Start Menu", "Windows Mobile 6 SDK" and "Tools"</p>
+                <p>Default Location: C:\Program Files\Windows Mobile 6 SDK\Tools\Cellular Emulator</p>
+                
+            </td>
+        </tr>
+    </table>
+
+	<h1><a name="Feedback">Feedback</a> </h1>
+	<p>Submit bug reports or suggestions to <a href="mailto:mddsdkfb@microsoft.com?subject=Windows Mobile 6 SDK Refresh - Tools Readme">
+            mddsdkfb@microsoft.com</a>.</p>
+	<p>©2007 Microsoft Corporation.</p>
+    
+</body>
+</html>

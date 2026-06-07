@@ -1,0 +1,726 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <title>Windows Mobile 6 SDK Refresh</title>
+    <style type="text/css"> 
+@import url(readme.htm);
+@import url(readme.htm);
+h2
+  {margin-top:12pt;
+  margin-right:0in;
+  margin-bottom:12.0pt;
+  margin-left:0in;
+  font-size:13.0pt;
+  font-family:Arial;
+  color:maroon;
+  }
+</style>
+    <base target="_blank">
+  </head>
+  <body>
+    <h1>
+      <a name="Introduction"
+          id="Introduction">Windows Mobile 6.5.3 DTK</a>
+    </h1>
+    <p>
+      The Windows Mobile 6.5.3 DTK adds documentation, sample code, header and library files, emulator images
+      and tools to Visual Studio that let you build applications for Windows Mobile 6.5 and Windows Mobile 6.5.3. This
+      document contains important information about this package. For general information about writing software for
+      Windows Mobile, please see the <a href="http://msdn.microsoft.com/windowsmobile/">Windows Mobile Developer
+      Center</a>.
+    </p>
+    <h1>
+      <a name="WhatIsNew"
+          id="WhatIsNew">What&rsquo;s New in the Windows Mobile 6.5.3 DTK?</a>
+    </h1>
+    <table width="100%">
+      <tr>
+        <td class="gray">
+          <b>Developer Experience Features</b>
+        </td>
+        <td class="gray">
+          <b>Description</b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Windows Mobile 6.5</b>
+          </p>
+        </td>
+        <td>
+          <p>
+          	Windows Mobile 6.5 and Windows Mobile 6.5.3 contain significant enhancements from prior versions of Windows
+          	Mobile. Of special note are the Gesture APIs. These APIs and other aspects of Windows Mobile
+          	6.5 are documented in the	Windows Mobile 6.5 documentation. This documentation includes information about
+          	Windows Mobile 6.5.3 and is included with this release of the DTK. It can be accessed as a standalone
+          	collection through the Start Menu or by	using "F1" inside Visual Studio (Visual Studio 2005 only). It is
+          	available from the Start menu in	the Windows	Mobile 6.5.3 DTK installation, where it is called Windows
+          	Mobile 6.5.3 DTK Help.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Relation to Prior Versions</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            This Windows Mobile 6.5.3 DTK should be installed after the Windows Mobile 6 SDK Refresh is
+            installed to provide the base tools. The installation of this DTK will not overwrite anything from the SDK.
+            The two versions co-exist side by side in Visual Studio and it is possible to write concurrently for both
+            Windows Mobile 6 and Windows Mobile 6.5.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Documentation</b>
+          </p>
+        </td>
+        <td>
+          <p>
+          	Windows Mobile 6.5 documentation includes information about Windows Mobile 6.5.3 and is included with this
+          	release of the DTK. This documentation provides information about Windows 6.5 features and APIs. It can be
+          	accessed as a standalone collection through the Start Menu or by using "F1" inside Visual Studio (Visual
+          	Studio 2005	only). It is available from the Start menu in	the Windows Mobile 6.5.3 DTK installation, where it
+          	is called Windows Mobile 6.5.3 DTK Help.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Windows Mobile Classic</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            There is no Windows Mobile 6.5 (or later) version of Windows Mobile Classic.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Visual Studio 2008</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            The Windows Mobile 6.5.3 DTK may be used with Visual Studio 2008 as well as with Visual Studio 2005.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Mobile Mapping Framework Sample</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            A new code sample is provided that uses the Mobile Mapping Framework. The folder is <b>...\Samples\Common\CS\MMF</b>.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Native Control Theming Support</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            There is now support for native control theming.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Widget Project Type</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            Visual Studio 2005 Professional Service Pack 1 and Visual Studio 2008 now provide a <b>Widgets for Window
+            Mobile</b> project type.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Device Emulator.exe</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            Device Emulator.exe, which is required to load images, is not
+            included in the DTK. It installs with Visual Studio 2008 or can be downloaded from <a href=
+            "http://go.microsoft.com/fwlink/?LinkId=183127">
+            Microsoft Device Emulator 3.0, Standalone Release</a>.
+          </p>
+         </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Emulator Images</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            The Windows Mobile 6.5.3 DTK comes with the following emulator images:
+          </p>
+          <p>
+            <u>Windows Mobile Professional</u>
+          </p>
+          <ul>
+            <li>Windows Mobile 6.5.3 Professional Device
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Professional Emulator
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Professional Square QVGA Emulator
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Professional Square VGA Emulator
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Professional VGA Emulator
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Professional WQVGA Emulator
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Professional WVGA Emulator
+            </li>
+          </ul>
+          <p>
+            <u>Windows Mobile 6 Standard</u>
+          </p>
+          <ul>
+            <li>Windows Mobile 6.5.3 Standard Device
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Standard Landscape QVGA Emulator
+            </li>
+          </ul>
+          <ul>
+            <li>Windows Mobile 6.5.3 Standard QVGA Emulator
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>New Certificates</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            There are new certificates to replace the old ones that expired in 2009.
+            The new certificates expire in 2015. You will find them in the 
+            <b>...\Tools\Security\SDK Development Certificates<b> directory.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>No Cellular Emulator</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            The Cellular Emulator introduced in the Windows Mobile 6 SDK Refresh is not being supplied with this
+            DTK release.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>New Tools</b>
+          </p>
+        </td>
+        <td>
+          <p>
+          	xHopper &ndash; A revision of Hopper for Windows Mobile 6.5. Like Hopper, xHopper is a software test tool
+          	that simulates input stress on Windows Mobile devices. xHopper stresses all applications made available
+          	through the menu system by rapidly sending keystrokes and screen taps in a random fashion. Please see the
+          	topic <b>xHopper Test Tool QuickStart Guide</b> in the Windows Mobile 6.5 documentation that is included 
+          	with this release of the DTK. It can be accessed as a standalone collection through the Start Menu or by
+          	using "F1" inside Visual Studio (Visual Studio 2005	only). It is available from the Start menu in	the Windows
+          	Mobile 6.5.3 DTK installation, where it is called Windows Mobile 6.5.3 DTK Help.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h1>
+      <a name="WhatIsNew"
+          id="WhatIsNew">What Was New in the Windows Mobile 6 SDK Refresh?</a>
+    </h1>
+    <p>
+      The following features were new in the Windows Mobile 6 SDK Refresh release which preceded this release,
+      and still apply to this release.
+    </p>
+    <table width="100%">
+      <tr>
+        <td class="gray">
+          <b>Developer Experience Features</b>
+        </td>
+        <td class="gray">
+          <b>Description</b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Windows Mobile Categories</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            With Windows Mobile 6, we are revising our SKU taxonomy and naming to better align our brand and products
+            with the realities of today&rsquo;s mobile device marketplace. The historical form-factor based distinction
+            between Windows Mobile powered Smartphone and Windows Mobile powered Pocket PC Phone Edition is blurring
+            dramatically. We want our taxonomies and terminology to evolve to better reflect the evolution of the
+            mobile device industry.
+          </p>
+          <p>
+            The table below summarizes the changes:
+          </p>
+          <div align="center">
+            <table>
+              <tr>
+                <td>
+                  <p>
+                    <b>Previous Categories</b>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <b>New Categories</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    Windows Mobile for Pocket PC
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    Windows Mobile Classic
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    Windows Mobile for Pocket PC Phone Edition
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    Windows Mobile Professional
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    Windows Mobile for Smartphone
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    Windows Mobile Standard
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p>
+            The Windows Mobile 6.5.3 DTK reflects these changes on the naming of "Project Templates" and
+            "Emulator Images". However some folders still have names that reflect older categories such as 
+            &ldquo;PocketPC&rdquo; and &ldquo;SmartPhone&rdquo;.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>.NET Compact Framework</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            The .NET Compact Framework is a hardware-independent environment for running programs on
+            resource-constrained computing devices. It is a subset of the .NET Framework class library and also
+            contains classes exclusively designed for it. It inherits the full .NET Framework architecture of the
+            common language runtime and managed code execution.
+          </p>
+          <p>
+            <u>The .NET Compact Framework 2.0 Service Pack 2 is now included in the ROM of Windows Mobile 6.5
+            devices.</u>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Microsoft SQL Server&trade; 2005 Compact Edition</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            SQL Server Compact Edition is a lightweight relational database for use as a compact local database on a
+            PC, Tablet PC, Windows Mobile device, or Windows CE device. Developers will be able to use the same
+            database to develop occasionally-connected applications consistently across all Microsoft client platforms.
+            The database can be used for local storage as well as for data synchronization with other editions of SQL
+            Server 2005.
+          </p>
+          <p>
+            <u>SQL Server Compact Edition is included in ROM of Windows Mobile 6 devices.</u>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Device Emulator</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            Device Emulator 2.0 provides greatly improved performance at executing ARM instruction. It reduces
+            cold-boot time and improves application execution speed. It provides high resolution input, the ability to
+            change emulator options on-the-fly and has added driver support in the BSP for peripherals such as battery
+            and headset/speakerphone with Windows Mobile 6.5 emulator images.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Windows Mobile Ink</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            Windows Mobile Ink is the ink service platform for Windows Mobile Classic and Professional. It provides
+            full interoperability with ink data from Tablet PC through ISF stream and brings a rich inking experience,
+            similar to Tablet PC, to Windows Mobile through high quality, curve-fitted ink. It provides APIs for Ink
+            Collection, recognition, rendering, and Ink data management.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Sound APIs</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            A new set of APIs were introduced in Windows Mobile 6 to make it easier to manage and play sound. The new
+            APIs support playing sounds in a variety of formats that Windows Media Player supports (MID, WMA, MP3, WAV,
+            etc.) and provide the option to respect the phone&rsquo;s profile when playing sounds.
+          </p>
+          <p>
+            These APIs are defined in &lt;soundfile.h&gt;.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>Documentation</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            Documentation can be accessed as a standalone collection through the Start Menu or using "F1" inside Visual
+            Studio.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <b>New Tools</b>
+          </p>
+        </td>
+        <td>
+          <p>
+            FakeGPS - Enables developers to receive data using the GPS APIs even if there is no GPS receiver on the
+            device.
+          </p>
+          <p>
+            GPSSettings - Enables Windows Mobile Standard users to configure the GPS Intermediate driver. It works in
+            the same way as the built-in GPS Settings applet on Windows Mobile Classic and Professional.
+          </p>
+          <p>
+            Hopper - A software test tool that simulates input stress on Windows Mobile powered devices. Hopper
+            stresses all applications made available through the menu system by rapidly sending keystrokes and screen
+            taps in a random fashion.
+          </p>
+          <p>
+            CabSignerTool - CabSignTool signs a CAB and all its executable content (.exe, .dll) with specified
+            certificates.
+          </p>
+          <p>
+            FakeServer - A generic server library that enables users to write web services that run on the device
+            locally.
+          </p>
+          <p>
+            Windows Mobile Test Framework - The Windows Mobile Test Framework contains a collection of classes,
+            interfaces, and value types that allow your test code to access controls and resources on a Windows Mobile
+            device.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h1>
+      <a name="Requirements"
+          id="Requirements">Requirements</a>
+    </h1>The following software is required. Please check each application's system requirements individually.<br>
+    <br>
+    <b>Windows Server 2003</b>
+    <ul>
+      <li>Windows Server 2003 Service Pack 2.
+      </li>
+      <li>Microsoft Visual Studio 2008 Professional Edition or above, or Microsoft Visual Studio 2005 Standard Edition
+      or above. For Visual Studio 2005, the Professional Edition or above is required for widget development. Express
+      Editions are not supported. <a href="http://go.microsoft.com/fwlink/?LinkId=77643">Service Pack 1 for Visual
+      Studio 2005</a> is recommended, as is <a href="http://go.microsoft.com/fwlink/?LinkId=183073">Service Pack 1 for
+      Visual Studio 2008</a>.
+      </li>
+      <li>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=86934&amp;clcid=0x409">Microsoft .NET Compact Framework v2
+        Service Pack 2</a>.
+      </li>
+      <li>ActiveSync 4.5. If not currently installed, it is available from this <a href=
+      "http://go.microsoft.com/fwlink/?LinkId=82622">Microsoft Windows Mobile web site</a>.
+      </li>
+    </ul>
+    <p>
+      <b>Windows Server 2008</b>
+    </p>
+    <ul>
+      <li>Windows Server 2008 Service Pack 2.
+      </li>
+      <li>Microsoft Visual Studio 2008 Professional Edition or above, or Microsoft Visual Studio 2005 Standard Edition
+      or above. For Visual Studio 2005, the Professional Edition or above is required for widget development. Express
+      Editions are not supported. <a href="http://go.microsoft.com/fwlink/?LinkId=77643">Service Pack 1 for Visual
+      Studio 2005</a> is recommended, as is <a href="http://go.microsoft.com/fwlink/?LinkId=183073">Service Pack 1 for
+      Visual Studio 2008</a>.
+      </li>
+      <li>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=86934&amp;clcid=0x409">Microsoft .NET Compact Framework v2
+        Service Pack 2</a>.
+      </li>
+      <li>ActiveSync 4.5. If not currently installed, it is available from this <a href=
+      "http://go.microsoft.com/fwlink/?LinkId=82622">Microsoft Windows Mobile web site</a>.
+      </li>
+    </ul>
+    <p>
+      <b>Windows XP</b>
+    </p>
+    <ul>
+      <li>Microsoft Windows XP Service Pack 3.
+      </li>
+      <li>Microsoft Visual Studio 2008 Professional Edition or above, or Microsoft Visual Studio 2005 Standard Edition
+      or above. For Visual Studio 2005, the Professional Edition or above is required for widget development. Express
+      Editions are not supported. <a href="http://go.microsoft.com/fwlink/?LinkId=77643">Service Pack 1 for Visual
+      Studio 2005</a> is recommended, as is <a href="http://go.microsoft.com/fwlink/?LinkId=183073">Service Pack 1 for
+      Visual Studio 2008</a>.
+      </li>
+      <li>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=86934&amp;clcid=0x409">Microsoft .NET Compact Framework v2
+        Service Pack 2</a>.
+      </li>
+      <li>ActiveSync 4.5. If not currently installed, it is available from this <a href=
+      "http://go.microsoft.com/fwlink/?LinkId=82622">Microsoft Windows Mobile web site</a>.
+      </li>
+    </ul>
+    <p>
+      <b>Windows Vista</b>
+    </p>
+    <ul>
+      <li>Microsoft Windows Vista. Service Pack 2 is recommended.
+      </li>
+      <li>Microsoft Visual Studio 2008 Professional Edition or above, or Microsoft Visual Studio 2005 Standard Edition
+      or above. For Visual Studio 2005, the Professional Edition or above is required for widget development. Express
+      Editions are not supported. For Visual Studio 2005, <a href=
+      "http://go.microsoft.com/fwlink/?LinkId=77643">Service Pack 1</a> and <a href=
+      "http://www.microsoft.com/downloads/details.aspx?familyid=90e2942d-3ad1-4873-a2ee-4acc0aace5b6&amp;displaylang=en">
+        Service Pack 1 Update for Windows Vista</a> are required. For Visual Studio 2008, <a href=
+        "http://go.microsoft.com/fwlink/?LinkId=183073">Service Pack 1</a> is recommended.
+      </li>
+      <li>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=86934&amp;clcid=0x409">Microsoft .NET Compact Framework v2
+        Service Pack 2</a>.
+      </li>
+      <li>For synchronizing data, the Windows Mobile Device Center is required. It is available from this <a href=
+      "http://go.microsoft.com/fwlink/?LinkId=82622">Microsoft Windows Mobile web site</a>.
+      </li>
+    </ul>
+    <p>
+      <b>Windows 7</b>
+    </p>
+    <ul>
+      <li>Microsoft Windows 7.
+      </li>
+      <li>Microsoft Visual Studio 2008 Professional Edition or above, or Microsoft Visual Studio 2005 Standard Edition
+      or above. For Visual Studio 2005, the Professional Edition or above is required for widget development. Express
+      Editions are not supported. <a href="http://go.microsoft.com/fwlink/?LinkId=77643">Service Pack 1 for Visual
+      Studio 2005</a> is recommended, as is <a href="http://go.microsoft.com/fwlink/?LinkId=183073">Service Pack 1 for
+      Visual Studio 2008</a>.
+      </li>
+      <li>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=86934&amp;clcid=0x409">Microsoft .NET Compact Framework v2
+        Service Pack 2</a>.
+      </li>
+      <li>For synchronizing data, the Windows Mobile Device Center is required. It is available from this <a href=
+      "http://go.microsoft.com/fwlink/?LinkId=82622">Microsoft Windows Mobile web site</a>.
+      </li>
+    </ul><br>
+    <b>Important:</b> "Visual C++ Smart Device Programmability", which is an option of Microsoft Visual Studio 2005
+    Setup, must be selected and installed during Visual Studio 2005 installation.<br>
+    <br>
+    Please read and take note of all requirements for those packages, which are detailed on the appropriate download
+    pages.
+    <p>
+      Click <a href="http://go.microsoft.com/fwlink/?LinkId=183070">here</a> for more information on software
+      requirements for the Windows Mobile 6.5.3 DTK.
+    </p>
+    <h1>
+      <a name="Installation"
+          id="Installation">Installation</a>
+    </h1>
+    <p>
+      The Windows Mobile 6 SDK Refresh is a prerequisite for the Windows Mobile 6.5.3 DTK and is
+      available <a href="http://go.microsoft.com/fwlink/?LinkId=71212">here</a>. The Windows Mobile 6.5.3 DTK is
+      available <a href="http://go.microsoft.com/fwlink/?LinkId=183070">here</a>. Install the SDK and DTK
+      packages by double-clicking on the compressed archive (MSI file).
+    </p>
+    <h1>
+      <a name="Development_Notes"
+          id="Development_Notes">Development Notes</a>
+    </h1>
+    <h2>
+      Virtual Studio 2005 Standard is not supported for widget development.
+    </h2>
+    <p>
+      Virtual Studio 2005 Standard is not supported for widget development. You must use the Professional or greater
+      version of either Visual Studio 2005 or Visual Studio 2008.
+    </p>
+    <h2>
+      F1 Help is not supported in Visual Studio 2008.
+    </h2>
+    <p>
+      F1 does not provide access to the Windows Mobile 6.5.3 DTK Help in Visual Studio 2008. F1 does provide
+      access in Visual Studio 2005.
+    </p>
+    <h2>
+      Smart Device project templates for Windows Mobile 6.5.3 are not available in Visual Studio 2008.
+    </h2>
+    <p>
+      Smart Device project templates for Windows Mobile 6.5.3 are available in Visual Studio 2005 but not in Visual
+      Studio 2008.
+    </p>
+    <h2>
+      Deploying managed applications to the emulator always causes the .Net Compact Framework to be deployed
+    </h2>
+    <p>
+      When an application is deployed to the device or emulator, Visual Studio checks if .NET Compact Framework 2.0 is
+      installed. If it is not installed Visual Studio deploys the framework and then the application. Although emulator
+      images and Windows&#0174 phones that run Windows Mobile 6 have .NET Compact Framework <b>2.0 SP2</b> in the ROM, Visual Studio
+      continues to check for the <b>2.0</b> release and every time tries to deploy it; however the installation fails
+      because it is not possible to install an older version (2.0) on top of a newer version (2.0 SP2). Since the
+      installation failed, the next time Visual Studio will try to deploy it again. To fix this behavior install the
+      .<a href="http://go.microsoft.com/fwlink/?LinkId=86934&amp;clcid=0x409">NET Compact Framework 2.0 Service Pack
+      2</a>.
+    </p>
+    <h2>
+      The Windows Mobile 6.5.3 DTK installation rolls back
+    </h2>
+    <p>
+      "Visual C++ Smart Device Programmability", which is an option of Visual Studio 2005 Setup, must be selected and
+      installed before installing the Windows Mobile 6.5.3 DTK. If this feature is not installed, the Windows
+      Mobile 6.5.3 DTK setup will roll back and not install properly.
+    </p>
+    <h2>
+      Compiling Samples under Windows Vista
+    </h2>
+    <p>
+      On Windows Vista, it may not be possible to compile the samples directly on the Windows Mobile 6.5.3 DTK
+      Samples installation folder due to permissions. Copy the samples to a location where you have read and
+      write permissions before opening them in Visual Studio.
+    </p>
+    <h2>
+      Windows Server 2003 and DTK installation
+    </h2>
+    <p>
+      Security polices can trigger at the Software Restrictions Polices level when the DTK loads into memory because of
+      the size and number of files in the DTK. The installation fails with a message stating that the package was
+      rejected by digital signature policy. A workaround is available <a href=
+      "http://blogs.msdn.com/heaths/archive/2006/08/23/715558.aspx">here</a>.
+    </p>
+    <h1>
+      <a name="Developer_Support"
+          id="Developer_Support">Developer Support</a>
+    </h1>
+    <p>
+      For information on Microsoft Developer Support, please see <a href=
+      "http://msdn.microsoft.com/support/">http://msdn.microsoft.com/support/</a>.
+    </p>
+    <p>
+      For information on the .NET Framework, its associated DTKs, redistributables and service packs, visit the
+      <a href="http://msdn.microsoft.com/netframework/downloads/updates/default.aspx">MSDN .NET Framework Developer
+      Center</a>.
+    </p>
+    <h1>
+      <a name="License_Agreement"
+          id="License_Agreement">License Agreement</a>
+    </h1>
+    <p>
+      The contents included in the DTK are licensed to you. Your use of the DTK is subject
+      to the terms of an End User License Agreement ("EULA") accompanying the DTK. You must read and accept the
+      terms of the EULA before you access or use the DTK. If you do not agree to the terms of the EULA, you are not
+      authorized to use the DTK.
+    </p>
+    <p>
+      The license agreement is installed to your hard disk.
+    </p>
+    <h1>
+      <a name="Feedback"
+          id="Feedback">Feedback</a>
+    </h1>
+    <p>
+      Submit bug reports or suggestions to <a href=
+      "mailto:wmdtkfb@microsoft.com?subject=Windows%20Mobile%206.5.3%20LTK%20-%20Readme">wmdtkfb@microsoft.com</a>.
+    </p>
+    <p>
+      &copy;2010 Microsoft Corporation.
+    </p>
+  </body>
+</html>

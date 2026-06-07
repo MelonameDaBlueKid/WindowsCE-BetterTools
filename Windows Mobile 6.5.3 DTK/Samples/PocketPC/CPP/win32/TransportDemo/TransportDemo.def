@@ -1,0 +1,5 @@
+LIBRARY         TransportDemo
+;DESCRIPTION     'Sample Mail Transport'
+EXPORTS
+        DllMain
+        OneStopFactory

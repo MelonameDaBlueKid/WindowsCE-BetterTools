@@ -1,0 +1,206 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_INKY                ICON    DISCARDABLE     "inky.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MENU SHMENUBAR MOVEABLE PURE 
+BEGIN
+    IDM_MENU, 3,
+    I_IMAGENONE, ID_NEW, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_NEW, 0, 
+    NOMENU,
+    I_IMAGENONE, ID_EDIT, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_EDIT, 0, 1,
+    I_IMAGENONE, ID_TOOLS, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_TOOLS, 0, 2,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "New",                         ID_NEW
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Undo",                        ID_EDIT_UNDO
+        MENUITEM "Redo",                        ID_EDIT_REDO
+    END
+    POPUP "Tools"
+    BEGIN
+        POPUP "Pen Mode"
+        BEGIN
+            MENUITEM "Pen",                         ID_TOOLS_PENMODE_PEN
+            MENUITEM "Select",                      ID_TOOLS_PENMODE_SELECT
+            MENUITEM "Space",                       ID_TOOLS_PENMODE_SPACE
+        END
+        POPUP "View Mode"
+        BEGIN
+            MENUITEM "Typing",                      ID_TOOLS_VIEWMODE_TYPING
+            MENUITEM "Writing",                     ID_TOOLS_VIEWMODE_WRITING
+
+            MENUITEM "Drawing",                     ID_TOOLS_VIEWMODE_DRAWING
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Save...",                     ID_TOOLS_SAVE
+        MENUITEM "Open...",                     ID_TOOLS_OPEN
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SAVE DIALOG DISCARDABLE  0, 0, 140, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save File"
+FONT 8, "System"
+BEGIN
+    LTEXT           "Save to file name:",IDC_STATIC,7,7,79,10
+    EDITTEXT        IDC_SAVENAME,7,18,125,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDC_CANCEL,92,37,40,13
+    PUSHBUTTON      "Save",IDOK,42,37,39,13
+END
+
+IDD_OPEN DIALOG DISCARDABLE  0, 0, 140, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open File"
+FONT 8, "System"
+BEGIN
+    LTEXT           "File to open (including absolute path):",IDC_STATIC,7,7,
+                    125,11
+    EDITTEXT        IDC_OPENFILE,7,18,125,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDC_CANCEL,92,36,40,13
+    PUSHBUTTON      "Open",IDOK,40,36,41,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SAVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_OPEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_TOOLS           "Tools"
+    IDS_CAP_EDIT            "Edit"
+    IDS_CAP_NEW             "New"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

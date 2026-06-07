@@ -1,0 +1,12 @@
+#include "utils.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROVXML             "<wap-provisioningdoc>\n<characteristic type=""BrowserFavorite"">\n<characteristic type=""MSN"">\n<parm name=""URL"" value=""http://www.msn.com""/>\n</characteristic>\n</characteristic>\n</wap-provisioningdoc>"
+END
+

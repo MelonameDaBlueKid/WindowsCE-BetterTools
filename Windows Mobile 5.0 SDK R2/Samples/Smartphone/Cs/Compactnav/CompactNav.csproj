@@ -1,0 +1,150 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5" DefaultTargets="Build">
+  
+  <PropertyGroup>
+    
+    <Configuration Condition=" &apos;$(Configuration)&apos; == &apos;&apos; ">Debug</Configuration>
+    
+    <Platform Condition=" &apos;$(Platform)&apos; == &apos;&apos; ">AnyCPU</Platform>
+    
+    <ProductVersion>8.0.50215</ProductVersion>
+    
+    <SchemaVersion>2.0</SchemaVersion>
+    
+    <ProjectGuid>{9EFD3115-5B42-45D7-B7DE-76791FAD19D2}</ProjectGuid>
+    
+    <OutputType>WinExe</OutputType>
+    
+    <RootNamespace>CompactNav</RootNamespace>
+    
+    <AssemblyName>CompactNav</AssemblyName>
+    
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    
+    <PlatformFamilyName>Smartphone</PlatformFamilyName>
+    
+    <PlatformID>BD0CC567-F6FD-4ca3-99D2-063EFDFC0A39</PlatformID>
+    
+    <OSVersion>5.01</OSVersion>
+    
+    <DeployDirSuffix>CompactNav</DeployDirSuffix>
+    
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    
+    <FormFactorID></FormFactorID>
+    <FileUpgradeFlags></FileUpgradeFlags>
+    <UpgradeBackupLocation></UpgradeBackupLocation>    
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <NativePlatformName>Windows Mobile 5.0 Smartphone SDK</NativePlatformName>
+  
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" &apos;$(Configuration)|$(Platform)&apos; == &apos;Debug|AnyCPU&apos; ">
+    
+    <DebugSymbols>true</DebugSymbols>
+    
+    <Optimize>false</Optimize>
+    
+    <OutputPath>bin\Debug\</OutputPath>
+    
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    
+    <NoStdLib>true</NoStdLib>
+    
+    <NoConfig>true</NoConfig>
+    
+    <FileAlignment>512</FileAlignment>
+    
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" &apos;$(Configuration)|$(Platform)&apos; == &apos;Release|AnyCPU&apos; ">
+    
+    <DebugType>pdbonly</DebugType>
+    
+    <Optimize>true</Optimize>
+    
+    <OutputPath>bin\Release\</OutputPath>
+    
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    
+    <NoStdLib>true</NoStdLib>
+    
+    <NoConfig>true</NoConfig>
+    
+    <FileAlignment>512</FileAlignment>
+    
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  
+  </PropertyGroup>
+  
+  <ItemGroup>
+    
+    <Reference Include="mscorlib"></Reference>
+    
+    <Reference Include="System"></Reference>
+    
+    <Reference Include="System.Data"></Reference>
+    
+    <Reference Include="System.Drawing"></Reference>
+    
+    <Reference Include="System.Windows.Forms"></Reference>
+    
+    <Reference Include="System.Xml"></Reference>
+  
+  </ItemGroup>
+  
+  <ItemGroup>
+    
+    <Compile Include="Form1.cs">
+      
+      <SubType>Form</SubType>
+    
+    </Compile>
+    
+    <Compile Include="Properties\AssemblyInfo.cs"></Compile>
+    
+    <Compile Include="Properties\Resources.cs">
+      
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      
+      <DependentUpon>Resources.resx</DependentUpon>
+    
+    </Compile>
+    
+    <EmbeddedResource Include="Form1.resx">
+      
+      <DependentUpon>Form1.cs</DependentUpon>
+    
+    </EmbeddedResource>
+    
+    <EmbeddedResource Include="Properties\Resources.resx">
+      
+      <Generator>ResXFileCodeGenerator</Generator>
+      
+      <LastGenOutput>Resources.cs</LastGenOutput>
+    
+    </EmbeddedResource>
+  
+  </ItemGroup>
+  
+  <ProjectExtensions>
+    
+    <VisualStudio>
+      
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        
+        <HostingProcess disable="1"></HostingProcess>
+      
+      </FlavorProperties>
+    
+    </VisualStudio>
+  
+  </ProjectExtensions>
+
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets"></Import>
+</Project>

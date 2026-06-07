@@ -1,0 +1,17 @@
+#define IDD_MAIN   101
+#define IDD_ENTRY 102
+
+#define IDC_STATIC -1
+#define IDC_COMBO  1000
+#define IDC_CHANGE  1001
+#define IDC_STORECOMBO 1002
+#define IDC_DISPLAYNAME 1003
+#define IDC_EDIT 1004
+
+#define IDM_DONE 1010
+#define IDM_CHANGE 1011
+#define IDS_DONE 1012
+#define IDS_CHANGE 1013
+
+#define IDR_TOOLBAR_BUTTONS 1020
+#define IDR_MAIN_MENU 1021

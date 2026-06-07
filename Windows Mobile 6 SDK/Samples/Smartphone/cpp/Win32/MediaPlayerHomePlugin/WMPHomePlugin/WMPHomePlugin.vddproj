@@ -1,0 +1,303 @@
+"DeployProject"
+{
+"VSVersion" = "3:701"
+"ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
+"IsWebType" = "8:FALSE"
+"ProjectName" = "8:WMPHomePlugin"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"SccProjectName" = "8:"
+"SccLocalPath" = "8:"
+"SccAuxPath" = "8:"
+"SccProvider" = "8:"
+    "Hierarchy"
+    {
+        "Entry"
+        {
+        "MsmKey" = "8:_165D2EF7381B4098ADE099FF7FA0012B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7AA7D59498654CC59FD03F6786C191DB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D9DF794409F845C8A77B1611469C7281"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+    }
+    "Configurations"
+    {
+        "Debug"
+        {
+        "DisplayName" = "8:Debug"
+        "IsDebugOnly" = "11:TRUE"
+        "IsReleaseOnly" = "11:FALSE"
+        "OutputFilename" = "8:Debug\\WMPHomePlugin.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+        "Release"
+        {
+        "DisplayName" = "8:Release"
+        "IsDebugOnly" = "11:FALSE"
+        "IsReleaseOnly" = "11:TRUE"
+        "OutputFilename" = "8:Release\\WMPHomePlugin.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+    }
+    "Deployable"
+    {
+        "File"
+        {
+            "{BA458234-9B71-4F46-8107-E91156377184}:_7AA7D59498654CC59FD03F6786C191DB"
+            {
+            "SourcePath" = "8:mphp_sample.home.xml"
+            "TargetName" = "8:mphp_sample.home.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_23681BFD1063434EA3B3F6B6FCDFF01D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+        }
+        "Folder"
+        {
+            "{27CA7284-31D3-408F-812A-1EF9ACCDB822}:_51A9D6D06C724356913825B10C92042E"
+            {
+            "Name" = "8:Application Data"
+            "Condition" = "8:"
+            "Property" = "8:CUSTOMFOLDER1"
+                "Folders"
+                {
+                    "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_23681BFD1063434EA3B3F6B6FCDFF01D"
+                    {
+                    "Name" = "8:Home"
+                    "Condition" = "8:"
+                    "Property" = "8:_A03972E2CBF64EEF8074EA3B94AFF5FD"
+                        "Folders"
+                        {
+                        }
+                    }
+                }
+            }
+            "{D5B00AC1-E6C3-4CC5-90FF-8E0F53D9E5E0}:_531E7777AA5941B2B96D8BAB6DF5EBED"
+            {
+            "DefaultLocation" = "8:%InstallDir%"
+            "Name" = "8:#1920"
+            "Condition" = "8:"
+            "Property" = "8:%InstallDir%"
+                "Folders"
+                {
+                }
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_5A422624FF5047CB914B50737797515D"
+            {
+            "Name" = "8:#1911"
+            "Condition" = "8:"
+            "Property" = "8:%CE1%"
+                "Folders"
+                {
+                }
+            }
+        }
+        "Product"
+        {
+        "Name" = "8:Microsoft Visual Studio"
+        "ProductName" = "8:Media Player Home Plugin"
+        "Manufacturer" = "8:Microsoft"
+        "OSVersionMin" = "8:4.0"
+        "OSVersionMax" = "8:5.99"
+        "NoUninstall" = "11:FALSE"
+        "Compress" = "11:FALSE"
+        "CESetupDLL" = "8:"
+        }
+        "ProjectOutput"
+        {
+            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_165D2EF7381B4098ADE099FF7FA0012B"
+            {
+            "SourcePath" = "8:..\\MediaPlayerPlugin\\Windows Mobile 5.5 Pocket PC SDK (ARMV4I)\\Debug\\mphp_mediaplayerplugin.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_23681BFD1063434EA3B3F6B6FCDFF01D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{91BA8B55-A6B1-4644-BDB4-2F42C6F8BDCA}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_D9DF794409F845C8A77B1611469C7281"
+            {
+            "SourcePath" = "8:..\\HomePlugin\\Windows Mobile 5.5 Smartphone SDK (ARMV4I)\\Debug\\mphp_homeplugin.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_23681BFD1063434EA3B3F6B6FCDFF01D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{D0B5CB8B-1BA4-4780-83E2-F05B506F519B}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+        }
+        "Registry"
+        {
+            "HKLM"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_34460D24D77A4C789D9DA8021E43D7B8"
+                    {
+                    "Name" = "8:Software"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_7C64CCD9B05B4356A746A2A5670F181B"
+                            {
+                            "Name" = "8:Microsoft"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_E4AE89F83D944FB099437C5C8D13A7E1"
+                                    {
+                                    "Name" = "8:MediaPlayer"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_231B0B91BE45445EADD60BAD07CC5F83"
+                                            {
+                                            "Name" = "8:UIPlugins"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_0B5AEA5E9F9D422099B5949B2C639A4E"
+                                                    {
+                                                    "Name" = "8:{5FA5BBCA-0DAC-46ca-9AF3-9A61BB92BC9D}"
+                                                    "Condition" = "8:"
+                                                        "Keys"
+                                                        {
+                                                        }
+                                                        "Values"
+                                                        {
+                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_1283BE084F7E4B888617057FD1098444"
+                                                            {
+                                                            "Name" = "8:Description"
+                                                            "Condition" = "8:"
+                                                            "ValueTypes" = "3:1"
+                                                            "Value" = "8:Windows Media Player Plugin Sample"
+                                                            }
+                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_CEC7FD3C0E3545E1AC07C01267C2B3AF"
+                                                            {
+                                                            "Name" = "8:FriendlyName"
+                                                            "Condition" = "8:"
+                                                            "ValueTypes" = "3:1"
+                                                            "Value" = "8:Windows Media Player Plugin Sample"
+                                                            }
+                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_DA8426E30AD44270ADD1C381FD41D966"
+                                                            {
+                                                            "Name" = "8:Capabilities"
+                                                            "Condition" = "8:"
+                                                            "ValueTypes" = "3:3"
+                                                            "Value" = "3:2000001"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                }
+            }
+            "HKCU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKCR"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKPU"
+            {
+                "Keys"
+                {
+                }
+            }
+        }
+        "Shortcut"
+        {
+        }
+    }
+}

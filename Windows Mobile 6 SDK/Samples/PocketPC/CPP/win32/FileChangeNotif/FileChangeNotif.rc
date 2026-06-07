@@ -1,0 +1,211 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_FILECHANGENOTIF     ICON    DISCARDABLE     "FileChangeNotif.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MENU RCDATA MOVEABLE PURE 
+BEGIN
+    0x0066, 0x0001, 0xfffe, 0x9c41, 0x0004, 0x0018, 0x0068, 0x0000, 0x0000
+
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Options",                     IDM_TOOLS_OPTIONS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 140, 126
+STYLE WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_FILECHANGENOTIF,IDC_STATIC,11,17,21,20
+    LTEXT           "File Change Notification",IDC_STATIC,40,10,70,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001",IDC_STATIC,40,25,70,8
+END
+
+IDD_SHCNELISTENER DIALOG DISCARDABLE  0, 0, 140, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Listener Controls"
+FONT 8, "System"
+BEGIN
+    PUSHBUTTON      "Start",IDC_START,18,17,50,11
+    PUSHBUTTON      "Stop",IDC_STOP,71,17,50,11
+    EDITTEXT        IDE_RESULTS_DISPLAY,7,31,126,104,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL | 
+                    WS_HSCROLL
+    PUSHBUTTON      "Refresh Display",IDC_REFRESH,23,138,92,10
+    CTEXT           "Listen for File System Change Events",IDC_STATIC,7,7,
+                    126,8
+END
+
+IDD_OPTIONSBOX DIALOG DISCARDABLE  0, 0, 140, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Options"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_ROOTDIR,7,26,126,12,ES_AUTOHSCROLL
+    CONTROL         "Recursively Scan Directories",IDC_RECURSIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,42,126,11
+    LTEXT           "Enter Root Directory for SCHNE Event Notification (Leave Blank for Root):",
+                    IDC_STATIC,7,7,126,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_SHCNELISTENER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_OPTIONSBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "FileChangeNotif"
+    IDC_FILECHANGENOTIF     "FileChangeNotif"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELP                "Tools"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOG_PATH            "\\avEvents.log"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

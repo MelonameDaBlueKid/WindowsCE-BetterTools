@@ -1,0 +1,125 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "r"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+DONUTS_ICON             ICON                    "donuts.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+DONUTS8                 BITMAP                  "donuts.bmp"
+SPLASH                  BITMAP                  "SPLASH.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAV
+//
+
+BEGINLEVEL              WAV                     "level.wav"
+ENGINEIDLE              WAV                     "hum.wav"
+ENGINEREV               WAV                     "rev.wav"
+SKIDTOSTOP              WAV                     "skid.wav"
+SHIELDBUZZ              WAV                     "shield.wav"
+GUNFIRE                 WAV                     "gunfire.wav"
+SHIPBOUNCE              WAV                     "bounce.wav"
+SHIPEXPLODE             WAV                     "bangbang.wav"
+DONUTEXPLODE            WAV                     "d_bang.wav"
+PYRAMIDEXPLODE          WAV                     "p_bang.wav"
+CUBEEXPLODE             WAV                     "c_bang.wav"
+SPHEREEXPLODE           WAV                     "s_bang.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+DONUTS_ACCEL ACCELERATORS 
+BEGIN
+    VK_F3,          IDC_AUDIO,              VIRTKEY, NOINVERT
+    VK_F7,          IDC_FRAMERATE,          VIRTKEY, NOINVERT
+    VK_F4,          IDC_QUIT,               VIRTKEY, NOINVERT
+    VK_RETURN,      IDC_STARTGAME,          VIRTKEY, NOINVERT
+    VK_F6,          IDC_TRAILS,             VIRTKEY, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "r\0"
+    "e\0"
+    "s\0"
+    "o\0"
+    "u\0"
+    "r\0"
+    "c\0"
+    "e\0"
+    ".\0"
+    "h\0"
+    "\0"
+    "\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\0"
+    "\n"
+    "\0"
+    "\0"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

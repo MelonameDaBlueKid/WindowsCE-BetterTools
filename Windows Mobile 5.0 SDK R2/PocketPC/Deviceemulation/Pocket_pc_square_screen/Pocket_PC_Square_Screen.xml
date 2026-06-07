@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<skin>
+	<view
+		titleBar ="Pocket PC Square - WM 5.0"
+		
+		displayPosX="54"
+		displayPosY="81"
+		
+		displayWidth="240"
+		displayHeight="240"
+
+		displayDepth="16"
+		mappingImage="pocket_pc_square_mask.png"
+		normalImage="pocket_pc_square_up.png"
+		downImage= "pocket_pc_square_down.png">
+
+        <button
+			toolTip="Power"
+			onPressAndHold="0x75"
+			mappingColor="0x487710"
+		/>
+        <button	
+			toolTip="Record"
+			onPressAndHold="0x44" 
+			mappingColor="0xB1AC20"
+		/>
+        <button
+			toolTip="Rocker Up"
+			onPressAndHold="0x48"
+			mappingColor="0x11BB98"
+		/>
+        <button
+			toolTip="Rocker Down"
+			onPressAndHold="0x50"
+			mappingColor="0x1CB593"
+		/>
+        <button
+			toolTip="App Launch 1"
+			onClick="DOWN:0x5B 0x70 UP:0x5B"
+			mappingColor="0x5CF443"
+		/>
+        <button
+			toolTip="App Launch 2"
+			onClick="DOWN:0x5B 0x71 UP:0x5B"
+			mappingColor="0xF79406"
+		/>
+        <button
+			toolTip="Soft Key 1"
+			onClick="0x3B"
+			mappingColor="0xDC2C1E"
+		/>
+        <button
+			toolTip="Soft Key 2"
+			onClick="0x3C"
+			mappingColor="0xF699F5"
+		/>
+        <button
+			toolTip="Up"
+			onPressAndHold="0x48"
+			mappingColor="0x3BF8FF"
+			KeyEvent="Up"
+		/>
+        <button
+			toolTip="Down"
+			onPressAndHold="0x50"
+			mappingColor="0x80B9BB"
+			KeyEvent="Down"
+		/>
+        <button
+			toolTip="Left"
+			onPressAndHold="0x4B"
+			mappingColor="0x323DC6"
+			KeyEvent="Left"
+		/>
+        <button
+			toolTip="Right"
+			onPressAndHold="0x4D"
+			mappingColor="0x8E3BFF"
+			KeyEvent="Right"
+		/>
+        <button
+			toolTip="Enter"
+			onClick="0x1C"
+			mappingColor="0xFB10F8"
+			KeyEvent="Return"
+		/>
+    </view>
+</skin>

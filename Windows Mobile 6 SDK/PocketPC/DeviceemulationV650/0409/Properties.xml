@@ -1,0 +1,255 @@
+<Root>
+  <Property NAME="AddOn">1</Property>
+  <Property NAME="Self_templates">1</Property>
+  <Property NAME="Self_register">1</Property>
+  <PropertyBag NAME="Help2">
+    <Property NAME="VS Namespace">MS.MSDNQTR.v80.en</Property>
+    <Property NAME="Product Version">kbceplat50</Property>
+    <Property NAME="DocSet">kbwcedoc</Property>
+  </PropertyBag>
+  <PropertyBag NAME="DeveloperTools">
+    <Property NAME="VS8.0">1</Property>
+  </PropertyBag>
+  <Property NAME="Magneto">1</Property>
+  <Property NAME="{61EF21D1-001C-466f-B22D-6422C416FD7B}">1</Property>
+  <Property NAME="Whidbey Only">1</Property>
+  <Property NAME="Product version">6.00.00.17740</Property>
+  <Property NAME="HelpLink">http://microsoft.com/mobile/developer/support/default.asp</Property>
+  <Property NAME="Manufacturer">Microsoft Corporation</Property>
+  <Property NAME="Locale">1033</Property>
+  <Property NAME="{9D52DB36-F238-412D-A3B2-A651FD4489AC}">0</Property>
+  <Property NAME="{E75B8574-8822-409C-9CDC-7B780BCC4BF6}">1</Property>
+  <PropertyBag NAME="Components">
+    <Property NAME="MFC">0</Property>
+    <Property NAME="MFC OCX">0</Property>
+    <Property NAME="ATL">0</Property>
+    <Property NAME="Console">0</Property>
+    <Property NAME="Startup Server Names">Manual Server;</Property>
+    <Property NAME="All Startup Server Names">Manual Server;CESH (CE Shell);ActiveSync;</Property>
+    <Property NAME="Transport Names">Microsoft TCP/IP Transport;</Property>
+    <Property NAME="All Transport Names">Microsoft TCP/IP Transport;ActiveSync;Microsoft KITL Transport;</Property>
+    <Property NAME="Startup Servers">;{60FD8B23-2B59-4147-A5F9-6402B3FD2734}</Property>
+    <Property NAME="All Startup Servers">{60FD8B23-2B59-4147-A5F9-6402B3FD2734};{286BBB93-E788-414a-810C-852010F128BC};{8A5EBB1A-6D2B-4f7c-AA6E-C3DF75063A04};</Property>
+    <Property NAME="Microsoft Startup Servers">{60FD8B23-2B59-4147-A5F9-6402B3FD2734};{286BBB93-E788-414a-810C-852010F128BC};{8A5EBB1A-6D2B-4f7c-AA6E-C3DF75063A04}</Property>
+    <Property NAME="Transports">{8230BAED-0EF3-4aa7-A96A-F4A4021B01EC};</Property>
+    <Property NAME="All Transports">{8230BAED-0EF3-4aa7-A96A-F4A4021B01EC};{C92C56B8-1394-4155-8016-3FD669E3EE3C};{F2062C0A-B025-4ed1-8E02-78DBDBEC9D15};</Property>
+    <Property NAME="Microsoft Transports">{8230BAED-0EF3-4aa7-A96A-F4A4021B01EC};{C92C56B8-1394-4155-8016-3FD669E3EE3C};{F2062C0A-B025-4ed1-8E02-78DBDBEC9D15}</Property>
+    <Property NAME="Default startup">{60FD8B23-2B59-4147-A5F9-6402B3FD2734}</Property>
+    <Property NAME="Default transport">{8230BAED-0EF3-4aa7-A96A-F4A4021B01EC}</Property>
+    <PropertyBag NAME="CoreCon">
+      <Property NAME="AppLevel_KITL_Transport">{8C4874A2-BBC7-4757-ACAE-7FD73EAEBAB0}</Property>
+      <Property NAME="AppLevel_KITL_Bootstrap">{B3760D8E-650A-4670-ACF8-A79175996F15}</Property>
+      <Property NAME="ActiveSync4.0">{6CFC41FD-50BA-43d2-9ACD-6A2A874D2853}</Property>
+      <Property NAME="TCP/IP">{D8E78E43-D8D6-4e57-8AD4-2164254C16D5}</Property>
+    </PropertyBag>
+  </PropertyBag>
+  <PropertyBag NAME="Magneto Components">
+    <PropertyBag NAME="MS Components">
+    </PropertyBag>
+    <PropertyBag NAME="Visual Studio Design-Time Component">
+    </PropertyBag>
+    <PropertyBag NAME="Visual Studio Namespace">
+    </PropertyBag>
+  </PropertyBag>
+  <Property NAME="Working directory">d:\MagnetoBuild\14343\MSI\wpc\0409</Property>
+  <Property NAME="Cab files">1</Property>
+  <Property NAME="EULA">0</Property>
+  <Property NAME="EULA Path">
+  </Property>
+  <Property NAME="README">1</Property>
+  <Property NAME="README Path">d:\MagnetoBuild\14343\wpc\0409\README\readme.htm</Property>
+  <PropertyBag NAME="CPU Configs">
+    <PropertyBag NAME="{d6518ffb-710f-11d3-99f2-00105a0df099}">
+      <Property NAME="PbCfgName">Windows Mobile Device</Property>
+      <Property NAME="CpuName">ARMV4I</Property>
+      <Property NAME="Active">1</Property>
+      <PropertyBag NAME="Build Configs">
+        <Property NAME="Windows Mobile Device Release">1</Property>
+      </PropertyBag>
+    </PropertyBag>
+  </PropertyBag>
+  <PropertyBag NAME="CPUs">
+    <Property NAME="Windows Mobile Device Release">1</Property>
+  </PropertyBag>
+  <PropertyBag NAME="CPU info">
+    <PropertyBag NAME="Windows Mobile Device Release">
+      <Property NAME="PbCfgName">Windows Mobile 6.5 Professional Device</Property>
+      <Property NAME="WinceRoot">DONT_CARE</Property>
+      <Property NAME="VcCfgName">Win32 (WCE ARMV4I)</Property>
+      <Property NAME="IdeFamily">ARMV4I</Property>
+      <Property NAME="CpuGuid">{d6518ffb-710f-11d3-99f2-00105a0df099}</Property>
+      <Property NAME="CpuName">ARMV4I</Property>
+      <Property NAME="Library Dirs">d:\MagnetoBuild\14343\wpc\0409\Lib\ARMV4I\sdk</Property>
+      <Property NAME="Include Dirs">d:\MagnetoBuild\14343\wpc\0409\Include\ARMV4I\sdk;d:\MagnetoBuild\14343\wpc\0409\Include\ARMV4I\ddk;</Property>
+      <Property NAME="PROCESSOR">2577</Property>
+      <Property NAME="PROCESSOR_ARCHITECTURE">5</Property>
+      <Property NAME="Sysgen">1</Property>
+      <Property NAME="IsEmulation">0</Property>
+      <Property NAME="OutputDir">DONT_CARE</Property>
+      <Property NAME="LOCALE">0409</Property>
+      <Property NAME="DCOM Support">0</Property>
+      <Property NAME="dotnet_framework">
+      </Property>
+      <Property NAME="CONSOLE">0</Property>
+      <Property NAME="KITL">1</Property>
+      <Property NAME="ATL">1</Property>
+      <Property NAME="MFC">1</Property>
+    </PropertyBag>
+  </PropertyBag>
+  <Property NAME="CEConfigName">Windows Mobile SDK</Property>
+  <Property NAME="CEVersion">502</Property>
+  <Property NAME="OSMajor">5</Property>
+  <Property NAME="OSMinor">02</Property>
+  <Property NAME="TUSDK">0</Property>
+  <Property NAME="ProjectRoot">DONT_CARE</Property>
+  <PropertyBag NAME="HelpFiles" />
+  <PropertyBag NAME="DeviceEmulation">
+    <Property NAME="Default Image">1</Property>
+    <PropertyBag NAME="1">
+      <Property NAME="ImageName">USA Windows Mobile 6.5 Professional Portrait QVGA Emulator</Property>
+      <Property NAME="VMID">{F1D3364D-57A4-4678-90D2-D75690CA7D44}</Property>
+      <Property NAME="CpuName">ARMV4I</Property>
+      <Property NAME="DPIX">96</Property>
+      <Property NAME="DPIY">96</Property>
+      <Property NAME="SupportRotation">1</Property>
+      <Property NAME="Enabled">1</Property>
+      <Property NAME="Height">320</Property>
+      <Property NAME="Width">240</Property>
+      <Property NAME="BitDepth">16</Property>
+      <Property NAME="Fixed Screen">1</Property>
+      <Property NAME="Bin Path">\PocketPC\0409\DeviceEmulationV650\0409\PPC_USA_GSM_VR.BIN</Property>
+      <Property NAME="Bin Dest">DeviceEmulationV650\0409\PPC_USA_GSM_VR.BIN</Property>
+      <Property NAME="Ethernet">1</Property>
+      <Property NAME="Ports">1</Property>
+      <Property NAME="Memory">128</Property>
+      <PropertyBag NAME="SDK Skin">
+        <Property NAME="Default">PocketPC\DeviceEmulationV650\Pocket_PC_Phone\Pocket_PC_PE.xml</Property>
+        <Property NAME="DisplayHeight">320</Property>
+        <Property NAME="DisplayWidth">240</Property>
+      </PropertyBag>
+      <PropertyBag NAME="Skins">
+      </PropertyBag>
+    </PropertyBag>
+    <PropertyBag NAME="2">
+      <Property NAME="ImageName">USA Windows Mobile 6.5 Professional Portrait WQVGA Emulator</Property>
+      <Property NAME="VMID">{A0C5AAC3-E904-4A10-827B-3C659BE11D9C}</Property>
+      <Property NAME="CpuName">ARMV4I</Property>
+      <Property NAME="DPIX">96</Property>
+      <Property NAME="DPIY">96</Property>
+      <Property NAME="SupportRotation">1</Property>
+      <Property NAME="Enabled">1</Property>
+      <Property NAME="Height">400</Property>
+      <Property NAME="Width">240</Property>
+      <Property NAME="BitDepth">16</Property>
+      <Property NAME="Fixed Screen">1</Property>
+      <Property NAME="Bin Path">\PocketPC\0409\DeviceEmulationV650\0409\PPC_USA_GSM_WQVGA_VR.BIN</Property>
+      <Property NAME="Bin Dest">DeviceEmulationV650\0409\PPC_USA_GSM_WQVGA_VR.BIN</Property>
+      <Property NAME="Ethernet">1</Property>
+      <Property NAME="Ports">1</Property>
+      <Property NAME="Memory">128</Property>
+      <PropertyBag NAME="SDK Skin">
+        <Property NAME="Default">PocketPC\DeviceEmulationV650\ppc_phone_240x400\ppc_phone_240x400.xml</Property>
+        <Property NAME="DisplayHeight">400</Property>
+        <Property NAME="DisplayWidth">240</Property>
+      </PropertyBag>
+      <PropertyBag NAME="Skins">
+      </PropertyBag>
+    </PropertyBag>
+    <PropertyBag NAME="3">
+      <Property NAME="ImageName">USA Windows Mobile 6.5 Professional Square Emulator</Property>
+      <Property NAME="VMID">{ABF3FC72-293D-448A-89A2-417965B54BEC}</Property>
+      <Property NAME="CpuName">ARMV4I</Property>
+      <Property NAME="DPIX">128</Property>
+      <Property NAME="DPIY">128</Property>
+      <Property NAME="SupportRotation">1</Property>
+      <Property NAME="Enabled">1</Property>
+      <Property NAME="Height">320</Property>
+      <Property NAME="Width">320</Property>
+      <Property NAME="BitDepth">16</Property>
+      <Property NAME="Fixed Screen">1</Property>
+      <Property NAME="Bin Path">\PocketPC\0409\DeviceEmulationV650\0409\PPC_USA_GSM_320x320_VR.BIN</Property>
+      <Property NAME="Bin Dest">DeviceEmulationV650\0409\PPC_USA_GSM_320x320_VR.BIN</Property>
+      <Property NAME="Ethernet">1</Property>
+      <Property NAME="Ports">1</Property>
+      <Property NAME="Memory">128</Property>
+      <PropertyBag NAME="SDK Skin">
+        <Property NAME="Default">PocketPC\DeviceEmulationV650\Pocket_PC_Phone_QVGA_Square_Screen\Pocket_PC_PE_320x320_Screen.xml</Property>
+        <Property NAME="DisplayHeight">320</Property>
+        <Property NAME="DisplayWidth">320</Property>
+      </PropertyBag>
+      <PropertyBag NAME="Skins">
+      </PropertyBag>
+    </PropertyBag>
+    <PropertyBag NAME="4">
+      <Property NAME="ImageName">USA Windows Mobile 6.5 Professional VGA Emulator</Property>
+      <Property NAME="VMID">{DDF24076-6201-45DB-918A-57B2A79F7F57}</Property>
+      <Property NAME="CpuName">ARMV4I</Property>
+      <Property NAME="DPIX">192</Property>
+      <Property NAME="DPIY">192</Property>
+      <Property NAME="SupportRotation">1</Property>
+      <Property NAME="Enabled">1</Property>
+      <Property NAME="Height">640</Property>
+      <Property NAME="Width">480</Property>
+      <Property NAME="BitDepth">16</Property>
+      <Property NAME="Fixed Screen">1</Property>
+      <Property NAME="Bin Path">\PocketPC\0409\DeviceEmulationV650\0409\PPC_USA_GSM_VGA_VR.BIN</Property>
+      <Property NAME="Bin Dest">DeviceEmulationV650\0409\PPC_USA_GSM_VGA_VR.BIN</Property>
+      <Property NAME="Ethernet">1</Property>
+      <Property NAME="Ports">1</Property>
+      <Property NAME="Memory">128</Property>
+      <PropertyBag NAME="SDK Skin">
+        <Property NAME="Default">PocketPC\DeviceEmulationV650\Pocket_PC_Phone_VGA\Pocket_PC_PE_VGA.xml</Property>
+        <Property NAME="DisplayHeight">640</Property>
+        <Property NAME="DisplayWidth">480</Property>
+      </PropertyBag>
+      <PropertyBag NAME="Skins">
+      </PropertyBag>
+    </PropertyBag>
+    <PropertyBag NAME="5">
+      <Property NAME="ImageName">USA Windows Mobile 6.5 Professional WVGA Emulator</Property>
+      <Property NAME="VMID">{48B7CBFE-9245-43C4-AEB6-968A31E5A8A7}</Property>
+      <Property NAME="CpuName">ARMV4I</Property>
+      <Property NAME="DPIX">192</Property>
+      <Property NAME="DPIY">192</Property>
+      <Property NAME="SupportRotation">1</Property>
+      <Property NAME="Enabled">1</Property>
+      <Property NAME="Height">480</Property>
+      <Property NAME="Width">800</Property>
+      <Property NAME="BitDepth">16</Property>
+      <Property NAME="Fixed Screen">1</Property>
+      <Property NAME="Bin Path">\PocketPC\0409\DeviceEmulationV650\0409\PPC_USA_GSM_WVGA_VR.BIN</Property>
+      <Property NAME="Bin Dest">DeviceEmulationV650\0409\PPC_USA_GSM_WVGA_VR.BIN</Property>
+      <Property NAME="Ethernet">1</Property>
+      <Property NAME="Ports">1</Property>
+      <Property NAME="Memory">128</Property>
+      <PropertyBag NAME="SDK Skin">
+        <Property NAME="Default">PocketPC\DeviceEmulationV650\ppc_phone_480x800\ppc_phone_480x800.xml</Property>
+        <Property NAME="DisplayHeight">800</Property>
+        <Property NAME="DisplayWidth">480</Property>
+      </PropertyBag>
+      <PropertyBag NAME="Skins">
+      </PropertyBag>
+    </PropertyBag>
+  </PropertyBag>
+  <PropertyBag NAME="Assemblies">
+    <Property NAME="1">Microsoft.WindowsMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Property>
+    <Property NAME="2">Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Property>
+    <Property NAME="3">Microsoft.WindowsMobile.PocketOutlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Property>
+    <Property NAME="4">Microsoft.WindowsMobile.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Property>
+    <Property NAME="5">Microsoft.WindowsMobile.Telephony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Property>
+    <Property NAME="6">Microsoft.WindowsMobile.Utilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Property>
+    <Property NAME="7">Microsoft.WindowsMobile.Status, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Property>
+  </PropertyBag>
+  <Property NAME="PlatformFamily">PocketPC</Property>
+  <Property NAME="PlatformFamilyDefine">WIN32_PLATFORM_PSPC</Property>
+  <Property NAME="UISymbol">POCKETPC2003_UI_MODEL</Property>
+  <Property NAME="CePlatform">Windows Mobile 6.5 Professional</Property>
+  <Property NAME="Magneto Platform">Windows Mobile 6.5 Professional</Property>
+  <Property NAME="SDK name">Windows Mobile 6.5 Professional Images - USA</Property>
+  <Property NAME="Product name">Windows Mobile 6.5 Professional Images - USA</Property>
+  <Property NAME="Product GUID">{756FCCAB-223D-4814-A207-78ED113F4497}</Property>
+  <Property NAME="ID">{ABE2F7E8-D2F5-48BB-8AB1-668805BFF6FC}</Property>
+  <Property NAME="PlatformID">{b2c48bd2-963d-4549-9169-1fa021dce484}</Property>
+  <Property NAME="Parent_ProductName">Windows Mobile 6.5 Professional SDK</Property>
+  <Property NAME="MS_EULA_PATH">d:\MagnetoBuild\14343\wpc\0409\EULA\LICENSE.rtf</Property>
+</Root>

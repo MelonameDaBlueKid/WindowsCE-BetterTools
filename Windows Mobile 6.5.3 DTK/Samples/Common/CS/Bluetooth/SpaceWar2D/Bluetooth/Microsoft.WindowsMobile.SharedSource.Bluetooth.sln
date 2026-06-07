@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.WindowsMobile.SharedSource.Bluetooth", "Microsoft.WindowsMobile.SharedSource.Bluetooth.csproj", "{EF40F5A6-998D-413F-A594-AA17969C755B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF40F5A6-998D-413F-A594-AA17969C755B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF40F5A6-998D-413F-A594-AA17969C755B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF40F5A6-998D-413F-A594-AA17969C755B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF40F5A6-998D-413F-A594-AA17969C755B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

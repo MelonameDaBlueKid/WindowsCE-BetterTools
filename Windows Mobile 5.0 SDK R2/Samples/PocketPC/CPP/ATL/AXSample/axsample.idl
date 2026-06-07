@@ -1,0 +1,47 @@
+// AXSample.idl : IDL source for AXSample.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AXSample.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+#include <olectl.h>
+
+[
+	object,
+	uuid(B4A6B58A-43FF-4335-AB30-244F07E94E14),
+	dual,
+	helpstring("IAXSampleCtl Interface"),
+	pointer_default(unique)
+]
+interface IAXSampleCtl : IDispatch
+{
+    // Properties
+    [propput, id(DISPID_FILLCOLOR)]
+    HRESULT FillColor([in] COLORREF clr);
+    [propget, id(DISPID_FILLCOLOR)]
+    HRESULT FillColor([out,retval] COLORREF * pclr);
+};
+
+
+[
+	uuid(FB5D8CBE-03AE-4B26-BEF0-B2D320BE14D6),
+	version(1.0),
+	helpstring("AXSample 1.0 Type Library")
+]
+library AXSAMPLELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(019BB827-4327-4D66-9B8D-F2ECBAB915CD),
+		helpstring("AXSampleCtl Class")
+	]
+	coclass AXSampleCtl
+	{
+		[default] interface IAXSampleCtl;
+	};
+};

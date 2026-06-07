@@ -1,0 +1,8 @@
+To install the transport, set these registry keys, then restart Inbox:
+The transport DLL must be in the \Windows directory.
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Inbox\Svc\TransportDemo]
+"Name"="Transport Demo"
+"DLL"="TransportDemo.dll"
+"Port"=dword:00000000
+

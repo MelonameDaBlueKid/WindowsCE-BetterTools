@@ -1,0 +1,78 @@
+﻿<?xml version="1.0"?>
+<home>
+	<author>Microsoft Corporation</author>
+	<contacturl>http://www.microsoft.com/</contacturl>
+	<title lang="0x0409">Memplug</title>
+	<title lang="0x0809">Full layout</title>
+	<title lang="0x040c">Disposition pleine</title>
+	<title lang="0x0407">Volles Layout</title>
+	<title lang="0x0410">Configurazione piena</title>
+	<title lang="0x0816">Plano cheio</title>
+	<title lang="0x040a">Diseño lleno</title>
+	<title lang="0x0c0a">Diseño lleno</title>
+	<title lang="0x0412">전체 레이아웃</title>
+	<title lang="0x0804">完整布局</title>
+	<version>1.0</version>
+	<default font-face="nina" font-size="14" font-weight="bold" padding-left="4" padding-right="4" bgcolor="transparent" fgcolor="COLOR_HOMETEXT" padding-top="2" b-border-color="COLOR_HOMERULE" b-border-width="1">
+		<format state="selected" fgcolor="COLOR_HOMEHIGHLIGHTTEXT"/>
+	</default>
+	<background bgimage="\windows\bliss.gif" valign="bottom"/>
+	<scheme>
+        <color name="COLOR_WINDOW" value="#FFFFFF"/>
+        <color name="COLOR_STATIC" value="#FFFFFF"/>
+        <color name="COLOR_STATICTEXT" value="#000000"/>
+        <color name="COLOR_HIGHLIGHT" value="#2A2CC5"/>
+        <color name="COLOR_HIGHLIGHTTEXT" value="#FFFFFF"/>
+        <color name="COLOR_MENU" value="#C7E8FF"/>
+        <color name="COLOR_MENUTEXT" value="#000000"/>
+        <color name="COLOR_GRAYTEXT" value="#808080"/>
+        <color name="COLOR_GRADLEFT" value="#FEFEFF"/>
+        <color name="COLOR_GRADRIGHT" value="#C9D5F4"/>
+        <color name="COLOR_INTGRADLEFT" value="#FEFEFF"/>
+        <color name="COLOR_INTGRADRIGHT" value="#9EDFF7"/>
+        <color name="COLOR_TRAYGRADLEFT" value="#33349A"/>
+        <color name="COLOR_TRAYGRADRIGHT" value="#0198FE"/>
+        <color name="COLOR_HIGHGRADLEFT" value="#2A2CC5"/>
+        <color name="COLOR_HIGHGRADRIGHT" value="#2A2CC5"/>
+        <color name="COLOR_TRAYTEXT" value="#FFFFFF"/>
+        <color name="COLOR_WINDOWFRAME" value="#000000"/>
+        <color name="COLOR_BTNFACE" value="#9EDFF7"/>
+        <color name="COLOR_BTNTEXT" value="#000000"/>
+        <color name="COLOR_SCROLLBAR" value="#91A9E9"/>
+        <color name="COLOR_HOMETEXT" value="#003D79"/>
+        <color name="COLOR_HOMEHIGHLIGHT" value="#2A2CC5"/>
+        <color name="COLOR_HOMEHIGHLIGHTTEXT" value="#FFFFFF"/>
+        <color name="COLOR_HOMERULE" value="#3080CF"/>
+        <color name="COLOR_ALERTWINDOW" value="#E3E9F9"/>
+        <color name="COLOR_ALERTTITLE" value="#2D5DC7"/>
+        <color name="COLOR_ALERTRULE" value="#819AE4"/>
+	</scheme>
+	<plugin clsid="{837FC251-FE69-43ad-84E0-EBCEDEBA0884}" name="iconbar" height="20">
+		<iconbar fgcolor="COLOR_TRAYTEXT"/>
+		<background gradient="title" bgcolor="COLOR_TRAYGRADLEFT" b-border-color="COLOR_WINDOWFRAME" b-border-width="1"/>
+	</plugin>
+	<plugin clsid="{79EFB752-CB70-446d-B317-499723482B3D}" name="startmru" height="38">
+		<mru y="2"/>
+	</plugin>
+	<plugin clsid="{E09043DF-510E-4841-B652-388316977A7A}" name="carrier" height="40">
+		<label>
+			<text><carrier/></text>
+		</label>
+		<clock>
+			<time y="17"/>
+			<date y="17" halign="right"/>
+		</clock>
+	</plugin>
+	
+	<plugin clsid="{55EE36E7-7CC3-47e8-85E2-1D8644280E7A}" name="Memory Usage" height="40">
+	  
+
+	</plugin>
+	
+	
+	
+	
+	<plugin clsid="{CA81E6AC-8C3C-4973-A6A2-8ACF8470AE78}" name="notifyui" height="20">
+	</plugin>
+	
+</home>

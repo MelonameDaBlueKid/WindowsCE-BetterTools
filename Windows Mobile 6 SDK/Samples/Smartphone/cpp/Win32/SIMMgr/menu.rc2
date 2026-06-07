@@ -1,0 +1,28 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_SIMMGR_DLGMENU RCDATA MOVEABLE PURE 
+BEGIN
+    0x0000, 0x0001, 0xfffe, 0x0011, 0x0004, 0x0010, 0x0010, 0x0000, 0xffff
+
+END
+
+IDR_SIMMGR_MAINMENU RCDATA MOVEABLE PURE 
+BEGIN
+    0x000d, 0x0002, 0xfffe, 0x000c, 0x0004, 0x0018, 0x000b, 0x0000, 0x0000, 
+    0xfffe, 0x0007, 0x0004, 0x0010, 0x0003, 0x0000, 0xffff
+END

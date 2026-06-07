@@ -1,0 +1,77 @@
+;/*++
+;
+;Copyright (c) 1990-1999 Microsoft Corporation All rights Reserved
+;
+;Module Name:
+;
+;    XPVCOM.INF
+;
+;Abstract:
+;    INF file for installing XPVCOM driver
+;
+;--*/
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%MSFT%
+DriverVer=10/10/2006,2.0.1403.0
+CatalogFile.ntx86=XPVCOM_ntx86.cat
+CatalogFile.nt=XPVCOM_nt.cat
+CatalogFile=XPVCOM.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+XPVCOM.sys  = 1,,
+
+;*****************************************
+; XPVCOM Install Section
+;*****************************************
+
+[Manufacturer]
+%StdMfg%=Standard
+
+[Standard]
+;
+;
+
+%XPVCOM.DeviceDesc%=XPVCOM_Device, root\XPVCOM
+
+[XPVCOM_Device.NT]
+CopyFiles=Drivers_Dir
+
+[XPVCOM_Device.NT.HW]
+AddReg=XPVCOM_Device.NT.AddReg
+
+[XPVCOM_Device.NT.AddReg]                            
+
+[Drivers_Dir]
+XPVCOM.sys
+
+
+;-------------- Service installation
+[XPVCOM_Device.NT.Services]
+AddService = XPVCOM,%SPSVCINST_ASSOCSERVICE%, XPVCOM_Service_Inst
+
+; -------------- XPVCOM driver install sections
+[XPVCOM_Service_Inst]
+DisplayName    = %XPVCOM.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\XPVCOM.sys
+LoadOrderGroup = Extended Base
+
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+MSFT = "Microsoft"
+StdMfg = "(Standard system devices)"
+DiskId1 = "XPVCOM Installation Disk #1"
+XPVCOM.DeviceDesc = "XPVCOM Port"
+XPVCOM.SVCDESC = "XPVCOM Port"

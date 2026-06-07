@@ -1,0 +1,42 @@
+#include "resource.h"
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// Setting dialog
+
+IDD_MAIN DIALOG DISCARDABLE  0, 0, 172, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Store Settings"
+BEGIN
+    LTEXT           "Choose a store:",IDC_STATIC,2,2,100,13
+    COMBOBOX  IDC_STORECOMBO,2,24,120,60,CBS_DROPDOWNLIST | WS_TABSTOP
+    LTEXT           "Choose setting:",IDC_STATIC,2,42,100,13
+    COMBOBOX  IDC_COMBO,2,56,120,60,CBS_DROPDOWNLIST | WS_TABSTOP
+    LTEXT            "",IDC_DISPLAYNAME,2,70,100,20
+END
+
+IDD_ENTRY DIALOG DISCARDABLE  0, 0, 172, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Setting"
+BEGIN
+    LTEXT           "",IDC_DISPLAYNAME,2,2,100,20
+    EDITTEXT     IDC_EDIT,2,24,120,14,ES_AUTOHSCROLL | WS_TABSTOP
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// Menubar
+
+IDR_TOOLBAR_BUTTONS RCDATA
+BEGIN
+    IDR_MAIN_MENU,
+    2, // # of elements in one layout
+    I_IMAGENONE, IDM_DONE,  TBSTATE_ENABLED, TBSTYLE_BUTTON |TBSTYLE_AUTOSIZE, IDS_DONE, 0, NOMENU,
+    I_IMAGENONE, IDM_CHANGE, TBSTATE_ENABLED, TBSTYLE_BUTTON |TBSTYLE_AUTOSIZE, IDS_CHANGE, 0, NOMENU,
+END
+
+
+STRINGTABLE
+BEGIN
+    IDS_DONE          "Done"
+    IDS_CHANGE      "Change"
+END

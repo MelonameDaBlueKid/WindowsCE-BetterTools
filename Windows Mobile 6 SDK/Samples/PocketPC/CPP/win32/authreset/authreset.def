@@ -1,0 +1,7 @@
+LIBRARY     AUTHRESET.DLL
+
+EXPORTS
+    ARCGetValue                   @1   ; ARCGetValue
+    ARCRequest                    @2   ; ARCRequest
+    ARCSetup                      @3   ; ARCSetup
+

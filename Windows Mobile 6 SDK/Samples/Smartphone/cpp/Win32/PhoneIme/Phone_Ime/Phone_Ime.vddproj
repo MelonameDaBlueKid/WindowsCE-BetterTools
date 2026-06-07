@@ -1,0 +1,383 @@
+"DeployProject"
+{
+"VSVersion" = "3:701"
+"ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
+"IsWebType" = "8:FALSE"
+"ProjectName" = "8:Phone_Ime"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"SccProjectName" = "8:"
+"SccLocalPath" = "8:"
+"SccAuxPath" = "8:"
+"SccProvider" = "8:"
+    "Hierarchy"
+    {
+        "Entry"
+        {
+        "MsmKey" = "8:_92324650DA3E400A848DD16DDA3137E2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+    }
+    "Configurations"
+    {
+        "Debug"
+        {
+        "DisplayName" = "8:Debug"
+        "IsDebugOnly" = "11:TRUE"
+        "IsReleaseOnly" = "11:FALSE"
+        "OutputFilename" = "8:Debug\\Phone_Ime.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:TRUE"
+        "CertificateHash" = "8:1049B790EDA3C369E9C206B44AF16B2657CC1555"
+        "TimeStampServer" = "8:"
+        "CertificateFile" = "8:"
+        "Compression" = "3:2"
+        "InstallerBootstrapper" = "3:1"
+        "PackageFilesAs" = "3:2"
+        "PrivateKeyFile" = "8:"
+        }
+        "Release"
+        {
+        "DisplayName" = "8:Release"
+        "IsDebugOnly" = "11:FALSE"
+        "IsReleaseOnly" = "11:TRUE"
+        "OutputFilename" = "8:Release\\Phone_Ime.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:TRUE"
+        "CertificateHash" = "8:1049B790EDA3C369E9C206B44AF16B2657CC1555"
+        "TimeStampServer" = "8:"
+        "CertificateFile" = "8:"
+        "Compression" = "3:2"
+        "InstallerBootstrapper" = "3:1"
+        "PackageFilesAs" = "3:2"
+        "PrivateKeyFile" = "8:"
+        }
+    }
+    "Deployable"
+    {
+        "File"
+        {
+        }
+        "Folder"
+        {
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_823E383511B8431392BFFDD60C7D7B63"
+            {
+            "Name" = "8:#1911"
+            "Condition" = "8:"
+            "Property" = "8:%CE1%"
+                "Folders"
+                {
+                }
+            "AlwaysCreate" = "11:FALSE"
+            "Transitive" = "11:FALSE"
+            }
+            "{D5B00AC1-E6C3-4CC5-90FF-8E0F53D9E5E0}:_DC2491EF84394273B87E350B003E7BB7"
+            {
+            "DefaultLocation" = "8:%InstallDir%"
+            "Name" = "8:#1920"
+            "Condition" = "8:"
+            "Property" = "8:%InstallDir%"
+                "Folders"
+                {
+                }
+            "AlwaysCreate" = "11:FALSE"
+            "Transitive" = "11:FALSE"
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_F48B8CFFFAC2481C98CDD3E6F5AB7815"
+            {
+            "Name" = "8:#1912"
+            "Condition" = "8:"
+            "Property" = "8:%CE2%"
+                "Folders"
+                {
+                }
+            "AlwaysCreate" = "11:FALSE"
+            "Transitive" = "11:FALSE"
+            }
+        }
+        "Product"
+        {
+        "Name" = "8:Microsoft Visual Studio"
+        "ProductName" = "8:Phone_Ime"
+        "Manufacturer" = "8:Microsoft"
+        "OSVersionMin" = "8:5.0"
+        "OSVersionMax" = "8:5.99"
+        "NoUninstall" = "11:FALSE"
+        "Compress" = "11:FALSE"
+        "CESetupDLL" = "8:"
+        }
+        "ProjectOutput"
+        {
+            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_92324650DA3E400A848DD16DDA3137E2"
+            {
+            "SourcePath" = "8:..\\Windows Mobile 5.5 Smartphone SDK (ARMV4I)\\Debug\\PhoneIme.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_F48B8CFFFAC2481C98CDD3E6F5AB7815"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "PackageAs" = "3:1"
+            "Transitive" = "11:FALSE"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{231787F6-8925-4774-A949-96D64BF0DEC2}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+        }
+        "Registry"
+        {
+            "HKLM"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_DECE8CEF996B491492FDDCF17A7432F5"
+                    {
+                    "Name" = "8:System"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_24BB407392BD434A871A08869BDFCB05"
+                            {
+                            "Name" = "8:IME"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                }
+                                "Values"
+                                {
+                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_C9E54DD0E12041CBB0697B2D5E80C6B6"
+                                    {
+                                    "Name" = "8:Settings"
+                                    "Condition" = "8:"
+                                    "ValueTypes" = "3:3"
+                                    "Value" = "3:22"
+                                    "Transitive" = "11:FALSE"
+                                    }
+                                }
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                            }
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_573490940FA4470495A1E53B079F20B4"
+                            {
+                            "Name" = "8:CurrentControlSet"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_C502BBDF53934A5EBBF37B327C7F92A7"
+                                    {
+                                    "Name" = "8:Control"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_17D95FA1F76A4C27A65B37EB61070B12"
+                                            {
+                                            "Name" = "8:Layouts"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_9D0AFB3AE32B422093E9F47260F7F8A7"
+                                                    {
+                                                    "Name" = "8:e0010409"
+                                                    "Condition" = "8:"
+                                                        "Keys"
+                                                        {
+                                                        }
+                                                        "Values"
+                                                        {
+                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_911581CC64994831B0767978DB7D48C6"
+                                                            {
+                                                            "Name" = "8:Ime File"
+                                                            "Condition" = "8:"
+                                                            "ValueTypes" = "3:1"
+                                                            "Value" = "8:phoneime.dll"
+                                                            "Transitive" = "11:FALSE"
+                                                            }
+                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_D75471DE58C34AD8B707AEE877D129C3"
+                                                            {
+                                                            "Name" = "8:Layout Text"
+                                                            "Condition" = "8:"
+                                                            "ValueTypes" = "3:1"
+                                                            "Value" = "8:\\"
+                                                            "Transitive" = "11:FALSE"
+                                                            }
+                                                        }
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                            }
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_B7F2608D43444DFDBE60429ED9CBAA80"
+                            {
+                            "Name" = "8:GWE"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_FF2F1E4FD3834D3E95C4E3A0117CE14C"
+                                    {
+                                    "Name" = "8:EDIT"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                        }
+                                        "Values"
+                                        {
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_21E038DA305E4FB4B47D9FBDEBC9B0AB"
+                                            {
+                                            "Name" = "8:IMELEVEL"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:3"
+                                            "Value" = "3:3"
+                                            "Transitive" = "11:FALSE"
+                                            }
+                                        }
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    "AlwaysCreate" = "11:FALSE"
+                    "DeleteAtUninstall" = "11:FALSE"
+                    "Transitive" = "11:FALSE"
+                    }
+                }
+            }
+            "HKCU"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_4F7CB09504084006BA387855EBE06CF3"
+                    {
+                    "Name" = "8:Keyboard Layout"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_A857055EB0864371A0126335A2BF20CA"
+                            {
+                            "Name" = "8:Preload"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_2D3DC5F37BF24BD5933A34E0E4969E66"
+                                    {
+                                    "Name" = "8:1"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                        }
+                                        "Values"
+                                        {
+                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_8944CCD65BA64E9C8E3294EC1812B3ED"
+                                            {
+                                            "Name" = "8:"
+                                            "Condition" = "8:"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:e0010409"
+                                            "Transitive" = "11:FALSE"
+                                            }
+                                        }
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                    }
+                                }
+                                "Values"
+                                {
+                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_03B61DA7D4B64F37B5459E2A5552F4F0"
+                                    {
+                                    "Name" = "8:"
+                                    "Condition" = "8:"
+                                    "ValueTypes" = "3:1"
+                                    "Value" = "8:e0010409"
+                                    "Transitive" = "11:FALSE"
+                                    }
+                                }
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    "AlwaysCreate" = "11:FALSE"
+                    "DeleteAtUninstall" = "11:FALSE"
+                    "Transitive" = "11:FALSE"
+                    }
+                }
+            }
+            "HKCR"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKPU"
+            {
+                "Keys"
+                {
+                }
+            }
+        }
+        "Shortcut"
+        {
+        }
+    }
+"UILanguageId" = "3:1033"
+}

@@ -1,0 +1,149 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDR_SIMMGR_OPTIONS MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Add Entry",                   IDM_SIMMGR_ADDENTRY
+        MENUITEM "Delete Selected",             IDM_SIMMGR_DELENTRY
+        MENUITEM "Dial Selected",               IDM_SIMMGR_DIALENTRY
+        MENUITEM "Add to Outlook",              IDM_SIMMGR_POOM
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SIMMGR_ADDPB DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_POPUP | WS_VISIBLE | WS_VSCROLL
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,5,5,90,10
+    EDITTEXT        IDC_SIMMGR_NAME,5,15,90,10,ES_AUTOHSCROLL
+    LTEXT           "Phone Number:",IDC_STATIC,5,30,90,10
+    EDITTEXT        IDC_SIMMGR_PHONE,5,40,90,10,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SIMMGR_TITLE        "SIMMgr Sample"
+    IDS_SIMMGR_APPNAME      "SIMMgr"
+    IDS_SIMMGR_QUIT         "Quit"
+    IDS_SIMMGR_ERROR        "Error!!!"
+    IDS_SIMMGR_INITFAIL     "Unable to initialize a required object"
+    IDS_SIMMGR_OPTIONS      "Options"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SIMMGR_DONE         "Done"
+    IDS_SIMMGR_SUCCESS      "Success!!!"
+    IDS_SIMMGR_ADDDIALOG_FAILED "Unable to create add dialog"
+    IDS_SIMMGR_ADDENTRY_FAILED "Unable to add entry."
+    IDS_SIMMGR_DELETEENTRY_FAILED "Unable to delete entry."
+    IDS_SIMMGR_ADDOUTLOOK_SUCCESS "Entry successfully added to Outlook."
+    IDS_SIMMGR_ADDOUTLOOK_FAILED "Unable to add to Outlook contacts."
+    IDS_SIMMGR_DIALENTRY_FAILED "Unable to dial entry."
+    IDS_SIMMGR_INSERT_FAILED "Listview Insert Failed"
+    IDS_SIMMGR_INSERT       "Insert"
+    IDS_SIMMGR_DELETEENTRY_CONFIRM 
+                            "Are you sure you want to delete the entry for %1?"
+    IDS_SIMMGR_COLUM_NAME   "Name"
+    IDS_SIMMGR_COLUMN_PHONE "Phone #"
+    IDS_SIMMGR_COLUMN_INDEX "Index"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc2""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

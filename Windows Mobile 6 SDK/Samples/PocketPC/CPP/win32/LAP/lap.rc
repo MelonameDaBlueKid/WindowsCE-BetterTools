@@ -1,0 +1,192 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VERIFY DIALOG  0, 24, 130, 120
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_BORDER
+EXSTYLE 0x60000000L
+BEGIN
+    LTEXT           "Enter your password and tap OK.",IDC_VERIFY,8,6,124,33
+    CONTROL         "",IDC_PASSWORD,"sbedit",WS_BORDER | WS_TABSTOP | 0xa0,8,42,124,13
+    CONTROL         "",IDC_EMERGENCY,"sbedit",NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP | 0x2080,8,42,124,13
+    LTEXT           "",IDC_INFO,8,60,124,100,SS_NOPREFIX
+END
+
+IDR_VERIFY_MENUBAR RCDATA
+BEGIN
+    IDR_VERIFY_MENU,
+    2, // # of elements in one layout
+    I_IMAGENONE, IDOK,    TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_DONE, 0, NOMENU,
+    I_IMAGENONE, IDM_LISTMENU_OPTIONS,TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,   IDS_MENU, 0, 0,
+END
+
+IDR_VERIFY_MENU MENU
+BEGIN
+    POPUP ""    // MB_IDX(0) action... IDM_LISTMENU_OPTIONS
+    BEGIN
+        MENUITEM "Reset Password", IDM_RESET_PASSWORD
+        MENUITEM "Cancel", IDCANCEL
+    END
+END
+
+IDD_ENROLL DIALOG  0, 24, 130, 120
+STYLE DS_CONTROL | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CAPTION
+EXSTYLE 0x60000000L
+CAPTION "Password Settings"
+BEGIN
+    CONTROL         "Prompt if device unused for",IDC_CHK_ACTIVE,"Button",BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | WS_TABSTOP,8,6,69,19
+    COMBOBOX        IDC_ACTIVEPERIOD,80,6,48,179,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Password:",IDC_LBL_PASSWORD,8,31,38,11,NOT WS_GROUP
+    CONTROL         "",IDC_PASSWORD,"sbedit",WS_BORDER | WS_TABSTOP | 0xa0,52,29,76,13
+    RTEXT           "Confirm:",IDC_LBL_CONFIRM,8,49,38,11,NOT WS_GROUP
+    CONTROL         "",IDC_CONFIRM,"sbedit",WS_BORDER | WS_TABSTOP | 0xa0,52,47,76,13
+END
+
+IDD_CODEWORD DIALOG  0, 24, 130, 120
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE 0x60000000L
+CAPTION "Stop"
+BEGIN
+    LTEXT           "",IDC_CODEWORD_LABEL,8,6,124,51
+    CONTROL         "",IDC_CODEWORD,"sbedit",WS_BORDER | WS_TABSTOP | 0x80,8,60,124,13
+    LTEXT           "",IDC_INFO,8,80,124,100,SS_NOPREFIX
+END
+
+IDD_MESSAGE DIALOG  0, 0, 130, 44
+STYLE DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE 0x20000000L
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,12,26,50,14
+    PUSHBUTTON      "No",IDCANCEL,66,26,50,14
+    LTEXT           "",IDC_MESSAGE_LABEL,5,5,120,16
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PASSWD_CAPTION      "Password"
+    IDS_ERROR_ATLEAST       "at least %u"
+    IDS_ERROR_ALL           "all"
+    IDS_ERROR_CONFIRM       "Passwords do not match. Please retype identical passwords in both boxes."
+    IDS_ERROR_STRENGTH      "Your password must be at least %u characters long and contain %s of the following: uppercase and lowercase letters, numerals, and punctuation."
+    IDS_ERROR_ENUMBER       "Your password must not contain an emergency phone number ('%s')."
+    IDS_MINUTE              "Minute"
+    IDS_MINUTES             "Minutes"
+    IDS_HOUR                "Hour"
+    IDS_HOURS               "Hours"
+    IDS_ERROR_CANCEL        "Password policy settings require that you update your password at this time."
+    IDS_ERROR_SAVE          "An error occurred saving password settings."
+    IDS_ERROR_TITLE         "Password Error"
+    IDS_SAVE_TEXT           "Do you want to save password settings changes?"
+    IDS_SAVE_TITLE          "Password"
+    IDS_PREWIPE             "All information on this device will be erased after the next unsuccessful password attempt."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PREWIPE_TITLE       "Warning"
+    IDS_CODEWORD            "Several incorrect passwords have been entered. To confirm the login attempt is not due to accidental button presses, enter '%s' in the box below."
+    IDS_AE                  "Enter your password to change password settings."
+    IDS_OK                  "OK"
+    IDS_POLICYUPDATE_TITLE  "Update Required"
+    IDS_POLICYUPDATE        "Recent policy updates require that you renew your password settings. Press OK to continue."
+    IDS_EMERGENCY_MODE_INFO "An emergency phone number was entered. Press TALK to call or continue with the password."
+    IDS_FAILEDATTEMPTS      "%u/%u attempts"
+    IDS_INVALID_CODEWORD    "The text you entered does not match. Please try again."
+    IDS_INCORRECT_PASSWORD  "The password you typed is incorrect. Please try again."
+    IDS_TIME_WHOLE          "%.0f %s"
+    IDS_TIME_FRACTION       "%.1f %s"
+    IDS_INCORRECT_TITLE     "Password Incorrect"
+    IDS_INCORRECT_ATTEMPTS  "The password you typed is incorrect. Please try again. %u/%u attempts have been made."
+    IDS_HISTORY_REQUIREMENT "Your password must not match any of your last %d passwords."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_AR_CAPTION          "Password recovery"
+    IDS_AR_SETUP            " Do you want to set up password recovery?"
+    IDS_AR_SETUP_SUCCESS    " If you forget your password, select 'Reset Password' from the menu."
+    IDS_AR_SETUP_FAILURE    " Password recovery setup was unsuccessful."
+    IDS_AR_REQUEST          " First you must specify a new password. Do you want to proceed?"
+    IDS_AR_REQUEST_SUCCESS  " Your password has been reset. Please re-enter your new password to continue."
+    IDS_AR_REQUEST_FAILURE  " Password recovery was unsuccessful."
+    IDS_DONE                "Done"
+    IDS_MENU                "Menu"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

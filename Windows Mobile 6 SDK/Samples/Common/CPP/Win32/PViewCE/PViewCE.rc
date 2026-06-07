@@ -1,0 +1,149 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLGPROCESS DIALOG DISCARDABLE  0, 0, 100, 120
+STYLE WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    LTEXT           "Process:",IDC_PVIEWCE_LBL1,4,4,93,10
+    LTEXT           "",IDC_PVIEWCE_PROCESS,4,14,93,10
+    LTEXT           "PID:",IDC_PVIEWCE_LBL2,4,24,93,10
+    LTEXT           "",IDC_PVIEWCE_PID,4,34,93,10
+    LTEXT           "Base Priority:",IDC_PVIEWCE_LBL3,4,44,93,10
+    LTEXT           "",IDC_PVIEWCE_BASEPRI,4,54,93,10
+    LTEXT           "Number of Threads:",IDC_PVIEWCE_LBL4,4,64,93,10
+    LTEXT           "",IDC_PVIEWCE_NUMTH,4,74,93,10
+    LTEXT           "Type:",IDC_PVIEWCE_LBL5,4,84,93,10
+    LTEXT           "",IDC_PVIEWCE_TYPE,4,94,93,10
+    LTEXT           "Full Path:",IDC_PVIEWCE_LBL6,4,104,93,10
+    LTEXT           "",IDC_PVIEWCE_PPATH,4,114,93,10
+END
+
+IDD_DLGTHREAD DIALOG DISCARDABLE  0, 0, 100, 120
+STYLE WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    LTEXT           "Thread ID:",IDC_PVIEWCE_LBL7,4,4,93,10
+    LTEXT           "",IDC_PVIEWCE_TID,4,14,93,10
+    LTEXT           "Owning PID:",IDC_PVIEWCE_LBL8,4,24,93,10
+    LTEXT           "",IDC_PVIEWCE_OPID,4,34,93,10
+    LTEXT           "Thread Priority:",IDC_PVIEWCE_LBL9,4,44,93,10
+    LTEXT           "",IDC_PVIEWCE_THRPRI,4,54,93,10
+END
+
+IDD_DLGMODULE DIALOG DISCARDABLE  0, 0, 100, 120
+STYLE WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    LTEXT           "Module Name:",IDC_PVIEWCE_LBL10,4,4,93,10
+    LTEXT           "",IDC_PVIEWCE_MODULE,4,14,93,10
+    LTEXT           "HModule:",IDC_PVIEWCE_LBL11,4,24,93,10
+    LTEXT           "",IDC_PVIEWCE_HMOD,4,34,93,10
+    LTEXT           "Global Usage:",IDC_PVIEWCE_LBL12,4,44,93,10
+    LTEXT           "",IDC_PVIEWCE_GUSAGE,4,54,93,10
+    LTEXT           "Local Usage:",IDC_PVIEWCE_LBL13,4,64,93,10
+    LTEXT           "",IDC_PVIEWCE_LUSAGE,4,74,93,10
+    LTEXT           "Base Address:",IDC_PVIEWCE_LBL14,4,84,93,10
+    LTEXT           "",IDC_PVIEWCE_BASEADDR,4,94,93,10
+    LTEXT           "Base Size:",IDC_PVIEWCE_LBL15,4,104,93,10
+    LTEXT           "",IDC_PVIEWCE_BASESIZE,4,114,93,10
+    LTEXT           "Full Path:",IDC_PVIEWCE_LBL16,4,124,93,10
+    LTEXT           "",IDC_PVIEWCE_MPATH,4,134,93,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PVIEWCE_BACK        "Back"
+    IDS_ERROR_TITLE         "Error"
+    IDS_SHINITDIALOG_FAILED "SHInitDialog failed."
+    IDS_SHCREATEMENUBAR_FAILED "SHCreateMenuBar failed."
+    IDS_CREATESNAPSHOT_FAILED "CreateToolHelp32Snapshot failed."
+    IDS_PVIEWCE_APPNAME     "PViewCE"
+    IDS_PVIEWCE_TITLE       "PViewCE Sample"
+    IDS_PVIEWCE_QUIT        "Quit"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,137 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+
+#include "resource.h"
+#include "windows.h"
+#include <aygshell.h>
+
+
+// Device Lock Password template
+IDD_VERIFY DIALOG DISCARDABLE  0, 0, 0, 0
+CAPTION "Password"
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_ABOVESTARTUP // Add WS_EX_ABOVESTARTUP so other code can identify this window as such.
+BEGIN
+    LTEXT           "This device is locked. Enter your device password and press the 'Done' softkey.",
+                    IDC_VERIFY,6,2,90,27
+    CONTROL         "", IDC_PASSWORD,    WC_SBEDIT, ES_PASSWORD | ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP,                  6,30,90,12
+    CONTROL         "", IDC_EMERGENCY,   WC_SBEDIT, ES_NUMBER   | ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP | NOT WS_VISIBLE, 6,30,90,12
+    LTEXT           "",IDC_INFO,6,46,90,60
+END
+
+// Set password dialog
+IDD_ENROLL DIALOG DISCARDABLE  0, 0, 0, 0
+CAPTION "Password Settings"
+STYLE WS_POPUP | WS_VISIBLE | WS_VSCROLL | WS_CAPTION
+EXSTYLE WS_EX_ABOVESTARTUP
+BEGIN
+    CONTROL         "Prompt if device unused for", IDC_CHK_ACTIVE, "Button",
+                    WS_TABSTOP | WS_GROUP | BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE,6,2,90,18
+
+    CONTROL         "", IDC_ACTIVEPERIOD, "listbox", WS_TABSTOP | LBS_NOTIFY | LBS_NOINTEGRALHEIGHT,6,20,90,12
+    CONTROL         "", IDC_ACTIVEPERIOD_SPIN, UPDOWN_CLASS, UDS_AUTOBUDDY | UDS_HORZ | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_SETBUDDYINT | UDS_WRAP | UDS_EXPANDABLE,82,20,14,12
+
+    LTEXT           "Password:", IDC_LBL_PASSWORD, 6,34,90,10
+    CONTROL         "", IDC_PASSWORD, WC_SBEDIT, ES_PASSWORD | ES_AUTOHSCROLL | WS_TABSTOP | WS_GROUP, 6, 44, 90, 12
+
+    LTEXT           "Confirm password:", IDC_LBL_CONFIRM, 6,58,90,10
+    CONTROL         "", IDC_CONFIRM,  WC_SBEDIT, ES_PASSWORD | ES_AUTOHSCROLL | WS_TABSTOP | WS_GROUP, 6, 68, 90, 12
+END
+
+IDD_CODEWORD DIALOG DISCARDABLE  0,0,0,0
+CAPTION "Stop"
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_VSCROLL
+EXSTYLE WS_EX_ABOVESTARTUP 
+BEGIN
+    LTEXT           "", IDC_CODEWORD_LABEL,6,2,90,50
+    EDITTEXT        IDC_CODEWORD,6,53,90,12, ES_AUTOHSCROLL | NOT WS_BORDER
+    LTEXT           "",IDC_INFO,6,68,90,60
+
+END
+
+IDD_MESSAGE DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_POPUP | WS_VISIBLE | DS_SETFOREGROUND | WS_CAPTION | WS_VSCROLL
+EXSTYLE WS_EX_ABOVESTARTUP
+BEGIN
+    LTEXT           "", IDC_MESSAGE_LABEL,6,2,90,40
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INCORRECT_TITLE         "Password Incorrect"
+    IDS_INCORRECT_PASSWORD      "The password you typed is incorrect. Please try again."
+    IDS_INCORRECT_ATTEMPTS      "The password you typed is incorrect. Please try again. %u/%u attempts have been made."
+    IDS_EMERGENCY_MODE_INFO     "An emergency phone number was entered. Press TALK to call or continue with the password."
+    IDS_CANCEL                  "Cancel"
+    IDS_CODEWORD                "Several incorrect passwords have been entered. To confirm the login attempt is not due to accidental button presses, enter '%s' in the box below."
+    IDS_PREWIPE                 "All information on this device will be erased after the next unsuccessful password attempt."
+    IDS_PREWIPE_TITLE           "Warning"
+    IDS_DONE                    "Done"
+    IDS_MINUTE                  "Minute"
+    IDS_MINUTES                 "Minutes"
+    IDS_HOUR                    "Hour"
+    IDS_HOURS                   "Hours"
+    IDS_TIME_WHOLE              "%.0f %s"
+    IDS_TIME_FRACTION           "%.1f %s"
+    IDS_SAVE_TEXT               "Do you want to save password settings changes?"
+    IDS_SAVE_TITLE              "Password"
+    IDS_ERROR_STRENGTH          "Your password must be at least %u characters long and contain %s of the following: uppercase and lowercase letters, numerals, and punctuation."
+    IDS_ERROR_ENUMBER           "Your password must not contain an emergency phone number ('%s')."
+    IDS_ERROR_TITLE             "Password Error"
+    IDS_ERROR_CONFIRM           "Passwords do not match. Please retype identical passwords in both boxes."
+    IDS_ERROR_ATLEAST           "at least %u"
+    IDS_ERROR_ALL               "all"
+    IDS_ERROR_CANCEL            "Password policy settings require that you update your password at this time."
+    IDS_ERROR_SAVE              "An error occurred saving password settings."
+    IDS_AE                      "Enter your password to change password settings."
+    IDS_POLICYUPDATE_TITLE      "Update Required"
+    IDS_POLICYUPDATE            "Recent policy updates require that you renew your password settings. Press OK to continue."
+    IDS_FAILEDATTEMPTS          "%u/%u attempts"
+    IDS_INVALID_CODEWORD        "The text you entered does not match. Please try again."
+    IDS_YES                     "Yes"
+    IDS_NO                      "No"
+    IDS_OK                      "OK"
+    IDS_HISTORY_REQUIREMENT     "Your password must not match any of your last %d passwords."
+
+END
+
+IDR_COMMON_MENUBAR RCDATA
+BEGIN
+    0,
+    2, // # of elements in one layout
+    I_IMAGENONE, IDOK,        TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_DONE, 0, NOMENU,
+    I_IMAGENONE, IDCANCEL,    TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_CANCEL, 0, NOMENU,
+END
+
+IDR_SECURE_MENUBAR RCDATA
+BEGIN
+    0,
+    1, // # of elements in one layout
+    I_IMAGENONE, IDOK,    TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_DONE, 0, NOMENU,
+END
+
+IDR_MESSAGE_YESNO_MENUBAR RCDATA
+BEGIN
+    0,
+    2, // # of elements in one layout
+    I_IMAGENONE, IDOK,    TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_YES, 0, NOMENU,
+    I_IMAGENONE, IDCANCEL,TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_NO, 0, NOMENU,
+END
+
+IDR_MESSAGE_OK_MENUBAR RCDATA
+BEGIN
+    0,
+    1, // # of elements in one layout
+    I_IMAGENONE, IDOK,    TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_OK, 0, NOMENU,
+END

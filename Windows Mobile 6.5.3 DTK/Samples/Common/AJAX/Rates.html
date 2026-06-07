@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <title>Exchange Rate</title>
+    <script language="javascript">
+  <!-- 
+  
+  // This example web page loads an XML file of currency information, and uses it
+  // to dynamically define elements in a pull-down menu.
+    
+  // The XML file must be on the same server as the HTML file, and could be updated 
+  // by a secondary application running on the server.
+ 
+  var req; 							// The XML request object
+  var max_currencies = 10;			// A maxmimun number of currencies supported.
+  
+  // Declare two arrays to store country names and exchange rates.
+  var country = new Array(max_currencies);
+  var rate = new Array(max_currencies);
+    
+// Asynchronously load the XML file containing currencies.
+function getXmlFile() 
+{
+    req = new ActiveXObject("Msxml2.XMLHTTP");
+    req.onreadystatechange = processXmlFile;
+    req.Open("GET", "ExchangeRates.xml", true); 
+    req.Send();
+}
+ 
+// Once the XML file has loaded, this callback function parses it and places
+// values into the country name and rate arrays. The pull-down menu
+// options are then cleared and updated.
+function processXmlFile() 
+{
+  // Continue only if req status "complete"
+  if (req.readyState == 4) 
+  {
+    // and status is "OK"
+    if (req.status == 200) 
+    {
+    	
+        // Access the loaded XML file
+        var ratedoc = req.responseXML;
+         
+           // Process the XML file to get currency nodes containing name and rate. 
+           
+           // Get the list of countries and rates in the file.
+           var items = ratedoc.getElementsByTagName('currency');
+                      
+           // Make sure there aren't too many.
+           if (items.length>max_currencies) alert("Error: There are too many entries in the XML file");
+                      
+           // Assign each element in the array to the country name and currency rate
+           for (i=0; i<items.length; i++)
+            {  	
+               country[i]=items[i].getElementsByTagName('name')[0].firstChild.data;
+               rate[i]=items[i].getElementsByTagName('rate')[0].firstChild.data;                     
+           }
+            
+            
+            // Update the drop-down selection button
+            
+            // First clear any existing  options
+            var control = document.forms[0];
+            control[2].length=0;		// The menu control is #2 in the form
+                  
+           
+                      
+            // Now add the countries from our array.
+            for (i=0; i<items.length; i++)
+            {
+               control[2].add(new Option(country[i]));
+             }
+			
+    }
+     else {      
+      alert("Error: There was a problem retrieving the XML file \n" + req.statusText + " " + req.status + ":" + req.responseXML.xml);
+    }
+  }
+}
+  
+function getRate(selected_country)
+{
+  	
+    // Display the exchange rate of the selected country.
+ 
+   var control = document.forms[0];
+   
+   // Perform some basic validation: only numeric values should be entered.
+   if (1!=(control[0].value/control[0].value))
+   {
+   		alert("Please enter a non-zero, numeric value");
+   		return;
+   }
+   
+   // Display the calculated rate in the appropriate text box
+   control[1].value =  Math.round((control[0].value / rate[selected_country])*100)/100;
+   
+   // Also display the exchange rate.  
+   rateresults.innerText="1 US dollar is worth " + rate[selected_country] + " " + country[selected_country] + ".";
+   
+}
+ 
+      //-->
+    </script>
+
+</head>
+
+<!-- The HTML that defines the web page. -->
+<body onload="getXmlFile()"> 
+
+    <form>
+        <h2>Exchange Rate Calculator</h2> 
+            
+        <p><label for="dollar_amount">US Dollars: <input type="text" size="8" id="dollar_amount" value="1" /> is worth</label></p>   
+        <input type="text" size="8" id="other_amount" value="?" READONLY=true/>
+        <select id="currency" onchange="getRate(this.form.currency.selectedIndex)"/>
+        </label></p> 
+      
+        <!-- The button that calculates the rate -->
+        <input type="button" value="Calculate" onclick="getRate(this.form.currency.selectedIndex)"/>
+    </form>
+    
+    <p><div id="rateresults"/></p>
+            
+</body>
+</html>

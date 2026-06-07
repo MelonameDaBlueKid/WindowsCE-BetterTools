@@ -1,0 +1,43 @@
+//
+// UILayoutSP.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+HI_RES_AWARE CEUX {1}	// turn off the emulation layer
+			// Remove this resource to enable pixel-
+			// doubling on platforms that support it
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_MENU SHMENUBAR DISCARDABLE
+BEGIN
+    IDR_MENU, 
+    2,
+
+    I_IMAGENONE, ID_EXIT, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,
+    IDS_EXIT, 0, NOMENU,
+    
+    I_IMAGENONE, IDM_MENU, TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+    IDS_MENU, 0, 0,
+END
+
+IDR_DIALOG SHMENUBAR DISCARDABLE
+BEGIN
+    IDR_DIALOG, 
+    1,
+
+    I_IMAGENONE, IDOK, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,
+    IDS_DONE, 0, NOMENU,
+END

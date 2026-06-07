@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<skin>
+	<view
+		titleBar ="Windows Mobile 6 Standard"
+		
+		displayPosX="32"
+		displayPosY="50"
+		
+		displayWidth="176"
+		displayHeight="220"
+
+		displayDepth="16"
+
+		mappingImage="smartphone_emulator_mask.png"
+		normalImage="smartphone_emulator_up.png"
+		downImage="smartphone_emulator_down.png">
+
+		<button
+			
+			toolTip="Power"
+			onPressAndHold="0x75"
+			mappingColor="0xFB10F8"
+		/>
+		<button
+			
+			toolTip="Record"
+			onPressAndHold="0x44" 
+			mappingColor="0x8E3BFF"
+		/>
+		<button
+			
+			toolTip="Volume Up"
+			onPressAndHold="0x40"
+			mappingColor="0x80B9BB"
+		/>
+		<button
+			
+			toolTip="Volume Down"
+			onPressAndHold="0x41"
+			mappingColor="0x8AB9BB"
+		/>
+		<button
+			
+			toolTip="Soft Key 1"
+			onPressAndHold="0x3B"
+			mappingColor="0xF699F5"
+			KeyEvent="F1"
+			Comment="Not handled when menu is present."
+		/>
+		<button
+			
+			toolTip="Soft Key 2"
+			onPressAndHold="0x3C"
+			mappingColor="0x5CF443"
+			KeyEvent="F2"
+			Comment="Not handled when menu is present."
+		/>
+		<button
+			
+			toolTip="Talk"
+			onPressAndHold="0x3D"
+			mappingColor="0x11B997"
+		/>
+		<button
+			
+			toolTip="End"
+			onPressAndHold="0x3E"
+			mappingColor="0x487710"
+		/>
+		<button
+			
+			toolTip="Up"
+			onPressAndHold="0x48"
+			mappingColor="0xF79406"
+			KeyEvent="Up"
+		/>
+		<button
+			
+			toolTip="Down"
+			onPressAndHold="0x50"
+			mappingColor="0x323DC6"
+			KeyEvent="Down"
+		/>
+		<button
+			
+			toolTip="Left"
+			onPressAndHold="0x4B"
+			mappingColor="0x3BF8FF"
+			KeyEvent="Left"
+		/>
+		<button
+			
+			toolTip="Right"
+			onPressAndHold="0x4D"
+			mappingColor="0x06AAF7"
+			KeyEvent="Right"
+		/>
+		<button
+			
+			toolTip="Enter"
+			onPressAndHold="0x1C"
+			mappingColor="0xFFF601"
+			KeyEvent="Return"
+		/>
+		<button
+			
+			toolTip="Back"
+			onPressAndHold="0x01"
+			mappingColor="0xB1AC20"
+		/>
+		<button
+			
+			toolTip="Home"
+			onPressAndHold="0x5B"
+			mappingColor="0xDC2C1E"
+		/>
+		<button
+			
+			toolTip="1"
+			onPressAndHold="0x02"
+			mappingColor="0x823214"
+			KeyEvent="D1"
+
+		/>
+		<button
+			
+			toolTip="2"
+			onPressAndHold="0x03"
+			mappingColor="0x64280A"
+			KeyEvent="D2"
+
+		/>
+		<button
+			
+			toolTip="3"
+			onPressAndHold="0x04"
+			mappingColor="0x5A1E05"
+			KeyEvent="D3"
+		/>
+		<button
+			
+			toolTip="4"
+			onPressAndHold="0x05"
+			mappingColor="0xF0B478"
+			KeyEvent="D4"
+
+		/>
+		<button
+			
+			toolTip="5"
+			onPressAndHold="0x06"
+			mappingColor="0xE6A050"
+			KeyEvent="D5"
+
+		/>
+		<button
+			
+			toolTip="6"
+			onPressAndHold="0x07"
+			mappingColor="0xDC8C32"
+			KeyEvent="D6"
+
+		/>
+		<button
+			
+			toolTip="7"
+			onPressAndHold="0x08"
+			mappingColor="0xA0A064"
+			KeyEvent="D7"
+
+		/>
+		<button
+			
+			toolTip="8"
+			onPressAndHold="0x09"
+			mappingColor="0x969632"
+			KeyEvent="D8"
+
+		/>
+		<button
+			
+			toolTip="9"
+			onPressAndHold="0x0A"
+			mappingColor="0x8C8C28"
+			KeyEvent="D9"
+
+		/>
+		<button
+			
+			toolTip="*"
+			onPressAndHold="0x42"
+			mappingColor="0x786464"
+			KeyEvent="F8"
+
+		/>
+		<button
+			
+			toolTip="0"
+			onPressAndHold="0x0B"
+			mappingColor="0x6E5A5A"			
+			KeyEvent="D0"
+
+		/>
+		<button
+			
+			toolTip="#"
+			onPressAndHold="0x43"
+			mappingColor="0x645050"
+			KeyEvent="F9"
+	/>
+
+	</view>
+</skin>

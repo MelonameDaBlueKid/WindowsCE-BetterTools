@@ -1,0 +1,280 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_POOMTASKS           ICON    DISCARDABLE     "poomtasks.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PRIORITY            BITMAP  DISCARDABLE     "priority.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM SEPARATOR
+    END
+    POPUP ""
+    BEGIN
+        MENUITEM "New",                         IDM_TASK_NEW
+        MENUITEM "Edit",                        IDM_TASK_EDIT
+        MENUITEM "Delete",                      IDM_TASK_DELETE
+        MENUITEM "Options",                     IDM_TASK_OPTIONS
+        MENUITEM "Exit",                        IDM_TASK_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TASKSUMMARY DIALOG DISCARDABLE  0, 0, 101, 96
+STYLE WS_POPUP | WS_VISIBLE | WS_VSCROLL
+FONT 8, "System"
+BEGIN
+    LTEXT           "",IDC_SUMMARY_SUBJECT,5,0,60,10
+    LTEXT           "",IDC_SUMMARY_STARTDATE,5,10,90,10
+    LTEXT           "",IDC_SUMMARY_DUEDATE,5,20,90,10
+    LTEXT           "",IDC_SUMMARY_NOTES,5,35,90,50
+    LTEXT           "",IDC_SUMMARY_PRIORITY,80,5,20,20
+END
+
+IDD_EDITDIALOG DIALOG DISCARDABLE  0, 0, 101, 96
+STYLE WS_POPUP | WS_VISIBLE | WS_VSCROLL
+FONT 9, "Nina"
+BEGIN
+    LTEXT           "Subject:",IDC_STATIC,5,5,90,10
+    EDITTEXT        IDC_SUBJECT,10,15,90,10,ES_AUTOHSCROLL | NOT WS_BORDER
+    LTEXT           "Priority:",IDC_STATIC,5,25,90,10
+    LISTBOX         IDC_PRIORITYLIST,10,35,90,10,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_UDPRIORITY,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | UDS_EXPANDABLE,0,0,0,0
+    LTEXT           "Start Date:",IDC_STATIC,5,45,90,10
+    CONTROL         "",IDC_STARTDATE,"SysDateTimePick32",DTS_SHOWNONE | 
+                    DTS_LONGDATEFORMAT | WS_TABSTOP | 0x8,10,55,90,10
+    LTEXT           "Due Date:",IDC_STATIC,5,65,90,10
+    CONTROL         "",IDC_DUEDATE,"SysDateTimePick32",DTS_SHOWNONE | 
+                    DTS_LONGDATEFORMAT | WS_TABSTOP | 0x8,10,75,90,10
+    LTEXT           "Notes:",IDC_STATIC,5,85,90,10
+    EDITTEXT        IDC_NOTES,10,95,90,10,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER
+    CONTROL         "",IDC_UDNOTES,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_EXPANDABLE | UDS_NOSCROLL,0,0,0,0
+    LTEXT           "Status:",IDC_STATIC,5,105,90,10
+    LISTBOX         IDC_STATUSLIST,10,115,90,10,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_UDSTATUS,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | UDS_EXPANDABLE,0,0,0,0
+    LTEXT           "Occurs:",IDC_STATIC,5,125,90,10
+    LISTBOX         IDC_OCCURSLIST,10,135,90,10,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_UDOCCURS,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | UDS_EXPANDABLE,0,0,0,0
+    LTEXT           "Reminder:",IDC_STATIC,5,145,90,10
+    CONTROL         "",IDC_REMINDER,"SysDateTimePick32",DTS_SHOWNONE | 
+                    DTS_LONGDATEFORMAT | WS_TABSTOP | 0x8,10,155,90,10
+    CONTROL         "Private:",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,10,165,60,10
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 101, 96
+STYLE WS_POPUP | WS_VISIBLE | WS_VSCROLL
+FONT 9, "Nina"
+BEGIN
+    LTEXT           "Sort by:",IDC_STATIC,5,15,90,10
+    LISTBOX         IDC_SORTLIST,10,25,90,10,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_UDSORT,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | UDS_EXPANDABLE,0,0,0,0
+    LTEXT           "Display:",IDC_SUMMARY_DUEDATE,5,55,90,10
+    LISTBOX         IDC_DISPLAYLIST,10,65,90,10,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_TABSTOP
+    CONTROL         "",IDC_UDDISPLAY,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | UDS_EXPANDABLE,0,0,0,0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "Tasks Manager"
+    IDC_POOMTASKS           "POOMTASKS"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMPLETE            "Complete"
+    IDS_MSG_DELETETASK      "Permanently delete this task?"
+    IDS_TTL_DELETETASK      "Delete task"
+    IDS_PRIORITY_LOW        "Low"
+    IDS_PRIORITY_NORMAL     "Normal"
+    IDS_PRIORITY_HIGH       "High"
+    IDS_STATUS_NOTCOMP      "Not Completed"
+    IDS_STATUS_COMP         "Completed"
+    IDS_EDIT_TASK           "Edit Task"
+    IDS_NEW_TASK            "New Task"
+    IDS_SUMMARY_COMPLETED   "Completed: "
+    IDS_SUMMARY_NONE        "none"
+    IDS_SUMMARY_START       "Start: "
+    IDS_SUMMARY_DUE         "Due: "
+    IDS_TASK_SUMMARY        "Task Summary"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TASK_MENU           "Menu"
+    IDS_SAVE                "Save"
+    IDS_CANCEL              "Cancel"
+    IDS_ACTIVATE            "Activate"
+    IDS_OK                  "Ok"
+    IDS_EDIT                "Edit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OPTIONS_PRIORITY    "Priority"
+    IDS_OPTIONS_STATUS      "Status"
+    IDS_OPTIONS_SUBJECT     "Subject"
+    IDS_OPTIONS_STARTDATE   "Start Date"
+    IDS_OPTIONS_DUEDATE     "Due Date"
+    IDS_OPTIONS_ALLCATEGORIES "All Categories"
+    IDS_OPTIONS_ALLTASKS    "All Tasks"
+    IDS_OPTIONS_COMPLETED   "Completed"
+    IDS_OPTIONS_ACTIVE      "Active"
+    IDS_OPTIONS             "Options"
+    IDS_SUNDAY              "Sunday"
+    IDS_MONDAY              "Monday"
+    IDS_TUESDAY             "Tuesday"
+    IDS_WEDNESDAY           "Wednesday"
+    IDS_THURSDAY            "Thursday"
+    IDS_FRIDAY              "Friday"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SATURDAY            "Saturday"
+    IDS_JANUARY             "January"
+    IDS_FEBRUARY            "February"
+    IDS_MARCH               "March"
+    IDS_APRIL               "April"
+    IDS_MAY                 "May"
+    IDS_JUNE                "June"
+    IDS_JULY                "July"
+    IDS_AUGUST              "August"
+    IDS_SEPTEMBER           "September"
+    IDS_OCTOBER             "October"
+    IDS_NOVEMBER            "November"
+    IDS_DECEMBER            "December"
+    IDS_RECURRENCE_ONCE     "Once"
+    IDS_NOSUBJECT           "<no subject>"
+    IDS_RECURWKLY_TEMPLATE  "Every %1"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_RECURMNTHLY_TEMPLATE "%1 of every month"
+    IDS_RECURYRLY_TEMPLATE  "Every %1 %2"
+    IDS_TASKERR_INVALIDREMINDERTIME "Reminder time is not valid."
+    IDS_TASKERR_INVALIDDATES "Date inputs are not valid."
+    IDS_TASKERR             "Task is not valid!"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,26 @@
+REGEDIT4
+
+; Desktop PC ActiveSync Module Registration for Stock Portfolio Synchronization
+
+[HKEY_CLASSES_ROOT\MS.WinCE.StockPor2]
+@="Stock Portfolio Store"
+"Display Name"="Microsoft Stock Portfolio Sample"
+
+[HKEY_CLASSES_ROOT\MS.WinCE.StockPor2\CLSID]
+@="{313EE810-50AD-11d1-8C3F-0000F803FF91}"
+
+[HKEY_CLASSES_ROOT\CLSID\{313EE810-50AD-11d1-8C3F-0000F803FF91}]
+@="Desktop PC Sample Store"
+
+[HKEY_CLASSES_ROOT\CLSID\{313EE810-50AD-11d1-8C3F-0000F803FF91}\ProgID]
+@="MS.WinCE.StockPor2"
+
+[HKEY_CLASSES_ROOT\CLSID\{313EE810-50AD-11d1-8C3F-0000F803FF91}\InprocServer32]
+@="d:\\wince\\private\\apps\\conn\\repl\\samples\\v2.3\\stockpor\\obj\\x86\\debug\\stsync.dll"
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows CE Services\Services\Synchronization\Objects\StockPor]
+@="Stock Portfolio Object"
+"Store"="MS.WinCE.StockPor2"
+"Display Name"="Stock"
+"Plural Name"="Stocks"
+"Disabled"=0

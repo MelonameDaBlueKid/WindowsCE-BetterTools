@@ -1,0 +1,44 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+
+#include "resource.h"
+
+STRINGTABLE
+BEGIN
+    IDS_EXIT    "Exit"
+    IDS_MENU    "Menu"
+END
+
+IDR_MAIN_MENU MENU  
+BEGIN
+   POPUP ""
+   BEGIN
+      MENUITEM "Full Screen" IDM_SK2_SHFULL
+   END   
+END
+
+IDR_MENUBAR RCDATA
+BEGIN
+    IDR_MAIN_MENU, 2,
+    I_IMAGENONE, IDM_SK1,      TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,   IDS_EXIT, 0, NOMENU,
+    I_IMAGENONE, IDM_SK2_MENU, TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MENU, 0, 0,
+END
+
+IDD_MENU_DIALOG DIALOG DISCARDABLE  0, 0, 0, 0
+STYLE WS_VISIBLE
+BEGIN
+    EDITTEXT        IDC_EDIT, 5, 5, 90, 12, WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_NOHIDESEL | ES_AUTOHSCROLL
+END
+
+
+

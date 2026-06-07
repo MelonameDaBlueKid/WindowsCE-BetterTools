@@ -1,0 +1,51 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this sample source code is subject to the terms of the Microsoft
+// license agreement under which you licensed this sample source code. If
+// you did not accept the terms of the license agreement, you are not
+// authorized to use this sample source code. For the terms of the license,
+// please see the license agreement between you and Microsoft or, if applicable,
+// see the LICENSE.RTF on your install media or the root of your tools installation.
+// THE SAMPLE SOURCE CODE IS PROVIDED "AS IS", WITH NO WARRANTIES OR INDEMNITIES.
+//
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MENU RCDATA
+BEGIN
+    IDM_MENU, 2,
+	
+	I_IMAGENONE, IDM_COMPLETE, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_COMPLETE, 0, NOMENU,
+	I_IMAGENONE, IDM_TASK_MENU, TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_TASK_MENU, 0, 1,
+	
+
+END
+
+IDR_EDITMENU RCDATA
+BEGIN
+	IDR_EDITMENU, 2, 
+
+	I_IMAGENONE, IDM_SAVE, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_SAVE, 0, NOMENU,
+	I_IMAGENONE, IDM_CANCEL, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_CANCEL, 0, NOMENU,
+	
+END
+
+IDR_SUMMARYMENU RCDATA
+BEGIN
+	IDR_SUMMARYMENU, 2, 
+
+	I_IMAGENONE, IDM_TASK_EDIT, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_EDIT, 0, NOMENU,
+	I_IMAGENONE, IDM_OK, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_OK, 0, NOMENU,
+	
+END
+
+IDR_OPTIONSMENU RCDATA
+BEGIN
+	IDR_OPTIONSMENU, 2, 
+		I_IMAGENONE, IDM_OK, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_OK, 0, NOMENU,
+	I_IMAGENONE, IDM_CANCEL, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_CANCEL, 0, NOMENU,
+END

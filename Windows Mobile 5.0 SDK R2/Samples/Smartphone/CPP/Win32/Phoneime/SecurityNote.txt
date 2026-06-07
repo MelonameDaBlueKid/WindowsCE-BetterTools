@@ -1,0 +1,4 @@
+﻿Beause an IME is used to input sensitive information, such as passwords, 
+an IME must run in the Privileged Execution mode. 
+See http://msdn.microsoft.com/library/en-us/dnsmtphn2k3/html/smartphone_security.asp
+for more information.

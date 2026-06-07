@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wap-provisioningdoc>
+	<characteristic type="SecurityPolicy">
+		<!-- 
+		RAPI mode : Restricted 
+		This is the recommended security policy for RAPI. -->
+		<parm name="4097" value="2" />
+	</characteristic>
+</wap-provisioningdoc>

@@ -1,0 +1,47 @@
+HKCR
+{
+	IEHlprObj.IEHlprObj.1 = s 'IEHlprObj Class'
+	{
+		CLSID = s '{93AFDD66-D450-42F5-9997-1E58C5582292}'
+	}
+	IEHlprObj.IEHlprObj = s 'IEHlprObj Class'
+	{
+		CurVer = s 'IEHlprObj.IEHlprObj.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {93AFDD66-D450-42F5-9997-1E58C5582292} = s 'IEHlprObj Class'
+		{
+			ProgID = s 'IEHlprObj.IEHlprObj.1'
+			VersionIndependentProgID = s 'IEHlprObj.IEHlprObj'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+		}
+	}
+}
+
+HKLM
+{
+	SOFTWARE
+	{
+		Microsoft
+		{
+			Windows
+			{
+				CurrentVersion
+				{
+					Explorer
+					{
+						'Browser Helper Objects'
+						{
+							{93AFDD66-D450-42F5-9997-1E58C5582292}
+						}
+					}
+				}
+			}
+		}
+	}
+}

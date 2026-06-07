@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<server>
+		<port>
+			50000
+		</port>
+	</server>
+	
+	<link>
+		<serial remote="COM6:">
+			<local>COM8:</local>
+			<rate>115200</rate>
+		</serial>
+
+		<serial remote="COM7:">
+			<local>COM4:</local>
+			<rate>115200</rate>
+		</serial>
+
+		<serial remote="COM8:">
+			<local>COM5:</local>
+			<rate>115200</rate>
+		</serial>
+	</link>
+	
+	<buffer>
+		<size>4096</size>
+	</buffer>
+	
+	<retry>
+		<times>10</times>
+	</retry>
+</config>

@@ -1,0 +1,6 @@
+LIBRARY	MPHP_HomePlugin
+
+EXPORTS
+	DllGetClassObject	PRIVATE
+	DllCanUnloadNow		PRIVATE
+	DllRegisterServer	PRIVATE

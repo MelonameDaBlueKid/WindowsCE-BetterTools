@@ -1,0 +1,42 @@
+[Version]                  
+Signature = "$Windows NT$"
+Provider = "MyCompany"
+CESignature = "$Windows CE$"
+
+[CEStrings]                
+AppName = LAP
+InstallDir = \Windows
+
+[DefaultInstall]           
+CopyFiles = CopyFilesSection
+AddReg = RegSettings
+
+[SourceDisksNames]                   
+1 = ,"Common files",,bin\Release
+
+[SourceDisksFiles]         
+lap.dll = 1
+
+[DestinationDirs]             
+CopyFilesSection = 0,%CE2%        ; \Windows
+
+[Strings]                  ; Optional section
+Lap_Path = Comm\Security\LASSD\LAP
+App_Path = Comm\Security\LASSD\LAP\SampleLap
+Policy_Path = Comm\Security\Policy\LASSD\LAP\SampleLap
+Listener_Path8 = Comm\Security\Policy\Listener\8
+Listener_Path9 = Comm\Security\Policy\Listener\9
+
+[CopyFilesSection]
+lap.dll,,,0
+
+[RegSettings]
+HKLM,%App_Path%,Dll,0x00000000,lap.dll    
+HKLM,%Policy_Path%,MinimumPasswordLength,0x00010003,7
+HKLM,%Policy_Path%,ComplexElements,0x00010003,3
+HKLM,%Lap_Path%,ActiveLap,0x00000000,SampleLap
+HKLM,%Listener_Path8%,SubKey,0x00000000,Comm\Security\Policy\LASSD\LAP\SampleLap
+HKLM,%Listener_Path8%,ValueName,0x00000000,MinimumPasswordLength
+HKLM,%Listener_Path9%,SubKey,0x00000000,Comm\Security\Policy\LASSD\LAP\SampleLap
+HKLM,%Listener_Path9%,ValueName,0x00000000,ComplexElements
+HKLM,%Policy_Path%,NumberOfPasswords,0x00010003,10

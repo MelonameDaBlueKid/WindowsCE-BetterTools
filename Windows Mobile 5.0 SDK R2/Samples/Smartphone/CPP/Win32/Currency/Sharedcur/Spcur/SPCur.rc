@@ -1,0 +1,169 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <aygshell.h>
+#include <winuserm.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <aygshell.h>\r\n"
+    "#include <winuserm.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""menu.rc""\r\n"
+    "#include ""..\\\\cur.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONVERTER DIALOG DISCARDABLE  0, 0, 102, 86
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Currency Converter"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_LIST_SOURCE,5,0,90,15,LBS_NOINTEGRALHEIGHT | NOT 
+                    WS_BORDER | WS_TABSTOP
+    CONTROL         "Pick a currency",IDC_SPIN2,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | 0x200,88,0,10,14
+    EDITTEXT        IDC_EDIT_SOURCE,5,15,90,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER
+    LISTBOX         IDC_LIST_DEST,5,40,90,15,LBS_NOINTEGRALHEIGHT | NOT 
+                    WS_BORDER | WS_TABSTOP
+    CONTROL         "Pick a currency",IDC_SPIN1,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | 0x200,88,40,10,14
+    EDITTEXT        IDC_EDIT_DEST,5,55,90,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    LTEXT           "",IDC_DOWNLOAD_STATUS,5,70,90,15
+END
+
+IDD_EDITOR DIALOG DISCARDABLE  0, 0, 102, 86
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Modify Rates"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_CURRENTY_LIST,7,5,90,13,LBS_NOINTEGRALHEIGHT | NOT 
+                    WS_BORDER | WS_TABSTOP
+    CONTROL         "Pick a currency",IDC_SPIN2,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_HORZ | 0x200,85,5,10,14
+    RTEXT           "Old:",IDC_STATIC,3,29,20,10
+    EDITTEXT        IDC_CURRENT_RATE,28,29,65,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "New:",IDC_STATIC,3,45,20,10
+    EDITTEXT        IDC_NEW_RATE,28,44,65,12,ES_AUTOHSCROLL | NOT WS_BORDER
+    CONTROL         "Visible in Lists:",IDC_VISIBLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,12,64,61,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONVERTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_CAPTION       "Error"
+    IDS_ERROR_UNABLETOCONVERT "Unable to convert.\n%2"
+    IDS_ERROR_UNABLETOBRINGUPDIALOG "Unable to bring up the dialog.\n%2"
+    IDS_APP_TITLE           "Currency Converter"
+    IDS_CAP_CONVERT         "Convert"
+    IDS_CAP_MENU            "Menu"
+    IDS_DROPDOWN_FORMAT     "%1 %2"
+    IDS_ERROR_UNABLETORESET "Unable to reset the rate to defaults.\n%2"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LISTBOX_FORMAT      "%1 %2"
+    IDS_ERROR_UNABLETOCHANGERATE "Unable to change the rate.\n%2"
+    IDS_DONE                "Done"
+    IDS_RESET               "Reset Rate"
+    IDS_DOWNLOAD_FAILED     "Unable to download exchange rates.\n%2"
+    IDS_DOWNLOADING         "Downloading Rates - %1!d!%%"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "menu.rc2"
+#include "..\\cur.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
