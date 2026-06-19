@@ -29,22 +29,25 @@ without installing eMbedded Visual C++, Platform Builder, or Visual Studio.
 ## Quick start — build an ARM CE 5 app
 
 ```powershell
-$SDK = "C:\path\to\WindowsCE-Build-Tools"
-$env:PATH = "$SDK\bin\I386\ARM;$SDK\bin\I386;$env:PATH"
+//Set SDK path
 
-# compile
-& "$SDK\bin\I386\ARM\cl.exe" /nologo /c /W3 /O2 `
-    /DUNICODE /D_UNICODE /DUNDER_CE /DARM /D_ARM_ `
-    /I "$SDK\ce5-standard\Include\Armv4i" main.c
+set SDK=C:\PATH\TO\\WindowsCE-Build-Tools
 
-# link
-& "$SDK\bin\I386\link.exe" /nologo `
-    /subsystem:windowsce,5.00 /entry:WinMain /machine:THUMB /nodefaultlib `
-    /libpath:"$SDK\ce5-standard\Lib\ARMV4I" /out:app.exe `
-    main.obj coredll.lib commctrl.lib commdlg.lib
+
+set PATH=%SDK%\bin\I386\ARM;%SDK%\bin\I386;%PATH%
+
+//compile main.cpp, rename or add extra file at the end if more files
+
+
+"%SDK%\bin\I386\ARM\cl.exe" /nologo /c /W3 /O2 /DUNICODE /D_UNICODE /DUNDER_CE /DARM /D_ARM_ /I "%SDK%\ce5-standard\Include\Armv4i" main.cpp
+
+//link main.cpp, like with compiling rename or add another obj file like start.obj
+
+"%SDK%\bin\I386\link.exe" /nologo /subsystem:windowsce,5.00 /entry:WinMain /machine:THUMB /nodefaultlib /libpath:"%SDK%\ce5-standard\Lib\ARMV4I" /out:result.exe main.obj coredll.lib commctrl.lib commdlg.lib
+
 ```
 
-The resulting `app.exe` is a Windows CE PE that runs on any ARM-based CE 5.0 /
+The resulting `result.exe` is a Windows CE PE that runs on any ARM-based CE 5.0 /
 Windows Mobile 5 device — Pocket PC, Smartphone, Handheld PC, or industrial
 hardware. The same binary also runs on CE 6.0 and CE 7.0 because CE coredll
 only ever added exports, never removed them.
@@ -109,6 +112,5 @@ intellectual property, redistributed verbatim. The Microsoft EULAs preserved
 inside each `ce*-*` subdirectory govern use and redistribution. No additional
 license is granted by this repository beyond what Microsoft's EULAs permit.
 
-## Used by
 
-- [gweslab/cerf](https://github.com/gweslab/cerf) — universal Windows CE ARM emulator
+
