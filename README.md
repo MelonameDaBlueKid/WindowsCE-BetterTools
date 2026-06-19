@@ -118,6 +118,6 @@ license is granted by this repository beyond what Microsoft's EULAs permit.
 
 this project has been tested on
 
-Medion Gopal MDPNA 465T navigation ARM based and wince 5.0 , 6.0 and 7.0 should work with trhe example sqript
+Medion Gopal MDPNA 465T navigation ARM based and wince 5.0 , 6.0 and 7.0 should work with trhe example script
 
 
