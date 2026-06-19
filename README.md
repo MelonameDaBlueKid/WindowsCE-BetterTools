@@ -1,6 +1,5 @@
-# Windows CE Build Tools
-
-A drop-in cross-development bundle for Windows CE 3.0 through Windows CE 7.0.
+# Windows CE Better Tools
+A drop-in work in progress cross-development bundle for Windows CE 3.0 through Windows CE 7.0.
 Builds CE PE binaries for ARM, MIPS, and SH targets on a modern Windows host
 without installing eMbedded Visual C++, Platform Builder, or Visual Studio.
 
@@ -26,12 +25,17 @@ without installing eMbedded Visual C++, Platform Builder, or Visual Studio.
 └── ce7-oak/  ce7-ddk/           Driver-mode headers (CE 7.0)
 ```
 
-## Quick start — build an ARM CE 5 app
+## Quick start — an example guide how to build an ARM programm for WinCE 5.0
+1.Create a new folder with an main.cpp file
+if you wanna make 2 cpp files compile or rename the cpp file the you have to manually change it in the command the same with the obj files
+make sure its not written in incopatible libarys
+2.in the same path where the cpp file is run this command
+make sure to edit the set SDK to the Windows-BetterTools directory
 
 ```powershell
 //Set SDK path
 
-set SDK=C:\PATH\TO\\WindowsCE-Build-Tools
+set SDK=C:\PATH\TO\\WindowsCE-BetterTools
 
 
 set PATH=%SDK%\bin\I386\ARM;%SDK%\bin\I386;%PATH%
@@ -47,10 +51,8 @@ set PATH=%SDK%\bin\I386\ARM;%SDK%\bin\I386;%PATH%
 
 ```
 
-The resulting `result.exe` is a Windows CE PE that runs on any ARM-based CE 5.0 /
-Windows Mobile 5 device — Pocket PC, Smartphone, Handheld PC, or industrial
-hardware. The same binary also runs on CE 6.0 and CE 7.0 because CE coredll
-only ever added exports, never removed them.
+and thats it
+you will have a result.exe file in the same directory it runs on a pocket pc and any device with windows ce 5.0 6.0 and 7.0 but only arm based
 
 ## Building for other CE versions
 
@@ -112,5 +114,10 @@ intellectual property, redistributed verbatim. The Microsoft EULAs preserved
 inside each `ce*-*` subdirectory govern use and redistribution. No additional
 license is granted by this repository beyond what Microsoft's EULAs permit.
 
+##Tested on
+
+this project has been tested on
+
+Medion Gopal MDPNA 465T navigation ARM based and wince 5.0 , 6.0 and 7.0 should work with trhe example sqript
 
 
